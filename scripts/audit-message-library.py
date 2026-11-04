@@ -27,9 +27,9 @@ for a,b in combinations(items,2):
         pairs.append((score,a,b))
 pairs.sort(key=lambda p:(-p[0],p[1]["id"],p[2]["id"]))
 review_terms = [
-    (r"\b(always|never)\\b", "absolute language"),
-    (r"\\b(cure|guarantee|diagnose|treatment)\\b", "health or outcome claim"),
-    (r"\\b(suicide|self.harm)\\b", "sensitive topic requiring specialist review"),
+    (r"\b(always|never)\b", "absolute language"),
+    (r"\b(cure|guarantee|diagnose|treatment)\b", "health or outcome claim"),
+    (r"\b(suicide|self.harm)\b", "sensitive topic requiring specialist review"),
 ]
 flags=[]
 for m in items:
@@ -58,3 +58,5 @@ lines.extend(["","## Release decision","**NOT APPROVED FOR LIVE ROTATION.** Revi
 report="\n".join(lines)+"\\n"
 Path("content/EDITORIAL_AUDIT.md").write_text(report,encoding="utf-8")
 print(f"Audit complete: {len(items)} messages; {len(pairs)} advisory overlaps; {len(flags)} wording flags")
+if flags:
+    print("REVIEW REQUIRED: sensitive wording flags detected; do not treat this as clean editorial approval.")
