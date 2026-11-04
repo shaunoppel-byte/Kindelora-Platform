@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "library": "KINDELORA expansion editorial batch 6 — first 30 of requested 1000",
+  "library": "KINDELORA expansion editorial batch 6 — first 100 of requested 1000",
   "release_status": "editorial-review",
   "created_at": "2026-11-04",
   "editorial_policy": "Founder/editorial review required before release; no implied clinical outcomes.",
@@ -244,6 +244,566 @@
       "tone": "warm-grounded",
       "status": "editorial-review",
       "text": "You can hold a private sense of accomplishment without needing anyone else's permission."
+    },
+    {
+      "id": "KDL-WHEN_PLANS_ARE_CANCELLED-001",
+      "theme": "when_plans_are_cancelled",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A cancelled plan can feel disappointing even when the reason makes perfect sense."
+    },
+    {
+      "id": "KDL-WHEN_PLANS_ARE_CANCELLED-002",
+      "theme": "when_plans_are_cancelled",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can respect someone's circumstances and still wish the evening had turned out differently."
+    },
+    {
+      "id": "KDL-WHEN_PLANS_ARE_CANCELLED-003",
+      "theme": "when_plans_are_cancelled",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected free hour may be restful, but you do not have to call it a gift immediately."
+    },
+    {
+      "id": "KDL-WHEN_PLANS_ARE_CANCELLED-004",
+      "theme": "when_plans_are_cancelled",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you were looking forward to seeing someone, it is okay to say so kindly."
+    },
+    {
+      "id": "KDL-WHEN_PLANS_ARE_CANCELLED-005",
+      "theme": "when_plans_are_cancelled",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A change of plans does not necessarily reflect the value of your company."
+    },
+    {
+      "id": "KDL-WHEN_PLANS_ARE_CANCELLED-006",
+      "theme": "when_plans_are_cancelled",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may decide to do something enjoyable alone rather than letting the whole day disappear."
+    },
+    {
+      "id": "KDL-WHEN_PLANS_ARE_CANCELLED-007",
+      "theme": "when_plans_are_cancelled",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you need to cancel, a clear explanation and a thoughtful alternative can show care."
+    },
+    {
+      "id": "KDL-WHEN_PLANS_ARE_CANCELLED-008",
+      "theme": "when_plans_are_cancelled",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every disappointment needs a silver lining before it can be acknowledged."
+    },
+    {
+      "id": "KDL-WHEN_PLANS_ARE_CANCELLED-009",
+      "theme": "when_plans_are_cancelled",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The anticipation mattered, even if the occasion did not happen."
+    },
+    {
+      "id": "KDL-WHEN_PLANS_ARE_CANCELLED-010",
+      "theme": "when_plans_are_cancelled",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can make a new plan when you are ready, without pretending this one meant nothing."
+    },
+    {
+      "id": "KDL-SOMEONE_REMEMBERED-001",
+      "theme": "someone_remembered",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When someone remembers a detail you shared weeks ago, it can make an ordinary conversation feel personal."
+    },
+    {
+      "id": "KDL-SOMEONE_REMEMBERED-002",
+      "theme": "someone_remembered",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A remembered preference is a small sign that your words found a place in someone's attention."
+    },
+    {
+      "id": "KDL-SOMEONE_REMEMBERED-003",
+      "theme": "someone_remembered",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may not realise how much it means to a person when you ask about their important day."
+    },
+    {
+      "id": "KDL-SOMEONE_REMEMBERED-004",
+      "theme": "someone_remembered",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Remembering a colleague's challenge can help you offer support at the right moment."
+    },
+    {
+      "id": "KDL-SOMEONE_REMEMBERED-005",
+      "theme": "someone_remembered",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A simple follow-up question says, “What mattered to you still matters to me.”"
+    },
+    {
+      "id": "KDL-SOMEONE_REMEMBERED-006",
+      "theme": "someone_remembered",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need a perfect memory to show someone you are paying attention."
+    },
+    {
+      "id": "KDL-SOMEONE_REMEMBERED-007",
+      "theme": "someone_remembered",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An old story revisited together can become a new moment of closeness."
+    },
+    {
+      "id": "KDL-SOMEONE_REMEMBERED-008",
+      "theme": "someone_remembered",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a person remembers your effort, let yourself enjoy being recognised."
+    },
+    {
+      "id": "KDL-SOMEONE_REMEMBERED-009",
+      "theme": "someone_remembered",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A thoughtful message on a difficult anniversary may offer companionship without demanding a reply."
+    },
+    {
+      "id": "KDL-SOMEONE_REMEMBERED-010",
+      "theme": "someone_remembered",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Care is often felt in the details people choose not to forget."
+    },
+    {
+      "id": "KDL-BEFORE_AN_IMPORTANT_CALL-001",
+      "theme": "before_an_important_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Before an important call, remind yourself that listening is part of being prepared."
+    },
+    {
+      "id": "KDL-BEFORE_AN_IMPORTANT_CALL-002",
+      "theme": "before_an_important_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can write down the question you most want answered and keep it nearby."
+    },
+    {
+      "id": "KDL-BEFORE_AN_IMPORTANT_CALL-003",
+      "theme": "before_an_important_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A pause before responding may help you say what you actually mean."
+    },
+    {
+      "id": "KDL-BEFORE_AN_IMPORTANT_CALL-004",
+      "theme": "before_an_important_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to sound impressive to communicate something important clearly."
+    },
+    {
+      "id": "KDL-BEFORE_AN_IMPORTANT_CALL-005",
+      "theme": "before_an_important_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you lose your place, you can return to your notes without embarrassment."
+    },
+    {
+      "id": "KDL-BEFORE_AN_IMPORTANT_CALL-006",
+      "theme": "before_an_important_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The other person may be uncertain too, even if their voice sounds confident."
+    },
+    {
+      "id": "KDL-BEFORE_AN_IMPORTANT_CALL-007",
+      "theme": "before_an_important_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Prepare your main point, but leave room for a conversation you cannot script."
+    },
+    {
+      "id": "KDL-BEFORE_AN_IMPORTANT_CALL-008",
+      "theme": "before_an_important_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can ask someone to repeat a detail rather than pretending you heard it."
+    },
+    {
+      "id": "KDL-BEFORE_AN_IMPORTANT_CALL-009",
+      "theme": "before_an_important_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An important call is one conversation, not a final judgment of your abilities."
+    },
+    {
+      "id": "KDL-BEFORE_AN_IMPORTANT_CALL-010",
+      "theme": "before_an_important_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When it ends, acknowledge the effort it took to show up thoughtfully."
+    },
+    {
+      "id": "KDL-SMALL_RECONCILIATIONS-001",
+      "theme": "small_reconciliations",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A small misunderstanding may soften when someone chooses to ask rather than assume."
+    },
+    {
+      "id": "KDL-SMALL_RECONCILIATIONS-002",
+      "theme": "small_reconciliations",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can begin repairing a conversation by acknowledging the part you understand."
+    },
+    {
+      "id": "KDL-SMALL_RECONCILIATIONS-003",
+      "theme": "small_reconciliations",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the first sign of peace is a willingness to listen without interruption."
+    },
+    {
+      "id": "KDL-SMALL_RECONCILIATIONS-004",
+      "theme": "small_reconciliations",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An apology is more meaningful when it names the impact rather than requesting instant forgiveness."
+    },
+    {
+      "id": "KDL-SMALL_RECONCILIATIONS-005",
+      "theme": "small_reconciliations",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may need time before you can speak warmly again, and that can be respected."
+    },
+    {
+      "id": "KDL-SMALL_RECONCILIATIONS-006",
+      "theme": "small_reconciliations",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A gentle invitation to talk leaves the other person free to decide when."
+    },
+    {
+      "id": "KDL-SMALL_RECONCILIATIONS-007",
+      "theme": "small_reconciliations",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every disagreement needs a winner before the relationship can move forward."
+    },
+    {
+      "id": "KDL-SMALL_RECONCILIATIONS-008",
+      "theme": "small_reconciliations",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When someone makes an honest effort to repair harm, notice the effort without ignoring what happened."
+    },
+    {
+      "id": "KDL-SMALL_RECONCILIATIONS-009",
+      "theme": "small_reconciliations",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can change how you respond next time even if yesterday cannot be rewritten."
+    },
+    {
+      "id": "KDL-SMALL_RECONCILIATIONS-010",
+      "theme": "small_reconciliations",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A repaired connection may look different from the one you remember, and still hold value."
+    },
+    {
+      "id": "KDL-WHEN_ENERGY_IS_LOW-001",
+      "theme": "when_energy_is_low",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When your energy is limited, choose what truly needs your attention and let the rest wait where possible."
+    },
+    {
+      "id": "KDL-WHEN_ENERGY_IS_LOW-002",
+      "theme": "when_energy_is_low",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shorter conversation can still be sincere when you are running low."
+    },
+    {
+      "id": "KDL-WHEN_ENERGY_IS_LOW-003",
+      "theme": "when_energy_is_low",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to match yesterday's pace to make today worthwhile."
+    },
+    {
+      "id": "KDL-WHEN_ENERGY_IS_LOW-004",
+      "theme": "when_energy_is_low",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Consider whether a simpler version of the task would meet the actual need."
+    },
+    {
+      "id": "KDL-WHEN_ENERGY_IS_LOW-005",
+      "theme": "when_energy_is_low",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A gentle walk, a quiet seat, or a glass of water may be a reasonable beginning."
+    },
+    {
+      "id": "KDL-WHEN_ENERGY_IS_LOW-006",
+      "theme": "when_energy_is_low",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let someone know if you need more time rather than disappearing under expectations."
+    },
+    {
+      "id": "KDL-WHEN_ENERGY_IS_LOW-007",
+      "theme": "when_energy_is_low",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Low energy is not a character flaw or evidence that you care less."
+    },
+    {
+      "id": "KDL-WHEN_ENERGY_IS_LOW-008",
+      "theme": "when_energy_is_low",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can keep a promise by communicating honestly when you need to change it."
+    },
+    {
+      "id": "KDL-WHEN_ENERGY_IS_LOW-009",
+      "theme": "when_energy_is_low",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A small amount of careful work can be enough for this part of the day."
+    },
+    {
+      "id": "KDL-WHEN_ENERGY_IS_LOW-010",
+      "theme": "when_energy_is_low",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Notice what restores you without demanding that every break leave you transformed."
+    },
+    {
+      "id": "KDL-OFFERING_AN_INVITATION-001",
+      "theme": "offering_an_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A thoughtful invitation lets someone know you considered what they might genuinely enjoy."
+    },
+    {
+      "id": "KDL-OFFERING_AN_INVITATION-002",
+      "theme": "offering_an_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Be specific enough that the other person knows what you are suggesting."
+    },
+    {
+      "id": "KDL-OFFERING_AN_INVITATION-003",
+      "theme": "offering_an_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can invite someone to a simple outing without turning it into a formal occasion."
+    },
+    {
+      "id": "KDL-OFFERING_AN_INVITATION-004",
+      "theme": "offering_an_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to plan an elaborate occasion to make someone feel included."
+    },
+    {
+      "id": "KDL-OFFERING_AN_INVITATION-005",
+      "theme": "offering_an_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Ask the quieter person whether they would enjoy joining, without putting them on the spot."
+    },
+    {
+      "id": "KDL-OFFERING_AN_INVITATION-006",
+      "theme": "offering_an_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A walk or a cup of tea may be easier to accept than a crowded gathering."
+    },
+    {
+      "id": "KDL-OFFERING_AN_INVITATION-007",
+      "theme": "offering_an_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If someone declines, respect the answer without asking them to defend it."
+    },
+    {
+      "id": "KDL-OFFERING_AN_INVITATION-008",
+      "theme": "offering_an_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shared interest can be a natural starting point for spending time together."
+    },
+    {
+      "id": "KDL-OFFERING_AN_INVITATION-009",
+      "theme": "offering_an_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes being invited matters as much as the event itself."
+    },
+    {
+      "id": "KDL-OFFERING_AN_INVITATION-010",
+      "theme": "offering_an_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Offer the invitation with warmth, then let the other person choose freely."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_IS_STRUGGLING-001",
+      "theme": "when_a_friend_is_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need the perfect words to tell a struggling friend you care."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_IS_STRUGGLING-002",
+      "theme": "when_a_friend_is_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Ask whether they would prefer company, practical help, or a little space."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_IS_STRUGGLING-003",
+      "theme": "when_a_friend_is_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A message that expects no immediate reply can be a gentle way to stay connected."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_IS_STRUGGLING-004",
+      "theme": "when_a_friend_is_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Listen to what your friend says they need before offering a solution."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_IS_STRUGGLING-005",
+      "theme": "when_a_friend_is_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can acknowledge that something sounds hard without claiming to understand every detail."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_IS_STRUGGLING-006",
+      "theme": "when_a_friend_is_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A specific offer may be easier to accept than a general promise of help."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_IS_STRUGGLING-007",
+      "theme": "when_a_friend_is_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Remember to ask about the ordinary parts of their life as well as the difficult ones."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_IS_STRUGGLING-008",
+      "theme": "when_a_friend_is_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If their situation exceeds what you can safely help with, support them in finding appropriate assistance."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_IS_STRUGGLING-009",
+      "theme": "when_a_friend_is_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can remain a caring friend while being honest about your own limits."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_IS_STRUGGLING-010",
+      "theme": "when_a_friend_is_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes showing up again next week matters more than finding an extraordinary thing to say today."
     }
   ]
 }
