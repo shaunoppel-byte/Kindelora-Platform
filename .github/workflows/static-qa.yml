@@ -45,3 +45,6 @@ jobs:
         run: python3 scripts/check-launch-dom.py
       - name: Validate curated message library
         run: python3 scripts/check-message-library.py
+
+      - name: Run editorial similarity audit
+        run: python3 scripts/audit-message-library.py
