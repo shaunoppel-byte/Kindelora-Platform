@@ -1,0 +1,42 @@
+name: KINDELORA static-site QA
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+permissions:
+  contents: read
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check required site assets
+        run: |
+          test -f index.html
+          test -f app.js
+          test -f manifest.webmanifest
+          test -f sw.js
+          test -f _headers
+      - name: Validate JavaScript syntax
+        run: |
+          node --check app.js
+          node --check sw.js
+      - name: Validate local HTML fragment links
+        run: |
+          python3 - <<'PY'
+          from html.parser import HTMLParser
+          from pathlib import Path
+          class Links(HTMLParser):
+              def __init__(self):
+                  super().__init__(); self.ids=set(); self.links=[]
+              def handle_starttag(self, tag, attrs):
+                  d=dict(attrs)
+                  if d.get('id'): self.ids.add(d['id'])
+                  if tag=='a' and d.get('href','').startswith('#'):
+                      self.links.append(d['href'][1:])
+          p=Links();p.feed(Path('index.html').read_text())
+          missing=[x for x in p.links if x and x not in p.ids]
+          if missing: raise SystemExit('Missing anchors: '+', '.join(missing))
+          print(f'Validated {len(p.links)} fragment links')
+          PY
