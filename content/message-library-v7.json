@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA expansion batch 7 — editorial tranche",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-04",
+  "messages": [
+    {
+      "id": "KDL-WHEN_YOU_FEEL_OVERLOOKED-001",
+      "theme": "when_you_feel_overlooked",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being overlooked can sting even when nobody intended to hurt you."
+    },
+    {
+      "id": "KDL-WHEN_YOU_FEEL_OVERLOOKED-002",
+      "theme": "when_you_feel_overlooked",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your contribution still has substance when it is missing from the public thank-you."
+    },
+    {
+      "id": "KDL-WHEN_YOU_FEEL_OVERLOOKED-003",
+      "theme": "when_you_feel_overlooked",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can name the work you completed without turning the conversation into a contest."
+    },
+    {
+      "id": "KDL-WHEN_YOU_FEEL_OVERLOOKED-004",
+      "theme": "when_you_feel_overlooked",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes recognition arrives late; you are allowed to wish it had come sooner."
+    },
+    {
+      "id": "KDL-WHEN_YOU_FEEL_OVERLOOKED-005",
+      "theme": "when_you_feel_overlooked",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Ask for feedback that helps you understand whether your work has been seen."
+    },
+    {
+      "id": "KDL-WHEN_YOU_FEEL_OVERLOOKED-006",
+      "theme": "when_you_feel_overlooked",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A quiet contribution can be essential to a result that looks effortless from outside."
+    },
+    {
+      "id": "KDL-WHEN_YOU_FEEL_OVERLOOKED-007",
+      "theme": "when_you_feel_overlooked",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need to diminish someone else's achievement to speak about your own."
+    },
+    {
+      "id": "KDL-WHEN_YOU_FEEL_OVERLOOKED-008",
+      "theme": "when_you_feel_overlooked",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Notice who consistently values your effort, not only who applauds the loudest."
+    },
+    {
+      "id": "KDL-WHEN_YOU_FEEL_OVERLOOKED-009",
+      "theme": "when_you_feel_overlooked",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is reasonable to want appreciation as well as meaningful work."
+    },
+    {
+      "id": "KDL-WHEN_YOU_FEEL_OVERLOOKED-010",
+      "theme": "when_you_feel_overlooked",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "One overlooked contribution cannot tell the full story of what you bring."
+    },
+    {
+      "id": "KDL-AFTER_A_SMALL_MISTAKE-001",
+      "theme": "after_a_small_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A misplaced word can be corrected without turning it into a verdict on your character."
+    },
+    {
+      "id": "KDL-AFTER_A_SMALL_MISTAKE-002",
+      "theme": "after_a_small_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you made an error, begin with what needs repairing rather than how embarrassed you feel."
+    },
+    {
+      "id": "KDL-AFTER_A_SMALL_MISTAKE-003",
+      "theme": "after_a_small_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can acknowledge a mistake plainly without rehearsing it in your mind all evening."
+    },
+    {
+      "id": "KDL-AFTER_A_SMALL_MISTAKE-004",
+      "theme": "after_a_small_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "One missed detail may call for a better process, not harsher self-talk."
+    },
+    {
+      "id": "KDL-AFTER_A_SMALL_MISTAKE-005",
+      "theme": "after_a_small_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An honest correction can build trust even when the original mistake was uncomfortable."
+    },
+    {
+      "id": "KDL-AFTER_A_SMALL_MISTAKE-006",
+      "theme": "after_a_small_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Notice what the experience taught you before deciding it was entirely wasted."
+    },
+    {
+      "id": "KDL-AFTER_A_SMALL_MISTAKE-007",
+      "theme": "after_a_small_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are allowed to learn in public without performing perfection."
+    },
+    {
+      "id": "KDL-AFTER_A_SMALL_MISTAKE-008",
+      "theme": "after_a_small_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If someone was affected, a practical remedy may matter more than a lengthy explanation."
+    },
+    {
+      "id": "KDL-AFTER_A_SMALL_MISTAKE-009",
+      "theme": "after_a_small_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The next careful choice deserves your attention more than endless replaying of the last one."
+    },
+    {
+      "id": "KDL-AFTER_A_SMALL_MISTAKE-010",
+      "theme": "after_a_small_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A mistake can be part of your record without becoming your identity."
+    }
+  ]
+}
