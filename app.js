@@ -49,3 +49,14 @@ document.getElementById("test-app-notification").addEventListener("click",async(
 
 // Keep the experience visually complete when an external photograph is unavailable.
 document.querySelectorAll("img[data-fallback]").forEach(image=>{image.addEventListener("error",()=>{if(image.src!==new URL(image.dataset.fallback,location.origin).href){image.src=image.dataset.fallback;}})});
+
+
+// Optional, device-local reflection: never transmitted or silently synced.
+(function(){
+const kind=document.getElementById("reflection-kind"),entry=document.getElementById("reflection-text"),status=document.getElementById("reflection-status");
+if(!kind||!entry||!status)return;
+const key="kindelora-private-reflection-v1";
+try{const saved=JSON.parse(localStorage.getItem(key)||"null");if(saved&&["intention","gratitude","action"].includes(saved.kind)&&typeof saved.text==="string"){kind.value=saved.kind;entry.value=saved.text.slice(0,500)}}catch(e){}
+document.getElementById("reflection-save").addEventListener("click",()=>{const text=entry.value.trim();if(!text){status.textContent="Write a thought first, or leave this moment blank. There is no pressure.";return}try{localStorage.setItem(key,JSON.stringify({kind:kind.value,text:text.slice(0,500)}));status.textContent="Saved privately in this browser. You can return to it or delete it anytime."}catch(e){status.textContent="This browser cannot save locally. Your words were not saved."}});
+document.getElementById("reflection-clear").addEventListener("click",()=>{try{localStorage.removeItem(key)}catch(e){}entry.value="";kind.value="intention";status.textContent="Your saved reflection has been cleared from this browser."});
+})();
