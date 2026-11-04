@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "library": "KINDELORA expansion batch 7 — editorial tranche",
+  "library": "KINDELORA expansion batch 7 — 100 of requested 1000",
   "release_status": "editorial-review",
   "created_at": "2026-11-04",
   "messages": [
@@ -163,6 +163,646 @@
       "tone": "warm-grounded",
       "status": "editorial-review",
       "text": "A mistake can be part of your record without becoming your identity."
+    },
+    {
+      "id": "KDL-WELCOMING_A_NEW_COLLEAGUE-001",
+      "theme": "welcoming_a_new_colleague",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A new colleague may remember who made room for them at the table."
+    },
+    {
+      "id": "KDL-WELCOMING_A_NEW_COLLEAGUE-002",
+      "theme": "welcoming_a_new_colleague",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Explain the unwritten rules that everyone else has forgotten were once confusing."
+    },
+    {
+      "id": "KDL-WELCOMING_A_NEW_COLLEAGUE-003",
+      "theme": "welcoming_a_new_colleague",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An introduction that includes a person's role can make their first conversation easier."
+    },
+    {
+      "id": "KDL-WELCOMING_A_NEW_COLLEAGUE-004",
+      "theme": "welcoming_a_new_colleague",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Ask what would help them settle in instead of assuming they need the same support you did."
+    },
+    {
+      "id": "KDL-WELCOMING_A_NEW_COLLEAGUE-005",
+      "theme": "welcoming_a_new_colleague",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A patient answer today may spare someone hours of uncertainty tomorrow."
+    },
+    {
+      "id": "KDL-WELCOMING_A_NEW_COLLEAGUE-006",
+      "theme": "welcoming_a_new_colleague",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Include the newcomer in ordinary conversations, not only formal onboarding sessions."
+    },
+    {
+      "id": "KDL-WELCOMING_A_NEW_COLLEAGUE-007",
+      "theme": "welcoming_a_new_colleague",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you share context generously, you help another person contribute with confidence."
+    },
+    {
+      "id": "KDL-WELCOMING_A_NEW_COLLEAGUE-008",
+      "theme": "welcoming_a_new_colleague",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Give them time to learn names without making their uncertainty a joke."
+    },
+    {
+      "id": "KDL-WELCOMING_A_NEW_COLLEAGUE-009",
+      "theme": "welcoming_a_new_colleague",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A simple check-in after the first week can show that your welcome was genuine."
+    },
+    {
+      "id": "KDL-WELCOMING_A_NEW_COLLEAGUE-010",
+      "theme": "welcoming_a_new_colleague",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Belonging grows when someone notices who has not yet found a place to speak."
+    },
+    {
+      "id": "KDL-WHEN_PROGRESS_IS_INVISIBLE-001",
+      "theme": "when_progress_is_invisible",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some improvements are difficult to photograph, but they change how you live each day."
+    },
+    {
+      "id": "KDL-WHEN_PROGRESS_IS_INVISIBLE-002",
+      "theme": "when_progress_is_invisible",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may notice growth in the argument you chose not to prolong."
+    },
+    {
+      "id": "KDL-WHEN_PROGRESS_IS_INVISIBLE-003",
+      "theme": "when_progress_is_invisible",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An easier morning can be evidence of work you did quietly over time."
+    },
+    {
+      "id": "KDL-WHEN_PROGRESS_IS_INVISIBLE-004",
+      "theme": "when_progress_is_invisible",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the result is not visible yet, look at what has become less difficult."
+    },
+    {
+      "id": "KDL-WHEN_PROGRESS_IS_INVISIBLE-005",
+      "theme": "when_progress_is_invisible",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A habit can become steadier long before it feels impressive."
+    },
+    {
+      "id": "KDL-WHEN_PROGRESS_IS_INVISIBLE-006",
+      "theme": "when_progress_is_invisible",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can measure progress by what you understand now that once confused you."
+    },
+    {
+      "id": "KDL-WHEN_PROGRESS_IS_INVISIBLE-007",
+      "theme": "when_progress_is_invisible",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A small reduction in worry may matter more than an impressive public milestone."
+    },
+    {
+      "id": "KDL-WHEN_PROGRESS_IS_INVISIBLE-008",
+      "theme": "when_progress_is_invisible",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your effort is not wasted simply because it cannot be summarised in a number."
+    },
+    {
+      "id": "KDL-WHEN_PROGRESS_IS_INVISIBLE-009",
+      "theme": "when_progress_is_invisible",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Notice the choices that now feel possible, even if your circumstances look similar."
+    },
+    {
+      "id": "KDL-WHEN_PROGRESS_IS_INVISIBLE-010",
+      "theme": "when_progress_is_invisible",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some meaningful changes first appear in the way you treat yourself."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_SAY_NO-001",
+      "theme": "when_you_need_to_say_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A respectful no can be kinder than a reluctant yes you cannot sustain."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_SAY_NO-002",
+      "theme": "when_you_need_to_say_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can appreciate an invitation and still decide that it is not right for you."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_SAY_NO-003",
+      "theme": "when_you_need_to_say_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A clear answer gives others a better chance to make their own plans."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_SAY_NO-004",
+      "theme": "when_you_need_to_say_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need to invent an emergency to protect a reasonable boundary."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_SAY_NO-005",
+      "theme": "when_you_need_to_say_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Declining one request does not cancel the generosity you have shown elsewhere."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_SAY_NO-006",
+      "theme": "when_you_need_to_say_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you need time to decide, asking for it is an honest response."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_SAY_NO-007",
+      "theme": "when_you_need_to_say_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A boundary can be expressed warmly without becoming negotiable."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_SAY_NO-008",
+      "theme": "when_you_need_to_say_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may feel uncomfortable saying no and still know it is necessary."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_SAY_NO-009",
+      "theme": "when_you_need_to_say_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Offering an alternative is optional, not a debt you owe for declining."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_SAY_NO-010",
+      "theme": "when_you_need_to_say_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A relationship with room for honest limits has space for mutual respect."
+    },
+    {
+      "id": "KDL-MAKING_A_DIFFICULT_CHOICE-001",
+      "theme": "making_a_difficult_choice",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Two reasonable options can make a decision difficult without making you indecisive."
+    },
+    {
+      "id": "KDL-MAKING_A_DIFFICULT_CHOICE-002",
+      "theme": "making_a_difficult_choice",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "List what matters most before comparing what looks most impressive."
+    },
+    {
+      "id": "KDL-MAKING_A_DIFFICULT_CHOICE-003",
+      "theme": "making_a_difficult_choice",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may not be able to remove uncertainty, but you can choose which risks you understand."
+    },
+    {
+      "id": "KDL-MAKING_A_DIFFICULT_CHOICE-004",
+      "theme": "making_a_difficult_choice",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Ask whose expectations are influencing the decision and whether they belong in it."
+    },
+    {
+      "id": "KDL-MAKING_A_DIFFICULT_CHOICE-005",
+      "theme": "making_a_difficult_choice",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A good choice can still carry a sense of loss for the path not taken."
+    },
+    {
+      "id": "KDL-MAKING_A_DIFFICULT_CHOICE-006",
+      "theme": "making_a_difficult_choice",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can seek advice without handing someone else responsibility for your life."
+    },
+    {
+      "id": "KDL-MAKING_A_DIFFICULT_CHOICE-007",
+      "theme": "making_a_difficult_choice",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When the facts are incomplete, distinguish what you know from what you fear."
+    },
+    {
+      "id": "KDL-MAKING_A_DIFFICULT_CHOICE-008",
+      "theme": "making_a_difficult_choice",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes choosing means accepting that no option will satisfy every preference."
+    },
+    {
+      "id": "KDL-MAKING_A_DIFFICULT_CHOICE-009",
+      "theme": "making_a_difficult_choice",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Give yourself permission to revisit a decision when genuinely new information arrives."
+    },
+    {
+      "id": "KDL-MAKING_A_DIFFICULT_CHOICE-010",
+      "theme": "making_a_difficult_choice",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can act thoughtfully without demanding a guarantee about the outcome."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_LISTENS-001",
+      "theme": "when_someone_listens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "There is relief in finishing a sentence without being interrupted."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_LISTENS-002",
+      "theme": "when_someone_listens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When someone listens closely, the problem may remain but the loneliness around it can soften."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_LISTENS-003",
+      "theme": "when_someone_listens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A thoughtful question can help you hear your own thoughts more clearly."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_LISTENS-004",
+      "theme": "when_someone_listens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can thank a listener without feeling obliged to share more than you wish."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_LISTENS-005",
+      "theme": "when_someone_listens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes being understood begins with someone admitting they do not fully understand yet."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_LISTENS-006",
+      "theme": "when_someone_listens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An attentive silence can be more comforting than a quick solution."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_LISTENS-007",
+      "theme": "when_someone_listens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Notice the people who make room for complicated feelings without rushing to tidy them."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_LISTENS-008",
+      "theme": "when_someone_listens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You deserve conversations where your words are not treated as an inconvenience."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_LISTENS-009",
+      "theme": "when_someone_listens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Listening is a form of care that asks for attention rather than cleverness."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_LISTENS-010",
+      "theme": "when_someone_listens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A person who stays curious about your experience offers something quietly valuable."
+    },
+    {
+      "id": "KDL-AFTER_A_LONG_JOURNEY-001",
+      "theme": "after_a_long_journey",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Arriving after a long journey may bring relief and tiredness at the same time."
+    },
+    {
+      "id": "KDL-AFTER_A_LONG_JOURNEY-002",
+      "theme": "after_a_long_journey",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to make the first hour at your destination productive."
+    },
+    {
+      "id": "KDL-AFTER_A_LONG_JOURNEY-003",
+      "theme": "after_a_long_journey",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar voice can help an unfamiliar place feel a little more welcoming."
+    },
+    {
+      "id": "KDL-AFTER_A_LONG_JOURNEY-004",
+      "theme": "after_a_long_journey",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Take time to notice where you are before rushing toward the next appointment."
+    },
+    {
+      "id": "KDL-AFTER_A_LONG_JOURNEY-005",
+      "theme": "after_a_long_journey",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The journey may have taken more out of you than the timetable suggests."
+    },
+    {
+      "id": "KDL-AFTER_A_LONG_JOURNEY-006",
+      "theme": "after_a_long_journey",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An altered itinerary may need a little patience before you find your bearings."
+    },
+    {
+      "id": "KDL-AFTER_A_LONG_JOURNEY-007",
+      "theme": "after_a_long_journey",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A simple meal and a quiet room can feel especially generous after a demanding day."
+    },
+    {
+      "id": "KDL-AFTER_A_LONG_JOURNEY-008",
+      "theme": "after_a_long_journey",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can be grateful to have arrived and still need time to recover."
+    },
+    {
+      "id": "KDL-AFTER_A_LONG_JOURNEY-009",
+      "theme": "after_a_long_journey",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let the first evening be ordinary if that is what your body asks for."
+    },
+    {
+      "id": "KDL-AFTER_A_LONG_JOURNEY-010",
+      "theme": "after_a_long_journey",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Reaching a destination is enough of an accomplishment for this moment."
+    },
+    {
+      "id": "KDL-ORDINARY_ACTS_OF_TRUST-001",
+      "theme": "ordinary_acts_of_trust",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Trust can grow when someone follows through on a promise that seemed small."
+    },
+    {
+      "id": "KDL-ORDINARY_ACTS_OF_TRUST-002",
+      "theme": "ordinary_acts_of_trust",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Returning a borrowed item carefully tells a person their belongings mattered to you."
+    },
+    {
+      "id": "KDL-ORDINARY_ACTS_OF_TRUST-003",
+      "theme": "ordinary_acts_of_trust",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being on time can be a quiet way of respecting another person's day."
+    },
+    {
+      "id": "KDL-ORDINARY_ACTS_OF_TRUST-004",
+      "theme": "ordinary_acts_of_trust",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you cannot meet a commitment, early honesty is more useful than silence."
+    },
+    {
+      "id": "KDL-ORDINARY_ACTS_OF_TRUST-005",
+      "theme": "ordinary_acts_of_trust",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A private confidence deserves care even when the conversation has moved on."
+    },
+    {
+      "id": "KDL-ORDINARY_ACTS_OF_TRUST-006",
+      "theme": "ordinary_acts_of_trust",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can rebuild reliability through repeated actions rather than dramatic declarations."
+    },
+    {
+      "id": "KDL-ORDINARY_ACTS_OF_TRUST-007",
+      "theme": "ordinary_acts_of_trust",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Notice the people whose words and behaviour remain aligned over time."
+    },
+    {
+      "id": "KDL-ORDINARY_ACTS_OF_TRUST-008",
+      "theme": "ordinary_acts_of_trust",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A trustworthy relationship leaves room for questions instead of demanding blind certainty."
+    },
+    {
+      "id": "KDL-ORDINARY_ACTS_OF_TRUST-009",
+      "theme": "ordinary_acts_of_trust",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Admitting what you do not know can be part of being dependable."
+    },
+    {
+      "id": "KDL-ORDINARY_ACTS_OF_TRUST-010",
+      "theme": "ordinary_acts_of_trust",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The smallest promises often reveal how seriously we take one another."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_SLOWLY-001",
+      "theme": "when_you_are_learning_slowly",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Learning slowly can mean you are taking time to understand rather than memorise."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_SLOWLY-002",
+      "theme": "when_you_are_learning_slowly",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are allowed to ask the question that everyone else seems to know."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_SLOWLY-003",
+      "theme": "when_you_are_learning_slowly",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A second explanation may reveal something the first one could not."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_SLOWLY-004",
+      "theme": "when_you_are_learning_slowly",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Try describing the idea in your own words before deciding you have failed."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_SLOWLY-005",
+      "theme": "when_you_are_learning_slowly",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone else's quick progress does not establish the pace you must follow."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_SLOWLY-006",
+      "theme": "when_you_are_learning_slowly",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The moment a concept finally makes sense can justify many patient attempts."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_SLOWLY-007",
+      "theme": "when_you_are_learning_slowly",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A useful note today may become the explanation you need next week."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_SLOWLY-008",
+      "theme": "when_you_are_learning_slowly",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can be capable and still require practice with something unfamiliar."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_SLOWLY-009",
+      "theme": "when_you_are_learning_slowly",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Learning includes the courage to reveal what you do not yet understand."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_SLOWLY-010",
+      "theme": "when_you_are_learning_slowly",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Give yourself credit for returning to a challenge that has not become easy."
     }
   ]
 }
