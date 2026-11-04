@@ -34,3 +34,7 @@ for page in ("privacy.html","terms.html"):
 if "prefers-reduced-motion:reduce" not in html:raise SystemExit("Reduced motion accessibility rule missing")
 if "scroll-margin-top" not in html:raise SystemExit("Sticky header anchor offset missing")
 print("Validated offline assets, policy links and accessibility CSS")
+
+if not all(x in html for x in ("$4.99","$49.99","Monthly plan","Annual plan")):raise SystemExit("KINDELORA Plus price display missing")
+if "No payment or checkout available" not in html:raise SystemExit("Plus prelaunch disclaimer missing")
+print("Verified proposed Plus monthly and annual pricing and checkout disclaimer")
