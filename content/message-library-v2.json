@@ -1,0 +1,1209 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA curated encouragement — editorial batch 2",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-04",
+  "editorial_policy": "Original supportive messages, no medical promises or coercive positivity. Requires founder/editorial approval before publishing.",
+  "messages": [
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-001",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The smallest kindness is often the one that notices what everyone else has walked past."
+    },
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-002",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Hold the door, learn the name, make the introduction. A welcoming world is built through ordinary gestures."
+    },
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-003",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A thoughtful act does not become less meaningful because nobody sees you do it."
+    },
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-004",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you have a little patience to spare today, someone nearby may be grateful to receive it."
+    },
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-005",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Kindness can be practical: a clear explanation, a lifted bag, a message that says the appointment went well."
+    },
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-006",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Notice who is doing the invisible work. A sincere acknowledgment can make that work feel less lonely."
+    },
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-007",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You cannot know every story in the queue ahead of you. Leave room for a little grace."
+    },
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-008",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes generosity is giving another person time to find the words they need."
+    },
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-009",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A small courtesy offered consistently can change the atmosphere of an entire place."
+    },
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-010",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you have the chance to make someone's task easier, consider taking it without needing recognition."
+    },
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-011",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let your kindness be something the other person can comfortably receive, not something they must repay."
+    },
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-012",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Remembering a detail someone mentioned weeks ago can tell them they were truly heard."
+    },
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-013",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The way you speak to someone having a slow day can become the part of their day they remember."
+    },
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-014",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An invitation matters even when someone cannot accept it. It tells them there was room for them."
+    },
+    {
+      "id": "KDL-EVERYDAY_KINDNESS-015",
+      "theme": "everyday_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "There is no need to wait for a grand occasion to make ordinary life gentler."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-001",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A new chapter can feel unfamiliar even when you chose it with your whole heart."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-002",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may miss what was comfortable without wanting to return to what was limiting."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-003",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first week of a change is not a fair test of the life that may grow around it."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-004",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Give yourself permission to be a beginner in a place where you used to know the answers."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-005",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An ending can deserve respect even when you are relieved it has arrived."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-006",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need a perfect explanation for why your priorities have changed."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-007",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some transitions are quiet. Nobody announces the day you begin to see yourself differently."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-008",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When familiar routines disappear, build one small new ritual that makes the day feel yours."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-009",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is possible to welcome an opportunity and still feel sad about what you are leaving."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-010",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can carry the best of an old season without carrying every expectation that came with it."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-011",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the next step feels large, ask what would make your first day a little more manageable."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-012",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are allowed to take longer to settle than other people expected."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-013",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every meaningful change looks dramatic from the outside. Some begin with a different answer to an old question."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-014",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The people who knew you before can still love the person you are becoming."
+    },
+    {
+      "id": "KDL-LIFE_TRANSITIONS-015",
+      "theme": "life_transitions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let the new season introduce itself before deciding what it will mean."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-001",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you cannot know the outcome, you can still choose the care you bring to the process."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-002",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unanswered question does not need to occupy every room in your mind."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-003",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "There is a difference between preparing thoughtfully and rehearsing every possible disappointment."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-004",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the future feels crowded with possibilities, return to what is true about today."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-005",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may make a responsible choice without receiving a guarantee in return."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-006",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Waiting can be uncomfortable. It does not mean you have done something wrong."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-007",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A plan is useful because it guides you, not because life has agreed to follow it exactly."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-008",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the wisest answer is that you need more information before you decide."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-009",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can ask for clarity without apologising for wanting to understand."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-010",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When two paths both have risks, let your values help you choose what matters most."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-011",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not knowing yet is a temporary description, not a personal failing."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-012",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Give uncertain situations a place in your day, rather than allowing them to become the whole day."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-013",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can revise a decision when the facts change. Thoughtfulness is not inconsistency."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-014",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If today's answer is simply to wait and watch, you can still live meaningfully in the meantime."
+    },
+    {
+      "id": "KDL-UNCERTAINTY-015",
+      "theme": "uncertainty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let uncertainty make you attentive, not unkind to yourself."
+    },
+    {
+      "id": "KDL-FRIENDSHIP-001",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friend who remembers the ordinary details of your life is offering a quiet kind of care."
+    },
+    {
+      "id": "KDL-FRIENDSHIP-002",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need a special reason to tell a friend that their company makes life better."
+    },
+    {
+      "id": "KDL-FRIENDSHIP-003",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some friendships are built from long conversations; others from showing up when words are difficult."
+    },
+    {
+      "id": "KDL-FRIENDSHIP-004",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friendship can survive a busy season when both people make room for an honest return."
+    },
+    {
+      "id": "KDL-FRIENDSHIP-005",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Ask your friend what has been bringing them joy lately, not only what has been going wrong."
+    },
+    {
+      "id": "KDL-FRIENDSHIP-006",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shared memory becomes warmer when someone says, “I still think about that day.”"
+    },
+    {
+      "id": "KDL-FRIENDSHIP-007",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can celebrate a friend's success without comparing it with your own timeline."
+    },
+    {
+      "id": "KDL-FRIENDSHIP-008",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Good friendship leaves space for different opinions without turning every disagreement into a test of loyalty."
+    },
+    {
+      "id": "KDL-FRIENDSHIP-009",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes a message that says “no need to reply” is a generous way to show you care."
+    },
+    {
+      "id": "KDL-FRIENDSHIP-010",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friend may need you to listen more than they need you to make the problem disappear."
+    },
+    {
+      "id": "KDL-FRIENDSHIP-011",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Make time for the people with whom you can be wonderfully ordinary."
+    },
+    {
+      "id": "KDL-FRIENDSHIP-012",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An old friendship can find new shape when life changes; it need not look exactly as it once did."
+    },
+    {
+      "id": "KDL-FRIENDSHIP-013",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Thank the friend who makes you laugh when you have forgotten how much you needed it."
+    },
+    {
+      "id": "KDL-FRIENDSHIP-014",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is okay to be the one who reaches out first. Connection is not a competition."
+    },
+    {
+      "id": "KDL-FRIENDSHIP-015",
+      "theme": "friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Friendship grows through many small moments of choosing to remain interested in each other's lives."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-001",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The people closest to us still deserve the courtesy we offer to strangers."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-002",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A family conversation can become kinder when we listen for the feeling beneath the words."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-003",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can love your family and still need quiet time that belongs only to you."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-004",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A child may remember the moment you put down your phone more than the perfect activity you planned."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-005",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "There is tenderness in asking an older relative to tell a story you have heard before."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-006",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Families can carry different memories of the same day. Curiosity may help more than correction."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-007",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A small tradition matters because someone knows they can look forward to it again."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-008",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Tell the people at home what you appreciate while the ordinary day is still happening."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-009",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to solve every family disagreement before you can offer a thoughtful gesture."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-010",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A family member's achievement deserves to be seen on its own terms, not measured against anyone else's."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-011",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Care can mean making space for another person's independence, even when you would choose differently."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-012",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a loved one is quiet, a gentle invitation may be more welcome than a stream of questions."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-013",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An ordinary meal can become a place where people feel remembered and included."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-014",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can honour family history while choosing healthier patterns for the future."
+    },
+    {
+      "id": "KDL-FAMILY_CARE-015",
+      "theme": "family_care",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The words “I'm glad you're here” are worth saying in the places where we assume they are understood."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-001",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The value of your work is not always visible in the moments when you are doing it."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-002",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A clear handover can be an act of kindness to the colleague who comes after you."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-003",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can care about doing excellent work without making every result a judgment of your worth."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-004",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some of the most useful contributions are the quiet ones that help a whole team succeed."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-005",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A difficult meeting can improve when one person asks the question everyone else is avoiding respectfully."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-006",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your work feels repetitive, notice who benefits when you do the ordinary things well."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-007",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Ambition and patience can belong in the same career."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-008",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are allowed to learn from someone whose title is different from yours."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-009",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A colleague's success need not reduce the space available for your own."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-010",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you are stretched thin, naming a realistic priority can be more responsible than promising everything."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-011",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your purpose may be expressed in how you treat people, not only in the outcomes you produce."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-012",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An honest update delivered early is often more valuable than an impressive promise delivered late."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-013",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can take pride in a day's work even when the larger project remains unfinished."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-014",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Good leadership sometimes begins by making it easier for another person to speak."
+    },
+    {
+      "id": "KDL-WORK_AND_PURPOSE-015",
+      "theme": "work_and_purpose",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "There are many meaningful ways to contribute; not all of them appear on a job description."
+    },
+    {
+      "id": "KDL-BOUNDARIES-001",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A kind boundary tells the truth about what you can offer without making promises you cannot keep."
+    },
+    {
+      "id": "KDL-BOUNDARIES-002",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can decline an invitation warmly and still mean your no."
+    },
+    {
+      "id": "KDL-BOUNDARIES-003",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being available to everyone all the time can leave little room for the people and things you value most."
+    },
+    {
+      "id": "KDL-BOUNDARIES-004",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not owe an immediate response to every request that reaches your phone."
+    },
+    {
+      "id": "KDL-BOUNDARIES-005",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A boundary is easier to respect when it is expressed clearly rather than hidden in resentment."
+    },
+    {
+      "id": "KDL-BOUNDARIES-006",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can care about someone's disappointment without taking responsibility for removing it."
+    },
+    {
+      "id": "KDL-BOUNDARIES-007",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Choosing not to explain every personal decision is sometimes a form of peace."
+    },
+    {
+      "id": "KDL-BOUNDARIES-008",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A healthy relationship can make room for two people to have different needs."
+    },
+    {
+      "id": "KDL-BOUNDARIES-009",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may change how much of your time you give without changing how much you care."
+    },
+    {
+      "id": "KDL-BOUNDARIES-010",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The word “later” is useful when you mean it, and “no” is kinder when you do not."
+    },
+    {
+      "id": "KDL-BOUNDARIES-011",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Protecting time for rest can help you arrive more fully for the commitments you choose."
+    },
+    {
+      "id": "KDL-BOUNDARIES-012",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can be generous with your attention while remaining thoughtful about your limits."
+    },
+    {
+      "id": "KDL-BOUNDARIES-013",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A request is not automatically an obligation because it was made with urgency."
+    },
+    {
+      "id": "KDL-BOUNDARIES-014",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need to turn your boundaries into an argument to make them valid."
+    },
+    {
+      "id": "KDL-BOUNDARIES-015",
+      "theme": "boundaries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you say yes, let it be a yes you can give with an open heart."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-001",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first sip of something warm can be a small invitation to notice that you are here."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-002",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A favourite song arriving unexpectedly can change the texture of an ordinary afternoon."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-003",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Look for the patch of sunlight that found its way into your day."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-004",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar scent can carry a whole season of memories in a single breath."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-005",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "There is pleasure in a conversation that wanders without needing to reach a conclusion."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-006",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are allowed to enjoy a beautiful sky without taking a photograph of it."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-007",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes a slow walk reveals details that a hurried journey would have missed."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-008",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The sound of someone laughing freely is a reminder that joy can be wonderfully contagious."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-009",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A clean page, a fresh notebook, an open window: beginnings come in small forms too."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-010",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Notice the moment a meal tastes especially good because you took time to enjoy it."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-011",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A day does not have to be extraordinary to contain something worth remembering."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-012",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The little things that make you smile are not distractions from life; they are part of it."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-013",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let a pleasant surprise remain pleasant without asking it to mean something bigger."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-014",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A few minutes outdoors can offer a change of scene, even when your circumstances stay the same."
+    },
+    {
+      "id": "KDL-SMALL_JOYS-015",
+      "theme": "small_joys",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some happiness arrives quietly and leaves quietly. It still counted."
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-001",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A sincere apology begins by recognising the effect of your actions, not explaining away your intention."
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-002",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can take responsibility for a mistake without deciding you are incapable of doing better."
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-003",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Repair sometimes requires listening to a version of events that feels uncomfortable to hear."
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-004",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Forgiveness is a personal choice, not a deadline anyone else gets to set for you."
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-005",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A relationship may need changed behaviour more than another beautifully worded promise."
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-006",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can regret something you said and choose a more careful sentence next time."
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-007",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When trust has been hurt, patience matters more than demanding reassurance."
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-008",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every disagreement needs a winner; sometimes it needs two people willing to understand."
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-009",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may forgive someone and still choose a different level of closeness."
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-010",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A gentle conversation can begin with “I think I misunderstood what mattered to you.”"
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-011",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Making amends is meaningful when the other person's experience is allowed to matter."
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-012",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You cannot rewrite yesterday, but you can be honest about what you will do differently."
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-013",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An apology offered without an expectation of immediate forgiveness can make room for real healing."
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-014",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It takes maturity to recognise when your pride has been speaking louder than your care."
+    },
+    {
+      "id": "KDL-REPAIR_AND_FORGIVENESS-015",
+      "theme": "repair_and_forgiveness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some repairs happen slowly, through consistent actions rather than one decisive conversation."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-001",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Feeling disconnected today does not mean you have failed at building a meaningful life."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-002",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A short conversation with someone familiar can be a beginning, even if it does not change everything."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-003",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can miss companionship while still valuing the quiet parts of your own company."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-004",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "There is no shame in wanting someone to ask how your day really went."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-005",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If reaching out feels difficult, a simple hello can be enough to open a door."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-006",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being surrounded by people and feeling unseen can happen at the same time."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-007",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need to present a cheerful version of yourself to deserve company."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-008",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A community often begins to feel familiar through repeated small visits, not one perfect introduction."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-009",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your wish for connection is human; it does not make you demanding."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-010",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some evenings feel longer than others. Consider one small thing that helps you feel less alone in them."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-011",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can invite someone for a walk or a coffee without needing an elaborate reason."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-012",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is possible to build new friendships at a stage of life when you thought the circles were already settled."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-013",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A message left unanswered may have many explanations. Try not to make it a verdict on your worth."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-014",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes companionship begins by sharing an interest rather than sharing your whole story."
+    },
+    {
+      "id": "KDL-LONELY_MOMENTS-015",
+      "theme": "lonely_moments",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You deserve spaces where you are welcomed as a person, not only noticed when you are useful."
+    }
+  ]
+}
