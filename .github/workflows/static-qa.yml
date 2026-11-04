@@ -43,3 +43,5 @@ jobs:
 
       - name: Check interactive DOM targets
         run: python3 scripts/check-launch-dom.py
+      - name: Validate curated message library
+        run: python3 scripts/check-message-library.py
