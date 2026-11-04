@@ -71,3 +71,19 @@ document.getElementById("clear-favourites").addEventListener("click",()=>{try{lo
 document.getElementById("share-current")?.addEventListener("click",async()=>{const message=document.getElementById("moment")?.textContent?.trim();if(!message)return;const status=document.getElementById("share-status");try{if(navigator.share){await navigator.share({title:"A KINDELORA moment",text:message});status.textContent="Thank you for sharing a little kindness.";return}if(navigator.clipboard?.writeText){await navigator.clipboard.writeText(message);status.textContent="Encouragement copied. Share it whenever you're ready.";return}status.textContent="Select and copy the message above to share it."}catch(e){status.textContent=e.name==="AbortError"?"Sharing cancelled. No problem.":"Sharing was unavailable. You can select and copy the message."}});
 render();
 })();
+
+
+/* Plus checkout readiness. UI never grants paid entitlements or stores payment credentials. */
+(function(){
+ const monthly=document.getElementById("plus-monthly-choice"),annual=document.getElementById("plus-annual-choice");
+ const summary=document.getElementById("plus-selection-summary"),availability=document.getElementById("plus-availability"),checkout=document.getElementById("plus-checkout-button");
+ if(!monthly||!annual||!summary||!availability||!checkout)return;
+ function select(isAnnual){monthly.setAttribute("aria-pressed",String(!isAnnual));annual.setAttribute("aria-pressed",String(isAnnual));summary.textContent=isAnnual?"Selected: Annual · $49.99 USD indicative price (save approximately 16.5%). Actual billing currency and price will be confirmed before checkout.":"Selected: Monthly · $4.99 USD indicative price. Actual billing currency and price will be confirmed before checkout.";}
+ monthly.addEventListener("click",()=>select(false));annual.addEventListener("click",()=>select(true));
+ checkout.disabled=true;
+ fetch("/api/plus/status",{cache:"no-store",credentials:"same-origin"}).then(async response=>{
+  if(!response.ok)throw Error("Unavailable");
+  const data=await response.json();
+  availability.textContent=data.checkoutAvailable===false?"Subscriptions are not yet open. Merchant verification and secure payment testing are in progress. No charge will be made.":"Payment availability is being reviewed. Checkout remains disabled until verification is complete.";
+ }).catch(()=>{availability.textContent="Secure payment services are not yet available. The free experience remains open.";});
+})();
