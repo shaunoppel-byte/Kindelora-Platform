@@ -4,6 +4,23 @@ let theme="hope",index=0;
 document.querySelectorAll("[data-theme]").forEach(b=>b.addEventListener("click",()=>{theme=b.dataset.theme;index=0;document.querySelectorAll("[data-theme]").forEach(x=>x.setAttribute("aria-pressed",String(x===b)));document.getElementById("moment").textContent=moments[theme][index];}));
 document.getElementById("next-moment").addEventListener("click",()=>{index=(index+1)%moments[theme].length;document.getElementById("moment").textContent=moments[theme][index];});
 document.querySelectorAll(".share").forEach(b=>b.addEventListener("click",async()=>{const s=document.getElementById("share-status");try{await navigator.clipboard.writeText(b.dataset.message);s.textContent="Message copied. Share it in your own way, when you're ready."}catch(e){s.textContent="Copy wasn't available in this browser. You can select the message above and copy it manually."}}));
+// Founder-authorised public catalogue. Built-in moments remain the offline fallback.
+(function(){
+const mapping={hope:["hope","new_beginnings","everyday_optimism","waiting_for_news","unexpected_change","meaningful_moments","making_space_for_joy","life_transitions","disappointment","small_joys"],calm:["calm","gentle_mornings","evening_reflection","patience","rest_without_guilt","nature_and_stillness","being_present","finding_focus","body_kindness","weathering_busy_seasons"],courage:["courage","quiet_confidence","healthy_ambition","learning_from_errors","creative_courage","decisions","first_day_nerves","restarting_after_pause","feeling_stuck","growth"],gratitude:["gratitude","unspoken_appreciation","everyday_kindness","receiving_kindness","shared_humanity","friendship","family_care","special_occasions","celebrating_difference","community_spirit"]};
+const seen={};
+function shuffle(items){const a=items.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
+function rotate(t){if(!seen[t]||!seen[t].length)seen[t]=shuffle(moments[t]);return seen[t].pop();}
+fetch("/message-catalogue.json",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("catalogue unavailable");return r.json();}).then(data=>{
+ if(!data||!Array.isArray(data.messages)||data.messages.length!==1000)return;
+ const valid=data.messages.filter(m=>m&&typeof m.text==="string"&&m.text.length>=20&&m.text.length<=400&&typeof m.theme==="string");
+ if(valid.length!==1000||new Set(valid.map(m=>m.id)).size!==1000)return;
+ for(const [t,themes] of Object.entries(mapping)){const pool=valid.filter(m=>themes.includes(m.theme)).map(m=>m.text);if(pool.length>=10){moments[t]=pool;seen[t]=shuffle(pool);}}
+ const current=document.getElementById("moment");if(current)current.textContent=rotate(theme);
+ document.querySelectorAll("[data-theme]").forEach(b=>b.addEventListener("click",()=>{const t=b.dataset.theme;if(moments[t]&&moments[t].length>3)document.getElementById("moment").textContent=rotate(t);}));
+ document.getElementById("next-moment")?.addEventListener("click",()=>{if(moments[theme].length>3)document.getElementById("moment").textContent=rotate(theme);});
+}).catch(()=>{/* Existing offline messages remain usable. */});
+})();
+
 // Plus pricing is informational until the subscription service launches.
 if("serviceWorker" in navigator)window.addEventListener("load",()=>navigator.serviceWorker.register("/sw.js").catch(()=>{}));
 
