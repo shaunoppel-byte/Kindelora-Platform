@@ -40,3 +40,6 @@ jobs:
           if missing: raise SystemExit('Missing anchors: '+', '.join(missing))
           print(f'Validated {len(p.links)} fragment links')
           PY
+
+      - name: Check interactive DOM targets
+        run: python3 scripts/check-launch-dom.py
