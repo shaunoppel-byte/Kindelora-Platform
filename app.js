@@ -78,7 +78,7 @@ render();
  const monthly=document.getElementById("plus-monthly-choice"),annual=document.getElementById("plus-annual-choice");
  const summary=document.getElementById("plus-selection-summary"),availability=document.getElementById("plus-availability"),checkout=document.getElementById("plus-checkout-button");
  if(!monthly||!annual||!summary||!availability||!checkout)return;
- function select(isAnnual){monthly.setAttribute("aria-pressed",String(!isAnnual));annual.setAttribute("aria-pressed",String(isAnnual));summary.textContent=isAnnual?"Selected: Annual · $49.99 USD indicative price (save approximately 16.5%). Actual billing currency and price will be confirmed before checkout.":"Selected: Monthly · $4.99 USD indicative price. Actual billing currency and price will be confirmed before checkout.";}
+ function select(isAnnual){monthly.setAttribute("aria-pressed",String(!isAnnual));annual.setAttribute("aria-pressed",String(isAnnual));summary.textContent=isAnnual?"Selected: Annual · $69.99 USD indicative price (save approximately 16.6%). Actual billing currency and price will be confirmed before checkout.":"Selected: Monthly · $6.99 USD indicative price. Actual billing currency and price will be confirmed before checkout.";}
  monthly.addEventListener("click",()=>select(false));annual.addEventListener("click",()=>select(true));
  checkout.disabled=true;
  fetch("/api/plus/status",{cache:"no-store",credentials:"same-origin"}).then(async response=>{
