@@ -10,14 +10,14 @@ assert len(collections[1]["messages"])==150, "Second editorial batch must contai
 assert len(collections[2]["messages"])==150, "Third editorial batch must contain exactly 150 messages"
 assert len(collections[3]["messages"])==150, "Fourth editorial batch must contain exactly 150 messages"
 assert len(collections[4]["messages"])==430, "Fifth editorial batch must contain exactly 430 messages"
-assert len(collections[5]["messages"])==30, "Expansion batch 6 first tranche must contain 30 messages"
-assert len(items)==1030, "Combined editorial library count mismatch"
+assert len(collections[5]["messages"])==100, "Expansion batch 6 must contain 100 messages"
+assert len(items)==1100, "Combined editorial library count mismatch"
 ids=[x["id"] for x in items]
 assert len(set(ids))==len(ids), "Duplicate message IDs"
 norm=[re.sub(r"[^a-z0-9]+"," ",x["text"].casefold()).strip() for x in items]
 assert len(set(norm))==len(norm), "Duplicate message text"
 themes=Counter(x["theme"] for x in items)
-assert len(themes)==86 and all(n>=10 for n in themes.values()), "Theme coverage insufficient"
+assert len(themes)==93 and all(n>=10 for n in themes.values()), "Theme coverage insufficient"
 for x in items:
     assert x["status"]=="editorial-review", "Do not silently publish unapproved content"
     assert x["audience"]=="all" and x["tone"]=="warm-grounded"
