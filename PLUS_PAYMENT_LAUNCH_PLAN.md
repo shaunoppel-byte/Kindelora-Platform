@@ -3,8 +3,8 @@ Date: 2026-11-04
 Status: NOT ACCEPTING PAYMENTS. No merchant account, verified webhook, or authenticated entitlements are configured in this repository.
 
 ## Proposed plans
-- Monthly: USD 4.99 (indicative, subject to provider currency and merchant settlement approval)
-- Annual: USD 49.99 (indicative, 16.5% less than twelve monthly payments)
+- Monthly: USD 6.99 (indicative, subject to provider currency and merchant settlement approval)
+- Annual: USD 69.99 (indicative, approximately 16.6% less than twelve monthly payments)
 - Free: core encouragement, device-local reflections and favourites, sharing.
 - Plus: planned guided journeys, cross-device favourites, tailored content, opt-in delivery. Do not claim these work until built.
 
