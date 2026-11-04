@@ -1,0 +1,249 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA expansion editorial batch 6 — first 30 of requested 1000",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-04",
+  "editorial_policy": "Founder/editorial review required before release; no implied clinical outcomes.",
+  "messages": [
+    {
+      "id": "KDL-AFTER_A_TOUGH_MEETING-001",
+      "theme": "after_a_tough_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A difficult meeting can follow you home in your thoughts. Give yourself time before deciding what it means."
+    },
+    {
+      "id": "KDL-AFTER_A_TOUGH_MEETING-002",
+      "theme": "after_a_tough_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may disagree with the feedback and still look for something useful within it."
+    },
+    {
+      "id": "KDL-AFTER_A_TOUGH_MEETING-003",
+      "theme": "after_a_tough_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A tense exchange does not erase the respectful conversations you have had before."
+    },
+    {
+      "id": "KDL-AFTER_A_TOUGH_MEETING-004",
+      "theme": "after_a_tough_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Write down the facts while they are fresh, then leave room for your feelings to settle."
+    },
+    {
+      "id": "KDL-AFTER_A_TOUGH_MEETING-005",
+      "theme": "after_a_tough_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your voice shook, it does not make the point you raised less worthy of consideration."
+    },
+    {
+      "id": "KDL-AFTER_A_TOUGH_MEETING-006",
+      "theme": "after_a_tough_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can ask for clarification tomorrow instead of trying to resolve every uncertainty tonight."
+    },
+    {
+      "id": "KDL-AFTER_A_TOUGH_MEETING-007",
+      "theme": "after_a_tough_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "One uncomfortable conversation need not become the story of your entire working week."
+    },
+    {
+      "id": "KDL-AFTER_A_TOUGH_MEETING-008",
+      "theme": "after_a_tough_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Notice whether you need a practical follow-up or simply a little quiet after the meeting."
+    },
+    {
+      "id": "KDL-AFTER_A_TOUGH_MEETING-009",
+      "theme": "after_a_tough_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A thoughtful response can wait until you understand what you want it to achieve."
+    },
+    {
+      "id": "KDL-AFTER_A_TOUGH_MEETING-010",
+      "theme": "after_a_tough_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The meeting ended. You are allowed to let the rest of your evening begin."
+    },
+    {
+      "id": "KDL-THE_DAY_AFTER_BAD_NEWS-001",
+      "theme": "the_day_after_bad_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The morning after difficult news may feel strangely ordinary. You do not have to match the world's pace."
+    },
+    {
+      "id": "KDL-THE_DAY_AFTER_BAD_NEWS-002",
+      "theme": "the_day_after_bad_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is okay if the first task of the day takes more concentration than usual."
+    },
+    {
+      "id": "KDL-THE_DAY_AFTER_BAD_NEWS-003",
+      "theme": "the_day_after_bad_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may want company without wanting to explain the news again."
+    },
+    {
+      "id": "KDL-THE_DAY_AFTER_BAD_NEWS-004",
+      "theme": "the_day_after_bad_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar routine can offer structure when your thoughts feel scattered."
+    },
+    {
+      "id": "KDL-THE_DAY_AFTER_BAD_NEWS-005",
+      "theme": "the_day_after_bad_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not owe everyone an update before you have understood your own feelings."
+    },
+    {
+      "id": "KDL-THE_DAY_AFTER_BAD_NEWS-006",
+      "theme": "the_day_after_bad_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Ask for the practical help that would make today a little less demanding."
+    },
+    {
+      "id": "KDL-THE_DAY_AFTER_BAD_NEWS-007",
+      "theme": "the_day_after_bad_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The news may be unchanged, but what you need from this hour can change."
+    },
+    {
+      "id": "KDL-THE_DAY_AFTER_BAD_NEWS-008",
+      "theme": "the_day_after_bad_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "There is no requirement to find meaning in something that has just hurt."
+    },
+    {
+      "id": "KDL-THE_DAY_AFTER_BAD_NEWS-009",
+      "theme": "the_day_after_bad_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can make necessary decisions slowly where circumstances allow."
+    },
+    {
+      "id": "KDL-THE_DAY_AFTER_BAD_NEWS-010",
+      "theme": "the_day_after_bad_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let the day be manageable rather than expecting it to feel normal."
+    },
+    {
+      "id": "KDL-QUIETLY_PROUD-001",
+      "theme": "quietly_proud",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may be proud of handling something better than you would have a year ago."
+    },
+    {
+      "id": "KDL-QUIETLY_PROUD-002",
+      "theme": "quietly_proud",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every achievement needs a certificate, a photograph, or an audience."
+    },
+    {
+      "id": "KDL-QUIETLY_PROUD-003",
+      "theme": "quietly_proud",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "There is satisfaction in doing a difficult thing with care even when nobody notices."
+    },
+    {
+      "id": "KDL-QUIETLY_PROUD-004",
+      "theme": "quietly_proud",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can quietly appreciate the patience you showed in a moment that tested you."
+    },
+    {
+      "id": "KDL-QUIETLY_PROUD-005",
+      "theme": "quietly_proud",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A promise kept to yourself can deserve as much recognition as a public milestone."
+    },
+    {
+      "id": "KDL-QUIETLY_PROUD-006",
+      "theme": "quietly_proud",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some progress is visible only in the choices you no longer make."
+    },
+    {
+      "id": "KDL-QUIETLY_PROUD-007",
+      "theme": "quietly_proud",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let yourself acknowledge the work behind a result that looks effortless to others."
+    },
+    {
+      "id": "KDL-QUIETLY_PROUD-008",
+      "theme": "quietly_proud",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being proud does not require believing you did everything perfectly."
+    },
+    {
+      "id": "KDL-QUIETLY_PROUD-009",
+      "theme": "quietly_proud",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A modest achievement may represent a great deal in the context of your circumstances."
+    },
+    {
+      "id": "KDL-QUIETLY_PROUD-010",
+      "theme": "quietly_proud",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can hold a private sense of accomplishment without needing anyone else's permission."
+    }
+  ]
+}
