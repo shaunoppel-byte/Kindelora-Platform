@@ -35,3 +35,15 @@
 .member-collection-tabs [role="tab"]:focus-visible{outline:3px solid #a45778;outline-offset:3px}
 .member-favourite-collections [role="tabpanel"]{padding:6px 2px 0;font-size:.92rem}
 .member-favourite-collections [role="tabpanel"][hidden]{display:none!important}
+
+/* Premium editorial previews in the separate Affirmation Favourites collection. */
+.affirmation-favourites-preview{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,185px),1fr));gap:12px;margin-top:18px}
+.affirmation-preview-card{position:relative;isolation:isolate;overflow:hidden;display:flex;flex-direction:column;min-height:265px;padding:22px 15px;border:1px solid #d8af62;border-radius:18px;background:linear-gradient(155deg,#292044 0%,#714066 38%,#d7826b 68%,#f0c178 100%);color:#fff;box-shadow:0 9px 25px #291c3422}
+.affirmation-preview-card:before{content:"";position:absolute;inset:7px;border:1px solid #ffe6a9a8;border-radius:13px;pointer-events:none}
+.affirmation-preview-card:nth-child(2){background:linear-gradient(155deg,#132b53,#48678c 40%,#d78e5b 75%,#f5c57c)}
+.affirmation-preview-card:nth-child(3){background:linear-gradient(155deg,#492c65,#945a8d 40%,#df8b8c 75%,#f5bd85)}
+.affirmation-preview-theme{font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:#ffe5aa;font-weight:750}
+.affirmation-preview-card h3{font-size:1.05rem;line-height:1.2;margin:12px 0 6px;color:#fff}
+.affirmation-preview-card blockquote{font:italic 1rem/1.45 Georgia,serif;margin:8px 0 18px;flex:1}
+.affirmation-preview-card a{font-size:.76rem;font-weight:700;color:#fff3ce;text-decoration:underline;text-underline-offset:3px}
+.affirmation-preview-card a:focus-visible{outline:3px solid white;outline-offset:3px}
