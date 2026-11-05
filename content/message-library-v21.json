@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 21",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-05",
+  "messages": [
+    {
+      "id": "KDL-QUIET-CONFLICT-AFTER-GROUP-DECISIONS-001",
+      "theme": "quiet_conflict_after_group_decisions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a group chooses a direction you did not support, disappointment may linger after the meeting ends. You can respect the decision without pretending to agree."
+    },
+    {
+      "id": "KDL-QUIET-CONFLICT-AFTER-GROUP-DECISIONS-002",
+      "theme": "quiet_conflict_after_group_decisions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A decision made together can still leave one person feeling unheard. Asking what was missed may help more than insisting everyone move on."
+    },
+    {
+      "id": "KDL-QUIET-CONFLICT-AFTER-GROUP-DECISIONS-003",
+      "theme": "quiet_conflict_after_group_decisions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being outvoted does not make your concern foolish. Write down the risk you noticed, then decide whether it needs a calm follow-up."
+    },
+    {
+      "id": "KDL-QUIET-CONFLICT-AFTER-GROUP-DECISIONS-004",
+      "theme": "quiet_conflict_after_group_decisions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you were the loudest voice in the room, check whether quieter people had space to disagree. Silence is not necessarily agreement."
+    },
+    {
+      "id": "KDL-QUIET-CONFLICT-AFTER-GROUP-DECISIONS-005",
+      "theme": "quiet_conflict_after_group_decisions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After a difficult group choice, a small act of cooperation can matter. It need not erase the honest conversation that came before it."
+    },
+    {
+      "id": "KDL-REPAIRING-A-MISSED-CELEBRATION-001",
+      "theme": "repairing_a_missed_celebration",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Missing someone's important day may hurt them even when your reasons were real. A specific apology makes more room for repair than a long defence."
+    },
+    {
+      "id": "KDL-REPAIRING-A-MISSED-CELEBRATION-002",
+      "theme": "repairing_a_missed_celebration",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you forgot a celebration, acknowledge what mattered to the other person before explaining your schedule. Their disappointment deserves to be heard."
+    },
+    {
+      "id": "KDL-REPAIRING-A-MISSED-CELEBRATION-003",
+      "theme": "repairing_a_missed_celebration",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A belated gesture can be meaningful without pretending the date did not matter. Ask what would feel thoughtful now, rather than guessing."
+    },
+    {
+      "id": "KDL-REPAIRING-A-MISSED-CELEBRATION-004",
+      "theme": "repairing_a_missed_celebration",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When someone misses your milestone, you may want both an explanation and an apology. You can say so without turning the moment into a verdict on the relationship."
+    },
+    {
+      "id": "KDL-REPAIRING-A-MISSED-CELEBRATION-005",
+      "theme": "repairing_a_missed_celebration",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An occasion cannot always be recreated, but attention can still be offered afterward. A quiet conversation may be more welcome than a grand surprise."
+    },
+    {
+      "id": "KDL-BEING-NEW-TO-A-SHARED-HOBBY-001",
+      "theme": "being_new_to_a_shared_hobby",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "At the first gathering, everyone else may seem to know the rules and the jokes. You are allowed to learn the rhythm before finding your place."
+    },
+    {
+      "id": "KDL-BEING-NEW-TO-A-SHARED-HOBBY-002",
+      "theme": "being_new_to_a_shared_hobby",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Choosing a beginner's question over a confident guess takes a little courage. Most shared interests have room for someone still learning."
+    },
+    {
+      "id": "KDL-BEING-NEW-TO-A-SHARED-HOBBY-003",
+      "theme": "being_new_to_a_shared_hobby",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the equipment or vocabulary feels unfamiliar, notice what drew you here in the first place. Curiosity is enough reason to begin."
+    },
+    {
+      "id": "KDL-BEING-NEW-TO-A-SHARED-HOBBY-004",
+      "theme": "being_new_to_a_shared_hobby",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can enjoy a hobby without becoming skilled at it quickly. Some activities are valuable simply because they make an ordinary afternoon more interesting."
+    },
+    {
+      "id": "KDL-BEING-NEW-TO-A-SHARED-HOBBY-005",
+      "theme": "being_new_to_a_shared_hobby",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When an experienced person offers advice, take what helps and leave room for your own pace. Participation is not an audition."
+    },
+    {
+      "id": "KDL-NAVIGATING-DIFFERENT-GRIEVING-STYLES-001",
+      "theme": "navigating_different_grieving_styles",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "One person may want to tell stories while another needs a quiet room. Different ways of grieving do not automatically mean different depths of love."
+    },
+    {
+      "id": "KDL-NAVIGATING-DIFFERENT-GRIEVING-STYLES-002",
+      "theme": "navigating_different_grieving_styles",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a family member seems practical after a loss, they may be focusing on the tasks in front of them. Ask what support they need rather than judging their composure."
+    },
+    {
+      "id": "KDL-NAVIGATING-DIFFERENT-GRIEVING-STYLES-003",
+      "theme": "navigating_different_grieving_styles",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You might remember someone through laughter while another person cries at the same story. Neither response needs to correct the other."
+    },
+    {
+      "id": "KDL-NAVIGATING-DIFFERENT-GRIEVING-STYLES-004",
+      "theme": "navigating_different_grieving_styles",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An invitation to talk about the person who died can be gentle and optional. Some days a shared cup of tea is enough company."
+    },
+    {
+      "id": "KDL-NAVIGATING-DIFFERENT-GRIEVING-STYLES-005",
+      "theme": "navigating_different_grieving_styles",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When grief changes the mood of a gathering, there is no single right way to respond. Making room for silence can be an act of care."
+    }
+  ]
+}
