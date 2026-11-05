@@ -1,0 +1,908 @@
+{
+  "version": "0.4-editorial",
+  "status": "script-review-only",
+  "publication": "not-approved",
+  "description": "100 original candidate scripts for editorial review; no audio or subscriber publication.",
+  "scripts": [
+    {
+      "id": "a4-01-01",
+      "theme": "Finding steadiness",
+      "text": "I can find a steady place in the middle of a busy day by noticing what is actually happening now.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-01-02",
+      "theme": "Finding steadiness",
+      "text": "I can make a small plan for the next hour without needing to organise the whole future.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-01-03",
+      "theme": "Finding steadiness",
+      "text": "I can let my breathing settle before I decide how to respond.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-01-04",
+      "theme": "Finding steadiness",
+      "text": "I can choose a familiar routine when everything else feels new.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-01-05",
+      "theme": "Finding steadiness",
+      "text": "I can notice the difference between an urgent request and an important one.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-01-06",
+      "theme": "Finding steadiness",
+      "text": "I can ask what would make this moment easier, then begin with that.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-01-07",
+      "theme": "Finding steadiness",
+      "text": "I can keep my attention on one practical step while other questions remain unanswered.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-01-08",
+      "theme": "Finding steadiness",
+      "text": "I can create a little space between hearing difficult news and making a decision.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-01-09",
+      "theme": "Finding steadiness",
+      "text": "I can remember that a slower response can still be a thoughtful response.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-01-10",
+      "theme": "Finding steadiness",
+      "text": "I can return to the things that support me without expecting them to solve everything.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-02-01",
+      "theme": "Kindness to strangers",
+      "text": "I can greet someone warmly without knowing what kind of day they are having.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-02-02",
+      "theme": "Kindness to strangers",
+      "text": "I can leave room for another person to finish their thought.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-02-03",
+      "theme": "Kindness to strangers",
+      "text": "I can thank someone for work that is easy to overlook.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-02-04",
+      "theme": "Kindness to strangers",
+      "text": "I can offer a small courtesy without needing recognition in return.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-02-05",
+      "theme": "Kindness to strangers",
+      "text": "I can be patient when someone is learning a task that feels familiar to me.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-02-06",
+      "theme": "Kindness to strangers",
+      "text": "I can give someone the benefit of a clarifying question before making an assumption.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-02-07",
+      "theme": "Kindness to strangers",
+      "text": "I can remember that the person in front of me has a life beyond this interaction.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-02-08",
+      "theme": "Kindness to strangers",
+      "text": "I can choose a respectful tone even when I need to raise a concern.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-02-09",
+      "theme": "Kindness to strangers",
+      "text": "I can make space for another person when the day feels crowded.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-02-10",
+      "theme": "Kindness to strangers",
+      "text": "I can let a brief interaction leave someone feeling a little more welcome.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-03-01",
+      "theme": "Releasing comparison",
+      "text": "I can notice someone else's success without turning it into a criticism of my own path.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-03-02",
+      "theme": "Releasing comparison",
+      "text": "I can appreciate what inspires me in another person while keeping my own priorities.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-03-03",
+      "theme": "Releasing comparison",
+      "text": "I can remember that I rarely see the full story behind someone else's progress.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-03-04",
+      "theme": "Releasing comparison",
+      "text": "I can choose a measure of success that reflects what matters to me.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-03-05",
+      "theme": "Releasing comparison",
+      "text": "I can celebrate the skills I am building, even if they are different from someone else's.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-03-06",
+      "theme": "Releasing comparison",
+      "text": "I can let another person's timeline be theirs and mine be mine.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-03-07",
+      "theme": "Releasing comparison",
+      "text": "I can step away from a comparison that leaves me feeling smaller.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-03-08",
+      "theme": "Releasing comparison",
+      "text": "I can be curious about what I admire without needing to copy it.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-03-09",
+      "theme": "Releasing comparison",
+      "text": "I can acknowledge the work I have done without ranking it against someone else's.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-03-10",
+      "theme": "Releasing comparison",
+      "text": "I can return my attention to the choices that are actually mine to make.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-04-01",
+      "theme": "Navigating difficult conversations",
+      "text": "I can prepare what matters most before I begin a challenging conversation.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-04-02",
+      "theme": "Navigating difficult conversations",
+      "text": "I can speak clearly without trying to control how every word will be received.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-04-03",
+      "theme": "Navigating difficult conversations",
+      "text": "I can listen for understanding before deciding whether I agree.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-04-04",
+      "theme": "Navigating difficult conversations",
+      "text": "I can ask for a pause if I need time to respond with care.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-04-05",
+      "theme": "Navigating difficult conversations",
+      "text": "I can explain how something affected me without assigning motives I cannot know.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-04-06",
+      "theme": "Navigating difficult conversations",
+      "text": "I can stay respectful while holding a different point of view.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-04-07",
+      "theme": "Navigating difficult conversations",
+      "text": "I can ask what the other person understood rather than assuming my message was clear.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-04-08",
+      "theme": "Navigating difficult conversations",
+      "text": "I can acknowledge one valid point without abandoning my own perspective.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-04-09",
+      "theme": "Navigating difficult conversations",
+      "text": "I can leave a conversation unfinished when more reflection would help.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-04-10",
+      "theme": "Navigating difficult conversations",
+      "text": "I can aim for honesty and connection instead of winning every exchange.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-05-01",
+      "theme": "Financial calm",
+      "text": "I can look at one part of my finances today without judging myself for what I find.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-05-02",
+      "theme": "Financial calm",
+      "text": "I can make a practical choice with the resources I currently have.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-05-03",
+      "theme": "Financial calm",
+      "text": "I can separate my personal worth from the number in an account.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-05-04",
+      "theme": "Financial calm",
+      "text": "I can ask a trusted professional for guidance when a financial decision feels complex.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-05-05",
+      "theme": "Financial calm",
+      "text": "I can review a spending habit with curiosity instead of shame.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-05-06",
+      "theme": "Financial calm",
+      "text": "I can make a modest plan and adjust it when my circumstances change.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-05-07",
+      "theme": "Financial calm",
+      "text": "I can recognise that steady financial habits often begin with small actions.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-05-08",
+      "theme": "Financial calm",
+      "text": "I can pause before a purchase and consider whether it supports my priorities.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-05-09",
+      "theme": "Financial calm",
+      "text": "I can be honest about a financial concern without defining myself by it.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-05-10",
+      "theme": "Financial calm",
+      "text": "I can focus on the next responsible step rather than demanding instant certainty.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-06-01",
+      "theme": "Digital balance",
+      "text": "I can put my phone aside for a few minutes and notice what is around me.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-06-02",
+      "theme": "Digital balance",
+      "text": "I can choose when to check a notification instead of responding to every sound.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-06-03",
+      "theme": "Digital balance",
+      "text": "I can take a break from a feed that makes comparison feel unavoidable.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-06-04",
+      "theme": "Digital balance",
+      "text": "I can let a message wait while I finish a meaningful conversation in person.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-06-05",
+      "theme": "Digital balance",
+      "text": "I can make space for a quiet activity that does not need a screen.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-06-06",
+      "theme": "Digital balance",
+      "text": "I can notice how I feel after scrolling and decide what would serve me better.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-06-07",
+      "theme": "Digital balance",
+      "text": "I can set a gentle limit on my online time without making it a punishment.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-06-08",
+      "theme": "Digital balance",
+      "text": "I can enjoy useful technology while protecting moments of undivided attention.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-06-09",
+      "theme": "Digital balance",
+      "text": "I can turn off an unnecessary alert and give myself one less interruption.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-06-10",
+      "theme": "Digital balance",
+      "text": "I can end a digital session with intention rather than simply losing track of time.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-07-01",
+      "theme": "Appreciating nature",
+      "text": "I can notice the shape of a cloud without needing the moment to become anything more.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-07-02",
+      "theme": "Appreciating nature",
+      "text": "I can appreciate the changing light as a reminder that each day has its own rhythm.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-07-03",
+      "theme": "Appreciating nature",
+      "text": "I can listen for birdsong or wind and let the sound hold my attention briefly.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-07-04",
+      "theme": "Appreciating nature",
+      "text": "I can feel the air on my skin and remember that I am part of the world around me.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-07-05",
+      "theme": "Appreciating nature",
+      "text": "I can enjoy the colour of a leaf without searching for a deeper lesson.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-07-06",
+      "theme": "Appreciating nature",
+      "text": "I can welcome a few minutes outdoors when that is possible for me.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-07-07",
+      "theme": "Appreciating nature",
+      "text": "I can notice how the sky looks different from yesterday.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-07-08",
+      "theme": "Appreciating nature",
+      "text": "I can find comfort in a familiar tree, garden or view.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-07-09",
+      "theme": "Appreciating nature",
+      "text": "I can be grateful for the ordinary beauty that asks nothing of me.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-07-10",
+      "theme": "Appreciating nature",
+      "text": "I can let a small encounter with nature interrupt a hurried thought.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-08-01",
+      "theme": "Respecting energy",
+      "text": "I can notice the difference between needing encouragement and needing a break.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-08-02",
+      "theme": "Respecting energy",
+      "text": "I can plan a demanding task for a time when my attention is more available.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-08-03",
+      "theme": "Respecting energy",
+      "text": "I can allow myself a slower afternoon without calling the day a failure.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-08-04",
+      "theme": "Respecting energy",
+      "text": "I can say that my capacity is limited and still care deeply about the outcome.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-08-05",
+      "theme": "Respecting energy",
+      "text": "I can choose a manageable commitment instead of promising more than I can sustain.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-08-06",
+      "theme": "Respecting energy",
+      "text": "I can recognise early signs of fatigue and respond before they become overwhelming.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-08-07",
+      "theme": "Respecting energy",
+      "text": "I can rest between responsibilities rather than waiting until everything is finished.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-08-08",
+      "theme": "Respecting energy",
+      "text": "I can accept help with a task that does not need to be carried alone.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-08-09",
+      "theme": "Respecting energy",
+      "text": "I can leave some room in my schedule for the unexpected.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-08-10",
+      "theme": "Respecting energy",
+      "text": "I can treat my energy as something worth caring for, not something to spend without thought.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-09-01",
+      "theme": "Trust and repair",
+      "text": "I can rebuild trust through consistent actions rather than expecting one conversation to fix everything.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-09-02",
+      "theme": "Trust and repair",
+      "text": "I can acknowledge when I have let someone down and ask what repair might look like.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-09-03",
+      "theme": "Trust and repair",
+      "text": "I can allow trust to grow at a pace that feels safe and appropriate.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-09-04",
+      "theme": "Trust and repair",
+      "text": "I can notice when someone's actions align with their words over time.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-09-05",
+      "theme": "Trust and repair",
+      "text": "I can offer a sincere apology without asking for immediate forgiveness.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-09-06",
+      "theme": "Trust and repair",
+      "text": "I can decide what I need before reopening a difficult relationship.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-09-07",
+      "theme": "Trust and repair",
+      "text": "I can be honest about a boundary while remaining open to respectful dialogue.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-09-08",
+      "theme": "Trust and repair",
+      "text": "I can recognise that repairing a connection takes participation from more than one person.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-09-09",
+      "theme": "Trust and repair",
+      "text": "I can keep my promises small enough to honour them reliably.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-09-10",
+      "theme": "Trust and repair",
+      "text": "I can value my peace while deciding whether a relationship is ready for renewed trust.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-10-01",
+      "theme": "Meaningful contribution",
+      "text": "I can use one skill I have to make someone else's task a little easier.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-10-02",
+      "theme": "Meaningful contribution",
+      "text": "I can contribute quietly without needing to be the centre of attention.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-10-03",
+      "theme": "Meaningful contribution",
+      "text": "I can ask what would actually help before offering a solution.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-10-04",
+      "theme": "Meaningful contribution",
+      "text": "I can recognise the value of work that supports others behind the scenes.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-10-05",
+      "theme": "Meaningful contribution",
+      "text": "I can choose a small act of service that fits my time and capacity.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-10-06",
+      "theme": "Meaningful contribution",
+      "text": "I can share useful knowledge without expecting everyone to follow my approach.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-10-07",
+      "theme": "Meaningful contribution",
+      "text": "I can take pride in doing an ordinary responsibility with care.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-10-08",
+      "theme": "Meaningful contribution",
+      "text": "I can notice a need in my community and explore one realistic way to respond.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-10-09",
+      "theme": "Meaningful contribution",
+      "text": "I can encourage another person's contribution instead of competing for credit.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a4-10-10",
+      "theme": "Meaningful contribution",
+      "text": "I can let my actions reflect the kind of difference I hope to make.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    }
+  ]
+}
