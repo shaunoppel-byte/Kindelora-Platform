@@ -46,6 +46,10 @@ jobs:
         run: python3 scripts/check-heart-consistency.py
       - name: Check interactive DOM targets
         run: python3 scripts/check-launch-dom.py
+      - name: Check member access fail-closed security invariants
+        run: |
+          node --check functions/api/member/me.js
+          python3 scripts/check-member-access.py
       - name: Validate curated message library
         run: python3 scripts/check-message-library.py
 
