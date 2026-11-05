@@ -1,0 +1,15 @@
+import assert from "node:assert/strict";
+import {webcrypto} from "node:crypto";
+import {onRequestGet} from "../functions/api/member/me.js";
+if(!globalThis.crypto)globalThis.crypto=webcrypto;
+const pepper="test-only-pepper-".repeat(4);
+const a="a".repeat(64),b="b".repeat(64);
+const hash=async t=>Array.from(new Uint8Array(await crypto.subtle.digest("SHA-256",new TextEncoder().encode(t+pepper))),x=>x.toString(16).padStart(2,"0")).join("");
+const sessions=new Map([[await hash(a),{id:"member-a",email_normalized:"a@example.test",email_verified_at:"2026-01-01"}],[await hash(b),{id:"member-b",email_normalized:"b@example.test",email_verified_at:"2026-01-01"}]]);
+const env={MEMBER_AUTH_ENABLED:"true",MEMBER_AUTH_PEPPER:pepper,DB:{prepare:()=>({bind:(key)=>({first:async()=>sessions.get(key)||null})})}};
+const call=async token=>onRequestGet({request:new Request("https://kindelora.pages.dev/api/member/me",{headers:{cookie:"kindelora_session="+token}}),env});
+const ra=await call(a),rb=await call(b),rx=await call("c".repeat(64));
+assert.equal(ra.status,200);assert.equal(rb.status,200);assert.equal(rx.status,401);
+assert.equal((await ra.json()).member.id,"member-a");
+assert.equal((await rb.json()).member.id,"member-b");
+console.log("PASS: mock D1 lookup separates two members and rejects unknown token");
