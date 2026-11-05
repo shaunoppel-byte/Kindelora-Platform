@@ -15,10 +15,11 @@ export async function onRequestPost({request,env}){
  const id=crypto.randomUUID();
  // D1 batch is atomic; consuming a verified, single-use invitation creates the account.
  try{
-  await env.DB.batch([
-   env.DB.prepare("UPDATE member_invitations SET consumed_at=? WHERE token_hash=? AND consumed_at IS NULL").bind(now,inviteHash),
-   env.DB.prepare("INSERT INTO members(id,email_normalized,password_salt,password_hash,email_verified_at) VALUES(?,?,?,?,?)").bind(id,email,salt,passwordHash,now)
+  const results=await env.DB.batch([
+   env.DB.prepare("INSERT INTO members(id,email_normalized,password_salt,password_hash,email_verified_at) SELECT ?,?,?,?,? WHERE EXISTS (SELECT 1 FROM member_invitations WHERE token_hash=? AND email_normalized=? AND expires_at>? AND consumed_at IS NULL)").bind(id,email,salt,passwordHash,now,inviteHash,email,now),
+   env.DB.prepare("UPDATE member_invitations SET consumed_at=? WHERE token_hash=? AND email_normalized=? AND consumed_at IS NULL").bind(now,inviteHash,email)
   ]);
+  if(results?.[0]?.meta?.changes!==1||results?.[1]?.meta?.changes!==1)return reply({error:"Invitation could not be consumed"},409);
  }catch{return reply({error:"Registration unavailable or invitation already used"},409);}
  return reply({registered:true,signInRequired:true},201);
 }
