@@ -1,0 +1,548 @@
+{
+  "version": "0.2-editorial",
+  "status": "script-review-only",
+  "publication": "not-approved",
+  "description": "Second collection of original candidate scripts; no audio assets, not a production subscriber library.",
+  "scripts": [
+    {
+      "id": "a2-01-1",
+      "theme": "Resilience",
+      "text": "I can acknowledge that this has been difficult without deciding it will always be this way. I have room to recover at my own pace.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-01-2",
+      "theme": "Resilience",
+      "text": "Not every setback needs an immediate solution. I can begin by noticing what I need right now.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-01-3",
+      "theme": "Resilience",
+      "text": "I can carry what I have learned without carrying every regret. The next chapter is still unwritten.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-01-4",
+      "theme": "Resilience",
+      "text": "I am allowed to feel disappointed and still believe that another opportunity may come.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-01-5",
+      "theme": "Resilience",
+      "text": "I can ask for support before I reach my limit. Reaching out is a practical act of care.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-01-6",
+      "theme": "Resilience",
+      "text": "I can adapt my plans when circumstances change. Flexibility does not erase my commitment.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-02-1",
+      "theme": "Belonging",
+      "text": "I do not need to perform a different version of myself to deserve genuine connection.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-02-2",
+      "theme": "Belonging",
+      "text": "I can enter a room with curiosity instead of measuring whether I fit perfectly.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-02-3",
+      "theme": "Belonging",
+      "text": "One meaningful conversation can matter more than a hundred passing impressions.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-02-4",
+      "theme": "Belonging",
+      "text": "I can make space for my own voice while listening closely to someone else's.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-02-5",
+      "theme": "Belonging",
+      "text": "I can build belonging through small acts of honesty, patience and kindness.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-02-6",
+      "theme": "Belonging",
+      "text": "I am allowed to seek people who make it easier to be fully myself.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-03-1",
+      "theme": "Boundaries",
+      "text": "I can say no with respect and without writing a long defence of my needs.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-03-2",
+      "theme": "Boundaries",
+      "text": "My time and attention are valuable. I can choose where to place them thoughtfully.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-03-3",
+      "theme": "Boundaries",
+      "text": "I can care about someone's feelings without taking responsibility for every reaction.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-03-4",
+      "theme": "Boundaries",
+      "text": "A boundary can be gentle and clear at the same time.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-03-5",
+      "theme": "Boundaries",
+      "text": "I am allowed to change my availability when my capacity changes.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-03-6",
+      "theme": "Boundaries",
+      "text": "I can protect a quiet hour without explaining why it matters to me.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-04-1",
+      "theme": "New beginnings",
+      "text": "I can start again without pretending the past never happened. Experience can guide me forward.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-04-2",
+      "theme": "New beginnings",
+      "text": "The first step does not need to be impressive. It only needs to be possible.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-04-3",
+      "theme": "New beginnings",
+      "text": "I can be a beginner and still be worthy of patience and respect.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-04-4",
+      "theme": "New beginnings",
+      "text": "Uncertainty may accompany change. I can make room for it without letting it choose every action.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-04-5",
+      "theme": "New beginnings",
+      "text": "I can welcome a new direction while honouring what the old one taught me.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-04-6",
+      "theme": "New beginnings",
+      "text": "Today gives me a chance to practise a different response, one small choice at a time.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-05-1",
+      "theme": "Workday reset",
+      "text": "I can take one clear breath before my next meeting. I do not need to carry the last conversation into this one.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-05-2",
+      "theme": "Workday reset",
+      "text": "I can focus on the task in front of me instead of rehearsing the entire week.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-05-3",
+      "theme": "Workday reset",
+      "text": "A short pause can help me respond with care rather than react in haste.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-05-4",
+      "theme": "Workday reset",
+      "text": "I can ask a clarifying question when expectations are unclear. Understanding comes before urgency.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-05-5",
+      "theme": "Workday reset",
+      "text": "I can recognise the effort behind unfinished work. Progress is not always visible on a checklist.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-05-6",
+      "theme": "Workday reset",
+      "text": "I can finish one useful thing before opening another. My attention deserves a little protection.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-06-1",
+      "theme": "Compassion after mistakes",
+      "text": "I can take responsibility for an error without turning it into a verdict about myself.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-06-2",
+      "theme": "Compassion after mistakes",
+      "text": "An apology can be sincere, and learning can continue after it is spoken.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-06-3",
+      "theme": "Compassion after mistakes",
+      "text": "I can review what happened with honesty and leave room for a kinder interpretation.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-06-4",
+      "theme": "Compassion after mistakes",
+      "text": "I can repair what is possible and release what is no longer mine to control.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-06-5",
+      "theme": "Compassion after mistakes",
+      "text": "Being imperfect does not disqualify me from being thoughtful, capable or loved.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-06-6",
+      "theme": "Compassion after mistakes",
+      "text": "I can learn a better way without repeating harsh words to myself.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-07-1",
+      "theme": "Morning intention",
+      "text": "I can meet this morning without demanding certainty about the whole day.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-07-2",
+      "theme": "Morning intention",
+      "text": "Before I check what others need, I can notice what would help me begin well.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-07-3",
+      "theme": "Morning intention",
+      "text": "I can choose one intention for today and let it guide my next small decision.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-07-4",
+      "theme": "Morning intention",
+      "text": "The morning does not need to be perfect to become meaningful.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-07-5",
+      "theme": "Morning intention",
+      "text": "I can give myself a calm beginning, even when the day ahead looks full.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-07-6",
+      "theme": "Morning intention",
+      "text": "I can welcome fresh possibilities without placing pressure on myself to use every one.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-08-1",
+      "theme": "Evening reflection",
+      "text": "I can notice one moment that felt good today, however small it seemed.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-08-2",
+      "theme": "Evening reflection",
+      "text": "I can put down what remains unfinished and return to it with fresh attention tomorrow.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-08-3",
+      "theme": "Evening reflection",
+      "text": "I can be proud of the care I showed, even if no one else saw it.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-08-4",
+      "theme": "Evening reflection",
+      "text": "Some days are simply hard. I can let this one end without forcing a lesson from it.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-08-5",
+      "theme": "Evening reflection",
+      "text": "I can thank myself for getting through today and offer tomorrow a little more room.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-08-6",
+      "theme": "Evening reflection",
+      "text": "I can remember what mattered and allow the rest of the noise to settle.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-09-1",
+      "theme": "Connection and kindness",
+      "text": "I can make someone feel seen by giving them my full attention for a moment.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-09-2",
+      "theme": "Connection and kindness",
+      "text": "A kind word can be simple and sincere. I do not need the perfect phrase.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-09-3",
+      "theme": "Connection and kindness",
+      "text": "I can check in with someone without assuming I know what they are feeling.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-09-4",
+      "theme": "Connection and kindness",
+      "text": "I can celebrate another person's progress without diminishing my own.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-09-5",
+      "theme": "Connection and kindness",
+      "text": "I can offer kindness while respecting the other person's space and choices.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-09-6",
+      "theme": "Connection and kindness",
+      "text": "I can let someone know they matter today, without waiting for a special occasion.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-10-1",
+      "theme": "Patience with progress",
+      "text": "I can measure growth by what I practise, not only by what I finish.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-10-2",
+      "theme": "Patience with progress",
+      "text": "Learning sometimes looks like repeating a small step. That repetition still has value.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-10-3",
+      "theme": "Patience with progress",
+      "text": "I can adjust my pace without abandoning my direction.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-10-4",
+      "theme": "Patience with progress",
+      "text": "I can appreciate a quiet improvement that no one else has noticed yet.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-10-5",
+      "theme": "Patience with progress",
+      "text": "Not every season is for visible results. Some are for building steadier foundations.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a2-10-6",
+      "theme": "Patience with progress",
+      "text": "I can remain curious about what works instead of judging how long it takes.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    }
+  ]
+}
