@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 17",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-05",
+  "messages": [
+    {
+      "id": "KDL-BEING_MISREAD_IN_A_SHORT_MESSAGE-001",
+      "theme": "being_misread_in_a_short_message",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A brief reply can carry more meanings than its sender intended. Before building a story around a few words, there may be room to ask what they meant."
+    },
+    {
+      "id": "KDL-BEING_MISREAD_IN_A_SHORT_MESSAGE-002",
+      "theme": "being_misread_in_a_short_message",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some conversations deserve more than a hurried screen can hold. Choosing a calmer moment to talk is not the same as avoiding what matters."
+    },
+    {
+      "id": "KDL-BEING_MISREAD_IN_A_SHORT_MESSAGE-003",
+      "theme": "being_misread_in_a_short_message",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When your words land differently from how you meant them, an explanation can help without becoming a defence of every detail."
+    },
+    {
+      "id": "KDL-BEING_MISREAD_IN_A_SHORT_MESSAGE-004",
+      "theme": "being_misread_in_a_short_message",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Waiting for a reply can make an ordinary silence feel personal. The gap tells you that you are waiting; it does not tell you why."
+    },
+    {
+      "id": "KDL-BEING_MISREAD_IN_A_SHORT_MESSAGE-005",
+      "theme": "being_misread_in_a_short_message",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is possible to care about someone and still need to put the phone down. Availability is not the only measure of affection."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_A_CHANGED_TRADITION-001",
+      "theme": "making_room_for_a_changed_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar celebration may look different this year. You can miss its old shape while helping the new version become its own memory."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_A_CHANGED_TRADITION-002",
+      "theme": "making_room_for_a_changed_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a tradition changes because someone is absent, even small details can feel louder. There is no obligation to make the day cheerful for everyone else."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_A_CHANGED_TRADITION-003",
+      "theme": "making_room_for_a_changed_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Keeping one part of an old ritual and changing another can be a thoughtful way forward. Continuity does not require everything to stay fixed."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_A_CHANGED_TRADITION-004",
+      "theme": "making_room_for_a_changed_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not everyone in a family remembers the same occasion in the same way. Making space for those differences may matter more than getting the details perfect."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_A_CHANGED_TRADITION-005",
+      "theme": "making_room_for_a_changed_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A quieter gathering is not necessarily a lesser one. Sometimes the most meaningful part is simply that people found a way to be together."
+    },
+    {
+      "id": "KDL-LEARNING_A_TASK_IN_PUBLIC-001",
+      "theme": "learning_a_task_in_public",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Learning while others watch can make small mistakes feel enormous. A question asked at the right moment may save more trouble than silent guessing."
+    },
+    {
+      "id": "KDL-LEARNING_A_TASK_IN_PUBLIC-002",
+      "theme": "learning_a_task_in_public",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The person who looks confident beside you may have practised this many times. Your first attempt deserves a different measure than their hundredth."
+    },
+    {
+      "id": "KDL-LEARNING_A_TASK_IN_PUBLIC-003",
+      "theme": "learning_a_task_in_public",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Feedback delivered in front of others can sting even when it contains something useful. You can take the useful part and still wish it had been said privately."
+    },
+    {
+      "id": "KDL-LEARNING_A_TASK_IN_PUBLIC-004",
+      "theme": "learning_a_task_in_public",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you lose your place while explaining something new, you can begin again at the point you remember. A pause does not erase your preparation."
+    },
+    {
+      "id": "KDL-LEARNING_A_TASK_IN_PUBLIC-005",
+      "theme": "learning_a_task_in_public",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Progress in a visible role often includes awkward first tries. You are allowed to learn the work without turning every mistake into a verdict on yourself."
+    },
+    {
+      "id": "KDL-LIVING_WITH_AN_UNFINISHED_HOME_PROJECT-001",
+      "theme": "living_with_an_unfinished_home_project",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unfinished corner of the house can keep asking for attention long after the workday ends. Choosing one manageable next step may be enough for now."
+    },
+    {
+      "id": "KDL-LIVING_WITH_AN_UNFINISHED_HOME_PROJECT-002",
+      "theme": "living_with_an_unfinished_home_project",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When repairs take longer than promised, frustration can come from the disruption as much as the delay. That inconvenience is real even if the project is small."
+    },
+    {
+      "id": "KDL-LIVING_WITH_AN_UNFINISHED_HOME_PROJECT-003",
+      "theme": "living_with_an_unfinished_home_project",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A home does not have to be fully sorted before you can rest in it. The boxes can wait while you make a little space for tonight."
+    },
+    {
+      "id": "KDL-LIVING_WITH_AN_UNFINISHED_HOME_PROJECT-004",
+      "theme": "living_with_an_unfinished_home_project",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Shared projects often reveal different ideas of what matters first. A practical conversation about time and money can be kinder than keeping score."
+    },
+    {
+      "id": "KDL-LIVING_WITH_AN_UNFINISHED_HOME_PROJECT-005",
+      "theme": "living_with_an_unfinished_home_project",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the useful achievement is noticing what still works amid the mess. It does not finish the project, but it may make the waiting easier."
+    }
+  ]
+}
