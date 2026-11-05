@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 20",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-05",
+  "messages": [
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-WITH-SOMEONE-STRUGGLING-001",
+      "theme": "sharing_good_news_with_someone_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Before sharing your good news with someone having a difficult season, consider asking whether they have room to hear it today. Their answer need not diminish your joy."
+    },
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-WITH-SOMEONE-STRUGGLING-002",
+      "theme": "sharing_good_news_with_someone_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can be proud of what happened and thoughtful about when you tell someone. Celebration and consideration are not competing loyalties."
+    },
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-WITH-SOMEONE-STRUGGLING-003",
+      "theme": "sharing_good_news_with_someone_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friend may care deeply about you and still need a little distance from a milestone that touches their own disappointment. Both feelings can exist."
+    },
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-WITH-SOMEONE-STRUGGLING-004",
+      "theme": "sharing_good_news_with_someone_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If someone responds quietly to your exciting news, it may reflect what they are carrying rather than what your achievement deserves."
+    },
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-WITH-SOMEONE-STRUGGLING-005",
+      "theme": "sharing_good_news_with_someone_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to apologise for a happy turn in your life. A gentle invitation to celebrate, without demanding enthusiasm, leaves space for both of you."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-WITH-MEMORIES-001",
+      "theme": "returning_to_a_place_with_memories",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first visit back to a familiar place can feel different from the journey you imagined. Notice what is here now without requiring it to match what was."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-WITH-MEMORIES-002",
+      "theme": "returning_to_a_place_with_memories",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A street can hold a thousand ordinary memories that no one else walking it can see. You are allowed to take your time there."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-WITH-MEMORIES-003",
+      "theme": "returning_to_a_place_with_memories",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If returning brings relief instead of sadness, you need not defend that feeling. Places can mean different things at different stages of life."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-WITH-MEMORIES-004",
+      "theme": "returning_to_a_place_with_memories",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You might find that the café has changed while the feeling of waiting outside it remains vivid. Memory rarely follows a tidy map."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-WITH-MEMORIES-005",
+      "theme": "returning_to_a_place_with_memories",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the kindest plan for a return visit is a short one. You can leave before you feel overwhelmed and come back another day."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-IN-A-GROUP-001",
+      "theme": "being_the_new_person_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When everyone else knows the shorthand, it is easy to feel a step behind. Asking what an unfamiliar phrase means is a reasonable way to join in."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-IN-A-GROUP-002",
+      "theme": "being_the_new_person_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being new can make even simple introductions tiring. You do not have to become memorable to everyone in your first hour."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-IN-A-GROUP-003",
+      "theme": "being_the_new_person_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a conversation moves past you, one thoughtful question can be enough to find your way back into it."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-IN-A-GROUP-004",
+      "theme": "being_the_new_person_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may discover who feels welcoming through small things: a chair moved closer, a name repeated, a pause that makes room for your answer."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-IN-A-GROUP-005",
+      "theme": "being_the_new_person_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It takes time to learn the rhythms of a group. A quiet first meeting says little about the place you might eventually have in it."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOUR-BECOMES-AN-EXPECTATION-001",
+      "theme": "when_a_favour_becomes_an_expectation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A favour can slowly become part of someone's routine without either person noticing. You are allowed to revisit what you can realistically offer."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOUR-BECOMES-AN-EXPECTATION-002",
+      "theme": "when_a_favour_becomes_an_expectation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If saying yes once has turned into an assumption, a clear conversation may be kinder than growing resentment in silence."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOUR-BECOMES-AN-EXPECTATION-003",
+      "theme": "when_a_favour_becomes_an_expectation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can appreciate someone's trust in you and still explain that the arrangement no longer works."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOUR-BECOMES-AN-EXPECTATION-004",
+      "theme": "when_a_favour_becomes_an_expectation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Changing an informal agreement does not erase the generosity that began it. Circumstances and capacity can change."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOUR-BECOMES-AN-EXPECTATION-005",
+      "theme": "when_a_favour_becomes_an_expectation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A boundary may disappoint someone who benefited from your flexibility. Their disappointment does not by itself tell you whether your decision was unfair."
+    }
+  ]
+}
