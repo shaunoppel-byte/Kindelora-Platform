@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 14",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-05",
+  "messages": [
+    {
+      "id": "KDL-AFTER_A_DIFFICULT_APOLOGY-001",
+      "theme": "after_a_difficult_apology",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An apology can be sincere and still leave the other person needing time. Their pace does not decide whether your effort mattered."
+    },
+    {
+      "id": "KDL-AFTER_A_DIFFICULT_APOLOGY-002",
+      "theme": "after_a_difficult_apology",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you have acknowledged the harm, resist filling the silence with explanations. Listening may be the next honest part of repair."
+    },
+    {
+      "id": "KDL-AFTER_A_DIFFICULT_APOLOGY-003",
+      "theme": "after_a_difficult_apology",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Feeling embarrassed after apologising does not mean you should take the words back. Discomfort sometimes accompanies accountability."
+    },
+    {
+      "id": "KDL-AFTER_A_DIFFICULT_APOLOGY-004",
+      "theme": "after_a_difficult_apology",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can offer to make something right without insisting that the relationship return to its old shape."
+    },
+    {
+      "id": "KDL-AFTER_A_DIFFICULT_APOLOGY-005",
+      "theme": "after_a_difficult_apology",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An apology is not a receipt for forgiveness. It is a way of taking responsibility for what belongs to you."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NEW_IN_A_ROOM-001",
+      "theme": "when_you_are_new_in_a_room",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being unfamiliar with a room does not make you less entitled to occupy it. You are allowed to learn its rhythms gradually."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NEW_IN_A_ROOM-002",
+      "theme": "when_you_are_new_in_a_room",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may notice everyone else's ease before you notice your own courage in showing up."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NEW_IN_A_ROOM-003",
+      "theme": "when_you_are_new_in_a_room",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A first conversation need not become a lasting friendship to have made the room a little less strange."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NEW_IN_A_ROOM-004",
+      "theme": "when_you_are_new_in_a_room",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you forget a name, asking again can be kinder than pretending you remember."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NEW_IN_A_ROOM-005",
+      "theme": "when_you_are_new_in_a_room",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can be observant at first without making your quietness a verdict on your ability to belong."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_DEPENDS_ON_SOMEONE_ELSE-001",
+      "theme": "when_a_plan_depends_on_someone_else",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Waiting for another person's decision can make your own day feel suspended. Consider what remains yours to choose meanwhile."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_DEPENDS_ON_SOMEONE_ELSE-002",
+      "theme": "when_a_plan_depends_on_someone_else",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can ask for a clear timeframe without making the other person responsible for your peace of mind."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_DEPENDS_ON_SOMEONE_ELSE-003",
+      "theme": "when_a_plan_depends_on_someone_else",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the uncertainty is harder than either answer. It makes sense to want clarity rather than more reassurance."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_DEPENDS_ON_SOMEONE_ELSE-004",
+      "theme": "when_a_plan_depends_on_someone_else",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shared plan needs shared information. Naming what you still need to know is not an unreasonable demand."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_DEPENDS_ON_SOMEONE_ELSE-005",
+      "theme": "when_a_plan_depends_on_someone_else",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the answer arrives later than promised, you may revise your plans without turning the delay into a judgment of yourself."
+    },
+    {
+      "id": "KDL-WHEN_JOY_FEELS_OUT_OF_PLACE-001",
+      "theme": "when_joy_feels_out_of_place",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A moment of laughter does not cancel the seriousness of what you are carrying."
+    },
+    {
+      "id": "KDL-WHEN_JOY_FEELS_OUT_OF_PLACE-002",
+      "theme": "when_joy_feels_out_of_place",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to explain why something small made you smile on a complicated day."
+    },
+    {
+      "id": "KDL-WHEN_JOY_FEELS_OUT_OF_PLACE-003",
+      "theme": "when_joy_feels_out_of_place",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Pleasure and concern can sit beside each other without either one being dishonest."
+    },
+    {
+      "id": "KDL-WHEN_JOY_FEELS_OUT_OF_PLACE-004",
+      "theme": "when_joy_feels_out_of_place",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If good news arrives during a hard season, you are allowed to receive it in whatever measure feels possible."
+    },
+    {
+      "id": "KDL-WHEN_JOY_FEELS_OUT_OF_PLACE-005",
+      "theme": "when_joy_feels_out_of_place",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every bright moment needs to become a lesson. Sometimes a pleasant cup of tea is simply pleasant."
+    }
+  ]
+}
