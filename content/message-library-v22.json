@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 22",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-06",
+  "messages": [
+    {
+      "id": "KDL-FINDING-A-VOICE-IN-A-NOISY-MEETING-001",
+      "theme": "finding_a_voice_in_a_noisy_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When the discussion moves faster than your thoughts, a pause can help you find the question you actually want to ask. Speaking later is still participating."
+    },
+    {
+      "id": "KDL-FINDING-A-VOICE-IN-A-NOISY-MEETING-002",
+      "theme": "finding_a_voice_in_a_noisy_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your idea was overlooked and then repeated by someone else, you may feel both frustrated and uncertain. It is reasonable to name your contribution calmly."
+    },
+    {
+      "id": "KDL-FINDING-A-VOICE-IN-A-NOISY-MEETING-003",
+      "theme": "finding_a_voice_in_a_noisy_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A crowded meeting can reward speed over care. Writing down one clear observation may serve the group better than trying to match the loudest person."
+    },
+    {
+      "id": "KDL-FINDING-A-VOICE-IN-A-NOISY-MEETING-004",
+      "theme": "finding_a_voice_in_a_noisy_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You might need a moment to disagree with a respected colleague. A thoughtful question can open the conversation without turning it into a contest."
+    },
+    {
+      "id": "KDL-FINDING-A-VOICE-IN-A-NOISY-MEETING-005",
+      "theme": "finding_a_voice_in_a_noisy_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Leaving a meeting wishing you had spoken is uncomfortable. You can follow up in writing, especially when the detail still matters to the decision."
+    },
+    {
+      "id": "KDL-BEING-BETWEEN-TWO-PLACES-001",
+      "theme": "being_between_two_places",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Packing for another visit can stir up affection and fatigue together. Belonging to more than one place sometimes means missing someone wherever you are."
+    },
+    {
+      "id": "KDL-BEING-BETWEEN-TWO-PLACES-002",
+      "theme": "being_between_two_places",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar kitchen may feel different after years away. You can appreciate what remains without needing every visit to feel like coming home."
+    },
+    {
+      "id": "KDL-BEING-BETWEEN-TWO-PLACES-003",
+      "theme": "being_between_two_places",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When people ask where you are really from, the answer may take longer than they expect. Your story does not have to fit their convenient category."
+    },
+    {
+      "id": "KDL-BEING-BETWEEN-TWO-PLACES-004",
+      "theme": "being_between_two_places",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may know the route between two homes by heart and still find each goodbye difficult. Repetition does not make every departure easy."
+    },
+    {
+      "id": "KDL-BEING-BETWEEN-TWO-PLACES-005",
+      "theme": "being_between_two_places",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Keeping a small ritual from one place in another can feel comforting. It need not settle the larger question of where you belong."
+    },
+    {
+      "id": "KDL-REBUILDING-TRUST-AFTER-A-SMALL-BREACH-001",
+      "theme": "rebuilding_trust_after_a_small_breach",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When someone shares a detail you expected them to keep private, the hurt may seem disproportionate to them. You can explain why it mattered to you."
+    },
+    {
+      "id": "KDL-REBUILDING-TRUST-AFTER-A-SMALL-BREACH-002",
+      "theme": "rebuilding_trust_after_a_small_breach",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An apology is a beginning, not a deadline for feeling comfortable again. Small, consistent choices may tell you more than another promise."
+    },
+    {
+      "id": "KDL-REBUILDING-TRUST-AFTER-A-SMALL-BREACH-003",
+      "theme": "rebuilding_trust_after_a_small_breach",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you were careless with someone's confidence, ask what repair would look like to them. Listening without defending yourself is part of taking responsibility."
+    },
+    {
+      "id": "KDL-REBUILDING-TRUST-AFTER-A-SMALL-BREACH-004",
+      "theme": "rebuilding_trust_after_a_small_breach",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Trust may return unevenly after an awkward mistake. You can enjoy someone's company while still deciding which details feel safe to share."
+    },
+    {
+      "id": "KDL-REBUILDING-TRUST-AFTER-A-SMALL-BREACH-005",
+      "theme": "rebuilding_trust_after_a_small_breach",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A person can mean well and still cross a boundary. Naming the boundary clearly gives the relationship a better chance than silently collecting resentment."
+    },
+    {
+      "id": "KDL-MAKING-ROOM-FOR-UNPLANNED-REST-001",
+      "theme": "making_room_for_unplanned_rest",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected free hour can feel strangely difficult to use when you are accustomed to being needed. You do not have to turn it into another assignment."
+    },
+    {
+      "id": "KDL-MAKING-ROOM-FOR-UNPLANNED-REST-002",
+      "theme": "making_room_for_unplanned_rest",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you sit down and immediately remember unfinished tasks, try noticing the chair beneath you before choosing what comes next. Rest need not be earned by exhaustion."
+    },
+    {
+      "id": "KDL-MAKING-ROOM-FOR-UNPLANNED-REST-003",
+      "theme": "making_room_for_unplanned_rest",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A cancelled appointment may bring relief alongside disappointment. You can welcome the breathing room without pretending the original plan meant nothing."
+    },
+    {
+      "id": "KDL-MAKING-ROOM-FOR-UNPLANNED-REST-004",
+      "theme": "making_room_for_unplanned_rest",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the quiet part of a weekend feels less familiar than the busy part. Leaving a little space unfilled is one way to discover what you need."
+    },
+    {
+      "id": "KDL-MAKING-ROOM-FOR-UNPLANNED-REST-005",
+      "theme": "making_room_for_unplanned_rest",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every break has to become a memorable experience. Drinking something warm by a window may be enough for this particular afternoon."
+    },
+    {
+      "id": "KDL-ASKING-FOR-CLARITY-WITHOUT-SHAME-001",
+      "theme": "asking_for_clarity_without_shame",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When instructions seem obvious to everyone else, asking for an example can feel exposing. A concrete question may prevent hours of guessing."
+    },
+    {
+      "id": "KDL-ASKING-FOR-CLARITY-WITHOUT-SHAME-002",
+      "theme": "asking_for_clarity_without_shame",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you misunderstood a deadline, it helps to say what you heard and ask what is actually expected. Clarity is more useful than a convincing excuse."
+    },
+    {
+      "id": "KDL-ASKING-FOR-CLARITY-WITHOUT-SHAME-003",
+      "theme": "asking_for_clarity_without_shame",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can be experienced in one area and new to another. Asking someone to explain a term does not erase what you already know."
+    },
+    {
+      "id": "KDL-ASKING-FOR-CLARITY-WITHOUT-SHAME-004",
+      "theme": "asking_for_clarity_without_shame",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A vague request can leave two people imagining different results. Repeating the outcome in your own words gives both of you a chance to correct course."
+    },
+    {
+      "id": "KDL-ASKING-FOR-CLARITY-WITHOUT-SHAME-005",
+      "theme": "asking_for_clarity_without_shame",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a conversation ends with too many loose ends, a short summary can be an act of care. It helps everyone see what was decided and what remains open."
+    }
+  ]
+}
