@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 23",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-06",
+  "messages": [
+    {
+      "id": "KDL-WAITING-FOR-A-DIFFICULT-CONVERSATION-001",
+      "theme": "waiting_for_a_difficult_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The hours before a difficult conversation can fill with imagined responses. You can prepare your opening words without rehearsing every possible ending."
+    },
+    {
+      "id": "KDL-WAITING-FOR-A-DIFFICULT-CONVERSATION-002",
+      "theme": "waiting_for_a_difficult_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you keep postponing a conversation because you care about the relationship, that care matters. So does the concern that has not yet been heard."
+    },
+    {
+      "id": "KDL-WAITING-FOR-A-DIFFICULT-CONVERSATION-003",
+      "theme": "waiting_for_a_difficult_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Choosing a quieter place to talk is not avoidance. Sometimes the setting makes it easier for both people to listen without an audience."
+    },
+    {
+      "id": "KDL-WAITING-FOR-A-DIFFICULT-CONVERSATION-004",
+      "theme": "waiting_for_a_difficult_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may leave a hard conversation with some questions unresolved. A respectful exchange does not always produce an immediate agreement."
+    },
+    {
+      "id": "KDL-WAITING-FOR-A-DIFFICULT-CONVERSATION-005",
+      "theme": "waiting_for_a_difficult_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Before raising a concern, consider what you actually witnessed and what you are assuming. That distinction can keep the conversation fair."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-AGAIN-001",
+      "theme": "being_the_new_person_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Learning another set of names and routines can be tiring, even when the change is welcome. Familiarity takes time to grow."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-AGAIN-002",
+      "theme": "being_the_new_person_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When everyone else knows the unwritten rules, asking a practical question can feel strangely brave. The question may help the next newcomer too."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-AGAIN-003",
+      "theme": "being_the_new_person_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your first week in a new place does not need to demonstrate everything you can offer. Notice how things work before judging your progress."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-AGAIN-004",
+      "theme": "being_the_new_person_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Missing the ease of your old surroundings does not mean the new beginning was a mistake. Both feelings can share the same day."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-AGAIN-005",
+      "theme": "being_the_new_person_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friendly invitation may be easier to accept when you know you can leave early. Belonging need not begin with an entire evening."
+    },
+    {
+      "id": "KDL-NAVIGATING-AN-UNEXPECTED-NO-001",
+      "theme": "navigating_an_unexpected_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A refusal can sting even when it is reasonable. Give yourself room to feel disappointed before deciding what the answer means."
+    },
+    {
+      "id": "KDL-NAVIGATING-AN-UNEXPECTED-NO-002",
+      "theme": "navigating_an_unexpected_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If someone cannot help this time, it does not erase the times they have shown up. Their limits and your needs can both be real."
+    },
+    {
+      "id": "KDL-NAVIGATING-AN-UNEXPECTED-NO-003",
+      "theme": "navigating_an_unexpected_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After hearing no, you may want to explain yourself again. Sometimes asking one clarifying question is more useful than making a longer case."
+    },
+    {
+      "id": "KDL-NAVIGATING-AN-UNEXPECTED-NO-004",
+      "theme": "navigating_an_unexpected_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can respect another person's decision and still need to rearrange your plans. Acceptance does not remove the practical inconvenience."
+    },
+    {
+      "id": "KDL-NAVIGATING-AN-UNEXPECTED-NO-005",
+      "theme": "navigating_an_unexpected_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When an opportunity closes, avoid rushing to call it a blessing. It is enough to acknowledge the loss and consider the next available step."
+    },
+    {
+      "id": "KDL-CARE-WITHOUT-CONSTANT-AVAILABILITY-001",
+      "theme": "care_without_constant_availability",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being reachable has gradually become part of how many people show care. A delayed response, however, is not necessarily a measure of affection."
+    },
+    {
+      "id": "KDL-CARE-WITHOUT-CONSTANT-AVAILABILITY-002",
+      "theme": "care_without_constant_availability",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you are the person everyone calls first, it may help to name the hours when you cannot respond. Clarity can protect generosity."
+    },
+    {
+      "id": "KDL-CARE-WITHOUT-CONSTANT-AVAILABILITY-003",
+      "theme": "care_without_constant_availability",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can listen to someone's difficult day without taking responsibility for fixing it. Ask whether they want company, ideas, or simply space to speak."
+    },
+    {
+      "id": "KDL-CARE-WITHOUT-CONSTANT-AVAILABILITY-004",
+      "theme": "care_without_constant_availability",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the kindest answer is a specific offer you can keep, rather than a sweeping promise made while feeling guilty."
+    },
+    {
+      "id": "KDL-CARE-WITHOUT-CONSTANT-AVAILABILITY-005",
+      "theme": "care_without_constant_availability",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you need quiet after supporting others, that need deserves attention too. Rest can make tomorrow's conversation more present, not less caring."
+    },
+    {
+      "id": "KDL-HANDLING-A-CHANGE-IN-SHARED-PLANS-001",
+      "theme": "handling_a_change_in_shared_plans",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a shared plan changes suddenly, frustration may be about more than the calendar. You might have rearranged work, travel, or expectations around it."
+    },
+    {
+      "id": "KDL-HANDLING-A-CHANGE-IN-SHARED-PLANS-002",
+      "theme": "handling_a_change_in_shared_plans",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Before deciding someone was inconsiderate, ask what changed for them. Their explanation may not solve the problem, but it can prevent an unnecessary quarrel."
+    },
+    {
+      "id": "KDL-HANDLING-A-CHANGE-IN-SHARED-PLANS-003",
+      "theme": "handling_a_change_in_shared_plans",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you are the one cancelling, a clear explanation and a practical alternative often mean more than an elaborate apology."
+    },
+    {
+      "id": "KDL-HANDLING-A-CHANGE-IN-SHARED-PLANS-004",
+      "theme": "handling_a_change_in_shared_plans",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every postponed gathering needs to be rescued immediately. Sometimes people need a little time before finding a new date that works."
+    },
+    {
+      "id": "KDL-HANDLING-A-CHANGE-IN-SHARED-PLANS-005",
+      "theme": "handling_a_change_in_shared_plans",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Two people can value the same plan differently. Saying what it meant to you is more helpful than insisting the other person should have known."
+    },
+    {
+      "id": "KDL-SMALL-ACTS-OF-REPAIR-AFTER-TENSION-001",
+      "theme": "small_acts_of_repair_after_tension",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After a tense morning, making tea together may feel easier than reopening the argument. Small gestures can soften the room without replacing a needed conversation."
+    },
+    {
+      "id": "KDL-SMALL-ACTS-OF-REPAIR-AFTER-TENSION-002",
+      "theme": "small_acts_of_repair_after_tension",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your tone was sharper than you intended, you can acknowledge that directly. You do not have to abandon the concern you were trying to express."
+    },
+    {
+      "id": "KDL-SMALL-ACTS-OF-REPAIR-AFTER-TENSION-003",
+      "theme": "small_acts_of_repair_after_tension",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Repair sometimes begins with remembering a detail the other person mentioned. Attention can be meaningful when words still feel awkward."
+    },
+    {
+      "id": "KDL-SMALL-ACTS-OF-REPAIR-AFTER-TENSION-004",
+      "theme": "small_acts_of_repair_after_tension",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may want closeness immediately after an apology while the other person needs distance. Giving them time can be part of taking the apology seriously."
+    },
+    {
+      "id": "KDL-SMALL-ACTS-OF-REPAIR-AFTER-TENSION-005",
+      "theme": "small_acts_of_repair_after_tension",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A disagreement does not require a winner before daily kindness can return. You can remain thoughtful while still seeing the issue differently."
+    }
+  ]
+}
