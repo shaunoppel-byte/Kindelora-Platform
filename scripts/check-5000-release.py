@@ -31,7 +31,7 @@ for m in batch:
     assert m["status"]=="editorial-review", f"Unreviewed release status: {m['id']}"
     assert m["audience"]=="all" and m["tone"]=="warm-grounded",m["id"]
     assert 8<=len(m["text"].split())<=40, f"Length outside editorial bounds: {m['id']}"
-    assert not re.search(r"\\b(guaranteed|cure|always be happy|just be positive)\\b",m["text"],re.I),m["id"]
+    assert not re.search(r"\b(guaranteed|cure|always be happy|just be positive)\b",m["text"],re.I),m["id"]
     assert m["text"].strip().endswith((".","!","?")),m["id"]
 stop=set("a an the and or of to for in on at from by with as is are was were be been being it its you your yours we our they their that this those these can could may might will would should do does did not no need have has had when while if even still only just something someone anyone anything one some more less than then into through about before after without every each there here what how why who which all another other yourself today tomorrow sometimes often also rather instead".split())
 def tok(s):
