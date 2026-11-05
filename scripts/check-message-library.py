@@ -33,5 +33,6 @@ for x in items:
 catalogue=json.loads(Path("message-catalogue.json").read_text(encoding="utf-8"))
 assert catalogue["count"]==2000 and len(catalogue["messages"])==2000, "Public catalogue count mismatch"
 assert {x["id"] for x in catalogue["messages"]}==set(ids[:2000]), "Public catalogue missing approved messages"
-assert all(x["text"]==next(m["text"] for m in items if m["id"]==x["id"]) for x in catalogue["messages"]), "Public catalogue content mismatch"
+source_by_id={m["id"]:m["text"] for m in items}
+assert all(x["text"]==source_by_id[x["id"]] for x in catalogue["messages"]), "Public catalogue content mismatch"
 print(f"PASS: {len(items)} unique draft messages across {len(themes)} themes; all marked for editorial review.")
