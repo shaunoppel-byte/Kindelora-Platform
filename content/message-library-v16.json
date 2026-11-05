@@ -1,0 +1,200 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 16",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-05",
+  "messages": [
+    {
+      "id": "KDL-LIVING_WITH_UNCERTAINTY_AFTER_GOOD_NEWS-001",
+      "theme": "living_with_uncertainty_after_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Good news can arrive with unanswered questions attached. You are allowed to enjoy what has happened without pretending the rest is settled."
+    },
+    {
+      "id": "KDL-LIVING_WITH_UNCERTAINTY_AFTER_GOOD_NEWS-002",
+      "theme": "living_with_uncertainty_after_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When something promising begins, caution may sit beside excitement. Neither feeling cancels the other; both can have a place at the table."
+    },
+    {
+      "id": "KDL-LIVING_WITH_UNCERTAINTY_AFTER_GOOD_NEWS-003",
+      "theme": "living_with_uncertainty_after_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to announce a hopeful change before you have found words for it yourself. Some beginnings benefit from a little privacy."
+    },
+    {
+      "id": "KDL-LIVING_WITH_UNCERTAINTY_AFTER_GOOD_NEWS-004",
+      "theme": "living_with_uncertainty_after_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After a long stretch of setbacks, relief may feel unfamiliar. There is no correct speed at which you must learn to trust a better moment."
+    },
+    {
+      "id": "KDL-SHARING_SPACE_WITH_DIFFERENT_NEEDS-001",
+      "theme": "sharing_space_with_different_needs",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shared home can hold different definitions of quiet, comfort and order. Naming the practical need is often kinder than arguing about who is reasonable."
+    },
+    {
+      "id": "KDL-SHARING_SPACE_WITH_DIFFERENT_NEEDS-002",
+      "theme": "sharing_space_with_different_needs",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you need time alone, a simple explanation may prevent someone else from mistaking your silence for rejection."
+    },
+    {
+      "id": "KDL-SHARING_SPACE_WITH_DIFFERENT_NEEDS-003",
+      "theme": "sharing_space_with_different_needs",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Small household irritations can gather weight when nobody speaks about them. A specific request about tomorrow may help more than a catalogue of yesterday."
+    },
+    {
+      "id": "KDL-SHARING_SPACE_WITH_DIFFERENT_NEEDS-004",
+      "theme": "sharing_space_with_different_needs",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Compromise does not always mean splitting every difference in half. Sometimes it means finding an arrangement each person can genuinely live with."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FIRST_DAY_BACK-001",
+      "theme": "navigating_a_first_day_back",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Returning after an absence can make familiar doors feel unexpectedly difficult to open. You can begin with the next ordinary task rather than a perfect return."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FIRST_DAY_BACK-002",
+      "theme": "navigating_a_first_day_back",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "People may ask where you have been before you are ready to explain. A brief answer is enough; your personal history is not the price of rejoining."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FIRST_DAY_BACK-003",
+      "theme": "navigating_a_first_day_back",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first day back might be awkward even when everyone is welcoming. Awkwardness is an experience, not evidence that you do not belong."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FIRST_DAY_BACK-004",
+      "theme": "navigating_a_first_day_back",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Consider leaving a little room after your return for rest or reflection. Resuming a routine can take energy that others never see."
+    },
+    {
+      "id": "KDL-RECEIVING_HELP_WITHOUT_OWING_A_STORY-001",
+      "theme": "receiving_help_without_owing_a_story",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone can offer useful help without being entitled to every detail of why you need it. Gratitude and privacy can coexist."
+    },
+    {
+      "id": "KDL-RECEIVING_HELP_WITHOUT_OWING_A_STORY-002",
+      "theme": "receiving_help_without_owing_a_story",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If accepting support feels uncomfortable, you might begin by naming one concrete thing that would ease the day. You need not explain your whole life."
+    },
+    {
+      "id": "KDL-RECEIVING_HELP_WITHOUT_OWING_A_STORY-003",
+      "theme": "receiving_help_without_owing_a_story",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every offer will fit what you actually need. Declining one kind of help does not mean you have rejected the person who offered it."
+    },
+    {
+      "id": "KDL-RECEIVING_HELP_WITHOUT_OWING_A_STORY-004",
+      "theme": "receiving_help_without_owing_a_story",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When someone helps you through a difficult week, a sincere thank-you is meaningful. You do not have to turn care into a debt you can never repay."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_UNCELEBRATED_PROGRESS-001",
+      "theme": "making_room_for_uncelebrated_progress",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some progress looks like answering a message you have been avoiding. It may be invisible to everyone else and still matter to your day."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_UNCELEBRATED_PROGRESS-002",
+      "theme": "making_room_for_uncelebrated_progress",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A quieter response in a familiar argument can be a meaningful change, even if nobody notices the effort it required."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_UNCELEBRATED_PROGRESS-003",
+      "theme": "making_room_for_uncelebrated_progress",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Keeping a small promise to yourself is not a lesser achievement because it would look ordinary on someone else's calendar."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_UNCELEBRATED_PROGRESS-004",
+      "theme": "making_room_for_uncelebrated_progress",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may have moved forward without feeling transformed. Growth sometimes appears first in what you choose not to repeat."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_CHANGES_AT_THE_LAST_MINUTE-001",
+      "theme": "when_a_plan_changes_at_the_last_minute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A cancelled plan can be disappointing even when the reason is understandable. You do not need to choose between compassion and honesty about the inconvenience."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_CHANGES_AT_THE_LAST_MINUTE-002",
+      "theme": "when_a_plan_changes_at_the_last_minute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When an arrangement changes suddenly, ask what is still possible before deciding that the whole day is lost. The replacement need not resemble the original."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_CHANGES_AT_THE_LAST_MINUTE-003",
+      "theme": "when_a_plan_changes_at_the_last_minute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If someone else is upset by a change you made, listening to its impact does not require you to pretend you had another option."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_CHANGES_AT_THE_LAST_MINUTE-004",
+      "theme": "when_a_plan_changes_at_the_last_minute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected free hour can feel empty rather than liberating. You are allowed to spend it simply, without turning disruption into a productivity challenge."
+    }
+  ]
+}
