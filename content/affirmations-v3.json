@@ -1,0 +1,998 @@
+{
+  "version": "0.3-editorial",
+  "status": "script-review-only",
+  "publication": "not-approved",
+  "description": "110 new original candidate affirmation scripts. Editorial review and professional audio production pending; not accessible to subscribers.",
+  "scripts": [
+    {
+      "id": "a3-01-01",
+      "theme": "Courage",
+      "text": "I can take a meaningful step even while feeling nervous. Courage does not require the absence of fear.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-01-02",
+      "theme": "Courage",
+      "text": "I can speak up when something matters to me, using words that are honest and respectful.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-01-03",
+      "theme": "Courage",
+      "text": "I can face an unfamiliar task with curiosity rather than demanding immediate mastery.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-01-04",
+      "theme": "Courage",
+      "text": "I can try something new without promising myself that it will be easy.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-01-05",
+      "theme": "Courage",
+      "text": "I can ask the question I have been avoiding. Clarity is worth a moment of discomfort.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-01-06",
+      "theme": "Courage",
+      "text": "I can acknowledge my uncertainty and still choose a thoughtful next action.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-01-07",
+      "theme": "Courage",
+      "text": "I can make a difficult decision with the information available to me today.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-01-08",
+      "theme": "Courage",
+      "text": "I can stand by my values while remaining open to learning from others.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-01-09",
+      "theme": "Courage",
+      "text": "I can give myself credit for showing up when the outcome was uncertain.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-01-10",
+      "theme": "Courage",
+      "text": "I can move forward carefully, without waiting for every doubt to disappear.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-02-01",
+      "theme": "Mindful presence",
+      "text": "I can notice the ground beneath my feet and return my attention to this moment.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-02-02",
+      "theme": "Mindful presence",
+      "text": "I can take in the light around me without needing to name or judge it.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-02-03",
+      "theme": "Mindful presence",
+      "text": "I can listen to a familiar sound and let it anchor me in the present.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-02-04",
+      "theme": "Mindful presence",
+      "text": "I can enjoy a simple drink without rushing toward the next task.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-02-05",
+      "theme": "Mindful presence",
+      "text": "I can notice when my mind wanders and gently bring it back, as often as needed.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-02-06",
+      "theme": "Mindful presence",
+      "text": "I can give this conversation my attention without planning my reply too soon.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-02-07",
+      "theme": "Mindful presence",
+      "text": "I can let a quiet minute be enough, without turning it into another goal.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-02-08",
+      "theme": "Mindful presence",
+      "text": "I can observe a passing thought without treating it as an instruction.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-02-09",
+      "theme": "Mindful presence",
+      "text": "I can pause between activities and allow myself a moment to arrive.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-02-10",
+      "theme": "Mindful presence",
+      "text": "I can notice one detail of my surroundings that I might otherwise overlook.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-03-01",
+      "theme": "Hope during uncertainty",
+      "text": "I do not need to know the ending to make a kind choice in the middle.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-03-02",
+      "theme": "Hope during uncertainty",
+      "text": "I can hold a little hope alongside my questions, without pretending everything is settled.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-03-03",
+      "theme": "Hope during uncertainty",
+      "text": "I can make room for possibilities I have not yet considered.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-03-04",
+      "theme": "Hope during uncertainty",
+      "text": "I can seek reliable information while giving myself permission not to know everything.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-03-05",
+      "theme": "Hope during uncertainty",
+      "text": "I can focus on what is within reach today, even when the larger picture remains unclear.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-03-06",
+      "theme": "Hope during uncertainty",
+      "text": "I can accept that plans may change and still look for a useful next step.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-03-07",
+      "theme": "Hope during uncertainty",
+      "text": "I can remember that uncertainty is a circumstance, not a measure of my worth.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-03-08",
+      "theme": "Hope during uncertainty",
+      "text": "I can ask for perspective from someone I trust when my thoughts feel crowded.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-03-09",
+      "theme": "Hope during uncertainty",
+      "text": "I can allow hope to be quiet and practical rather than loud or certain.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-03-10",
+      "theme": "Hope during uncertainty",
+      "text": "I can meet an unknown tomorrow with the support and skills I have today.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-04-01",
+      "theme": "Friendship",
+      "text": "I can be the friend who listens without rushing to fix everything.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-04-02",
+      "theme": "Friendship",
+      "text": "I can reach out with a simple message instead of waiting for the perfect moment.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-04-03",
+      "theme": "Friendship",
+      "text": "I can appreciate the friendships that allow room for honest differences.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-04-04",
+      "theme": "Friendship",
+      "text": "I can celebrate a friend's good news without comparing our timelines.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-04-05",
+      "theme": "Friendship",
+      "text": "I can ask how someone is doing and make space for a real answer.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-04-06",
+      "theme": "Friendship",
+      "text": "I can tell a friend what their kindness has meant to me.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-04-07",
+      "theme": "Friendship",
+      "text": "I can let a friendship grow through small, consistent acts of care.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-04-08",
+      "theme": "Friendship",
+      "text": "I can respect a friend's need for space without assuming the worst.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-04-09",
+      "theme": "Friendship",
+      "text": "I can be honest when I need support instead of pretending I am always fine.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-04-10",
+      "theme": "Friendship",
+      "text": "I can welcome new connections while valuing the people already in my life.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-05-01",
+      "theme": "Healthy self-talk",
+      "text": "I can replace a harsh label with a more accurate description of what happened.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-05-02",
+      "theme": "Healthy self-talk",
+      "text": "I can notice the tone of my inner voice and choose words that help me learn.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-05-03",
+      "theme": "Healthy self-talk",
+      "text": "I can speak to myself as someone who is still growing, not someone on trial.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-05-04",
+      "theme": "Healthy self-talk",
+      "text": "I can challenge the thought that one difficult day defines my whole week.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-05-05",
+      "theme": "Healthy self-talk",
+      "text": "I can recognise effort without demanding perfection as proof of value.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-05-06",
+      "theme": "Healthy self-talk",
+      "text": "I can say that I am disappointed without saying that I am a disappointment.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-05-07",
+      "theme": "Healthy self-talk",
+      "text": "I can make room for both accountability and compassion in the same sentence.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-05-08",
+      "theme": "Healthy self-talk",
+      "text": "I can question an unkind assumption before accepting it as fact.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-05-09",
+      "theme": "Healthy self-talk",
+      "text": "I can acknowledge a strength without feeling that I must minimise it.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-05-10",
+      "theme": "Healthy self-talk",
+      "text": "I can practise patience with myself when a new skill takes time.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-06-01",
+      "theme": "Change and transition",
+      "text": "I can honour what I am leaving behind while making space for what comes next.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-06-02",
+      "theme": "Change and transition",
+      "text": "I can take time to adjust to a new routine without expecting instant comfort.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-06-03",
+      "theme": "Change and transition",
+      "text": "I can keep a familiar ritual as an anchor while other things change.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-06-04",
+      "theme": "Change and transition",
+      "text": "I can notice what remains steady, even when the schedule around me shifts.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-06-05",
+      "theme": "Change and transition",
+      "text": "I can allow mixed feelings about a transition without forcing one simple story.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-06-06",
+      "theme": "Change and transition",
+      "text": "I can learn the shape of a new chapter through experience, not prediction.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-06-07",
+      "theme": "Change and transition",
+      "text": "I can ask for guidance when a new role or environment feels unfamiliar.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-06-08",
+      "theme": "Change and transition",
+      "text": "I can update an old plan when new information makes a better path visible.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-06-09",
+      "theme": "Change and transition",
+      "text": "I can celebrate a small sign of adjustment rather than waiting to feel fully settled.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-06-10",
+      "theme": "Change and transition",
+      "text": "I can bring my values with me into changing circumstances.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-07-01",
+      "theme": "Creative expression",
+      "text": "I can make something simply because the process brings me joy.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-07-02",
+      "theme": "Creative expression",
+      "text": "I can begin with a rough idea and let it become clearer as I work.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-07-03",
+      "theme": "Creative expression",
+      "text": "I can explore a new colour, sound or sentence without needing an audience.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-07-04",
+      "theme": "Creative expression",
+      "text": "I can give an unfinished idea room to develop before judging it.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-07-05",
+      "theme": "Creative expression",
+      "text": "I can enjoy someone else's creativity while trusting my own perspective.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-07-06",
+      "theme": "Creative expression",
+      "text": "I can experiment with a different approach when the familiar one feels stuck.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-07-07",
+      "theme": "Creative expression",
+      "text": "I can set aside comparison and follow what genuinely interests me.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-07-08",
+      "theme": "Creative expression",
+      "text": "I can treat a creative mistake as information, not embarrassment.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-07-09",
+      "theme": "Creative expression",
+      "text": "I can return to a project after a break with fresh curiosity.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-07-10",
+      "theme": "Creative expression",
+      "text": "I can make space for play in a day that otherwise feels structured.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-08-01",
+      "theme": "Family and caregiving",
+      "text": "I can offer care without expecting myself to meet every need alone.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-08-02",
+      "theme": "Family and caregiving",
+      "text": "I can listen to a loved one with patience, even when our perspectives differ.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-08-03",
+      "theme": "Family and caregiving",
+      "text": "I can make a small moment of connection count amid a busy day.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-08-04",
+      "theme": "Family and caregiving",
+      "text": "I can ask for help with caregiving and still be deeply committed.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-08-05",
+      "theme": "Family and caregiving",
+      "text": "I can let a family tradition evolve while keeping its meaning alive.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-08-06",
+      "theme": "Family and caregiving",
+      "text": "I can show appreciation for an everyday contribution that often goes unnoticed.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-08-07",
+      "theme": "Family and caregiving",
+      "text": "I can care for my own energy so I can remain present with others.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-08-08",
+      "theme": "Family and caregiving",
+      "text": "I can apologise when I respond sharply and choose a gentler conversation.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-08-09",
+      "theme": "Family and caregiving",
+      "text": "I can respect the different ways people in my family express affection.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-08-10",
+      "theme": "Family and caregiving",
+      "text": "I can create room for laughter alongside responsibility.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-09-01",
+      "theme": "Learning and growth",
+      "text": "I can ask a basic question because understanding matters more than appearing certain.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-09-02",
+      "theme": "Learning and growth",
+      "text": "I can practise a skill slowly and notice the improvement over time.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-09-03",
+      "theme": "Learning and growth",
+      "text": "I can use feedback as information without letting it become my identity.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-09-04",
+      "theme": "Learning and growth",
+      "text": "I can try a new method when the first approach does not work.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-09-05",
+      "theme": "Learning and growth",
+      "text": "I can recognise the courage it takes to be a beginner.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-09-06",
+      "theme": "Learning and growth",
+      "text": "I can celebrate the moment something finally makes sense.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-09-07",
+      "theme": "Learning and growth",
+      "text": "I can take a break when concentration fades and return with fresh attention.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-09-08",
+      "theme": "Learning and growth",
+      "text": "I can learn from someone whose experience differs from mine.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-09-09",
+      "theme": "Learning and growth",
+      "text": "I can be proud of consistency even when progress is difficult to measure.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-09-10",
+      "theme": "Learning and growth",
+      "text": "I can remain open to changing my mind when I discover something new.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-10-01",
+      "theme": "Body appreciation",
+      "text": "I can appreciate what my body helps me experience today, without judging how it looks.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-10-02",
+      "theme": "Body appreciation",
+      "text": "I can choose clothing that allows me to move comfortably and feel like myself.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-10-03",
+      "theme": "Body appreciation",
+      "text": "I can notice when I need water, food or rest and respond with care.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-10-04",
+      "theme": "Body appreciation",
+      "text": "I can speak about my appearance without using unkind comparisons.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-10-05",
+      "theme": "Body appreciation",
+      "text": "I can enjoy movement that feels accessible and comfortable to me.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-10-06",
+      "theme": "Body appreciation",
+      "text": "I can respect that bodies change across seasons and stages of life.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-10-07",
+      "theme": "Body appreciation",
+      "text": "I can give my body a moment of ease after a demanding day.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-10-08",
+      "theme": "Body appreciation",
+      "text": "I can focus on the warmth of a hug or the comfort of a familiar chair.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-10-09",
+      "theme": "Body appreciation",
+      "text": "I can honour my limits without treating them as a personal failure.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-10-10",
+      "theme": "Body appreciation",
+      "text": "I can value myself for far more than what a mirror can show.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-11-01",
+      "theme": "Celebrating small wins",
+      "text": "I can pause to acknowledge the task I completed instead of rushing past it.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-11-02",
+      "theme": "Celebrating small wins",
+      "text": "I can recognise a difficult conversation handled with care as a real achievement.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-11-03",
+      "theme": "Celebrating small wins",
+      "text": "I can celebrate the moment I asked for help when I needed it.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-11-04",
+      "theme": "Celebrating small wins",
+      "text": "I can give myself credit for returning to a goal after a pause.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-11-05",
+      "theme": "Celebrating small wins",
+      "text": "I can notice when I responded more patiently than I might have before.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-11-06",
+      "theme": "Celebrating small wins",
+      "text": "I can appreciate the small habit that is beginning to feel natural.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-11-07",
+      "theme": "Celebrating small wins",
+      "text": "I can mark progress privately, even when no one else sees it.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-11-08",
+      "theme": "Celebrating small wins",
+      "text": "I can be pleased with one good choice without demanding a perfect day.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-11-09",
+      "theme": "Celebrating small wins",
+      "text": "I can honour the effort behind a result that looks simple from the outside.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "a3-11-10",
+      "theme": "Celebrating small wins",
+      "text": "I can end today by naming one thing I did with intention.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    }
+  ]
+}
