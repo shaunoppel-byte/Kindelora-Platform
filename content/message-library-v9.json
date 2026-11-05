@@ -1,0 +1,808 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA expansion editorial batch 9",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-05",
+  "messages": [
+    {
+      "id": "KDL-WHEN_THE_HOUSE_IS_QUIET-001",
+      "theme": "when_the_house_is_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A quiet house can feel peaceful one evening and unexpectedly lonely the next."
+    },
+    {
+      "id": "KDL-WHEN_THE_HOUSE_IS_QUIET-002",
+      "theme": "when_the_house_is_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The familiar creak of a floorboard may remind you how many lives a home has held."
+    },
+    {
+      "id": "KDL-WHEN_THE_HOUSE_IS_QUIET-003",
+      "theme": "when_the_house_is_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to fill the silence simply because you notice it."
+    },
+    {
+      "id": "KDL-WHEN_THE_HOUSE_IS_QUIET-004",
+      "theme": "when_the_house_is_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Make a cup of something warm and let the evening unfold without an agenda."
+    },
+    {
+      "id": "KDL-WHEN_THE_HOUSE_IS_QUIET-005",
+      "theme": "when_the_house_is_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the stillness feels heavy, hearing a trusted voice may help."
+    },
+    {
+      "id": "KDL-WHEN_THE_HOUSE_IS_QUIET-006",
+      "theme": "when_the_house_is_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "There can be comfort in doing an ordinary task at your own pace."
+    },
+    {
+      "id": "KDL-WHEN_THE_HOUSE_IS_QUIET-007",
+      "theme": "when_the_house_is_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A room does not need conversation to hold memories of laughter."
+    },
+    {
+      "id": "KDL-WHEN_THE_HOUSE_IS_QUIET-008",
+      "theme": "when_the_house_is_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can enjoy your own company and still wish someone were nearby."
+    },
+    {
+      "id": "KDL-WHEN_THE_HOUSE_IS_QUIET-009",
+      "theme": "when_the_house_is_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first quiet evening after a busy season may take some getting used to."
+    },
+    {
+      "id": "KDL-WHEN_THE_HOUSE_IS_QUIET-010",
+      "theme": "when_the_house_is_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let the house be quiet without asking yourself to feel any particular way."
+    },
+    {
+      "id": "KDL-BEFORE_MEETING_SOMEONE_NEW-001",
+      "theme": "before_meeting_someone_new",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is natural to wonder how a first conversation will go before it begins."
+    },
+    {
+      "id": "KDL-BEFORE_MEETING_SOMEONE_NEW-002",
+      "theme": "before_meeting_someone_new",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can be curious about another person without preparing an impressive version of yourself."
+    },
+    {
+      "id": "KDL-BEFORE_MEETING_SOMEONE_NEW-003",
+      "theme": "before_meeting_someone_new",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A simple question asked with genuine interest is often enough to begin."
+    },
+    {
+      "id": "KDL-BEFORE_MEETING_SOMEONE_NEW-004",
+      "theme": "before_meeting_someone_new",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need to know immediately whether this connection will become important."
+    },
+    {
+      "id": "KDL-BEFORE_MEETING_SOMEONE_NEW-005",
+      "theme": "before_meeting_someone_new",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your words come out awkwardly, the moment can still be warm."
+    },
+    {
+      "id": "KDL-BEFORE_MEETING_SOMEONE_NEW-006",
+      "theme": "before_meeting_someone_new",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let the other person surprise you instead of rehearsing every possible response."
+    },
+    {
+      "id": "KDL-BEFORE_MEETING_SOMEONE_NEW-007",
+      "theme": "before_meeting_someone_new",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A first meeting is an introduction, not a final judgement of who you are."
+    },
+    {
+      "id": "KDL-BEFORE_MEETING_SOMEONE_NEW-008",
+      "theme": "before_meeting_someone_new",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is fine to take your time before sharing personal details."
+    },
+    {
+      "id": "KDL-BEFORE_MEETING_SOMEONE_NEW-009",
+      "theme": "before_meeting_someone_new",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can leave a conversation feeling uncertain and still appreciate having shown up."
+    },
+    {
+      "id": "KDL-BEFORE_MEETING_SOMEONE_NEW-010",
+      "theme": "before_meeting_someone_new",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes a connection begins with two people admitting they are both a little nervous."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_FALLS_THROUGH-001",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A cancelled plan can leave an oddly shaped space in a day you had imagined differently."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_FALLS_THROUGH-002",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may be disappointed even when the reason for the change makes sense."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_FALLS_THROUGH-003",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Before filling the gap, ask whether you would actually welcome some rest."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_FALLS_THROUGH-004",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected free hour can be useful without needing to become productive."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_FALLS_THROUGH-005",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If someone let you down, you can name that feeling without escalating it."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_FALLS_THROUGH-006",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The effort you put into preparing still mattered, even if the occasion never happened."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_FALLS_THROUGH-007",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A different afternoon does not have to become a bad afternoon."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_FALLS_THROUGH-008",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can make a smaller version of the experience for yourself if that feels right."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_FALLS_THROUGH-009",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is fine to feel let down before you consider making alternative arrangements."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_FALLS_THROUGH-010",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "There may be another opportunity later; for now, it is enough to adjust."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_NEW_PERSON-001",
+      "theme": "when_you_are_the_new_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being the newcomer means learning a hundred details others no longer notice."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_NEW_PERSON-002",
+      "theme": "when_you_are_the_new_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can ask where things belong without apologising for not already knowing."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_NEW_PERSON-003",
+      "theme": "when_you_are_the_new_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first few days may feel tiring because so much requires your attention."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_NEW_PERSON-004",
+      "theme": "when_you_are_the_new_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Remember the person who explained something kindly; their patience deserves recognition."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_NEW_PERSON-005",
+      "theme": "when_you_are_the_new_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need to earn belonging through flawless first impressions."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_NEW_PERSON-006",
+      "theme": "when_you_are_the_new_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some names will take a while to remember, and that is ordinary."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_NEW_PERSON-007",
+      "theme": "when_you_are_the_new_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your questions may reveal assumptions that everyone else has stopped examining."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_NEW_PERSON-008",
+      "theme": "when_you_are_the_new_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Allow yourself time to learn the rhythm before judging your progress."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_NEW_PERSON-009",
+      "theme": "when_you_are_the_new_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A small invitation to join a conversation can change the texture of your day."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_NEW_PERSON-010",
+      "theme": "when_you_are_the_new_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You bring experiences from elsewhere that may become valuable here."
+    },
+    {
+      "id": "KDL-AFTER_A_FAMILY_GATHERING-001",
+      "theme": "after_a_family_gathering",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A family gathering can leave you smiling about one moment and unsettled by another."
+    },
+    {
+      "id": "KDL-AFTER_A_FAMILY_GATHERING-002",
+      "theme": "after_a_family_gathering",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may enjoy seeing everyone and still need quiet afterward."
+    },
+    {
+      "id": "KDL-AFTER_A_FAMILY_GATHERING-003",
+      "theme": "after_a_family_gathering",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The stories people repeat often carry affection beneath their familiar details."
+    },
+    {
+      "id": "KDL-AFTER_A_FAMILY_GATHERING-004",
+      "theme": "after_a_family_gathering",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A conversation you did not get to finish can wait for another day."
+    },
+    {
+      "id": "KDL-AFTER_A_FAMILY_GATHERING-005",
+      "theme": "after_a_family_gathering",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to resolve every old family pattern at one gathering."
+    },
+    {
+      "id": "KDL-AFTER_A_FAMILY_GATHERING-006",
+      "theme": "after_a_family_gathering",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the most meaningful part is helping someone carry dishes to the kitchen."
+    },
+    {
+      "id": "KDL-AFTER_A_FAMILY_GATHERING-007",
+      "theme": "after_a_family_gathering",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you felt out of place, that feeling deserves attention without becoming a verdict."
+    },
+    {
+      "id": "KDL-AFTER_A_FAMILY_GATHERING-008",
+      "theme": "after_a_family_gathering",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A photograph may capture the smiles while missing the effort it took to show up."
+    },
+    {
+      "id": "KDL-AFTER_A_FAMILY_GATHERING-009",
+      "theme": "after_a_family_gathering",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can be grateful for togetherness without pretending every relationship is simple."
+    },
+    {
+      "id": "KDL-AFTER_A_FAMILY_GATHERING-010",
+      "theme": "after_a_family_gathering",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let the evening settle before deciding what you want to carry forward."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_BEGIN_AGAIN-001",
+      "theme": "when_you_need_to_begin_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Starting again can feel harder when you remember how much effort the first attempt took."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_BEGIN_AGAIN-002",
+      "theme": "when_you_need_to_begin_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to recreate the old version of your plan exactly."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_BEGIN_AGAIN-003",
+      "theme": "when_you_need_to_begin_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Begin with what you know now, not only what you wish had happened."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_BEGIN_AGAIN-004",
+      "theme": "when_you_need_to_begin_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unfinished chapter can teach you something useful about the next one."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_BEGIN_AGAIN-005",
+      "theme": "when_you_need_to_begin_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is reasonable to feel hesitant when you have been disappointed before."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_BEGIN_AGAIN-006",
+      "theme": "when_you_need_to_begin_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Choose a starting point small enough to approach without needing perfect confidence."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_BEGIN_AGAIN-007",
+      "theme": "when_you_need_to_begin_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can keep the lessons without keeping every expectation that came with them."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_BEGIN_AGAIN-008",
+      "theme": "when_you_need_to_begin_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A fresh attempt does not erase the work that brought you here."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_BEGIN_AGAIN-009",
+      "theme": "when_you_need_to_begin_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you need support this time, asking early may change the experience."
+    },
+    {
+      "id": "KDL-WHEN_YOU_NEED_TO_BEGIN_AGAIN-010",
+      "theme": "when_you_need_to_begin_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Beginning again is not proof that you failed to move forward."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_SAYS_THANK_YOU-001",
+      "theme": "when_someone_says_thank_you",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A sincere thank-you can reveal that a small gesture mattered more than you knew."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_SAYS_THANK_YOU-002",
+      "theme": "when_someone_says_thank_you",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may be surprised by which part of your help another person remembers."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_SAYS_THANK_YOU-003",
+      "theme": "when_someone_says_thank_you",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let their gratitude reach you before brushing it away with a joke."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_SAYS_THANK_YOU-004",
+      "theme": "when_someone_says_thank_you",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being appreciated does not mean you must do more to deserve it."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_SAYS_THANK_YOU-005",
+      "theme": "when_someone_says_thank_you",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes a few thoughtful words make an ordinary day feel unexpectedly generous."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_SAYS_THANK_YOU-006",
+      "theme": "when_someone_says_thank_you",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can accept a compliment without turning the conversation into a comparison."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_SAYS_THANK_YOU-007",
+      "theme": "when_someone_says_thank_you",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The person thanking you may be sharing a moment of vulnerability too."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_SAYS_THANK_YOU-008",
+      "theme": "when_someone_says_thank_you",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Notice how it feels to have your care recognised without needing an audience."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_SAYS_THANK_YOU-009",
+      "theme": "when_someone_says_thank_you",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A thank-you can be a beginning of connection rather than the end of an exchange."
+    },
+    {
+      "id": "KDL-WHEN_SOMEONE_SAYS_THANK_YOU-010",
+      "theme": "when_someone_says_thank_you",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Allow yourself to feel pleased that something you did made life easier for someone."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_MIND-001",
+      "theme": "when_you_change_your_mind",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Changing your mind after learning something new can be a sign of care, not weakness."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_MIND-002",
+      "theme": "when_you_change_your_mind",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are allowed to outgrow a preference that once suited your life."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_MIND-003",
+      "theme": "when_you_change_your_mind",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Explain what changed if the decision affects people who relied on your earlier answer."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_MIND-004",
+      "theme": "when_you_change_your_mind",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can respect your former reasoning without remaining bound to it forever."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_MIND-005",
+      "theme": "when_you_change_your_mind",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A revised plan may disappoint someone, and that deserves a considerate conversation."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_MIND-006",
+      "theme": "when_you_change_your_mind",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need to defend every private shift in your priorities."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_MIND-007",
+      "theme": "when_you_change_your_mind",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes new information makes an old certainty feel less convincing."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_MIND-008",
+      "theme": "when_you_change_your_mind",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A thoughtful change of direction can still require courage."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_MIND-009",
+      "theme": "when_you_change_your_mind",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Give yourself room to notice when an obligation no longer fits its original purpose."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_MIND-010",
+      "theme": "when_you_change_your_mind",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can choose differently today without rewriting yesterday as a mistake."
+    },
+    {
+      "id": "KDL-WHEN_THE_WEEK_FEELS_LONG-001",
+      "theme": "when_the_week_feels_long",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some weeks feel longer because every day asks for a different kind of patience."
+    },
+    {
+      "id": "KDL-WHEN_THE_WEEK_FEELS_LONG-002",
+      "theme": "when_the_week_feels_long",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may be keeping things going without having much energy left for celebration."
+    },
+    {
+      "id": "KDL-WHEN_THE_WEEK_FEELS_LONG-003",
+      "theme": "when_the_week_feels_long",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An ordinary lunch away from your desk can interrupt the feeling of endless tasks."
+    },
+    {
+      "id": "KDL-WHEN_THE_WEEK_FEELS_LONG-004",
+      "theme": "when_the_week_feels_long",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Try noticing one thing you have already handled rather than only what remains."
+    },
+    {
+      "id": "KDL-WHEN_THE_WEEK_FEELS_LONG-005",
+      "theme": "when_the_week_feels_long",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A difficult Wednesday does not require you to predict the rest of the week."
+    },
+    {
+      "id": "KDL-WHEN_THE_WEEK_FEELS_LONG-006",
+      "theme": "when_the_week_feels_long",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A task that can wait until tomorrow does not need to occupy your whole evening."
+    },
+    {
+      "id": "KDL-WHEN_THE_WEEK_FEELS_LONG-007",
+      "theme": "when_the_week_feels_long",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can care about your responsibilities while acknowledging that you are tired."
+    },
+    {
+      "id": "KDL-WHEN_THE_WEEK_FEELS_LONG-008",
+      "theme": "when_the_week_feels_long",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The work may be important, but so are the people and routines beyond it."
+    },
+    {
+      "id": "KDL-WHEN_THE_WEEK_FEELS_LONG-009",
+      "theme": "when_the_week_feels_long",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let one evening be uncomplicated if the days have been demanding."
+    },
+    {
+      "id": "KDL-WHEN_THE_WEEK_FEELS_LONG-010",
+      "theme": "when_the_week_feels_long",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Reaching the weekend does not have to be your only measure of a worthwhile week."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SHARE_GOOD_NEWS-001",
+      "theme": "when_you_share_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sharing good news can feel vulnerable when you are unsure how another person will respond."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SHARE_GOOD_NEWS-002",
+      "theme": "when_you_share_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are allowed to be pleased with something that matters deeply to you."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SHARE_GOOD_NEWS-003",
+      "theme": "when_you_share_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A small achievement can deserve a phone call to someone who understands its history."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SHARE_GOOD_NEWS-004",
+      "theme": "when_you_share_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not everyone will know what it took to reach this moment."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SHARE_GOOD_NEWS-005",
+      "theme": "when_you_share_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can celebrate without comparing your progress with anyone else's circumstances."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SHARE_GOOD_NEWS-006",
+      "theme": "when_you_share_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friend's happiness for you may make the news feel even more real."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SHARE_GOOD_NEWS-007",
+      "theme": "when_you_share_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If someone responds awkwardly, it need not diminish what happened."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SHARE_GOOD_NEWS-008",
+      "theme": "when_you_share_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Give yourself a moment to enjoy the news before planning what comes next."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SHARE_GOOD_NEWS-009",
+      "theme": "when_you_share_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A joyful update can be shared gently when someone else is having a difficult time."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SHARE_GOOD_NEWS-010",
+      "theme": "when_you_share_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let the people who care about you have the chance to celebrate alongside you."
+    }
+  ]
+}
