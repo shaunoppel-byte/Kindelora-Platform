@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 19",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-05",
+  "messages": [
+    {
+      "id": "KDL-WAITING_FOR_A_MEDICAL_RESULT-001",
+      "theme": "waiting_for_a_medical_result",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The hours before a result arrives can feel unusually long. You may choose what information to seek now and what can wait until you have someone beside you."
+    },
+    {
+      "id": "KDL-WAITING_FOR_A_MEDICAL_RESULT-002",
+      "theme": "waiting_for_a_medical_result",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An uncertain result is not a verdict on how well you have cared for yourself. Questions and next steps belong in a conversation with your clinician."
+    },
+    {
+      "id": "KDL-WAITING_FOR_A_MEDICAL_RESULT-003",
+      "theme": "waiting_for_a_medical_result",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your mind keeps rehearsing different outcomes, try writing down the questions you want answered. You need not solve them before the appointment."
+    },
+    {
+      "id": "KDL-WAITING_FOR_A_MEDICAL_RESULT-004",
+      "theme": "waiting_for_a_medical_result",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some people want company in a waiting room; others want privacy. You are allowed to say which would help without explaining every detail."
+    },
+    {
+      "id": "KDL-WAITING_FOR_A_MEDICAL_RESULT-005",
+      "theme": "waiting_for_a_medical_result",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can make a modest plan for the afternoon without pretending the uncertainty has disappeared. A meal, a ride home, or a quiet place can matter."
+    },
+    {
+      "id": "KDL-SUPPORTING_SOMEONE_AFTER_JOB_LOSS-001",
+      "theme": "supporting_someone_after_job_loss",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When someone loses work, advice may arrive before they have had space to describe what happened. Listening first can make the conversation less lonely."
+    },
+    {
+      "id": "KDL-SUPPORTING_SOMEONE_AFTER_JOB_LOSS-002",
+      "theme": "supporting_someone_after_job_loss",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A job ending can disrupt routines, confidence, and practical plans at once. Asking which part feels most urgent respects the person's own priorities."
+    },
+    {
+      "id": "KDL-SUPPORTING_SOMEONE_AFTER_JOB_LOSS-003",
+      "theme": "supporting_someone_after_job_loss",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Offering to review a résumé is different from insisting someone start applying immediately. Help works better when it can be accepted or declined."
+    },
+    {
+      "id": "KDL-SUPPORTING_SOMEONE_AFTER_JOB_LOSS-004",
+      "theme": "supporting_someone_after_job_loss",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you are supporting a friend financially, be clear about what you can give without resentment. Kindness can include an honest boundary."
+    },
+    {
+      "id": "KDL-SUPPORTING_SOMEONE_AFTER_JOB_LOSS-005",
+      "theme": "supporting_someone_after_job_loss",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A person's employment status tells you little about the effort they have already made. Treat their account of the experience with care."
+    },
+    {
+      "id": "KDL-BEING_THE_NEW_PERSON_IN_A_NEIGHBORHOOD-001",
+      "theme": "being_the_new_person_in_a_neighborhood",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "New streets can feel familiar on a map and unfamiliar under your feet. Finding one useful local place is a reasonable beginning."
+    },
+    {
+      "id": "KDL-BEING_THE_NEW_PERSON_IN_A_NEIGHBORHOOD-002",
+      "theme": "being_the_new_person_in_a_neighborhood",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every introduction turns into friendship. A brief, friendly exchange with a neighbour can still make the next encounter easier."
+    },
+    {
+      "id": "KDL-BEING_THE_NEW_PERSON_IN_A_NEIGHBORHOOD-003",
+      "theme": "being_the_new_person_in_a_neighborhood",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Learning how a neighbourhood works takes time, from rubbish collection to the quietest walking route. Asking ordinary questions is enough."
+    },
+    {
+      "id": "KDL-BEING_THE_NEW_PERSON_IN_A_NEIGHBORHOOD-004",
+      "theme": "being_the_new_person_in_a_neighborhood",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your previous home still feels like home, you do not need to rush that feeling away to appreciate where you live now."
+    },
+    {
+      "id": "KDL-BEING_THE_NEW_PERSON_IN_A_NEIGHBORHOOD-005",
+      "theme": "being_the_new_person_in_a_neighborhood",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some days settling in means unpacking a box; other days it means noticing the light through a different window. Both are part of arriving."
+    },
+    {
+      "id": "KDL-RECEIVING_CRITICISM_ABOUT_CREATIVE_WORK-001",
+      "theme": "receiving_criticism_about_creative_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A comment about something you made can land close to the heart. You can wait until the first sting passes before deciding what is useful."
+    },
+    {
+      "id": "KDL-RECEIVING_CRITICISM_ABOUT_CREATIVE_WORK-002",
+      "theme": "receiving_criticism_about_creative_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not all feedback is equally informed. Consider whether the person understands what you were trying to create before changing your direction."
+    },
+    {
+      "id": "KDL-RECEIVING_CRITICISM_ABOUT_CREATIVE_WORK-003",
+      "theme": "receiving_criticism_about_creative_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can thank someone for taking time to respond without agreeing with every suggestion. Appreciation and discernment can coexist."
+    },
+    {
+      "id": "KDL-RECEIVING_CRITICISM_ABOUT_CREATIVE_WORK-004",
+      "theme": "receiving_criticism_about_creative_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A revision may improve the work, but it need not erase the part that sounds like you. Keep track of what you wanted the piece to say."
+    },
+    {
+      "id": "KDL-RECEIVING_CRITICISM_ABOUT_CREATIVE_WORK-005",
+      "theme": "receiving_criticism_about_creative_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a critique is vague, asking for one concrete example may be more helpful than guessing at what went wrong."
+    },
+    {
+      "id": "KDL-MANAGING_AN_UNEXPECTED_EXPENSE-001",
+      "theme": "managing_an_unexpected_expense",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected bill can interrupt plans you were looking forward to. Disappointment is understandable even while you work through the numbers."
+    },
+    {
+      "id": "KDL-MANAGING_AN_UNEXPECTED_EXPENSE-002",
+      "theme": "managing_an_unexpected_expense",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Before agreeing to a payment arrangement, it may help to ask for the total cost and the dates in writing. Clarity can ease a difficult decision."
+    },
+    {
+      "id": "KDL-MANAGING_AN_UNEXPECTED_EXPENSE-003",
+      "theme": "managing_an_unexpected_expense",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Having to change a budget does not mean you were careless. Some costs arrive without asking whether the timing is convenient."
+    },
+    {
+      "id": "KDL-MANAGING_AN_UNEXPECTED_EXPENSE-004",
+      "theme": "managing_an_unexpected_expense",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you need to decline an outing because money is tight, a simple explanation is enough. Your financial details remain yours."
+    },
+    {
+      "id": "KDL-MANAGING_AN_UNEXPECTED_EXPENSE-005",
+      "theme": "managing_an_unexpected_expense",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "One practical phone call may be all you can manage today. Sorting an expense often happens through several small decisions."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FRIENDSHIP_WITH_DIFFERENT_ENERGY_LEVELS-001",
+      "theme": "navigating_a_friendship_with_different_energy_levels",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "One friend may enjoy long gatherings while another needs an early exit. Naming that difference can protect the time you do share."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FRIENDSHIP_WITH_DIFFERENT_ENERGY_LEVELS-002",
+      "theme": "navigating_a_friendship_with_different_energy_levels",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shorter visit is not necessarily a lesser one. Sometimes an hour of genuine attention is better than an evening spent depleted."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FRIENDSHIP_WITH_DIFFERENT_ENERGY_LEVELS-003",
+      "theme": "navigating_a_friendship_with_different_energy_levels",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you have cancelled plans often, acknowledging the inconvenience can matter alongside explaining your limits. Both experiences deserve room."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FRIENDSHIP_WITH_DIFFERENT_ENERGY_LEVELS-004",
+      "theme": "navigating_a_friendship_with_different_energy_levels",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can invite someone without making attendance a test of affection. An open invitation leaves space for their circumstances."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FRIENDSHIP_WITH_DIFFERENT_ENERGY_LEVELS-005",
+      "theme": "navigating_a_friendship_with_different_energy_levels",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Friendship can adapt through walks, voice notes, shared errands, or silence together. The shape of connection may change without losing its meaning."
+    }
+  ]
+}
