@@ -1,1 +1,20 @@
-.daily-message{position:relative;padding-right:70px}.daily-message .heart-save{right:14px;top:14px}.heart-save{border:1px solid #e9c6cf;border-radius:50%;background:#fffaf9;color:#c72e52;font-size:1.65rem;line-height:1;display:grid;place-items:center;width:48px;height:48px;box-shadow:0 4px 14px #512d5215;cursor:pointer}.heart-save:hover{background:#ffe6eb}.heart-save:focus-visible{outline:3px solid #87375a;outline-offset:3px}.heart-moment{margin:0 0 10px auto}.member-favourites-gate{width:min(92vw,500px);max-height:90vh;overflow:auto;border:1px solid #ebcfd9;border-radius:24px;background:#fffaf8;color:#4b3548;padding:0;box-shadow:0 24px 75px #301a3066}.member-favourites-gate::backdrop{background:#29152aab}.member-gate-inner{padding:clamp(24px,5vw,40px);position:relative}.member-gate-inner h2{font-size:clamp(1.7rem,5vw,2.4rem);margin:8px 0 18px}.member-gate-inner p{line-height:1.65}.member-gate-heart{font-size:2.8rem;color:#c72e52}.member-gate-close{position:absolute;right:12px;top:10px;width:44px;height:44px;border:0;background:transparent;font-size:2rem;color:#512d52}.member-gate-inner .actions{margin-bottom:0}@media(max-width:440px){.daily-message{padding-right:24px;padding-top:74px}}
+/* KINDELORA favourites: controls occupy their own row, never overlap message copy. */
+.daily-message{position:relative;padding:24px;margin-top:18px}
+.daily-message .heart-save{position:relative;inset:auto;margin:0 0 18px auto}
+.heart-save{appearance:none;display:grid;place-items:center;width:48px;height:48px;min-width:48px;min-height:48px;border:1px solid #755176;border-radius:50%;background:#512d52;color:#fff;box-shadow:0 4px 12px #512d5225;cursor:pointer;padding:10px;transition:background-color .16s ease,transform .16s ease}
+.heart-save svg{display:block;width:25px;height:25px;fill:none;stroke:currentColor;stroke-width:2.1;stroke-linecap:round;stroke-linejoin:round;overflow:visible}
+.heart-save:hover{background:#68416a;transform:translateY(-1px)}
+.heart-save:focus-visible{outline:3px solid #a45778;outline-offset:3px}
+.heart-save[aria-pressed="true"]{background:#fff;color:#c62d50;border-color:#c62d50}
+.heart-save[aria-pressed="true"] svg{fill:#c62d50;stroke:#c62d50}
+.heart-moment{position:relative;inset:auto;margin:0 0 12px auto}
+.member-favourites-gate{width:min(92vw,500px);max-height:90vh;overflow:auto;border:1px solid #ebcfd9;border-radius:24px;background:#fffaf8;color:#4b3548;padding:0;box-shadow:0 24px 75px #301a3066}
+.member-favourites-gate::backdrop{background:#29152aab}
+.member-gate-inner{padding:clamp(24px,5vw,40px);position:relative}
+.member-gate-inner h2{font-size:clamp(1.7rem,5vw,2.4rem);margin:8px 0 18px}
+.member-gate-inner p{line-height:1.65}
+.member-gate-heart{font-size:2.8rem;color:#c72e52}
+.member-gate-close{position:absolute;right:12px;top:10px;width:44px;height:44px;border:0;background:transparent;font-size:2rem;color:#512d52}
+.member-gate-inner .actions{margin-bottom:0}
+@media(max-width:440px){.daily-message{padding:24px}.daily-message .heart-save{margin-bottom:18px}}
+@media(prefers-reduced-motion:reduce){.heart-save{transition:none}.heart-save:hover{transform:none}}
