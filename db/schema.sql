@@ -48,3 +48,26 @@ CREATE TABLE IF NOT EXISTS payment_events (
  UNIQUE(provider,provider_event_key)
 );
 -- No active paid plan is seeded until founder approves currency and actual charges.
+
+-- Secure member access foundation: authenticated sessions never imply paid entitlements.
+CREATE TABLE IF NOT EXISTS members (
+ id TEXT PRIMARY KEY,
+ email_normalized TEXT NOT NULL UNIQUE,
+ password_salt TEXT NOT NULL,
+ password_hash TEXT NOT NULL,
+ email_verified_at TEXT,
+ disabled_at TEXT,
+ created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS member_sessions (
+ token_hash TEXT PRIMARY KEY,
+ member_id TEXT NOT NULL REFERENCES members(id) ON DELETE CASCADE,
+ expires_at TEXT NOT NULL,
+ created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS member_sessions_member_idx ON member_sessions(member_id);
+CREATE TABLE IF NOT EXISTS member_login_limits (
+ key_hash TEXT PRIMARY KEY,
+ failures INTEGER NOT NULL DEFAULT 0,
+ locked_until TEXT
+);
