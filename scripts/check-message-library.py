@@ -2,7 +2,7 @@
 import json, re
 from collections import Counter
 from pathlib import Path
-paths=[Path("content/message-library-v1.json"),Path("content/message-library-v2.json"),Path("content/message-library-v3.json"),Path("content/message-library-v4.json"),Path("content/message-library-v5.json"),Path("content/message-library-v6.json"),Path("content/message-library-v7.json"),Path("content/message-library-v8.json"),Path("content/message-library-v9.json"),Path("content/message-library-v10.json"),Path("content/message-library-v11.json"),Path("content/message-library-v12.json"),Path("content/message-library-v13.json"),Path("content/message-library-v14.json")]
+paths=[Path("content/message-library-v1.json"),Path("content/message-library-v2.json"),Path("content/message-library-v3.json"),Path("content/message-library-v4.json"),Path("content/message-library-v5.json"),Path("content/message-library-v6.json"),Path("content/message-library-v7.json"),Path("content/message-library-v8.json"),Path("content/message-library-v9.json"),Path("content/message-library-v10.json"),Path("content/message-library-v11.json"),Path("content/message-library-v12.json"),Path("content/message-library-v13.json"),Path("content/message-library-v14.json"),Path("content/message-library-v15.json")]
 collections=[json.loads(path.read_text(encoding="utf-8")) for path in paths]
 items=[msg for collection in collections for msg in collection["messages"]]
 assert len(collections[0]["messages"])==120, "First editorial batch count changed"
@@ -19,13 +19,14 @@ assert len(collections[10]["messages"])==200, "Expansion batch 11 must contain 2
 assert len(collections[11]["messages"])==200, "Expansion batch 12 must contain 200 messages"
 assert len(collections[12]["messages"])==100, "Expansion batch 13 must contain 100 messages"
 assert len(collections[13]["messages"])==20, "Expansion batch 14 must contain 20 messages"
-assert len(items)==2120, "Combined editorial library count mismatch"
+assert len(collections[14]["messages"])==20, "Expansion batch 15 must contain 20 messages"
+assert len(items)==2140, "Combined editorial library count mismatch"
 ids=[x["id"] for x in items]
 assert len(set(ids))==len(ids), "Duplicate message IDs"
 norm=[re.sub(r"[^a-z0-9]+"," ",x["text"].casefold()).strip() for x in items]
 assert len(set(norm))==len(norm), "Duplicate message text"
 themes=Counter(x["theme"] for x in items)
-assert len(themes)==197 and all(n>=5 for n in themes.values()), "Theme coverage insufficient"
+assert len(themes)==201 and all(n>=5 for n in themes.values()), "Theme coverage insufficient"
 for x in items:
     assert x["status"]=="editorial-review", "Do not silently publish unapproved content"
     assert x["audience"]=="all" and x["tone"]=="warm-grounded"
