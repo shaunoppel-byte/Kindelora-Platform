@@ -11,9 +11,9 @@ const seen={};
 function shuffle(items){const a=items.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function rotate(t){if(!seen[t]||!seen[t].length)seen[t]=shuffle(moments[t]);return seen[t].pop();}
 fetch("/message-catalogue.json",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("catalogue unavailable");return r.json();}).then(data=>{
- if(!data||!Array.isArray(data.messages)||data.messages.length!==2000)return;
+ if(!data||!Array.isArray(data.messages)||data.messages.length!==2100)return;
  const valid=data.messages.filter(m=>m&&typeof m.text==="string"&&m.text.length>=20&&m.text.length<=400&&typeof m.theme==="string");
- if(valid.length!==2000||new Set(valid.map(m=>m.id)).size!==2000)return;
+ if(valid.length!==2100||new Set(valid.map(m=>m.id)).size!==2100)return;
  // Classify all approved themes, including the new expansion, into four reader needs.
  const classify=(name)=>{
   const n=name.toLowerCase();
