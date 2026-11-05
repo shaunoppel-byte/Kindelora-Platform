@@ -18,3 +18,10 @@
 .member-gate-inner .actions{margin-bottom:0}
 @media(max-width:440px){.daily-message{padding:24px}.daily-message .heart-save{margin-bottom:18px}}
 @media(prefers-reduced-motion:reduce){.heart-save{transition:none}.heart-save:hover{transform:none}}
+
+/* Shared heart geometry for Plus feature cards and the subscriber gate. */
+.kindelora-heart-icon{display:block;width:1em;height:1em;fill:currentColor;stroke:none;overflow:visible}
+.heart-symbol{display:inline-flex;align-items:center;justify-content:center;color:#c72e52}
+.heart-symbol .kindelora-heart-icon{width:2rem;height:2rem}
+/* Hidden legacy free favourites must remain hidden regardless of section layout rules. */
+#favourites[hidden]{display:none!important}
