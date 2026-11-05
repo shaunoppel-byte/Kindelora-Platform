@@ -16,6 +16,28 @@
   collections.className="member-favourite-collections";
   collections.innerHTML='<p class="member-collections-heading">Your future Plus Favourites</p><div class="member-collection-tabs" role="tablist" aria-label="Favourite collections"><button type="button" role="tab" id="member-tab-messages" aria-controls="member-panel-messages" aria-selected="true" tabindex="0">Messages</button><button type="button" role="tab" id="member-tab-affirmations" aria-controls="member-panel-affirmations" aria-selected="false" tabindex="-1">Affirmations</button></div><div role="tabpanel" id="member-panel-messages" aria-labelledby="member-tab-messages"><p>Save meaningful messages here once secure KINDELORA Plus access is available.</p></div><div role="tabpanel" id="member-panel-affirmations" aria-labelledby="member-tab-affirmations" hidden><p>Save your favourite affirmations here once secure KINDELORA Plus access is available.</p></div>';
   dialog.querySelector(".member-gate-inner .actions").before(collections);
+  // Curated editorial previews only. Actual per-member favourites require authenticated storage.
+  const affirmationPanel=collections.querySelector("#member-panel-affirmations");
+  const intro=affirmationPanel.querySelector("p");
+  intro.textContent="Explore the premium visual direction below. These are editorial previews, not saved items. Your personal collection will appear here after secure member access launches.";
+  const gallery=document.createElement("div");
+  gallery.className="affirmation-favourites-preview";
+  const previews=[
+    {theme:"Self-worth",title:"I am enough",quote:"I am enough, exactly as I am. My worth is not defined by my past, my mistakes or others’ opinions."},
+    {theme:"Courage",title:"Ready for what comes next",quote:"I choose positivity, focus and action today. I am capable, resilient and ready for the opportunities ahead."},
+    {theme:"Gratitude",title:"The good in today",quote:"I am grateful for today, for the lessons it brings, for the growth it creates, and for the blessings already in my life."}
+  ];
+  previews.forEach(item=>{
+    const article=document.createElement("article");
+    article.className="affirmation-preview-card";
+    const eyebrow=document.createElement("span");eyebrow.className="affirmation-preview-theme";eyebrow.textContent=item.theme;
+    const title=document.createElement("h3");title.textContent=item.title;
+    const quote=document.createElement("blockquote");quote.textContent="“"+item.quote+"”";
+    const footer=document.createElement("a");footer.href="https://kindelora.pages.dev/";footer.textContent="KINDELORA · Visit website";footer.rel="noopener";
+    article.append(eyebrow,title,quote,footer);
+    gallery.append(article);
+  });
+  affirmationPanel.append(gallery);
   const tabs=Array.from(collections.querySelectorAll('[role="tab"]'));
   function selectCollection(kind,focus){
     tabs.forEach(tab=>{
@@ -68,9 +90,11 @@
   const gateDescription=dialog.querySelector(".member-gate-inner > p");
   const defaultTitle=gateTitle.textContent;
   const defaultDescription=gateDescription.textContent;
+  const gateFine=dialog.querySelector(".member-gate-inner > p.fine");
   document.querySelectorAll('[data-heart-type="affirmation"]').forEach(button=>{
     button.addEventListener("click",()=>{
       selectCollection("affirmations",false);
+      gateFine.textContent="Secure member access will be enabled after account and payment verification. This affirmation has not been saved and no payment will be taken.";
       gateTitle.textContent="Keep the affirmations that stay with you.";
       gateDescription.textContent="Love this affirmation? Your personal Affirmation Favourites collection is a planned KINDELORA Plus benefit. Secure saving will be available after account and membership verification.";
     });
@@ -78,6 +102,7 @@
   document.querySelectorAll('[data-heart]:not([data-heart-type="affirmation"])').forEach(button=>{
     button.addEventListener("click",()=>{
       selectCollection("messages",false);
+      gateFine.textContent="Secure member access will be enabled after account and payment verification. This message has not been saved and no payment will be taken.";
       gateTitle.textContent=defaultTitle;
       gateDescription.textContent=defaultDescription;
     });
