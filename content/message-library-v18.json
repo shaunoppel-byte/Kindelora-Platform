@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 18",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-05",
+  "messages": [
+    {
+      "id": "KDL-FINDING_A_PLACE_IN_A_NEW_TEAM-001",
+      "theme": "finding_a_place_in_a_new_team",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first weeks in a new team can be full of unfamiliar shorthand. Asking what a phrase means is a practical way to find your footing."
+    },
+    {
+      "id": "KDL-FINDING_A_PLACE_IN_A_NEW_TEAM-002",
+      "theme": "finding_a_place_in_a_new_team",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not knowing the history behind a decision does not mean you are behind. Context often arrives one conversation at a time."
+    },
+    {
+      "id": "KDL-FINDING_A_PLACE_IN_A_NEW_TEAM-003",
+      "theme": "finding_a_place_in_a_new_team",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may notice a different rhythm in this group. Observe what helps people work together before deciding how much of yourself to adjust."
+    },
+    {
+      "id": "KDL-FINDING_A_PLACE_IN_A_NEW_TEAM-004",
+      "theme": "finding_a_place_in_a_new_team",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A quiet contribution can still be useful. You do not have to compete with the loudest voice to offer a thoughtful question."
+    },
+    {
+      "id": "KDL-FINDING_A_PLACE_IN_A_NEW_TEAM-005",
+      "theme": "finding_a_place_in_a_new_team",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Belonging at work can grow through ordinary exchanges, not just impressive first impressions. Give the small moments some room."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_DELAYED_REPLY-001",
+      "theme": "navigating_a_delayed_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unanswered message can leave several possibilities open. The silence itself is not evidence that you have done something wrong."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_DELAYED_REPLY-002",
+      "theme": "navigating_a_delayed_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a reply matters for a decision, a clear follow-up can be kinder to both people than hours of guessing."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_DELAYED_REPLY-003",
+      "theme": "navigating_a_delayed_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone may need time to answer carefully. You can respect that space and still name when you need an update."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_DELAYED_REPLY-004",
+      "theme": "navigating_a_delayed_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you are waiting on news, it may help to choose one useful task that does not depend on the answer."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_DELAYED_REPLY-005",
+      "theme": "navigating_a_delayed_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Checking the screen again will not make another person ready sooner. Your attention deserves somewhere else to rest for a while."
+    },
+    {
+      "id": "KDL-SHARING_A_HOME_WITH_DIFFERENT_ROUTINES-001",
+      "theme": "sharing_a_home_with_different_routines",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Two people can care for the same home and disagree about what needs doing first. A specific conversation often helps more than a general complaint."
+    },
+    {
+      "id": "KDL-SHARING_A_HOME_WITH_DIFFERENT_ROUTINES-002",
+      "theme": "sharing_a_home_with_different_routines",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shared room can hold different needs for quiet, light and company. Naming those needs early can prevent small frustrations from hardening."
+    },
+    {
+      "id": "KDL-SHARING_A_HOME_WITH_DIFFERENT_ROUTINES-003",
+      "theme": "sharing_a_home_with_different_routines",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If household work feels invisible, describe the work itself rather than waiting for someone to notice every part of it."
+    },
+    {
+      "id": "KDL-SHARING_A_HOME_WITH_DIFFERENT_ROUTINES-004",
+      "theme": "sharing_a_home_with_different_routines",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An agreement that worked last season may need revisiting now. Changing routines is sometimes how people keep living well together."
+    },
+    {
+      "id": "KDL-SHARING_A_HOME_WITH_DIFFERENT_ROUTINES-005",
+      "theme": "sharing_a_home_with_different_routines",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every preference has to become a rule. Leave room for a few differences that do not harm anyone."
+    },
+    {
+      "id": "KDL-RECOVERING_FROM_A_SMALL_PUBLIC_MISTAKE-001",
+      "theme": "recovering_from_a_small_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A wrong word in a meeting can feel enormous afterward. Most people are also busy thinking about what they need to say next."
+    },
+    {
+      "id": "KDL-RECOVERING_FROM_A_SMALL_PUBLIC_MISTAKE-002",
+      "theme": "recovering_from_a_small_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Correcting a small error plainly may be enough. A long apology can sometimes make the moment harder to leave behind."
+    },
+    {
+      "id": "KDL-RECOVERING_FROM_A_SMALL_PUBLIC_MISTAKE-003",
+      "theme": "recovering_from_a_small_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you replay an awkward moment, try to notice what actually happened rather than adding an imagined audience to it."
+    },
+    {
+      "id": "KDL-RECOVERING_FROM_A_SMALL_PUBLIC_MISTAKE-004",
+      "theme": "recovering_from_a_small_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A mistake in front of others can teach you something without becoming the headline of your whole day."
+    },
+    {
+      "id": "KDL-RECOVERING_FROM_A_SMALL_PUBLIC_MISTAKE-005",
+      "theme": "recovering_from_a_small_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone else may remember your willingness to correct yourself more clearly than the original slip."
+    }
+  ]
+}
