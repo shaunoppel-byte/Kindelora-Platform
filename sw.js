@@ -1,4 +1,4 @@
-const CACHE="kindelora-launch-v13";
+const CACHE="kindelora-launch-v14";
 const ASSETS=["/","/index.html","/app.js","/member-favourites.js","/member-favourites.css","/message-catalogue.json","/manifest.webmanifest","/icon.svg","/sunrise-landscape.svg","/morning-light.svg","/calm-moment.svg","/reflect-grow.svg","/privacy.html","/terms.html"];
 self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",event=>{event.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith("kindelora-launch-")&&key!==CACHE).map(key=>caches.delete(key)))),self.clients.claim()]))});
