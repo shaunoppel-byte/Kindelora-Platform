@@ -36,5 +36,22 @@
       else window.location.hash="membership";
     });
   });
+  // Shared Plus gate for affirmation hearts; do not pretend that a save succeeded.
+  const gateTitle=dialog.querySelector("#member-favourites-title");
+  const gateDescription=dialog.querySelector(".member-gate-inner > p");
+  const defaultTitle=gateTitle.textContent;
+  const defaultDescription=gateDescription.textContent;
+  document.querySelectorAll('[data-heart-type="affirmation"]').forEach(button=>{
+    button.addEventListener("click",()=>{
+      gateTitle.textContent="Keep the affirmations that stay with you.";
+      gateDescription.textContent="Love this affirmation? Your personal Affirmation Favourites collection is a planned KINDELORA Plus benefit. Secure saving will be available after account and membership verification.";
+    });
+  });
+  document.querySelectorAll('[data-heart]:not([data-heart-type="affirmation"])').forEach(button=>{
+    button.addEventListener("click",()=>{
+      gateTitle.textContent=defaultTitle;
+      gateDescription.textContent=defaultDescription;
+    });
+  });
   // Existing free favourites were local-only; do not erase a visitor's saved data.
 })();
