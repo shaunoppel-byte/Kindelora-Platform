@@ -61,12 +61,40 @@ document.getElementById("daily-next").addEventListener("click",()=>{dailyIndex=(
 document.getElementById("daily-copy-button").addEventListener("click",async()=>{const [title,copy,action]=dailyMessages[dailyNeed][dailyIndex];try{await navigator.clipboard.writeText(title+"\n\n"+copy+"\n\nOne small step: "+action);document.getElementById("daily-feedback").textContent="Copied. Share this moment with someone who might need it.";}catch(e){document.getElementById("daily-feedback").textContent="Copy isn't available here. You can select the message above and copy it manually.";}});
 
 
+// Calendar handoff is initiated only by the guest; no account or tracking required.
+const checkinMessage="Just checking in with yourself. Did a small moment of kindness make today a little easier? Whatever today held, you deserve a gentle ending.";
+const checkinStatus=document.getElementById("calendar-status");
+function checkinDates(){
+ const now=new Date(),start=new Date(now);
+ start.setHours(Number(document.getElementById("checkin-time").value),0,0,0);
+ if(start<=now)start.setDate(start.getDate()+1);
+ return {start,end:new Date(start.getTime()+10*60000)};
+}
+const checkinUtc=d=>d.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"");
+function calendarOpen(provider){
+ const {start,end}=checkinDates(),title="A gentle KINDELORA check-in";
+ let url;
+ if(provider==="google"){
+   const params=new URLSearchParams({action:"TEMPLATE",text:title,dates:checkinUtc(start)+"/"+checkinUtc(end),details:checkinMessage});
+   url="https://calendar.google.com/calendar/render?"+params.toString();
+ }else{
+   const params=new URLSearchParams({path:"/calendar/action/compose",rru:"addevent",subject:title,startdt:start.toISOString(),enddt:end.toISOString(),body:checkinMessage});
+   url="https://outlook.office.com/calendar/0/deeplink/compose?"+params.toString();
+ }
+ const opened=window.open(url,"_blank","noopener,noreferrer");
+ checkinStatus.textContent=opened?"Your calendar has opened in a new tab. Review the time and select Save in your calendar to finish.":"If your calendar did not open, allow pop-ups for this site and try again. No reminder has been saved by KINDELORA.";
+}
+document.getElementById("calendar-google").addEventListener("click",()=>calendarOpen("google"));
+document.getElementById("calendar-outlook").addEventListener("click",()=>calendarOpen("outlook"));
 document.getElementById("calendar-checkin").addEventListener("click",()=>{
-const date=new Date(),start=new Date(date);start.setHours(18,0,0,0);if(start<=date)start.setDate(start.getDate()+1);const end=new Date(start.getTime()+10*60000);
-const format=d=>d.getFullYear()+String(d.getMonth()+1).padStart(2,"0")+String(d.getDate()).padStart(2,"0")+"T"+String(d.getHours()).padStart(2,"0")+String(d.getMinutes()).padStart(2,"0")+"00";
-const utc=d=>d.toISOString().replace(/[-:]/g,"").replace(/\.\d{3}/,"");
-const content=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//KINDELORA//Gentle Check-In//EN","BEGIN:VEVENT","UID:"+Date.now()+"-kindelora@kindelora.pages.dev","DTSTAMP:"+utc(new Date()),"DTSTART:"+format(start),"DTEND:"+format(end),"SUMMARY:A gentle KINDELORA check-in","DESCRIPTION:Just checking in with yourself. Did a small moment of kindness make today a little easier? Whatever today held, you deserve a gentle ending.","BEGIN:VALARM","TRIGGER:PT0M","ACTION:DISPLAY","DESCRIPTION:A gentle KINDELORA check-in","END:VALARM","END:VEVENT","END:VCALENDAR"].join("\r\n");
-const url=URL.createObjectURL(new Blob([content],{type:"text/calendar;charset=utf-8"}));const link=document.createElement("a");link.href=url;link.download="kindelora-gentle-checkin.ics";document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);document.getElementById("calendar-status").textContent="Calendar reminder prepared. Open the downloaded file and choose whether to add it to your calendar.";});
+ const {start,end}=checkinDates();
+ // UTC times avoid floating-local-time ambiguity across calendar apps.
+ const escapeIcs=s=>s.replace(/\\/g,"\\\\").replace(/\n/g,"\\n").replace(/,/g,"\\,").replace(/;/g,"\\;");
+ const content=["BEGIN:VCALENDAR","VERSION:2.0","PRODID:-//KINDELORA//Gentle Check-In//EN","BEGIN:VEVENT","UID:"+Date.now()+"-kindelora@kindelora.pages.dev","DTSTAMP:"+checkinUtc(new Date()),"DTSTART:"+checkinUtc(start),"DTEND:"+checkinUtc(end),"SUMMARY:A gentle KINDELORA check-in","DESCRIPTION:"+escapeIcs(checkinMessage),"BEGIN:VALARM","TRIGGER:PT0M","ACTION:DISPLAY","DESCRIPTION:A gentle KINDELORA check-in","END:VALARM","END:VEVENT","END:VCALENDAR",""].join("\r\n");
+ const url=URL.createObjectURL(new Blob([content],{type:"text/calendar;charset=utf-8"}));
+ const link=document.createElement("a");link.href=url;link.download="kindelora-gentle-checkin.ics";document.body.appendChild(link);link.click();link.remove();setTimeout(()=>URL.revokeObjectURL(url),1000);
+ checkinStatus.textContent="Calendar file downloaded. Open it from Downloads, review the event, then choose Add or Save in your calendar. Downloading alone does not create a reminder.";
+});
 
 
 const updateFrequency=document.getElementById("updates-frequency"),updateChannel=document.getElementById("updates-channel"),updateStatus=document.getElementById("updates-status");
