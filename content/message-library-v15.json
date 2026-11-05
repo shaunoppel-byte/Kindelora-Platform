@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 15",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-05",
+  "messages": [
+    {
+      "id": "KDL-BEING_MISUNDERSTOOD_AT_WORK-001",
+      "theme": "being_misunderstood_at_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being misunderstood in a meeting can linger long after everyone leaves. You may clarify your point without turning the conversation into a trial of your character."
+    },
+    {
+      "id": "KDL-BEING_MISUNDERSTOOD_AT_WORK-002",
+      "theme": "being_misunderstood_at_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A colleague's brief response may reflect their own crowded day. Before building a painful story around it, leave room for information you do not have."
+    },
+    {
+      "id": "KDL-BEING_MISUNDERSTOOD_AT_WORK-003",
+      "theme": "being_misunderstood_at_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your contribution was overlooked, it is reasonable to name the work you did. Visibility and humility do not have to compete."
+    },
+    {
+      "id": "KDL-BEING_MISUNDERSTOOD_AT_WORK-004",
+      "theme": "being_misunderstood_at_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the most useful follow-up is a calm written summary. It gives your thinking a fair chance without requiring you to win the room."
+    },
+    {
+      "id": "KDL-BEING_MISUNDERSTOOD_AT_WORK-005",
+      "theme": "being_misunderstood_at_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can respect someone's experience and still disagree with their conclusion. A difference of judgment need not become a measure of your worth."
+    },
+    {
+      "id": "KDL-CAREGIVING_WITHOUT_RECOGNITION-001",
+      "theme": "caregiving_without_recognition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Care often happens in small, repetitive tasks that nobody applauds. The absence of an audience does not make the work less real."
+    },
+    {
+      "id": "KDL-CAREGIVING_WITHOUT_RECOGNITION-002",
+      "theme": "caregiving_without_recognition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you feel impatient while helping someone you love, notice what support you may be missing. Affection does not erase exhaustion."
+    },
+    {
+      "id": "KDL-CAREGIVING_WITHOUT_RECOGNITION-003",
+      "theme": "caregiving_without_recognition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An hour arranged around another person's needs can leave little room for your own. Even a modest boundary may protect your ability to keep caring."
+    },
+    {
+      "id": "KDL-CAREGIVING_WITHOUT_RECOGNITION-004",
+      "theme": "caregiving_without_recognition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may grieve the freedom you had before becoming a caregiver and still cherish the person who needs you. Both feelings can belong."
+    },
+    {
+      "id": "KDL-CAREGIVING_WITHOUT_RECOGNITION-005",
+      "theme": "caregiving_without_recognition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When someone offers help, consider giving them a specific task rather than saying everything is fine. Shared responsibility begins with something concrete."
+    },
+    {
+      "id": "KDL-RETURNING_TO_CREATIVITY-001",
+      "theme": "returning_to_creativity",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first page after a long creative silence may feel unfamiliar. You are allowed to make something awkward before you make something you recognise."
+    },
+    {
+      "id": "KDL-RETURNING_TO_CREATIVITY-002",
+      "theme": "returning_to_creativity",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unfinished project can hold evidence of an earlier version of you. You may return to it, change its direction, or let it rest."
+    },
+    {
+      "id": "KDL-RETURNING_TO_CREATIVITY-003",
+      "theme": "returning_to_creativity",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Creative energy is not a debt you owe to your past ambitions. A small experiment today can be enough to reopen the conversation."
+    },
+    {
+      "id": "KDL-RETURNING_TO_CREATIVITY-004",
+      "theme": "returning_to_creativity",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If comparing your work to others makes you hesitate, spend a little time with the materials themselves. Curiosity often needs less judgment around it."
+    },
+    {
+      "id": "KDL-RETURNING_TO_CREATIVITY-005",
+      "theme": "returning_to_creativity",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to turn every enjoyable skill into an achievement. Making something privately can be a complete experience."
+    },
+    {
+      "id": "KDL-NAVIGATING_CHANGED_FRIENDSHIPS-001",
+      "theme": "navigating_changed_friendships",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friendship may become quieter without either person becoming unkind. You can miss its old rhythm while learning what is possible now."
+    },
+    {
+      "id": "KDL-NAVIGATING_CHANGED_FRIENDSHIPS-002",
+      "theme": "navigating_changed_friendships",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you are always the one initiating contact, it is fair to notice the imbalance. A gentle conversation can reveal more than silent resentment."
+    },
+    {
+      "id": "KDL-NAVIGATING_CHANGED_FRIENDSHIPS-003",
+      "theme": "navigating_changed_friendships",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Shared history deserves respect, but it does not require you to ignore how a friendship feels in the present."
+    },
+    {
+      "id": "KDL-NAVIGATING_CHANGED_FRIENDSHIPS-004",
+      "theme": "navigating_changed_friendships",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a friend enters a different season of life, connection may need a new shape. A shorter conversation can still carry genuine care."
+    },
+    {
+      "id": "KDL-NAVIGATING_CHANGED_FRIENDSHIPS-005",
+      "theme": "navigating_changed_friendships",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some friendships end without a clear argument or final explanation. You can honour what was good without inventing a villain to make sense of the loss."
+    }
+  ]
+}
