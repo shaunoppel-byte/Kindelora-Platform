@@ -49,5 +49,8 @@ jobs:
       - name: Validate curated message library
         run: python3 scripts/check-message-library.py
 
+      - name: Preflight 5000-message expansion when submitted
+        run: python3 scripts/check-5000-release.py
+
       - name: Run editorial similarity audit
         run: python3 scripts/audit-message-library.py
