@@ -1,0 +1,808 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA expansion editorial batch 8",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-05",
+  "messages": [
+    {
+      "id": "KDL-WHEN_A_FRIEND_MOVES_AWAY-001",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The distance may be new, but the friendship has already travelled through many ordinary days together."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_MOVES_AWAY-002",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Missing someone can arrive unexpectedly, in a place where you once expected to see them."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_MOVES_AWAY-003",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to pretend the goodbye was easy simply because the move is good for them."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_MOVES_AWAY-004",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A short message about an everyday moment can keep a friendship feeling wonderfully ordinary."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_MOVES_AWAY-005",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can be excited for their next chapter and sad about what changes for you."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_MOVES_AWAY-006",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first visit may feel different; allow yourselves time to find a new rhythm."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_MOVES_AWAY-007",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friendship does not need constant conversation to remain meaningful, though it does need care."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_MOVES_AWAY-008",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Tell them which small things you miss; those details often carry the most affection."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_MOVES_AWAY-009",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Make room for new friendships without treating them as replacements for an old one."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_MOVES_AWAY-010",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The places you shared may hold memories, even as you begin making new ones apart."
+    },
+    {
+      "id": "KDL-AFTER_AN_UNCOMFORTABLE_CONVERSATION-001",
+      "theme": "after_an_uncomfortable_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The conversation is over, but your thoughts may still be trying to catch up."
+    },
+    {
+      "id": "KDL-AFTER_AN_UNCOMFORTABLE_CONVERSATION-002",
+      "theme": "after_an_uncomfortable_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can wish you had phrased something differently without deciding the whole exchange was a failure."
+    },
+    {
+      "id": "KDL-AFTER_AN_UNCOMFORTABLE_CONVERSATION-003",
+      "theme": "after_an_uncomfortable_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An awkward silence does not necessarily mean the other person has stopped caring."
+    },
+    {
+      "id": "KDL-AFTER_AN_UNCOMFORTABLE_CONVERSATION-004",
+      "theme": "after_an_uncomfortable_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a clarification would help, you can offer it after emotions have settled."
+    },
+    {
+      "id": "KDL-AFTER_AN_UNCOMFORTABLE_CONVERSATION-005",
+      "theme": "after_an_uncomfortable_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the kindest next step is to leave room for both people to reflect."
+    },
+    {
+      "id": "KDL-AFTER_AN_UNCOMFORTABLE_CONVERSATION-006",
+      "theme": "after_an_uncomfortable_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may have spoken honestly and still feel shaken by how difficult it was."
+    },
+    {
+      "id": "KDL-AFTER_AN_UNCOMFORTABLE_CONVERSATION-007",
+      "theme": "after_an_uncomfortable_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Try not to turn one uncomfortable moment into a verdict on the entire relationship."
+    },
+    {
+      "id": "KDL-AFTER_AN_UNCOMFORTABLE_CONVERSATION-008",
+      "theme": "after_an_uncomfortable_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A conversation can be unfinished without requiring you to resolve it tonight."
+    },
+    {
+      "id": "KDL-AFTER_AN_UNCOMFORTABLE_CONVERSATION-009",
+      "theme": "after_an_uncomfortable_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Notice what you learned about your own needs, even if the outcome was uncertain."
+    },
+    {
+      "id": "KDL-AFTER_AN_UNCOMFORTABLE_CONVERSATION-010",
+      "theme": "after_an_uncomfortable_conversation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You deserve gentleness while you work out what, if anything, needs to be said next."
+    },
+    {
+      "id": "KDL-WHEN_A_CHILD_TRIES_AGAIN-001",
+      "theme": "when_a_child_tries_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The second attempt deserves attention, especially when the first one was disappointing."
+    },
+    {
+      "id": "KDL-WHEN_A_CHILD_TRIES_AGAIN-002",
+      "theme": "when_a_child_tries_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A child who returns to a challenge is showing something worth noticing beyond the result."
+    },
+    {
+      "id": "KDL-WHEN_A_CHILD_TRIES_AGAIN-003",
+      "theme": "when_a_child_tries_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Instead of asking whether they won, ask what felt different this time."
+    },
+    {
+      "id": "KDL-WHEN_A_CHILD_TRIES_AGAIN-004",
+      "theme": "when_a_child_tries_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Their frustration may need understanding before they are ready for encouragement."
+    },
+    {
+      "id": "KDL-WHEN_A_CHILD_TRIES_AGAIN-005",
+      "theme": "when_a_child_tries_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A quiet seat beside them can be more useful than a long lesson."
+    },
+    {
+      "id": "KDL-WHEN_A_CHILD_TRIES_AGAIN-006",
+      "theme": "when_a_child_tries_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Praise the care they put into practising, not only the moment others can applaud."
+    },
+    {
+      "id": "KDL-WHEN_A_CHILD_TRIES_AGAIN-007",
+      "theme": "when_a_child_tries_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A mistake made while learning is not a reason to withdraw your belief in them."
+    },
+    {
+      "id": "KDL-WHEN_A_CHILD_TRIES_AGAIN-008",
+      "theme": "when_a_child_tries_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let them tell the story of what happened before offering your version."
+    },
+    {
+      "id": "KDL-WHEN_A_CHILD_TRIES_AGAIN-009",
+      "theme": "when_a_child_tries_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Children notice when adults celebrate curiosity as warmly as achievement."
+    },
+    {
+      "id": "KDL-WHEN_A_CHILD_TRIES_AGAIN-010",
+      "theme": "when_a_child_tries_again",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your patience can make trying again feel safer than getting everything right."
+    },
+    {
+      "id": "KDL-FINDING_YOUR_PLACE_IN_A_GROUP-001",
+      "theme": "finding_your_place_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Entering a room where everyone knows each other can take more courage than it appears."
+    },
+    {
+      "id": "KDL-FINDING_YOUR_PLACE_IN_A_GROUP-002",
+      "theme": "finding_your_place_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can make a meaningful contribution without needing to dominate the conversation."
+    },
+    {
+      "id": "KDL-FINDING_YOUR_PLACE_IN_A_GROUP-003",
+      "theme": "finding_your_place_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "One genuine conversation may be a better beginning than trying to impress everyone."
+    },
+    {
+      "id": "KDL-FINDING_YOUR_PLACE_IN_A_GROUP-004",
+      "theme": "finding_your_place_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is all right to observe the rhythm of a group before joining in."
+    },
+    {
+      "id": "KDL-FINDING_YOUR_PLACE_IN_A_GROUP-005",
+      "theme": "finding_your_place_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being new does not mean you have nothing valuable to offer."
+    },
+    {
+      "id": "KDL-FINDING_YOUR_PLACE_IN_A_GROUP-006",
+      "theme": "finding_your_place_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Look for the person who makes space for others; they may help you find your footing."
+    },
+    {
+      "id": "KDL-FINDING_YOUR_PLACE_IN_A_GROUP-007",
+      "theme": "finding_your_place_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can belong without sharing every opinion or interest in the room."
+    },
+    {
+      "id": "KDL-FINDING_YOUR_PLACE_IN_A_GROUP-008",
+      "theme": "finding_your_place_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some friendships begin with a practical question rather than a memorable introduction."
+    },
+    {
+      "id": "KDL-FINDING_YOUR_PLACE_IN_A_GROUP-009",
+      "theme": "finding_your_place_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Give yourself more than one gathering before deciding whether a place feels right."
+    },
+    {
+      "id": "KDL-FINDING_YOUR_PLACE_IN_A_GROUP-010",
+      "theme": "finding_your_place_in_a_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The right company makes room for your quieter days as well as your brightest ones."
+    },
+    {
+      "id": "KDL-WHEN_HOME_FEELS_DIFFERENT-001",
+      "theme": "when_home_feels_different",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar room can feel strange after something important in your life has changed."
+    },
+    {
+      "id": "KDL-WHEN_HOME_FEELS_DIFFERENT-002",
+      "theme": "when_home_feels_different",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may miss an old routine even when you know it could not stay the same."
+    },
+    {
+      "id": "KDL-WHEN_HOME_FEELS_DIFFERENT-003",
+      "theme": "when_home_feels_different",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Try changing one small corner of your space to reflect who you are now."
+    },
+    {
+      "id": "KDL-WHEN_HOME_FEELS_DIFFERENT-004",
+      "theme": "when_home_feels_different",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A new household rhythm often takes longer to settle than anyone expects."
+    },
+    {
+      "id": "KDL-WHEN_HOME_FEELS_DIFFERENT-005",
+      "theme": "when_home_feels_different",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can hold affection for the way things were without refusing what comes next."
+    },
+    {
+      "id": "KDL-WHEN_HOME_FEELS_DIFFERENT-006",
+      "theme": "when_home_feels_different",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes home is the sound of someone making tea in the next room."
+    },
+    {
+      "id": "KDL-WHEN_HOME_FEELS_DIFFERENT-007",
+      "theme": "when_home_feels_different",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the silence feels unfamiliar, a gentle ritual may help mark the evening."
+    },
+    {
+      "id": "KDL-WHEN_HOME_FEELS_DIFFERENT-008",
+      "theme": "when_home_feels_different",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to fill every empty space immediately."
+    },
+    {
+      "id": "KDL-WHEN_HOME_FEELS_DIFFERENT-009",
+      "theme": "when_home_feels_different",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A home can carry several chapters of your life without looking the same in each."
+    },
+    {
+      "id": "KDL-WHEN_HOME_FEELS_DIFFERENT-010",
+      "theme": "when_home_feels_different",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Allow yourself to build comfort gradually, through ordinary acts repeated with care."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_HELP-001",
+      "theme": "when_you_receive_help",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Accepting help can feel unfamiliar when you are used to being the one who offers it."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_HELP-002",
+      "theme": "when_you_receive_help",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone's kindness does not make you less capable or less deserving of respect."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_HELP-003",
+      "theme": "when_you_receive_help",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can say thank you without promising to repay the gesture immediately."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_HELP-004",
+      "theme": "when_you_receive_help",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Let the person helping know which part made the greatest difference."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_HELP-005",
+      "theme": "when_you_receive_help",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being cared for may bring up feelings you did not expect; there is room for those too."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_HELP-006",
+      "theme": "when_you_receive_help",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A practical offer can ease a difficult day without fixing everything around it."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_HELP-007",
+      "theme": "when_you_receive_help",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are allowed to receive generosity without explaining every detail of your circumstances."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_HELP-008",
+      "theme": "when_you_receive_help",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes a shared task makes an overwhelming responsibility feel less lonely."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_HELP-009",
+      "theme": "when_you_receive_help",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Notice how it feels when another person chooses to show up for you."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_HELP-010",
+      "theme": "when_you_receive_help",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The next time you offer help, you may remember the dignity of being asked gently."
+    },
+    {
+      "id": "KDL-WHEN_A_PROJECT_ENDS-001",
+      "theme": "when_a_project_ends",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The final task may be finished before the meaning of the work has fully settled."
+    },
+    {
+      "id": "KDL-WHEN_A_PROJECT_ENDS-002",
+      "theme": "when_a_project_ends",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can feel proud of what you completed and tired from what it required."
+    },
+    {
+      "id": "KDL-WHEN_A_PROJECT_ENDS-003",
+      "theme": "when_a_project_ends",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Take a moment to thank the people whose effort was easy to overlook."
+    },
+    {
+      "id": "KDL-WHEN_A_PROJECT_ENDS-004",
+      "theme": "when_a_project_ends",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An ending is a chance to notice which skills you carried into unfamiliar territory."
+    },
+    {
+      "id": "KDL-WHEN_A_PROJECT_ENDS-005",
+      "theme": "when_a_project_ends",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every valuable contribution appears in the final presentation."
+    },
+    {
+      "id": "KDL-WHEN_A_PROJECT_ENDS-006",
+      "theme": "when_a_project_ends",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the result was imperfect, it can still contain work worth recognising."
+    },
+    {
+      "id": "KDL-WHEN_A_PROJECT_ENDS-007",
+      "theme": "when_a_project_ends",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may need a little space before you feel excited about the next challenge."
+    },
+    {
+      "id": "KDL-WHEN_A_PROJECT_ENDS-008",
+      "theme": "when_a_project_ends",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Write down one lesson while the details are still fresh in your mind."
+    },
+    {
+      "id": "KDL-WHEN_A_PROJECT_ENDS-009",
+      "theme": "when_a_project_ends",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A team can celebrate a finish without pretending the journey was simple."
+    },
+    {
+      "id": "KDL-WHEN_A_PROJECT_ENDS-010",
+      "theme": "when_a_project_ends",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The work has ended; you are allowed to let your attention return to other parts of life."
+    },
+    {
+      "id": "KDL-WAITING_FOR_SOMEONE_TO_REPLY-001",
+      "theme": "waiting_for_someone_to_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unanswered message can leave more room for worry than the facts justify."
+    },
+    {
+      "id": "KDL-WAITING_FOR_SOMEONE_TO_REPLY-002",
+      "theme": "waiting_for_someone_to_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The time between sending and hearing back does not tell you what another person feels."
+    },
+    {
+      "id": "KDL-WAITING_FOR_SOMEONE_TO_REPLY-003",
+      "theme": "waiting_for_someone_to_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can put your phone down without pretending the reply does not matter."
+    },
+    {
+      "id": "KDL-WAITING_FOR_SOMEONE_TO_REPLY-004",
+      "theme": "waiting_for_someone_to_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A delayed response may have many explanations that are not about your worth."
+    },
+    {
+      "id": "KDL-WAITING_FOR_SOMEONE_TO_REPLY-005",
+      "theme": "waiting_for_someone_to_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Try giving your attention to something that can actually receive it right now."
+    },
+    {
+      "id": "KDL-WAITING_FOR_SOMEONE_TO_REPLY-006",
+      "theme": "waiting_for_someone_to_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is reasonable to want clarity, especially when the conversation matters to you."
+    },
+    {
+      "id": "KDL-WAITING_FOR_SOMEONE_TO_REPLY-007",
+      "theme": "waiting_for_someone_to_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the question is urgent, a respectful follow-up may be more helpful than guessing."
+    },
+    {
+      "id": "KDL-WAITING_FOR_SOMEONE_TO_REPLY-008",
+      "theme": "waiting_for_someone_to_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your mind may invent a difficult story while the other person is simply occupied."
+    },
+    {
+      "id": "KDL-WAITING_FOR_SOMEONE_TO_REPLY-009",
+      "theme": "waiting_for_someone_to_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Waiting is uncomfortable; you do not need to criticise yourself for noticing it."
+    },
+    {
+      "id": "KDL-WAITING_FOR_SOMEONE_TO_REPLY-010",
+      "theme": "waiting_for_someone_to_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Whatever the reply brings, you can meet it when it arrives rather than rehearsing every possibility."
+    },
+    {
+      "id": "KDL-WHEN_YOU_MISS_A_SMALL_TRADITION-001",
+      "theme": "when_you_miss_a_small_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes what you miss most is a tiny ritual nobody thought to photograph."
+    },
+    {
+      "id": "KDL-WHEN_YOU_MISS_A_SMALL_TRADITION-002",
+      "theme": "when_you_miss_a_small_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar meal or song can bring an old season close for a moment."
+    },
+    {
+      "id": "KDL-WHEN_YOU_MISS_A_SMALL_TRADITION-003",
+      "theme": "when_you_miss_a_small_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can recreate a tradition differently without diminishing the way it used to be."
+    },
+    {
+      "id": "KDL-WHEN_YOU_MISS_A_SMALL_TRADITION-004",
+      "theme": "when_you_miss_a_small_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The person who started a ritual may have left you more than they realised."
+    },
+    {
+      "id": "KDL-WHEN_YOU_MISS_A_SMALL_TRADITION-005",
+      "theme": "when_you_miss_a_small_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Tell someone the story behind the custom before its details begin to fade."
+    },
+    {
+      "id": "KDL-WHEN_YOU_MISS_A_SMALL_TRADITION-006",
+      "theme": "when_you_miss_a_small_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A new version might feel awkward at first, and still become meaningful over time."
+    },
+    {
+      "id": "KDL-WHEN_YOU_MISS_A_SMALL_TRADITION-007",
+      "theme": "when_you_miss_a_small_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "There is no rule that a tradition must remain unchanged to be worth keeping."
+    },
+    {
+      "id": "KDL-WHEN_YOU_MISS_A_SMALL_TRADITION-008",
+      "theme": "when_you_miss_a_small_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An ordinary date can carry a surprising amount of memory."
+    },
+    {
+      "id": "KDL-WHEN_YOU_MISS_A_SMALL_TRADITION-009",
+      "theme": "when_you_miss_a_small_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may want to honour the past privately rather than make an occasion of it."
+    },
+    {
+      "id": "KDL-WHEN_YOU_MISS_A_SMALL_TRADITION-010",
+      "theme": "when_you_miss_a_small_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "What mattered about the ritual may be the care it gave everyone permission to show."
+    },
+    {
+      "id": "KDL-MAKING_TIME_FOR_SOMEONE-001",
+      "theme": "making_time_for_someone",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unhurried conversation can feel like a gift in a crowded week."
+    },
+    {
+      "id": "KDL-MAKING_TIME_FOR_SOMEONE-002",
+      "theme": "making_time_for_someone",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need a special occasion to ask someone how they are really doing."
+    },
+    {
+      "id": "KDL-MAKING_TIME_FOR_SOMEONE-003",
+      "theme": "making_time_for_someone",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Putting your phone aside for a few minutes can make your attention unmistakable."
+    },
+    {
+      "id": "KDL-MAKING_TIME_FOR_SOMEONE-004",
+      "theme": "making_time_for_someone",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A brief visit made with care may matter more than an elaborate plan postponed indefinitely."
+    },
+    {
+      "id": "KDL-MAKING_TIME_FOR_SOMEONE-005",
+      "theme": "making_time_for_someone",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Ask what kind of company they would enjoy instead of guessing what they need."
+    },
+    {
+      "id": "KDL-MAKING_TIME_FOR_SOMEONE-006",
+      "theme": "making_time_for_someone",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Time together can be quiet; not every shared hour needs an activity."
+    },
+    {
+      "id": "KDL-MAKING_TIME_FOR_SOMEONE-007",
+      "theme": "making_time_for_someone",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone may remember that you came, long after forgetting what you said."
+    },
+    {
+      "id": "KDL-MAKING_TIME_FOR_SOMEONE-008",
+      "theme": "making_time_for_someone",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An invitation can be generous without asking the other person to rearrange their life."
+    },
+    {
+      "id": "KDL-MAKING_TIME_FOR_SOMEONE-009",
+      "theme": "making_time_for_someone",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can protect time for people you love without making every meeting perfect."
+    },
+    {
+      "id": "KDL-MAKING_TIME_FOR_SOMEONE-010",
+      "theme": "making_time_for_someone",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The smallest shared routines often become the memories that feel most like belonging."
+    }
+  ]
+}
