@@ -11,7 +11,7 @@ import qrcode
 from qrcode.constants import ERROR_CORRECT_H
 
 ROOT=Path(__file__).resolve().parents[1]
-URL="https://kindelora.pages.dev/#membership"
+URL="https://kindelora.pages.dev/"
 W,H=2400,3000
 
 def load_approved(ident):
