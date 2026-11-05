@@ -48,7 +48,7 @@ jobs:
         run: python3 scripts/check-launch-dom.py
       - name: Check member access fail-closed security invariants
         run: |
-          node --check functions/api/member/me.js
+          for file in functions/api/member/*.js; do node --check "$file"; done
           python3 scripts/check-member-access.py
       - name: Validate curated message library
         run: python3 scripts/check-message-library.py
