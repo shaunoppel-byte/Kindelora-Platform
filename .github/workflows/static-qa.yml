@@ -22,6 +22,7 @@ jobs:
         run: |
           node --check app.js
           node --check sw.js
+          node --check member-favourites.js
       - name: Validate local HTML fragment links
         run: |
           python3 - <<'PY'
@@ -41,6 +42,8 @@ jobs:
           print(f'Validated {len(p.links)} fragment links')
           PY
 
+      - name: Verify heart icon and subscription gate consistency
+        run: python3 scripts/check-heart-consistency.py
       - name: Check interactive DOM targets
         run: python3 scripts/check-launch-dom.py
       - name: Validate curated message library
