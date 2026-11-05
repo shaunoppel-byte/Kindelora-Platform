@@ -195,6 +195,54 @@
       "tone": "warm-grounded",
       "status": "editorial-review",
       "text": "An unexpected free hour can feel empty rather than liberating. You are allowed to spend it simply, without turning disruption into a productivity challenge."
+    },
+    {
+      "id": "KDL-LIVING_WITH_UNCERTAINTY_AFTER_GOOD_NEWS-005",
+      "theme": "living_with_uncertainty_after_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can share a small celebration with someone you trust without making a prediction about what comes next. Today has its own meaning."
+    },
+    {
+      "id": "KDL-SHARING_SPACE_WITH_DIFFERENT_NEEDS-005",
+      "theme": "sharing_space_with_different_needs",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A practical agreement about lights, noise or shared chores may feel unromantic, but ordinary clarity can protect the warmth between people."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FIRST_DAY_BACK-005",
+      "theme": "navigating_a_first_day_back",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your pace is slower than before, it may help to tell the right person what is realistic this week. Returning does not require concealing your limits."
+    },
+    {
+      "id": "KDL-RECEIVING_HELP_WITHOUT_OWING_A_STORY-005",
+      "theme": "receiving_help_without_owing_a_story",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Help that comes with pressure or conditions may not feel safe to accept. You are allowed to consider the terms before saying yes."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_UNCELEBRATED_PROGRESS-005",
+      "theme": "making_room_for_uncelebrated_progress",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A week without a dramatic breakthrough can still contain better questions, steadier boundaries and one conversation handled with care."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_CHANGES_AT_THE_LAST_MINUTE-005",
+      "theme": "when_a_plan_changes_at_the_last_minute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When the change affects other people, a prompt update and a clear next step can show respect even when the news itself is unwelcome."
     }
   ]
 }
