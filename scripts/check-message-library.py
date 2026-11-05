@@ -39,5 +39,5 @@ assert catalogue["count"]==2100 and len(catalogue["messages"])==2100, "Public ca
 assert {x["id"] for x in catalogue["messages"]}==set(x["id"] for x in items[:2100]), "Public catalogue baseline mismatch"
 source_by_id={m["id"]:m["text"] for m in items}
 assert all(x["text"]==source_by_id[x["id"]] for x in catalogue["messages"]), "Public catalogue content mismatch"
-assert not ({x["id"] for x in collections[13]["messages"]+collections[14]["messages"]+collections[15]["messages"]} & {x["id"] for x in catalogue["messages"]}), "Unreviewed batch 14 must not be published"
+assert not ({x["id"] for x in collections[13]["messages"]+collections[14]["messages"]+collections[15]["messages"]+collections[16]["messages"]} & {x["id"] for x in catalogue["messages"]}), "Unreviewed batches 14-17 must not be published"
 print(f"PASS: {len(items)} unique draft messages across {len(themes)} themes; all marked for editorial review.")
