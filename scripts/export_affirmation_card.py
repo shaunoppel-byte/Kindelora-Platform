@@ -11,7 +11,7 @@ import qrcode
 from qrcode.constants import ERROR_CORRECT_H
 
 ROOT=Path(__file__).resolve().parents[1]
-URL="https://kindelora.pages.dev/"
+URL="https://kindelora.pages.dev/#membership"
 W,H=2400,3000
 
 def load_approved(ident):
@@ -70,7 +70,7 @@ def build(ident,photo,out,license_ref):
 {quote}
 <rect x="130" y="2600" width="2140" height="3" fill="#ffe2b6" opacity=".7"/>
 <text x="135" y="2750" fill="#ffffff" font-size="51" font-family="Arial,sans-serif">A little kindness can change a day.</text>
-<text x="135" y="2825" fill="#ffe2b6" font-size="38" font-family="Arial,sans-serif">kindelora.pages.dev</text>
+<text x="135" y="2825" fill="#ffe2b6" font-size="38" font-family="Arial,sans-serif">kindelora.pages.dev/#membership</text>
 <rect x="1950" y="2640" width="305" height="305" rx="18" fill="#ffffff"/>
 {qr_svg(1974,2664,257)}
 </svg>'''
