@@ -11,10 +11,23 @@ const seen={};
 function shuffle(items){const a=items.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]];}return a;}
 function rotate(t){if(!seen[t]||!seen[t].length)seen[t]=shuffle(moments[t]);return seen[t].pop();}
 fetch("/message-catalogue.json",{cache:"no-cache"}).then(r=>{if(!r.ok)throw Error("catalogue unavailable");return r.json();}).then(data=>{
- if(!data||!Array.isArray(data.messages)||data.messages.length!==1000)return;
+ if(!data||!Array.isArray(data.messages)||data.messages.length!==2000)return;
  const valid=data.messages.filter(m=>m&&typeof m.text==="string"&&m.text.length>=20&&m.text.length<=400&&typeof m.theme==="string");
- if(valid.length!==1000||new Set(valid.map(m=>m.id)).size!==1000)return;
- for(const [t,themes] of Object.entries(mapping)){const pool=valid.filter(m=>themes.includes(m.theme)).map(m=>m.text);if(pool.length>=10){moments[t]=pool;seen[t]=shuffle(pool);}}
+ if(valid.length!==2000||new Set(valid.map(m=>m.id)).size!==2000)return;
+ // Classify all approved themes, including the new expansion, into four reader needs.
+ const classify=(name)=>{
+  const n=name.toLowerCase();
+  if(/grat|thank|friend|family|parent|child|sibling|neigh|kind|share|guest|host|someone|loved|letter|celebrat|proud|gift|reconnect|meal|community|appreciat|support|listen|tradition|belong|remember|relationship/.test(n))return "gratitude";
+  if(/courage|new|first|begin|learn|interview|project|goal|decision|choice|drive|responsib|mistake|opportun|game|perform|disagree|apolog|try|progress|work|career|meeting|challenge|change_your_mind/.test(n))return "courage";
+  if(/calm|quiet|rest|weather|garden|plant|sunrise|evening|morning|pause|break|overwhelm|energy|wait|home|routine|time|week|busy|nature|still|focus|sleep|holiday|book|song|photo|journey|hobby|recipe/.test(n))return "calm";
+  return "hope";
+ };
+ const themeToNeed=new Map();
+ for(const [need,themes] of Object.entries(mapping))for(const t of themes)themeToNeed.set(t,need);
+ for(const need of Object.keys(mapping)){
+  const pool=valid.filter(m=>(themeToNeed.get(m.theme)||classify(m.theme))===need).map(m=>m.text);
+  if(pool.length>=10){moments[need]=pool;seen[need]=shuffle(pool);}
+ }
  const current=document.getElementById("moment");if(current)current.textContent=rotate(theme);
  document.querySelectorAll("[data-theme]").forEach(b=>b.addEventListener("click",()=>{const t=b.dataset.theme;if(moments[t]&&moments[t].length>3)document.getElementById("moment").textContent=rotate(t);}));
  document.getElementById("next-moment")?.addEventListener("click",()=>{if(moments[theme].length>3)document.getElementById("moment").textContent=rotate(theme);});
