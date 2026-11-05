@@ -29,4 +29,8 @@ for x in items:
     assert x["audience"]=="all" and x["tone"]=="warm-grounded"
     assert 8<=len(x["text"].split())<=40, f"Review message length: {x['id']}"
     assert not re.search(r"\b(guaranteed|cure|always be happy|just be positive)\b",x["text"],re.I),f"Unsafe claim: {x['id']}"
+catalogue=json.loads(Path("message-catalogue.json").read_text(encoding="utf-8"))
+assert catalogue["count"]==2000 and len(catalogue["messages"])==2000, "Public catalogue count mismatch"
+assert {x["id"] for x in catalogue["messages"]}==set(ids), "Public catalogue missing approved messages"
+assert all(x["text"]==next(m["text"] for m in items if m["id"]==x["id"]) for x in catalogue["messages"]), "Public catalogue content mismatch"
 print(f"PASS: {len(items)} unique draft messages across {len(themes)} themes; all marked for editorial review.")
