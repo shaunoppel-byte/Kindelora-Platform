@@ -71,3 +71,12 @@ CREATE TABLE IF NOT EXISTS member_login_limits (
  failures INTEGER NOT NULL DEFAULT 0,
  locked_until TEXT
 );
+
+-- A trusted out-of-band invitation is required before registration; no self-asserted email verification.
+CREATE TABLE IF NOT EXISTS member_invitations (
+ token_hash TEXT PRIMARY KEY,
+ email_normalized TEXT NOT NULL,
+ expires_at TEXT NOT NULL,
+ consumed_at TEXT,
+ created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
