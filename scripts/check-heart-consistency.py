@@ -4,7 +4,10 @@ import re
 html=Path("index.html").read_text()
 js=Path("member-favourites.js").read_text()
 css=Path("member-favourites.css").read_text()
-assert html.count('class="heart-save')==2, "Expected two message heart icons"
+assert html.count('class="heart-save')==3, "Expected two message hearts and one affirmation heart"
+assert 'data-heart-type="affirmation"' in html, "Affirmation heart must have distinct collection type"
+assert 'id="member-tab-messages"' in js and 'id="member-tab-affirmations"' in js
+assert 'selectCollection("affirmations",false)' in js and 'selectCollection("messages",false)' in js
 assert html.count('data-heart="moment"')==2 and 'data-heart="daily"' in html
 assert html.count('class="symbol heart-symbol"')==2, "Plus hearts must use standard SVG"
 assert not re.search(r'<div class="symbol" aria-hidden="true">[♥♡]</div>',html)

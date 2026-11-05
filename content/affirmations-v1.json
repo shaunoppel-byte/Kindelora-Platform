@@ -1,0 +1,284 @@
+{
+  "version": "0.1-editorial",
+  "status": "script-review-only",
+  "publication": "not-approved",
+  "description": "Original candidate affirmation scripts. Not licensed voice recordings, not paid content, not production-ready.",
+  "voiceDirection": {
+    "pace": "unhurried, conversational",
+    "tone": "warm, calm, non-performative",
+    "pauses": "brief natural pauses between sentences",
+    "avoid": "overpromising, medical claims, synthetic dramatic emphasis"
+  },
+  "scripts": [
+    {
+      "id": "calm-01",
+      "theme": "Inner peace",
+      "text": "I can soften my shoulders and release the need to solve everything at once. This moment is enough for one gentle breath.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "calm-02",
+      "theme": "Inner peace",
+      "text": "I can make room for quiet without earning it first. Rest is a valid part of my day.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "calm-03",
+      "theme": "Inner peace",
+      "text": "I can notice what is here, without judging what I feel. I am allowed to move at a human pace.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "calm-04",
+      "theme": "Inner peace",
+      "text": "I can return to the present, one breath at a time. There is no need to rush this moment.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "calm-05",
+      "theme": "Inner peace",
+      "text": "I can choose a gentler pace today. Small pauses can help me find my next step.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "confidence-01",
+      "theme": "Confidence",
+      "text": "I can begin before I feel completely ready. Every thoughtful attempt helps me learn.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "confidence-02",
+      "theme": "Confidence",
+      "text": "My ideas deserve space. I can speak with kindness and confidence, even when my voice shakes.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "confidence-03",
+      "theme": "Confidence",
+      "text": "I can recognise my progress without comparing it to anyone else's journey.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "confidence-04",
+      "theme": "Confidence",
+      "text": "I have handled uncertain days before. Today, I can focus on the next useful step.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "confidence-05",
+      "theme": "Confidence",
+      "text": "I can learn from a mistake without letting it define who I am.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "gratitude-01",
+      "theme": "Gratitude",
+      "text": "I can notice one ordinary thing that brought me comfort today. Small moments count.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "gratitude-02",
+      "theme": "Gratitude",
+      "text": "I can appreciate what is here while still making room for what I hope will change.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "gratitude-03",
+      "theme": "Gratitude",
+      "text": "I can thank myself for the effort I made today, even if the day felt unfinished.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "gratitude-04",
+      "theme": "Gratitude",
+      "text": "I can notice kindness in small gestures and carry a little of it forward.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "gratitude-05",
+      "theme": "Gratitude",
+      "text": "I can be grateful for a moment of stillness, without needing the whole day to be perfect.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "selfworth-01",
+      "theme": "Self-worth",
+      "text": "My worth is not measured by how much I accomplish today. I deserve respect and care.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "selfworth-02",
+      "theme": "Self-worth",
+      "text": "I can speak to myself with the same warmth I would offer someone I love.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "selfworth-03",
+      "theme": "Self-worth",
+      "text": "I am allowed to set boundaries and still be a caring person.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "selfworth-04",
+      "theme": "Self-worth",
+      "text": "I can celebrate what makes me different without needing anyone else's permission.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "selfworth-05",
+      "theme": "Self-worth",
+      "text": "I deserve moments of joy and rest, not only moments of productivity.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "motivation-01",
+      "theme": "Motivation",
+      "text": "I can start small. One action today can help me build momentum for tomorrow.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "motivation-02",
+      "theme": "Motivation",
+      "text": "Progress can be quiet. I can honour each step without rushing to the finish.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "motivation-03",
+      "theme": "Motivation",
+      "text": "I can try again with what I have learned. A fresh start does not require a perfect plan.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "motivation-04",
+      "theme": "Motivation",
+      "text": "I can choose one meaningful priority and give it my attention.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "motivation-05",
+      "theme": "Motivation",
+      "text": "My effort matters, even when the outcome takes time to appear.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "rest-01",
+      "theme": "Rest and sleep",
+      "text": "I can set down today's unfinished tasks for now. Tomorrow can hold tomorrow's work.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "rest-02",
+      "theme": "Rest and sleep",
+      "text": "I can let my breathing settle and allow this moment to be quiet.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "rest-03",
+      "theme": "Rest and sleep",
+      "text": "I do not need to replay every conversation tonight. I can return to what is within my control tomorrow.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "rest-04",
+      "theme": "Rest and sleep",
+      "text": "I can welcome rest without demanding that sleep arrive on command.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    },
+    {
+      "id": "rest-05",
+      "theme": "Rest and sleep",
+      "text": "I can close this day with compassion for what was difficult and appreciation for what was good.",
+      "status": "editorial-review",
+      "audioMale": null,
+      "audioFemale": null,
+      "approved": false
+    }
+  ]
+}

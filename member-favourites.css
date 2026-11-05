@@ -25,3 +25,13 @@
 .heart-symbol .kindelora-heart-icon{width:2rem;height:2rem}
 /* Hidden legacy free favourites must remain hidden regardless of section layout rules. */
 #favourites[hidden]{display:none!important}
+
+/* Two accessible, visually consistent Plus favourites collections. */
+.member-favourite-collections{margin:22px 0;border:1px solid #e6cbdc;border-radius:16px;padding:14px;background:#fff}
+.member-collections-heading{font-size:.88rem;font-weight:750;margin:0 0 12px;color:#512d52}
+.member-collection-tabs{display:flex;gap:8px;flex-wrap:wrap}
+.member-collection-tabs [role="tab"]{border:1px solid #856186;border-radius:999px;padding:10px 16px;min-height:44px;background:#fff;color:#512d52;font:inherit;font-weight:700;cursor:pointer}
+.member-collection-tabs [role="tab"][aria-selected="true"]{background:#512d52;color:#fff}
+.member-collection-tabs [role="tab"]:focus-visible{outline:3px solid #a45778;outline-offset:3px}
+.member-favourite-collections [role="tabpanel"]{padding:6px 2px 0;font-size:.92rem}
+.member-favourite-collections [role="tabpanel"][hidden]{display:none!important}

@@ -1,0 +1,14 @@
+"use strict";
+(()=>{const sample={calm:"I can take today one step at a time. I do not need to have everything figured out to deserve a moment of peace.",confidence:"My voice matters. I can learn, grow and try again. Small steps are still progress.",gratitude:"I can notice one good thing today. A quiet moment of gratitude is enough."};
+const theme=document.getElementById("affirmation-theme"),voice=document.getElementById("affirmation-voice"),copy=document.getElementById("affirmation-text"),status=document.getElementById("affirmation-status"),play=document.getElementById("affirmation-play"),stop=document.getElementById("affirmation-stop");
+if(!theme||!voice||!copy||!status||!play||!stop)return;
+const supported="speechSynthesis" in window&&"SpeechSynthesisUtterance" in window;
+let voices=[],active=null;
+function cancel(){if(supported)window.speechSynthesis.cancel();active=null;play.disabled=false;}
+function refreshVoices(){if(!supported)return;const selected=voice.value;voices=window.speechSynthesis.getVoices().filter(v=>v.lang&&v.lang.toLowerCase().startsWith("en"));voice.replaceChildren(new Option("Device default voice",""));voices.forEach(v=>voice.add(new Option(v.name+" ("+v.lang+")",v.voiceURI)));if(voices.some(v=>v.voiceURI===selected))voice.value=selected;}
+theme.addEventListener("change",()=>{cancel();copy.textContent=sample[theme.value]||sample.calm;status.textContent="Choose Listen to hear this sample.";});
+stop.addEventListener("click",()=>{cancel();status.textContent="Audio stopped.";});
+play.addEventListener("click",()=>{if(!supported){status.textContent="Audio preview is not supported on this browser. You can still read the affirmation above.";return;}cancel();const utterance=new SpeechSynthesisUtterance(copy.textContent);const selected=voices.find(v=>v.voiceURI===voice.value);if(selected)utterance.voice=selected;utterance.lang=selected?selected.lang:"en";utterance.rate=.85;utterance.pitch=1;utterance.volume=.9;active=utterance;play.disabled=true;utterance.onend=()=>{if(active!==utterance)return;active=null;play.disabled=false;status.textContent="Sample finished.";};utterance.onerror=()=>{if(active!==utterance)return;active=null;play.disabled=false;status.textContent="This device could not play the sample. Try another voice or read the text above.";};status.textContent="Playing sample with your device voice. Use Stop audio to finish.";window.speechSynthesis.speak(utterance);});
+if(supported){refreshVoices();window.speechSynthesis.addEventListener?.("voiceschanged",refreshVoices);}else{play.disabled=true;voice.disabled=true;status.textContent="Your browser does not support the audio preview. The written sample remains available.";}
+window.addEventListener("pagehide",cancel);
+})();
