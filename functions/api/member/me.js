@@ -2,7 +2,7 @@
 // Deliberately fail closed until secure login issuance and D1 are deployed.
 export async function onRequestGet({request,env}) {
   const headers={"content-type":"application/json; charset=utf-8","cache-control":"no-store"};
-  if(env?.MEMBER_AUTH_ENABLED!=="true"||!env?.DB||!typeof env?.MEMBER_AUTH_PEPPER!=="string"||env.MEMBER_AUTH_PEPPER.length<32) {
+  if(env?.MEMBER_AUTH_ENABLED!=="true"||!env?.DB||typeof env?.MEMBER_AUTH_PEPPER!=="string"||env.MEMBER_AUTH_PEPPER.length<32) {
     return new Response(JSON.stringify({authenticated:false,reason:"member_auth_not_configured"}),{status:503,headers});
   }
   const raw=(request.headers.get("cookie")||"").split(";").map(x=>x.trim()).find(x=>x.startsWith("kindelora_session="));
