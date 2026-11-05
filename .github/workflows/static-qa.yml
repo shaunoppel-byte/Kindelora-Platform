@@ -51,6 +51,7 @@ jobs:
           for file in functions/api/member/*.js; do node --check "$file"; done
           python3 scripts/check-member-access.py
           node scripts/member-smoke.mjs
+          node scripts/member-isolation-smoke.mjs
       - name: Validate curated message library
         run: python3 scripts/check-message-library.py
 
