@@ -13,7 +13,7 @@
 .member-gate-inner{padding:clamp(24px,5vw,40px);position:relative}
 .member-gate-inner h2{font-size:clamp(1.7rem,5vw,2.4rem);margin:8px 0 18px}
 .member-gate-inner p{line-height:1.65}
-.member-gate-heart{font-size:2.8rem;color:#c72e52}
+.member-gate-heart{display:inline-flex;align-items:center;justify-content:center;width:54px;height:54px;color:#c72e52}.member-gate-heart svg{display:block;width:48px;height:48px;fill:currentColor;stroke:none;overflow:visible}
 .member-gate-close{position:absolute;right:12px;top:10px;width:44px;height:44px;border:0;background:transparent;font-size:2rem;color:#512d52}
 .member-gate-inner .actions{margin-bottom:0}
 @media(max-width:440px){.daily-message{padding:24px}.daily-message .heart-save{margin-bottom:18px}}
