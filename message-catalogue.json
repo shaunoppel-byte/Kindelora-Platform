@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "release": "2026-11-05-founder-authorised-2000",
-  "count": 2000,
+  "release": "2026-11-05-founder-authorised-2100",
+  "count": 2100,
   "messages": [
     {
       "id": "KDL-HOPE-001",
@@ -10002,6 +10002,506 @@
       "id": "KDL-WHEN_YOU_SAY_GOODNIGHT-010",
       "theme": "when_you_say_goodnight",
       "text": "Let the last words of the evening be kind when you can."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_LAST_TO_LEAVE-001",
+      "theme": "when_you_are_the_last_to_leave",
+      "text": "Being the last person to leave can make an ordinary room feel unexpectedly different."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_LAST_TO_LEAVE-002",
+      "theme": "when_you_are_the_last_to_leave",
+      "text": "The quiet after everyone goes may reveal how much energy the day required."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_LAST_TO_LEAVE-003",
+      "theme": "when_you_are_the_last_to_leave",
+      "text": "You can finish responsibly without finding one more task to justify staying."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_LAST_TO_LEAVE-004",
+      "theme": "when_you_are_the_last_to_leave",
+      "text": "Switching off a light can mark a useful boundary between work and home."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_LAST_TO_LEAVE-005",
+      "theme": "when_you_are_the_last_to_leave",
+      "text": "If you are tired, take that information seriously before making evening plans."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_LAST_TO_LEAVE-006",
+      "theme": "when_you_are_the_last_to_leave",
+      "text": "A small moment of stillness may help you notice what went well."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_LAST_TO_LEAVE-007",
+      "theme": "when_you_are_the_last_to_leave",
+      "text": "You do not need to carry every unfinished conversation out the door."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_LAST_TO_LEAVE-008",
+      "theme": "when_you_are_the_last_to_leave",
+      "text": "Thank yourself for the care you brought to the day's responsibilities."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_LAST_TO_LEAVE-009",
+      "theme": "when_you_are_the_last_to_leave",
+      "text": "A final check can be enough; perfection does not need another hour."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_THE_LAST_TO_LEAVE-010",
+      "theme": "when_you_are_the_last_to_leave",
+      "text": "Let the door close on the workday without closing off the rest of your life."
+    },
+    {
+      "id": "KDL-WHEN_YOU_TRY_A_DIFFERENT_ROUTE-001",
+      "theme": "when_you_try_a_different_route",
+      "text": "A different route can make a familiar journey feel like a small discovery."
+    },
+    {
+      "id": "KDL-WHEN_YOU_TRY_A_DIFFERENT_ROUTE-002",
+      "theme": "when_you_try_a_different_route",
+      "text": "You may notice a garden or shop that was hidden by your usual habits."
+    },
+    {
+      "id": "KDL-WHEN_YOU_TRY_A_DIFFERENT_ROUTE-003",
+      "theme": "when_you_try_a_different_route",
+      "text": "There is no prize for always choosing the fastest possible way."
+    },
+    {
+      "id": "KDL-WHEN_YOU_TRY_A_DIFFERENT_ROUTE-004",
+      "theme": "when_you_try_a_different_route",
+      "text": "A change of scenery can offer your attention something fresh."
+    },
+    {
+      "id": "KDL-WHEN_YOU_TRY_A_DIFFERENT_ROUTE-005",
+      "theme": "when_you_try_a_different_route",
+      "text": "You can enjoy the detour without making it a permanent routine."
+    },
+    {
+      "id": "KDL-WHEN_YOU_TRY_A_DIFFERENT_ROUTE-006",
+      "theme": "when_you_try_a_different_route",
+      "text": "A new street may remind you that your neighbourhood has many stories."
+    },
+    {
+      "id": "KDL-WHEN_YOU_TRY_A_DIFFERENT_ROUTE-007",
+      "theme": "when_you_try_a_different_route",
+      "text": "If the route feels uncomfortable, it is fine to return to what you know."
+    },
+    {
+      "id": "KDL-WHEN_YOU_TRY_A_DIFFERENT_ROUTE-008",
+      "theme": "when_you_try_a_different_route",
+      "text": "The experience may be worthwhile even if you arrive only a little differently."
+    },
+    {
+      "id": "KDL-WHEN_YOU_TRY_A_DIFFERENT_ROUTE-009",
+      "theme": "when_you_try_a_different_route",
+      "text": "Notice what you would have missed by following the same road again."
+    },
+    {
+      "id": "KDL-WHEN_YOU_TRY_A_DIFFERENT_ROUTE-010",
+      "theme": "when_you_try_a_different_route",
+      "text": "Sometimes curiosity begins with turning a corner you usually pass."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_A_NAME-001",
+      "theme": "when_you_are_learning_a_name",
+      "text": "Learning someone's name is a small way of showing that they matter."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_A_NAME-002",
+      "theme": "when_you_are_learning_a_name",
+      "text": "If you missed the introduction, asking again is better than avoiding the person."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_A_NAME-003",
+      "theme": "when_you_are_learning_a_name",
+      "text": "A name deserves care, especially when its pronunciation is unfamiliar."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_A_NAME-004",
+      "theme": "when_you_are_learning_a_name",
+      "text": "Repeating it gently may help you remember without making a performance of it."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_A_NAME-005",
+      "theme": "when_you_are_learning_a_name",
+      "text": "It is fine to correct yourself and try again."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_A_NAME-006",
+      "theme": "when_you_are_learning_a_name",
+      "text": "A thoughtful introduction can make the next conversation feel easier."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_A_NAME-007",
+      "theme": "when_you_are_learning_a_name",
+      "text": "You may discover a story behind a name if the person wants to share."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_A_NAME-008",
+      "theme": "when_you_are_learning_a_name",
+      "text": "Avoid shortening someone's name without asking what they prefer."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_A_NAME-009",
+      "theme": "when_you_are_learning_a_name",
+      "text": "The effort to remember can communicate respect before friendship develops."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_LEARNING_A_NAME-010",
+      "theme": "when_you_are_learning_a_name",
+      "text": "A familiar name spoken correctly can make a busy place feel more welcoming."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_STARTS_A_BUSINESS-001",
+      "theme": "when_a_friend_starts_a_business",
+      "text": "Starting a business can make a friend's excitement and uncertainty arrive together."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_STARTS_A_BUSINESS-002",
+      "theme": "when_a_friend_starts_a_business",
+      "text": "Ask what kind of support would genuinely help rather than assuming."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_STARTS_A_BUSINESS-003",
+      "theme": "when_a_friend_starts_a_business",
+      "text": "Sharing their work with someone interested can be a practical act of encouragement."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_STARTS_A_BUSINESS-004",
+      "theme": "when_a_friend_starts_a_business",
+      "text": "A thoughtful question about their idea may mean more than exaggerated praise."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_STARTS_A_BUSINESS-005",
+      "theme": "when_a_friend_starts_a_business",
+      "text": "You can celebrate their courage without promising outcomes you cannot know."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_STARTS_A_BUSINESS-006",
+      "theme": "when_a_friend_starts_a_business",
+      "text": "The early days may include quiet work that never appears online."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_STARTS_A_BUSINESS-007",
+      "theme": "when_a_friend_starts_a_business",
+      "text": "Respect their need for honest feedback as well as enthusiasm."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_STARTS_A_BUSINESS-008",
+      "theme": "when_a_friend_starts_a_business",
+      "text": "A first customer or kind review can carry special meaning."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_STARTS_A_BUSINESS-009",
+      "theme": "when_a_friend_starts_a_business",
+      "text": "Let them describe what success would look like in their own words."
+    },
+    {
+      "id": "KDL-WHEN_A_FRIEND_STARTS_A_BUSINESS-010",
+      "theme": "when_a_friend_starts_a_business",
+      "text": "Friendship can offer steady encouragement without turning every conversation into business."
+    },
+    {
+      "id": "KDL-WHEN_YOU_REPAIR_SOMETHING-001",
+      "theme": "when_you_repair_something",
+      "text": "Fixing a small household problem can bring a satisfying sense of capability."
+    },
+    {
+      "id": "KDL-WHEN_YOU_REPAIR_SOMETHING-002",
+      "theme": "when_you_repair_something",
+      "text": "You do not have to know the answer before looking for reliable instructions."
+    },
+    {
+      "id": "KDL-WHEN_YOU_REPAIR_SOMETHING-003",
+      "theme": "when_you_repair_something",
+      "text": "Some repairs are best left to someone with the right training."
+    },
+    {
+      "id": "KDL-WHEN_YOU_REPAIR_SOMETHING-004",
+      "theme": "when_you_repair_something",
+      "text": "A careful first step is more useful than rushing through uncertainty."
+    },
+    {
+      "id": "KDL-WHEN_YOU_REPAIR_SOMETHING-005",
+      "theme": "when_you_repair_something",
+      "text": "The worn object may hold memories that make repairing it worthwhile."
+    },
+    {
+      "id": "KDL-WHEN_YOU_REPAIR_SOMETHING-006",
+      "theme": "when_you_repair_something",
+      "text": "Ask for help when safety or complexity calls for experience."
+    },
+    {
+      "id": "KDL-WHEN_YOU_REPAIR_SOMETHING-007",
+      "theme": "when_you_repair_something",
+      "text": "A successful repair can make an ordinary afternoon feel rewarding."
+    },
+    {
+      "id": "KDL-WHEN_YOU_REPAIR_SOMETHING-008",
+      "theme": "when_you_repair_something",
+      "text": "You may learn something useful even if the first attempt does not work."
+    },
+    {
+      "id": "KDL-WHEN_YOU_REPAIR_SOMETHING-009",
+      "theme": "when_you_repair_something",
+      "text": "There is no shame in deciding replacement is the safer choice."
+    },
+    {
+      "id": "KDL-WHEN_YOU_REPAIR_SOMETHING-010",
+      "theme": "when_you_repair_something",
+      "text": "Notice the quiet pleasure of making something useful again."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NOT_INVITED-001",
+      "theme": "when_you_are_not_invited",
+      "text": "Discovering you were not invited can sting even when the occasion was small."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NOT_INVITED-002",
+      "theme": "when_you_are_not_invited",
+      "text": "You may need time before deciding what the omission means."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NOT_INVITED-003",
+      "theme": "when_you_are_not_invited",
+      "text": "Not every gathering includes everyone, but your disappointment can still be real."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NOT_INVITED-004",
+      "theme": "when_you_are_not_invited",
+      "text": "Try not to build a complete story from one missing invitation."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NOT_INVITED-005",
+      "theme": "when_you_are_not_invited",
+      "text": "A gentle question may clear up uncertainty if the relationship matters."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NOT_INVITED-006",
+      "theme": "when_you_are_not_invited",
+      "text": "You do not have to compete for a place where you feel unwelcome."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NOT_INVITED-007",
+      "theme": "when_you_are_not_invited",
+      "text": "Make room for the people who enjoy spending time with you."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NOT_INVITED-008",
+      "theme": "when_you_are_not_invited",
+      "text": "Someone else's plans do not determine your value as a friend."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NOT_INVITED-009",
+      "theme": "when_you_are_not_invited",
+      "text": "You can acknowledge the hurt without retaliating or withdrawing from everyone."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NOT_INVITED-010",
+      "theme": "when_you_are_not_invited",
+      "text": "Belonging grows through mutual care, not through attending every occasion."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_A_SMALL_FAVOUR-001",
+      "theme": "when_you_receive_a_small_favour",
+      "text": "A small favour can lift a burden you had barely mentioned."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_A_SMALL_FAVOUR-002",
+      "theme": "when_you_receive_a_small_favour",
+      "text": "You can accept help without making the moment awkward with repeated apologies."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_A_SMALL_FAVOUR-003",
+      "theme": "when_you_receive_a_small_favour",
+      "text": "A sincere thank-you is often enough to acknowledge the effort."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_A_SMALL_FAVOUR-004",
+      "theme": "when_you_receive_a_small_favour",
+      "text": "The person helping may be pleased simply to make your day easier."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_A_SMALL_FAVOUR-005",
+      "theme": "when_you_receive_a_small_favour",
+      "text": "Notice how the gesture changes the pace of your afternoon."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_A_SMALL_FAVOUR-006",
+      "theme": "when_you_receive_a_small_favour",
+      "text": "You do not have to repay kindness on the same day."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_A_SMALL_FAVOUR-007",
+      "theme": "when_you_receive_a_small_favour",
+      "text": "A little assistance can make an unfamiliar task feel manageable."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_A_SMALL_FAVOUR-008",
+      "theme": "when_you_receive_a_small_favour",
+      "text": "Receiving care is part of participating in a community."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_A_SMALL_FAVOUR-009",
+      "theme": "when_you_receive_a_small_favour",
+      "text": "You may remember the relief longer than the practical details."
+    },
+    {
+      "id": "KDL-WHEN_YOU_RECEIVE_A_SMALL_FAVOUR-010",
+      "theme": "when_you_receive_a_small_favour",
+      "text": "Let the moment remind you that independence and connection can coexist."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_WORKSPACE-001",
+      "theme": "when_you_change_your_workspace",
+      "text": "A different workspace can shift the rhythm of an otherwise familiar day."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_WORKSPACE-002",
+      "theme": "when_you_change_your_workspace",
+      "text": "You may need time to discover where everything feels comfortable."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_WORKSPACE-003",
+      "theme": "when_you_change_your_workspace",
+      "text": "A clear surface can help without needing to become a perfect system."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_WORKSPACE-004",
+      "theme": "when_you_change_your_workspace",
+      "text": "Keep one object nearby that makes the space feel like yours."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_WORKSPACE-005",
+      "theme": "when_you_change_your_workspace",
+      "text": "Notice whether the light or noise changes your concentration."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_WORKSPACE-006",
+      "theme": "when_you_change_your_workspace",
+      "text": "A new desk does not require a completely new version of yourself."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_WORKSPACE-007",
+      "theme": "when_you_change_your_workspace",
+      "text": "Ask for what you need to work comfortably and safely."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_WORKSPACE-008",
+      "theme": "when_you_change_your_workspace",
+      "text": "Small adjustments may matter more than a dramatic redesign."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_WORKSPACE-009",
+      "theme": "when_you_change_your_workspace",
+      "text": "Give the new arrangement a little time before judging it."
+    },
+    {
+      "id": "KDL-WHEN_YOU_CHANGE_YOUR_WORKSPACE-010",
+      "theme": "when_you_change_your_workspace",
+      "text": "A workspace can support your day without defining your whole identity."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SEE_SOMEONE_TRYING-001",
+      "theme": "when_you_see_someone_trying",
+      "text": "The person learning beside you may be working harder than their progress reveals."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SEE_SOMEONE_TRYING-002",
+      "theme": "when_you_see_someone_trying",
+      "text": "A kind word can acknowledge effort without pretending everything was easy."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SEE_SOMEONE_TRYING-003",
+      "theme": "when_you_see_someone_trying",
+      "text": "You can offer assistance without taking the task away from them."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SEE_SOMEONE_TRYING-004",
+      "theme": "when_you_see_someone_trying",
+      "text": "Notice the courage involved in attempting something unfamiliar in public."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SEE_SOMEONE_TRYING-005",
+      "theme": "when_you_see_someone_trying",
+      "text": "Encouragement feels more genuine when it names a specific effort."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SEE_SOMEONE_TRYING-006",
+      "theme": "when_you_see_someone_trying",
+      "text": "Someone may prefer quiet space over an audience for their practice."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SEE_SOMEONE_TRYING-007",
+      "theme": "when_you_see_someone_trying",
+      "text": "A patient response can make it easier for them to try again."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SEE_SOMEONE_TRYING-008",
+      "theme": "when_you_see_someone_trying",
+      "text": "You do not need to compare their progress with your own experience."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SEE_SOMEONE_TRYING-009",
+      "theme": "when_you_see_someone_trying",
+      "text": "A small improvement deserves attention even before mastery arrives."
+    },
+    {
+      "id": "KDL-WHEN_YOU_SEE_SOMEONE_TRYING-010",
+      "theme": "when_you_see_someone_trying",
+      "text": "Let your presence make the learning environment a little safer."
+    },
+    {
+      "id": "KDL-WHEN_THE_DAY_ENDS_DIFFERENTLY-001",
+      "theme": "when_the_day_ends_differently",
+      "text": "An unexpected ending can change how you remember an otherwise ordinary day."
+    },
+    {
+      "id": "KDL-WHEN_THE_DAY_ENDS_DIFFERENTLY-002",
+      "theme": "when_the_day_ends_differently",
+      "text": "You may feel unsettled even when the change was nobody's fault."
+    },
+    {
+      "id": "KDL-WHEN_THE_DAY_ENDS_DIFFERENTLY-003",
+      "theme": "when_the_day_ends_differently",
+      "text": "Give yourself a moment to recognise the plan you had imagined."
+    },
+    {
+      "id": "KDL-WHEN_THE_DAY_ENDS_DIFFERENTLY-004",
+      "theme": "when_the_day_ends_differently",
+      "text": "The evening can still hold something worthwhile without resembling your expectations."
+    },
+    {
+      "id": "KDL-WHEN_THE_DAY_ENDS_DIFFERENTLY-005",
+      "theme": "when_the_day_ends_differently",
+      "text": "A different ending does not erase the good parts that came before."
+    },
+    {
+      "id": "KDL-WHEN_THE_DAY_ENDS_DIFFERENTLY-006",
+      "theme": "when_the_day_ends_differently",
+      "text": "You can choose a simpler next step when your energy is low."
+    },
+    {
+      "id": "KDL-WHEN_THE_DAY_ENDS_DIFFERENTLY-007",
+      "theme": "when_the_day_ends_differently",
+      "text": "Sometimes the kindest response is to stop trying to rescue the original plan."
+    },
+    {
+      "id": "KDL-WHEN_THE_DAY_ENDS_DIFFERENTLY-008",
+      "theme": "when_the_day_ends_differently",
+      "text": "A short conversation may help you understand what changed."
+    },
+    {
+      "id": "KDL-WHEN_THE_DAY_ENDS_DIFFERENTLY-009",
+      "theme": "when_the_day_ends_differently",
+      "text": "Let the day be complicated without declaring it a complete disappointment."
+    },
+    {
+      "id": "KDL-WHEN_THE_DAY_ENDS_DIFFERENTLY-010",
+      "theme": "when_the_day_ends_differently",
+      "text": "Tomorrow does not need to carry every unfinished feeling from tonight."
     }
   ]
 }
