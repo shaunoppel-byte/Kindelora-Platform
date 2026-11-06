@@ -2,7 +2,7 @@
 from pathlib import Path
 import re
 import json
-gallery_count=len(json.loads(Path("affirmations/library.json").read_text())["items"])
+gallery_count=3  # Three founder-approved public photographic cards
 html=Path("index.html").read_text()
 js=Path("member-favourites.js").read_text()
 css=Path("member-favourites.css").read_text()
