@@ -23,6 +23,11 @@ jobs:
           node --check app.js
           node --check sw.js
           node --check member-favourites.js
+      - name: Run full Node functional and regression test suite
+        run: node --test tests/*.test.cjs
+      - name: Validate all first-party browser scripts
+        run: |
+          for file in app.js sw.js member-favourites.js emotional-check-in.js affirmation-preview.js affirmation-card-actions.js; do node --check "$file"; done
       - name: Validate local HTML fragment links
         run: |
           python3 - <<'PY'
