@@ -17,7 +17,14 @@
     buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
     response.textContent=messages[choice];
     response.hidden=false;
-    if(next)next.hidden=choice==='yes';
+    if(next){
+      // Offer continued support without assuming the visitor's emotional state.
+      next.hidden=choice==='yes';
+      const affirmation=next.querySelector('a[href="#affirmations"]');
+      const restart=next.querySelector('a[href="#top"]');
+      if(affirmation)affirmation.textContent=choice==='notyet'?'Stay for another gentle affirmation':'Explore another affirmation';
+      if(restart)restart.textContent=choice==='notyet'?'Return whenever you feel ready':'Return to a fresh start';
+    }
     // Deliberately no storage or submission: the response stays only in this page.
   }));
 })();
