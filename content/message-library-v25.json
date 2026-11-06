@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 25",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-06",
+  "messages": [
+    {
+      "id": "KDL-QUIETLY-OUTGROWING-A-ROLE-001",
+      "theme": "quietly_outgrowing_a_role",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The title still fits on paper, but the work no longer reflects what matters to you. Noticing that change is information, not ingratitude."
+    },
+    {
+      "id": "KDL-QUIETLY-OUTGROWING-A-ROLE-002",
+      "theme": "quietly_outgrowing_a_role",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Leaving a familiar responsibility can feel like disappointing people who relied on you. Their adjustment matters, and so does your capacity to choose differently."
+    },
+    {
+      "id": "KDL-QUIETLY-OUTGROWING-A-ROLE-003",
+      "theme": "quietly_outgrowing_a_role",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may be skilled at something you no longer wish to keep doing. Competence is not a lifelong contract."
+    },
+    {
+      "id": "KDL-QUIETLY-OUTGROWING-A-ROLE-004",
+      "theme": "quietly_outgrowing_a_role",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When others introduce you by an old role, it can take a moment to find your own words. You are allowed to describe the present instead."
+    },
+    {
+      "id": "KDL-QUIETLY-OUTGROWING-A-ROLE-005",
+      "theme": "quietly_outgrowing_a_role",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A transition may bring relief and a strange sadness for the routines you knew well. Both reactions can belong to the same decision."
+    },
+    {
+      "id": "KDL-WAITING-FOR-A-FRIEND-TO-REACH-OUT-001",
+      "theme": "waiting_for_a_friend_to_reach_out",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You have checked your phone more often than you meant to. Missing someone is understandable; the silence alone cannot explain what is happening for them."
+    },
+    {
+      "id": "KDL-WAITING-FOR-A-FRIEND-TO-REACH-OUT-002",
+      "theme": "waiting_for_a_friend_to_reach_out",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Reaching out first again may feel exposing. You can decide what contact feels reciprocal without turning the friendship into a scorecard."
+    },
+    {
+      "id": "KDL-WAITING-FOR-A-FRIEND-TO-REACH-OUT-003",
+      "theme": "waiting_for_a_friend_to_reach_out",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friend who is quiet may be busy, distant, overwhelmed, or something else entirely. Your imagination cannot settle the question on its own."
+    },
+    {
+      "id": "KDL-WAITING-FOR-A-FRIEND-TO-REACH-OUT-004",
+      "theme": "waiting_for_a_friend_to_reach_out",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you want to reconnect, a simple invitation can say more than a carefully disguised hint. They can answer honestly, and you can respond to what is real."
+    },
+    {
+      "id": "KDL-WAITING-FOR-A-FRIEND-TO-REACH-OUT-005",
+      "theme": "waiting_for_a_friend_to_reach_out",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Waiting for a reply can stir up older experiences of being overlooked. Those memories deserve care without being mistaken for evidence about this person."
+    },
+    {
+      "id": "KDL-RELEARNING-AFTER-A-LONG-BREAK-001",
+      "theme": "relearning_after_a_long_break",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first practice session after months away may feel clumsy. Your hands are meeting a skill again, not sitting an examination of your worth."
+    },
+    {
+      "id": "KDL-RELEARNING-AFTER-A-LONG-BREAK-002",
+      "theme": "relearning_after_a_long_break",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone else may have kept progressing while you stepped away. Their timeline does not need to become the measure of your return."
+    },
+    {
+      "id": "KDL-RELEARNING-AFTER-A-LONG-BREAK-003",
+      "theme": "relearning_after_a_long_break",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Returning to a language, instrument, or craft can reveal gaps you did not expect. Curiosity will teach you more than embarrassment."
+    },
+    {
+      "id": "KDL-RELEARNING-AFTER-A-LONG-BREAK-004",
+      "theme": "relearning_after_a_long_break",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may remember the joy of an activity more clearly than its difficult early stages. Beginning again includes the awkward parts too."
+    },
+    {
+      "id": "KDL-RELEARNING-AFTER-A-LONG-BREAK-005",
+      "theme": "relearning_after_a_long_break",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Five attentive minutes can tell you what you still enjoy. You need not promise a whole new routine before trying again."
+    },
+    {
+      "id": "KDL-SHARING-SPACE-DURING-A-HARD-WEEK-001",
+      "theme": "sharing_space_during_a_hard_week",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When everyone at home is tired, a small noise can feel enormous. The irritation may be real without making anyone the enemy."
+    },
+    {
+      "id": "KDL-SHARING-SPACE-DURING-A-HARD-WEEK-002",
+      "theme": "sharing_space_during_a_hard_week",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "One person needs company after a difficult day; another needs quiet. Naming those needs can be kinder than guessing and feeling rejected."
+    },
+    {
+      "id": "KDL-SHARING-SPACE-DURING-A-HARD-WEEK-003",
+      "theme": "sharing_space_during_a_hard_week",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A crowded kitchen can turn an ordinary task into a negotiation. It is reasonable to ask for a little space without making it personal."
+    },
+    {
+      "id": "KDL-SHARING-SPACE-DURING-A-HARD-WEEK-004",
+      "theme": "sharing_space_during_a_hard_week",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you spoke sharply, a specific apology may help more than explaining how exhausted you were. You can acknowledge both the strain and the impact."
+    },
+    {
+      "id": "KDL-SHARING-SPACE-DURING-A-HARD-WEEK-005",
+      "theme": "sharing_space_during_a_hard_week",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some evenings the kindest shared plan is a very simple one. A meal and a little quiet may be enough for tonight."
+    },
+    {
+      "id": "KDL-FINDING-YOUR-PLACE-IN-A-NEW-CITY-001",
+      "theme": "finding_your_place_in_a_new_city",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The streets are unfamiliar and even buying groceries takes extra thought. This effort is part of learning a place, not evidence that you chose wrongly."
+    },
+    {
+      "id": "KDL-FINDING-YOUR-PLACE-IN-A-NEW-CITY-002",
+      "theme": "finding_your_place_in_a_new_city",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can miss the people and shortcuts of your old neighbourhood while being open to a new favourite corner here."
+    },
+    {
+      "id": "KDL-FINDING-YOUR-PLACE-IN-A-NEW-CITY-003",
+      "theme": "finding_your_place_in_a_new_city",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friendly exchange with a shopkeeper may seem small. Repeated ordinary encounters are one way a place gradually becomes recognisable."
+    },
+    {
+      "id": "KDL-FINDING-YOUR-PLACE-IN-A-NEW-CITY-004",
+      "theme": "finding_your_place_in_a_new_city",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An invitation can feel precious when you are new, but you may still decline it. Belonging does not require accepting every opportunity."
+    },
+    {
+      "id": "KDL-FINDING-YOUR-PLACE-IN-A-NEW-CITY-005",
+      "theme": "finding_your_place_in_a_new_city",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some days the new city feels exciting; other days it feels inconvenient and lonely. Neither day has to decide the whole story."
+    }
+  ]
+}
