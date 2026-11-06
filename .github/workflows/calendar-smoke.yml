@@ -1,0 +1,21 @@
+name: KINDELORA calendar smoke tests
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  calendar-smoke:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Calendar source smoke tests
+        run: node --test tests/calendar-smoke.test.cjs
+      - name: JavaScript syntax
+        run: |
+          node --check app.js
+          node --check sw.js
