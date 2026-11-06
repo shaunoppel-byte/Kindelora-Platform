@@ -2,7 +2,7 @@
 from pathlib import Path
 import re
 import json
-gallery_count=len(json.loads(Path("affirmations/library.json").read_text())["items"])
+gallery_count=sum(bool(x["access"].get("featured")) for x in json.loads(Path("affirmations/library.json").read_text())["items"])
 html=Path("index.html").read_text()
 js=Path("member-favourites.js").read_text()
 css=Path("member-favourites.css").read_text()
