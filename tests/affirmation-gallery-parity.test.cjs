@@ -4,7 +4,7 @@ const assert=require('node:assert/strict');
 const fs=require('node:fs');
 const html=fs.readFileSync('index.html','utf8');
 const published=JSON.parse(fs.readFileSync('affirmations/library.json','utf8')).items;
-const staged=['expansion-batch-01.json','expansion-batch-02.json','expansion-batch-03.json','expansion-batch-04.json'].flatMap(p=>JSON.parse(fs.readFileSync('affirmations/'+p,'utf8')).items);
+const staged=['expansion-batch-01.json','expansion-batch-02.json','expansion-batch-03.json','expansion-batch-04.json','expansion-batch-05.json'].flatMap(p=>JSON.parse(fs.readFileSync('affirmations/'+p,'utf8')).items);
 const start=html.indexOf('id="free-affirmations"');
 const end=html.indexOf('</section>',start);
 const section=html.slice(start,end);
