@@ -4,7 +4,9 @@ import re
 html=Path("index.html").read_text()
 js=Path("member-favourites.js").read_text()
 css=Path("member-favourites.css").read_text()
-assert html.count('class="heart-save')==3, "Expected two message hearts and one affirmation heart"
+assert html.count('class="heart-save')==6, "Expected two message hearts, one daily affirmation heart, and three gallery hearts"
+assert html.count('class="heart-save gallery-heart"')==3, "Each free gallery card must offer a Plus-gated heart"
+assert html.count('data-heart-type="affirmation"')==4, "Affirmation hearts must use the affirmation collection gate"
 assert 'data-heart-type="affirmation"' in html, "Affirmation heart must have distinct collection type"
 assert 'id="member-tab-messages"' in js and 'id="member-tab-affirmations"' in js
 assert 'selectCollection("affirmations",false)' in js and 'selectCollection("messages",false)' in js
