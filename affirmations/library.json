@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "description": "KINDELORA Affirmation Library. Existing published affirmation inventory. Messages catalogue is separate.",
-  "publishedCount": 3,
+  "publishedCount": 6,
   "items": [
     {
       "id": "one-breath",
@@ -38,6 +38,45 @@
       "image": "https://images.unsplash.com/photo-1757137911521-458496283554?auto=format&fit=crop&w=1200&q=85",
       "download": "/affirmations/kindelora-premium-begin-again.png",
       "originalArtwork": "/affirmations/begin-again.svg",
+      "saveType": "affirmation",
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "small-steps",
+      "title": "Small steps still count",
+      "affirmation": "Every small step I take matters. I can move forward gently, without rushing my own journey.",
+      "image": "/affirmations/artwork/small-steps-still-count.png",
+      "download": "/affirmations/artwork/small-steps-still-count.png",
+      "saveType": "affirmation",
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "rest-is-worthy",
+      "title": "Rest is part of growing",
+      "affirmation": "I am allowed to rest without guilt. Quiet moments help me return with strength and clarity.",
+      "image": "/affirmations/artwork/rest-is-part-of-growing.png",
+      "download": "/affirmations/artwork/rest-is-part-of-growing.png",
+      "saveType": "affirmation",
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "light-returns",
+      "title": "The light returns",
+      "affirmation": "Even when today feels heavy, I can trust that brighter moments are still possible.",
+      "image": "/affirmations/artwork/the-light-returns.png",
+      "download": "/affirmations/artwork/the-light-returns.png",
       "saveType": "affirmation",
       "access": {
         "browse": "guest",
