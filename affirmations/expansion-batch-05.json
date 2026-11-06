@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "batch": "affirmation-expansion-05",
+  "status": "editorial-staged-not-published",
+  "count": 12,
+  "qualityGate": "Publish only after individual premium photography, matching downloadable assets, and access/mobile QA pass.",
+  "items": [
+    {
+      "id": "let-light-in",
+      "title": "Let the light in",
+      "affirmation": "I can welcome a little brightness today, even if I am still finding my way through something hard.",
+      "theme": "Hope",
+      "artDirection": "Golden sunlight entering a quiet room through linen curtains, premium natural-light photography, no text",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "worth-a-kind-word",
+      "title": "Worth a kind word",
+      "affirmation": "I deserve the same gentle words I would offer someone I love when they are having a difficult day.",
+      "theme": "Self-compassion",
+      "artDirection": "Tender spring blossom in soft morning light, premium close-up photography, no text",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "show-up-as-me",
+      "title": "Show up as myself",
+      "affirmation": "I can be thoughtful, imperfect and real. I do not need to perform a different version of myself to belong.",
+      "theme": "Authenticity",
+      "artDirection": "Wildflowers growing naturally beside a stone path, premium editorial photography, no text",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "find-my-rhythm",
+      "title": "Find my rhythm",
+      "affirmation": "I can move at a pace that supports my wellbeing and still make meaningful progress.",
+      "theme": "Balance",
+      "artDirection": "Gentle ocean waves washing onto smooth sand at dawn, premium landscape photography, no text",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "listen-with-care",
+      "title": "Listen with care",
+      "affirmation": "I can listen to understand, not simply to reply. My attention can help another person feel seen.",
+      "theme": "Empathy",
+      "artDirection": "Two wooden benches beneath leafy trees in warm afternoon light, premium photography, no text",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "give-today-a-chance",
+      "title": "Give today a chance",
+      "affirmation": "I do not have to predict how this day will unfold. I can meet it with openness and one hopeful choice.",
+      "theme": "Optimism",
+      "artDirection": "Sunrise breaking over a quiet meadow with light mist, premium nature photography, no text",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "strength-to-begin",
+      "title": "Strength to begin",
+      "affirmation": "Beginning before I feel ready can be an act of courage. I can learn as I go.",
+      "theme": "Courage",
+      "artDirection": "Small green shoot emerging beside weathered stone, premium macro photography, no text",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "the-kindness-i-carry",
+      "title": "The kindness I carry",
+      "affirmation": "A small act of care may travel further than I know. I can choose to add warmth wherever I am.",
+      "theme": "Kindness",
+      "artDirection": "Sunlit hands offering a small bunch of daisies, premium lifestyle photography, no text",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "a-place-to-rest",
+      "title": "A place to rest",
+      "affirmation": "I can pause without apology. Rest helps me return to what matters with a clearer heart.",
+      "theme": "Rest",
+      "artDirection": "Quiet hammock under shady trees overlooking a calm lake, premium photography, no text",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "goodness-in-the-details",
+      "title": "Goodness in the details",
+      "affirmation": "I can notice one beautiful detail in an ordinary day and let it remind me that goodness is still here.",
+      "theme": "Gratitude",
+      "artDirection": "Raindrops sparkling on green leaves after a shower, premium macro photography, no text",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "keep-my-promise",
+      "title": "A promise to myself",
+      "affirmation": "I can keep one small promise to myself today and build trust through gentle consistency.",
+      "theme": "Self-trust",
+      "artDirection": "Neatly placed walking shoes beside a sunrise-lit doorway, premium photography, no text",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "grow-toward-joy",
+      "title": "Grow toward joy",
+      "affirmation": "I can make room for what brings me alive, even while I carry responsibilities and uncertainty.",
+      "theme": "Joy",
+      "artDirection": "Bright sunflower turning toward sunlight in open field, premium nature photography, no text",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    }
+  ]
+}
