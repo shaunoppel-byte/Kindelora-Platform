@@ -49,3 +49,14 @@ test('subscriber library API fails closed for guest and unpaid members',()=>{
  assert.match(api,/email_verified_at IS NOT NULL/);
  assert.match(api,/items:\[\]/);
 });
+
+test('private artwork route enforces subscription and no-store responses',()=>{
+ const api=fs.readFileSync(path.join(root,'functions/api/member/affirmation-artwork/[id].js'),'utf8');
+ assert.match(api,/if\(!ready\(env\)\)/);
+ assert.match(api,/if\(!user\)/);
+ assert.match(api,/if\(!row\)/);
+ assert.match(api,/allowed\.has\(id\)/);
+ assert.match(api,/PRIVATE_AFFIRMATION_ARTWORK\.get/);
+ assert.match(api,/private, no-store/);
+ assert.match(api,/s.status='active'/);
+});
