@@ -30,3 +30,9 @@ test('installed PWA receives new cache version',()=>{
  assert.match(sw,/kindelora-launch-v15/);
  assert.match(html,/app\.js\?v=calendar-clarity-20261105-1/);
 });
+
+test('reminder time choices and explicit save guidance are present',()=>{
+ assert.match(html,/<option value="18"/);
+ assert.match(html,/<option value="20"/);
+ assert.match(js,/No reminder has been saved|has not saved a reminder|Downloading alone does not create a reminder/);
+});
