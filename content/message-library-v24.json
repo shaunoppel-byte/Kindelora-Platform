@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 24",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-06",
+  "messages": [
+    {
+      "id": "KDL-UNCERTAIN-AFTER-AN-INTERVIEW-001",
+      "theme": "uncertain_after_an_interview",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The interview ended, but your mind keeps returning to one awkward answer. A single moment rarely tells the whole story of how you came across."
+    },
+    {
+      "id": "KDL-UNCERTAIN-AFTER-AN-INTERVIEW-002",
+      "theme": "uncertain_after_an_interview",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Waiting to hear back can make ordinary notifications feel important. You can care about the outcome without keeping your entire day on alert."
+    },
+    {
+      "id": "KDL-UNCERTAIN-AFTER-AN-INTERVIEW-003",
+      "theme": "uncertain_after_an_interview",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you forgot to mention something useful, consider writing it down for next time. Reflection can be practical without turning into a verdict on yourself."
+    },
+    {
+      "id": "KDL-UNCERTAIN-AFTER-AN-INTERVIEW-004",
+      "theme": "uncertain_after_an_interview",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An interviewer may seem distracted for reasons you cannot see. Their expression is not reliable evidence of what they thought of you."
+    },
+    {
+      "id": "KDL-UNCERTAIN-AFTER-AN-INTERVIEW-005",
+      "theme": "uncertain_after_an_interview",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Whether or not an offer comes, the preparation you did remains yours. It can inform the next conversation without needing to justify this one."
+    },
+    {
+      "id": "KDL-UNEVEN-HOUSEHOLD-LABOUR-001",
+      "theme": "uneven_household_labour",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Noticing the chores that quietly become yours can bring resentment you did not expect. Naming the pattern is a place to begin, not an accusation."
+    },
+    {
+      "id": "KDL-UNEVEN-HOUSEHOLD-LABOUR-002",
+      "theme": "uneven_household_labour",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shared home can look tidy while one person carries the planning in their head. The invisible reminders deserve a place in the conversation too."
+    },
+    {
+      "id": "KDL-UNEVEN-HOUSEHOLD-LABOUR-003",
+      "theme": "uneven_household_labour",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you ask for help with household work, it may feel tiring to explain every step. Consider discussing ownership of a task, not only assistance with it."
+    },
+    {
+      "id": "KDL-UNEVEN-HOUSEHOLD-LABOUR-004",
+      "theme": "uneven_household_labour",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Two people may have different standards for when a job is finished. Agreeing on a workable definition can prevent the same disagreement returning."
+    },
+    {
+      "id": "KDL-UNEVEN-HOUSEHOLD-LABOUR-005",
+      "theme": "uneven_household_labour",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a conversation about chores becomes heated, the practical issue is still there afterward. A calmer moment may help you decide what needs to change."
+    },
+    {
+      "id": "KDL-MIXED-FEELINGS-ABOUT-A-REUNION-001",
+      "theme": "mixed_feelings_about_a_reunion",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Seeing familiar faces again can bring warmth and unease in the same afternoon. You do not have to choose one feeling to make the visit meaningful."
+    },
+    {
+      "id": "KDL-MIXED-FEELINGS-ABOUT-A-REUNION-002",
+      "theme": "mixed_feelings_about_a_reunion",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An old friend may remember a version of you that no longer fits. You can share who you are now without correcting every story from the past."
+    },
+    {
+      "id": "KDL-MIXED-FEELINGS-ABOUT-A-REUNION-003",
+      "theme": "mixed_feelings_about_a_reunion",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes a reunion feels quieter than the anticipation around it. That does not make the time together worthless or the connection false."
+    },
+    {
+      "id": "KDL-MIXED-FEELINGS-ABOUT-A-REUNION-004",
+      "theme": "mixed_feelings_about_a_reunion",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you are unsure how long to stay, arranging your own way home can give you breathing room. Flexibility may make it easier to be present."
+    },
+    {
+      "id": "KDL-MIXED-FEELINGS-ABOUT-A-REUNION-005",
+      "theme": "mixed_feelings_about_a_reunion",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar place may have changed more than you expected. You can miss what was there while being curious about what exists now."
+    },
+    {
+      "id": "KDL-RECEIVING-AN-UNEXPECTED-COMPLIMENT-001",
+      "theme": "receiving_an_unexpected_compliment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A thoughtful compliment can catch you off guard, especially when you have been focused on what went wrong. You can simply say thank you."
+    },
+    {
+      "id": "KDL-RECEIVING-AN-UNEXPECTED-COMPLIMENT-002",
+      "theme": "receiving_an_unexpected_compliment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When someone notices an effort you thought was invisible, it may feel both comforting and uncomfortable. You need not explain away their observation."
+    },
+    {
+      "id": "KDL-RECEIVING-AN-UNEXPECTED-COMPLIMENT-003",
+      "theme": "receiving_an_unexpected_compliment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected kind word does not require you to suddenly feel confident. It can be one piece of information you allow yourself to consider."
+    },
+    {
+      "id": "KDL-RECEIVING-AN-UNEXPECTED-COMPLIMENT-004",
+      "theme": "receiving_an_unexpected_compliment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If praise arrives for something that took a team, you can accept your part and acknowledge others. Appreciation need not become a contest."
+    },
+    {
+      "id": "KDL-RECEIVING-AN-UNEXPECTED-COMPLIMENT-005",
+      "theme": "receiving_an_unexpected_compliment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes you distrust a compliment because it conflicts with your own assessment. You can hold both perspectives without resolving them immediately."
+    }
+  ]
+}
