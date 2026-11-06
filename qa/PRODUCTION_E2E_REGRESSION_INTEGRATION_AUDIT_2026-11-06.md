@@ -12,7 +12,7 @@ A PASS means an observed browser result or a completed automated CI assertion. A
 - Guest-first membership browser run: https://agent.tinyfish.ai/runs/b564e0c9-2d8d-49f7-9fd9-104bb5ddea4c — 27 UI checks PASS (earlier release); not an authenticated/payment E2E.
 - Mobile/PWA inspection: https://agent.tinyfish.ai/runs/a9672a43-fea6-4023-8d06-831b0233792c — navigation, free content, plan CTAs, privacy, terms and manifest observed; **mobile viewport and touch-target dimensions not independently measured**, despite the agent's broad PASS labels. Service-worker install/offline **NOT TESTED**.
 - Integration/negative-path inspection: https://agent.tinyfish.ai/runs/dda171f3-3b04-4d35-8345-362a0514d5c2 — guest pages, artwork, manifest, and fail-closed member/checkout endpoints observed. Exact HTTP codes not captured by the browser agent; no active subscriptions or authenticated sessions were tested.
-- Desktop functional audit: https://agent.tinyfish.ai/runs/8d4de649-5c17-4b97-adc2-8ccdd664964a — see run for completion and case-by-case evidence; do not count until final result available.
+- Desktop functional audit: https://agent.tinyfish.ai/runs/8d4de649-5c17-4b97-adc2-8ccdd664964a — completed; observed navigation, artwork links and control affordances. **EVIDENCE CONFLICT:** agent quoted three emotional-response texts that do not match current `emotional-check-in.js` source. Consequently its emotional response content, audio playback, clipboard and local-storage PASS claims are **NOT independently certified** until reproduced with captured browser output. Agent reported external WhatsApp/email links SKIPPED. Do not use agent's overall 'all pass' assertion as a 100% certification.
 
 ## Test register — baseline evidence
 | ID | Platform | Test / expected result | Result | Evidence / limitation |
@@ -29,7 +29,7 @@ A PASS means an observed browser result or a completed automated CI assertion. A
 | GUEST-03 | Web/PWA | Monthly/annual plan preview visible | PASS | Browser |
 | GUEST-04 | Web/PWA | Checkout disabled pending merchant approval | PASS | Browser and endpoint inspection |
 | GUEST-05 | Web/PWA | Emotional choices present | PASS | Browser |
-| GUEST-06 | Web/PWA | Three distinct emotional responses and next steps | PASS | Node regression tests; production individual click coverage pending desktop audit |
+| GUEST-06 | Web/PWA | Three distinct emotional responses and next steps | PASS | Node regression tests; browser agent reported mismatched quotations, so live text fidelity NOT TESTED |
 | FREE-01 | Web/PWA | Three gallery cards exist with artwork | PASS | Node tests + browser |
 | FREE-02 | Web/PWA | Three artwork files downloadable | PASS | Node checks + browser URLs; OS-level download confirmation not tested |
 | FREE-03 | Web/PWA | Favourites require Plus | PASS | Node gate tests + guest UI |
