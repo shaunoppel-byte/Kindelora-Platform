@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 26",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-06",
+  "messages": [
+    {
+      "id": "KDL-QUIET-AFTER-A-BUSY-VISIT-001",
+      "theme": "quiet_after_a_busy_visit",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The door closes after a lively visit, and the sudden quiet feels strange. You can appreciate the company and need a little time to settle."
+    },
+    {
+      "id": "KDL-QUIET-AFTER-A-BUSY-VISIT-002",
+      "theme": "quiet_after_a_busy_visit",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An enjoyable gathering may still leave you tired. That does not erase the laughter or mean you welcomed anyone less warmly."
+    },
+    {
+      "id": "KDL-QUIET-AFTER-A-BUSY-VISIT-003",
+      "theme": "quiet_after_a_busy_visit",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After hosting, you might notice the dishes before the memories. Both are part of the evening; neither needs your attention all at once."
+    },
+    {
+      "id": "KDL-QUIET-AFTER-A-BUSY-VISIT-004",
+      "theme": "quiet_after_a_busy_visit",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the hardest part of a good visit is returning to ordinary silence. A familiar routine may help you find your footing again."
+    },
+    {
+      "id": "KDL-QUIET-AFTER-A-BUSY-VISIT-005",
+      "theme": "quiet_after_a_busy_visit",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can miss people who have just left and still be relieved to have your own space back. Those feelings can share a room."
+    },
+    {
+      "id": "KDL-WAITING-FOR-A-REPAIR-001",
+      "theme": "waiting_for_a_repair",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A broken appliance can turn simple tasks into negotiations with time and money. Frustration makes sense when ordinary life suddenly needs a workaround."
+    },
+    {
+      "id": "KDL-WAITING-FOR-A-REPAIR-002",
+      "theme": "waiting_for_a_repair",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Waiting for someone to fix what you cannot fix yourself can feel powerless. Asking for a realistic update is reasonable, not demanding."
+    },
+    {
+      "id": "KDL-WAITING-FOR-A-REPAIR-003",
+      "theme": "waiting_for_a_repair",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Temporary solutions often take more effort than anyone sees. You deserve credit for the practical juggling, even if the problem remains."
+    },
+    {
+      "id": "KDL-WAITING-FOR-A-REPAIR-004",
+      "theme": "waiting_for_a_repair",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An uncertain repair date can make planning difficult. It is fair to keep your plans flexible rather than pretend the disruption is minor."
+    },
+    {
+      "id": "KDL-WAITING-FOR-A-REPAIR-005",
+      "theme": "waiting_for_a_repair",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When something essential stops working, the inconvenience may spill into everything else. You do not have to call it a small thing."
+    },
+    {
+      "id": "KDL-BEING-MISREAD-AS-CONFIDENT-001",
+      "theme": "being_misread_as_confident",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "People may see your steady voice and assume decisions come easily. You can appear composed while privately weighing every possibility."
+    },
+    {
+      "id": "KDL-BEING-MISREAD-AS-CONFIDENT-002",
+      "theme": "being_misread_as_confident",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being called confident can feel flattering and lonely when nobody notices the preparation behind it. Your effort deserves recognition too."
+    },
+    {
+      "id": "KDL-BEING-MISREAD-AS-CONFIDENT-003",
+      "theme": "being_misread_as_confident",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may be the person others ask to speak first, even when you would prefer to listen. It is acceptable to ask for a moment."
+    },
+    {
+      "id": "KDL-BEING-MISREAD-AS-CONFIDENT-004",
+      "theme": "being_misread_as_confident",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone else's impression of your confidence is not an obligation to lead every conversation. You can choose where to contribute."
+    },
+    {
+      "id": "KDL-BEING-MISREAD-AS-CONFIDENT-005",
+      "theme": "being_misread_as_confident",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Even practiced speakers sometimes leave a meeting replaying their words. That private uncertainty does not cancel the care they brought."
+    },
+    {
+      "id": "KDL-CHANGING-A-LONGSTANDING-ROUTINE-001",
+      "theme": "changing_a_longstanding_routine",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A routine that once helped may begin to feel restrictive. Changing it does not mean the earlier version of your life was mistaken."
+    },
+    {
+      "id": "KDL-CHANGING-A-LONGSTANDING-ROUTINE-002",
+      "theme": "changing_a_longstanding_routine",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "People might notice when you stop doing something you have always done. A brief explanation is enough if you want to give one."
+    },
+    {
+      "id": "KDL-CHANGING-A-LONGSTANDING-ROUTINE-003",
+      "theme": "changing_a_longstanding_routine",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first morning without an old habit may feel oddly empty. You can let the new shape of the day develop gradually."
+    },
+    {
+      "id": "KDL-CHANGING-A-LONGSTANDING-ROUTINE-004",
+      "theme": "changing_a_longstanding_routine",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every tradition needs a dramatic ending. Sometimes a quieter adjustment makes room for what your life needs now."
+    },
+    {
+      "id": "KDL-CHANGING-A-LONGSTANDING-ROUTINE-005",
+      "theme": "changing_a_longstanding_routine",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can keep the part of a routine that still serves you and leave the rest behind. Change does not have to be all or nothing."
+    },
+    {
+      "id": "KDL-FEELING-BEHIND-IN-A-CLASS-001",
+      "theme": "feeling_behind_in_a_class",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a lesson moves faster than you can follow, it is easy to mistake confusion for inability. You may simply need another explanation."
+    },
+    {
+      "id": "KDL-FEELING-BEHIND-IN-A-CLASS-002",
+      "theme": "feeling_behind_in_a_class",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Other people asking fewer questions does not prove they understand more. Your question may help someone who is also lost."
+    },
+    {
+      "id": "KDL-FEELING-BEHIND-IN-A-CLASS-003",
+      "theme": "feeling_behind_in_a_class",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Returning to the basics can feel embarrassing in a room that seems further ahead. Foundations are worth revisiting at any stage."
+    },
+    {
+      "id": "KDL-FEELING-BEHIND-IN-A-CLASS-004",
+      "theme": "feeling_behind_in_a_class",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A difficult assignment is not a verdict on your intelligence. It shows where support, practice or a different approach might help."
+    },
+    {
+      "id": "KDL-FEELING-BEHIND-IN-A-CLASS-005",
+      "theme": "feeling_behind_in_a_class",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may need longer with a concept than your classmates do. Learning is not a race that everyone starts from the same place."
+    },
+    {
+      "id": "KDL-SMALL-CHANGES-TO-ACCESSIBILITY-NEEDS-001",
+      "theme": "small_changes_to_accessibility_needs",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An environment that worked yesterday may be harder to navigate today. Asking for an adjustment is a practical response to a real need."
+    },
+    {
+      "id": "KDL-SMALL-CHANGES-TO-ACCESSIBILITY-NEEDS-002",
+      "theme": "small_changes_to_accessibility_needs",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You should not have to turn every request for access into a personal story. Clear information about what helps can be enough."
+    },
+    {
+      "id": "KDL-SMALL-CHANGES-TO-ACCESSIBILITY-NEEDS-003",
+      "theme": "small_changes_to_accessibility_needs",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some barriers are invisible to the people who designed the space. Naming one can be useful, even if the first response is imperfect."
+    },
+    {
+      "id": "KDL-SMALL-CHANGES-TO-ACCESSIBILITY-NEEDS-004",
+      "theme": "small_changes_to_accessibility_needs",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An accommodation that helped before may need updating. Your needs can change without making the earlier arrangement any less valid."
+    },
+    {
+      "id": "KDL-SMALL-CHANGES-TO-ACCESSIBILITY-NEEDS-005",
+      "theme": "small_changes_to_accessibility_needs",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Having to ask again for an agreed adjustment can be exhausting. The repeated work is real, even when others do not notice it."
+    }
+  ]
+}
