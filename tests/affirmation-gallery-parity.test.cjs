@@ -5,16 +5,18 @@ const fs=require('node:fs');
 const html=fs.readFileSync('index.html','utf8');
 const published=JSON.parse(fs.readFileSync('affirmations/library.json','utf8')).items;
 const staged=['expansion-batch-01.json','expansion-batch-02.json','expansion-batch-03.json','expansion-batch-04.json','expansion-batch-05.json'].flatMap(p=>JSON.parse(fs.readFileSync('affirmations/'+p,'utf8')).items);
+const featured=published.slice(3);
 const start=html.indexOf('id="free-affirmations"');
 const end=html.indexOf('</section>',start);
 const section=html.slice(start,end);
 test('published gallery has exact approved card count',()=>{
  assert.ok(start>=0 && end>start);
- assert.equal(section.split('<article class="free-affirmation-card">').length-1,published.length);
+ assert.equal(section.split('<article class="free-affirmation-card">').length-1,featured.length);
+ for(const item of published.slice(0,3))assert.ok(!section.includes('<h3>'+item.title+'</h3>'));
  for(const item of staged)assert.ok(!section.includes('<h3>'+item.title+'</h3>'),'Unpublished card leaked: '+item.id);
 });
 test('each published gallery card matches inventory and Plus Save disclosure',()=>{
- for(const item of published){
+ for(const item of featured){
   const titlePos=section.indexOf('<h3>'+item.title+'</h3>');
   assert.ok(titlePos>=0,'Missing '+item.id);
   const cardStart=section.lastIndexOf('<article class="free-affirmation-card">',titlePos);
