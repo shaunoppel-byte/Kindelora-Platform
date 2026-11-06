@@ -1,4 +1,4 @@
-import {ready,member} from "./_auth.js";
+import {ready,member} from "../_auth.js";
 const allowed=new Set(["one-breath","worthy-now","begin-again","small-steps","rest-is-worthy","light-returns"]);
 export async function onRequestGet({request,env,params}){
  const deny=(status)=>new Response(null,{status,headers:{"cache-control":"private, no-store","x-content-type-options":"nosniff"}});
