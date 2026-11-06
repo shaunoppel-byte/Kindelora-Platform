@@ -7,9 +7,9 @@
   const response=root.querySelector('[data-check-in-response]');
   const next=root.querySelector('[data-check-in-next]');
   const messages={
-    yes:"We're glad this moment brought a little light. Carry that feeling with you, at your own pace.",
-    somewhat:"A little lighter still matters. You're welcome to stay for another gentle moment.",
-    notyet:"Thank you for being here. You don't have to feel better on demand. Take your time; perhaps another affirmation or a quiet pause could help."
+    yes:"We're glad this moment brought a little light. Whatever comes next, remember that reaching out for support is always welcome.",
+    somewhat:"A little lighter still matters. You deserve care and connection, even on difficult days. Stay for another gentle moment if you'd like.",
+    notyet:"Thank you for being here. You don't have to feel better on demand, and you don't have to carry everything alone. If it feels right, reach out to someone you trust, or stay for another gentle moment."
   };
   buttons.forEach(button=>button.addEventListener('click',()=>{
     const choice=button.dataset.feeling;
