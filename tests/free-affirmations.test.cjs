@@ -12,7 +12,7 @@ test('free artwork is committed and linked for download without payment',()=>{
  assert.match(html,/Free to download/);
 });
 test('each gallery card provides Plus-gated save action without blocking free downloads',()=>{
- for(const slug of ['small-steps','rest-growing','light-returns'])assert.ok(html.includes('data-heart="gallery-'+slug+'" data-heart-type="affirmation"'));
+ for(const slug of ['small-steps','rest-is-worthy','light-returns'])assert.ok(html.includes('data-heart="gallery-'+slug+'" data-heart-type="affirmation"'));
  assert.equal((html.match(/class="heart-save gallery-heart"/g)||[]).length,3);
  const gate=fs.readFileSync('member-favourites.js','utf8');assert.match(gate,/data-heart-type="affirmation"/);
  assert.match(html,/Saving to favourites requires Plus membership/);
