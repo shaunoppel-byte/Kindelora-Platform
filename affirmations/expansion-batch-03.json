@@ -1,0 +1,369 @@
+{
+  "schemaVersion": 1,
+  "batch": "affirmation-expansion-03",
+  "status": "editorial-staged-not-published",
+  "count": 24,
+  "qualityGate": "Publish only with reviewed licensed photography, matching downloadable affirmation artwork, validated guest access, Plus-gated Save and responsive QA.",
+  "items": [
+    {
+      "id": "permission-to-pause",
+      "title": "Permission to pause",
+      "affirmation": "I can slow down without falling behind. A moment of stillness is part of caring for myself.",
+      "theme": "Rest",
+      "artDirection": "Quiet wooden bench overlooking misty lake at sunrise",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "my-voice-matters",
+      "title": "My voice matters",
+      "affirmation": "My thoughts deserve space. I can speak with honesty and listen with care.",
+      "theme": "Self-expression",
+      "artDirection": "Single wildflower standing in morning light",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "strength-in-softness",
+      "title": "Strength in softness",
+      "affirmation": "Being gentle does not make me weak. I can hold firm boundaries with a kind heart.",
+      "theme": "Boundaries",
+      "artDirection": "Soft sea grass holding steady in coastal breeze",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "today-is-open",
+      "title": "Today is open",
+      "affirmation": "I cannot change yesterday, but I can choose one meaningful thing to do today.",
+      "theme": "Agency",
+      "artDirection": "Open countryside road illuminated by early sunlight",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "good-things-take-time",
+      "title": "Good things take time",
+      "affirmation": "I can give meaningful things the time they need. Growth is still happening when I cannot see it.",
+      "theme": "Patience",
+      "artDirection": "Unfurling green leaf after rain macro photography",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "let-myself-be-seen",
+      "title": "Let myself be seen",
+      "affirmation": "I do not have to hide every imperfect part of me. Real connection begins with being myself.",
+      "theme": "Authenticity",
+      "artDirection": "Sunlight illuminating a solitary tree in a meadow",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "gentle-boundaries",
+      "title": "Kind boundaries",
+      "affirmation": "I can say no with respect and still be a caring person. My time and energy matter too.",
+      "theme": "Boundaries",
+      "artDirection": "Peaceful garden gate framed by flowering vines",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "carry-less",
+      "title": "Carry less",
+      "affirmation": "Not every problem is mine to solve today. I can put down what is not mine to carry.",
+      "theme": "Release",
+      "artDirection": "Smooth stones beside a quiet river",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "celebrate-the-ordinary",
+      "title": "Celebrate the ordinary",
+      "affirmation": "I can make room for gratitude in ordinary moments. Small joys are worthy of noticing.",
+      "theme": "Gratitude",
+      "artDirection": "Golden afternoon light on a cup of tea by a window",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "brave-enough-to-ask",
+      "title": "Brave enough to ask",
+      "affirmation": "I can ask for support before I feel overwhelmed. Reaching out is a strong and hopeful choice.",
+      "theme": "Support",
+      "artDirection": "Two hiking trails joining in sunlit hills",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "a-new-perspective",
+      "title": "A new perspective",
+      "affirmation": "I can look at this moment with curiosity. There may be another way forward that I have not seen yet.",
+      "theme": "Perspective",
+      "artDirection": "Mountain landscape viewed through sunlit forest opening",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "rest-without-proof",
+      "title": "Rest needs no proof",
+      "affirmation": "I do not need to prove I have worked hard enough to deserve rest. I am allowed to pause.",
+      "theme": "Rest",
+      "artDirection": "Folded blanket on a sunlit chair in a calm room",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "one-kind-thought",
+      "title": "One kind thought",
+      "affirmation": "I can replace one harsh thought with a kinder one. That small change is a meaningful beginning.",
+      "theme": "Self-compassion",
+      "artDirection": "First light touching a delicate flower",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "open-to-wonder",
+      "title": "Open to wonder",
+      "affirmation": "I can stay curious about the world around me. There is still beauty I have not discovered.",
+      "theme": "Wonder",
+      "artDirection": "Stars above tranquil desert dunes",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "steady-through-change",
+      "title": "Steady through change",
+      "affirmation": "I can meet change one step at a time. I do not need to know the whole path to begin.",
+      "theme": "Adaptability",
+      "artDirection": "Footbridge across a stream in autumn forest",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "proud-of-my-effort",
+      "title": "Proud of my effort",
+      "affirmation": "My effort deserves recognition, even when the result is different from what I hoped.",
+      "theme": "Self-worth",
+      "artDirection": "Hiker resting at a scenic overlook",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "make-space-for-joy",
+      "title": "Make space for joy",
+      "affirmation": "I can welcome a moment of happiness without waiting for everything to be perfect.",
+      "theme": "Joy",
+      "artDirection": "Sunlight dancing through a field of yellow flowers",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "start-where-i-am",
+      "title": "Start where I am",
+      "affirmation": "I can work with what I have today. A meaningful beginning does not require ideal conditions.",
+      "theme": "Initiative",
+      "artDirection": "Seedling growing between stones in morning light",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "listen-inward",
+      "title": "Listen inward",
+      "affirmation": "I can notice what I need before deciding what comes next. My feelings deserve thoughtful attention.",
+      "theme": "Awareness",
+      "artDirection": "Still pond reflecting trees at dawn",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "the-next-right-step",
+      "title": "The next right step",
+      "affirmation": "I do not need to solve everything at once. I can focus on the next thoughtful step.",
+      "theme": "Focus",
+      "artDirection": "Stone pathway winding through a peaceful garden",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "let-good-in",
+      "title": "Let good things in",
+      "affirmation": "I can accept kindness, praise and support without explaining why I deserve them.",
+      "theme": "Receiving",
+      "artDirection": "Open window with soft sunlight and flowers",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "room-for-mistakes",
+      "title": "Room for mistakes",
+      "affirmation": "A mistake can teach me without defining me. I can learn, repair and move forward.",
+      "theme": "Learning",
+      "artDirection": "Young sapling on a winding woodland path",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "peace-in-progress",
+      "title": "Peace while growing",
+      "affirmation": "I can be a work in progress and still find peace in who I am today.",
+      "theme": "Acceptance",
+      "artDirection": "Quiet shoreline with gentle waves at sunset",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "tomorrow-can-wait",
+      "title": "Tomorrow can wait",
+      "affirmation": "I can prepare for tomorrow without living there today. This moment deserves my attention.",
+      "theme": "Presence",
+      "artDirection": "Warm sunset over a calm coastal horizon",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    }
+  ]
+}
