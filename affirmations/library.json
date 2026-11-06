@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "description": "KINDELORA Affirmation Library. Existing published affirmation inventory. Messages catalogue is separate.",
+  "publishedCount": 3,
+  "items": [
+    {
+      "id": "one-breath",
+      "title": "One breath at a time",
+      "affirmation": "I do not have to carry the whole day at once. One breath. One step. That is enough for now.",
+      "image": "https://images.unsplash.com/photo-1772041045313-0500d3706819?auto=format&fit=crop&w=1200&q=85",
+      "download": "/affirmations/kindelora-premium-one-breath.png",
+      "originalArtwork": "/affirmations/one-breath.svg",
+      "saveType": "affirmation",
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "worthy-now",
+      "title": "Worthy, just as I am",
+      "affirmation": "I am worthy of kindness even on the days I feel unfinished. I do not have to earn it.",
+      "image": "https://images.unsplash.com/photo-1777432736487-f9ae962c5ef5?auto=format&fit=crop&w=1200&q=85",
+      "download": "/affirmations/kindelora-premium-worthy-now.png",
+      "originalArtwork": "/affirmations/worthy-now.svg",
+      "saveType": "affirmation",
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "begin-again",
+      "title": "Tomorrow holds possibility",
+      "affirmation": "A hard day is not the whole story. There is still room for something beautiful.",
+      "image": "https://images.unsplash.com/photo-1757137911521-458496283554?auto=format&fit=crop&w=1200&q=85",
+      "download": "/affirmations/kindelora-premium-begin-again.png",
+      "originalArtwork": "/affirmations/begin-again.svg",
+      "saveType": "affirmation",
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    }
+  ]
+}
