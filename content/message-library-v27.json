@@ -1,0 +1,208 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 27",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-06",
+  "messages": [
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-THAT-CHANGED-001",
+      "theme": "returning_to_a_place_that_changed",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The café you remember has new tables and different faces. Missing its old rhythm does not prevent you from discovering what belongs here now."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-THAT-CHANGED-002",
+      "theme": "returning_to_a_place_that_changed",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar street can feel unexpectedly foreign after years away. You are noticing change, not failing some test of belonging."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-THAT-CHANGED-003",
+      "theme": "returning_to_a_place_that_changed",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes a place holds a version of you that no longer fits. You can honour those memories without trying to live inside them."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-THAT-CHANGED-004",
+      "theme": "returning_to_a_place_that_changed",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The shop you loved has closed, and the loss seems too small to mention. Ordinary places can carry extraordinary pieces of our history."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-THAT-CHANGED-005",
+      "theme": "returning_to_a_place_that_changed",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Coming back may bring relief and disappointment in the same afternoon. Neither feeling cancels what this place once meant to you."
+    },
+    {
+      "id": "KDL-BEING-THE-ONE-WHO-REMEMBERS-DATES-001",
+      "theme": "being_the_one_who_remembers_dates",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You remember birthdays, appointments, and little milestones, yet your own dates sometimes pass quietly. It is reasonable to wish someone would notice without prompting."
+    },
+    {
+      "id": "KDL-BEING-THE-ONE-WHO-REMEMBERS-DATES-002",
+      "theme": "being_the_one_who_remembers_dates",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Keeping track of everyone else's calendar can become invisible work. You can share that responsibility instead of silently carrying the entire list."
+    },
+    {
+      "id": "KDL-BEING-THE-ONE-WHO-REMEMBERS-DATES-003",
+      "theme": "being_the_one_who_remembers_dates",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A forgotten anniversary may sting even when the other person cares deeply. You can name the hurt without deciding what it says about the relationship."
+    },
+    {
+      "id": "KDL-BEING-THE-ONE-WHO-REMEMBERS-DATES-004",
+      "theme": "being_the_one_who_remembers_dates",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Remembering a friend's important day is a generous gesture, not a contract requiring identical gestures in return. Your disappointment can still be real."
+    },
+    {
+      "id": "KDL-BEING-THE-ONE-WHO-REMEMBERS-DATES-005",
+      "theme": "being_the_one_who_remembers_dates",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you are tired of being the reminder, a gentle conversation may help. People cannot always see the work that happens before the celebration."
+    },
+    {
+      "id": "KDL-NAVIGATING-A-CHANGED-COMMUTE-001",
+      "theme": "navigating_a_changed_commute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A new route can unsettle a morning you once knew by heart. Give yourself room to learn its turns without treating every delay as failure."
+    },
+    {
+      "id": "KDL-NAVIGATING-A-CHANGED-COMMUTE-002",
+      "theme": "navigating_a_changed_commute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When travel takes longer than expected, the frustration may follow you through the door. A few quiet minutes before your next task could help."
+    },
+    {
+      "id": "KDL-NAVIGATING-A-CHANGED-COMMUTE-003",
+      "theme": "navigating_a_changed_commute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Changing buses or trains means learning unfamiliar rhythms and faces. It is okay to feel tired from decisions other people barely notice."
+    },
+    {
+      "id": "KDL-NAVIGATING-A-CHANGED-COMMUTE-004",
+      "theme": "navigating_a_changed_commute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An easier journey for someone else may be a difficult one for you. Your time and energy are real considerations, not minor inconveniences."
+    },
+    {
+      "id": "KDL-NAVIGATING-A-CHANGED-COMMUTE-005",
+      "theme": "navigating_a_changed_commute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Missing a connection can change the shape of the whole day. You can deal with the practical problem without turning it into a judgment about yourself."
+    },
+    {
+      "id": "KDL-SHARING-A-CREATIVE-PROJECT-001",
+      "theme": "sharing_a_creative_project",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Showing someone your unfinished work can feel more exposing than presenting a polished result. You may ask them what kind of feedback they can offer."
+    },
+    {
+      "id": "KDL-SHARING-A-CREATIVE-PROJECT-002",
+      "theme": "sharing_a_creative_project",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A collaborator may imagine a different ending than you do. Disagreement can reveal useful possibilities without requiring either person to surrender their voice."
+    },
+    {
+      "id": "KDL-SHARING-A-CREATIVE-PROJECT-003",
+      "theme": "sharing_a_creative_project",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When your idea is met with silence, it is tempting to fill the gap with criticism. The other person may simply need time to think."
+    },
+    {
+      "id": "KDL-SHARING-A-CREATIVE-PROJECT-004",
+      "theme": "sharing_a_creative_project",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Shared projects have a way of blurring whose effort is visible. Naming contributions clearly can protect the friendship as well as the work."
+    },
+    {
+      "id": "KDL-SHARING-A-CREATIVE-PROJECT-005",
+      "theme": "sharing_a_creative_project",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can be proud of something you made together and still miss the version you first imagined. Collaboration changes both the outcome and the maker."
+    },
+    {
+      "id": "KDL-WHEN-A-PLAN-BECOMES-MORE-EXPENSIVE-001",
+      "theme": "when_a_plan_becomes_more_expensive",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A small outing can become stressful when the costs keep growing. Asking what everyone can comfortably afford is considerate, not awkward."
+    },
+    {
+      "id": "KDL-WHEN-A-PLAN-BECOMES-MORE-EXPENSIVE-002",
+      "theme": "when_a_plan_becomes_more_expensive",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Changing your mind after seeing the final price is allowed. You do not owe anyone an explanation of your finances to choose a simpler plan."
+    },
+    {
+      "id": "KDL-WHEN-A-PLAN-BECOMES-MORE-EXPENSIVE-003",
+      "theme": "when_a_plan_becomes_more_expensive",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the cheapest option carries extra time or effort. Your budget includes more than the number printed on a receipt."
+    },
+    {
+      "id": "KDL-WHEN-A-PLAN-BECOMES-MORE-EXPENSIVE-004",
+      "theme": "when_a_plan_becomes_more_expensive",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If friends choose a pricier activity, you can suggest another way to spend time together. Connection need not depend on matching spending habits."
+    },
+    {
+      "id": "KDL-WHEN-A-PLAN-BECOMES-MORE-EXPENSIVE-005",
+      "theme": "when_a_plan_becomes_more_expensive",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Unexpected costs can turn anticipation into worry. It is fine to revise the plan before resentment replaces the enjoyment you hoped for."
+    }
+  ]
+}
