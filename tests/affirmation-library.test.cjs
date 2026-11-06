@@ -5,7 +5,7 @@ const fs=require('node:fs');
 const path=require('node:path');
 const root=path.resolve(__dirname,'..');
 const read=(name)=>JSON.parse(fs.readFileSync(path.join(root,'affirmations',name),'utf8'));
-const batches=['expansion-batch-01.json','expansion-batch-02.json','expansion-batch-03.json','expansion-batch-04.json'];
+const batches=['expansion-batch-01.json','expansion-batch-02.json','expansion-batch-03.json','expansion-batch-04.json','expansion-batch-05.json'];
 const published=read('library.json');
 const staged=batches.map(read);
 test('affirmation inventory counts and unique IDs across published and staged collections',()=>{
