@@ -53,6 +53,19 @@ jobs:
           node scripts/member-smoke.mjs
           node scripts/member-isolation-smoke.mjs
           node scripts/member-entitlement-isolation-smoke.mjs
+      - name: Verify Pages Functions local imports resolve
+        run: |
+          python3 - <<'PY'
+          from pathlib import Path
+          import re
+          for file in Path('functions').rglob('*.js'):
+              source = file.read_text()
+              for target in re.findall(r'''(?:from\s*|import\s*\()\s*["'](\.[^"']+)["']''', source):
+                  resolved = (file.parent / target).resolve()
+                  if not resolved.is_file():
+                      raise SystemExit(f'Unresolved import in {file}: {target}')
+          print('All local Pages Functions imports resolve')
+          PY
       - name: Validate curated message library
         run: python3 scripts/check-message-library.py
 
