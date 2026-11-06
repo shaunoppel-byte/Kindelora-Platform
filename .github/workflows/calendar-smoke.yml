@@ -1,0 +1,26 @@
+name: KINDELORA calendar PR verification
+on:
+  pull_request:
+    types: [opened, synchronize, reopened]
+  workflow_dispatch:
+jobs:
+  calendar-smoke:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Calendar smoke tests on PR branch
+        run: |
+          if [ -f tests/calendar-smoke.test.cjs ]; then
+            node --test tests/calendar-smoke.test.cjs
+          else
+            echo "Calendar test suite is not present on this branch."
+          fi
+      - name: JavaScript syntax checks
+        run: |
+          node --check app.js
+          node --check sw.js
