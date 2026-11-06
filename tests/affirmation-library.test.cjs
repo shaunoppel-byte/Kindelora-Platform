@@ -47,7 +47,9 @@ test('subscriber library API fails closed for guest and unpaid members',()=>{
  assert.match(api,/if\(!row\)/);
  assert.match(api,/s.status='active'/);
  assert.match(api,/email_verified_at IS NOT NULL/);
- assert.match(api,/items:\[\]/);
+ assert.match(api,/PRIVATE_AFFIRMATION_ARTWORK\.head/);
+ assert.match(api,/checks\.some/);
+ assert.match(api,/items:artwork\.map/);
 });
 
 test('private artwork route enforces subscription and no-store responses',()=>{
