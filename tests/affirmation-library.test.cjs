@@ -19,8 +19,8 @@ test('editorial and access integrity for all affirmations',()=>{
   assert.match(item.id,/^[a-z0-9]+(?:-[a-z0-9]+)*$/);
   assert.ok(item.title.trim().length>=5);
   assert.ok(item.affirmation.trim().length>=35);
-  assert.equal(item.access.browse,'guest');
-  assert.equal(item.access.download,'guest');
+  assert.equal(item.access.browse,item.access.featured===false?'plus':'guest');
+  assert.equal(item.access.download,item.access.featured===false?'plus':'guest');
   assert.equal(item.access.save,'plus');
  }
 });

@@ -12,9 +12,10 @@
       "originalArtwork": "/affirmations/one-breath.svg",
       "saveType": "affirmation",
       "access": {
-        "browse": "guest",
-        "download": "guest",
-        "save": "plus"
+        "browse": "plus",
+        "download": "plus",
+        "save": "plus",
+        "featured": false
       }
     },
     {
@@ -26,9 +27,10 @@
       "originalArtwork": "/affirmations/worthy-now.svg",
       "saveType": "affirmation",
       "access": {
-        "browse": "guest",
-        "download": "guest",
-        "save": "plus"
+        "browse": "plus",
+        "download": "plus",
+        "save": "plus",
+        "featured": false
       }
     },
     {
@@ -40,9 +42,10 @@
       "originalArtwork": "/affirmations/begin-again.svg",
       "saveType": "affirmation",
       "access": {
-        "browse": "guest",
-        "download": "guest",
-        "save": "plus"
+        "browse": "plus",
+        "download": "plus",
+        "save": "plus",
+        "featured": false
       }
     },
     {
@@ -55,7 +58,8 @@
       "access": {
         "browse": "guest",
         "download": "guest",
-        "save": "plus"
+        "save": "plus",
+        "featured": true
       }
     },
     {
@@ -68,7 +72,8 @@
       "access": {
         "browse": "guest",
         "download": "guest",
-        "save": "plus"
+        "save": "plus",
+        "featured": true
       }
     },
     {
@@ -81,7 +86,8 @@
       "access": {
         "browse": "guest",
         "download": "guest",
-        "save": "plus"
+        "save": "plus",
+        "featured": true
       }
     }
   ]
