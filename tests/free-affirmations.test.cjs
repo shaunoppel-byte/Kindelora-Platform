@@ -1,6 +1,23 @@
-const test=require('node:test');const assert=require('node:assert/strict');const fs=require('node:fs');const html=fs.readFileSync('index.html','utf8');const slugs=['one-breath','worthy-now','begin-again'];test('three free cards appear exactly once',()=>{assert.equal((html.match(/class="free-affirmation-card"/g)||[]).length,3);for(const s of slugs){assert.ok(html.includes('/affirmations/'+s+'.svg'));assert.ok(html.includes('download="kindelora-premium-'+s+'.png"'));}});test('cards are standalone scalable vector assets',()=>{for(const s of slugs){const svg=fs.readFileSync('affirmations/'+s+'.svg','utf8');assert.match(svg,/viewBox="0 0 1600 2000"/);assert.match(svg,/<text/);assert.match(svg,/<\/svg>/);}});test('QR points to public card and paid access is not claimed live',()=>{for(const s of slugs)assert.ok(html.includes('href="https://kindelora.pages.dev/affirmations/'+s+'.svg"'));assert.match(html,/Plus subscriptions are not yet available to purchase/);});
-test('QR codes are embedded and not dependent on external image providers',()=>{assert.equal((html.match(/<svg class="qr"/g)||[]).length,3);assert.doesNotMatch(html,/api\.qrserver\.com/);for(const s of slugs)assert.ok(html.includes('href="https://kindelora.pages.dev/affirmations/'+s+'.svg"'));});
-
-test('three gallery hearts use the existing Plus gate, while downloads stay free',()=>{for(const slug of slugs){assert.ok(html.includes('data-heart="gallery-'+slug+'" data-heart-type="affirmation"'));assert.ok(html.includes('download="kindelora-premium-'+slug+'.png"'));}assert.equal((html.match(/class="heart-save gallery-heart"/g)||[]).length,3);const gate=fs.readFileSync('member-favourites.js','utf8');assert.match(gate,/data-heart-type="affirmation"/);assert.match(gate,/dialog\.showModal\(\)/);assert.match(gate,/This message has not been saved and no payment will be taken/);});
-
-test('premium photographic gallery image assets are present and referenced',()=>{for(const slug of slugs){const asset='affirmations/kindelora-premium-'+slug+'.png';assert.ok(fs.existsSync(asset),'Missing '+asset);assert.ok(fs.statSync(asset).size>10000,'Asset too small '+asset);assert.ok(html.includes('src="/'+asset+'"'));assert.ok(html.includes('href="/'+asset+'" download="kindelora-premium-'+slug+'.png"'));}});
+const test=require('node:test');
+const assert=require('node:assert/strict');
+const fs=require('node:fs');
+const html=fs.readFileSync('index.html','utf8');
+const slugs=['small-steps-still-count','rest-is-part-of-growing','the-light-returns'];
+test('three free photographic affirmation cards render exactly once',()=>{
+ assert.equal((html.match(/<article class="free-affirmation-card">/g)||[]).length,3);
+ for(const slug of slugs){assert.ok(html.includes('src="/affirmations/artwork/'+slug+'.png"'));assert.ok(html.includes('download="'+slug+'.png"'));}
+});
+test('free artwork is committed and linked for download without payment',()=>{
+ for(const slug of slugs){const file='affirmations/artwork/'+slug+'.png';assert.ok(fs.existsSync(file),'Missing '+file);assert.ok(fs.statSync(file).size>10000,'Artwork unexpectedly small '+file);assert.ok(html.includes('href="/'+file+'"'));}
+ assert.match(html,/Free to download/);
+});
+test('each gallery card provides Plus-gated save action without blocking free downloads',()=>{
+ for(const slug of ['small-steps','rest-growing','light-returns'])assert.ok(html.includes('data-heart="gallery-'+slug+'" data-heart-type="affirmation"'));
+ assert.equal((html.match(/class="heart-save gallery-heart"/g)||[]).length,3);
+ const gate=fs.readFileSync('member-favourites.js','utf8');assert.match(gate,/data-heart-type="affirmation"/);
+ assert.match(html,/Saving to favourites requires Plus membership/);
+});
+test('gallery is not dependent on external QR code providers',()=>{
+ assert.doesNotMatch(html,/api\\.qrserver\\.com/);
+ assert.equal((html.match(/class="btn gallery-download"/g)||[]).length,3);
+});
