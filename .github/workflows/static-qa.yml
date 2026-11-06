@@ -52,6 +52,7 @@ jobs:
           python3 scripts/check-member-access.py
           node scripts/member-smoke.mjs
           node scripts/member-isolation-smoke.mjs
+          node scripts/member-entitlement-isolation-smoke.mjs
       - name: Validate curated message library
         run: python3 scripts/check-message-library.py
 
