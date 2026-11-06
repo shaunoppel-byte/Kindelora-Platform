@@ -5,6 +5,7 @@
   if(!root)return;
   const buttons=[...root.querySelectorAll('[data-feeling]')];
   const response=root.querySelector('[data-check-in-response]');
+  const next=root.querySelector('[data-check-in-next]');
   const messages={
     yes:"We're glad this moment brought a little light. Carry that feeling with you, at your own pace.",
     somewhat:"A little lighter still matters. You're welcome to stay for another gentle moment.",
@@ -16,6 +17,7 @@
     buttons.forEach(b=>b.setAttribute('aria-pressed',String(b===button)));
     response.textContent=messages[choice];
     response.hidden=false;
+    if(next)next.hidden=choice==='yes';
     // Deliberately no storage or submission: the response stays only in this page.
   }));
 })();
