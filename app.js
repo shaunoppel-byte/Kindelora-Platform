@@ -78,11 +78,13 @@ function calendarOpen(provider){
    const params=new URLSearchParams({action:"TEMPLATE",text:title,dates:checkinUtc(start)+"/"+checkinUtc(end),details:checkinMessage});
    url="https://calendar.google.com/calendar/render?"+params.toString();
  }else{
-   const params=new URLSearchParams({path:"/calendar/action/compose",rru:"addevent",subject:title,startdt:start.toISOString(),enddt:end.toISOString(),body:checkinMessage});
+   const params=new URLSearchParams({rru:"addevent",subject:title,startdt:start.toISOString(),enddt:end.toISOString(),body:checkinMessage});
    url="https://outlook.office.com/calendar/0/deeplink/compose?"+params.toString();
  }
- const opened=window.open(url,"_blank","noopener,noreferrer");
- checkinStatus.textContent=opened?"Your calendar has opened in a new tab. Review the time and select Save in your calendar to finish.":"If your calendar did not open, allow pop-ups for this site and try again. No reminder has been saved by KINDELORA.";
+ const link=document.createElement("a");
+ link.href=url;link.target="_blank";link.rel="noopener noreferrer";
+ document.body.appendChild(link);link.click();link.remove();
+ checkinStatus.textContent="Calendar handoff requested. If a new tab opened, review the event and select Save. If nothing opened, check your browser pop-up settings. KINDELORA has not saved a reminder.";
 }
 document.getElementById("calendar-google").addEventListener("click",()=>calendarOpen("google"));
 document.getElementById("calendar-outlook").addEventListener("click",()=>calendarOpen("outlook"));
