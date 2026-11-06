@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 1,
+  "batch": "affirmation-expansion-02",
+  "status": "editorial-staged-not-published",
+  "count": 12,
+  "qualityGate": "Founder-approved photographic art and complete matching downloadable cards; verified guest download, Plus save gate, mobile/desktop visual and accessibility QA required before publishing.",
+  "items": [
+    {
+      "id": "gentle-beginnings",
+      "title": "A gentle beginning",
+      "affirmation": "I can begin again without judging where I have been. Today offers space for a new choice.",
+      "theme": "Renewal",
+      "artDirection": "First light over a misty garden path",
+      "photo": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "enough-for-today",
+      "title": "Enough for today",
+      "affirmation": "What I have done today is enough for this moment. I can honour my effort and let myself rest.",
+      "theme": "Self-compassion",
+      "artDirection": "Soft evening light on a quiet windowsill",
+      "photo": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "room-to-grow",
+      "title": "Room to grow",
+      "affirmation": "I can be proud of who I am while making room for who I am becoming.",
+      "theme": "Growth",
+      "artDirection": "New fern unfurling in a sunlit forest",
+      "photo": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "choose-peace",
+      "title": "Choosing peace",
+      "affirmation": "I do not have to respond to every worry. I can return to what is calm and within my reach.",
+      "theme": "Peace",
+      "artDirection": "Still lake reflecting pale dawn sky",
+      "photo": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "not-alone",
+      "title": "Connection matters",
+      "affirmation": "I can reach out and let others care for me. Asking for connection is an act of courage.",
+      "theme": "Connection",
+      "artDirection": "Two paths meeting through golden meadow",
+      "photo": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "keep-going-gently",
+      "title": "Keep going gently",
+      "affirmation": "Progress does not require perfection. One honest step is worth celebrating.",
+      "theme": "Resilience",
+      "artDirection": "Winding mountain trail in morning fog",
+      "photo": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "joy-in-small-things",
+      "title": "Small moments of joy",
+      "affirmation": "I can notice one beautiful thing today, however ordinary it may seem.",
+      "theme": "Gratitude",
+      "artDirection": "Warm sun on dew-covered wildflowers",
+      "photo": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "trust-my-pace",
+      "title": "My own pace",
+      "affirmation": "My journey does not need to look like anyone else's. I am allowed to grow in my own time.",
+      "theme": "Confidence",
+      "artDirection": "Single sailboat crossing calm sea at sunrise",
+      "photo": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "breathe-and-return",
+      "title": "Breathe and return",
+      "affirmation": "When everything feels loud, I can pause, breathe, and begin with the next small thing.",
+      "theme": "Calm",
+      "artDirection": "Gentle ocean tide meeting smooth stones",
+      "photo": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "hope-has-roots",
+      "title": "Hope takes root",
+      "affirmation": "Even quiet hope can grow. I can care for it one day at a time.",
+      "theme": "Hope",
+      "artDirection": "Young tree lit by sunrise in open field",
+      "photo": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "kindness-ripples",
+      "title": "Kindness travels",
+      "affirmation": "A small kindness can travel farther than I will ever see. What I offer matters.",
+      "theme": "Kindness",
+      "artDirection": "Sunlit ripples on a peaceful pond",
+      "photo": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "welcome-tomorrow",
+      "title": "Welcome tomorrow",
+      "affirmation": "I do not need every answer tonight. Tomorrow can meet me with new possibilities.",
+      "theme": "Optimism",
+      "artDirection": "Pastel twilight over distant hills",
+      "photo": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    }
+  ]
+}
