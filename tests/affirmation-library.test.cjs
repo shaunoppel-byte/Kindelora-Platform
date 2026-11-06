@@ -39,3 +39,13 @@ test('published download targets exist and do not reference staged placeholders'
   assert.ok(fs.existsSync(path.join(root,item.download.slice(1))),item.download+' missing');
  }
 });
+
+test('subscriber library API fails closed for guest and unpaid members',()=>{
+ const api=fs.readFileSync(path.join(root,'functions/api/member/affirmation-library.js'),'utf8');
+ assert.match(api,/if\(!ready\(env\)\)/);
+ assert.match(api,/if\(!user\)/);
+ assert.match(api,/if\(!row\)/);
+ assert.match(api,/s.status='active'/);
+ assert.match(api,/email_verified_at IS NOT NULL/);
+ assert.match(api,/items:\[\]/);
+});
