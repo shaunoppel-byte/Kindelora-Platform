@@ -1,0 +1,369 @@
+{
+  "schemaVersion": 1,
+  "batch": "affirmation-expansion-04",
+  "status": "editorial-staged-not-published",
+  "count": 24,
+  "qualityGate": "Premium artwork, matching downloadable card and access QA required before publication.",
+  "items": [
+    {
+      "id": "quiet-confidence",
+      "title": "Quiet confidence",
+      "affirmation": "I do not need to be the loudest person in the room to know that I have something valuable to offer.",
+      "theme": "Confidence",
+      "artDirection": "Sturdy oak tree on peaceful hillside",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "when-plans-change",
+      "title": "When plans change",
+      "affirmation": "A change in direction does not erase my progress. I can adjust and keep moving with care.",
+      "theme": "Adaptability",
+      "artDirection": "Curving woodland trail after rain",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "joy-without-reason",
+      "title": "Joy needs no reason",
+      "affirmation": "I am allowed to enjoy a good moment without worrying about what comes next.",
+      "theme": "Joy",
+      "artDirection": "Sunlit field of daisies",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "steady-heart",
+      "title": "A steady heart",
+      "affirmation": "I can feel uncertain and still act with care. I do not need complete certainty to move forward.",
+      "theme": "Courage",
+      "artDirection": "Lighthouse on quiet rocky shore",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "welcome-help",
+      "title": "Welcome support",
+      "affirmation": "I can receive help with gratitude. Sharing a burden makes room for connection.",
+      "theme": "Support",
+      "artDirection": "Two hiking backpacks at overlook",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "enough-space",
+      "title": "Space to feel",
+      "affirmation": "I can make room for difficult feelings without letting them define the whole day.",
+      "theme": "Awareness",
+      "artDirection": "Clouds opening over calm blue sea",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "gentle-discipline",
+      "title": "Gentle consistency",
+      "affirmation": "I can build a good habit through small, repeatable choices rather than harsh demands.",
+      "theme": "Habits",
+      "artDirection": "Morning light on garden path",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "give-myself-credit",
+      "title": "Give myself credit",
+      "affirmation": "I can acknowledge the effort nobody else saw. Quiet work still deserves respect.",
+      "theme": "Recognition",
+      "artDirection": "Hiking boots beside mountain trail",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "try-with-curiosity",
+      "title": "Try with curiosity",
+      "affirmation": "I can approach something unfamiliar as a chance to learn, not a test of my worth.",
+      "theme": "Learning",
+      "artDirection": "Sunlit forest trail",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "hope-and-action",
+      "title": "Hope can move",
+      "affirmation": "I can pair a hopeful thought with one small action. Even gentle effort can open a door.",
+      "theme": "Hope",
+      "artDirection": "Open garden gate in morning light",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "kind-to-my-body",
+      "title": "Care for this body",
+      "affirmation": "My body deserves nourishment, movement and rest, not criticism for being human.",
+      "theme": "Body kindness",
+      "artDirection": "Sunrise over peaceful garden",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "choose-understanding",
+      "title": "Choose understanding",
+      "affirmation": "Before I assume the worst, I can ask a thoughtful question and make room for another view.",
+      "theme": "Empathy",
+      "artDirection": "Two bridges meeting over river",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "make-room-for-play",
+      "title": "Room for play",
+      "affirmation": "I can make space for laughter and play. Joy is a meaningful part of living.",
+      "theme": "Playfulness",
+      "artDirection": "Kites above a sunny meadow",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "my-boundaries-are-valid",
+      "title": "My boundaries matter",
+      "affirmation": "I can protect my peace without needing everyone to agree with my choices.",
+      "theme": "Boundaries",
+      "artDirection": "Stone wall lined with lavender",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "not-a-race",
+      "title": "Not a race",
+      "affirmation": "Someone else's timeline does not diminish mine. I can celebrate their journey and honour my own.",
+      "theme": "Comparison",
+      "artDirection": "Two paths through green valley",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "hold-onto-wonder",
+      "title": "Keep wonder close",
+      "affirmation": "I can look at familiar things with fresh eyes. The ordinary world still holds surprises.",
+      "theme": "Wonder",
+      "artDirection": "Morning dew on spiderweb",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "repair-and-reconnect",
+      "title": "Repair is possible",
+      "affirmation": "When I get something wrong, I can listen, apologise sincerely and choose a better way forward.",
+      "theme": "Repair",
+      "artDirection": "Sunlight after rain on village lane",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "beyond-one-moment",
+      "title": "More than one moment",
+      "affirmation": "One hard conversation or disappointing result does not tell the whole story of who I am.",
+      "theme": "Perspective",
+      "artDirection": "Mountain panorama after storm",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "gentle-ambition",
+      "title": "Ambition with kindness",
+      "affirmation": "I can work toward meaningful goals while treating myself with patience along the way.",
+      "theme": "Ambition",
+      "artDirection": "Sunrise over distant summit",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "believe-in-small-wins",
+      "title": "Small wins matter",
+      "affirmation": "I can celebrate the steps that are easy to overlook. They are building something worthwhile.",
+      "theme": "Progress",
+      "artDirection": "Stone steps on green hillside",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "welcome-a-fresh-start",
+      "title": "A fresh start is here",
+      "affirmation": "I can begin again without waiting for a perfect Monday, month or milestone.",
+      "theme": "Renewal",
+      "artDirection": "Sunrise over city rooftops",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "care-goes-both-ways",
+      "title": "Care goes both ways",
+      "affirmation": "I can offer kindness to others while remembering that my own needs matter too.",
+      "theme": "Balance",
+      "artDirection": "Two wildflowers in morning light",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "choose-a-better-question",
+      "title": "A better question",
+      "affirmation": "Instead of asking why I am not further ahead, I can ask what would help me take one good step.",
+      "theme": "Mindset",
+      "artDirection": "Forest path with clearing",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    },
+    {
+      "id": "keep-the-door-open",
+      "title": "Keep the door open",
+      "affirmation": "I can stay open to a possibility I have not considered yet. My next chapter is still being written.",
+      "theme": "Optimism",
+      "artDirection": "Sunlit doorway to garden",
+      "image": null,
+      "download": null,
+      "published": false,
+      "access": {
+        "browse": "guest",
+        "download": "guest",
+        "save": "plus"
+      }
+    }
+  ]
+}
