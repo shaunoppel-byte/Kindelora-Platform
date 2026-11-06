@@ -1,0 +1,25 @@
+name: Affirmation library release gates
+on:
+  pull_request:
+    paths:
+      - 'affirmations/**'
+      - 'tests/affirmation-library.test.cjs'
+      - '.github/workflows/affirmation-library.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'affirmations/**'
+      - 'tests/affirmation-library.test.cjs'
+      - '.github/workflows/affirmation-library.yml'
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify affirmation library integrity and release rules
+        run: node --test tests/affirmation-library.test.cjs
