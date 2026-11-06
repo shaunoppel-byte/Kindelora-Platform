@@ -2,7 +2,7 @@
 import json, re
 from collections import Counter
 from pathlib import Path
-paths=[Path("content/message-library-v1.json"),Path("content/message-library-v2.json"),Path("content/message-library-v3.json"),Path("content/message-library-v4.json"),Path("content/message-library-v5.json"),Path("content/message-library-v6.json"),Path("content/message-library-v7.json"),Path("content/message-library-v8.json"),Path("content/message-library-v9.json"),Path("content/message-library-v10.json"),Path("content/message-library-v11.json"),Path("content/message-library-v12.json"),Path("content/message-library-v13.json"),Path("content/message-library-v14.json"),Path("content/message-library-v15.json"),Path("content/message-library-v16.json"),Path("content/message-library-v17.json"),Path("content/message-library-v18.json"),Path("content/message-library-v19.json"),Path("content/message-library-v20.json"),Path("content/message-library-v21.json"),Path("content/message-library-v22.json"),Path("content/message-library-v23.json"),Path("content/message-library-v24.json"),Path("content/message-library-v25.json")]
+paths=[Path("content/message-library-v1.json"),Path("content/message-library-v2.json"),Path("content/message-library-v3.json"),Path("content/message-library-v4.json"),Path("content/message-library-v5.json"),Path("content/message-library-v6.json"),Path("content/message-library-v7.json"),Path("content/message-library-v8.json"),Path("content/message-library-v9.json"),Path("content/message-library-v10.json"),Path("content/message-library-v11.json"),Path("content/message-library-v12.json"),Path("content/message-library-v13.json"),Path("content/message-library-v14.json"),Path("content/message-library-v15.json"),Path("content/message-library-v16.json"),Path("content/message-library-v17.json"),Path("content/message-library-v18.json"),Path("content/message-library-v19.json"),Path("content/message-library-v20.json"),Path("content/message-library-v21.json"),Path("content/message-library-v22.json"),Path("content/message-library-v23.json"),Path("content/message-library-v24.json"),Path("content/message-library-v25.json"),Path("content/message-library-v26.json")]
 collections=[json.loads(path.read_text(encoding="utf-8")) for path in paths]
 items=[msg for collection in collections for msg in collection["messages"]]
 assert len(collections[0]["messages"])==120, "First editorial batch count changed"
@@ -30,13 +30,14 @@ assert len(collections[21]["messages"])==25, "Expansion batch 22 must contain 25
 assert len(collections[22]["messages"])==30, "Expansion batch 23 must contain 30 messages"
 assert len(collections[23]["messages"])==20, "Expansion batch 24 must contain 20 messages"
 assert len(collections[24]["messages"])==25, "Expansion batch 25 must contain 25 messages"
-assert len(items)==2380, "Combined editorial library count mismatch"
+assert len(collections[25]["messages"])==30, "Expansion batch 26 must contain 30 messages"
+assert len(items)==2410, "Combined editorial library count mismatch"
 ids=[x["id"] for x in items]
 assert len(set(ids))==len(ids), "Duplicate message IDs"
 norm=[re.sub(r"[^a-z0-9]+"," ",x["text"].casefold()).strip() for x in items]
 assert len(set(norm))==len(norm), "Duplicate message text"
 themes=Counter(x["theme"] for x in items)
-assert len(themes)==249 and all(n>=5 for n in themes.values()), "Theme coverage insufficient"
+assert len(themes)==255 and all(n>=5 for n in themes.values()), "Theme coverage insufficient"
 for x in items:
     assert x["status"]=="editorial-review", "Do not silently publish unapproved content"
     assert x["audience"]=="all" and x["tone"]=="warm-grounded"
@@ -47,5 +48,5 @@ assert catalogue["count"]==2100 and len(catalogue["messages"])==2100, "Public ca
 assert {x["id"] for x in catalogue["messages"]}==set(x["id"] for x in items[:2100]), "Public catalogue baseline mismatch"
 source_by_id={m["id"]:m["text"] for m in items}
 assert all(x["text"]==source_by_id[x["id"]] for x in catalogue["messages"]), "Public catalogue content mismatch"
-assert not ({x["id"] for x in collections[13]["messages"]+collections[14]["messages"]+collections[15]["messages"]+collections[16]["messages"]+collections[17]["messages"]+collections[18]["messages"]+collections[19]["messages"]+collections[20]["messages"]+collections[21]["messages"]+collections[22]["messages"]+collections[23]["messages"]+collections[24]["messages"]} & {x["id"] for x in catalogue["messages"]}), "Unreviewed batches 14-25 must not be published"
+assert not ({x["id"] for x in collections[13]["messages"]+collections[14]["messages"]+collections[15]["messages"]+collections[16]["messages"]+collections[17]["messages"]+collections[18]["messages"]+collections[19]["messages"]+collections[20]["messages"]+collections[21]["messages"]+collections[22]["messages"]+collections[23]["messages"]+collections[24]["messages"]+collections[25]["messages"]} & {x["id"] for x in catalogue["messages"]}), "Unreviewed batches 14-26 must not be published"
 print(f"PASS: {len(items)} unique draft messages across {len(themes)} themes; all marked for editorial review.")
