@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "batch": 32,
+  "editorial_note": "Automated editorial draft; independent human review required before publication. Full-corpus lexical Dice QA passed at threshold 0.60 with >=3 shared content words.",
+  "messages": [
+    {
+      "id": "KDL-LEARNING-TO-RECEIVE-A-COMPLIMENT-001",
+      "theme": "learning_to_receive_a_compliment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone noticed the care you put into something ordinary. You can accept their words without immediately listing everything you might have done better."
+    },
+    {
+      "id": "KDL-LEARNING-TO-RECEIVE-A-COMPLIMENT-002",
+      "theme": "learning_to_receive_a_compliment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A compliment may feel unfamiliar when you are used to measuring yourself by what remains unfinished. Let the kind observation stand for a moment."
+    },
+    {
+      "id": "KDL-LEARNING-TO-RECEIVE-A-COMPLIMENT-003",
+      "theme": "learning_to_receive_a_compliment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If praise makes you uncomfortable, a simple thank you is enough. You do not owe anyone a performance of confidence."
+    },
+    {
+      "id": "KDL-LEARNING-TO-RECEIVE-A-COMPLIMENT-004",
+      "theme": "learning_to_receive_a_compliment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The person who praised you saw one part of your effort. You may appreciate their perspective without making it the final verdict on your worth."
+    },
+    {
+      "id": "KDL-LEARNING-TO-RECEIVE-A-COMPLIMENT-005",
+      "theme": "learning_to_receive_a_compliment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Receiving recognition can bring relief and embarrassment at once. Mixed feelings do not make your gratitude less sincere."
+    },
+    {
+      "id": "KDL-LIVING-BETWEEN-TWO-PLACES-001",
+      "theme": "living_between_two_places",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your belongings are divided between addresses, and neither place feels entirely settled yet. Home may take longer to form than a change of keys."
+    },
+    {
+      "id": "KDL-LIVING-BETWEEN-TWO-PLACES-002",
+      "theme": "living_between_two_places",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Missing one neighbourhood does not mean you made the wrong decision about another. Affection for a place can outlast the time you live there."
+    },
+    {
+      "id": "KDL-LIVING-BETWEEN-TWO-PLACES-003",
+      "theme": "living_between_two_places",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar route can feel strangely important after a move. It makes sense to miss the small landmarks that quietly held your routines together."
+    },
+    {
+      "id": "KDL-LIVING-BETWEEN-TWO-PLACES-004",
+      "theme": "living_between_two_places",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may feel like a visitor in both places for a while. There is no deadline for learning where your ordinary life now belongs."
+    },
+    {
+      "id": "KDL-LIVING-BETWEEN-TWO-PLACES-005",
+      "theme": "living_between_two_places",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Keeping one comforting habit through a transition can offer continuity. It need not be impressive to be worth preserving."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIENDSHIP-NEEDS-MORE-SPACE-001",
+      "theme": "when_a_friendship_needs_more_space",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friendship can matter deeply even when you cannot offer the same amount of time as before. Care and availability are not identical."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIENDSHIP-NEEDS-MORE-SPACE-002",
+      "theme": "when_a_friendship_needs_more_space",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Taking longer to reply may need an explanation, especially if someone is worried. A brief, honest message can be kinder than disappearing."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIENDSHIP-NEEDS-MORE-SPACE-003",
+      "theme": "when_a_friendship_needs_more_space",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can miss the ease of an old friendship while recognising that its rhythm has changed. Both truths deserve room."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIENDSHIP-NEEDS-MORE-SPACE-004",
+      "theme": "when_a_friendship_needs_more_space",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every distance signals rejection. Sometimes two people are carrying different demands, and neither has the whole picture."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIENDSHIP-NEEDS-MORE-SPACE-005",
+      "theme": "when_a_friendship_needs_more_space",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you need more space, clarity can protect the connection better than an excuse you must keep repeating."
+    },
+    {
+      "id": "KDL-FINDING-YOUR-VOICE-IN-A-MEETING-001",
+      "theme": "finding_your_voice_in_a_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The conversation moved quickly, and your thought arrived after the topic changed. You can still ask to return to a point that matters."
+    },
+    {
+      "id": "KDL-FINDING-YOUR-VOICE-IN-A-MEETING-002",
+      "theme": "finding_your_voice_in_a_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Speaking once in a crowded meeting may take more effort than anyone notices. The value of your contribution is not measured by its volume."
+    },
+    {
+      "id": "KDL-FINDING-YOUR-VOICE-IN-A-MEETING-003",
+      "theme": "finding_your_voice_in_a_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If someone interrupts, you may calmly finish your sentence. Making room for your own words does not require making another person small."
+    },
+    {
+      "id": "KDL-FINDING-YOUR-VOICE-IN-A-MEETING-004",
+      "theme": "finding_your_voice_in_a_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A question that sounds basic to you may reveal an assumption the whole group has missed. Curiosity belongs in serious discussions."
+    },
+    {
+      "id": "KDL-FINDING-YOUR-VOICE-IN-A-MEETING-005",
+      "theme": "finding_your_voice_in_a_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can prepare a few words beforehand and still feel nervous. Preparation does not have to erase uncertainty to be useful."
+    },
+    {
+      "id": "KDL-CARING-FOR-AN-OLDER-RELATIVE-001",
+      "theme": "caring_for_an_older_relative",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Helping an older relative can bring tenderness alongside impatience and fatigue. Those feelings can coexist without defining the care you offer."
+    },
+    {
+      "id": "KDL-CARING-FOR-AN-OLDER-RELATIVE-002",
+      "theme": "caring_for_an_older_relative",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar story told again may be a way of holding on to something meaningful. You can listen when you have the capacity and rest when you do not."
+    },
+    {
+      "id": "KDL-CARING-FOR-AN-OLDER-RELATIVE-003",
+      "theme": "caring_for_an_older_relative",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When someone you love needs more assistance, small choices may help preserve their dignity. Ask what they would prefer where you can."
+    },
+    {
+      "id": "KDL-CARING-FOR-AN-OLDER-RELATIVE-004",
+      "theme": "caring_for_an_older_relative",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Caregiving plans rarely fit neatly around work, travel, and sleep. Asking others to share practical tasks is a reasonable response to real limits."
+    },
+    {
+      "id": "KDL-CARING-FOR-AN-OLDER-RELATIVE-005",
+      "theme": "caring_for_an_older_relative",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may grieve changes in someone while enjoying the person still beside you. Neither feeling cancels the other."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-EMBARRASSMENT-001",
+      "theme": "after_a_small_public_embarrassment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You stumbled over a word in front of everyone. The moment may feel enormous from inside it, even if others have already moved on."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-EMBARRASSMENT-002",
+      "theme": "after_a_small_public_embarrassment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An awkward introduction does not tell the whole story of who you are. You can return to the room without rehearsing an apology."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-EMBARRASSMENT-003",
+      "theme": "after_a_small_public_embarrassment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you laughed at yourself to ease the tension, you are still allowed to feel tender about what happened afterward."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-EMBARRASSMENT-004",
+      "theme": "after_a_small_public_embarrassment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A mistake made in public may invite a practical correction, not a lifelong label. Let the response match the size of the event."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-EMBARRASSMENT-005",
+      "theme": "after_a_small_public_embarrassment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some memories replay more loudly than they deserve. You can notice the replay without treating it as a fresh emergency."
+    }
+  ]
+}
