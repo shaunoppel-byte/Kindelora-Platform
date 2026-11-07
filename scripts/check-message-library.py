@@ -33,6 +33,7 @@ assert len(collections[24]["messages"])==25, "Expansion batch 25 must contain 25
 assert len(collections[25]["messages"])==30, "Expansion batch 26 must contain 30 messages"
 assert len(collections[26]["messages"])==25, "Expansion batch 27 must contain 25 messages"
 assert len(collections[27]["messages"])==40, "Expansion batch 28 must contain 40 messages"
+assert len(collections[28]["messages"])==40, "Expansion batch 29 must contain 40 messages"
 assert len(items)==2515, "Combined editorial library count mismatch"
 ids=[x["id"] for x in items]
 assert len(set(ids))==len(ids), "Duplicate message IDs"
