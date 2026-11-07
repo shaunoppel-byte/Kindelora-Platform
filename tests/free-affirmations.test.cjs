@@ -15,11 +15,11 @@ test('free artwork is committed and linked for download without payment',()=>{
 });
 test('each gallery card provides Plus-gated save action without blocking free downloads',()=>{
  for(const slug of ['small-steps','rest-is-worthy','light-returns','i-am-enough'])assert.ok(html.includes('data-heart="gallery-'+slug+'" data-heart-type="affirmation"'));
- assert.equal((html.match(/class="heart-save gallery-heart"/g)||[]).length,3);
+ assert.equal((html.match(/class="heart-save gallery-heart"/g)||[]).length,freeCardCount);
  const gate=fs.readFileSync('member-favourites.js','utf8');assert.match(gate,/data-heart-type="affirmation"/);
  assert.match(html,/Saving to favourites requires Plus membership/);
 });
 test('gallery is not dependent on external QR code providers',()=>{
  assert.doesNotMatch(html,/api\\.qrserver\\.com/);
- assert.equal((html.match(/class="btn gallery-download"/g)||[]).length,3);
+ assert.equal((html.match(/class="btn gallery-download"/g)||[]).length,freeCardCount);
 });
