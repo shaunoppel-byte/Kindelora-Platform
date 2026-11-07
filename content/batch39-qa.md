@@ -1,0 +1,3 @@
+# Batch 39 QA, 2026-11-07
+
+12 distinct IDs and 12 normalized distinct texts; 12 themes. Compared against all 3000 entries in the public catalogue: zero exact normalized-text and ID collisions. Full v1–v38 near-duplicate screening not completed in this run. Human editorial review, sensitive-topic contextual review, validator baseline adjustment, and CI are **PENDING**. Do not merge or publish. Public catalogue remains 3000 in main.
