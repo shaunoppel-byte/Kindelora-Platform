@@ -11,7 +11,9 @@ const end=html.indexOf('</section>',start);
 const section=html.slice(start,end);
 test('published gallery has exact approved card count',()=>{
  assert.ok(start>=0 && end>start);
- assert.equal(section.split('<article class="free-affirmation-card">').length-1,featured.length);
+ // Three inventory-backed PNG cards plus one separately rendered scenic free card.
+ assert.equal(section.split('<article class="free-affirmation-card">').length-1,featured.length+1);
+ assert.ok(section.includes('<h3>I am enough as I am</h3>'),'Missing fourth scenic free card');
  for(const item of published.slice(0,3))assert.ok(!section.includes('<h3>'+item.title+'</h3>'));
  for(const item of staged)assert.ok(!section.includes('<h3>'+item.title+'</h3>'),'Unpublished card leaked: '+item.id);
 });

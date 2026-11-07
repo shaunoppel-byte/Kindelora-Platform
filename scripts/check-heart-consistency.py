@@ -2,7 +2,7 @@
 from pathlib import Path
 import re
 import json
-gallery_count=3  # Three founder-approved public photographic cards
+gallery_count=4  # Three committed photographic PNG cards and one scenic free card
 html=Path("index.html").read_text()
 js=Path("member-favourites.js").read_text()
 css=Path("member-favourites.css").read_text()

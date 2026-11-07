@@ -5,7 +5,7 @@
   "messages": [
     {
       "id": "KDL-WHEN-A-PLAN-FALLS-THROUGH-001",
-      "theme": "when_a_plan_falls_through",
+      "theme": "when_a_shared_evening_is_cancelled",
       "audience": "all",
       "tone": "warm-grounded",
       "status": "editorial-review",
@@ -13,7 +13,7 @@
     },
     {
       "id": "KDL-WHEN-A-PLAN-FALLS-THROUGH-002",
-      "theme": "when_a_plan_falls_through",
+      "theme": "when_a_shared_evening_is_cancelled",
       "audience": "all",
       "tone": "warm-grounded",
       "status": "editorial-review",
@@ -21,7 +21,7 @@
     },
     {
       "id": "KDL-WHEN-A-PLAN-FALLS-THROUGH-003",
-      "theme": "when_a_plan_falls_through",
+      "theme": "when_a_shared_evening_is_cancelled",
       "audience": "all",
       "tone": "warm-grounded",
       "status": "editorial-review",
@@ -29,7 +29,7 @@
     },
     {
       "id": "KDL-WHEN-A-PLAN-FALLS-THROUGH-004",
-      "theme": "when_a_plan_falls_through",
+      "theme": "when_a_shared_evening_is_cancelled",
       "audience": "all",
       "tone": "warm-grounded",
       "status": "editorial-review",
@@ -37,7 +37,7 @@
     },
     {
       "id": "KDL-WHEN-A-PLAN-FALLS-THROUGH-005",
-      "theme": "when_a_plan_falls_through",
+      "theme": "when_a_shared_evening_is_cancelled",
       "audience": "all",
       "tone": "warm-grounded",
       "status": "editorial-review",
