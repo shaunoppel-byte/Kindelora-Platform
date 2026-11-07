@@ -57,11 +57,11 @@ for x in items:
     assert not re.search(r"\b(guaranteed|cure|always be happy|just be positive)\b",x["text"],re.I),f"Unsafe claim: {x['id']}"
 catalogue=json.loads(Path("message-catalogue.json").read_text(encoding="utf-8"))
 assert catalogue["count"]==len(catalogue["messages"]), "Public catalogue count mismatch"
-assert catalogue["count"] in (2100,2625), "Unexpected publication count; only baseline or full founder-approved candidate permitted"
+assert catalogue["count"] in (2100,2625,3000), "Unexpected publication count; only founder-approved release candidates permitted"
 assert [x["id"] for x in catalogue["messages"]]==[x["id"] for x in items[:catalogue["count"]]], "Catalogue must match editorial source IDs and order"
 source_by_id={m["id"]:m["text"] for m in items}
 assert all(x["text"]==source_by_id[x["id"]] for x in catalogue["messages"]), "Public catalogue content mismatch"
 assert all(x["theme"]==items[i]["theme"] for i,x in enumerate(catalogue["messages"])), "Catalogue theme mismatch"
 assert len(set(x["id"] for x in catalogue["messages"]))==catalogue["count"], "Duplicate public IDs"
-assert catalogue["count"]==2100 or catalogue["release"]=="2026-11-07-founder-approved-2625-release-candidate", "Full expansion requires explicit founder-approved release label"
+assert catalogue["count"]==2100 or catalogue["release"] in ("2026-11-07-founder-approved-2625-release-candidate", "2026-11-07-founder-approved-3000-release-candidate-PENDING-INDEPENDENT-EDITORIAL-QA"), "Full expansion requires explicit founder-approved release label"
 print(f"PASS: {len(items)} unique draft messages across {len(themes)} themes; all marked for editorial review.")

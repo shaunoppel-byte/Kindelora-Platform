@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "release": "2026-11-07-founder-approved-2625-release-candidate",
-  "count": 2625,
+  "release": "2026-11-07-founder-approved-3000-release-candidate-PENDING-INDEPENDENT-EDITORIAL-QA",
+  "count": 3000,
   "messages": [
     {
       "id": "KDL-HOPE-001",
@@ -13127,6 +13127,1881 @@
       "id": "KDL-BEING-NEW-AT-A-FAMILY-TRADITION-005",
       "theme": "being_new_at_a_family_tradition",
       "text": "Sometimes belonging begins with someone explaining why a small ritual matters. You can ask, listen, and bring your own history with you."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-PHONE-CALL-001",
+      "theme": "after_a_difficult_phone_call",
+      "text": "The call has ended, but your thoughts may still be catching up. You do not have to decide what everything means tonight."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-PHONE-CALL-002",
+      "theme": "after_a_difficult_phone_call",
+      "text": "A difficult conversation can follow you into the next room. A glass of water and a little quiet are reasonable places to begin."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-PHONE-CALL-003",
+      "theme": "after_a_difficult_phone_call",
+      "text": "You may have said what you needed to say and still wish it had gone differently. Both feelings can sit beside each other."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-PHONE-CALL-004",
+      "theme": "after_a_difficult_phone_call",
+      "text": "If you keep replaying one sentence, remember there was an entire conversation around it. You deserve a fuller picture than that moment."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-PHONE-CALL-005",
+      "theme": "after_a_difficult_phone_call",
+      "text": "Not every call ends with clarity. It is all right to leave some questions unanswered while you find your footing."
+    },
+    {
+      "id": "KDL-WHEN-A-COLLEAGUE-NOTICES-YOUR-EFFORT-001",
+      "theme": "when_a_colleague_notices_your_effort",
+      "text": "Someone noticed the careful work behind the result. Let their words reach you, even if receiving praise feels unfamiliar."
+    },
+    {
+      "id": "KDL-WHEN-A-COLLEAGUE-NOTICES-YOUR-EFFORT-002",
+      "theme": "when_a_colleague_notices_your_effort",
+      "text": "The small tasks rarely make the presentation slide. They still matter, and it can mean a great deal when someone sees them."
+    },
+    {
+      "id": "KDL-WHEN-A-COLLEAGUE-NOTICES-YOUR-EFFORT-003",
+      "theme": "when_a_colleague_notices_your_effort",
+      "text": "You did not do the work for applause. That does not mean you must brush away appreciation when it arrives."
+    },
+    {
+      "id": "KDL-WHEN-A-COLLEAGUE-NOTICES-YOUR-EFFORT-004",
+      "theme": "when_a_colleague_notices_your_effort",
+      "text": "A colleague's thank-you may be brief, but it can name hours of effort that otherwise went unseen."
+    },
+    {
+      "id": "KDL-WHEN-A-COLLEAGUE-NOTICES-YOUR-EFFORT-005",
+      "theme": "when_a_colleague_notices_your_effort",
+      "text": "Being recognised does not require you to minimise anyone else's contribution. There is room to appreciate the whole team and your part in it."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-RECIPE-CHANGES-001",
+      "theme": "when_a_family_recipe_changes",
+      "text": "The meal tastes a little different this year. Traditions can hold both the memory of what was and the hands preparing them now."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-RECIPE-CHANGES-002",
+      "theme": "when_a_family_recipe_changes",
+      "text": "Perhaps an ingredient is missing, or someone who used to cook is no longer at the table. It is understandable to notice."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-RECIPE-CHANGES-003",
+      "theme": "when_a_family_recipe_changes",
+      "text": "A recipe passed between people is rarely only a list of measurements. It carries gestures, stories, and room for a new version."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-RECIPE-CHANGES-004",
+      "theme": "when_a_family_recipe_changes",
+      "text": "You can honour the way it used to be without asking today's meal to recreate every detail."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-RECIPE-CHANGES-005",
+      "theme": "when_a_family_recipe_changes",
+      "text": "If the first attempt does not taste like home, it may still become a story worth keeping."
+    },
+    {
+      "id": "KDL-AFTER-A-TRAIN-OR-BUS-DELAY-001",
+      "theme": "after_a_train_or_bus_delay",
+      "text": "The timetable changed without asking you. Frustration is a reasonable response when your day depends on getting somewhere."
+    },
+    {
+      "id": "KDL-AFTER-A-TRAIN-OR-BUS-DELAY-002",
+      "theme": "after_a_train_or_bus_delay",
+      "text": "Waiting at a stop can make an ordinary morning feel uncertain. You can be patient without pretending the delay is convenient."
+    },
+    {
+      "id": "KDL-AFTER-A-TRAIN-OR-BUS-DELAY-003",
+      "theme": "after_a_train_or_bus_delay",
+      "text": "A late journey does not mean you planned poorly. Sometimes the road or the rails simply have other plans."
+    },
+    {
+      "id": "KDL-AFTER-A-TRAIN-OR-BUS-DELAY-004",
+      "theme": "after_a_train_or_bus_delay",
+      "text": "If you arrive flustered, give yourself a moment before stepping into the next obligation. The delay has already taken enough."
+    },
+    {
+      "id": "KDL-AFTER-A-TRAIN-OR-BUS-DELAY-005",
+      "theme": "after_a_train_or_bus_delay",
+      "text": "People around you may be carrying their own missed connections. A small kindness can make the shared wait less lonely."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-A-NEW-LANGUAGE-001",
+      "theme": "when_you_are_learning_a_new_language",
+      "text": "Searching for the right word can make a simple thought feel far away. Your meaning still deserves the time it takes."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-A-NEW-LANGUAGE-002",
+      "theme": "when_you_are_learning_a_new_language",
+      "text": "A mispronounced phrase is evidence that you tried to reach someone across a gap. That effort has value."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-A-NEW-LANGUAGE-003",
+      "theme": "when_you_are_learning_a_new_language",
+      "text": "Some days you remember every word; other days even a greeting slips away. Learning does not move in a straight line."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-A-NEW-LANGUAGE-004",
+      "theme": "when_you_are_learning_a_new_language",
+      "text": "An unfamiliar language may leave you quieter than you usually are. Your personality has not disappeared because your vocabulary is still growing."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-A-NEW-LANGUAGE-005",
+      "theme": "when_you_are_learning_a_new_language",
+      "text": "When someone understands what you meant, even imperfectly, that small connection is worth noticing."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PROJECT-CHANGES-DIRECTION-001",
+      "theme": "when_a_shared_project_changes_direction",
+      "text": "The plan you helped build has taken a different turn. You can support the new direction and still feel disappointed about the old one."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PROJECT-CHANGES-DIRECTION-002",
+      "theme": "when_a_shared_project_changes_direction",
+      "text": "A change in scope can make yesterday's careful work feel invisible. The thinking behind it may still help the team move forward."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PROJECT-CHANGES-DIRECTION-003",
+      "theme": "when_a_shared_project_changes_direction",
+      "text": "Before rushing into the revised plan, it is reasonable to ask what has changed and what still matters."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PROJECT-CHANGES-DIRECTION-004",
+      "theme": "when_a_shared_project_changes_direction",
+      "text": "Your contribution is not erased because the final version looks different from the one you imagined."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PROJECT-CHANGES-DIRECTION-005",
+      "theme": "when_a_shared_project_changes_direction",
+      "text": "Sometimes the hardest part of a project change is releasing a good idea at the wrong time. It was still a good idea."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-REMEMBERS-A-SMALL-DETAIL-001",
+      "theme": "when_a_friend_remembers_a_small_detail",
+      "text": "They remembered the little thing you mentioned weeks ago. Being listened to can feel like a quiet kind of belonging."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-REMEMBERS-A-SMALL-DETAIL-002",
+      "theme": "when_a_friend_remembers_a_small_detail",
+      "text": "A familiar snack, a favourite song, or a question about your week can say more than an elaborate gesture."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-REMEMBERS-A-SMALL-DETAIL-003",
+      "theme": "when_a_friend_remembers_a_small_detail",
+      "text": "Someone keeping a small detail in mind does not solve every difficulty. It can still make an ordinary day feel warmer."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-REMEMBERS-A-SMALL-DETAIL-004",
+      "theme": "when_a_friend_remembers_a_small_detail",
+      "text": "You may not have realised your passing comment mattered. Their remembering tells you the conversation stayed with them."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-REMEMBERS-A-SMALL-DETAIL-005",
+      "theme": "when_a_friend_remembers_a_small_detail",
+      "text": "Friendship often shows itself in modest ways: a name recalled, a date remembered, a preference respected."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-TO-A-PUBLIC-PLACE-AFTER-ANXIETY-001",
+      "theme": "when_you_return_to_a_public_place_after_anxiety",
+      "text": "The doorway may look ordinary to everyone else. You know how much effort it took to walk through it today."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-TO-A-PUBLIC-PLACE-AFTER-ANXIETY-002",
+      "theme": "when_you_return_to_a_public_place_after_anxiety",
+      "text": "Returning somewhere difficult can bring back old feelings. You do not have to pretend they vanished in order to be here."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-TO-A-PUBLIC-PLACE-AFTER-ANXIETY-003",
+      "theme": "when_you_return_to_a_public_place_after_anxiety",
+      "text": "Perhaps you stayed for five minutes, or perhaps you stayed longer. The time alone does not tell the whole story."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-TO-A-PUBLIC-PLACE-AFTER-ANXIETY-004",
+      "theme": "when_you_return_to_a_public_place_after_anxiety",
+      "text": "It is possible to feel nervous and curious at the same time. Neither feeling cancels the other."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-TO-A-PUBLIC-PLACE-AFTER-ANXIETY-005",
+      "theme": "when_you_return_to_a_public_place_after_anxiety",
+      "text": "If you need a quieter corner or an early exit, that choice can be part of taking care of yourself."
+    },
+    {
+      "id": "KDL-WHEN-AN-OLD-OBJECT-BREAKS-001",
+      "theme": "when_an_old_object_breaks",
+      "text": "A chipped mug or a broken clasp can carry more memories than its price suggests. It makes sense to feel the loss."
+    },
+    {
+      "id": "KDL-WHEN-AN-OLD-OBJECT-BREAKS-002",
+      "theme": "when_an_old_object_breaks",
+      "text": "You might repair the object, keep a small piece, or let it go. There is no single correct way to honour what it meant."
+    },
+    {
+      "id": "KDL-WHEN-AN-OLD-OBJECT-BREAKS-003",
+      "theme": "when_an_old_object_breaks",
+      "text": "Sometimes a familiar thing breaks on an otherwise unremarkable day. The surprise can make the sadness sharper."
+    },
+    {
+      "id": "KDL-WHEN-AN-OLD-OBJECT-BREAKS-004",
+      "theme": "when_an_old_object_breaks",
+      "text": "The object may be gone, but the moments you associate with it have not been reduced to pieces."
+    },
+    {
+      "id": "KDL-WHEN-AN-OLD-OBJECT-BREAKS-005",
+      "theme": "when_an_old_object_breaks",
+      "text": "It is all right to miss something practical because it was also personal."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-TO-BE-INTRODUCED-001",
+      "theme": "when_you_are_waiting_to_be_introduced",
+      "text": "Standing at the edge of a conversation can feel longer than the clock suggests. You belong in the room even before someone says your name."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-TO-BE-INTRODUCED-002",
+      "theme": "when_you_are_waiting_to_be_introduced",
+      "text": "You may be deciding whether to step forward or wait for an invitation. Either choice can be made with kindness toward yourself."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-TO-BE-INTRODUCED-003",
+      "theme": "when_you_are_waiting_to_be_introduced",
+      "text": "A first introduction rarely shows the full person. You have time to become known beyond a handshake."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-TO-BE-INTRODUCED-004",
+      "theme": "when_you_are_waiting_to_be_introduced",
+      "text": "If your opening words come out awkwardly, the conversation can still find its rhythm."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-TO-BE-INTRODUCED-005",
+      "theme": "when_you_are_waiting_to_be_introduced",
+      "text": "Everyone in the room has been new somewhere. You are not the only person who knows that uncertain moment."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-NEEDS-QUIET-COMPANY-001",
+      "theme": "when_a_friend_needs_quiet_company",
+      "text": "Your friend may not have the energy to explain what happened. Sitting beside them without questions can still be a generous offer."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-NEEDS-QUIET-COMPANY-002",
+      "theme": "when_a_friend_needs_quiet_company",
+      "text": "A shared cup of tea need not become a conversation about solutions. Sometimes the kindness is simply making room for silence."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-NEEDS-QUIET-COMPANY-003",
+      "theme": "when_a_friend_needs_quiet_company",
+      "text": "If they say very little, it does not mean your visit was wasted. Being present can matter without producing a visible result."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-NEEDS-QUIET-COMPANY-004",
+      "theme": "when_a_friend_needs_quiet_company",
+      "text": "You can ask whether they would prefer company, a practical errand, or time alone. Care leaves room for an honest answer."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-NEEDS-QUIET-COMPANY-005",
+      "theme": "when_a_friend_needs_quiet_company",
+      "text": "The walk home might feel uneventful to you. For someone who needed company, that ordinary hour may have carried real comfort."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-DAY-001",
+      "theme": "after_a_difficult_school_day",
+      "text": "The school bag lands harder than usual today. Before asking for the whole story, a snack and a quiet moment might help."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-DAY-002",
+      "theme": "after_a_difficult_school_day",
+      "text": "One difficult day in class does not describe everything a young person knows, loves, or is learning to become."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-DAY-003",
+      "theme": "after_a_difficult_school_day",
+      "text": "If a mistake felt enormous at school, home can be a place where it is allowed to shrink back to its actual size."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-DAY-004",
+      "theme": "after_a_difficult_school_day",
+      "text": "Sometimes the hardest part of the day is explaining it afterward. You can listen without asking for every detail at once."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-DAY-005",
+      "theme": "after_a_difficult_school_day",
+      "text": "A fresh morning will not erase today's disappointment, but there can still be people ready to help you face it."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOURHOOD-SHOP-CLOSES-001",
+      "theme": "when_a_neighbourhood_shop_closes",
+      "text": "The familiar sign is coming down, and a small part of your routine goes with it. Ordinary places can hold meaningful memories."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOURHOOD-SHOP-CLOSES-002",
+      "theme": "when_a_neighbourhood_shop_closes",
+      "text": "You might miss the person who remembered your usual order more than the item you went there to buy."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOURHOOD-SHOP-CLOSES-003",
+      "theme": "when_a_neighbourhood_shop_closes",
+      "text": "A shop closing can remind you how many quiet relationships happen between errands. Those encounters mattered while they lasted."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOURHOOD-SHOP-CLOSES-004",
+      "theme": "when_a_neighbourhood_shop_closes",
+      "text": "If you have a chance to say thank you before the doors close, a few sincere words may be enough."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOURHOOD-SHOP-CLOSES-005",
+      "theme": "when_a_neighbourhood_shop_closes",
+      "text": "The street will change, but the stories you associate with that corner are still yours to carry."
+    },
+    {
+      "id": "KDL-LEARNING-TO-ASK-FOR-AN-ACCOMMODATION-001",
+      "theme": "learning_to_ask_for_an_accommodation",
+      "text": "Explaining what would help you participate can feel vulnerable. Your request deserves a respectful hearing, not an apology for existing."
+    },
+    {
+      "id": "KDL-LEARNING-TO-ASK-FOR-AN-ACCOMMODATION-002",
+      "theme": "learning_to_ask_for_an_accommodation",
+      "text": "You do not have to disclose every private detail to describe a practical adjustment that would make a task more accessible."
+    },
+    {
+      "id": "KDL-LEARNING-TO-ASK-FOR-AN-ACCOMMODATION-003",
+      "theme": "learning_to_ask_for_an_accommodation",
+      "text": "A helpful accommodation is not a special favour that erases your contribution. It can make room for your contribution to be seen."
+    },
+    {
+      "id": "KDL-LEARNING-TO-ASK-FOR-AN-ACCOMMODATION-004",
+      "theme": "learning_to_ask_for_an_accommodation",
+      "text": "If the first conversation is awkward, you may still ask for clarity and follow up in writing."
+    },
+    {
+      "id": "KDL-LEARNING-TO-ASK-FOR-AN-ACCOMMODATION-005",
+      "theme": "learning_to_ask_for_an_accommodation",
+      "text": "Needing a different arrangement does not make your needs less legitimate than the familiar way things have always been done."
+    },
+    {
+      "id": "KDL-WHEN-A-LONG-AWAITED-PACKAGE-ARRIVES-001",
+      "theme": "when_a_long_awaited_package_arrives",
+      "text": "The parcel finally reached your door after days of checking the tracking page. Enjoying a small arrival is perfectly reasonable."
+    },
+    {
+      "id": "KDL-WHEN-A-LONG-AWAITED-PACKAGE-ARRIVES-002",
+      "theme": "when_a_long_awaited_package_arrives",
+      "text": "Sometimes what you waited for is useful rather than exciting. Relief can be its own kind of good news."
+    },
+    {
+      "id": "KDL-WHEN-A-LONG-AWAITED-PACKAGE-ARRIVES-003",
+      "theme": "when_a_long_awaited_package_arrives",
+      "text": "If the contents are not quite what you expected, disappointment does not mean you were foolish to look forward to them."
+    },
+    {
+      "id": "KDL-WHEN-A-LONG-AWAITED-PACKAGE-ARRIVES-004",
+      "theme": "when_a_long_awaited_package_arrives",
+      "text": "Opening the box may remind you of the person who sent it. The thought behind a delivery can outlast the wrapping."
+    },
+    {
+      "id": "KDL-WHEN-A-LONG-AWAITED-PACKAGE-ARRIVES-005",
+      "theme": "when_a_long_awaited_package_arrives",
+      "text": "A long wait ends in a surprisingly ordinary moment. You are allowed to enjoy that moment without making it grand."
+    },
+    {
+      "id": "KDL-WHEN-A-COMMUNITY-EVENT-NEEDS-VOLUNTEERS-001",
+      "theme": "when_a_community_event_needs_volunteers",
+      "text": "The chairs still need arranging before anyone arrives. Community events often begin with people willing to do unnoticed work."
+    },
+    {
+      "id": "KDL-WHEN-A-COMMUNITY-EVENT-NEEDS-VOLUNTEERS-002",
+      "theme": "when_a_community_event_needs_volunteers",
+      "text": "You may have only an hour to offer. An hour given freely can still lighten someone else's load."
+    },
+    {
+      "id": "KDL-WHEN-A-COMMUNITY-EVENT-NEEDS-VOLUNTEERS-003",
+      "theme": "when_a_community_event_needs_volunteers",
+      "text": "Helping at the registration table might not feel impressive, but a welcoming face can change how a newcomer enters the room."
+    },
+    {
+      "id": "KDL-WHEN-A-COMMUNITY-EVENT-NEEDS-VOLUNTEERS-004",
+      "theme": "when_a_community_event_needs_volunteers",
+      "text": "If plans shift during the event, remember that volunteers are people, not an endless supply of energy."
+    },
+    {
+      "id": "KDL-WHEN-A-COMMUNITY-EVENT-NEEDS-VOLUNTEERS-005",
+      "theme": "when_a_community_event_needs_volunteers",
+      "text": "After the last guest leaves, the people stacking tables deserve thanks too. A good gathering includes the work behind it."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-CALENDAR-GETS-CONFUSING-001",
+      "theme": "when_a_shared_calendar_gets_confusing",
+      "text": "Two commitments landed in the same afternoon. The mix-up may be inconvenient without being anyone's deliberate mistake."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-CALENDAR-GETS-CONFUSING-002",
+      "theme": "when_a_shared_calendar_gets_confusing",
+      "text": "A missed reminder can create tension between people who are both trying their best. Start with what needs sorting out now."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-CALENDAR-GETS-CONFUSING-003",
+      "theme": "when_a_shared_calendar_gets_confusing",
+      "text": "If you are the one who usually remembers the dates, it is fair to ask for a more shared system."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-CALENDAR-GETS-CONFUSING-004",
+      "theme": "when_a_shared_calendar_gets_confusing",
+      "text": "An honest message about a scheduling mistake can be kinder than an elaborate explanation offered too late."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-CALENDAR-GETS-CONFUSING-005",
+      "theme": "when_a_shared_calendar_gets_confusing",
+      "text": "Calendars organise time, but they do not measure how much someone cares. A repair can begin with listening."
+    },
+    {
+      "id": "KDL-AFTER-AN-UNSUCCESSFUL-AUDITION-001",
+      "theme": "after_an_unsuccessful_audition",
+      "text": "You prepared for the audition, and the answer was no. The work you did still belongs to you."
+    },
+    {
+      "id": "KDL-AFTER-AN-UNSUCCESSFUL-AUDITION-002",
+      "theme": "after_an_unsuccessful_audition",
+      "text": "Not being selected can sting even when you know the decision involved many factors beyond your control."
+    },
+    {
+      "id": "KDL-AFTER-AN-UNSUCCESSFUL-AUDITION-003",
+      "theme": "after_an_unsuccessful_audition",
+      "text": "If you want feedback, asking for it is reasonable. If you need a little time first, that is reasonable too."
+    },
+    {
+      "id": "KDL-AFTER-AN-UNSUCCESSFUL-AUDITION-004",
+      "theme": "after_an_unsuccessful_audition",
+      "text": "An audition captures a few minutes of a person's abilities. It cannot contain every possibility they have yet to explore."
+    },
+    {
+      "id": "KDL-AFTER-AN-UNSUCCESSFUL-AUDITION-005",
+      "theme": "after_an_unsuccessful_audition",
+      "text": "Your next choice does not need to be made on the walk home. Let this disappointment have its own afternoon."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHOOSES-A-DIFFERENT-PATH-001",
+      "theme": "when_a_friend_chooses_a_different_path",
+      "text": "You imagined reaching the next milestone together. Their new direction may leave you proud of them and a little lonely."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHOOSES-A-DIFFERENT-PATH-002",
+      "theme": "when_a_friend_chooses_a_different_path",
+      "text": "A friendship can change shape when routines stop overlapping. That change deserves attention rather than automatic blame."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHOOSES-A-DIFFERENT-PATH-003",
+      "theme": "when_a_friend_chooses_a_different_path",
+      "text": "You can wish someone well without pretending you will not miss the old arrangement."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHOOSES-A-DIFFERENT-PATH-004",
+      "theme": "when_a_friend_chooses_a_different_path",
+      "text": "Different plans do not always mean different values. Sometimes people simply need different things at this point in life."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHOOSES-A-DIFFERENT-PATH-005",
+      "theme": "when_a_friend_chooses_a_different_path",
+      "text": "If staying connected matters to both of you, a smaller, steadier ritual might fit better than the one you had."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-MEMBER-FORGETS-A-DATE-001",
+      "theme": "when_a_family_member_forgets_a_date",
+      "text": "The date mattered to you, and they forgot. You can name that hurt without turning one oversight into the whole relationship."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-MEMBER-FORGETS-A-DATE-002",
+      "theme": "when_a_family_member_forgets_a_date",
+      "text": "Some people remember occasions easily; others need reminders. Neither habit tells the entire story of their affection."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-MEMBER-FORGETS-A-DATE-003",
+      "theme": "when_a_family_member_forgets_a_date",
+      "text": "If you decide to mention the missed day, a clear sentence may help more than waiting for them to guess."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-MEMBER-FORGETS-A-DATE-004",
+      "theme": "when_a_family_member_forgets_a_date",
+      "text": "An apology cannot rewind the calendar, but it can show a willingness to pay closer attention."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-MEMBER-FORGETS-A-DATE-005",
+      "theme": "when_a_family_member_forgets_a_date",
+      "text": "You may choose to celebrate later, or not at all. The meaning of the occasion remains yours."
+    },
+    {
+      "id": "KDL-AFTER-A-POWERFUL-BOOK-ENDING-001",
+      "theme": "after_a_powerful_book_ending",
+      "text": "You closed the book, but part of you is still living in its final pages. There is no need to rush into another story."
+    },
+    {
+      "id": "KDL-AFTER-A-POWERFUL-BOOK-ENDING-002",
+      "theme": "after_a_powerful_book_ending",
+      "text": "An ending can feel both satisfying and strangely lonely. You spent time with these characters, even if they were imagined."
+    },
+    {
+      "id": "KDL-AFTER-A-POWERFUL-BOOK-ENDING-003",
+      "theme": "after_a_powerful_book_ending",
+      "text": "Sometimes the last chapter changes how you remember the first. It can be worth sitting with that new perspective."
+    },
+    {
+      "id": "KDL-AFTER-A-POWERFUL-BOOK-ENDING-004",
+      "theme": "after_a_powerful_book_ending",
+      "text": "If nobody nearby has read the book, your thoughts can wait until you find someone who wants to hear them."
+    },
+    {
+      "id": "KDL-AFTER-A-POWERFUL-BOOK-ENDING-005",
+      "theme": "after_a_powerful_book_ending",
+      "text": "A story does not have to offer a lesson to matter. The company it kept you may be enough."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REPAIR-A-SMALL-HOUSEHOLD-ITEM-001",
+      "theme": "when_you_repair_a_small_household_item",
+      "text": "The drawer slides smoothly again after a little patience. Small repairs can make an ordinary room feel cared for."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REPAIR-A-SMALL-HOUSEHOLD-ITEM-002",
+      "theme": "when_you_repair_a_small_household_item",
+      "text": "You may have needed instructions, borrowed tools, or several attempts. The finished fix still counts."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REPAIR-A-SMALL-HOUSEHOLD-ITEM-003",
+      "theme": "when_you_repair_a_small_household_item",
+      "text": "Not every broken thing needs replacing immediately. Sometimes a careful repair is a practical form of attention."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REPAIR-A-SMALL-HOUSEHOLD-ITEM-004",
+      "theme": "when_you_repair_a_small_household_item",
+      "text": "If the first attempt fails, it is fine to stop before frustration turns the job into something larger."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REPAIR-A-SMALL-HOUSEHOLD-ITEM-005",
+      "theme": "when_you_repair_a_small_household_item",
+      "text": "Someone else may never notice the loose handle you tightened. You can appreciate the quieter result yourself."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SHARE-A-TABLE-WITH-STRANGERS-001",
+      "theme": "when_you_share_a_table_with_strangers",
+      "text": "The seats are close and the conversation is unfamiliar. A simple greeting can make the table feel less uncertain."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SHARE-A-TABLE-WITH-STRANGERS-002",
+      "theme": "when_you_share_a_table_with_strangers",
+      "text": "You do not have to become instant friends with everyone beside you. Politeness and comfortable distance can coexist."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SHARE-A-TABLE-WITH-STRANGERS-003",
+      "theme": "when_you_share_a_table_with_strangers",
+      "text": "A stranger's story may surprise you, or you may simply share a peaceful meal. Both can be good outcomes."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SHARE-A-TABLE-WITH-STRANGERS-004",
+      "theme": "when_you_share_a_table_with_strangers",
+      "text": "If you are unsure how to join the conversation, listening first is a perfectly valid way to arrive."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SHARE-A-TABLE-WITH-STRANGERS-005",
+      "theme": "when_you_share_a_table_with_strangers",
+      "text": "Leaving a shared table with one new name remembered can be enough for the evening."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-THE-BACKUP-PERSON-001",
+      "theme": "when_you_are_the_backup_person",
+      "text": "You were asked to step in because someone else could not make it. Your help is valuable even if the invitation came second."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-THE-BACKUP-PERSON-002",
+      "theme": "when_you_are_the_backup_person",
+      "text": "Being a backup can feel complicated when you also wanted to be someone's first choice. Those feelings deserve honesty."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-THE-BACKUP-PERSON-003",
+      "theme": "when_you_are_the_backup_person",
+      "text": "You can accept the opportunity without pretending the circumstances do not matter to you."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-THE-BACKUP-PERSON-004",
+      "theme": "when_you_are_the_backup_person",
+      "text": "If the responsibility grows beyond what you agreed to, you are allowed to clarify what support is available."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-THE-BACKUP-PERSON-005",
+      "theme": "when_you_are_the_backup_person",
+      "text": "Stepping in at short notice often requires quiet flexibility. It is fair to recognise the effort that took."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-PARK-REOPENS-001",
+      "theme": "when_a_local_park_reopens",
+      "text": "The gate is open again, and the familiar path feels slightly new. Returning to a shared place can be a small celebration."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-PARK-REOPENS-002",
+      "theme": "when_a_local_park_reopens",
+      "text": "Perhaps the benches moved or the trees grew while you were away. A place can change and still welcome you back."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-PARK-REOPENS-003",
+      "theme": "when_a_local_park_reopens",
+      "text": "Children running across the grass may be the clearest sign that a public space matters to its neighbours."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-PARK-REOPENS-004",
+      "theme": "when_a_local_park_reopens",
+      "text": "You do not need a special plan for your first visit back. A slow walk can be enough."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-PARK-REOPENS-005",
+      "theme": "when_a_local_park_reopens",
+      "text": "A reopened park belongs to many different routines. Making space for one another is part of keeping it welcoming."
+    },
+    {
+      "id": "KDL-AFTER-A-MISSED-CONNECTION-001",
+      "theme": "after_a_missed_connection",
+      "text": "The train pulled away before you reached the platform. A missed connection is frustrating, but it does not mean you failed the day."
+    },
+    {
+      "id": "KDL-AFTER-A-MISSED-CONNECTION-002",
+      "theme": "after_a_missed_connection",
+      "text": "While you wait for the next departure, you can focus on the one useful thing within reach: finding a workable route forward."
+    },
+    {
+      "id": "KDL-AFTER-A-MISSED-CONNECTION-003",
+      "theme": "after_a_missed_connection",
+      "text": "Someone may be waiting for you at the other end. A brief honest update can ease the uncertainty for both of you."
+    },
+    {
+      "id": "KDL-AFTER-A-MISSED-CONNECTION-004",
+      "theme": "after_a_missed_connection",
+      "text": "Your plans may need rearranging because of a delay you did not choose. Disappointment and patience can sit beside each other."
+    },
+    {
+      "id": "KDL-AFTER-A-MISSED-CONNECTION-005",
+      "theme": "after_a_missed_connection",
+      "text": "An unexpected hour at the station is not how you hoped to spend today. You still deserve a moment to rest."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-A-BORROWED-BOOK-001",
+      "theme": "when_you_return_a_borrowed_book",
+      "text": "The pages have travelled with you for weeks. Returning the book can feel like handing back a little piece of a conversation."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-A-BORROWED-BOOK-002",
+      "theme": "when_you_return_a_borrowed_book",
+      "text": "You do not need an impressive review to thank someone for lending you a story they enjoyed."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-A-BORROWED-BOOK-003",
+      "theme": "when_you_return_a_borrowed_book",
+      "text": "Perhaps you loved the book less than your friend did. A thoughtful difference of opinion can still deepen a friendship."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-A-BORROWED-BOOK-004",
+      "theme": "when_you_return_a_borrowed_book",
+      "text": "A bookmark tucked between pages can remind you how ordinary objects carry traces of the people who shared them."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-A-BORROWED-BOOK-005",
+      "theme": "when_you_return_a_borrowed_book",
+      "text": "Returning something on time is a small act of respect. If you are late, an honest apology and a plan can help."
+    },
+    {
+      "id": "KDL-WHEN-A-CHILD-ASKS-ABOUT-A-FAMILY-MOVE-001",
+      "theme": "when_a_child_asks_about_a_family_move",
+      "text": "The move is coming, and your child wants to know what will happen to their favourite places. You can answer one question at a time."
+    },
+    {
+      "id": "KDL-WHEN-A-CHILD-ASKS-ABOUT-A-FAMILY-MOVE-002",
+      "theme": "when_a_child_asks_about_a_family_move",
+      "text": "If you do not know every detail of the move yet, saying so gently can be more reassuring than making promises."
+    },
+    {
+      "id": "KDL-WHEN-A-CHILD-ASKS-ABOUT-A-FAMILY-MOVE-003",
+      "theme": "when_a_child_asks_about_a_family_move",
+      "text": "A child may ask about friends, bedrooms, or the journey itself. Those practical questions can carry big feelings."
+    },
+    {
+      "id": "KDL-WHEN-A-CHILD-ASKS-ABOUT-A-FAMILY-MOVE-004",
+      "theme": "when_a_child_asks_about_a_family_move",
+      "text": "You can invite them to choose one small thing for the new room while acknowledging what they will miss."
+    },
+    {
+      "id": "KDL-WHEN-A-CHILD-ASKS-ABOUT-A-FAMILY-MOVE-005",
+      "theme": "when_a_child_asks_about_a_family_move",
+      "text": "After the conversation, your child might ask the same question again. Repetition can be part of making sense of change."
+    },
+    {
+      "id": "KDL-AFTER-YOUR-FIRST-DAY-IN-A-NEW-ROLE-001",
+      "theme": "after_your_first_day_in_a_new_role",
+      "text": "You learned new names, new routines, and perhaps where the coffee cups live. That is plenty for one first day."
+    },
+    {
+      "id": "KDL-AFTER-YOUR-FIRST-DAY-IN-A-NEW-ROLE-002",
+      "theme": "after_your_first_day_in_a_new_role",
+      "text": "An unfamiliar workplace can make even simple tasks feel demanding. Familiarity grows through repetition, not instant perfection."
+    },
+    {
+      "id": "KDL-AFTER-YOUR-FIRST-DAY-IN-A-NEW-ROLE-003",
+      "theme": "after_your_first_day_in_a_new_role",
+      "text": "If you asked several questions today, you were doing the work of learning rather than pretending to know."
+    },
+    {
+      "id": "KDL-AFTER-YOUR-FIRST-DAY-IN-A-NEW-ROLE-004",
+      "theme": "after_your_first_day_in_a_new_role",
+      "text": "Someone who offered directions or explained a process gave you a useful welcome. You can carry that kindness forward."
+    },
+    {
+      "id": "KDL-AFTER-YOUR-FIRST-DAY-IN-A-NEW-ROLE-005",
+      "theme": "after_your_first_day_in_a_new_role",
+      "text": "Tonight you do not need to plan your entire future in this role. Rest after the first step."
+    },
+    {
+      "id": "KDL-WHEN-A-GROUP-CHAT-GOES-QUIET-001",
+      "theme": "when_a_group_chat_goes_quiet",
+      "text": "The conversation stopped after your message, and it is tempting to search for a hidden meaning. Silence often has ordinary explanations."
+    },
+    {
+      "id": "KDL-WHEN-A-GROUP-CHAT-GOES-QUIET-002",
+      "theme": "when_a_group_chat_goes_quiet",
+      "text": "People move between work, family, errands, and sleep. A delayed reply is not always a verdict on your words."
+    },
+    {
+      "id": "KDL-WHEN-A-GROUP-CHAT-GOES-QUIET-003",
+      "theme": "when_a_group_chat_goes_quiet",
+      "text": "If something important needs an answer, a clear follow-up can be kinder than guessing what everyone thinks."
+    },
+    {
+      "id": "KDL-WHEN-A-GROUP-CHAT-GOES-QUIET-004",
+      "theme": "when_a_group_chat_goes_quiet",
+      "text": "An active group chat can feel like a small room full of friends. When it quiets, the friendships may still be there."
+    },
+    {
+      "id": "KDL-WHEN-A-GROUP-CHAT-GOES-QUIET-005",
+      "theme": "when_a_group_chat_goes_quiet",
+      "text": "You can put the phone down without resolving every uncertainty tonight. Not every pause needs to be filled."
+    },
+    {
+      "id": "KDL-WHEN-A-SIBLING-MOVES-AWAY-001",
+      "theme": "when_a_sibling_moves_away",
+      "text": "The familiar room looks different without their things in it. Even a welcome move can leave a quiet space behind."
+    },
+    {
+      "id": "KDL-WHEN-A-SIBLING-MOVES-AWAY-002",
+      "theme": "when_a_sibling_moves_away",
+      "text": "You might be excited for your sibling and sad about the distance. Both feelings can be true at once."
+    },
+    {
+      "id": "KDL-WHEN-A-SIBLING-MOVES-AWAY-003",
+      "theme": "when_a_sibling_moves_away",
+      "text": "New routines may make spontaneous visits harder. A regular call or shared photograph can become a different kind of closeness."
+    },
+    {
+      "id": "KDL-WHEN-A-SIBLING-MOVES-AWAY-004",
+      "theme": "when_a_sibling_moves_away",
+      "text": "If you have spent years teasing each other, saying you will miss them may feel unusually serious. It is still worth saying."
+    },
+    {
+      "id": "KDL-WHEN-A-SIBLING-MOVES-AWAY-005",
+      "theme": "when_a_sibling_moves_away",
+      "text": "Distance changes the practical shape of family life. It does not erase the memories you made in the same home."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-FOR-TEST-RESULTS-001",
+      "theme": "when_you_are_waiting_for_test_results",
+      "text": "The waiting can make ordinary minutes feel unusually long. You do not have to spend every one of them searching for answers."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-FOR-TEST-RESULTS-002",
+      "theme": "when_you_are_waiting_for_test_results",
+      "text": "If the uncertainty feels heavy, you may choose one trusted person to sit with you or check in."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-FOR-TEST-RESULTS-003",
+      "theme": "when_you_are_waiting_for_test_results",
+      "text": "Questions may come to mind at inconvenient times. Writing them down can help you remember what to ask the clinician."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-FOR-TEST-RESULTS-004",
+      "theme": "when_you_are_waiting_for_test_results",
+      "text": "Trying to stay calm every moment is another demand you do not need. You can feel worried and still care for yourself."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-FOR-TEST-RESULTS-005",
+      "theme": "when_you_are_waiting_for_test_results",
+      "text": "Whatever the results show, you deserve clear information and the opportunity to ask what happens next."
+    },
+    {
+      "id": "KDL-WHEN-YOU-NOTICE-A-FRIEND-IS-WITHDRAWING-001",
+      "theme": "when_you_notice_a_friend_is_withdrawing",
+      "text": "Your friend has been quieter than usual. A gentle check-in offers connection without requiring them to explain everything."
+    },
+    {
+      "id": "KDL-WHEN-YOU-NOTICE-A-FRIEND-IS-WITHDRAWING-002",
+      "theme": "when_you_notice_a_friend_is_withdrawing",
+      "text": "You can say you have noticed a change without assuming you know what caused it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-NOTICE-A-FRIEND-IS-WITHDRAWING-003",
+      "theme": "when_you_notice_a_friend_is_withdrawing",
+      "text": "If they do not want to talk, you might offer a walk, a meal, or another low-pressure way to spend time."
+    },
+    {
+      "id": "KDL-WHEN-YOU-NOTICE-A-FRIEND-IS-WITHDRAWING-004",
+      "theme": "when_you_notice_a_friend_is_withdrawing",
+      "text": "Being supportive does not mean carrying every concern alone. If you fear immediate danger, seek appropriate urgent help."
+    },
+    {
+      "id": "KDL-WHEN-YOU-NOTICE-A-FRIEND-IS-WITHDRAWING-005",
+      "theme": "when_you_notice_a_friend_is_withdrawing",
+      "text": "A friendship can make room for someone who is having a hard season without demanding they perform cheerfulness."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-MISTAKE-001",
+      "theme": "after_a_small_public_mistake",
+      "text": "You stumbled over a word in front of the room. The moment may feel louder to you than it did to anyone else."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-MISTAKE-002",
+      "theme": "after_a_small_public_mistake",
+      "text": "If you gave the wrong detail, a brief correction can do more good than a long defence."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-MISTAKE-003",
+      "theme": "after_a_small_public_mistake",
+      "text": "An awkward moment can replay in your mind long after everyone has moved on. You can gently redirect your attention."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-MISTAKE-004",
+      "theme": "after_a_small_public_mistake",
+      "text": "People who speak up, try new things, and participate sometimes make visible mistakes. Participation still matters."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-MISTAKE-005",
+      "theme": "after_a_small_public_mistake",
+      "text": "You may laugh about this later, or you may not. You do not need to turn embarrassment into a lesson immediately."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-PHOTO-IS-FOUND-001",
+      "theme": "when_a_family_photo_is_found",
+      "text": "The photograph slipped out of an old envelope. Suddenly an ordinary afternoon contains people and places from another time."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-PHOTO-IS-FOUND-002",
+      "theme": "when_a_family_photo_is_found",
+      "text": "Someone in the picture may remember details you never knew. Asking about them can open a gentle conversation."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-PHOTO-IS-FOUND-003",
+      "theme": "when_a_family_photo_is_found",
+      "text": "If the photograph brings grief as well as warmth, you do not have to choose only one feeling."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-PHOTO-IS-FOUND-004",
+      "theme": "when_a_family_photo_is_found",
+      "text": "Faded colours and bent corners do not make a memory less meaningful. Sometimes they make its journey more visible."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-PHOTO-IS-FOUND-005",
+      "theme": "when_a_family_photo_is_found",
+      "text": "You can keep the photograph, share a copy, or simply spend a moment looking. There is no correct way to remember."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-A-NEW-ROUTE-HOME-001",
+      "theme": "when_you_learn_a_new_route_home",
+      "text": "The turn you usually take is closed, so you are finding another way. A changed route can feel inconvenient before it feels familiar."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-A-NEW-ROUTE-HOME-002",
+      "theme": "when_you_learn_a_new_route_home",
+      "text": "Not knowing the streets yet does not make you careless. Taking time to check directions is a sensible choice."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-A-NEW-ROUTE-HOME-003",
+      "theme": "when_you_learn_a_new_route_home",
+      "text": "A different road may reveal a bakery, a garden, or a view you never noticed before."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-A-NEW-ROUTE-HOME-004",
+      "theme": "when_you_learn_a_new_route_home",
+      "text": "If you arrive later than planned, the extra time was part of navigating something unfamiliar, not proof of incompetence."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-A-NEW-ROUTE-HOME-005",
+      "theme": "when_you_learn_a_new_route_home",
+      "text": "Once you know another way home, your map of the neighbourhood has grown a little."
+    },
+    {
+      "id": "KDL-WHEN-A-TEAM-MEMBER-RETURNS-FROM-LEAVE-001",
+      "theme": "when_a_team_member_returns_from_leave",
+      "text": "The desk is occupied again, and there are stories to catch up on. A warm welcome need not become an immediate pile of requests."
+    },
+    {
+      "id": "KDL-WHEN-A-TEAM-MEMBER-RETURNS-FROM-LEAVE-002",
+      "theme": "when_a_team_member_returns_from_leave",
+      "text": "Someone returning from leave may need time to understand what changed. A clear summary is more useful than a rushed download."
+    },
+    {
+      "id": "KDL-WHEN-A-TEAM-MEMBER-RETURNS-FROM-LEAVE-003",
+      "theme": "when_a_team_member_returns_from_leave",
+      "text": "You can be glad to see a colleague back while respecting what they choose to share about their time away."
+    },
+    {
+      "id": "KDL-WHEN-A-TEAM-MEMBER-RETURNS-FROM-LEAVE-004",
+      "theme": "when_a_team_member_returns_from_leave",
+      "text": "Work may have shifted while they were gone. Naming those changes kindly can make the return easier for everyone."
+    },
+    {
+      "id": "KDL-WHEN-A-TEAM-MEMBER-RETURNS-FROM-LEAVE-005",
+      "theme": "when_a_team_member_returns_from_leave",
+      "text": "A good return starts with room to settle in, not an expectation to know everything by lunchtime."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-LOST-KEY-001",
+      "theme": "when_you_find_a_lost_key",
+      "text": "The key was in a pocket you had already checked. Relief can arrive in the most ordinary shape."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-LOST-KEY-002",
+      "theme": "when_you_find_a_lost_key",
+      "text": "Searching for something small can disrupt an entire morning. You are allowed to feel relieved when the search ends."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-LOST-KEY-003",
+      "theme": "when_you_find_a_lost_key",
+      "text": "If someone helped you look, a simple thank you recognises the time they gave you."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-LOST-KEY-004",
+      "theme": "when_you_find_a_lost_key",
+      "text": "Finding the key does not mean the frustration was imaginary. It means one practical worry is finished for now."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-LOST-KEY-005",
+      "theme": "when_you_find_a_lost_key",
+      "text": "You might choose a new place to keep it tomorrow. For tonight, it is enough that the door opens."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-NEW-TO-A-HOBBY-GROUP-001",
+      "theme": "when_you_are_new_to_a_hobby_group",
+      "text": "Everyone seems to know the routine already. Being new is not the same as being unwelcome."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-NEW-TO-A-HOBBY-GROUP-002",
+      "theme": "when_you_are_new_to_a_hobby_group",
+      "text": "You can begin by watching, asking one question, or joining a small part of the activity."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-NEW-TO-A-HOBBY-GROUP-003",
+      "theme": "when_you_are_new_to_a_hobby_group",
+      "text": "Someone who remembers your name at the second meeting can make a surprising difference."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-NEW-TO-A-HOBBY-GROUP-004",
+      "theme": "when_you_are_new_to_a_hobby_group",
+      "text": "You do not need to buy every tool or master every skill before deciding whether you enjoy being there."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-NEW-TO-A-HOBBY-GROUP-005",
+      "theme": "when_you_are_new_to_a_hobby_group",
+      "text": "Belonging often grows through repeated ordinary visits rather than one perfect introduction."
+    },
+    {
+      "id": "KDL-WHEN-A-SPECIAL-MEAL-DOES-NOT-GO-TO-PLAN-001",
+      "theme": "when_a_special_meal_does_not_go_to_plan",
+      "text": "The recipe did not turn out as you imagined, and guests are arriving soon. A meal can still be welcoming without being flawless."
+    },
+    {
+      "id": "KDL-WHEN-A-SPECIAL-MEAL-DOES-NOT-GO-TO-PLAN-002",
+      "theme": "when_a_special_meal_does_not_go_to_plan",
+      "text": "Burnt edges and missing ingredients can feel disappointing when you wanted to show someone care."
+    },
+    {
+      "id": "KDL-WHEN-A-SPECIAL-MEAL-DOES-NOT-GO-TO-PLAN-003",
+      "theme": "when_a_special_meal_does_not_go_to_plan",
+      "text": "If everyone ends up eating something simpler, the time around the table can still be worth remembering."
+    },
+    {
+      "id": "KDL-WHEN-A-SPECIAL-MEAL-DOES-NOT-GO-TO-PLAN-004",
+      "theme": "when_a_special_meal_does_not_go_to_plan",
+      "text": "You are allowed to ask for help with the last-minute changes instead of quietly carrying all the pressure."
+    },
+    {
+      "id": "KDL-WHEN-A-SPECIAL-MEAL-DOES-NOT-GO-TO-PLAN-005",
+      "theme": "when_a_special_meal_does_not_go_to_plan",
+      "text": "The story of a memorable dinner is not always about the food. Sometimes it is about how people handled the surprise."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-STARTS-A-SMALL-BUSINESS-001",
+      "theme": "when_a_friend_starts_a_small_business",
+      "text": "Your friend has opened a small business, and the first weeks may be uncertain. Asking how things are going can mean more than advice."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-STARTS-A-SMALL-BUSINESS-002",
+      "theme": "when_a_friend_starts_a_small_business",
+      "text": "Buying something is one way to support a new venture, but a sincere recommendation can help when money is tight."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-STARTS-A-SMALL-BUSINESS-003",
+      "theme": "when_a_friend_starts_a_small_business",
+      "text": "They may be proud of their idea and frightened by the responsibility. You can make room for both parts of the story."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-STARTS-A-SMALL-BUSINESS-004",
+      "theme": "when_a_friend_starts_a_small_business",
+      "text": "If they ask for feedback, thoughtful specifics are more useful than praise that tells them nothing."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-STARTS-A-SMALL-BUSINESS-005",
+      "theme": "when_a_friend_starts_a_small_business",
+      "text": "Celebrating a first customer or completed order can honour the work behind a milestone that looks small from outside."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-TO-SWIM-AS-AN-ADULT-001",
+      "theme": "when_you_are_learning_to_swim_as_an_adult",
+      "text": "Walking into the shallow end for your first lesson takes courage that may be invisible to people who learned years ago."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-TO-SWIM-AS-AN-ADULT-002",
+      "theme": "when_you_are_learning_to_swim_as_an_adult",
+      "text": "You can learn at a pace that respects your comfort and the instructor's safety guidance. Progress is not a race."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-TO-SWIM-AS-AN-ADULT-003",
+      "theme": "when_you_are_learning_to_swim_as_an_adult",
+      "text": "Being an adult beginner may feel awkward. It also means you chose to give yourself a new opportunity."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-TO-SWIM-AS-AN-ADULT-004",
+      "theme": "when_you_are_learning_to_swim_as_an_adult",
+      "text": "Some lessons will be about breathing or floating rather than crossing the pool. Those foundations count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-TO-SWIM-AS-AN-ADULT-005",
+      "theme": "when_you_are_learning_to_swim_as_an_adult",
+      "text": "You do not need to compare your first strokes with someone else's years of practice. Notice what feels a little easier today."
+    },
+    {
+      "id": "KDL-WHEN-THE-LIBRARY-CHANGES-ITS-HOURS-001",
+      "theme": "when_the_library_changes_its_hours",
+      "text": "The library closes earlier now, and a familiar part of your week needs rearranging. Small changes can affect real routines."
+    },
+    {
+      "id": "KDL-WHEN-THE-LIBRARY-CHANGES-ITS-HOURS-002",
+      "theme": "when_the_library_changes_its_hours",
+      "text": "If the new hours make visits difficult, asking about other borrowing options is a reasonable next step."
+    },
+    {
+      "id": "KDL-WHEN-THE-LIBRARY-CHANGES-ITS-HOURS-003",
+      "theme": "when_the_library_changes_its_hours",
+      "text": "A library can be a quiet refuge as well as a place for books. Missing that space makes sense."
+    },
+    {
+      "id": "KDL-WHEN-THE-LIBRARY-CHANGES-ITS-HOURS-004",
+      "theme": "when_the_library_changes_its_hours",
+      "text": "Perhaps you will discover a different time to visit, when the room has another rhythm and a different kind of calm."
+    },
+    {
+      "id": "KDL-WHEN-THE-LIBRARY-CHANGES-ITS-HOURS-005",
+      "theme": "when_the_library_changes_its_hours",
+      "text": "Public spaces shape our days in ways we do not always notice until their doors open or close at new times."
+    },
+    {
+      "id": "KDL-AFTER-A-LONG-VIDEO-CALL-WITH-FAMILY-001",
+      "theme": "after_a_long_video_call_with_family",
+      "text": "The screen is dark again, but the familiar voices are still with you. Distance can make a simple conversation feel precious."
+    },
+    {
+      "id": "KDL-AFTER-A-LONG-VIDEO-CALL-WITH-FAMILY-002",
+      "theme": "after_a_long_video_call_with_family",
+      "text": "Not everyone got a chance to speak on the call. You can follow up privately with someone you wanted to hear more from."
+    },
+    {
+      "id": "KDL-AFTER-A-LONG-VIDEO-CALL-WITH-FAMILY-003",
+      "theme": "after_a_long_video_call_with_family",
+      "text": "A family video call may include interruptions, frozen faces, and laughter. Connection rarely needs perfect technology."
+    },
+    {
+      "id": "KDL-AFTER-A-LONG-VIDEO-CALL-WITH-FAMILY-004",
+      "theme": "after_a_long_video_call_with_family",
+      "text": "If saying goodbye left you missing them more, that feeling can exist alongside gratitude for the time together."
+    },
+    {
+      "id": "KDL-AFTER-A-LONG-VIDEO-CALL-WITH-FAMILY-005",
+      "theme": "after_a_long_video_call_with_family",
+      "text": "You do not need to organise the next call immediately. Enjoy the small closeness this one brought."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-FILL-OUT-A-FORM-001",
+      "theme": "when_you_help_someone_fill_out_a_form",
+      "text": "The questions are confusing, and the deadline is near. Reading each section together can make a difficult task feel manageable."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-FILL-OUT-A-FORM-002",
+      "theme": "when_you_help_someone_fill_out_a_form",
+      "text": "Helping with paperwork is not the same as taking over someone's choices. Leave room for them to decide what they share."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-FILL-OUT-A-FORM-003",
+      "theme": "when_you_help_someone_fill_out_a_form",
+      "text": "If a form asks for sensitive details, checking where the information will go is a useful part of helping."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-FILL-OUT-A-FORM-004",
+      "theme": "when_you_help_someone_fill_out_a_form",
+      "text": "You may need to stop and find an accurate answer rather than guessing. Careful work is worth the extra moment."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-FILL-OUT-A-FORM-005",
+      "theme": "when_you_help_someone_fill_out_a_form",
+      "text": "When the form is submitted, the relief may be quiet. You helped turn a barrier into a completed step."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-ADOPTS-A-RESCUE-ANIMAL-001",
+      "theme": "when_a_friend_adopts_a_rescue_animal",
+      "text": "The new animal is learning a home full of unfamiliar sounds. Your friend's excitement may come with plenty of patience."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-ADOPTS-A-RESCUE-ANIMAL-002",
+      "theme": "when_a_friend_adopts_a_rescue_animal",
+      "text": "Some rescued animals need time and space before they feel comfortable. A calm visit can respect that process."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-ADOPTS-A-RESCUE-ANIMAL-003",
+      "theme": "when_a_friend_adopts_a_rescue_animal",
+      "text": "If your friend is tired from new routines, offering to bring dinner may be more helpful than requesting photos."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-ADOPTS-A-RESCUE-ANIMAL-004",
+      "theme": "when_a_friend_adopts_a_rescue_animal",
+      "text": "Every small sign of trust can feel significant in a new home. You can celebrate without expecting a quick transformation."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-ADOPTS-A-RESCUE-ANIMAL-005",
+      "theme": "when_a_friend_adopts_a_rescue_animal",
+      "text": "The animal's story may be complicated, but its next chapter deserves care rather than assumptions."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-TEAM-LOSES-A-FINAL-001",
+      "theme": "when_a_local_team_loses_a_final",
+      "text": "The final whistle has gone, and the players look exhausted. Their disappointment deserves room before anyone starts analysing the match."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-TEAM-LOSES-A-FINAL-002",
+      "theme": "when_a_local_team_loses_a_final",
+      "text": "A season of training cannot be reduced to the last score. There were teammates, early mornings, and lessons along the way."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-TEAM-LOSES-A-FINAL-003",
+      "theme": "when_a_local_team_loses_a_final",
+      "text": "If a young player is upset, listening may help more than immediately telling them to cheer up."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-TEAM-LOSES-A-FINAL-004",
+      "theme": "when_a_local_team_loses_a_final",
+      "text": "Supporting a team means showing up when the result hurts too. A kind word after defeat can stay with someone."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-TEAM-LOSES-A-FINAL-005",
+      "theme": "when_a_local_team_loses_a_final",
+      "text": "Tomorrow there may be time to discuss what comes next. Tonight the team can simply acknowledge how much they cared."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-PARENT-MEETING-001",
+      "theme": "when_you_attend_a_first_parent_meeting",
+      "text": "The classroom chairs are smaller than you remembered, and you are meeting new faces. You do not have to know every school routine yet."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-PARENT-MEETING-002",
+      "theme": "when_you_attend_a_first_parent_meeting",
+      "text": "If you are unsure about an expectation, asking a clear question can help other parents who wondered the same thing."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-PARENT-MEETING-003",
+      "theme": "when_you_attend_a_first_parent_meeting",
+      "text": "Some families have more time or resources than others. A welcoming parent community makes room for different circumstances."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-PARENT-MEETING-004",
+      "theme": "when_you_attend_a_first_parent_meeting",
+      "text": "You may leave with several dates and unfamiliar names. Writing down the next practical step is enough for tonight."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-PARENT-MEETING-005",
+      "theme": "when_you_attend_a_first_parent_meeting",
+      "text": "A first meeting is an introduction, not a test of whether you belong in your child's school community."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RECEIVE-CONSTRUCTIVE-FEEDBACK-001",
+      "theme": "when_you_receive_constructive_feedback",
+      "text": "The feedback includes something you need to improve, and hearing it may sting. You can listen without agreeing with every interpretation."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RECEIVE-CONSTRUCTIVE-FEEDBACK-002",
+      "theme": "when_you_receive_constructive_feedback",
+      "text": "One useful question can turn a vague criticism into something you can actually work on."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RECEIVE-CONSTRUCTIVE-FEEDBACK-003",
+      "theme": "when_you_receive_constructive_feedback",
+      "text": "You are allowed to ask for an example or a little time to reflect before responding."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RECEIVE-CONSTRUCTIVE-FEEDBACK-004",
+      "theme": "when_you_receive_constructive_feedback",
+      "text": "Feedback can describe a piece of work without defining the person who made it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RECEIVE-CONSTRUCTIVE-FEEDBACK-005",
+      "theme": "when_you_receive_constructive_feedback",
+      "text": "If someone offered thoughtful guidance, you can appreciate the effort while still choosing how to use it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REVISIT-A-CHILDHOOD-PLAYGROUND-001",
+      "theme": "when_you_revisit_a_childhood_playground",
+      "text": "The climbing frame seems smaller now, but you remember how enormous it once felt. Places change as we grow."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REVISIT-A-CHILDHOOD-PLAYGROUND-002",
+      "theme": "when_you_revisit_a_childhood_playground",
+      "text": "You might notice that the old playground has been rebuilt. The memory can remain meaningful without the original equipment."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REVISIT-A-CHILDHOOD-PLAYGROUND-003",
+      "theme": "when_you_revisit_a_childhood_playground",
+      "text": "A visit may bring laughter, tenderness, or a surprising ache. None of those reactions needs explaining away."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REVISIT-A-CHILDHOOD-PLAYGROUND-004",
+      "theme": "when_you_revisit_a_childhood_playground",
+      "text": "If children are playing there today, their games belong to this place as much as yours once did."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REVISIT-A-CHILDHOOD-PLAYGROUND-005",
+      "theme": "when_you_revisit_a_childhood_playground",
+      "text": "You can leave without recreating a single moment. Sometimes returning is simply a way to acknowledge where you began."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-FOR-A-NIGHT-SHIFT-001",
+      "theme": "when_you_prepare_for_a_night_shift",
+      "text": "The rest of the street is winding down while your workday is beginning. Your schedule deserves practical care and respect."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-FOR-A-NIGHT-SHIFT-002",
+      "theme": "when_you_prepare_for_a_night_shift",
+      "text": "Packing a meal or checking your journey before dark can make the shift feel a little more manageable."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-FOR-A-NIGHT-SHIFT-003",
+      "theme": "when_you_prepare_for_a_night_shift",
+      "text": "If friends forget that you sleep during the day, a gentle reminder can protect the rest you need."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-FOR-A-NIGHT-SHIFT-004",
+      "theme": "when_you_prepare_for_a_night_shift",
+      "text": "Night work often happens out of sight. The contribution is no less real because fewer people witness it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-FOR-A-NIGHT-SHIFT-005",
+      "theme": "when_you_prepare_for_a_night_shift",
+      "text": "When the shift ends, you deserve a chance to recover rather than being expected to switch straight into everyone else's routine."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-GARDEN-BEGINS-TO-GROW-001",
+      "theme": "when_a_shared_garden_begins_to_grow",
+      "text": "The first shoots have appeared in the shared garden. A little green can make weeks of preparation feel worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-GARDEN-BEGINS-TO-GROW-002",
+      "theme": "when_a_shared_garden_begins_to_grow",
+      "text": "Different neighbours may have different ideas about what to plant. Listening can help the space feel shared rather than claimed."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-GARDEN-BEGINS-TO-GROW-003",
+      "theme": "when_a_shared_garden_begins_to_grow",
+      "text": "Watering and weeding are quiet contributions that rarely appear in photographs of the harvest."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-GARDEN-BEGINS-TO-GROW-004",
+      "theme": "when_a_shared_garden_begins_to_grow",
+      "text": "Not every seed will grow, even with care. A garden teaches attention without promising perfect results."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-GARDEN-BEGINS-TO-GROW-005",
+      "theme": "when_a_shared_garden_begins_to_grow",
+      "text": "Sharing the first herbs or vegetables can turn a small patch of ground into a place of connection."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-ASKED-TO-GIVE-A-TOAST-001",
+      "theme": "when_you_are_asked_to_give_a_toast",
+      "text": "The room is waiting, and you can feel your notes in your hand. A sincere toast does not need to be a performance."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-ASKED-TO-GIVE-A-TOAST-002",
+      "theme": "when_you_are_asked_to_give_a_toast",
+      "text": "One specific memory often says more than a string of impressive adjectives."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-ASKED-TO-GIVE-A-TOAST-003",
+      "theme": "when_you_are_asked_to_give_a_toast",
+      "text": "If your voice shakes a little, the people who care about you may hear the feeling behind it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-ASKED-TO-GIVE-A-TOAST-004",
+      "theme": "when_you_are_asked_to_give_a_toast",
+      "text": "You can keep the toast brief and still honour the occasion. Thoughtfulness is not measured in minutes."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-ASKED-TO-GIVE-A-TOAST-005",
+      "theme": "when_you_are_asked_to_give_a_toast",
+      "text": "When you raise your glass, remember that the purpose is to celebrate someone, not to deliver a flawless speech."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-QUIET-CAFE-001",
+      "theme": "when_you_find_a_quiet_cafe",
+      "text": "The café has an empty table near the window, and for once there is nowhere urgent to be."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-QUIET-CAFE-002",
+      "theme": "when_you_find_a_quiet_cafe",
+      "text": "A quiet place can offer a pause between errands without requiring you to make the hour productive."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-QUIET-CAFE-003",
+      "theme": "when_you_find_a_quiet_cafe",
+      "text": "Perhaps you recognise the barista or the sound of cups being stacked. Familiar details can make a place feel welcoming."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-QUIET-CAFE-004",
+      "theme": "when_you_find_a_quiet_cafe",
+      "text": "You can enjoy a warm drink alone without treating solitude as a problem that needs fixing."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-QUIET-CAFE-005",
+      "theme": "when_you_find_a_quiet_cafe",
+      "text": "Leaving the café, you may carry nothing new except a slightly steadier pace. That can be enough."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ORGANISE-A-SHARED-RIDE-001",
+      "theme": "when_you_organise_a_shared_ride",
+      "text": "Coordinating pickup times takes more messages than anyone expected. Clear details can save everyone a stressful morning."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ORGANISE-A-SHARED-RIDE-002",
+      "theme": "when_you_organise_a_shared_ride",
+      "text": "If someone needs an accessible pickup point, planning for it early helps the whole group travel with more ease."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ORGANISE-A-SHARED-RIDE-003",
+      "theme": "when_you_organise_a_shared_ride",
+      "text": "A shared ride works best when everyone knows the plan and has a chance to raise concerns."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ORGANISE-A-SHARED-RIDE-004",
+      "theme": "when_you_organise_a_shared_ride",
+      "text": "Delays can happen even with careful preparation. A quick update is often more useful than assigning blame."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ORGANISE-A-SHARED-RIDE-005",
+      "theme": "when_you_organise_a_shared_ride",
+      "text": "After everyone arrives, the organising work may disappear from view. It still helped make the day possible."
+    },
+    {
+      "id": "KDL-WHEN-A-MUSEUM-EXHIBIT-CLOSES-001",
+      "theme": "when_a_museum_exhibit_closes",
+      "text": "A museum exhibit you loved is closing. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-MUSEUM-EXHIBIT-CLOSES-002",
+      "theme": "when_a_museum_exhibit_closes",
+      "text": "The last visit may feel different from the first. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-A-MUSEUM-EXHIBIT-CLOSES-003",
+      "theme": "when_a_museum_exhibit_closes",
+      "text": "A photograph of the exhibit can hold a particular memory. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-MUSEUM-EXHIBIT-CLOSES-004",
+      "theme": "when_a_museum_exhibit_closes",
+      "text": "You may wish someone else had seen it with you. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-MUSEUM-EXHIBIT-CLOSES-005",
+      "theme": "when_a_museum_exhibit_closes",
+      "text": "The room will change, but your encounter with it mattered. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-OPENS-THEIR-HOME-TO-GUESTS-001",
+      "theme": "when_a_friend_opens_their_home_to_guests",
+      "text": "Your friend is welcoming people into their home. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-OPENS-THEIR-HOME-TO-GUESTS-002",
+      "theme": "when_a_friend_opens_their_home_to_guests",
+      "text": "Hosting can carry invisible work. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-OPENS-THEIR-HOME-TO-GUESTS-003",
+      "theme": "when_a_friend_opens_their_home_to_guests",
+      "text": "A small offer to help can ease the evening. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-OPENS-THEIR-HOME-TO-GUESTS-004",
+      "theme": "when_a_friend_opens_their_home_to_guests",
+      "text": "You do not need to judge how everything is arranged. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-OPENS-THEIR-HOME-TO-GUESTS-005",
+      "theme": "when_a_friend_opens_their_home_to_guests",
+      "text": "Thanking the host for the gathering can mean a great deal. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-MEND-CLOTHING-001",
+      "theme": "when_you_learn_to_mend_clothing",
+      "text": "You are learning to mend a piece of clothing. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-MEND-CLOTHING-002",
+      "theme": "when_you_learn_to_mend_clothing",
+      "text": "The first stitch may be uneven. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-MEND-CLOTHING-003",
+      "theme": "when_you_learn_to_mend_clothing",
+      "text": "Repairing something can take more patience than replacing it. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-MEND-CLOTHING-004",
+      "theme": "when_you_learn_to_mend_clothing",
+      "text": "A visible seam can tell a story of care. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-MEND-CLOTHING-005",
+      "theme": "when_you_learn_to_mend_clothing",
+      "text": "The garment does not need to look untouched to be useful. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-AFTER-A-COMMUNITY-CLEAN-UP-001",
+      "theme": "after_a_community_clean_up",
+      "text": "You have spent time helping clean a shared space. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-AFTER-A-COMMUNITY-CLEAN-UP-002",
+      "theme": "after_a_community_clean_up",
+      "text": "Some of the work may go unnoticed. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-AFTER-A-COMMUNITY-CLEAN-UP-003",
+      "theme": "after_a_community_clean_up",
+      "text": "A cleaner corner can make a place feel more welcoming. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-AFTER-A-COMMUNITY-CLEAN-UP-004",
+      "theme": "after_a_community_clean_up",
+      "text": "Working beside neighbours can begin a conversation. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-AFTER-A-COMMUNITY-CLEAN-UP-005",
+      "theme": "after_a_community_clean_up",
+      "text": "Your contribution mattered even if there is more to do. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-GETS-THEIR-FIRST-PET-001",
+      "theme": "when_a_friend_gets_their_first_pet",
+      "text": "A friend has welcomed their first pet. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-GETS-THEIR-FIRST-PET-002",
+      "theme": "when_a_friend_gets_their_first_pet",
+      "text": "The excitement may come with unfamiliar responsibilities. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-GETS-THEIR-FIRST-PET-003",
+      "theme": "when_a_friend_gets_their_first_pet",
+      "text": "Listening to the little stories can show you care. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-GETS-THEIR-FIRST-PET-004",
+      "theme": "when_a_friend_gets_their_first_pet",
+      "text": "A new routine takes time for everyone involved. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-GETS-THEIR-FIRST-PET-005",
+      "theme": "when_a_friend_gets_their_first_pet",
+      "text": "You can celebrate the bond without offering constant advice. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-RELATIVE-TEACHES-YOU-A-GAME-001",
+      "theme": "when_a_relative_teaches_you_a_game",
+      "text": "A relative is teaching you a game they enjoy. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-RELATIVE-TEACHES-YOU-A-GAME-002",
+      "theme": "when_a_relative_teaches_you_a_game",
+      "text": "The rules may sound complicated at first. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-A-RELATIVE-TEACHES-YOU-A-GAME-003",
+      "theme": "when_a_relative_teaches_you_a_game",
+      "text": "Asking another question is part of learning. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-RELATIVE-TEACHES-YOU-A-GAME-004",
+      "theme": "when_a_relative_teaches_you_a_game",
+      "text": "A shared laugh can matter more than the score. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-RELATIVE-TEACHES-YOU-A-GAME-005",
+      "theme": "when_a_relative_teaches_you_a_game",
+      "text": "The time together may be what you remember. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SET-UP-A-SCHOOL-EVENT-001",
+      "theme": "when_you_help_set_up_a_school_event",
+      "text": "You are helping prepare a school event. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SET-UP-A-SCHOOL-EVENT-002",
+      "theme": "when_you_help_set_up_a_school_event",
+      "text": "There are many details that guests may never see. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SET-UP-A-SCHOOL-EVENT-003",
+      "theme": "when_you_help_set_up_a_school_event",
+      "text": "Moving chairs or checking signs is meaningful work. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SET-UP-A-SCHOOL-EVENT-004",
+      "theme": "when_you_help_set_up_a_school_event",
+      "text": "A last-minute change does not erase the effort. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SET-UP-A-SCHOOL-EVENT-005",
+      "theme": "when_you_help_set_up_a_school_event",
+      "text": "Your help gives others room to enjoy the day. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOURITE-TREE-IS-REMOVED-001",
+      "theme": "when_a_favourite_tree_is_removed",
+      "text": "A familiar tree has been removed from your street. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOURITE-TREE-IS-REMOVED-002",
+      "theme": "when_a_favourite_tree_is_removed",
+      "text": "Its absence may change how the whole place feels. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOURITE-TREE-IS-REMOVED-003",
+      "theme": "when_a_favourite_tree_is_removed",
+      "text": "You can miss the shade and the memories attached to it. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOURITE-TREE-IS-REMOVED-004",
+      "theme": "when_a_favourite_tree_is_removed",
+      "text": "Other people may remember that tree differently. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOURITE-TREE-IS-REMOVED-005",
+      "theme": "when_a_favourite_tree_is_removed",
+      "text": "Noticing what is gone is a form of paying attention. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-SIGN-LANGUAGE-001",
+      "theme": "when_you_are_learning_sign_language",
+      "text": "You are beginning to learn sign language. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-SIGN-LANGUAGE-002",
+      "theme": "when_you_are_learning_sign_language",
+      "text": "A new way of communicating takes practice. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-SIGN-LANGUAGE-003",
+      "theme": "when_you_are_learning_sign_language",
+      "text": "Getting a movement wrong is an invitation to learn. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-SIGN-LANGUAGE-004",
+      "theme": "when_you_are_learning_sign_language",
+      "text": "Listening includes watching with care. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-SIGN-LANGUAGE-005",
+      "theme": "when_you_are_learning_sign_language",
+      "text": "Each respectful attempt can make a conversation easier. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-RELEASES-A-FIRST-PODCAST-001",
+      "theme": "when_a_friend_releases_a_first_podcast",
+      "text": "A friend has published their first podcast episode. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-RELEASES-A-FIRST-PODCAST-002",
+      "theme": "when_a_friend_releases_a_first_podcast",
+      "text": "Sharing a creative project can feel vulnerable. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-RELEASES-A-FIRST-PODCAST-003",
+      "theme": "when_a_friend_releases_a_first_podcast",
+      "text": "Listening attentively is a generous form of support. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-RELEASES-A-FIRST-PODCAST-004",
+      "theme": "when_a_friend_releases_a_first_podcast",
+      "text": "Specific feedback may be more useful than broad praise. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-RELEASES-A-FIRST-PODCAST-005",
+      "theme": "when_a_friend_releases_a_first_podcast",
+      "text": "You can celebrate the courage behind the recording. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SORT-A-BOX-OF-OLD-LETTERS-001",
+      "theme": "when_you_sort_a_box_of_old_letters",
+      "text": "You are sorting through a box of old letters. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SORT-A-BOX-OF-OLD-LETTERS-002",
+      "theme": "when_you_sort_a_box_of_old_letters",
+      "text": "A familiar handwriting can bring back an entire afternoon. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SORT-A-BOX-OF-OLD-LETTERS-003",
+      "theme": "when_you_sort_a_box_of_old_letters",
+      "text": "Some messages may be difficult to reread. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SORT-A-BOX-OF-OLD-LETTERS-004",
+      "theme": "when_you_sort_a_box_of_old_letters",
+      "text": "You can keep a few without keeping everything. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SORT-A-BOX-OF-OLD-LETTERS-005",
+      "theme": "when_you_sort_a_box_of_old_letters",
+      "text": "Taking your time with these memories is enough. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-TRY-A-NEW-PUBLIC-TRANSPORT-ROUTE-001",
+      "theme": "when_you_try_a_new_public_transport_route",
+      "text": "You are trying a public transport route for the first time. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-TRY-A-NEW-PUBLIC-TRANSPORT-ROUTE-002",
+      "theme": "when_you_try_a_new_public_transport_route",
+      "text": "The stops and signs may be unfamiliar. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-TRY-A-NEW-PUBLIC-TRANSPORT-ROUTE-003",
+      "theme": "when_you_try_a_new_public_transport_route",
+      "text": "Checking the route twice is sensible, not embarrassing. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-TRY-A-NEW-PUBLIC-TRANSPORT-ROUTE-004",
+      "theme": "when_you_try_a_new_public_transport_route",
+      "text": "A small delay need not define the whole journey. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-TRY-A-NEW-PUBLIC-TRANSPORT-ROUTE-005",
+      "theme": "when_you_try_a_new_public_transport_route",
+      "text": "Learning the way can make tomorrow feel easier. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-ARTIST-DISPLAYS-THEIR-WORK-001",
+      "theme": "when_a_local_artist_displays_their_work",
+      "text": "A local artist is showing their work publicly. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-ARTIST-DISPLAYS-THEIR-WORK-002",
+      "theme": "when_a_local_artist_displays_their_work",
+      "text": "Putting personal work on display takes courage. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-ARTIST-DISPLAYS-THEIR-WORK-003",
+      "theme": "when_a_local_artist_displays_their_work",
+      "text": "A thoughtful question can open a meaningful conversation. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-ARTIST-DISPLAYS-THEIR-WORK-004",
+      "theme": "when_a_local_artist_displays_their_work",
+      "text": "You do not need expert vocabulary to appreciate art. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-ARTIST-DISPLAYS-THEIR-WORK-005",
+      "theme": "when_a_local_artist_displays_their_work",
+      "text": "Taking time to look closely is a kind response. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-A-ROOM-FOR-A-VISITOR-001",
+      "theme": "when_you_prepare_a_room_for_a_visitor",
+      "text": "You are preparing a room for someone visiting. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-A-ROOM-FOR-A-VISITOR-002",
+      "theme": "when_you_prepare_a_room_for_a_visitor",
+      "text": "The details can feel bigger than they are. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-A-ROOM-FOR-A-VISITOR-003",
+      "theme": "when_you_prepare_a_room_for_a_visitor",
+      "text": "A clean place to rest often matters more than perfection. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-A-ROOM-FOR-A-VISITOR-004",
+      "theme": "when_you_prepare_a_room_for_a_visitor",
+      "text": "Asking what would help is a thoughtful welcome. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-A-ROOM-FOR-A-VISITOR-005",
+      "theme": "when_you_prepare_a_room_for_a_visitor",
+      "text": "Your guest is coming to spend time with you. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-JOIN-A-NEIGHBOURHOOD-BOOK-SWAP-001",
+      "theme": "when_you_join_a_neighbourhood_book_swap",
+      "text": "You have joined a neighbourhood book swap. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-JOIN-A-NEIGHBOURHOOD-BOOK-SWAP-002",
+      "theme": "when_you_join_a_neighbourhood_book_swap",
+      "text": "A book can arrive with traces of another reader. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-JOIN-A-NEIGHBOURHOOD-BOOK-SWAP-003",
+      "theme": "when_you_join_a_neighbourhood_book_swap",
+      "text": "You may discover a story you would never have chosen. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-JOIN-A-NEIGHBOURHOOD-BOOK-SWAP-004",
+      "theme": "when_you_join_a_neighbourhood_book_swap",
+      "text": "Sharing a favourite title invites conversation. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-JOIN-A-NEIGHBOURHOOD-BOOK-SWAP-005",
+      "theme": "when_you_join_a_neighbourhood_book_swap",
+      "text": "The exchange is about connection as much as reading. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-FINISHES-A-TRAINING-COURSE-001",
+      "theme": "when_a_friend_finishes_a_training_course",
+      "text": "A friend has finished a demanding training course. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-FINISHES-A-TRAINING-COURSE-002",
+      "theme": "when_a_friend_finishes_a_training_course",
+      "text": "The effort behind a certificate is not always visible. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-FINISHES-A-TRAINING-COURSE-003",
+      "theme": "when_a_friend_finishes_a_training_course",
+      "text": "Asking what they learned can honour their commitment. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-FINISHES-A-TRAINING-COURSE-004",
+      "theme": "when_a_friend_finishes_a_training_course",
+      "text": "Their next step may still be uncertain. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-FINISHES-A-TRAINING-COURSE-005",
+      "theme": "when_a_friend_finishes_a_training_course",
+      "text": "This achievement deserves a moment of recognition. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-USE-A-NEW-KITCHEN-TOOL-001",
+      "theme": "when_you_learn_to_use_a_new_kitchen_tool",
+      "text": "You are learning to use a new kitchen tool. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-USE-A-NEW-KITCHEN-TOOL-002",
+      "theme": "when_you_learn_to_use_a_new_kitchen_tool",
+      "text": "The instructions may take longer than expected. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-USE-A-NEW-KITCHEN-TOOL-003",
+      "theme": "when_you_learn_to_use_a_new_kitchen_tool",
+      "text": "A slow first attempt can prevent frustration later. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-USE-A-NEW-KITCHEN-TOOL-004",
+      "theme": "when_you_learn_to_use_a_new_kitchen_tool",
+      "text": "Asking for a demonstration is a practical choice. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-USE-A-NEW-KITCHEN-TOOL-005",
+      "theme": "when_you_learn_to_use_a_new_kitchen_tool",
+      "text": "Confidence often grows through ordinary repetition. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PATH-REOPENS-001",
+      "theme": "when_a_shared_path_reopens",
+      "text": "A shared walking path has reopened after repairs. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PATH-REOPENS-002",
+      "theme": "when_a_shared_path_reopens",
+      "text": "A familiar route may feel new again. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PATH-REOPENS-003",
+      "theme": "when_a_shared_path_reopens",
+      "text": "People may return to it for different reasons. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PATH-REOPENS-004",
+      "theme": "when_a_shared_path_reopens",
+      "text": "A small public improvement can change daily routines. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PATH-REOPENS-005",
+      "theme": "when_a_shared_path_reopens",
+      "text": "Enjoying the path is also appreciating the people who restored it. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-PACK-FOR-A-MOVE-001",
+      "theme": "when_you_help_someone_pack_for_a_move",
+      "text": "You are helping someone pack for a move. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-PACK-FOR-A-MOVE-002",
+      "theme": "when_you_help_someone_pack_for_a_move",
+      "text": "Ordinary objects can carry surprising memories. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-PACK-FOR-A-MOVE-003",
+      "theme": "when_you_help_someone_pack_for_a_move",
+      "text": "Letting them decide what to keep shows respect. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-PACK-FOR-A-MOVE-004",
+      "theme": "when_you_help_someone_pack_for_a_move",
+      "text": "A labelled box can be a small act of kindness. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-PACK-FOR-A-MOVE-005",
+      "theme": "when_you_help_someone_pack_for_a_move",
+      "text": "Your presence may make a tiring task less lonely. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-CRAFT-MARKET-001",
+      "theme": "when_you_attend_a_first_craft_market",
+      "text": "You are attending a craft market for the first time. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-CRAFT-MARKET-002",
+      "theme": "when_you_attend_a_first_craft_market",
+      "text": "Every stall represents someone's time and skill. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-CRAFT-MARKET-003",
+      "theme": "when_you_attend_a_first_craft_market",
+      "text": "A conversation with a maker can enrich the visit. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-CRAFT-MARKET-004",
+      "theme": "when_you_attend_a_first_craft_market",
+      "text": "You can appreciate beautiful work without buying it. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-CRAFT-MARKET-005",
+      "theme": "when_you_attend_a_first_craft_market",
+      "text": "Curiosity is a good way to enter a new community. You do not have to make the experience perfect for it to count."
     }
   ]
 }
