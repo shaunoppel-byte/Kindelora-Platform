@@ -72,7 +72,7 @@ refined.textContent=`
 .free-affirmations .kindelora-focus-button:focus-visible,.kindelora-focus-dialog button:focus-visible{outline:3px solid #e2b85b;outline-offset:3px}
 .kindelora-focus-dialog{width:min(92vw,700px);max-height:90vh;overflow:auto;padding:0;border:1px solid #e9d8c8;border-radius:20px;background:#fffaf4;color:#2a1c35;box-shadow:0 25px 90px #0008}
 .kindelora-focus-dialog::backdrop{background:#150b23cc}
-.kindelora-focus-dialog img{width:100%;height:clamp(180px,35vh,330px);object-fit:cover}
+.kindelora-focus-dialog img{width:100%;height:clamp(180px,35vh,330px);object-fit:cover}\n.kindelora-focus-dialog .focus-scenic-art{aspect-ratio:16/10;max-height:45vh}\n.kindelora-focus-dialog .focus-scenic-art img.art{height:100%;width:100%;object-fit:cover}\n.kindelora-focus-dialog .focus-scenic-art .kindelora-scenic-overlay strong{font-size:clamp(1.7rem,5vw,3.2rem)}\n.kindelora-focus-dialog .focus-scenic-art .kindelora-scenic-overlay>span:not(.kindelora-scenic-brand){font-size:clamp(.85rem,2.5vw,1.15rem)}
 .kindelora-focus-dialog .focus-inner{padding:clamp(20px,4vw,38px)}
 .kindelora-focus-dialog h2{font-family:Georgia,serif;font-size:clamp(1.6rem,3vw,2.3rem);margin:0 0 18px;color:#32183b}
 .kindelora-focus-dialog .focus-quote{font-size:clamp(1.25rem,2.5vw,1.6rem);line-height:1.7}
@@ -93,7 +93,7 @@ cards.forEach(card=>{
  const button=document.createElement('button');button.type='button';button.className='kindelora-focus-button';button.textContent='Read in focus view';
  button.addEventListener('click',()=>{
   stop();dialog.replaceChildren();
-  if(img){const photo=document.createElement('img');photo.src=img.src;photo.alt=img.alt||'';dialog.appendChild(photo);}
+  if(img){const scenic=card.querySelector('.kindelora-scenic-art');if(scenic){const visual=scenic.cloneNode(true);visual.classList.add('focus-scenic-art');dialog.appendChild(visual);}else{const photo=document.createElement('img');photo.src=img.src;photo.alt=img.alt||'';dialog.appendChild(photo);}}
   const inner=document.createElement('div');inner.className='focus-inner';
   const close=document.createElement('button');close.type='button';close.className='focus-close';close.textContent='Close';close.addEventListener('click',()=>dialog.close());
   const h=document.createElement('h2');h.textContent=title;
