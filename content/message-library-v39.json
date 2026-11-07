@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "batch": 39,
+  "editorial_note": "15 individually drafted situational messages. Exact duplicates and token-overlap against 3,000 public messages checked; independent editorial review required. Editorial-only, not published.",
+  "messages": [
+    {
+      "id": "KDL-EDITORIAL39-NEIGHBOUR-MOVES-AWAY-001",
+      "theme": "editorial39_neighbour_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The hallway may feel different after a familiar neighbour moves away. Missing those small greetings is a real kind of loss."
+    },
+    {
+      "id": "KDL-EDITORIAL39-SHARED-PROJECT-ENDS-001",
+      "theme": "editorial39_shared_project_ends",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Finishing a project can bring relief and an unexpected sadness. Both can belong to the same achievement."
+    },
+    {
+      "id": "KDL-EDITORIAL39-PUBLIC-SPEECH-FEELS-DIFFICULT-001",
+      "theme": "editorial39_public_speech_feels_difficult",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A pause at the microphone does not need an apology. It gives you and the audience a moment to settle."
+    },
+    {
+      "id": "KDL-EDITORIAL39-FRIEND-NEEDS-SPACE-001",
+      "theme": "editorial39_friend_needs_space",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friend's request for space can sting even when you respect it. You are allowed to feel both things."
+    },
+    {
+      "id": "KDL-EDITORIAL39-PLAN-IS-CANCELLED-001",
+      "theme": "editorial39_plan_is_cancelled",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected free afternoon does not have to become productive. You may simply use it to rest."
+    },
+    {
+      "id": "KDL-EDITORIAL39-RETURN-TO-A-HOBBY-001",
+      "theme": "editorial39_return_to_a_hobby",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Picking up a hobby after years away may feel clumsy. Your enjoyment does not depend on remembering every skill."
+    },
+    {
+      "id": "KDL-EDITORIAL39-NEW-TO-A-TEAM-001",
+      "theme": "editorial39_new_to_a_team",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may not understand the team's shorthand yet. Asking what a term means is part of finding your place."
+    },
+    {
+      "id": "KDL-EDITORIAL39-CHILD-ASKS-A-HARD-QUESTION-001",
+      "theme": "editorial39_child_asks_a_hard_question",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes a child wants to know whether they can ask again. Your willingness to listen matters."
+    },
+    {
+      "id": "KDL-EDITORIAL39-REVISIT-AN-OLD-PLACE-001",
+      "theme": "editorial39_revisit_an_old_place",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An old street may look smaller than you remember. Your memories do not need to match its present shape."
+    },
+    {
+      "id": "KDL-EDITORIAL39-FRIENDSHIP-CHANGES-RHYTHM-001",
+      "theme": "editorial39_friendship_changes_rhythm",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some friendships change their rhythm. You can notice that change without deciding immediately what it means."
+    },
+    {
+      "id": "KDL-EDITORIAL39-UNEXPECTED-EMPTY-AFTERNOON-001",
+      "theme": "editorial39_unexpected_empty_afternoon",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A cancelled appointment can leave room for quiet. You do not have to fill every gap with an obligation."
+    },
+    {
+      "id": "KDL-EDITORIAL39-LEARNING-A-NEW-ROUTE-001",
+      "theme": "editorial39_learning_a_new_route",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A wrong turn on an unfamiliar route is information, not a verdict on your ability to find your way."
+    },
+    {
+      "id": "KDL-EDITORIAL39-HOSTING-FOR-FIRST-TIME-001",
+      "theme": "editorial39_hosting_for_first_time",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Guests may remember how welcome they felt more than whether every detail of the meal went to plan."
+    },
+    {
+      "id": "KDL-EDITORIAL39-REJOINING-A-COMMUNITY-001",
+      "theme": "editorial39_rejoining_a_community",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Returning to a group after time away can feel awkward. You are allowed to reconnect one conversation at a time."
+    },
+    {
+      "id": "KDL-EDITORIAL39-WAITING-FOR-A-REPLY-001",
+      "theme": "editorial39_waiting_for_a_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A delayed reply can stir uncertainty. You can notice that feeling without deciding what the silence means."
+    }
+  ]
+}
