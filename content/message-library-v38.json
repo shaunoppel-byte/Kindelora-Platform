@@ -1,0 +1,807 @@
+{
+  "schema_version": 1,
+  "batch": 38,
+  "editorial_note": "100 original editorial-review drafts across 20 situational themes. Not cleared for public release. Requires full-corpus near-duplicate and contextual sensitivity review.",
+  "messages": [
+    {
+      "id": "KDL-WHEN-A-MUSEUM-EXHIBIT-CLOSES-001",
+      "theme": "when_a_museum_exhibit_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A museum exhibit you loved is closing. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-MUSEUM-EXHIBIT-CLOSES-002",
+      "theme": "when_a_museum_exhibit_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The last visit may feel different from the first. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-A-MUSEUM-EXHIBIT-CLOSES-003",
+      "theme": "when_a_museum_exhibit_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A photograph of the exhibit can hold a particular memory. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-MUSEUM-EXHIBIT-CLOSES-004",
+      "theme": "when_a_museum_exhibit_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may wish someone else had seen it with you. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-MUSEUM-EXHIBIT-CLOSES-005",
+      "theme": "when_a_museum_exhibit_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The room will change, but your encounter with it mattered. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-OPENS-THEIR-HOME-TO-GUESTS-001",
+      "theme": "when_a_friend_opens_their_home_to_guests",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your friend is welcoming people into their home. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-OPENS-THEIR-HOME-TO-GUESTS-002",
+      "theme": "when_a_friend_opens_their_home_to_guests",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Hosting can carry invisible work. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-OPENS-THEIR-HOME-TO-GUESTS-003",
+      "theme": "when_a_friend_opens_their_home_to_guests",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A small offer to help can ease the evening. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-OPENS-THEIR-HOME-TO-GUESTS-004",
+      "theme": "when_a_friend_opens_their_home_to_guests",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need to judge how everything is arranged. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-OPENS-THEIR-HOME-TO-GUESTS-005",
+      "theme": "when_a_friend_opens_their_home_to_guests",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Thanking the host for the gathering can mean a great deal. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-MEND-CLOTHING-001",
+      "theme": "when_you_learn_to_mend_clothing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are learning to mend a piece of clothing. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-MEND-CLOTHING-002",
+      "theme": "when_you_learn_to_mend_clothing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first stitch may be uneven. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-MEND-CLOTHING-003",
+      "theme": "when_you_learn_to_mend_clothing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Repairing something can take more patience than replacing it. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-MEND-CLOTHING-004",
+      "theme": "when_you_learn_to_mend_clothing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A visible seam can tell a story of care. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-MEND-CLOTHING-005",
+      "theme": "when_you_learn_to_mend_clothing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The garment does not need to look untouched to be useful. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-AFTER-A-COMMUNITY-CLEAN-UP-001",
+      "theme": "after_a_community_clean_up",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You have spent time helping clean a shared space. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-AFTER-A-COMMUNITY-CLEAN-UP-002",
+      "theme": "after_a_community_clean_up",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some of the work may go unnoticed. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-AFTER-A-COMMUNITY-CLEAN-UP-003",
+      "theme": "after_a_community_clean_up",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A cleaner corner can make a place feel more welcoming. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-AFTER-A-COMMUNITY-CLEAN-UP-004",
+      "theme": "after_a_community_clean_up",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Working beside neighbours can begin a conversation. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-AFTER-A-COMMUNITY-CLEAN-UP-005",
+      "theme": "after_a_community_clean_up",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your contribution mattered even if there is more to do. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-GETS-THEIR-FIRST-PET-001",
+      "theme": "when_a_friend_gets_their_first_pet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friend has welcomed their first pet. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-GETS-THEIR-FIRST-PET-002",
+      "theme": "when_a_friend_gets_their_first_pet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The excitement may come with unfamiliar responsibilities. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-GETS-THEIR-FIRST-PET-003",
+      "theme": "when_a_friend_gets_their_first_pet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Listening to the little stories can show you care. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-GETS-THEIR-FIRST-PET-004",
+      "theme": "when_a_friend_gets_their_first_pet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A new routine takes time for everyone involved. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-GETS-THEIR-FIRST-PET-005",
+      "theme": "when_a_friend_gets_their_first_pet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can celebrate the bond without offering constant advice. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-RELATIVE-TEACHES-YOU-A-GAME-001",
+      "theme": "when_a_relative_teaches_you_a_game",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A relative is teaching you a game they enjoy. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-RELATIVE-TEACHES-YOU-A-GAME-002",
+      "theme": "when_a_relative_teaches_you_a_game",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The rules may sound complicated at first. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-A-RELATIVE-TEACHES-YOU-A-GAME-003",
+      "theme": "when_a_relative_teaches_you_a_game",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Asking another question is part of learning. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-RELATIVE-TEACHES-YOU-A-GAME-004",
+      "theme": "when_a_relative_teaches_you_a_game",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shared laugh can matter more than the score. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-RELATIVE-TEACHES-YOU-A-GAME-005",
+      "theme": "when_a_relative_teaches_you_a_game",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The time together may be what you remember. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SET-UP-A-SCHOOL-EVENT-001",
+      "theme": "when_you_help_set_up_a_school_event",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are helping prepare a school event. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SET-UP-A-SCHOOL-EVENT-002",
+      "theme": "when_you_help_set_up_a_school_event",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "There are many details that guests may never see. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SET-UP-A-SCHOOL-EVENT-003",
+      "theme": "when_you_help_set_up_a_school_event",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Moving chairs or checking signs is meaningful work. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SET-UP-A-SCHOOL-EVENT-004",
+      "theme": "when_you_help_set_up_a_school_event",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A last-minute change does not erase the effort. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SET-UP-A-SCHOOL-EVENT-005",
+      "theme": "when_you_help_set_up_a_school_event",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your help gives others room to enjoy the day. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOURITE-TREE-IS-REMOVED-001",
+      "theme": "when_a_favourite_tree_is_removed",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar tree has been removed from your street. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOURITE-TREE-IS-REMOVED-002",
+      "theme": "when_a_favourite_tree_is_removed",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Its absence may change how the whole place feels. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOURITE-TREE-IS-REMOVED-003",
+      "theme": "when_a_favourite_tree_is_removed",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can miss the shade and the memories attached to it. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOURITE-TREE-IS-REMOVED-004",
+      "theme": "when_a_favourite_tree_is_removed",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Other people may remember that tree differently. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOURITE-TREE-IS-REMOVED-005",
+      "theme": "when_a_favourite_tree_is_removed",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Noticing what is gone is a form of paying attention. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-SIGN-LANGUAGE-001",
+      "theme": "when_you_are_learning_sign_language",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are beginning to learn sign language. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-SIGN-LANGUAGE-002",
+      "theme": "when_you_are_learning_sign_language",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A new way of communicating takes practice. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-SIGN-LANGUAGE-003",
+      "theme": "when_you_are_learning_sign_language",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Getting a movement wrong is an invitation to learn. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-SIGN-LANGUAGE-004",
+      "theme": "when_you_are_learning_sign_language",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Listening includes watching with care. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-SIGN-LANGUAGE-005",
+      "theme": "when_you_are_learning_sign_language",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Each respectful attempt can make a conversation easier. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-RELEASES-A-FIRST-PODCAST-001",
+      "theme": "when_a_friend_releases_a_first_podcast",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friend has published their first podcast episode. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-RELEASES-A-FIRST-PODCAST-002",
+      "theme": "when_a_friend_releases_a_first_podcast",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sharing a creative project can feel vulnerable. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-RELEASES-A-FIRST-PODCAST-003",
+      "theme": "when_a_friend_releases_a_first_podcast",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Listening attentively is a generous form of support. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-RELEASES-A-FIRST-PODCAST-004",
+      "theme": "when_a_friend_releases_a_first_podcast",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Specific feedback may be more useful than broad praise. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-RELEASES-A-FIRST-PODCAST-005",
+      "theme": "when_a_friend_releases_a_first_podcast",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can celebrate the courage behind the recording. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SORT-A-BOX-OF-OLD-LETTERS-001",
+      "theme": "when_you_sort_a_box_of_old_letters",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are sorting through a box of old letters. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SORT-A-BOX-OF-OLD-LETTERS-002",
+      "theme": "when_you_sort_a_box_of_old_letters",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar handwriting can bring back an entire afternoon. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SORT-A-BOX-OF-OLD-LETTERS-003",
+      "theme": "when_you_sort_a_box_of_old_letters",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some messages may be difficult to reread. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SORT-A-BOX-OF-OLD-LETTERS-004",
+      "theme": "when_you_sort_a_box_of_old_letters",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can keep a few without keeping everything. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SORT-A-BOX-OF-OLD-LETTERS-005",
+      "theme": "when_you_sort_a_box_of_old_letters",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Taking your time with these memories is enough. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-TRY-A-NEW-PUBLIC-TRANSPORT-ROUTE-001",
+      "theme": "when_you_try_a_new_public_transport_route",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are trying a public transport route for the first time. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-TRY-A-NEW-PUBLIC-TRANSPORT-ROUTE-002",
+      "theme": "when_you_try_a_new_public_transport_route",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The stops and signs may be unfamiliar. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-TRY-A-NEW-PUBLIC-TRANSPORT-ROUTE-003",
+      "theme": "when_you_try_a_new_public_transport_route",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Checking the route twice is sensible, not embarrassing. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-TRY-A-NEW-PUBLIC-TRANSPORT-ROUTE-004",
+      "theme": "when_you_try_a_new_public_transport_route",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A small delay need not define the whole journey. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-TRY-A-NEW-PUBLIC-TRANSPORT-ROUTE-005",
+      "theme": "when_you_try_a_new_public_transport_route",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Learning the way can make tomorrow feel easier. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-ARTIST-DISPLAYS-THEIR-WORK-001",
+      "theme": "when_a_local_artist_displays_their_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A local artist is showing their work publicly. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-ARTIST-DISPLAYS-THEIR-WORK-002",
+      "theme": "when_a_local_artist_displays_their_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Putting personal work on display takes courage. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-ARTIST-DISPLAYS-THEIR-WORK-003",
+      "theme": "when_a_local_artist_displays_their_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A thoughtful question can open a meaningful conversation. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-ARTIST-DISPLAYS-THEIR-WORK-004",
+      "theme": "when_a_local_artist_displays_their_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need expert vocabulary to appreciate art. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-ARTIST-DISPLAYS-THEIR-WORK-005",
+      "theme": "when_a_local_artist_displays_their_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Taking time to look closely is a kind response. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-A-ROOM-FOR-A-VISITOR-001",
+      "theme": "when_you_prepare_a_room_for_a_visitor",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are preparing a room for someone visiting. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-A-ROOM-FOR-A-VISITOR-002",
+      "theme": "when_you_prepare_a_room_for_a_visitor",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The details can feel bigger than they are. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-A-ROOM-FOR-A-VISITOR-003",
+      "theme": "when_you_prepare_a_room_for_a_visitor",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A clean place to rest often matters more than perfection. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-A-ROOM-FOR-A-VISITOR-004",
+      "theme": "when_you_prepare_a_room_for_a_visitor",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Asking what would help is a thoughtful welcome. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-A-ROOM-FOR-A-VISITOR-005",
+      "theme": "when_you_prepare_a_room_for_a_visitor",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your guest is coming to spend time with you. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-JOIN-A-NEIGHBOURHOOD-BOOK-SWAP-001",
+      "theme": "when_you_join_a_neighbourhood_book_swap",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You have joined a neighbourhood book swap. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-JOIN-A-NEIGHBOURHOOD-BOOK-SWAP-002",
+      "theme": "when_you_join_a_neighbourhood_book_swap",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A book can arrive with traces of another reader. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-JOIN-A-NEIGHBOURHOOD-BOOK-SWAP-003",
+      "theme": "when_you_join_a_neighbourhood_book_swap",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may discover a story you would never have chosen. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-JOIN-A-NEIGHBOURHOOD-BOOK-SWAP-004",
+      "theme": "when_you_join_a_neighbourhood_book_swap",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sharing a favourite title invites conversation. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-JOIN-A-NEIGHBOURHOOD-BOOK-SWAP-005",
+      "theme": "when_you_join_a_neighbourhood_book_swap",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The exchange is about connection as much as reading. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-FINISHES-A-TRAINING-COURSE-001",
+      "theme": "when_a_friend_finishes_a_training_course",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friend has finished a demanding training course. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-FINISHES-A-TRAINING-COURSE-002",
+      "theme": "when_a_friend_finishes_a_training_course",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The effort behind a certificate is not always visible. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-FINISHES-A-TRAINING-COURSE-003",
+      "theme": "when_a_friend_finishes_a_training_course",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Asking what they learned can honour their commitment. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-FINISHES-A-TRAINING-COURSE-004",
+      "theme": "when_a_friend_finishes_a_training_course",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Their next step may still be uncertain. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-FINISHES-A-TRAINING-COURSE-005",
+      "theme": "when_a_friend_finishes_a_training_course",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "This achievement deserves a moment of recognition. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-USE-A-NEW-KITCHEN-TOOL-001",
+      "theme": "when_you_learn_to_use_a_new_kitchen_tool",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are learning to use a new kitchen tool. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-USE-A-NEW-KITCHEN-TOOL-002",
+      "theme": "when_you_learn_to_use_a_new_kitchen_tool",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The instructions may take longer than expected. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-USE-A-NEW-KITCHEN-TOOL-003",
+      "theme": "when_you_learn_to_use_a_new_kitchen_tool",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A slow first attempt can prevent frustration later. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-USE-A-NEW-KITCHEN-TOOL-004",
+      "theme": "when_you_learn_to_use_a_new_kitchen_tool",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Asking for a demonstration is a practical choice. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-TO-USE-A-NEW-KITCHEN-TOOL-005",
+      "theme": "when_you_learn_to_use_a_new_kitchen_tool",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Confidence often grows through ordinary repetition. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PATH-REOPENS-001",
+      "theme": "when_a_shared_path_reopens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shared walking path has reopened after repairs. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PATH-REOPENS-002",
+      "theme": "when_a_shared_path_reopens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar route may feel new again. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PATH-REOPENS-003",
+      "theme": "when_a_shared_path_reopens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "People may return to it for different reasons. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PATH-REOPENS-004",
+      "theme": "when_a_shared_path_reopens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A small public improvement can change daily routines. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PATH-REOPENS-005",
+      "theme": "when_a_shared_path_reopens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Enjoying the path is also appreciating the people who restored it. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-PACK-FOR-A-MOVE-001",
+      "theme": "when_you_help_someone_pack_for_a_move",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are helping someone pack for a move. You do not have to make the experience perfect for it to count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-PACK-FOR-A-MOVE-002",
+      "theme": "when_you_help_someone_pack_for_a_move",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Ordinary objects can carry surprising memories. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-PACK-FOR-A-MOVE-003",
+      "theme": "when_you_help_someone_pack_for_a_move",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Letting them decide what to keep shows respect. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-PACK-FOR-A-MOVE-004",
+      "theme": "when_you_help_someone_pack_for_a_move",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A labelled box can be a small act of kindness. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-PACK-FOR-A-MOVE-005",
+      "theme": "when_you_help_someone_pack_for_a_move",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your presence may make a tiring task less lonely. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-CRAFT-MARKET-001",
+      "theme": "when_you_attend_a_first_craft_market",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are attending a craft market for the first time. The attention you bring to this moment is worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-CRAFT-MARKET-002",
+      "theme": "when_you_attend_a_first_craft_market",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Every stall represents someone's time and skill. You are allowed to take in the moment without rushing past it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-CRAFT-MARKET-003",
+      "theme": "when_you_attend_a_first_craft_market",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A conversation with a maker can enrich the visit. There is room for patience while this experience unfolds."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-CRAFT-MARKET-004",
+      "theme": "when_you_attend_a_first_craft_market",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can appreciate beautiful work without buying it. Small gestures can carry more meaning than they appear to."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-CRAFT-MARKET-005",
+      "theme": "when_you_attend_a_first_craft_market",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Curiosity is a good way to enter a new community. You do not have to make the experience perfect for it to count."
+    }
+  ]
+}
