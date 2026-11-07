@@ -1,0 +1,607 @@
+{
+  "schema_version": 1,
+  "batch": 36,
+  "editorial_note": "75 original editorial-review drafts across 15 new themes. Founder-directed drafting only; not independent editorial approval or public-release authorisation. Complete full-corpus similarity, safeguarding, contextual and editorial checks before publishing.",
+  "messages": [
+    {
+      "id": "KDL-AFTER-A-MISSED-CONNECTION-001",
+      "theme": "after_a_missed_connection",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The train pulled away before you reached the platform. A missed connection is frustrating, but it does not mean you failed the day."
+    },
+    {
+      "id": "KDL-AFTER-A-MISSED-CONNECTION-002",
+      "theme": "after_a_missed_connection",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "While you wait for the next departure, you can focus on the one useful thing within reach: finding a workable route forward."
+    },
+    {
+      "id": "KDL-AFTER-A-MISSED-CONNECTION-003",
+      "theme": "after_a_missed_connection",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone may be waiting for you at the other end. A brief honest update can ease the uncertainty for both of you."
+    },
+    {
+      "id": "KDL-AFTER-A-MISSED-CONNECTION-004",
+      "theme": "after_a_missed_connection",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your plans may need rearranging because of a delay you did not choose. Disappointment and patience can sit beside each other."
+    },
+    {
+      "id": "KDL-AFTER-A-MISSED-CONNECTION-005",
+      "theme": "after_a_missed_connection",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected hour at the station is not how you hoped to spend today. You still deserve a moment to rest."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-A-BORROWED-BOOK-001",
+      "theme": "when_you_return_a_borrowed_book",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The pages have travelled with you for weeks. Returning the book can feel like handing back a little piece of a conversation."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-A-BORROWED-BOOK-002",
+      "theme": "when_you_return_a_borrowed_book",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need an impressive review to thank someone for lending you a story they enjoyed."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-A-BORROWED-BOOK-003",
+      "theme": "when_you_return_a_borrowed_book",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Perhaps you loved the book less than your friend did. A thoughtful difference of opinion can still deepen a friendship."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-A-BORROWED-BOOK-004",
+      "theme": "when_you_return_a_borrowed_book",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A bookmark tucked between pages can remind you how ordinary objects carry traces of the people who shared them."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-A-BORROWED-BOOK-005",
+      "theme": "when_you_return_a_borrowed_book",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Returning something on time is a small act of respect. If you are late, an honest apology and a plan can help."
+    },
+    {
+      "id": "KDL-WHEN-A-CHILD-ASKS-A-HARD-QUESTION-001",
+      "theme": "when_a_child_asks_a_hard_question",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The question arrived while you were doing something ordinary. You can take a moment before choosing words that are both truthful and gentle."
+    },
+    {
+      "id": "KDL-WHEN-A-CHILD-ASKS-A-HARD-QUESTION-002",
+      "theme": "when_a_child_asks_a_hard_question",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to know every answer to make a child feel safe asking you difficult things."
+    },
+    {
+      "id": "KDL-WHEN-A-CHILD-ASKS-A-HARD-QUESTION-003",
+      "theme": "when_a_child_asks_a_hard_question",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes a child needs a short explanation first, and room to return with another question later."
+    },
+    {
+      "id": "KDL-WHEN-A-CHILD-ASKS-A-HARD-QUESTION-004",
+      "theme": "when_a_child_asks_a_hard_question",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the subject is painful for you too, it is all right to say you need a little time to explain."
+    },
+    {
+      "id": "KDL-WHEN-A-CHILD-ASKS-A-HARD-QUESTION-005",
+      "theme": "when_a_child_asks_a_hard_question",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Listening to what the child already thinks can help you understand the question beneath the question."
+    },
+    {
+      "id": "KDL-AFTER-YOUR-FIRST-DAY-IN-A-NEW-ROLE-001",
+      "theme": "after_your_first_day_in_a_new_role",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You learned new names, new routines, and perhaps where the coffee cups live. That is plenty for one first day."
+    },
+    {
+      "id": "KDL-AFTER-YOUR-FIRST-DAY-IN-A-NEW-ROLE-002",
+      "theme": "after_your_first_day_in_a_new_role",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unfamiliar workplace can make even simple tasks feel demanding. Familiarity grows through repetition, not instant perfection."
+    },
+    {
+      "id": "KDL-AFTER-YOUR-FIRST-DAY-IN-A-NEW-ROLE-003",
+      "theme": "after_your_first_day_in_a_new_role",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you asked several questions today, you were doing the work of learning rather than pretending to know."
+    },
+    {
+      "id": "KDL-AFTER-YOUR-FIRST-DAY-IN-A-NEW-ROLE-004",
+      "theme": "after_your_first_day_in_a_new_role",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone who offered directions or explained a process gave you a useful welcome. You can carry that kindness forward."
+    },
+    {
+      "id": "KDL-AFTER-YOUR-FIRST-DAY-IN-A-NEW-ROLE-005",
+      "theme": "after_your_first_day_in_a_new_role",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Tonight you do not need to plan your entire future in this role. Rest after the first step."
+    },
+    {
+      "id": "KDL-WHEN-A-GROUP-CHAT-GOES-QUIET-001",
+      "theme": "when_a_group_chat_goes_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The conversation stopped after your message, and it is tempting to search for a hidden meaning. Silence often has ordinary explanations."
+    },
+    {
+      "id": "KDL-WHEN-A-GROUP-CHAT-GOES-QUIET-002",
+      "theme": "when_a_group_chat_goes_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "People move between work, family, errands, and sleep. A delayed reply is not always a verdict on your words."
+    },
+    {
+      "id": "KDL-WHEN-A-GROUP-CHAT-GOES-QUIET-003",
+      "theme": "when_a_group_chat_goes_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If something important needs an answer, a clear follow-up can be kinder than guessing what everyone thinks."
+    },
+    {
+      "id": "KDL-WHEN-A-GROUP-CHAT-GOES-QUIET-004",
+      "theme": "when_a_group_chat_goes_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An active group chat can feel like a small room full of friends. When it quiets, the friendships may still be there."
+    },
+    {
+      "id": "KDL-WHEN-A-GROUP-CHAT-GOES-QUIET-005",
+      "theme": "when_a_group_chat_goes_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can put the phone down without resolving every uncertainty tonight. Not every pause needs to be filled."
+    },
+    {
+      "id": "KDL-WHEN-A-SIBLING-MOVES-AWAY-001",
+      "theme": "when_a_sibling_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The familiar room looks different without their things in it. Even a welcome move can leave a quiet space behind."
+    },
+    {
+      "id": "KDL-WHEN-A-SIBLING-MOVES-AWAY-002",
+      "theme": "when_a_sibling_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You might be excited for your sibling and sad about the distance. Both feelings can be true at once."
+    },
+    {
+      "id": "KDL-WHEN-A-SIBLING-MOVES-AWAY-003",
+      "theme": "when_a_sibling_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "New routines may make spontaneous visits harder. A regular call or shared photograph can become a different kind of closeness."
+    },
+    {
+      "id": "KDL-WHEN-A-SIBLING-MOVES-AWAY-004",
+      "theme": "when_a_sibling_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you have spent years teasing each other, saying you will miss them may feel unusually serious. It is still worth saying."
+    },
+    {
+      "id": "KDL-WHEN-A-SIBLING-MOVES-AWAY-005",
+      "theme": "when_a_sibling_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Distance changes the practical shape of family life. It does not erase the memories you made in the same home."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-FOR-TEST-RESULTS-001",
+      "theme": "when_you_are_waiting_for_test_results",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The waiting can make ordinary minutes feel unusually long. You do not have to spend every one of them searching for answers."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-FOR-TEST-RESULTS-002",
+      "theme": "when_you_are_waiting_for_test_results",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the uncertainty feels heavy, you may choose one trusted person to sit with you or check in."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-FOR-TEST-RESULTS-003",
+      "theme": "when_you_are_waiting_for_test_results",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Questions may come to mind at inconvenient times. Writing them down can help you remember what to ask the clinician."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-FOR-TEST-RESULTS-004",
+      "theme": "when_you_are_waiting_for_test_results",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Trying to stay calm every moment is another demand you do not need. You can feel worried and still care for yourself."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-WAITING-FOR-TEST-RESULTS-005",
+      "theme": "when_you_are_waiting_for_test_results",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Whatever the results show, you deserve clear information and the opportunity to ask what happens next."
+    },
+    {
+      "id": "KDL-WHEN-YOU-NOTICE-A-FRIEND-IS-WITHDRAWING-001",
+      "theme": "when_you_notice_a_friend_is_withdrawing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your friend has been quieter than usual. A gentle check-in offers connection without requiring them to explain everything."
+    },
+    {
+      "id": "KDL-WHEN-YOU-NOTICE-A-FRIEND-IS-WITHDRAWING-002",
+      "theme": "when_you_notice_a_friend_is_withdrawing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can say you have noticed a change without assuming you know what caused it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-NOTICE-A-FRIEND-IS-WITHDRAWING-003",
+      "theme": "when_you_notice_a_friend_is_withdrawing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If they do not want to talk, you might offer a walk, a meal, or another low-pressure way to spend time."
+    },
+    {
+      "id": "KDL-WHEN-YOU-NOTICE-A-FRIEND-IS-WITHDRAWING-004",
+      "theme": "when_you_notice_a_friend_is_withdrawing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being supportive does not mean carrying every concern alone. If you fear immediate danger, seek appropriate urgent help."
+    },
+    {
+      "id": "KDL-WHEN-YOU-NOTICE-A-FRIEND-IS-WITHDRAWING-005",
+      "theme": "when_you_notice_a_friend_is_withdrawing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friendship can make room for someone who is having a hard season without demanding they perform cheerfulness."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-MISTAKE-001",
+      "theme": "after_a_small_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You stumbled over a word in front of the room. The moment may feel louder to you than it did to anyone else."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-MISTAKE-002",
+      "theme": "after_a_small_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you gave the wrong detail, a brief correction can do more good than a long defence."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-MISTAKE-003",
+      "theme": "after_a_small_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An awkward moment can replay in your mind long after everyone has moved on. You can gently redirect your attention."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-MISTAKE-004",
+      "theme": "after_a_small_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "People who speak up, try new things, and participate sometimes make visible mistakes. Participation still matters."
+    },
+    {
+      "id": "KDL-AFTER-A-SMALL-PUBLIC-MISTAKE-005",
+      "theme": "after_a_small_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may laugh about this later, or you may not. You do not need to turn embarrassment into a lesson immediately."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-PHOTO-IS-FOUND-001",
+      "theme": "when_a_family_photo_is_found",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The photograph slipped out of an old envelope. Suddenly an ordinary afternoon contains people and places from another time."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-PHOTO-IS-FOUND-002",
+      "theme": "when_a_family_photo_is_found",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone in the picture may remember details you never knew. Asking about them can open a gentle conversation."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-PHOTO-IS-FOUND-003",
+      "theme": "when_a_family_photo_is_found",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the photograph brings grief as well as warmth, you do not have to choose only one feeling."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-PHOTO-IS-FOUND-004",
+      "theme": "when_a_family_photo_is_found",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Faded colours and bent corners do not make a memory less meaningful. Sometimes they make its journey more visible."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-PHOTO-IS-FOUND-005",
+      "theme": "when_a_family_photo_is_found",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can keep the photograph, share a copy, or simply spend a moment looking. There is no correct way to remember."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-A-NEW-ROUTE-HOME-001",
+      "theme": "when_you_learn_a_new_route_home",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The turn you usually take is closed, so you are finding another way. A changed route can feel inconvenient before it feels familiar."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-A-NEW-ROUTE-HOME-002",
+      "theme": "when_you_learn_a_new_route_home",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not knowing the streets yet does not make you careless. Taking time to check directions is a sensible choice."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-A-NEW-ROUTE-HOME-003",
+      "theme": "when_you_learn_a_new_route_home",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A different road may reveal a bakery, a garden, or a view you never noticed before."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-A-NEW-ROUTE-HOME-004",
+      "theme": "when_you_learn_a_new_route_home",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you arrive later than planned, the extra time was part of navigating something unfamiliar, not proof of incompetence."
+    },
+    {
+      "id": "KDL-WHEN-YOU-LEARN-A-NEW-ROUTE-HOME-005",
+      "theme": "when_you_learn_a_new_route_home",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Once you know another way home, your map of the neighbourhood has grown a little."
+    },
+    {
+      "id": "KDL-WHEN-A-TEAM-MEMBER-RETURNS-FROM-LEAVE-001",
+      "theme": "when_a_team_member_returns_from_leave",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The desk is occupied again, and there are stories to catch up on. A warm welcome need not become an immediate pile of requests."
+    },
+    {
+      "id": "KDL-WHEN-A-TEAM-MEMBER-RETURNS-FROM-LEAVE-002",
+      "theme": "when_a_team_member_returns_from_leave",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone returning from leave may need time to understand what changed. A clear summary is more useful than a rushed download."
+    },
+    {
+      "id": "KDL-WHEN-A-TEAM-MEMBER-RETURNS-FROM-LEAVE-003",
+      "theme": "when_a_team_member_returns_from_leave",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can be glad to see a colleague back while respecting what they choose to share about their time away."
+    },
+    {
+      "id": "KDL-WHEN-A-TEAM-MEMBER-RETURNS-FROM-LEAVE-004",
+      "theme": "when_a_team_member_returns_from_leave",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Work may have shifted while they were gone. Naming those changes kindly can make the return easier for everyone."
+    },
+    {
+      "id": "KDL-WHEN-A-TEAM-MEMBER-RETURNS-FROM-LEAVE-005",
+      "theme": "when_a_team_member_returns_from_leave",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A good return starts with room to settle in, not an expectation to know everything by lunchtime."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-LOST-KEY-001",
+      "theme": "when_you_find_a_lost_key",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The key was in a pocket you had already checked. Relief can arrive in the most ordinary shape."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-LOST-KEY-002",
+      "theme": "when_you_find_a_lost_key",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Searching for something small can disrupt an entire morning. You are allowed to feel relieved when the search ends."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-LOST-KEY-003",
+      "theme": "when_you_find_a_lost_key",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If someone helped you look, a simple thank you recognises the time they gave you."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-LOST-KEY-004",
+      "theme": "when_you_find_a_lost_key",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Finding the key does not mean the frustration was imaginary. It means one practical worry is finished for now."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-LOST-KEY-005",
+      "theme": "when_you_find_a_lost_key",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You might choose a new place to keep it tomorrow. For tonight, it is enough that the door opens."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-NEW-TO-A-HOBBY-GROUP-001",
+      "theme": "when_you_are_new_to_a_hobby_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Everyone seems to know the routine already. Being new is not the same as being unwelcome."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-NEW-TO-A-HOBBY-GROUP-002",
+      "theme": "when_you_are_new_to_a_hobby_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can begin by watching, asking one question, or joining a small part of the activity."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-NEW-TO-A-HOBBY-GROUP-003",
+      "theme": "when_you_are_new_to_a_hobby_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone who remembers your name at the second meeting can make a surprising difference."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-NEW-TO-A-HOBBY-GROUP-004",
+      "theme": "when_you_are_new_to_a_hobby_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need to buy every tool or master every skill before deciding whether you enjoy being there."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-NEW-TO-A-HOBBY-GROUP-005",
+      "theme": "when_you_are_new_to_a_hobby_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Belonging often grows through repeated ordinary visits rather than one perfect introduction."
+    },
+    {
+      "id": "KDL-WHEN-A-SPECIAL-MEAL-DOES-NOT-GO-TO-PLAN-001",
+      "theme": "when_a_special_meal_does_not_go_to_plan",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The recipe did not turn out as you imagined, and guests are arriving soon. A meal can still be welcoming without being flawless."
+    },
+    {
+      "id": "KDL-WHEN-A-SPECIAL-MEAL-DOES-NOT-GO-TO-PLAN-002",
+      "theme": "when_a_special_meal_does_not_go_to_plan",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Burnt edges and missing ingredients can feel disappointing when you wanted to show someone care."
+    },
+    {
+      "id": "KDL-WHEN-A-SPECIAL-MEAL-DOES-NOT-GO-TO-PLAN-003",
+      "theme": "when_a_special_meal_does_not_go_to_plan",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If everyone ends up eating something simpler, the time around the table can still be worth remembering."
+    },
+    {
+      "id": "KDL-WHEN-A-SPECIAL-MEAL-DOES-NOT-GO-TO-PLAN-004",
+      "theme": "when_a_special_meal_does_not_go_to_plan",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are allowed to ask for help with the last-minute changes instead of quietly carrying all the pressure."
+    },
+    {
+      "id": "KDL-WHEN-A-SPECIAL-MEAL-DOES-NOT-GO-TO-PLAN-005",
+      "theme": "when_a_special_meal_does_not_go_to_plan",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The story of a memorable dinner is not always about the food. Sometimes it is about how people handled the surprise."
+    }
+  ]
+}
