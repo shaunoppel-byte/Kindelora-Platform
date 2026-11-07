@@ -1,0 +1,247 @@
+{
+  "schema_version": 1,
+  "batch": 31,
+  "editorial_note": "Automated draft; requires independent human review before publication.",
+  "messages": [
+    {
+      "id": "KDL-HANDLING-A-CHANGED-INVITATION-001",
+      "theme": "handling_a_changed_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The invitation changed after you had already pictured the evening. Disappointment can sit beside understanding; neither feeling has to cancel the other."
+    },
+    {
+      "id": "KDL-HANDLING-A-CHANGED-INVITATION-002",
+      "theme": "handling_a_changed_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When plans shrink, it may help to ask what is still possible rather than pretending the change did not sting."
+    },
+    {
+      "id": "KDL-HANDLING-A-CHANGED-INVITATION-003",
+      "theme": "handling_a_changed_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can appreciate being included and still decide the new arrangement no longer works for you. A polite decline is enough."
+    },
+    {
+      "id": "KDL-HANDLING-A-CHANGED-INVITATION-004",
+      "theme": "handling_a_changed_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes a last-minute change leaves you with an unexpectedly free afternoon. You are allowed to use it without making it productive."
+    },
+    {
+      "id": "KDL-HANDLING-A-CHANGED-INVITATION-005",
+      "theme": "handling_a_changed_invitation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you were the one who changed the invitation, a clear explanation and a sincere apology may matter more than elaborate excuses."
+    },
+    {
+      "id": "KDL-BEING-NEW-TO-A-FAMILIAR-GROUP-001",
+      "theme": "being_new_to_a_familiar_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Everyone else may know the shorthand, the old stories, and where to sit. Being new does not mean you have arrived too late to belong."
+    },
+    {
+      "id": "KDL-BEING-NEW-TO-A-FAMILIAR-GROUP-002",
+      "theme": "being_new_to_a_familiar_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can ask what an inside joke means without apologising for missing years of history. Curiosity is a reasonable way into a conversation."
+    },
+    {
+      "id": "KDL-BEING-NEW-TO-A-FAMILIAR-GROUP-003",
+      "theme": "being_new_to_a_familiar_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A group can be welcoming and still forget to explain its routines. You may name what would help you feel included."
+    },
+    {
+      "id": "KDL-BEING-NEW-TO-A-FAMILIAR-GROUP-004",
+      "theme": "being_new_to_a_familiar_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "One genuine exchange can make a crowded room feel less unfamiliar. You do not need to win everyone over in a single evening."
+    },
+    {
+      "id": "KDL-BEING-NEW-TO-A-FAMILIAR-GROUP-005",
+      "theme": "being_new_to_a_familiar_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Watching how people treat the quietest person may tell you more about a group than its warmest introduction. Take time to notice."
+    },
+    {
+      "id": "KDL-MANAGING-A-SHARED-BUDGET-001",
+      "theme": "managing_a_shared_budget",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shared budget can hold different histories of scarcity and comfort. Before discussing numbers, it may help to understand what each person fears losing."
+    },
+    {
+      "id": "KDL-MANAGING-A-SHARED-BUDGET-002",
+      "theme": "managing_a_shared_budget",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Choosing the less expensive option does not have to become a referendum on anyone's generosity. Practical choices deserve room to be ordinary."
+    },
+    {
+      "id": "KDL-MANAGING-A-SHARED-BUDGET-003",
+      "theme": "managing_a_shared_budget",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If money conversations turn tense, returning to the actual figures may be kinder than guessing what the other person intends."
+    },
+    {
+      "id": "KDL-MANAGING-A-SHARED-BUDGET-004",
+      "theme": "managing_a_shared_budget",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can say that an expense is beyond your reach without disclosing every detail of your finances. Clarity does not require exposure."
+    },
+    {
+      "id": "KDL-MANAGING-A-SHARED-BUDGET-005",
+      "theme": "managing_a_shared_budget",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A fair arrangement may not look identical for everyone involved. Ask what each person can realistically contribute before deciding together."
+    },
+    {
+      "id": "KDL-RECEIVING-UNEXPECTED-FEEDBACK-001",
+      "theme": "receiving_unexpected_feedback",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected comment can stay with you long after the conversation ends. Give yourself time to decide what is useful and what is merely sharp."
+    },
+    {
+      "id": "KDL-RECEIVING-UNEXPECTED-FEEDBACK-002",
+      "theme": "receiving_unexpected_feedback",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may ask for a concrete example when feedback feels vague. Understanding the situation is different from agreeing with every interpretation."
+    },
+    {
+      "id": "KDL-RECEIVING-UNEXPECTED-FEEDBACK-003",
+      "theme": "receiving_unexpected_feedback",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "One person's observation can contain something worth considering without becoming the final description of who you are."
+    },
+    {
+      "id": "KDL-RECEIVING-UNEXPECTED-FEEDBACK-004",
+      "theme": "receiving_unexpected_feedback",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you need time before responding to criticism, you can say so. A thoughtful reply does not have to arrive immediately."
+    },
+    {
+      "id": "KDL-RECEIVING-UNEXPECTED-FEEDBACK-005",
+      "theme": "receiving_unexpected_feedback",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Feedback delivered poorly can still raise a real question. You are allowed to examine the question while rejecting the unkind delivery."
+    },
+    {
+      "id": "KDL-ADJUSTING-TO-A-NEW-NEIGHBOUR-001",
+      "theme": "adjusting_to_a_new_neighbour",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A new neighbour changes the small sounds and rhythms around home. Familiarity may take a little time, even when everyone means well."
+    },
+    {
+      "id": "KDL-ADJUSTING-TO-A-NEW-NEIGHBOUR-002",
+      "theme": "adjusting_to_a_new_neighbour",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can introduce yourself without offering an open invitation to your private life. Friendly boundaries are still friendly."
+    },
+    {
+      "id": "KDL-ADJUSTING-TO-A-NEW-NEIGHBOUR-003",
+      "theme": "adjusting_to_a_new_neighbour",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unfamiliar noise may have an ordinary explanation. Asking calmly can work better than building a story about someone you barely know."
+    },
+    {
+      "id": "KDL-ADJUSTING-TO-A-NEW-NEIGHBOUR-004",
+      "theme": "adjusting_to_a_new_neighbour",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sharing a wall or a driveway asks for cooperation, not instant friendship. Respectful habits are a good place to begin."
+    },
+    {
+      "id": "KDL-ADJUSTING-TO-A-NEW-NEIGHBOUR-005",
+      "theme": "adjusting_to_a_new_neighbour",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your first interaction was awkward, another simple greeting may leave room for a different beginning. One moment need not set the whole tone."
+    },
+    {
+      "id": "KDL-RETURNING-AFTER-A-PUBLIC-MISTAKE-001",
+      "theme": "returning_after_a_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Walking back into a room after a visible mistake takes courage of a quiet kind. You do not need to rehearse your embarrassment for everyone."
+    },
+    {
+      "id": "KDL-RETURNING-AFTER-A-PUBLIC-MISTAKE-002",
+      "theme": "returning_after_a_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An apology can acknowledge the impact without turning into a performance of shame. Repair is often more useful than repeated self-criticism."
+    },
+    {
+      "id": "KDL-RETURNING-AFTER-A-PUBLIC-MISTAKE-003",
+      "theme": "returning_after_a_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some people may remember the mistake longer than you wish. You can still keep showing up and doing the next piece of work."
+    },
+    {
+      "id": "KDL-RETURNING-AFTER-A-PUBLIC-MISTAKE-004",
+      "theme": "returning_after_a_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If someone offers a practical suggestion after a setback, you may take the help without agreeing that the error defines your ability."
+    },
+    {
+      "id": "KDL-RETURNING-AFTER-A-PUBLIC-MISTAKE-005",
+      "theme": "returning_after_a_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Trust can return through ordinary, consistent actions rather than a single dramatic gesture. Give the process room to be gradual."
+    }
+  ]
+}
