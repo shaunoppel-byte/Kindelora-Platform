@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "batch": 33,
+  "editorial_note": "Automated editorial draft. Founder authorisation to progress is not independent human approval. 20 messages checked against the 2,605-message corpus for unique IDs, normalized exact duplicates and token-Dice near-overlap >=0.60 with >=3 shared content tokens. Contextual and independent human review required before publication.",
+  "messages": [
+    {
+      "id": "KDL-WHEN-A-PLAN-FALLS-THROUGH-001",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The tickets are still on the table, but the evening has changed. Disappointment can be real even when nobody intended to let you down."
+    },
+    {
+      "id": "KDL-WHEN-A-PLAN-FALLS-THROUGH-002",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A cancelled plan may leave more than an empty hour. You might also be missing the version of the day you had imagined."
+    },
+    {
+      "id": "KDL-WHEN-A-PLAN-FALLS-THROUGH-003",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you were looking forward to being together, it is reasonable to say so without making the other person responsible for fixing everything."
+    },
+    {
+      "id": "KDL-WHEN-A-PLAN-FALLS-THROUGH-004",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the hardest part of a changed plan is deciding what to do with the anticipation you had saved for it. Give that feeling a little room."
+    },
+    {
+      "id": "KDL-WHEN-A-PLAN-FALLS-THROUGH-005",
+      "theme": "when_a_plan_falls_through",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected quiet evening does not have to become a lesson in gratitude. You can be disappointed and still choose what happens next."
+    },
+    {
+      "id": "KDL-SHARING-CREDIT-FOR-WORK-001",
+      "theme": "sharing_credit_for_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may have done the invisible organising while someone else delivered the final presentation. Both kinds of contribution deserve to be named accurately."
+    },
+    {
+      "id": "KDL-SHARING-CREDIT-FOR-WORK-002",
+      "theme": "sharing_credit_for_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Giving a colleague credit does not require erasing your own work. There is room for a generous account of what each person brought."
+    },
+    {
+      "id": "KDL-SHARING-CREDIT-FOR-WORK-003",
+      "theme": "sharing_credit_for_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a team succeeds, the story can become simpler than the work really was. You can gently add the missing details without turning it into a contest."
+    },
+    {
+      "id": "KDL-SHARING-CREDIT-FOR-WORK-004",
+      "theme": "sharing_credit_for_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your effort was overlooked, you may want recognition rather than reassurance. Asking for a clearer account of your contribution is reasonable."
+    },
+    {
+      "id": "KDL-SHARING-CREDIT-FOR-WORK-005",
+      "theme": "sharing_credit_for_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes someone thanks the whole group when you hoped they would notice your particular care. That small sting is worth acknowledging privately."
+    },
+    {
+      "id": "KDL-ADJUSTING-TO-A-NEW-ACCESSIBILITY-NEED-001",
+      "theme": "adjusting_to_a_new_accessibility_need",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar doorway may now require more planning than it used to. The extra effort is real, and it does not diminish your place in the room."
+    },
+    {
+      "id": "KDL-ADJUSTING-TO-A-NEW-ACCESSIBILITY-NEED-002",
+      "theme": "adjusting_to_a_new_accessibility_need",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can appreciate someone offering help and still explain which kind of help would actually be useful. Your preferences matter in the conversation."
+    },
+    {
+      "id": "KDL-ADJUSTING-TO-A-NEW-ACCESSIBILITY-NEED-003",
+      "theme": "adjusting_to_a_new_accessibility_need",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When an activity needs adapting, you are not asking for a special favour by describing what would make participation possible."
+    },
+    {
+      "id": "KDL-ADJUSTING-TO-A-NEW-ACCESSIBILITY-NEED-004",
+      "theme": "adjusting_to_a_new_accessibility_need",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unfamiliar access need can change the shape of ordinary routines. You are allowed time to work out what fits without providing everyone a full explanation."
+    },
+    {
+      "id": "KDL-ADJUSTING-TO-A-NEW-ACCESSIBILITY-NEED-005",
+      "theme": "adjusting_to_a_new_accessibility_need",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a space is difficult to navigate, the difficulty is not a measure of your determination. The environment deserves attention too."
+    },
+    {
+      "id": "KDL-BEING-NEW-AT-A-FAMILY-TRADITION-001",
+      "theme": "being_new_at_a_family_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Everyone else seems to know when to stand, what to bring, and which story comes next. It is fine to learn the rhythm by watching."
+    },
+    {
+      "id": "KDL-BEING-NEW-AT-A-FAMILY-TRADITION-002",
+      "theme": "being_new_at_a_family_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Joining a family tradition can feel warm and awkward in the same afternoon. Neither feeling cancels the other."
+    },
+    {
+      "id": "KDL-BEING-NEW-AT-A-FAMILY-TRADITION-003",
+      "theme": "being_new_at_a_family_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need to pretend that an unfamiliar custom belongs to your history. Curiosity can be a sincere way of taking part."
+    },
+    {
+      "id": "KDL-BEING-NEW-AT-A-FAMILY-TRADITION-004",
+      "theme": "being_new_at_a_family_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you miss the traditions you grew up with, that longing can sit alongside affection for the people welcoming you now."
+    },
+    {
+      "id": "KDL-BEING-NEW-AT-A-FAMILY-TRADITION-005",
+      "theme": "being_new_at_a_family_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes belonging begins with someone explaining why a small ritual matters. You can ask, listen, and bring your own history with you."
+    }
+  ]
+}
