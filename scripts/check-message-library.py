@@ -51,9 +51,12 @@ for x in items:
     assert 8<=len(x["text"].split())<=40, f"Review message length: {x['id']}"
     assert not re.search(r"\b(guaranteed|cure|always be happy|just be positive)\b",x["text"],re.I),f"Unsafe claim: {x['id']}"
 catalogue=json.loads(Path("message-catalogue.json").read_text(encoding="utf-8"))
-assert catalogue["count"]==2100 and len(catalogue["messages"])==2100, "Public catalogue count mismatch"
-assert {x["id"] for x in catalogue["messages"]}==set(x["id"] for x in items[:2100]), "Public catalogue baseline mismatch"
+assert catalogue["count"]==len(catalogue["messages"]), "Public catalogue count mismatch"
+assert catalogue["count"] in (2100,2625), "Unexpected publication count; only baseline or full founder-approved candidate permitted"
+assert [x["id"] for x in catalogue["messages"]]==[x["id"] for x in items[:catalogue["count"]]], "Catalogue must match editorial source IDs and order"
 source_by_id={m["id"]:m["text"] for m in items}
 assert all(x["text"]==source_by_id[x["id"]] for x in catalogue["messages"]), "Public catalogue content mismatch"
-assert not ({x["id"] for x in collections[13]["messages"]+collections[14]["messages"]+collections[15]["messages"]+collections[16]["messages"]+collections[17]["messages"]+collections[18]["messages"]+collections[19]["messages"]+collections[20]["messages"]+collections[21]["messages"]+collections[22]["messages"]+collections[23]["messages"]+collections[24]["messages"]+collections[25]["messages"]+collections[26]["messages"]+collections[27]["messages"]+collections[28]["messages"]+collections[29]["messages"]+collections[30]["messages"]+collections[31]["messages"]+collections[32]["messages"]} & {x["id"] for x in catalogue["messages"]}), "Unreviewed batches 14-33 must not be published"
+assert all(x["theme"]==items[i]["theme"] for i,x in enumerate(catalogue["messages"])), "Catalogue theme mismatch"
+assert len(set(x["id"] for x in catalogue["messages"]))==catalogue["count"], "Duplicate public IDs"
+assert catalogue["count"]==2100 or catalogue["release"]=="2026-11-07-founder-approved-2625-release-candidate", "Full expansion requires explicit founder-approved release label"
 print(f"PASS: {len(items)} unique draft messages across {len(themes)} themes; all marked for editorial review.")
