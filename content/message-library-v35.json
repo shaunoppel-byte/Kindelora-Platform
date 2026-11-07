@@ -1,0 +1,607 @@
+{
+  "schema_version": 1,
+  "batch": 35,
+  "editorial_note": "75 new original editorial drafts across 15 new themes toward 3,000. Automated originality checks and independent contextual review required before publication. No automatic public release authorised.",
+  "messages": [
+    {
+      "id": "KDL-WHEN-A-FRIEND-NEEDS-QUIET-COMPANY-001",
+      "theme": "when_a_friend_needs_quiet_company",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your friend may not have the energy to explain what happened. Sitting beside them without questions can still be a generous offer."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-NEEDS-QUIET-COMPANY-002",
+      "theme": "when_a_friend_needs_quiet_company",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shared cup of tea need not become a conversation about solutions. Sometimes the kindness is simply making room for silence."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-NEEDS-QUIET-COMPANY-003",
+      "theme": "when_a_friend_needs_quiet_company",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If they say very little, it does not mean your visit was wasted. Being present can matter without producing a visible result."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-NEEDS-QUIET-COMPANY-004",
+      "theme": "when_a_friend_needs_quiet_company",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can ask whether they would prefer company, a practical errand, or time alone. Care leaves room for an honest answer."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-NEEDS-QUIET-COMPANY-005",
+      "theme": "when_a_friend_needs_quiet_company",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The walk home might feel uneventful to you. For someone who needed company, that ordinary hour may have carried real comfort."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-DAY-001",
+      "theme": "after_a_difficult_school_day",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The school bag lands harder than usual today. Before asking for the whole story, a snack and a quiet moment might help."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-DAY-002",
+      "theme": "after_a_difficult_school_day",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "One difficult day in class does not describe everything a young person knows, loves, or is learning to become."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-DAY-003",
+      "theme": "after_a_difficult_school_day",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a mistake felt enormous at school, home can be a place where it is allowed to shrink back to its actual size."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-DAY-004",
+      "theme": "after_a_difficult_school_day",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the hardest part of the day is explaining it afterward. You can listen without asking for every detail at once."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-DAY-005",
+      "theme": "after_a_difficult_school_day",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A fresh morning will not erase today's disappointment, but there can still be people ready to help you face it."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOURHOOD-SHOP-CLOSES-001",
+      "theme": "when_a_neighbourhood_shop_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The familiar sign is coming down, and a small part of your routine goes with it. Ordinary places can hold meaningful memories."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOURHOOD-SHOP-CLOSES-002",
+      "theme": "when_a_neighbourhood_shop_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You might miss the person who remembered your usual order more than the item you went there to buy."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOURHOOD-SHOP-CLOSES-003",
+      "theme": "when_a_neighbourhood_shop_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shop closing can remind you how many quiet relationships happen between errands. Those encounters mattered while they lasted."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOURHOOD-SHOP-CLOSES-004",
+      "theme": "when_a_neighbourhood_shop_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you have a chance to say thank you before the doors close, a few sincere words may be enough."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOURHOOD-SHOP-CLOSES-005",
+      "theme": "when_a_neighbourhood_shop_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The street will change, but the stories you associate with that corner are still yours to carry."
+    },
+    {
+      "id": "KDL-LEARNING-TO-ASK-FOR-AN-ACCOMMODATION-001",
+      "theme": "learning_to_ask_for_an_accommodation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Explaining what would help you participate can feel vulnerable. Your request deserves a respectful hearing, not an apology for existing."
+    },
+    {
+      "id": "KDL-LEARNING-TO-ASK-FOR-AN-ACCOMMODATION-002",
+      "theme": "learning_to_ask_for_an_accommodation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to disclose every private detail to describe a practical adjustment that would make a task more accessible."
+    },
+    {
+      "id": "KDL-LEARNING-TO-ASK-FOR-AN-ACCOMMODATION-003",
+      "theme": "learning_to_ask_for_an_accommodation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A helpful accommodation is not a special favour that erases your contribution. It can make room for your contribution to be seen."
+    },
+    {
+      "id": "KDL-LEARNING-TO-ASK-FOR-AN-ACCOMMODATION-004",
+      "theme": "learning_to_ask_for_an_accommodation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the first conversation is awkward, you may still ask for clarity and follow up in writing."
+    },
+    {
+      "id": "KDL-LEARNING-TO-ASK-FOR-AN-ACCOMMODATION-005",
+      "theme": "learning_to_ask_for_an_accommodation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Needing a different arrangement does not make your needs less legitimate than the familiar way things have always been done."
+    },
+    {
+      "id": "KDL-WHEN-A-LONG-AWAITED-PACKAGE-ARRIVES-001",
+      "theme": "when_a_long_awaited_package_arrives",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The parcel finally reached your door after days of checking the tracking page. Enjoying a small arrival is perfectly reasonable."
+    },
+    {
+      "id": "KDL-WHEN-A-LONG-AWAITED-PACKAGE-ARRIVES-002",
+      "theme": "when_a_long_awaited_package_arrives",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes what you waited for is useful rather than exciting. Relief can be its own kind of good news."
+    },
+    {
+      "id": "KDL-WHEN-A-LONG-AWAITED-PACKAGE-ARRIVES-003",
+      "theme": "when_a_long_awaited_package_arrives",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the contents are not quite what you expected, disappointment does not mean you were foolish to look forward to them."
+    },
+    {
+      "id": "KDL-WHEN-A-LONG-AWAITED-PACKAGE-ARRIVES-004",
+      "theme": "when_a_long_awaited_package_arrives",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Opening the box may remind you of the person who sent it. The thought behind a delivery can outlast the wrapping."
+    },
+    {
+      "id": "KDL-WHEN-A-LONG-AWAITED-PACKAGE-ARRIVES-005",
+      "theme": "when_a_long_awaited_package_arrives",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A long wait ends in a surprisingly ordinary moment. You are allowed to enjoy that moment without making it grand."
+    },
+    {
+      "id": "KDL-WHEN-A-COMMUNITY-EVENT-NEEDS-VOLUNTEERS-001",
+      "theme": "when_a_community_event_needs_volunteers",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The chairs still need arranging before anyone arrives. Community events often begin with people willing to do unnoticed work."
+    },
+    {
+      "id": "KDL-WHEN-A-COMMUNITY-EVENT-NEEDS-VOLUNTEERS-002",
+      "theme": "when_a_community_event_needs_volunteers",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may have only an hour to offer. An hour given freely can still lighten someone else's load."
+    },
+    {
+      "id": "KDL-WHEN-A-COMMUNITY-EVENT-NEEDS-VOLUNTEERS-003",
+      "theme": "when_a_community_event_needs_volunteers",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Helping at the registration table might not feel impressive, but a welcoming face can change how a newcomer enters the room."
+    },
+    {
+      "id": "KDL-WHEN-A-COMMUNITY-EVENT-NEEDS-VOLUNTEERS-004",
+      "theme": "when_a_community_event_needs_volunteers",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If plans shift during the event, remember that volunteers are people, not an endless supply of energy."
+    },
+    {
+      "id": "KDL-WHEN-A-COMMUNITY-EVENT-NEEDS-VOLUNTEERS-005",
+      "theme": "when_a_community_event_needs_volunteers",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After the last guest leaves, the people stacking tables deserve thanks too. A good gathering includes the work behind it."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-CALENDAR-GETS-CONFUSING-001",
+      "theme": "when_a_shared_calendar_gets_confusing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Two commitments landed in the same afternoon. The mix-up may be inconvenient without being anyone's deliberate mistake."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-CALENDAR-GETS-CONFUSING-002",
+      "theme": "when_a_shared_calendar_gets_confusing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A missed reminder can create tension between people who are both trying their best. Start with what needs sorting out now."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-CALENDAR-GETS-CONFUSING-003",
+      "theme": "when_a_shared_calendar_gets_confusing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you are the one who usually remembers the dates, it is fair to ask for a more shared system."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-CALENDAR-GETS-CONFUSING-004",
+      "theme": "when_a_shared_calendar_gets_confusing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An honest message about a scheduling mistake can be kinder than an elaborate explanation offered too late."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-CALENDAR-GETS-CONFUSING-005",
+      "theme": "when_a_shared_calendar_gets_confusing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Calendars organise time, but they do not measure how much someone cares. A repair can begin with listening."
+    },
+    {
+      "id": "KDL-AFTER-AN-UNSUCCESSFUL-AUDITION-001",
+      "theme": "after_an_unsuccessful_audition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You prepared for the audition, and the answer was no. The work you did still belongs to you."
+    },
+    {
+      "id": "KDL-AFTER-AN-UNSUCCESSFUL-AUDITION-002",
+      "theme": "after_an_unsuccessful_audition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not being selected can sting even when you know the decision involved many factors beyond your control."
+    },
+    {
+      "id": "KDL-AFTER-AN-UNSUCCESSFUL-AUDITION-003",
+      "theme": "after_an_unsuccessful_audition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you want feedback, asking for it is reasonable. If you need a little time first, that is reasonable too."
+    },
+    {
+      "id": "KDL-AFTER-AN-UNSUCCESSFUL-AUDITION-004",
+      "theme": "after_an_unsuccessful_audition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An audition captures a few minutes of a person's abilities. It cannot contain every possibility they have yet to explore."
+    },
+    {
+      "id": "KDL-AFTER-AN-UNSUCCESSFUL-AUDITION-005",
+      "theme": "after_an_unsuccessful_audition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your next choice does not need to be made on the walk home. Let this disappointment have its own afternoon."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHOOSES-A-DIFFERENT-PATH-001",
+      "theme": "when_a_friend_chooses_a_different_path",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You imagined reaching the next milestone together. Their new direction may leave you proud of them and a little lonely."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHOOSES-A-DIFFERENT-PATH-002",
+      "theme": "when_a_friend_chooses_a_different_path",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friendship can change shape when routines stop overlapping. That change deserves attention rather than automatic blame."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHOOSES-A-DIFFERENT-PATH-003",
+      "theme": "when_a_friend_chooses_a_different_path",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can wish someone well without pretending you will not miss the old arrangement."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHOOSES-A-DIFFERENT-PATH-004",
+      "theme": "when_a_friend_chooses_a_different_path",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Different plans do not always mean different values. Sometimes people simply need different things at this point in life."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHOOSES-A-DIFFERENT-PATH-005",
+      "theme": "when_a_friend_chooses_a_different_path",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If staying connected matters to both of you, a smaller, steadier ritual might fit better than the one you had."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-MEMBER-FORGETS-A-DATE-001",
+      "theme": "when_a_family_member_forgets_a_date",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The date mattered to you, and they forgot. You can name that hurt without turning one oversight into the whole relationship."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-MEMBER-FORGETS-A-DATE-002",
+      "theme": "when_a_family_member_forgets_a_date",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some people remember occasions easily; others need reminders. Neither habit tells the entire story of their affection."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-MEMBER-FORGETS-A-DATE-003",
+      "theme": "when_a_family_member_forgets_a_date",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you decide to mention the missed day, a clear sentence may help more than waiting for them to guess."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-MEMBER-FORGETS-A-DATE-004",
+      "theme": "when_a_family_member_forgets_a_date",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An apology cannot rewind the calendar, but it can show a willingness to pay closer attention."
+    },
+    {
+      "id": "KDL-WHEN-A-FAMILY-MEMBER-FORGETS-A-DATE-005",
+      "theme": "when_a_family_member_forgets_a_date",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may choose to celebrate later, or not at all. The meaning of the occasion remains yours."
+    },
+    {
+      "id": "KDL-AFTER-A-POWERFUL-BOOK-ENDING-001",
+      "theme": "after_a_powerful_book_ending",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You closed the book, but part of you is still living in its final pages. There is no need to rush into another story."
+    },
+    {
+      "id": "KDL-AFTER-A-POWERFUL-BOOK-ENDING-002",
+      "theme": "after_a_powerful_book_ending",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An ending can feel both satisfying and strangely lonely. You spent time with these characters, even if they were imagined."
+    },
+    {
+      "id": "KDL-AFTER-A-POWERFUL-BOOK-ENDING-003",
+      "theme": "after_a_powerful_book_ending",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the last chapter changes how you remember the first. It can be worth sitting with that new perspective."
+    },
+    {
+      "id": "KDL-AFTER-A-POWERFUL-BOOK-ENDING-004",
+      "theme": "after_a_powerful_book_ending",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If nobody nearby has read the book, your thoughts can wait until you find someone who wants to hear them."
+    },
+    {
+      "id": "KDL-AFTER-A-POWERFUL-BOOK-ENDING-005",
+      "theme": "after_a_powerful_book_ending",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A story does not have to offer a lesson to matter. The company it kept you may be enough."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REPAIR-A-SMALL-HOUSEHOLD-ITEM-001",
+      "theme": "when_you_repair_a_small_household_item",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The drawer slides smoothly again after a little patience. Small repairs can make an ordinary room feel cared for."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REPAIR-A-SMALL-HOUSEHOLD-ITEM-002",
+      "theme": "when_you_repair_a_small_household_item",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may have needed instructions, borrowed tools, or several attempts. The finished fix still counts."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REPAIR-A-SMALL-HOUSEHOLD-ITEM-003",
+      "theme": "when_you_repair_a_small_household_item",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every broken thing needs replacing immediately. Sometimes a careful repair is a practical form of attention."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REPAIR-A-SMALL-HOUSEHOLD-ITEM-004",
+      "theme": "when_you_repair_a_small_household_item",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the first attempt fails, it is fine to stop before frustration turns the job into something larger."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REPAIR-A-SMALL-HOUSEHOLD-ITEM-005",
+      "theme": "when_you_repair_a_small_household_item",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone else may never notice the loose handle you tightened. You can appreciate the quieter result yourself."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SHARE-A-TABLE-WITH-STRANGERS-001",
+      "theme": "when_you_share_a_table_with_strangers",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The seats are close and the conversation is unfamiliar. A simple greeting can make the table feel less uncertain."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SHARE-A-TABLE-WITH-STRANGERS-002",
+      "theme": "when_you_share_a_table_with_strangers",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to become instant friends with everyone beside you. Politeness and comfortable distance can coexist."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SHARE-A-TABLE-WITH-STRANGERS-003",
+      "theme": "when_you_share_a_table_with_strangers",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A stranger's story may surprise you, or you may simply share a peaceful meal. Both can be good outcomes."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SHARE-A-TABLE-WITH-STRANGERS-004",
+      "theme": "when_you_share_a_table_with_strangers",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you are unsure how to join the conversation, listening first is a perfectly valid way to arrive."
+    },
+    {
+      "id": "KDL-WHEN-YOU-SHARE-A-TABLE-WITH-STRANGERS-005",
+      "theme": "when_you_share_a_table_with_strangers",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Leaving a shared table with one new name remembered can be enough for the evening."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-THE-BACKUP-PERSON-001",
+      "theme": "when_you_are_the_backup_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You were asked to step in because someone else could not make it. Your help is valuable even if the invitation came second."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-THE-BACKUP-PERSON-002",
+      "theme": "when_you_are_the_backup_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being a backup can feel complicated when you also wanted to be someone's first choice. Those feelings deserve honesty."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-THE-BACKUP-PERSON-003",
+      "theme": "when_you_are_the_backup_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can accept the opportunity without pretending the circumstances do not matter to you."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-THE-BACKUP-PERSON-004",
+      "theme": "when_you_are_the_backup_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the responsibility grows beyond what you agreed to, you are allowed to clarify what support is available."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-THE-BACKUP-PERSON-005",
+      "theme": "when_you_are_the_backup_person",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Stepping in at short notice often requires quiet flexibility. It is fair to recognise the effort that took."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-PARK-REOPENS-001",
+      "theme": "when_a_local_park_reopens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The gate is open again, and the familiar path feels slightly new. Returning to a shared place can be a small celebration."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-PARK-REOPENS-002",
+      "theme": "when_a_local_park_reopens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Perhaps the benches moved or the trees grew while you were away. A place can change and still welcome you back."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-PARK-REOPENS-003",
+      "theme": "when_a_local_park_reopens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Children running across the grass may be the clearest sign that a public space matters to its neighbours."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-PARK-REOPENS-004",
+      "theme": "when_a_local_park_reopens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need a special plan for your first visit back. A slow walk can be enough."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-PARK-REOPENS-005",
+      "theme": "when_a_local_park_reopens",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A reopened park belongs to many different routines. Making space for one another is part of keeping it welcoming."
+    }
+  ]
+}
