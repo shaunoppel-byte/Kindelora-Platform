@@ -243,4 +243,19 @@ footer{background:#25132e;border-top:2px solid #b99461}
 @media(max-width:650px){.platinum-v2-hero{padding:0 18px}.platinum-v2-layout{padding:48px 0 28px}.platinum-v2-kicker{font-size:.58rem;letter-spacing:.09em;margin-bottom:24px}.platinum-v2-hero h1{font-size:clamp(2.7rem,11.2vw,4.1rem)}.platinum-v2-hero .lead{font-size:1rem;line-height:1.7}.platinum-v2-hero .actions{flex-direction:column;align-items:stretch}.platinum-v2-hero .actions .btn{text-align:center}.platinum-v2-art{height:365px}.platinum-v2-feature{width:60%;max-width:235px}.platinum-v2-mini{width:34%;max-width:126px}.platinum-v2-feature figcaption{font-size:.46rem;bottom:17px;left:13px;right:13px;padding:7px 3px}.free-affirmation-grid{gap:11px!important}.free-affirmation-card .details{padding:12px!important}.free-affirmation-card h3{font-size:1.02rem}.free-affirmation-card .affirmation-quote{font-size:.85rem}.free-affirmation-card .gallery-download{font-size:.78rem;padding:10px 8px}}
 @media(max-width:350px){.free-affirmation-grid{grid-template-columns:1fr!important}.platinum-v2-art{height:310px}.platinum-v2-hero h1{font-size:2.55rem}}
 @media(prefers-reduced-motion:reduce){.platinum-v2-feature,.platinum-v2-mini{transition:none}}
+</style><style id="platinum-artwork-fidelity-fix">
+/* Platinum artwork fidelity: never crop or obscure the affirmation text */
+.platinum-v2-feature{width:min(74%,390px);padding:8px;border-radius:22px;background:linear-gradient(135deg,#fff0d0,#d6a966 52%,#fff1d7);box-shadow:0 35px 85px #090512b3,0 0 46px #f1bf8666}
+.platinum-v2-feature img{display:block;width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:#21132c;border-radius:15px}
+.platinum-v2-feature figcaption{position:static;margin-top:8px;background:#2b1634;color:#f7dfae;text-shadow:none;border-radius:12px;padding:8px 4px;font-size:.6rem;letter-spacing:.1em}
+.platinum-v2-mini{width:31%;padding:5px;background:linear-gradient(135deg,#f8e5c8,#bd9167);overflow:visible}
+.platinum-v2-mini img{width:100%;height:auto;aspect-ratio:auto;object-fit:contain;background:#24142f}
+.free-affirmation-card img.art{display:block!important;width:100%!important;height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;object-position:center!important;background:#26172f!important}
+.free-affirmation-card{overflow:hidden}
+.free-affirmation-card .details{position:relative}
+.platinum-v2-hero{background-image:radial-gradient(ellipse at 78% 36%,#b07a8455,transparent 44%),radial-gradient(ellipse at 20% 78%,#9b5d814d,transparent 49%),linear-gradient(118deg,#190d25,#371733 52%,#602d51)!important}
+.platinum-v2-art:after{content:'✦   ·   ✧   ·   ✦';position:absolute;right:5%;bottom:1%;color:#eecb8b;font-size:1.15rem;letter-spacing:1rem;opacity:.75;pointer-events:none}
+@media(max-width:850px){.platinum-v2-art{height:auto;min-height:410px;padding:25px 0 35px}.platinum-v2-feature{width:65%;max-width:320px}.platinum-v2-mini{width:27%}}
+@media(max-width:650px){.platinum-v2-art{min-height:340px;padding:20px 0 30px}.platinum-v2-feature{width:66%;max-width:240px}.platinum-v2-mini{width:28%;max-width:110px}.platinum-v2-feature figcaption{font-size:.48rem;letter-spacing:.04em}.platinum-v2-mini-left{left:1%;bottom:9%}.platinum-v2-mini-right{right:1%;top:8%}.free-affirmation-card img.art{height:auto!important;max-height:none!important}}
+@media(max-width:350px){.platinum-v2-art{min-height:285px}.platinum-v2-feature{width:67%;max-width:205px}}
 </style></body></html>
