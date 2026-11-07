@@ -1,0 +1,607 @@
+{
+  "schema_version": 1,
+  "batch": 37,
+  "editorial_note": "75 new editorial-review drafts in 15 themes toward the 3,000-message milestone. Not approved for public release. Full-corpus duplication, contextual sensitivity and independent editorial review required.",
+  "messages": [
+    {
+      "id": "KDL-WHEN-A-FRIEND-STARTS-A-SMALL-BUSINESS-001",
+      "theme": "when_a_friend_starts_a_small_business",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your friend has opened a small business, and the first weeks may be uncertain. Asking how things are going can mean more than advice."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-STARTS-A-SMALL-BUSINESS-002",
+      "theme": "when_a_friend_starts_a_small_business",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Buying something is one way to support a new venture, but a sincere recommendation can help when money is tight."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-STARTS-A-SMALL-BUSINESS-003",
+      "theme": "when_a_friend_starts_a_small_business",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "They may be proud of their idea and frightened by the responsibility. You can make room for both parts of the story."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-STARTS-A-SMALL-BUSINESS-004",
+      "theme": "when_a_friend_starts_a_small_business",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If they ask for feedback, thoughtful specifics are more useful than praise that tells them nothing."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-STARTS-A-SMALL-BUSINESS-005",
+      "theme": "when_a_friend_starts_a_small_business",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Celebrating a first customer or completed order can honour the work behind a milestone that looks small from outside."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-TO-SWIM-AS-AN-ADULT-001",
+      "theme": "when_you_are_learning_to_swim_as_an_adult",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Walking into the shallow end for your first lesson takes courage that may be invisible to people who learned years ago."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-TO-SWIM-AS-AN-ADULT-002",
+      "theme": "when_you_are_learning_to_swim_as_an_adult",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can learn at a pace that respects your comfort and the instructor's safety guidance. Progress is not a race."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-TO-SWIM-AS-AN-ADULT-003",
+      "theme": "when_you_are_learning_to_swim_as_an_adult",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being an adult beginner may feel awkward. It also means you chose to give yourself a new opportunity."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-TO-SWIM-AS-AN-ADULT-004",
+      "theme": "when_you_are_learning_to_swim_as_an_adult",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some lessons will be about breathing or floating rather than crossing the pool. Those foundations count."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-LEARNING-TO-SWIM-AS-AN-ADULT-005",
+      "theme": "when_you_are_learning_to_swim_as_an_adult",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need to compare your first strokes with someone else's years of practice. Notice what feels a little easier today."
+    },
+    {
+      "id": "KDL-WHEN-THE-LIBRARY-CHANGES-ITS-HOURS-001",
+      "theme": "when_the_library_changes_its_hours",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The library closes earlier now, and a familiar part of your week needs rearranging. Small changes can affect real routines."
+    },
+    {
+      "id": "KDL-WHEN-THE-LIBRARY-CHANGES-ITS-HOURS-002",
+      "theme": "when_the_library_changes_its_hours",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the new hours make visits difficult, asking about other borrowing options is a reasonable next step."
+    },
+    {
+      "id": "KDL-WHEN-THE-LIBRARY-CHANGES-ITS-HOURS-003",
+      "theme": "when_the_library_changes_its_hours",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A library can be a quiet refuge as well as a place for books. Missing that space makes sense."
+    },
+    {
+      "id": "KDL-WHEN-THE-LIBRARY-CHANGES-ITS-HOURS-004",
+      "theme": "when_the_library_changes_its_hours",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Perhaps you will discover a different time to visit, when the room has another rhythm and a different kind of calm."
+    },
+    {
+      "id": "KDL-WHEN-THE-LIBRARY-CHANGES-ITS-HOURS-005",
+      "theme": "when_the_library_changes_its_hours",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Public spaces shape our days in ways we do not always notice until their doors open or close at new times."
+    },
+    {
+      "id": "KDL-AFTER-A-LONG-VIDEO-CALL-WITH-FAMILY-001",
+      "theme": "after_a_long_video_call_with_family",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The screen is dark again, but the familiar voices are still with you. Distance can make a simple conversation feel precious."
+    },
+    {
+      "id": "KDL-AFTER-A-LONG-VIDEO-CALL-WITH-FAMILY-002",
+      "theme": "after_a_long_video_call_with_family",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not everyone got a chance to speak on the call. You can follow up privately with someone you wanted to hear more from."
+    },
+    {
+      "id": "KDL-AFTER-A-LONG-VIDEO-CALL-WITH-FAMILY-003",
+      "theme": "after_a_long_video_call_with_family",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A family video call may include interruptions, frozen faces, and laughter. Connection rarely needs perfect technology."
+    },
+    {
+      "id": "KDL-AFTER-A-LONG-VIDEO-CALL-WITH-FAMILY-004",
+      "theme": "after_a_long_video_call_with_family",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If saying goodbye left you missing them more, that feeling can exist alongside gratitude for the time together."
+    },
+    {
+      "id": "KDL-AFTER-A-LONG-VIDEO-CALL-WITH-FAMILY-005",
+      "theme": "after_a_long_video_call_with_family",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need to organise the next call immediately. Enjoy the small closeness this one brought."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-FILL-OUT-A-FORM-001",
+      "theme": "when_you_help_someone_fill_out_a_form",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The questions are confusing, and the deadline is near. Reading each section together can make a difficult task feel manageable."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-FILL-OUT-A-FORM-002",
+      "theme": "when_you_help_someone_fill_out_a_form",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Helping with paperwork is not the same as taking over someone's choices. Leave room for them to decide what they share."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-FILL-OUT-A-FORM-003",
+      "theme": "when_you_help_someone_fill_out_a_form",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a form asks for sensitive details, checking where the information will go is a useful part of helping."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-FILL-OUT-A-FORM-004",
+      "theme": "when_you_help_someone_fill_out_a_form",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may need to stop and find an accurate answer rather than guessing. Careful work is worth the extra moment."
+    },
+    {
+      "id": "KDL-WHEN-YOU-HELP-SOMEONE-FILL-OUT-A-FORM-005",
+      "theme": "when_you_help_someone_fill_out_a_form",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When the form is submitted, the relief may be quiet. You helped turn a barrier into a completed step."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-ADOPTS-A-RESCUE-ANIMAL-001",
+      "theme": "when_a_friend_adopts_a_rescue_animal",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The new animal is learning a home full of unfamiliar sounds. Your friend's excitement may come with plenty of patience."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-ADOPTS-A-RESCUE-ANIMAL-002",
+      "theme": "when_a_friend_adopts_a_rescue_animal",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some rescued animals need time and space before they feel comfortable. A calm visit can respect that process."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-ADOPTS-A-RESCUE-ANIMAL-003",
+      "theme": "when_a_friend_adopts_a_rescue_animal",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your friend is tired from new routines, offering to bring dinner may be more helpful than requesting photos."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-ADOPTS-A-RESCUE-ANIMAL-004",
+      "theme": "when_a_friend_adopts_a_rescue_animal",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Every small sign of trust can feel significant in a new home. You can celebrate without expecting a quick transformation."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-ADOPTS-A-RESCUE-ANIMAL-005",
+      "theme": "when_a_friend_adopts_a_rescue_animal",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The animal's story may be complicated, but its next chapter deserves care rather than assumptions."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-TEAM-LOSES-A-FINAL-001",
+      "theme": "when_a_local_team_loses_a_final",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The final whistle has gone, and the players look exhausted. Their disappointment deserves room before anyone starts analysing the match."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-TEAM-LOSES-A-FINAL-002",
+      "theme": "when_a_local_team_loses_a_final",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A season of training cannot be reduced to the last score. There were teammates, early mornings, and lessons along the way."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-TEAM-LOSES-A-FINAL-003",
+      "theme": "when_a_local_team_loses_a_final",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a young player is upset, listening may help more than immediately telling them to cheer up."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-TEAM-LOSES-A-FINAL-004",
+      "theme": "when_a_local_team_loses_a_final",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Supporting a team means showing up when the result hurts too. A kind word after defeat can stay with someone."
+    },
+    {
+      "id": "KDL-WHEN-A-LOCAL-TEAM-LOSES-A-FINAL-005",
+      "theme": "when_a_local_team_loses_a_final",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Tomorrow there may be time to discuss what comes next. Tonight the team can simply acknowledge how much they cared."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-PARENT-MEETING-001",
+      "theme": "when_you_attend_a_first_parent_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The classroom chairs are smaller than you remembered, and you are meeting new faces. You do not have to know every school routine yet."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-PARENT-MEETING-002",
+      "theme": "when_you_attend_a_first_parent_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you are unsure about an expectation, asking a clear question can help other parents who wondered the same thing."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-PARENT-MEETING-003",
+      "theme": "when_you_attend_a_first_parent_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some families have more time or resources than others. A welcoming parent community makes room for different circumstances."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-PARENT-MEETING-004",
+      "theme": "when_you_attend_a_first_parent_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may leave with several dates and unfamiliar names. Writing down the next practical step is enough for tonight."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ATTEND-A-FIRST-PARENT-MEETING-005",
+      "theme": "when_you_attend_a_first_parent_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A first meeting is an introduction, not a test of whether you belong in your child's school community."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RECEIVE-CONSTRUCTIVE-FEEDBACK-001",
+      "theme": "when_you_receive_constructive_feedback",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The feedback includes something you need to improve, and hearing it may sting. You can listen without agreeing with every interpretation."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RECEIVE-CONSTRUCTIVE-FEEDBACK-002",
+      "theme": "when_you_receive_constructive_feedback",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "One useful question can turn a vague criticism into something you can actually work on."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RECEIVE-CONSTRUCTIVE-FEEDBACK-003",
+      "theme": "when_you_receive_constructive_feedback",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are allowed to ask for an example or a little time to reflect before responding."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RECEIVE-CONSTRUCTIVE-FEEDBACK-004",
+      "theme": "when_you_receive_constructive_feedback",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Feedback can describe a piece of work without defining the person who made it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RECEIVE-CONSTRUCTIVE-FEEDBACK-005",
+      "theme": "when_you_receive_constructive_feedback",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If someone offered thoughtful guidance, you can appreciate the effort while still choosing how to use it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REVISIT-A-CHILDHOOD-PLAYGROUND-001",
+      "theme": "when_you_revisit_a_childhood_playground",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The climbing frame seems smaller now, but you remember how enormous it once felt. Places change as we grow."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REVISIT-A-CHILDHOOD-PLAYGROUND-002",
+      "theme": "when_you_revisit_a_childhood_playground",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You might notice that the old playground has been rebuilt. The memory can remain meaningful without the original equipment."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REVISIT-A-CHILDHOOD-PLAYGROUND-003",
+      "theme": "when_you_revisit_a_childhood_playground",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A visit may bring laughter, tenderness, or a surprising ache. None of those reactions needs explaining away."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REVISIT-A-CHILDHOOD-PLAYGROUND-004",
+      "theme": "when_you_revisit_a_childhood_playground",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If children are playing there today, their games belong to this place as much as yours once did."
+    },
+    {
+      "id": "KDL-WHEN-YOU-REVISIT-A-CHILDHOOD-PLAYGROUND-005",
+      "theme": "when_you_revisit_a_childhood_playground",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can leave without recreating a single moment. Sometimes returning is simply a way to acknowledge where you began."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-FOR-A-NIGHT-SHIFT-001",
+      "theme": "when_you_prepare_for_a_night_shift",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The rest of the street is winding down while your workday is beginning. Your schedule deserves practical care and respect."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-FOR-A-NIGHT-SHIFT-002",
+      "theme": "when_you_prepare_for_a_night_shift",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Packing a meal or checking your journey before dark can make the shift feel a little more manageable."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-FOR-A-NIGHT-SHIFT-003",
+      "theme": "when_you_prepare_for_a_night_shift",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If friends forget that you sleep during the day, a gentle reminder can protect the rest you need."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-FOR-A-NIGHT-SHIFT-004",
+      "theme": "when_you_prepare_for_a_night_shift",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Night work often happens out of sight. The contribution is no less real because fewer people witness it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-PREPARE-FOR-A-NIGHT-SHIFT-005",
+      "theme": "when_you_prepare_for_a_night_shift",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When the shift ends, you deserve a chance to recover rather than being expected to switch straight into everyone else's routine."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-GARDEN-BEGINS-TO-GROW-001",
+      "theme": "when_a_shared_garden_begins_to_grow",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first shoots have appeared in the shared garden. A little green can make weeks of preparation feel worthwhile."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-GARDEN-BEGINS-TO-GROW-002",
+      "theme": "when_a_shared_garden_begins_to_grow",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Different neighbours may have different ideas about what to plant. Listening can help the space feel shared rather than claimed."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-GARDEN-BEGINS-TO-GROW-003",
+      "theme": "when_a_shared_garden_begins_to_grow",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Watering and weeding are quiet contributions that rarely appear in photographs of the harvest."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-GARDEN-BEGINS-TO-GROW-004",
+      "theme": "when_a_shared_garden_begins_to_grow",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every seed will grow, even with care. A garden teaches attention without promising perfect results."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-GARDEN-BEGINS-TO-GROW-005",
+      "theme": "when_a_shared_garden_begins_to_grow",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sharing the first herbs or vegetables can turn a small patch of ground into a place of connection."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-ASKED-TO-GIVE-A-TOAST-001",
+      "theme": "when_you_are_asked_to_give_a_toast",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The room is waiting, and you can feel your notes in your hand. A sincere toast does not need to be a performance."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-ASKED-TO-GIVE-A-TOAST-002",
+      "theme": "when_you_are_asked_to_give_a_toast",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "One specific memory often says more than a string of impressive adjectives."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-ASKED-TO-GIVE-A-TOAST-003",
+      "theme": "when_you_are_asked_to_give_a_toast",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your voice shakes a little, the people who care about you may hear the feeling behind it."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-ASKED-TO-GIVE-A-TOAST-004",
+      "theme": "when_you_are_asked_to_give_a_toast",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can keep the toast brief and still honour the occasion. Thoughtfulness is not measured in minutes."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ARE-ASKED-TO-GIVE-A-TOAST-005",
+      "theme": "when_you_are_asked_to_give_a_toast",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you raise your glass, remember that the purpose is to celebrate someone, not to deliver a flawless speech."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-QUIET-CAFE-001",
+      "theme": "when_you_find_a_quiet_cafe",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The café has an empty table near the window, and for once there is nowhere urgent to be."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-QUIET-CAFE-002",
+      "theme": "when_you_find_a_quiet_cafe",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A quiet place can offer a pause between errands without requiring you to make the hour productive."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-QUIET-CAFE-003",
+      "theme": "when_you_find_a_quiet_cafe",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Perhaps you recognise the barista or the sound of cups being stacked. Familiar details can make a place feel welcoming."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-QUIET-CAFE-004",
+      "theme": "when_you_find_a_quiet_cafe",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can enjoy a warm drink alone without treating solitude as a problem that needs fixing."
+    },
+    {
+      "id": "KDL-WHEN-YOU-FIND-A-QUIET-CAFE-005",
+      "theme": "when_you_find_a_quiet_cafe",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Leaving the café, you may carry nothing new except a slightly steadier pace. That can be enough."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ORGANISE-A-SHARED-RIDE-001",
+      "theme": "when_you_organise_a_shared_ride",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Coordinating pickup times takes more messages than anyone expected. Clear details can save everyone a stressful morning."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ORGANISE-A-SHARED-RIDE-002",
+      "theme": "when_you_organise_a_shared_ride",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If someone needs an accessible pickup point, planning for it early helps the whole group travel with more ease."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ORGANISE-A-SHARED-RIDE-003",
+      "theme": "when_you_organise_a_shared_ride",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shared ride works best when everyone knows the plan and has a chance to raise concerns."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ORGANISE-A-SHARED-RIDE-004",
+      "theme": "when_you_organise_a_shared_ride",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Delays can happen even with careful preparation. A quick update is often more useful than assigning blame."
+    },
+    {
+      "id": "KDL-WHEN-YOU-ORGANISE-A-SHARED-RIDE-005",
+      "theme": "when_you_organise_a_shared_ride",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After everyone arrives, the organising work may disappear from view. It still helped make the day possible."
+    }
+  ]
+}
