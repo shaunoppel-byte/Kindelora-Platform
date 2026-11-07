@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "batch": 39,
+  "editorial_note": "12 manually authored original situational messages; editorial-only. Full 3,000-message corpus near-duplicate scan and independent review pending.",
+  "messages": [
+    {
+      "id": "KDL-LIBRARY-CLOSURE-001",
+      "theme": "library_closure",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The library that felt like a quiet refuge has closed its doors. Missing a place can be a real kind of grief, even when others see only a building."
+    },
+    {
+      "id": "KDL-LOST-FAMILY-RECIPE-001",
+      "theme": "lost_family_recipe",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A recipe written in someone's handwriting can carry more than instructions. If the page is lost, the care behind it is not erased."
+    },
+    {
+      "id": "KDL-FAILED-AUDITION-001",
+      "theme": "failed_audition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You prepared for the audition and did not get the part. The disappointment deserves room before anyone asks what you learned."
+    },
+    {
+      "id": "KDL-GARDEN-DID-NOT-GROW-001",
+      "theme": "garden_did_not_grow",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The seedlings did not survive this season. You can be disappointed without turning a difficult growing year into a verdict on your patience."
+    },
+    {
+      "id": "KDL-COMMUNITY-EVENT-CANCELLED-001",
+      "theme": "community_event_cancelled",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "People worked for weeks on the community gathering, and now it is cancelled. Their preparation still represented generosity and care."
+    },
+    {
+      "id": "KDL-FIRST-MOBILITY-AID-001",
+      "theme": "first_mobility_aid",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Using a mobility aid in public for the first time may bring unfamiliar attention. Your comfort and access matter more than anyone else's curiosity."
+    },
+    {
+      "id": "KDL-CHILDHOOD-LANGUAGE-RUSTY-001",
+      "theme": "childhood_language_rusty",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Words that once came easily may take longer to find now. A language is not a test you must pass to belong to your own story."
+    },
+    {
+      "id": "KDL-MENTOR-RETIRES-001",
+      "theme": "mentor_retires",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A mentor's retirement can feel like losing a familiar compass at work. Their influence may remain in how you ask questions."
+    },
+    {
+      "id": "KDL-OLDER-PET-001",
+      "theme": "older_pet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An older pet may need a different rhythm of walks and play. Adjusting together is another form of companionship."
+    },
+    {
+      "id": "KDL-CHILD-OUTGROWS-TRADITION-001",
+      "theme": "child_outgrows_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A child who once loved your yearly ritual may no longer want to join. That change can sting without meaning the earlier years mattered less."
+    },
+    {
+      "id": "KDL-MISSED-TRAIN-CONNECTION-001",
+      "theme": "missed_train_connection",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Missing a train connection can unravel a carefully planned day. Being frustrated does not mean you have lost perspective."
+    },
+    {
+      "id": "KDL-BLURRY-PHOTO-001",
+      "theme": "blurry_photo",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The photograph of an important moment came out blurred. The moment itself was still yours, even if the image cannot prove every detail."
+    }
+  ]
+}
