@@ -1,0 +1,328 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 29",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-07",
+  "messages": [
+    {
+      "id": "KDL-BEING-NEW-IN-A-FAMILIAR-PLACE-001",
+      "theme": "being_new_in_a_familiar_place",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The street looks the same, yet you are meeting it with a different life. Give yourself time to learn what still fits."
+    },
+    {
+      "id": "KDL-BEING-NEW-IN-A-FAMILIAR-PLACE-002",
+      "theme": "being_new_in_a_familiar_place",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Returning somewhere familiar can feel strangely lonely. You can miss the old version of a place while making room for what it is now."
+    },
+    {
+      "id": "KDL-BEING-NEW-IN-A-FAMILIAR-PLACE-003",
+      "theme": "being_new_in_a_familiar_place",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may know the route and still feel uncertain about arriving. Familiar surroundings do not require familiar feelings."
+    },
+    {
+      "id": "KDL-BEING-NEW-IN-A-FAMILIAR-PLACE-004",
+      "theme": "being_new_in_a_familiar_place",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A place can hold good memories and difficult ones together. You do not have to choose a single story about being there."
+    },
+    {
+      "id": "KDL-BEING-NEW-IN-A-FAMILIAR-PLACE-005",
+      "theme": "being_new_in_a_familiar_place",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Before deciding whether you belong here again, notice the small ways the present differs from what you remember."
+    },
+    {
+      "id": "KDL-RECEIVING-UNEXPECTED-KINDNESS-001",
+      "theme": "receiving_unexpected_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When someone offers help without asking for a performance of gratitude, a simple thank you can be enough. You do not owe your whole story."
+    },
+    {
+      "id": "KDL-RECEIVING-UNEXPECTED-KINDNESS-002",
+      "theme": "receiving_unexpected_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected kindness can bring relief and suspicion at once, especially if support has been unreliable. You can accept only what feels comfortable."
+    },
+    {
+      "id": "KDL-RECEIVING-UNEXPECTED-KINDNESS-003",
+      "theme": "receiving_unexpected_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You might remember the person who made a complicated day slightly easier. Small gestures are not small to everyone who receives them."
+    },
+    {
+      "id": "KDL-RECEIVING-UNEXPECTED-KINDNESS-004",
+      "theme": "receiving_unexpected_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If receiving care feels unfamiliar, you can begin with something modest: letting someone carry one bag or listen for a few minutes."
+    },
+    {
+      "id": "KDL-RECEIVING-UNEXPECTED-KINDNESS-005",
+      "theme": "receiving_unexpected_kindness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Kindness does not erase the hard thing that happened. It can still make the next hour gentler."
+    },
+    {
+      "id": "KDL-LIVING-WITH-UNFINISHED-QUESTIONS-001",
+      "theme": "living_with_unfinished_questions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some questions remain open after the conversation ends. You can write down what you know today without pretending the rest has been settled."
+    },
+    {
+      "id": "KDL-LIVING-WITH-UNFINISHED-QUESTIONS-002",
+      "theme": "living_with_unfinished_questions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every silence contains a hidden answer. Sometimes the information simply has not arrived, and waiting is its own difficult task."
+    },
+    {
+      "id": "KDL-LIVING-WITH-UNFINISHED-QUESTIONS-003",
+      "theme": "living_with_unfinished_questions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When certainty is unavailable, a practical next step may be enough: send the email, gather the document, or ask one clearer question."
+    },
+    {
+      "id": "KDL-LIVING-WITH-UNFINISHED-QUESTIONS-004",
+      "theme": "living_with_unfinished_questions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are allowed to change your mind as new details emerge. An earlier decision made with less information was still a real effort."
+    },
+    {
+      "id": "KDL-LIVING-WITH-UNFINISHED-QUESTIONS-005",
+      "theme": "living_with_unfinished_questions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unfinished question need not occupy every hour. You can give it a place on the page and return to the rest of your day."
+    },
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-CAREFULLY-001",
+      "theme": "sharing_good_news_carefully",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Good news can feel delicate when people around you are struggling. You may share it with care without making your happiness an apology."
+    },
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-CAREFULLY-002",
+      "theme": "sharing_good_news_carefully",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes you want to celebrate quietly before telling anyone. Keeping a joyful moment close for a while does not make it less real."
+    },
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-CAREFULLY-003",
+      "theme": "sharing_good_news_carefully",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If someone responds awkwardly to your news, their reaction may reflect their own day. You can seek out someone able to celebrate with you."
+    },
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-CAREFULLY-004",
+      "theme": "sharing_good_news_carefully",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can be proud of a milestone without turning it into a comparison. Your progress has its own context."
+    },
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-CAREFULLY-005",
+      "theme": "sharing_good_news_carefully",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A celebration does not need an audience or a perfect photograph. A favourite meal and one sincere conversation may suit the moment."
+    },
+    {
+      "id": "KDL-RECOVERING-FROM-A-MISUNDERSTANDING-001",
+      "theme": "recovering_from_a_misunderstanding",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A misunderstanding can grow when both people start defending what they meant. Asking what the other person heard may open a different conversation."
+    },
+    {
+      "id": "KDL-RECOVERING-FROM-A-MISUNDERSTANDING-002",
+      "theme": "recovering_from_a_misunderstanding",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can clarify your intention without dismissing the impact. Both parts of the story deserve careful attention."
+    },
+    {
+      "id": "KDL-RECOVERING-FROM-A-MISUNDERSTANDING-003",
+      "theme": "recovering_from_a_misunderstanding",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After a tense exchange, it may help to return with one specific sentence rather than a speech explaining everything."
+    },
+    {
+      "id": "KDL-RECOVERING-FROM-A-MISUNDERSTANDING-004",
+      "theme": "recovering_from_a_misunderstanding",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the repair is an apology; sometimes it is a clearer agreement about next time. You can find out which is needed."
+    },
+    {
+      "id": "KDL-RECOVERING-FROM-A-MISUNDERSTANDING-005",
+      "theme": "recovering_from_a_misunderstanding",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a conversation ended badly, you do not have to solve it while everyone is still upset. A respectful pause can protect the next attempt."
+    },
+    {
+      "id": "KDL-MAKING-SPACE-FOR-A-SLOW-DAY-001",
+      "theme": "making_space_for_a_slow_day",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A slower day may reveal how much you have been carrying. You can notice that without immediately creating another task to manage it."
+    },
+    {
+      "id": "KDL-MAKING-SPACE-FOR-A-SLOW-DAY-002",
+      "theme": "making_space_for_a_slow_day",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Rest can feel uncomfortable when the to-do list is visible. Choosing one necessary thing and leaving the rest may be a reasonable response."
+    },
+    {
+      "id": "KDL-MAKING-SPACE-FOR-A-SLOW-DAY-003",
+      "theme": "making_space_for_a_slow_day",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some afternoons are better suited to folding laundry than making major decisions. Ordinary tasks can offer a manageable rhythm."
+    },
+    {
+      "id": "KDL-MAKING-SPACE-FOR-A-SLOW-DAY-004",
+      "theme": "making_space_for_a_slow_day",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If today moves slowly, that does not tell the whole story of your effort this week. Energy varies, even when responsibilities remain."
+    },
+    {
+      "id": "KDL-MAKING-SPACE-FOR-A-SLOW-DAY-005",
+      "theme": "making_space_for_a_slow_day",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may need a quieter pace without having a dramatic reason to explain it. Paying attention to your limits is reason enough."
+    },
+    {
+      "id": "KDL-NOTICING-A-CHANGED-FRIENDSHIP-001",
+      "theme": "noticing_a_changed_friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friendship may shift when routines, families, or distances change. You can care about someone without recreating the exact closeness you once had."
+    },
+    {
+      "id": "KDL-NOTICING-A-CHANGED-FRIENDSHIP-002",
+      "theme": "noticing_a_changed_friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the first sign of distance is a message you keep meaning to send. One honest check-in can matter more than a perfect explanation."
+    },
+    {
+      "id": "KDL-NOTICING-A-CHANGED-FRIENDSHIP-003",
+      "theme": "noticing_a_changed_friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a friend has less time now, it can hurt even when you understand why. Both the understanding and the hurt can be true."
+    },
+    {
+      "id": "KDL-NOTICING-A-CHANGED-FRIENDSHIP-004",
+      "theme": "noticing_a_changed_friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can invite someone back into your life without demanding an immediate return to how things were."
+    },
+    {
+      "id": "KDL-NOTICING-A-CHANGED-FRIENDSHIP-005",
+      "theme": "noticing_a_changed_friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friendship that becomes occasional may still be meaningful. What matters is whether the connection feels mutual and respectful now."
+    },
+    {
+      "id": "KDL-NAVIGATING-SMALL-PUBLIC-MISTAKES-001",
+      "theme": "navigating_small_public_mistakes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Mispronouncing a name or losing your place in a meeting can feel enormous for a moment. A correction is often enough to continue."
+    },
+    {
+      "id": "KDL-NAVIGATING-SMALL-PUBLIC-MISTAKES-002",
+      "theme": "navigating_small_public_mistakes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you make a small mistake in front of others, you can repair what matters without replaying every second afterward."
+    },
+    {
+      "id": "KDL-NAVIGATING-SMALL-PUBLIC-MISTAKES-003",
+      "theme": "navigating_small_public_mistakes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An awkward moment may stay vivid in your memory long after the room has moved on. You can let it become one moment, not a verdict."
+    },
+    {
+      "id": "KDL-NAVIGATING-SMALL-PUBLIC-MISTAKES-004",
+      "theme": "navigating_small_public_mistakes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you gave the wrong information, a brief follow-up with the right details shows care for the people relying on you."
+    },
+    {
+      "id": "KDL-NAVIGATING-SMALL-PUBLIC-MISTAKES-005",
+      "theme": "navigating_small_public_mistakes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being embarrassed does not mean you have failed at belonging. Most shared spaces include imperfect moments from everyone."
+    }
+  ]
+}
