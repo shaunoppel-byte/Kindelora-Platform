@@ -162,8 +162,12 @@ header .mobile-nav-panel a[aria-current="location"]{background:#f4e8ef;color:#51
 @media(max-width:350px){.free-affirmations .free-affirmation-card .card-actions{grid-template-columns:1fr}.free-affirmations .free-affirmation-card .gallery-heart{justify-self:center}}
 </style><style>
 /* Cinematic fourth-card photography with legible, brand-consistent overlay. */
-.kindelora-scenic-art{position:relative;overflow:hidden;isolation:isolate;aspect-ratio:16/10;background:#26172d}
-.free-affirmations .kindelora-scenic-art img.art{width:100%;height:100%;aspect-ratio:auto;object-fit:cover;display:block}
+/* Match fourth image frame exactly to the neighbouring featured card. */
+.free-affirmations .free-affirmation-card>.kindelora-scenic-art{aspect-ratio:16/10!important;min-height:0!important;max-height:none!important}
+.free-affirmations .free-affirmation-card>.kindelora-scenic-art img.art{position:absolute!important;inset:0!important;width:100%!important;height:100%!important;object-fit:cover!important}
+
+.kindelora-scenic-art{position:relative;overflow:hidden;isolation:isolate;aspect-ratio:16/10;background:#26172d;width:100%;height:auto;flex-shrink:0}
+.free-affirmations .kindelora-scenic-art img.art{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover;display:block}
 .kindelora-scenic-art:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(24,11,38,.88),rgba(35,17,44,.54) 62%,rgba(31,14,37,.15));pointer-events:none}
 .kindelora-scenic-overlay{position:absolute;z-index:1;inset:6%;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:clamp(5px,1vw,13px);color:#fff9f2;text-shadow:0 2px 8px #180b2b}
 .kindelora-scenic-brand{color:#f7d596;font-size:clamp(.45rem,1vw,.8rem);letter-spacing:.16em;font-weight:700}
