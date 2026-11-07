@@ -7,10 +7,10 @@ const cards=[...section.querySelectorAll('.free-affirmation-card')];
 const heading=section.querySelector('#free-affirmations-title');
 if(heading)heading.textContent='Affirmation Library';
 const intro=section.querySelector('.free-intro');
-if(intro)intro.textContent='Find a moment that speaks to you. Read it, listen, download your card or share kindness with someone. These three finished cards are free to explore; more are being prepared.';
+if(intro)intro.textContent='Find a moment that speaks to you. Read it, listen, download your card or share kindness with someone. These four finished cards are free to explore; more are being prepared.';
 const style=document.createElement('style');
 style.textContent=`
-.free-affirmations .free-affirmation-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.free-affirmations .free-affirmation-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:18px}
 .free-affirmations .free-affirmation-card{display:flex;flex-direction:column}
 .free-affirmations .free-affirmation-card .details{display:flex;flex-direction:column;flex:1}
 .free-affirmations .kindelora-card-tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;margin-top:12px}
@@ -19,7 +19,7 @@ style.textContent=`
 .free-affirmations .kindelora-card-status{font-size:.83rem;min-height:1.3em;margin:7px 0 0;color:#60445e}
 .free-affirmations .free-affirmation-card img.art{aspect-ratio:16/10;object-fit:cover}
 @media(max-width:860px){.free-affirmations .free-affirmation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:560px){.free-affirmations .free-affirmation-grid{grid-template-columns:1fr}}
+@media(max-width:560px){.free-affirmations .free-affirmation-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:12px}}
 `;
 document.head.appendChild(style);
 let current=null;
@@ -76,7 +76,11 @@ refined.textContent=`
 .kindelora-focus-dialog .focus-inner{padding:clamp(20px,4vw,38px)}
 .kindelora-focus-dialog h2{font-family:Georgia,serif;font-size:clamp(1.6rem,3vw,2.3rem);margin:0 0 18px;color:#32183b}
 .kindelora-focus-dialog .focus-quote{font-size:clamp(1.25rem,2.5vw,1.6rem);line-height:1.7}
-.kindelora-focus-dialog .focus-close{float:right;border:1px solid #806080;border-radius:9px;background:#fff;padding:10px 15px;font:inherit;cursor:pointer}
+.kindelora-focus-dialog .focus-inner{display:grid;grid-template-columns:minmax(0,1fr) auto;align-items:start;column-gap:12px;row-gap:14px}
+.kindelora-focus-dialog .focus-inner h2{grid-column:1;min-width:0;overflow-wrap:anywhere;margin:0}
+.kindelora-focus-dialog .focus-close{grid-column:2;grid-row:1;border:1px solid #806080;border-radius:9px;background:#fff;padding:10px 15px;font:inherit;cursor:pointer;white-space:nowrap}
+.kindelora-focus-dialog .focus-quote{grid-column:1/-1;margin:0}
+@media(max-width:420px){.kindelora-focus-dialog .focus-inner{grid-template-columns:1fr}.kindelora-focus-dialog .focus-close{grid-column:1;grid-row:1;justify-self:end}.kindelora-focus-dialog .focus-inner h2{grid-row:2}}
 @media(prefers-reduced-motion:reduce){.free-affirmations *{scroll-behavior:auto!important;animation:none!important}}
 `;
 document.head.appendChild(refined);
@@ -94,7 +98,7 @@ cards.forEach(card=>{
   const close=document.createElement('button');close.type='button';close.className='focus-close';close.textContent='Close';close.addEventListener('click',()=>dialog.close());
   const h=document.createElement('h2');h.textContent=title;
   const p=document.createElement('p');p.className='focus-quote';p.textContent=quote;
-  inner.append(close,h,p);dialog.appendChild(inner);
+  inner.append(h,close,p);dialog.appendChild(inner);
   if(typeof dialog.showModal==='function'){dialog.showModal();close.focus();}else{dialog.setAttribute('open','');close.focus();}
  });
  details.appendChild(button);
