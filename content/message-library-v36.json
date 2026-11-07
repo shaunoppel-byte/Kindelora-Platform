@@ -84,44 +84,44 @@
       "text": "Returning something on time is a small act of respect. If you are late, an honest apology and a plan can help."
     },
     {
-      "id": "KDL-WHEN-A-CHILD-ASKS-A-HARD-QUESTION-001",
-      "theme": "when_a_child_asks_a_hard_question",
+      "id": "KDL-WHEN-A-CHILD-ASKS-ABOUT-A-FAMILY-MOVE-001",
+      "theme": "when_a_child_asks_about_a_family_move",
       "audience": "all",
       "tone": "warm-grounded",
       "status": "editorial-review",
-      "text": "The question arrived while you were doing something ordinary. You can take a moment before choosing words that are both truthful and gentle."
+      "text": "The move is coming, and your child wants to know what will happen to their favourite places. You can answer one question at a time."
     },
     {
-      "id": "KDL-WHEN-A-CHILD-ASKS-A-HARD-QUESTION-002",
-      "theme": "when_a_child_asks_a_hard_question",
+      "id": "KDL-WHEN-A-CHILD-ASKS-ABOUT-A-FAMILY-MOVE-002",
+      "theme": "when_a_child_asks_about_a_family_move",
       "audience": "all",
       "tone": "warm-grounded",
       "status": "editorial-review",
-      "text": "You do not have to know every answer to make a child feel safe asking you difficult things."
+      "text": "If you do not know every detail of the move yet, saying so gently can be more reassuring than making promises."
     },
     {
-      "id": "KDL-WHEN-A-CHILD-ASKS-A-HARD-QUESTION-003",
-      "theme": "when_a_child_asks_a_hard_question",
+      "id": "KDL-WHEN-A-CHILD-ASKS-ABOUT-A-FAMILY-MOVE-003",
+      "theme": "when_a_child_asks_about_a_family_move",
       "audience": "all",
       "tone": "warm-grounded",
       "status": "editorial-review",
-      "text": "Sometimes a child needs a short explanation first, and room to return with another question later."
+      "text": "A child may ask about friends, bedrooms, or the journey itself. Those practical questions can carry big feelings."
     },
     {
-      "id": "KDL-WHEN-A-CHILD-ASKS-A-HARD-QUESTION-004",
-      "theme": "when_a_child_asks_a_hard_question",
+      "id": "KDL-WHEN-A-CHILD-ASKS-ABOUT-A-FAMILY-MOVE-004",
+      "theme": "when_a_child_asks_about_a_family_move",
       "audience": "all",
       "tone": "warm-grounded",
       "status": "editorial-review",
-      "text": "If the subject is painful for you too, it is all right to say you need a little time to explain."
+      "text": "You can invite them to choose one small thing for the new room while acknowledging what they will miss."
     },
     {
-      "id": "KDL-WHEN-A-CHILD-ASKS-A-HARD-QUESTION-005",
-      "theme": "when_a_child_asks_a_hard_question",
+      "id": "KDL-WHEN-A-CHILD-ASKS-ABOUT-A-FAMILY-MOVE-005",
+      "theme": "when_a_child_asks_about_a_family_move",
       "audience": "all",
       "tone": "warm-grounded",
       "status": "editorial-review",
-      "text": "Listening to what the child already thinks can help you understand the question beneath the question."
+      "text": "After the conversation, your child might ask the same question again. Repetition can be part of making sense of change."
     },
     {
       "id": "KDL-AFTER-YOUR-FIRST-DAY-IN-A-NEW-ROLE-001",
