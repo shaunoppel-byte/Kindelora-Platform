@@ -1,0 +1,248 @@
+{
+  "schema_version": 1,
+  "library": "KINDELORA editorial expansion batch 30",
+  "release_status": "editorial-review",
+  "created_at": "2026-11-07",
+  "messages": [
+    {
+      "id": "KDL-NAVIGATING-A-QUIET-HOUSE-001",
+      "theme": "navigating_a_quiet_house",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After the visitors leave, the quiet can feel louder than the gathering. You are allowed to take time before putting everything back in its place."
+    },
+    {
+      "id": "KDL-NAVIGATING-A-QUIET-HOUSE-002",
+      "theme": "navigating_a_quiet_house",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An empty chair may catch your eye during an ordinary meal. You do not have to turn that moment into a lesson about moving on."
+    },
+    {
+      "id": "KDL-NAVIGATING-A-QUIET-HOUSE-003",
+      "theme": "navigating_a_quiet_house",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the house feels unfamiliar tonight, try changing one small thing for comfort, without expecting it to change everything."
+    },
+    {
+      "id": "KDL-NAVIGATING-A-QUIET-HOUSE-004",
+      "theme": "navigating_a_quiet_house",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "There can be relief in having the room to yourself and sadness about why it is empty. Neither feeling cancels the other."
+    },
+    {
+      "id": "KDL-NAVIGATING-A-QUIET-HOUSE-005",
+      "theme": "navigating_a_quiet_house",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You might leave a light on longer than usual. Sometimes a modest comfort is simply what the evening asks for."
+    },
+    {
+      "id": "KDL-LEARNING-A-NEW-COMMUTE-001",
+      "theme": "learning_a_new_commute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A new journey can take more attention than the work waiting at its end. Allow for the effort of finding your way."
+    },
+    {
+      "id": "KDL-LEARNING-A-NEW-COMMUTE-002",
+      "theme": "learning_a_new_commute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Missing the usual turn does not make the whole day a failure. You can pull over safely, check the route, and begin again."
+    },
+    {
+      "id": "KDL-LEARNING-A-NEW-COMMUTE-003",
+      "theme": "learning_a_new_commute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The bus stop may be full of strangers today. Familiarity often begins with noticing the same faces over several mornings."
+    },
+    {
+      "id": "KDL-LEARNING-A-NEW-COMMUTE-004",
+      "theme": "learning_a_new_commute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When the route changes, the old rhythm goes with it. A few uncertain mornings do not mean you chose badly."
+    },
+    {
+      "id": "KDL-LEARNING-A-NEW-COMMUTE-005",
+      "theme": "learning_a_new_commute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Getting home by a different road can feel unexpectedly tiring. You can acknowledge the extra decisions without judging yourself for them."
+    },
+    {
+      "id": "KDL-SHARING-A-KITCHEN-WITH-OTHERS-001",
+      "theme": "sharing_a_kitchen_with_others",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shared kitchen holds different habits, budgets, and histories. Asking where things belong may prevent more friction than guessing."
+    },
+    {
+      "id": "KDL-SHARING-A-KITCHEN-WITH-OTHERS-002",
+      "theme": "sharing_a_kitchen_with_others",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When someone cooks differently from you, curiosity can be kinder than correction, especially when nobody asked for advice."
+    },
+    {
+      "id": "KDL-SHARING-A-KITCHEN-WITH-OTHERS-003",
+      "theme": "sharing_a_kitchen_with_others",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A sink full of dishes can represent more than dishes after a long day. Speak about the practical problem before assuming motives."
+    },
+    {
+      "id": "KDL-SHARING-A-KITCHEN-WITH-OTHERS-004",
+      "theme": "sharing_a_kitchen_with_others",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can appreciate a meal and still say which ingredients you cannot eat. Gratitude does not require ignoring your needs."
+    },
+    {
+      "id": "KDL-SHARING-A-KITCHEN-WITH-OTHERS-005",
+      "theme": "sharing_a_kitchen_with_others",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Making space on one shelf might seem minor, but it can help another person feel considered in a crowded home."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-HOBBY-AFTER-YEARS-001",
+      "theme": "returning_to_a_hobby_after_years",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first awkward attempt may surprise you if you remember being skilled. Your hands are meeting an old pleasure after a long absence."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-HOBBY-AFTER-YEARS-002",
+      "theme": "returning_to_a_hobby_after_years",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not need to buy new equipment to find out whether the activity still brings you joy. Start with what is available."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-HOBBY-AFTER-YEARS-003",
+      "theme": "returning_to_a_hobby_after_years",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An old hobby may feel different because your life is different. You can keep the parts you enjoy and leave the rest."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-HOBBY-AFTER-YEARS-004",
+      "theme": "returning_to_a_hobby_after_years",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you used to be faster, stronger, or more confident, comparing every attempt with the past may hide what is happening now."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-HOBBY-AFTER-YEARS-005",
+      "theme": "returning_to_a_hobby_after_years",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes returning to a pastime means discovering you no longer want it. That information is useful too; you have not wasted the afternoon."
+    },
+    {
+      "id": "KDL-MANAGING-A-SMALL-MISTAKE-AT-WORK-001",
+      "theme": "managing_a_small_mistake_at_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A misplaced attachment can make your stomach drop. Correct the email, name the error clearly, and avoid turning it into a verdict on your competence."
+    },
+    {
+      "id": "KDL-MANAGING-A-SMALL-MISTAKE-AT-WORK-002",
+      "theme": "managing_a_small_mistake_at_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you notice a small mistake, you can address the consequence without rehearsing every possible criticism in advance."
+    },
+    {
+      "id": "KDL-MANAGING-A-SMALL-MISTAKE-AT-WORK-003",
+      "theme": "managing_a_small_mistake_at_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A colleague pointing out an error may feel uncomfortable even when they are trying to help. You can take the useful information and pause."
+    },
+    {
+      "id": "KDL-MANAGING-A-SMALL-MISTAKE-AT-WORK-004",
+      "theme": "managing_a_small_mistake_at_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not every correction needs a long explanation. Sometimes the clearest response is to acknowledge the problem and share the corrected version."
+    },
+    {
+      "id": "KDL-MANAGING-A-SMALL-MISTAKE-AT-WORK-005",
+      "theme": "managing_a_small_mistake_at_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a task needs a second pair of eyes, asking early can be a practical choice rather than an admission that you cannot cope."
+    },
+    {
+      "id": "KDL-WELCOMING-SOMEONE-BACK-AFTER-ABSENCE-001",
+      "theme": "welcoming_someone_back_after_absence",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone returning after a difficult season may want ordinary conversation more than questions. Let them decide what to share."
+    },
+    {
+      "id": "KDL-WELCOMING-SOMEONE-BACK-AFTER-ABSENCE-002",
+      "theme": "welcoming_someone_back_after_absence",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can be glad a person is back and still give them room to find their pace. A warm greeting need not become an interrogation."
+    },
+    {
+      "id": "KDL-WELCOMING-SOMEONE-BACK-AFTER-ABSENCE-003",
+      "theme": "welcoming_someone_back_after_absence",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a familiar face returns, the group may have changed. Small introductions can help without making the person feel like an outsider."
+    },
+    {
+      "id": "KDL-WELCOMING-SOMEONE-BACK-AFTER-ABSENCE-004",
+      "theme": "welcoming_someone_back_after_absence",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A simple invitation to join lunch offers connection while leaving room for a polite no. That choice matters."
+    },
+    {
+      "id": "KDL-WELCOMING-SOMEONE-BACK-AFTER-ABSENCE-005",
+      "theme": "welcoming_someone_back_after_absence",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you are unsure what to say after someone's absence, kindness can sound like a welcome rather than a request for details."
+    }
+  ]
+}
