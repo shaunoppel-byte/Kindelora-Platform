@@ -1,0 +1,207 @@
+{
+  "schema_version": 1,
+  "batch": 39,
+  "editorial_note": "25 individually written contextual drafts; human review required for school, identity, disaster recovery and supported housing themes. Not approved for publication.",
+  "messages": [
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-MEETING-001",
+      "theme": "after_a_difficult_school_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The conversation at school may have left you with more questions than answers. Write down what was agreed while it is still fresh; clarity can be a kindness to everyone involved."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-MEETING-002",
+      "theme": "after_a_difficult_school_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is possible to care deeply about a child's progress and disagree with how a concern was raised. Both truths can sit in the same room."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-MEETING-003",
+      "theme": "after_a_difficult_school_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A meeting about difficulties does not capture everything a young person is learning, loving or becoming. Make space for the parts of their day that went well."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-MEETING-004",
+      "theme": "after_a_difficult_school_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you felt defensive during the meeting, you can revisit the conversation when emotions have settled. A thoughtful follow-up is still a useful contribution."
+    },
+    {
+      "id": "KDL-AFTER-A-DIFFICULT-SCHOOL-MEETING-005",
+      "theme": "after_a_difficult_school_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Before the next school meeting, ask what support would look like in practice. Specific steps are easier to revisit than broad promises."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHANGES-THEIR-NAME-001",
+      "theme": "when_a_friend_changes_their_name",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your friend has shared a name that matters to them. Using it consistently is a simple way to show that you listened."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHANGES-THEIR-NAME-002",
+      "theme": "when_a_friend_changes_their_name",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may need a little practice with a friend's new name. Quietly correcting yourself and moving on keeps the focus where it belongs."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHANGES-THEIR-NAME-003",
+      "theme": "when_a_friend_changes_their_name",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you are unsure how to pronounce someone's name, ask respectfully rather than guessing each time. Attention to detail can communicate care."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHANGES-THEIR-NAME-004",
+      "theme": "when_a_friend_changes_their_name",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A change of name may carry a story your friend is not ready to tell. You can respect the name without requesting an explanation."
+    },
+    {
+      "id": "KDL-WHEN-A-FRIEND-CHANGES-THEIR-NAME-005",
+      "theme": "when_a_friend_changes_their_name",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Old habits sometimes surface in conversation. What matters next is whether you make the effort to learn, not whether you make a performance of apologising."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-TO-A-PLACE-AFTER-FLOODING-001",
+      "theme": "when_you_return_to_a_place_after_flooding",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The street looks familiar, yet the marks left by the water change how you see it. You do not need to minimise that difference."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-TO-A-PLACE-AFTER-FLOODING-002",
+      "theme": "when_you_return_to_a_place_after_flooding",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After flooding, people may need practical help long after the headlines move on. Ask what would be useful before arriving with supplies."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-TO-A-PLACE-AFTER-FLOODING-003",
+      "theme": "when_you_return_to_a_place_after_flooding",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some belongings cannot be replaced, even when a building can be repaired. Allow room for grief over ordinary things."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-TO-A-PLACE-AFTER-FLOODING-004",
+      "theme": "when_you_return_to_a_place_after_flooding",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Cleaning up after water damage is tiring, repetitive work. A shared meal or an offered lift can help without pretending to fix everything."
+    },
+    {
+      "id": "KDL-WHEN-YOU-RETURN-TO-A-PLACE-AFTER-FLOODING-005",
+      "theme": "when_you_return_to_a_place_after_flooding",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Returning home after a flood can bring relief and unease together. You can appreciate what survived while still mourning what did not."
+    },
+    {
+      "id": "KDL-WHEN-YOUR-TEAM-LOSES-A-CLOSE-MATCH-001",
+      "theme": "when_your_team_loses_a_close_match",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The final score is close enough to replay in your head. It is still only one part of what happened on the field."
+    },
+    {
+      "id": "KDL-WHEN-YOUR-TEAM-LOSES-A-CLOSE-MATCH-002",
+      "theme": "when_your_team_loses_a_close_match",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A teammate who missed a chance may already be carrying it heavily. They might need company more than analysis."
+    },
+    {
+      "id": "KDL-WHEN-YOUR-TEAM-LOSES-A-CLOSE-MATCH-003",
+      "theme": "when_your_team_loses_a_close_match",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Disappointment after a close match shows that the game mattered. It does not require anyone to become the villain of the story."
+    },
+    {
+      "id": "KDL-WHEN-YOUR-TEAM-LOSES-A-CLOSE-MATCH-004",
+      "theme": "when_your_team_loses_a_close_match",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Before discussing what went wrong, notice who kept encouraging others when the result became uncertain."
+    },
+    {
+      "id": "KDL-WHEN-YOUR-TEAM-LOSES-A-CLOSE-MATCH-005",
+      "theme": "when_your_team_loses_a_close_match",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The next practice can hold both honest lessons and ordinary enjoyment. Improvement does not have to begin with blame."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOUR-MOVES-INTO-SUPPORTED-HOUSING-001",
+      "theme": "when_a_neighbour_moves_into_supported_housing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A neighbour's move into supported housing may bring relief, sadness and practical questions. There is no single correct response to such a change."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOUR-MOVES-INTO-SUPPORTED-HOUSING-002",
+      "theme": "when_a_neighbour_moves_into_supported_housing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your neighbour may appreciate being asked what they want to bring, rather than having others decide what matters to them."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOUR-MOVES-INTO-SUPPORTED-HOUSING-003",
+      "theme": "when_a_neighbour_moves_into_supported_housing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Familiar routines can be comforting during a move. A favourite mug or regular phone call may mean more than a grand gesture."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOUR-MOVES-INTO-SUPPORTED-HOUSING-004",
+      "theme": "when_a_neighbour_moves_into_supported_housing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Support can include respecting someone's independence. Ask before rearranging their space or speaking on their behalf."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOUR-MOVES-INTO-SUPPORTED-HOUSING-005",
+      "theme": "when_a_neighbour_moves_into_supported_housing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Friendship does not have to end at a new address. A visit arranged around their preferences can keep the connection alive."
+    }
+  ]
+}
