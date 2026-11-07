@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
-  "release": "2026-11-05-founder-authorised-2100",
-  "count": 2100,
+  "release": "2026-11-07-founder-approved-2625-release-candidate",
+  "count": 2260,
   "messages": [
     {
       "id": "KDL-HOPE-001",
@@ -10502,6 +10502,806 @@
       "id": "KDL-WHEN_THE_DAY_ENDS_DIFFERENTLY-010",
       "theme": "when_the_day_ends_differently",
       "text": "Tomorrow does not need to carry every unfinished feeling from tonight."
+    },
+    {
+      "id": "KDL-AFTER_A_DIFFICULT_APOLOGY-001",
+      "theme": "after_a_difficult_apology",
+      "text": "An apology can be sincere and still leave the other person needing time. Their pace does not decide whether your effort mattered."
+    },
+    {
+      "id": "KDL-AFTER_A_DIFFICULT_APOLOGY-002",
+      "theme": "after_a_difficult_apology",
+      "text": "If you have acknowledged the harm, resist filling the silence with explanations. Listening may be the next honest part of repair."
+    },
+    {
+      "id": "KDL-AFTER_A_DIFFICULT_APOLOGY-003",
+      "theme": "after_a_difficult_apology",
+      "text": "Feeling embarrassed after apologising does not mean you should take the words back. Discomfort sometimes accompanies accountability."
+    },
+    {
+      "id": "KDL-AFTER_A_DIFFICULT_APOLOGY-004",
+      "theme": "after_a_difficult_apology",
+      "text": "You can offer to make something right without insisting that the relationship return to its old shape."
+    },
+    {
+      "id": "KDL-AFTER_A_DIFFICULT_APOLOGY-005",
+      "theme": "after_a_difficult_apology",
+      "text": "An apology is not a receipt for forgiveness. It is a way of taking responsibility for what belongs to you."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NEW_IN_A_ROOM-001",
+      "theme": "when_you_are_new_in_a_room",
+      "text": "Being unfamiliar with a room does not make you less entitled to occupy it. You are allowed to learn its rhythms gradually."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NEW_IN_A_ROOM-002",
+      "theme": "when_you_are_new_in_a_room",
+      "text": "You may notice everyone else's ease before you notice your own courage in showing up."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NEW_IN_A_ROOM-003",
+      "theme": "when_you_are_new_in_a_room",
+      "text": "A first conversation need not become a lasting friendship to have made the room a little less strange."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NEW_IN_A_ROOM-004",
+      "theme": "when_you_are_new_in_a_room",
+      "text": "If you forget a name, asking again can be kinder than pretending you remember."
+    },
+    {
+      "id": "KDL-WHEN_YOU_ARE_NEW_IN_A_ROOM-005",
+      "theme": "when_you_are_new_in_a_room",
+      "text": "You can be observant at first without making your quietness a verdict on your ability to belong."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_DEPENDS_ON_SOMEONE_ELSE-001",
+      "theme": "when_a_plan_depends_on_someone_else",
+      "text": "Waiting for another person's decision can make your own day feel suspended. Consider what remains yours to choose meanwhile."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_DEPENDS_ON_SOMEONE_ELSE-002",
+      "theme": "when_a_plan_depends_on_someone_else",
+      "text": "You can ask for a clear timeframe without making the other person responsible for your peace of mind."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_DEPENDS_ON_SOMEONE_ELSE-003",
+      "theme": "when_a_plan_depends_on_someone_else",
+      "text": "Sometimes the uncertainty is harder than either answer. It makes sense to want clarity rather than more reassurance."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_DEPENDS_ON_SOMEONE_ELSE-004",
+      "theme": "when_a_plan_depends_on_someone_else",
+      "text": "A shared plan needs shared information. Naming what you still need to know is not an unreasonable demand."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_DEPENDS_ON_SOMEONE_ELSE-005",
+      "theme": "when_a_plan_depends_on_someone_else",
+      "text": "If the answer arrives later than promised, you may revise your plans without turning the delay into a judgment of yourself."
+    },
+    {
+      "id": "KDL-WHEN_JOY_FEELS_OUT_OF_PLACE-001",
+      "theme": "when_joy_feels_out_of_place",
+      "text": "A moment of laughter does not cancel the seriousness of what you are carrying."
+    },
+    {
+      "id": "KDL-WHEN_JOY_FEELS_OUT_OF_PLACE-002",
+      "theme": "when_joy_feels_out_of_place",
+      "text": "You do not have to explain why something small made you smile on a complicated day."
+    },
+    {
+      "id": "KDL-WHEN_JOY_FEELS_OUT_OF_PLACE-003",
+      "theme": "when_joy_feels_out_of_place",
+      "text": "Pleasure and concern can sit beside each other without either one being dishonest."
+    },
+    {
+      "id": "KDL-WHEN_JOY_FEELS_OUT_OF_PLACE-004",
+      "theme": "when_joy_feels_out_of_place",
+      "text": "If good news arrives during a hard season, you are allowed to receive it in whatever measure feels possible."
+    },
+    {
+      "id": "KDL-WHEN_JOY_FEELS_OUT_OF_PLACE-005",
+      "theme": "when_joy_feels_out_of_place",
+      "text": "Not every bright moment needs to become a lesson. Sometimes a pleasant cup of tea is simply pleasant."
+    },
+    {
+      "id": "KDL-BEING_MISUNDERSTOOD_AT_WORK-001",
+      "theme": "being_misunderstood_at_work",
+      "text": "Being misunderstood in a meeting can linger long after everyone leaves. You may clarify your point without turning the conversation into a trial of your character."
+    },
+    {
+      "id": "KDL-BEING_MISUNDERSTOOD_AT_WORK-002",
+      "theme": "being_misunderstood_at_work",
+      "text": "A colleague's brief response may reflect their own crowded day. Before building a painful story around it, leave room for information you do not have."
+    },
+    {
+      "id": "KDL-BEING_MISUNDERSTOOD_AT_WORK-003",
+      "theme": "being_misunderstood_at_work",
+      "text": "If your contribution was overlooked, it is reasonable to name the work you did. Visibility and humility do not have to compete."
+    },
+    {
+      "id": "KDL-BEING_MISUNDERSTOOD_AT_WORK-004",
+      "theme": "being_misunderstood_at_work",
+      "text": "Sometimes the most useful follow-up is a calm written summary. It gives your thinking a fair chance without requiring you to win the room."
+    },
+    {
+      "id": "KDL-BEING_MISUNDERSTOOD_AT_WORK-005",
+      "theme": "being_misunderstood_at_work",
+      "text": "You can respect someone's experience and still disagree with their conclusion. A difference of judgment need not become a measure of your worth."
+    },
+    {
+      "id": "KDL-CAREGIVING_WITHOUT_RECOGNITION-001",
+      "theme": "caregiving_without_recognition",
+      "text": "Care often happens in small, repetitive tasks that nobody applauds. The absence of an audience does not make the work less real."
+    },
+    {
+      "id": "KDL-CAREGIVING_WITHOUT_RECOGNITION-002",
+      "theme": "caregiving_without_recognition",
+      "text": "If you feel impatient while helping someone you love, notice what support you may be missing. Affection does not erase exhaustion."
+    },
+    {
+      "id": "KDL-CAREGIVING_WITHOUT_RECOGNITION-003",
+      "theme": "caregiving_without_recognition",
+      "text": "An hour arranged around another person's needs can leave little room for your own. Even a modest boundary may protect your ability to keep caring."
+    },
+    {
+      "id": "KDL-CAREGIVING_WITHOUT_RECOGNITION-004",
+      "theme": "caregiving_without_recognition",
+      "text": "You may grieve the freedom you had before becoming a caregiver and still cherish the person who needs you. Both feelings can belong."
+    },
+    {
+      "id": "KDL-CAREGIVING_WITHOUT_RECOGNITION-005",
+      "theme": "caregiving_without_recognition",
+      "text": "When someone offers help, consider giving them a specific task rather than saying everything is fine. Shared responsibility begins with something concrete."
+    },
+    {
+      "id": "KDL-RETURNING_TO_CREATIVITY-001",
+      "theme": "returning_to_creativity",
+      "text": "The first page after a long creative silence may feel unfamiliar. You are allowed to make something awkward before you make something you recognise."
+    },
+    {
+      "id": "KDL-RETURNING_TO_CREATIVITY-002",
+      "theme": "returning_to_creativity",
+      "text": "An unfinished project can hold evidence of an earlier version of you. You may return to it, change its direction, or let it rest."
+    },
+    {
+      "id": "KDL-RETURNING_TO_CREATIVITY-003",
+      "theme": "returning_to_creativity",
+      "text": "Creative energy is not a debt you owe to your past ambitions. A small experiment today can be enough to reopen the conversation."
+    },
+    {
+      "id": "KDL-RETURNING_TO_CREATIVITY-004",
+      "theme": "returning_to_creativity",
+      "text": "If comparing your work to others makes you hesitate, spend a little time with the materials themselves. Curiosity often needs less judgment around it."
+    },
+    {
+      "id": "KDL-RETURNING_TO_CREATIVITY-005",
+      "theme": "returning_to_creativity",
+      "text": "You do not have to turn every enjoyable skill into an achievement. Making something privately can be a complete experience."
+    },
+    {
+      "id": "KDL-NAVIGATING_CHANGED_FRIENDSHIPS-001",
+      "theme": "navigating_changed_friendships",
+      "text": "A friendship may become quieter without either person becoming unkind. You can miss its old rhythm while learning what is possible now."
+    },
+    {
+      "id": "KDL-NAVIGATING_CHANGED_FRIENDSHIPS-002",
+      "theme": "navigating_changed_friendships",
+      "text": "If you are always the one initiating contact, it is fair to notice the imbalance. A gentle conversation can reveal more than silent resentment."
+    },
+    {
+      "id": "KDL-NAVIGATING_CHANGED_FRIENDSHIPS-003",
+      "theme": "navigating_changed_friendships",
+      "text": "Shared history deserves respect, but it does not require you to ignore how a friendship feels in the present."
+    },
+    {
+      "id": "KDL-NAVIGATING_CHANGED_FRIENDSHIPS-004",
+      "theme": "navigating_changed_friendships",
+      "text": "When a friend enters a different season of life, connection may need a new shape. A shorter conversation can still carry genuine care."
+    },
+    {
+      "id": "KDL-NAVIGATING_CHANGED_FRIENDSHIPS-005",
+      "theme": "navigating_changed_friendships",
+      "text": "Some friendships end without a clear argument or final explanation. You can honour what was good without inventing a villain to make sense of the loss."
+    },
+    {
+      "id": "KDL-LIVING_WITH_UNCERTAINTY_AFTER_GOOD_NEWS-001",
+      "theme": "living_with_uncertainty_after_good_news",
+      "text": "Good news can arrive with unanswered questions attached. You are allowed to enjoy what has happened without pretending the rest is settled."
+    },
+    {
+      "id": "KDL-LIVING_WITH_UNCERTAINTY_AFTER_GOOD_NEWS-002",
+      "theme": "living_with_uncertainty_after_good_news",
+      "text": "When something promising begins, caution may sit beside excitement. Neither feeling cancels the other; both can have a place at the table."
+    },
+    {
+      "id": "KDL-LIVING_WITH_UNCERTAINTY_AFTER_GOOD_NEWS-003",
+      "theme": "living_with_uncertainty_after_good_news",
+      "text": "You do not have to announce a hopeful change before you have found words for it yourself. Some beginnings benefit from a little privacy."
+    },
+    {
+      "id": "KDL-LIVING_WITH_UNCERTAINTY_AFTER_GOOD_NEWS-004",
+      "theme": "living_with_uncertainty_after_good_news",
+      "text": "After a long stretch of setbacks, relief may feel unfamiliar. There is no correct speed at which you must learn to trust a better moment."
+    },
+    {
+      "id": "KDL-SHARING_SPACE_WITH_DIFFERENT_NEEDS-001",
+      "theme": "sharing_space_with_different_needs",
+      "text": "A shared home can hold different definitions of quiet, comfort and order. Naming the practical need is often kinder than arguing about who is reasonable."
+    },
+    {
+      "id": "KDL-SHARING_SPACE_WITH_DIFFERENT_NEEDS-002",
+      "theme": "sharing_space_with_different_needs",
+      "text": "When you need time alone, a simple explanation may prevent someone else from mistaking your silence for rejection."
+    },
+    {
+      "id": "KDL-SHARING_SPACE_WITH_DIFFERENT_NEEDS-003",
+      "theme": "sharing_space_with_different_needs",
+      "text": "Small household irritations can gather weight when nobody speaks about them. A specific request about tomorrow may help more than a catalogue of yesterday."
+    },
+    {
+      "id": "KDL-SHARING_SPACE_WITH_DIFFERENT_NEEDS-004",
+      "theme": "sharing_space_with_different_needs",
+      "text": "Compromise does not always mean splitting every difference in half. Sometimes it means finding an arrangement each person can genuinely live with."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FIRST_DAY_BACK-001",
+      "theme": "navigating_a_first_day_back",
+      "text": "Returning after an absence can make familiar doors feel unexpectedly difficult to open. You can begin with the next ordinary task rather than a perfect return."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FIRST_DAY_BACK-002",
+      "theme": "navigating_a_first_day_back",
+      "text": "People may ask where you have been before you are ready to explain. A brief answer is enough; your personal history is not the price of rejoining."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FIRST_DAY_BACK-003",
+      "theme": "navigating_a_first_day_back",
+      "text": "The first day back might be awkward even when everyone is welcoming. Awkwardness is an experience, not evidence that you do not belong."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FIRST_DAY_BACK-004",
+      "theme": "navigating_a_first_day_back",
+      "text": "Consider leaving a little room after your return for rest or reflection. Resuming a routine can take energy that others never see."
+    },
+    {
+      "id": "KDL-RECEIVING_HELP_WITHOUT_OWING_A_STORY-001",
+      "theme": "receiving_help_without_owing_a_story",
+      "text": "Someone can offer useful help without being entitled to every detail of why you need it. Gratitude and privacy can coexist."
+    },
+    {
+      "id": "KDL-RECEIVING_HELP_WITHOUT_OWING_A_STORY-002",
+      "theme": "receiving_help_without_owing_a_story",
+      "text": "If accepting support feels uncomfortable, you might begin by naming one concrete thing that would ease the day. You need not explain your whole life."
+    },
+    {
+      "id": "KDL-RECEIVING_HELP_WITHOUT_OWING_A_STORY-003",
+      "theme": "receiving_help_without_owing_a_story",
+      "text": "Not every offer will fit what you actually need. Declining one kind of help does not mean you have rejected the person who offered it."
+    },
+    {
+      "id": "KDL-RECEIVING_HELP_WITHOUT_OWING_A_STORY-004",
+      "theme": "receiving_help_without_owing_a_story",
+      "text": "When someone helps you through a difficult week, a sincere thank-you is meaningful. You do not have to turn care into a debt you can never repay."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_UNCELEBRATED_PROGRESS-001",
+      "theme": "making_room_for_uncelebrated_progress",
+      "text": "Some progress looks like answering a message you have been avoiding. It may be invisible to everyone else and still matter to your day."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_UNCELEBRATED_PROGRESS-002",
+      "theme": "making_room_for_uncelebrated_progress",
+      "text": "A quieter response in a familiar argument can be a meaningful change, even if nobody notices the effort it required."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_UNCELEBRATED_PROGRESS-003",
+      "theme": "making_room_for_uncelebrated_progress",
+      "text": "Keeping a small promise to yourself is not a lesser achievement because it would look ordinary on someone else's calendar."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_UNCELEBRATED_PROGRESS-004",
+      "theme": "making_room_for_uncelebrated_progress",
+      "text": "You may have moved forward without feeling transformed. Growth sometimes appears first in what you choose not to repeat."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_CHANGES_AT_THE_LAST_MINUTE-001",
+      "theme": "when_a_plan_changes_at_the_last_minute",
+      "text": "A cancelled plan can be disappointing even when the reason is understandable. You do not need to choose between compassion and honesty about the inconvenience."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_CHANGES_AT_THE_LAST_MINUTE-002",
+      "theme": "when_a_plan_changes_at_the_last_minute",
+      "text": "When an arrangement changes suddenly, ask what is still possible before deciding that the whole day is lost. The replacement need not resemble the original."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_CHANGES_AT_THE_LAST_MINUTE-003",
+      "theme": "when_a_plan_changes_at_the_last_minute",
+      "text": "If someone else is upset by a change you made, listening to its impact does not require you to pretend you had another option."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_CHANGES_AT_THE_LAST_MINUTE-004",
+      "theme": "when_a_plan_changes_at_the_last_minute",
+      "text": "An unexpected free hour can feel empty rather than liberating. You are allowed to spend it simply, without turning disruption into a productivity challenge."
+    },
+    {
+      "id": "KDL-LIVING_WITH_UNCERTAINTY_AFTER_GOOD_NEWS-005",
+      "theme": "living_with_uncertainty_after_good_news",
+      "text": "You can share a small celebration with someone you trust without making a prediction about what comes next. Today has its own meaning."
+    },
+    {
+      "id": "KDL-SHARING_SPACE_WITH_DIFFERENT_NEEDS-005",
+      "theme": "sharing_space_with_different_needs",
+      "text": "A practical agreement about lights, noise or shared chores may feel unromantic, but ordinary clarity can protect the warmth between people."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FIRST_DAY_BACK-005",
+      "theme": "navigating_a_first_day_back",
+      "text": "If your pace is slower than before, it may help to tell the right person what is realistic this week. Returning does not require concealing your limits."
+    },
+    {
+      "id": "KDL-RECEIVING_HELP_WITHOUT_OWING_A_STORY-005",
+      "theme": "receiving_help_without_owing_a_story",
+      "text": "Help that comes with pressure or conditions may not feel safe to accept. You are allowed to consider the terms before saying yes."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_UNCELEBRATED_PROGRESS-005",
+      "theme": "making_room_for_uncelebrated_progress",
+      "text": "A week without a dramatic breakthrough can still contain better questions, steadier boundaries and one conversation handled with care."
+    },
+    {
+      "id": "KDL-WHEN_A_PLAN_CHANGES_AT_THE_LAST_MINUTE-005",
+      "theme": "when_a_plan_changes_at_the_last_minute",
+      "text": "When the change affects other people, a prompt update and a clear next step can show respect even when the news itself is unwelcome."
+    },
+    {
+      "id": "KDL-BEING_MISREAD_IN_A_SHORT_MESSAGE-001",
+      "theme": "being_misread_in_a_short_message",
+      "text": "A brief reply can carry more meanings than its sender intended. Before building a story around a few words, there may be room to ask what they meant."
+    },
+    {
+      "id": "KDL-BEING_MISREAD_IN_A_SHORT_MESSAGE-002",
+      "theme": "being_misread_in_a_short_message",
+      "text": "Some conversations deserve more than a hurried screen can hold. Choosing a calmer moment to talk is not the same as avoiding what matters."
+    },
+    {
+      "id": "KDL-BEING_MISREAD_IN_A_SHORT_MESSAGE-003",
+      "theme": "being_misread_in_a_short_message",
+      "text": "When your words land differently from how you meant them, an explanation can help without becoming a defence of every detail."
+    },
+    {
+      "id": "KDL-BEING_MISREAD_IN_A_SHORT_MESSAGE-004",
+      "theme": "being_misread_in_a_short_message",
+      "text": "Waiting for a reply can make an ordinary silence feel personal. The gap tells you that you are waiting; it does not tell you why."
+    },
+    {
+      "id": "KDL-BEING_MISREAD_IN_A_SHORT_MESSAGE-005",
+      "theme": "being_misread_in_a_short_message",
+      "text": "It is possible to care about someone and still need to put the phone down. Availability is not the only measure of affection."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_A_CHANGED_TRADITION-001",
+      "theme": "making_room_for_a_changed_tradition",
+      "text": "A familiar celebration may look different this year. You can miss its old shape while helping the new version become its own memory."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_A_CHANGED_TRADITION-002",
+      "theme": "making_room_for_a_changed_tradition",
+      "text": "When a tradition changes because someone is absent, even small details can feel louder. There is no obligation to make the day cheerful for everyone else."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_A_CHANGED_TRADITION-003",
+      "theme": "making_room_for_a_changed_tradition",
+      "text": "Keeping one part of an old ritual and changing another can be a thoughtful way forward. Continuity does not require everything to stay fixed."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_A_CHANGED_TRADITION-004",
+      "theme": "making_room_for_a_changed_tradition",
+      "text": "Not everyone in a family remembers the same occasion in the same way. Making space for those differences may matter more than getting the details perfect."
+    },
+    {
+      "id": "KDL-MAKING_ROOM_FOR_A_CHANGED_TRADITION-005",
+      "theme": "making_room_for_a_changed_tradition",
+      "text": "A quieter gathering is not necessarily a lesser one. Sometimes the most meaningful part is simply that people found a way to be together."
+    },
+    {
+      "id": "KDL-LEARNING_A_TASK_IN_PUBLIC-001",
+      "theme": "learning_a_task_in_public",
+      "text": "Learning while others watch can make small mistakes feel enormous. A question asked at the right moment may save more trouble than silent guessing."
+    },
+    {
+      "id": "KDL-LEARNING_A_TASK_IN_PUBLIC-002",
+      "theme": "learning_a_task_in_public",
+      "text": "The person who looks confident beside you may have practised this many times. Your first attempt deserves a different measure than their hundredth."
+    },
+    {
+      "id": "KDL-LEARNING_A_TASK_IN_PUBLIC-003",
+      "theme": "learning_a_task_in_public",
+      "text": "Feedback delivered in front of others can sting even when it contains something useful. You can take the useful part and still wish it had been said privately."
+    },
+    {
+      "id": "KDL-LEARNING_A_TASK_IN_PUBLIC-004",
+      "theme": "learning_a_task_in_public",
+      "text": "If you lose your place while explaining something new, you can begin again at the point you remember. A pause does not erase your preparation."
+    },
+    {
+      "id": "KDL-LEARNING_A_TASK_IN_PUBLIC-005",
+      "theme": "learning_a_task_in_public",
+      "text": "Progress in a visible role often includes awkward first tries. You are allowed to learn the work without turning every mistake into a verdict on yourself."
+    },
+    {
+      "id": "KDL-LIVING_WITH_AN_UNFINISHED_HOME_PROJECT-001",
+      "theme": "living_with_an_unfinished_home_project",
+      "text": "An unfinished corner of the house can keep asking for attention long after the workday ends. Choosing one manageable next step may be enough for now."
+    },
+    {
+      "id": "KDL-LIVING_WITH_AN_UNFINISHED_HOME_PROJECT-002",
+      "theme": "living_with_an_unfinished_home_project",
+      "text": "When repairs take longer than promised, frustration can come from the disruption as much as the delay. That inconvenience is real even if the project is small."
+    },
+    {
+      "id": "KDL-LIVING_WITH_AN_UNFINISHED_HOME_PROJECT-003",
+      "theme": "living_with_an_unfinished_home_project",
+      "text": "A home does not have to be fully sorted before you can rest in it. The boxes can wait while you make a little space for tonight."
+    },
+    {
+      "id": "KDL-LIVING_WITH_AN_UNFINISHED_HOME_PROJECT-004",
+      "theme": "living_with_an_unfinished_home_project",
+      "text": "Shared projects often reveal different ideas of what matters first. A practical conversation about time and money can be kinder than keeping score."
+    },
+    {
+      "id": "KDL-LIVING_WITH_AN_UNFINISHED_HOME_PROJECT-005",
+      "theme": "living_with_an_unfinished_home_project",
+      "text": "Sometimes the useful achievement is noticing what still works amid the mess. It does not finish the project, but it may make the waiting easier."
+    },
+    {
+      "id": "KDL-FINDING_A_PLACE_IN_A_NEW_TEAM-001",
+      "theme": "finding_a_place_in_a_new_team",
+      "text": "The first weeks in a new team can be full of unfamiliar shorthand. Asking what a phrase means is a practical way to find your footing."
+    },
+    {
+      "id": "KDL-FINDING_A_PLACE_IN_A_NEW_TEAM-002",
+      "theme": "finding_a_place_in_a_new_team",
+      "text": "Not knowing the history behind a decision does not mean you are behind. Context often arrives one conversation at a time."
+    },
+    {
+      "id": "KDL-FINDING_A_PLACE_IN_A_NEW_TEAM-003",
+      "theme": "finding_a_place_in_a_new_team",
+      "text": "You may notice a different rhythm in this group. Observe what helps people work together before deciding how much of yourself to adjust."
+    },
+    {
+      "id": "KDL-FINDING_A_PLACE_IN_A_NEW_TEAM-004",
+      "theme": "finding_a_place_in_a_new_team",
+      "text": "A quiet contribution can still be useful. You do not have to compete with the loudest voice to offer a thoughtful question."
+    },
+    {
+      "id": "KDL-FINDING_A_PLACE_IN_A_NEW_TEAM-005",
+      "theme": "finding_a_place_in_a_new_team",
+      "text": "Belonging at work can grow through ordinary exchanges, not just impressive first impressions. Give the small moments some room."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_DELAYED_REPLY-001",
+      "theme": "navigating_a_delayed_reply",
+      "text": "An unanswered message can leave several possibilities open. The silence itself is not evidence that you have done something wrong."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_DELAYED_REPLY-002",
+      "theme": "navigating_a_delayed_reply",
+      "text": "If a reply matters for a decision, a clear follow-up can be kinder to both people than hours of guessing."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_DELAYED_REPLY-003",
+      "theme": "navigating_a_delayed_reply",
+      "text": "Someone may need time to answer carefully. You can respect that space and still name when you need an update."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_DELAYED_REPLY-004",
+      "theme": "navigating_a_delayed_reply",
+      "text": "When you are waiting on news, it may help to choose one useful task that does not depend on the answer."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_DELAYED_REPLY-005",
+      "theme": "navigating_a_delayed_reply",
+      "text": "Checking the screen again will not make another person ready sooner. Your attention deserves somewhere else to rest for a while."
+    },
+    {
+      "id": "KDL-SHARING_A_HOME_WITH_DIFFERENT_ROUTINES-001",
+      "theme": "sharing_a_home_with_different_routines",
+      "text": "Two people can care for the same home and disagree about what needs doing first. A specific conversation often helps more than a general complaint."
+    },
+    {
+      "id": "KDL-SHARING_A_HOME_WITH_DIFFERENT_ROUTINES-002",
+      "theme": "sharing_a_home_with_different_routines",
+      "text": "A shared room can hold different needs for quiet, light and company. Naming those needs early can prevent small frustrations from hardening."
+    },
+    {
+      "id": "KDL-SHARING_A_HOME_WITH_DIFFERENT_ROUTINES-003",
+      "theme": "sharing_a_home_with_different_routines",
+      "text": "If household work feels invisible, describe the work itself rather than waiting for someone to notice every part of it."
+    },
+    {
+      "id": "KDL-SHARING_A_HOME_WITH_DIFFERENT_ROUTINES-004",
+      "theme": "sharing_a_home_with_different_routines",
+      "text": "An agreement that worked last season may need revisiting now. Changing routines is sometimes how people keep living well together."
+    },
+    {
+      "id": "KDL-SHARING_A_HOME_WITH_DIFFERENT_ROUTINES-005",
+      "theme": "sharing_a_home_with_different_routines",
+      "text": "Not every preference has to become a rule. Leave room for a few differences that do not harm anyone."
+    },
+    {
+      "id": "KDL-RECOVERING_FROM_A_SMALL_PUBLIC_MISTAKE-001",
+      "theme": "recovering_from_a_small_public_mistake",
+      "text": "A wrong word in a meeting can feel enormous afterward. Most people are also busy thinking about what they need to say next."
+    },
+    {
+      "id": "KDL-RECOVERING_FROM_A_SMALL_PUBLIC_MISTAKE-002",
+      "theme": "recovering_from_a_small_public_mistake",
+      "text": "Correcting a small error plainly may be enough. A long apology can sometimes make the moment harder to leave behind."
+    },
+    {
+      "id": "KDL-RECOVERING_FROM_A_SMALL_PUBLIC_MISTAKE-003",
+      "theme": "recovering_from_a_small_public_mistake",
+      "text": "If you replay an awkward moment, try to notice what actually happened rather than adding an imagined audience to it."
+    },
+    {
+      "id": "KDL-RECOVERING_FROM_A_SMALL_PUBLIC_MISTAKE-004",
+      "theme": "recovering_from_a_small_public_mistake",
+      "text": "A mistake in front of others can teach you something without becoming the headline of your whole day."
+    },
+    {
+      "id": "KDL-RECOVERING_FROM_A_SMALL_PUBLIC_MISTAKE-005",
+      "theme": "recovering_from_a_small_public_mistake",
+      "text": "Someone else may remember your willingness to correct yourself more clearly than the original slip."
+    },
+    {
+      "id": "KDL-WAITING_FOR_A_MEDICAL_RESULT-001",
+      "theme": "waiting_for_a_medical_result",
+      "text": "The hours before a result arrives can feel unusually long. You may choose what information to seek now and what can wait until you have someone beside you."
+    },
+    {
+      "id": "KDL-WAITING_FOR_A_MEDICAL_RESULT-002",
+      "theme": "waiting_for_a_medical_result",
+      "text": "An uncertain result is not a verdict on how well you have cared for yourself. Questions and next steps belong in a conversation with your clinician."
+    },
+    {
+      "id": "KDL-WAITING_FOR_A_MEDICAL_RESULT-003",
+      "theme": "waiting_for_a_medical_result",
+      "text": "If your mind keeps rehearsing different outcomes, try writing down the questions you want answered. You need not solve them before the appointment."
+    },
+    {
+      "id": "KDL-WAITING_FOR_A_MEDICAL_RESULT-004",
+      "theme": "waiting_for_a_medical_result",
+      "text": "Some people want company in a waiting room; others want privacy. You are allowed to say which would help without explaining every detail."
+    },
+    {
+      "id": "KDL-WAITING_FOR_A_MEDICAL_RESULT-005",
+      "theme": "waiting_for_a_medical_result",
+      "text": "You can make a modest plan for the afternoon without pretending the uncertainty has disappeared. A meal, a ride home, or a quiet place can matter."
+    },
+    {
+      "id": "KDL-SUPPORTING_SOMEONE_AFTER_JOB_LOSS-001",
+      "theme": "supporting_someone_after_job_loss",
+      "text": "When someone loses work, advice may arrive before they have had space to describe what happened. Listening first can make the conversation less lonely."
+    },
+    {
+      "id": "KDL-SUPPORTING_SOMEONE_AFTER_JOB_LOSS-002",
+      "theme": "supporting_someone_after_job_loss",
+      "text": "A job ending can disrupt routines, confidence, and practical plans at once. Asking which part feels most urgent respects the person's own priorities."
+    },
+    {
+      "id": "KDL-SUPPORTING_SOMEONE_AFTER_JOB_LOSS-003",
+      "theme": "supporting_someone_after_job_loss",
+      "text": "Offering to review a résumé is different from insisting someone start applying immediately. Help works better when it can be accepted or declined."
+    },
+    {
+      "id": "KDL-SUPPORTING_SOMEONE_AFTER_JOB_LOSS-004",
+      "theme": "supporting_someone_after_job_loss",
+      "text": "If you are supporting a friend financially, be clear about what you can give without resentment. Kindness can include an honest boundary."
+    },
+    {
+      "id": "KDL-SUPPORTING_SOMEONE_AFTER_JOB_LOSS-005",
+      "theme": "supporting_someone_after_job_loss",
+      "text": "A person's employment status tells you little about the effort they have already made. Treat their account of the experience with care."
+    },
+    {
+      "id": "KDL-BEING_THE_NEW_PERSON_IN_A_NEIGHBORHOOD-001",
+      "theme": "being_the_new_person_in_a_neighborhood",
+      "text": "New streets can feel familiar on a map and unfamiliar under your feet. Finding one useful local place is a reasonable beginning."
+    },
+    {
+      "id": "KDL-BEING_THE_NEW_PERSON_IN_A_NEIGHBORHOOD-002",
+      "theme": "being_the_new_person_in_a_neighborhood",
+      "text": "Not every introduction turns into friendship. A brief, friendly exchange with a neighbour can still make the next encounter easier."
+    },
+    {
+      "id": "KDL-BEING_THE_NEW_PERSON_IN_A_NEIGHBORHOOD-003",
+      "theme": "being_the_new_person_in_a_neighborhood",
+      "text": "Learning how a neighbourhood works takes time, from rubbish collection to the quietest walking route. Asking ordinary questions is enough."
+    },
+    {
+      "id": "KDL-BEING_THE_NEW_PERSON_IN_A_NEIGHBORHOOD-004",
+      "theme": "being_the_new_person_in_a_neighborhood",
+      "text": "If your previous home still feels like home, you do not need to rush that feeling away to appreciate where you live now."
+    },
+    {
+      "id": "KDL-BEING_THE_NEW_PERSON_IN_A_NEIGHBORHOOD-005",
+      "theme": "being_the_new_person_in_a_neighborhood",
+      "text": "Some days settling in means unpacking a box; other days it means noticing the light through a different window. Both are part of arriving."
+    },
+    {
+      "id": "KDL-RECEIVING_CRITICISM_ABOUT_CREATIVE_WORK-001",
+      "theme": "receiving_criticism_about_creative_work",
+      "text": "A comment about something you made can land close to the heart. You can wait until the first sting passes before deciding what is useful."
+    },
+    {
+      "id": "KDL-RECEIVING_CRITICISM_ABOUT_CREATIVE_WORK-002",
+      "theme": "receiving_criticism_about_creative_work",
+      "text": "Not all feedback is equally informed. Consider whether the person understands what you were trying to create before changing your direction."
+    },
+    {
+      "id": "KDL-RECEIVING_CRITICISM_ABOUT_CREATIVE_WORK-003",
+      "theme": "receiving_criticism_about_creative_work",
+      "text": "You can thank someone for taking time to respond without agreeing with every suggestion. Appreciation and discernment can coexist."
+    },
+    {
+      "id": "KDL-RECEIVING_CRITICISM_ABOUT_CREATIVE_WORK-004",
+      "theme": "receiving_criticism_about_creative_work",
+      "text": "A revision may improve the work, but it need not erase the part that sounds like you. Keep track of what you wanted the piece to say."
+    },
+    {
+      "id": "KDL-RECEIVING_CRITICISM_ABOUT_CREATIVE_WORK-005",
+      "theme": "receiving_criticism_about_creative_work",
+      "text": "If a critique is vague, asking for one concrete example may be more helpful than guessing at what went wrong."
+    },
+    {
+      "id": "KDL-MANAGING_AN_UNEXPECTED_EXPENSE-001",
+      "theme": "managing_an_unexpected_expense",
+      "text": "An unexpected bill can interrupt plans you were looking forward to. Disappointment is understandable even while you work through the numbers."
+    },
+    {
+      "id": "KDL-MANAGING_AN_UNEXPECTED_EXPENSE-002",
+      "theme": "managing_an_unexpected_expense",
+      "text": "Before agreeing to a payment arrangement, it may help to ask for the total cost and the dates in writing. Clarity can ease a difficult decision."
+    },
+    {
+      "id": "KDL-MANAGING_AN_UNEXPECTED_EXPENSE-003",
+      "theme": "managing_an_unexpected_expense",
+      "text": "Having to change a budget does not mean you were careless. Some costs arrive without asking whether the timing is convenient."
+    },
+    {
+      "id": "KDL-MANAGING_AN_UNEXPECTED_EXPENSE-004",
+      "theme": "managing_an_unexpected_expense",
+      "text": "If you need to decline an outing because money is tight, a simple explanation is enough. Your financial details remain yours."
+    },
+    {
+      "id": "KDL-MANAGING_AN_UNEXPECTED_EXPENSE-005",
+      "theme": "managing_an_unexpected_expense",
+      "text": "One practical phone call may be all you can manage today. Sorting an expense often happens through several small decisions."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FRIENDSHIP_WITH_DIFFERENT_ENERGY_LEVELS-001",
+      "theme": "navigating_a_friendship_with_different_energy_levels",
+      "text": "One friend may enjoy long gatherings while another needs an early exit. Naming that difference can protect the time you do share."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FRIENDSHIP_WITH_DIFFERENT_ENERGY_LEVELS-002",
+      "theme": "navigating_a_friendship_with_different_energy_levels",
+      "text": "A shorter visit is not necessarily a lesser one. Sometimes an hour of genuine attention is better than an evening spent depleted."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FRIENDSHIP_WITH_DIFFERENT_ENERGY_LEVELS-003",
+      "theme": "navigating_a_friendship_with_different_energy_levels",
+      "text": "If you have cancelled plans often, acknowledging the inconvenience can matter alongside explaining your limits. Both experiences deserve room."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FRIENDSHIP_WITH_DIFFERENT_ENERGY_LEVELS-004",
+      "theme": "navigating_a_friendship_with_different_energy_levels",
+      "text": "You can invite someone without making attendance a test of affection. An open invitation leaves space for their circumstances."
+    },
+    {
+      "id": "KDL-NAVIGATING_A_FRIENDSHIP_WITH_DIFFERENT_ENERGY_LEVELS-005",
+      "theme": "navigating_a_friendship_with_different_energy_levels",
+      "text": "Friendship can adapt through walks, voice notes, shared errands, or silence together. The shape of connection may change without losing its meaning."
+    },
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-WITH-SOMEONE-STRUGGLING-001",
+      "theme": "sharing_good_news_with_someone_struggling",
+      "text": "Before sharing your good news with someone having a difficult season, consider asking whether they have room to hear it today. Their answer need not diminish your joy."
+    },
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-WITH-SOMEONE-STRUGGLING-002",
+      "theme": "sharing_good_news_with_someone_struggling",
+      "text": "You can be proud of what happened and thoughtful about when you tell someone. Celebration and consideration are not competing loyalties."
+    },
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-WITH-SOMEONE-STRUGGLING-003",
+      "theme": "sharing_good_news_with_someone_struggling",
+      "text": "A friend may care deeply about you and still need a little distance from a milestone that touches their own disappointment. Both feelings can exist."
+    },
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-WITH-SOMEONE-STRUGGLING-004",
+      "theme": "sharing_good_news_with_someone_struggling",
+      "text": "If someone responds quietly to your exciting news, it may reflect what they are carrying rather than what your achievement deserves."
+    },
+    {
+      "id": "KDL-SHARING-GOOD-NEWS-WITH-SOMEONE-STRUGGLING-005",
+      "theme": "sharing_good_news_with_someone_struggling",
+      "text": "You do not have to apologise for a happy turn in your life. A gentle invitation to celebrate, without demanding enthusiasm, leaves space for both of you."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-WITH-MEMORIES-001",
+      "theme": "returning_to_a_place_with_memories",
+      "text": "The first visit back to a familiar place can feel different from the journey you imagined. Notice what is here now without requiring it to match what was."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-WITH-MEMORIES-002",
+      "theme": "returning_to_a_place_with_memories",
+      "text": "A street can hold a thousand ordinary memories that no one else walking it can see. You are allowed to take your time there."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-WITH-MEMORIES-003",
+      "theme": "returning_to_a_place_with_memories",
+      "text": "If returning brings relief instead of sadness, you need not defend that feeling. Places can mean different things at different stages of life."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-WITH-MEMORIES-004",
+      "theme": "returning_to_a_place_with_memories",
+      "text": "You might find that the café has changed while the feeling of waiting outside it remains vivid. Memory rarely follows a tidy map."
+    },
+    {
+      "id": "KDL-RETURNING-TO-A-PLACE-WITH-MEMORIES-005",
+      "theme": "returning_to_a_place_with_memories",
+      "text": "Sometimes the kindest plan for a return visit is a short one. You can leave before you feel overwhelmed and come back another day."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-IN-A-GROUP-001",
+      "theme": "being_the_new_person_in_a_group",
+      "text": "When everyone else knows the shorthand, it is easy to feel a step behind. Asking what an unfamiliar phrase means is a reasonable way to join in."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-IN-A-GROUP-002",
+      "theme": "being_the_new_person_in_a_group",
+      "text": "Being new can make even simple introductions tiring. You do not have to become memorable to everyone in your first hour."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-IN-A-GROUP-003",
+      "theme": "being_the_new_person_in_a_group",
+      "text": "If a conversation moves past you, one thoughtful question can be enough to find your way back into it."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-IN-A-GROUP-004",
+      "theme": "being_the_new_person_in_a_group",
+      "text": "You may discover who feels welcoming through small things: a chair moved closer, a name repeated, a pause that makes room for your answer."
+    },
+    {
+      "id": "KDL-BEING-THE-NEW-PERSON-IN-A-GROUP-005",
+      "theme": "being_the_new_person_in_a_group",
+      "text": "It takes time to learn the rhythms of a group. A quiet first meeting says little about the place you might eventually have in it."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOUR-BECOMES-AN-EXPECTATION-001",
+      "theme": "when_a_favour_becomes_an_expectation",
+      "text": "A favour can slowly become part of someone's routine without either person noticing. You are allowed to revisit what you can realistically offer."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOUR-BECOMES-AN-EXPECTATION-002",
+      "theme": "when_a_favour_becomes_an_expectation",
+      "text": "If saying yes once has turned into an assumption, a clear conversation may be kinder than growing resentment in silence."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOUR-BECOMES-AN-EXPECTATION-003",
+      "theme": "when_a_favour_becomes_an_expectation",
+      "text": "You can appreciate someone's trust in you and still explain that the arrangement no longer works."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOUR-BECOMES-AN-EXPECTATION-004",
+      "theme": "when_a_favour_becomes_an_expectation",
+      "text": "Changing an informal agreement does not erase the generosity that began it. Circumstances and capacity can change."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOUR-BECOMES-AN-EXPECTATION-005",
+      "theme": "when_a_favour_becomes_an_expectation",
+      "text": "A boundary may disappoint someone who benefited from your flexibility. Their disappointment does not by itself tell you whether your decision was unfair."
     }
   ]
 }
