@@ -7,7 +7,7 @@ if(start<0||end<0)throw Error('Affirmation catalogue missing');
 const data=source.slice(start,end);
 // Match a value using its own quote delimiter; apostrophes inside double-quoted
 // affirmation text must not terminate the value.
-const get=key=>[...data.matchAll(new RegExp('\\\\b'+key+':\\\\s*([\\\\x22\\\\x27])([\\\\s\\\\S]*?)\\\\1','g'))].map(x=>x[2]);
+const get=key=>[...data.matchAll(new RegExp('\\b'+key+':\\s*(["\x27])([\\s\\S]*?)\\1','g'))].map(x=>x[2]);
 const ids=get('id'),texts=get('text'),images=get('image'),titles=get('title');
 const repeated=ids.filter((id,i)=>ids.indexOf(id)!==i);
 const errors=[];
