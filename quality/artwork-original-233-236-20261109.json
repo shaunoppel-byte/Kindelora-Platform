@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-09",
+  "branch": "artwork/original-233-236-20261109",
+  "ids": [
+    233,
+    234,
+    235,
+    236
+  ],
+  "source": "Original vector artwork authored for KINDELORA; no external images, third-party assets or paid credits.",
+  "license": "Original repository-owned artwork; intended for KINDELORA commercial use.",
+  "dimensions": "800x1100 SVG portrait",
+  "themes": [
+    "curiosity as an exploratory path",
+    "curiosity as an open window",
+    "showing up through a welcoming doorway",
+    "presence and belonging in a warm gathering"
+  ],
+  "sourceChecks": {
+    "uniquePaths": 4,
+    "originalTextUnchanged": true,
+    "svgHasViewBox": true,
+    "svgHasAccessibleLabel": true,
+    "externalImageDependencies": 0
+  },
+  "outstanding": [
+    "Independent visual acceptance",
+    "Real mobile crop and text-overlay contrast",
+    "GitHub Actions CI",
+    "Cloudflare live deployment"
+  ],
+  "rollback": "Revert PR merge commit; original bulk image assets remain available."
+}
