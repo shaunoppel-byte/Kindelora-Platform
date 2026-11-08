@@ -1,0 +1,13 @@
+/* The approved poster includes the brand lettering, film title and gold play artwork. Avoid duplicating those baked-in design elements. */
+#brand-film .film-frame{aspect-ratio:989/719;max-width:1000px;margin-inline:auto;border:2px solid #f9d49c;border-radius:clamp(20px,3.5vw,36px);box-shadow:0 0 0 5px #f6bf7440,0 0 34px #efb55c88,0 24px 65px #100719a8}
+#brand-film .film-poster{object-fit:cover;object-position:center;filter:none}
+#brand-film .film-frame:after{display:none}
+#brand-film .film-brand,#brand-film .film-frame-bottom{display:none}
+#brand-film .film-frame-content{display:flex;align-items:center;justify-content:center;padding:0}
+#brand-film .film-play{position:absolute;top:53%;left:50%;transform:translate(-50%,-50%);width:clamp(64px,10vw,132px);height:clamp(64px,10vw,132px);background:transparent;border:0;box-shadow:none;color:transparent;opacity:.01;cursor:pointer;z-index:3}
+#brand-film .film-play span{color:transparent}
+#brand-film .film-play:hover,#brand-film .film-play:focus-visible{opacity:1;background:#2b153f99;border:2px solid #fbd18e;box-shadow:0 0 24px #ffd38b;color:#ffe4a6}
+#brand-film .film-play:hover span,#brand-film .film-play:focus-visible span{color:#ffe4a6}
+#brand-film .film-play:focus-visible{outline:3px solid #fff;outline-offset:5px}
+@media(max-width:650px){#brand-film .film-frame{aspect-ratio:989/719}#brand-film .film-play{width:24%;height:34%;top:52%}#brand-film .film-frame-content{padding:0}}
+@media(prefers-reduced-motion:reduce){#brand-film .film-play{transition:none}}
