@@ -1,0 +1,45 @@
+/* Editorial mobile polish: reduce repetition while keeping form and content legible. */
+#daily,#reflection,#gentle-followup,#affirmations,#trust{position:relative}
+#daily{background:radial-gradient(ellipse at 90% 0,#f1d6cc88,transparent 45%),#fff9f5}
+#daily .daily-panel,#reflection .reflection-panel,#gentle-followup .daily-panel,#affirmations .daily-panel{border:1px solid #d7bcae9c;border-radius:clamp(20px,4vw,30px);box-shadow:0 18px 46px #361d3214;background:linear-gradient(150deg,#fff,#fffbf8)}
+#reflection{background:linear-gradient(150deg,#fbece8,#fff7f1)}
+#gentle-followup{background:linear-gradient(145deg,#f5e5e8,#fff7f1)}
+#affirmations{background:radial-gradient(ellipse at 100% 0,#d7b4bd66,transparent 45%),#fff9f5}
+#trust{background:linear-gradient(140deg,#28122f,#4b294b);color:#fff7ef}
+#trust h2{color:#fff7ef}
+#trust .eyebrow{color:#f0ce93!important}
+#trust .card{border:1px solid #e4c49d66;background:#ffffff12;color:#fff8f2;box-shadow:0 12px 38px #0e071c30;backdrop-filter:blur(6px)}
+#trust .card h3{color:#f0ce93}
+#trust .card p{color:#fff4ef}
+#reflection textarea,#gentle-followup select,#affirmations select{max-width:100%;font:inherit}
+#daily .choice,#reflection .choice,#gentle-followup .choice,#affirmations .choice{min-height:46px}
+#daily .btn,#reflection .btn,#gentle-followup .btn,#affirmations .btn{background:linear-gradient(115deg,#f6d8a7,#eeaf83);color:#351e35;box-shadow:0 7px 20px #5c2c3d18}
+#daily .btn:hover,#reflection .btn:hover,#gentle-followup .btn:hover,#affirmations .btn:hover{filter:brightness(1.035)}
+@media(max-width:650px){
+ #daily,#reflection,#gentle-followup,#affirmations,#trust{padding-block:clamp(48px,10vw,68px)}
+ #daily h2,#reflection h2,#gentle-followup h2,#affirmations h2,#trust h2{font-size:clamp(2rem,8vw,2.8rem);line-height:1.14}
+ #daily .daily-panel,#reflection .reflection-panel,#gentle-followup .daily-panel,#affirmations .daily-panel{padding:clamp(20px,5vw,28px)}
+ #daily .controls,#reflection .controls,#affirmations .controls{gap:10px}
+ #daily .actions,#reflection .actions,#gentle-followup .actions,#affirmations .actions{gap:12px}
+ #daily .actions>*,#reflection .actions>*,#gentle-followup .actions>*,#affirmations .actions>*{max-width:100%;white-space:normal;text-align:center}
+ #trust .cards{gap:14px}
+ #trust .card{padding:24px}
+}
+@media(prefers-reduced-motion:reduce){#daily .btn,#reflection .btn,#gentle-followup .btn,#affirmations .btn{transition:none}}
+
+/* Mobile editorial rhythm: purposeful density without sacrificing tap targets. */
+@media(max-width:650px){
+  #daily .daily-panel,#reflection .reflection-panel,#gentle-followup .daily-panel,#affirmations .daily-panel{padding:22px 20px}
+  #daily .daily-panel>*,#reflection .reflection-panel>*,#gentle-followup .daily-panel>*,#affirmations .daily-panel>*{min-width:0}
+  #daily .actions,#reflection .actions,#gentle-followup .actions,#affirmations .actions{margin-block:18px}
+  #daily .actions .btn,#reflection .actions .btn,#gentle-followup .actions .btn,#affirmations .actions .btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;line-height:1.35}
+  #daily .controls .choice,#reflection .controls .choice,#gentle-followup .controls .choice,#affirmations .controls .choice{min-height:48px}
+  #reflection textarea{width:100%;min-height:140px}
+  #reflection select,#gentle-followup select,#affirmations select{width:100%;min-height:48px}
+  #trust .cards{gap:14px}
+  #trust .card{padding:22px 20px}
+}
+@media(max-width:390px){
+  #daily .actions .btn,#reflection .actions .btn,#gentle-followup .actions .btn,#affirmations .actions .btn{width:100%}
+  #daily .controls .choice{flex:1 1 auto}
+}

@@ -1,0 +1,31 @@
+/* KINDELORA brand film theatre — cinematic, accessible, zero third-party dependencies. */
+#brand-film{position:relative;isolation:isolate;overflow:hidden;padding:clamp(66px,9vw,112px) 22px;background:radial-gradient(ellipse at 85% 0%,#76415b 0%,transparent 45%),radial-gradient(ellipse at 8% 90%,#6b3c53 0%,transparent 46%),#241328;color:#fff7ef}
+#brand-film:before{content:"";position:absolute;inset:0;pointer-events:none;opacity:.18;background-image:radial-gradient(#f9d9ad 0.65px,transparent .65px);background-size:8px 8px}
+#brand-film .film-wrap{max-width:1080px;margin:auto;position:relative}
+#brand-film .film-intro{text-align:center;max-width:800px;margin:0 auto 30px}
+#brand-film .film-eyebrow{color:#f5d09c;letter-spacing:.23em;text-transform:uppercase;font-size:.77rem;font-weight:800}
+#brand-film h2{color:#fff7ef;font:normal clamp(2.3rem,5.4vw,4.7rem)/1.12 Georgia,serif;letter-spacing:-.035em;margin:14px auto 17px;max-width:17ch}
+#brand-film h2 em{color:#f3cba0;font-weight:400}
+#brand-film .film-lead{color:#f2e2dc;font-size:clamp(1rem,1.8vw,1.2rem);max-width:58ch;margin:0 auto;line-height:1.7}
+#brand-film .film-frame{position:relative;aspect-ratio:16/9;border:1px solid #f1cda77d;border-radius:clamp(18px,3vw,30px);overflow:hidden;background:#351e36;box-shadow:0 35px 90px #09020c99,0 0 0 7px #f1cda710}
+#brand-film .film-poster{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center;filter:saturate(.85) contrast(1.06)}
+#brand-film .film-frame:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,#160b1cb8,transparent 80%),linear-gradient(0deg,#160b1cd9,transparent 58%);pointer-events:none}
+#brand-film .film-frame-content{position:absolute;z-index:1;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:22px}
+#brand-film .film-play{width:clamp(74px,10vw,110px);height:clamp(74px,10vw,110px);display:grid;place-items:center;border-radius:50%;border:2px solid #f8d7b3;background:#f4c895;color:#341d37;box-shadow:0 0 0 11px #f8d7b329,0 16px 40px #15081680;font-size:2.2rem;transition:transform .25s,box-shadow .25s;cursor:pointer}
+#brand-film .film-play:hover{transform:scale(1.08);box-shadow:0 0 0 16px #f8d7b32b,0 20px 46px #150816a0}
+#brand-film .film-play:focus-visible{outline:3px solid #fff;outline-offset:12px}
+#brand-film .film-frame-title{font:italic clamp(1.35rem,3vw,2.3rem) Georgia,serif;color:#fff7ef;text-shadow:0 3px 18px #100614;margin:28px 0 7px}
+#brand-film .film-frame-caption{color:#f5d3ad;font-size:.83rem;letter-spacing:.14em;text-transform:uppercase}
+#brand-film .film-status{font-size:.88rem;color:#f3d9c8;margin:15px 0 0;text-align:center;min-height:1.5em}
+#brand-film .film-actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin:25px auto 0}
+#brand-film .film-actions a{min-height:48px;display:inline-flex;align-items:center;justify-content:center;border-radius:99px;padding:12px 24px;text-decoration:none;font-weight:750;border:1px solid #efc99d;color:#2b172d;background:#f3c99d}
+#brand-film .film-actions a+ a{background:transparent;color:#fff5eb;border-color:#efc99d99}
+#brand-film .film-dialog{border:1px solid #f3c99d;border-radius:22px;padding:14px;background:#231427;color:#fff;width:min(94vw,1100px);max-width:1100px;box-shadow:0 30px 110px #000b}
+#brand-film .film-dialog::backdrop{background:#110818e8;backdrop-filter:blur(9px)}
+#brand-film .film-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:20px;padding:4px 8px 12px;font-weight:700}
+#brand-film .film-close{border:1px solid #e8cba0;border-radius:50%;background:transparent;color:white;width:44px;height:44px;font-size:1.5rem;cursor:pointer}
+#brand-film .film-dialog video{display:block;width:100%;max-height:76vh;background:#000;border-radius:12px}
+#brand-film .film-dialog-note{color:#ebd4c4;font-size:.85rem;padding:10px 7px 0}
+#brand-film .film-play[hidden],#brand-film .film-status[hidden]{display:none}
+@media(max-width:650px){#brand-film{padding:62px 18px}#brand-film .film-frame{aspect-ratio:4/5}#brand-film .film-poster{object-position:56% center}#brand-film .film-frame-content{padding:16px}#brand-film .film-frame-title{margin-top:24px}#brand-film .film-actions a{width:100%}#brand-film .film-dialog{padding:8px}#brand-film .film-dialog video{max-height:70vh}}
+@media(prefers-reduced-motion:reduce){#brand-film .film-play{transition:none}#brand-film .film-play:hover{transform:none}}

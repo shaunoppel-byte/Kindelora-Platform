@@ -1,0 +1,30 @@
+name: KINDELORA cinematic journey contract
+on:
+  pull_request:
+    paths:
+      - 'welcome.html'
+      - 'index.html'
+      - 'affirmation-library.html'
+      - 'cinematic-brand.css'
+      - 'scripts/check-cinematic-journey.cjs'
+      - '.github/workflows/cinematic-journey.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'welcome.html'
+      - 'index.html'
+      - 'affirmation-library.html'
+      - 'cinematic-brand.css'
+      - 'scripts/check-cinematic-journey.cjs'
+      - '.github/workflows/cinematic-journey.yml'
+permissions:
+  contents: read
+jobs:
+  journey-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/check-cinematic-journey.cjs
