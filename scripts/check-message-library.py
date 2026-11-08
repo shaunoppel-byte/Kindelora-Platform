@@ -3,9 +3,9 @@ import json, re
 from collections import Counter
 from pathlib import Path
 # Include newly merged editorial batches automatically; preserve historical per-batch checks.
-paths=sorted(Path("content").glob("message-library-v*.json"),key=lambda p:int(re.search(r"v(\\d+)\\.json$",p.name).group(1)))
+paths=sorted(Path("content").glob("message-library-v*.json"),key=lambda p:int(re.search(r"v(\d+)\.json$",p.name).group(1)))
 assert len(paths)>=38, "Missing historical editorial batches"
-assert [int(re.search(r"v(\\d+)\\.json$",p.name).group(1)) for p in paths]==list(range(1,len(paths)+1)), "Missing or out-of-order editorial batch"
+assert [int(re.search(r"v(\d+)\.json$",p.name).group(1)) for p in paths]==list(range(1,len(paths)+1)), "Missing or out-of-order editorial batch"
 collections=[json.loads(path.read_text(encoding="utf-8")) for path in paths]
 items=[msg for collection in collections for msg in collection["messages"]]
 assert len(collections[0]["messages"])==120, "First editorial batch count changed"
