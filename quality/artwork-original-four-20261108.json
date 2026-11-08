@@ -1,0 +1,28 @@
+{
+  "batch": "original-four-themes-20261108",
+  "origin": "Original programmatically authored SVG vector compositions, created specifically for KINDELORA; no external image assets, fonts or stock photography embedded.",
+  "rights": "Original source authored for this project; no third-party source imagery incorporated. Brand owner should confirm publication rights policy.",
+  "cards": [
+    "quiet-courage",
+    "gentle-boundaries",
+    "belonging",
+    "patience"
+  ],
+  "paths": [
+    "/assets/affirmations/original-quiet-courage.svg",
+    "/assets/affirmations/original-gentle-boundaries.svg",
+    "/assets/affirmations/original-belonging.svg",
+    "/assets/affirmations/original-patience.svg"
+  ],
+  "qa": {
+    "catalogueCount": 400,
+    "underlyingUniqueImagesAfterMapping": 19,
+    "remainingDuplicateAssignments": 381,
+    "source": "Computed by normalizing image URL query strings in affirmation-library.js on this branch",
+    "humanVisualReview": "pending",
+    "realBrowserMobileContrast": "pending",
+    "ci": "pending",
+    "productionDeployment": "not verified"
+  },
+  "rollback": "Revert mapping commit 6b7ba533aa7666719c814a123186a6149ce53e7d and associated assets if rejected."
+}
