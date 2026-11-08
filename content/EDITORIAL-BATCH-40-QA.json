@@ -1,0 +1,12 @@
+{
+  "date": "2026-11-08",
+  "batch": 40,
+  "base": "main",
+  "public_catalogue": 3000,
+  "added": 20,
+  "unique_new_ids": 20,
+  "unique_new_normalized_texts": 20,
+  "exact_public_and_batch38_collisions": 0,
+  "max_token_dice_against_public_and_batch38": 0.42857142857142855,
+  "note": "Advisory only: comparison against 3000 public messages and batch 38, not every editorial batch. No independent human review. Public catalogue untouched; existing checker currently lists v1-v38, so this file is not yet in checker coverage. Do not merge or publish until integration and full-corpus audit are complete."
+}
