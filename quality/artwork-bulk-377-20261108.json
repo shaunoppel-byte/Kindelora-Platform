@@ -1,0 +1,2277 @@
+{
+  "batch": "bulk-377-20261108",
+  "source": "Original procedurally authored SVG compositions; no third-party photos, embedded fonts, or paid generation",
+  "status": "editorial candidate; not Platinum photographic approval",
+  "generated": 377,
+  "cardCount": 400,
+  "uniqueUnderlyingImages": 400,
+  "duplicateAssignments": 0,
+  "visualReview": "pending",
+  "mobileContrast": "pending",
+  "productionDeployment": "not verified",
+  "rollback": "revert this commit",
+  "items": [
+    {
+      "id": "morning-light",
+      "title": "Morning Light",
+      "path": "/assets/affirmations/bulk-20261108/morning-light.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "quiet-confidence",
+      "title": "Quiet Confidence",
+      "path": "/assets/affirmations/bulk-20261108/quiet-confidence.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "self-compassion",
+      "title": "Self-Compassion",
+      "path": "/assets/affirmations/bulk-20261108/self-compassion.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "letting-go",
+      "title": "Letting Go",
+      "path": "/assets/affirmations/bulk-20261108/letting-go.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "finding-balance",
+      "title": "Finding Balance",
+      "path": "/assets/affirmations/bulk-20261108/finding-balance.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "room-to-breathe",
+      "title": "Room to Breathe",
+      "path": "/assets/affirmations/bulk-20261108/room-to-breathe.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "starting-small",
+      "title": "Starting Small",
+      "path": "/assets/affirmations/bulk-20261108/starting-small.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "changing-course",
+      "title": "Changing Course",
+      "path": "/assets/affirmations/bulk-20261108/changing-course.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "being-heard",
+      "title": "Being Heard",
+      "path": "/assets/affirmations/bulk-20261108/being-heard.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "after-a-hard-day",
+      "title": "After a Hard Day",
+      "path": "/assets/affirmations/bulk-20261108/after-a-hard-day.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "shared-kindness",
+      "title": "Shared Kindness",
+      "path": "/assets/affirmations/bulk-20261108/shared-kindness.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "gentle-focus",
+      "title": "Gentle Focus",
+      "path": "/assets/affirmations/bulk-20261108/gentle-focus.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "honest-feelings",
+      "title": "Honest Feelings",
+      "path": "/assets/affirmations/bulk-20261108/honest-feelings.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "new-perspectives",
+      "title": "New Perspectives",
+      "path": "/assets/affirmations/bulk-20261108/new-perspectives.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "belonging-to-myself",
+      "title": "Belonging to Myself",
+      "path": "/assets/affirmations/bulk-20261108/belonging-to-myself.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "a-kind-no",
+      "title": "A Kind No",
+      "path": "/assets/affirmations/bulk-20261108/a-kind-no.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "when-plans-change",
+      "title": "When Plans Change",
+      "path": "/assets/affirmations/bulk-20261108/when-plans-change.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "enough-for-today",
+      "title": "Enough for Today",
+      "path": "/assets/affirmations/bulk-20261108/enough-for-today.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "repairing-a-moment",
+      "title": "Repairing a Moment",
+      "path": "/assets/affirmations/bulk-20261108/repairing-a-moment.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "learning-in-public",
+      "title": "Learning in Public",
+      "path": "/assets/affirmations/bulk-20261108/learning-in-public.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "ordinary-wonder",
+      "title": "Ordinary Wonder",
+      "path": "/assets/affirmations/bulk-20261108/ordinary-wonder.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "asking-clearly",
+      "title": "Asking Clearly",
+      "path": "/assets/affirmations/bulk-20261108/asking-clearly.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "holding-two-truths",
+      "title": "Holding Two Truths",
+      "path": "/assets/affirmations/bulk-20261108/holding-two-truths.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "a-slower-path",
+      "title": "A Slower Path",
+      "path": "/assets/affirmations/bulk-20261108/a-slower-path.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "welcome-back",
+      "title": "Welcome Back",
+      "path": "/assets/affirmations/bulk-20261108/welcome-back.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-049-the-first-five-minutes",
+      "title": "The First Five Minutes",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-049-the-first-five-minutes.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-050-courage-to-ask",
+      "title": "Courage to Ask",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-050-courage-to-ask.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-051-a-softer-morning",
+      "title": "A Softer Morning",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-051-a-softer-morning.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-052-a-clearer-yes",
+      "title": "A Clearer Yes",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-052-a-clearer-yes.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-053-permission-to-pause",
+      "title": "Permission to Pause",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-053-permission-to-pause.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-054-unfinished-and-worthy",
+      "title": "Unfinished and Worthy",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-054-unfinished-and-worthy.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-055-one-honest-conversation",
+      "title": "One Honest Conversation",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-055-one-honest-conversation.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-056-a-fresh-page",
+      "title": "A Fresh Page",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-056-a-fresh-page.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-057-the-space-between",
+      "title": "The Space Between",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-057-the-space-between.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-058-a-little-more-patience",
+      "title": "A Little More Patience",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-058-a-little-more-patience.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-059-choosing-what-matters",
+      "title": "Choosing What Matters",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-059-choosing-what-matters.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-060-a-gentle-return",
+      "title": "A Gentle Return",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-060-a-gentle-return.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-061-celebrating-effort",
+      "title": "Celebrating Effort",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-061-celebrating-effort.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-062-trusting-the-process",
+      "title": "Trusting the Process",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-062-trusting-the-process.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-063-care-in-small-things",
+      "title": "Care in Small Things",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-063-care-in-small-things.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-064-the-courage-to-rest",
+      "title": "The Courage to Rest",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-064-the-courage-to-rest.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-065-listening-with-care",
+      "title": "Listening With Care",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-065-listening-with-care.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-066-space-for-grief",
+      "title": "Space for Grief",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-066-space-for-grief.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-067-a-brighter-detail",
+      "title": "A Brighter Detail",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-067-a-brighter-detail.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-068-moving-with-intention",
+      "title": "Moving With Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-068-moving-with-intention.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-069-noticing-my-needs",
+      "title": "Noticing My Needs",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-069-noticing-my-needs.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-070-the-next-right-question",
+      "title": "The Next Right Question",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-070-the-next-right-question.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-071-welcoming-feedback",
+      "title": "Welcoming Feedback",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-071-welcoming-feedback.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-072-the-beauty-of-enough",
+      "title": "The Beauty of Enough",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-072-the-beauty-of-enough.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-073-an-open-window",
+      "title": "An Open Window",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-073-an-open-window.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-074-small-acts-of-trust",
+      "title": "Small Acts of Trust",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-074-small-acts-of-trust.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-075-a-calm-decision",
+      "title": "A Calm Decision",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-075-a-calm-decision.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-076-caring-from-afar",
+      "title": "Caring From Afar",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-076-caring-from-afar.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-077-reclaiming-attention",
+      "title": "Reclaiming Attention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-077-reclaiming-attention.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-078-an-imperfect-beginning",
+      "title": "An Imperfect Beginning",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-078-an-imperfect-beginning.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-079-the-gift-of-silence",
+      "title": "The Gift of Silence",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-079-the-gift-of-silence.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-080-progress-with-detours",
+      "title": "Progress With Detours",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-080-progress-with-detours.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-081-the-warmth-of-thanks",
+      "title": "The Warmth of Thanks",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-081-the-warmth-of-thanks.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-082-a-moment-of-pride",
+      "title": "A Moment of Pride",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-082-a-moment-of-pride.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-083-making-peace-with-maybe",
+      "title": "Making Peace With Maybe",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-083-making-peace-with-maybe.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-084-when-energy-is-low",
+      "title": "When Energy Is Low",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-084-when-energy-is-low.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-085-the-courage-to-clarify",
+      "title": "The Courage to Clarify",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-085-the-courage-to-clarify.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-086-a-place-to-begin-again",
+      "title": "A Place to Begin Again",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-086-a-place-to-begin-again.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-087-keeping-my-centre",
+      "title": "Keeping My Centre",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-087-keeping-my-centre.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-088-good-enough-to-share",
+      "title": "Good Enough to Share",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-088-good-enough-to-share.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-089-the-quiet-after",
+      "title": "The Quiet After",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-089-the-quiet-after.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-090-room-for-play",
+      "title": "Room for Play",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-090-room-for-play.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-091-choosing-tenderness",
+      "title": "Choosing Tenderness",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-091-choosing-tenderness.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-092-a-different-rhythm",
+      "title": "A Different Rhythm",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-092-a-different-rhythm.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-093-the-courage-to-be-seen",
+      "title": "The Courage to Be Seen",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-093-the-courage-to-be-seen.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-094-staying-curious",
+      "title": "Staying Curious",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-094-staying-curious.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-095-kindness-with-limits",
+      "title": "Kindness With Limits",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-095-kindness-with-limits.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-096-an-evening-exhale",
+      "title": "An Evening Exhale",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-096-an-evening-exhale.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-097-a-seed-of-hope",
+      "title": "A Seed of Hope",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-097-a-seed-of-hope.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-098-returning-to-joy",
+      "title": "Returning to Joy",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-098-returning-to-joy.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-099-walking-my-own-road",
+      "title": "Walking My Own Road",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-099-walking-my-own-road.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-100-a-meaningful-tomorrow",
+      "title": "A Meaningful Tomorrow",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-100-a-meaningful-tomorrow.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-101",
+      "title": "Being Present — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-101.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-102",
+      "title": "Being Present — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-102.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-103",
+      "title": "Self-Trust — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-103.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-104",
+      "title": "Self-Trust — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-104.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-105",
+      "title": "Disappointment — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-105.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-106",
+      "title": "Disappointment — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-106.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-107",
+      "title": "Change — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-107.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-108",
+      "title": "Change — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-108.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-109",
+      "title": "Shared Success — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-109.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-110",
+      "title": "Shared Success — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-110.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-111",
+      "title": "Clarity — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-111.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-112",
+      "title": "Clarity — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-112.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-113",
+      "title": "Uncertainty — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-113.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-114",
+      "title": "Uncertainty — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-114.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-115",
+      "title": "Boundaries — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-115.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-116",
+      "title": "Boundaries — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-116.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-117",
+      "title": "Gratitude — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-117.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-118",
+      "title": "Gratitude — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-118.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-119",
+      "title": "Repair — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-119.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-120",
+      "title": "Repair — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-120.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-121",
+      "title": "Inclusion — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-121.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-122",
+      "title": "Inclusion — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-122.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-123",
+      "title": "Resilience — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-123.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-124",
+      "title": "Resilience — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-124.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-125",
+      "title": "Comparison — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-125.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-126",
+      "title": "Comparison — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-126.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-127",
+      "title": "Beauty — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-127.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-128",
+      "title": "Beauty — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-128.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-129",
+      "title": "Practice — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-129.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-130",
+      "title": "Practice — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-130.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-131",
+      "title": "Communication — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-131.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-132",
+      "title": "Communication — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-132.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-133",
+      "title": "Detours — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-133.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-134",
+      "title": "Detours — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-134.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-135",
+      "title": "Quiet Effort — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-135.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-136",
+      "title": "Quiet Effort — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-136.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-137",
+      "title": "Reflection — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-137.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-138",
+      "title": "Reflection — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-138.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-139",
+      "title": "Compassion — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-139.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-140",
+      "title": "Compassion — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-140.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-141",
+      "title": "Home — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-141.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-142",
+      "title": "Home — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-142.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-143",
+      "title": "Simplicity — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-143.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-144",
+      "title": "Simplicity — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-144.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-145",
+      "title": "Challenges — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-145.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-146",
+      "title": "Challenges — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-146.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-147",
+      "title": "Leadership — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-147.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-148",
+      "title": "Leadership — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-148.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-149",
+      "title": "Apologies — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-149.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-150",
+      "title": "Apologies — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-150.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-151",
+      "title": "Receiving Help — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-151.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-152",
+      "title": "Receiving Help — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-152.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-153",
+      "title": "Giving Help — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-153.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-154",
+      "title": "Giving Help — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-154.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-155",
+      "title": "Hope — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-155.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-156",
+      "title": "Hope — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-156.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-157",
+      "title": "Perspective — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-157.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-158",
+      "title": "Perspective — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-158.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-159",
+      "title": "Patience — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-159.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-160",
+      "title": "Patience — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-160.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-161",
+      "title": "Voice — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-161.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-162",
+      "title": "Voice — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-162.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-163",
+      "title": "Rest — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-163.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-164",
+      "title": "Rest — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-164.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-165",
+      "title": "Celebration — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-165.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-166",
+      "title": "Celebration — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-166.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-167",
+      "title": "Decisions — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-167.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-168",
+      "title": "Decisions — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-168.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-169",
+      "title": "Flexibility — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-169.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-170",
+      "title": "Flexibility — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-170.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-171",
+      "title": "Perspective Taking — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-171.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-172",
+      "title": "Perspective Taking — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-172.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-173",
+      "title": "Friendship — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-173.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-174",
+      "title": "Friendship — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-174.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-175",
+      "title": "Time — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-175.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-176",
+      "title": "Time — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-176.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-177",
+      "title": "Teamwork — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-177.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-178",
+      "title": "Teamwork — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-178.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-179",
+      "title": "Learning — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-179.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-180",
+      "title": "Learning — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-180.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-181",
+      "title": "Evenings — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-181.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-182",
+      "title": "Evenings — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-182.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-183",
+      "title": "Nature — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-183.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-184",
+      "title": "Nature — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-184.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-185",
+      "title": "Creativity — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-185.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-186",
+      "title": "Creativity — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-186.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-187",
+      "title": "Imperfection — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-187.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-188",
+      "title": "Imperfection — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-188.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-189",
+      "title": "Confidence — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-189.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-190",
+      "title": "Confidence — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-190.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-191",
+      "title": "Responsibility — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-191.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-192",
+      "title": "Responsibility — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-192.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-193",
+      "title": "Mentorship — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-193.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-194",
+      "title": "Mentorship — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-194.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-195",
+      "title": "Values — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-195.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-196",
+      "title": "Values — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-196.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-197",
+      "title": "Joy — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-197.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-198",
+      "title": "Joy — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-198.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-199",
+      "title": "Sadness — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-199.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-200",
+      "title": "Sadness — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-200.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-201",
+      "title": "Bravery — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-201.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-202",
+      "title": "Bravery — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-202.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-203",
+      "title": "Beginnings — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-203.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-204",
+      "title": "Beginnings — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-204.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-205",
+      "title": "Momentum — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-205.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-206",
+      "title": "Momentum — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-206.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-207",
+      "title": "Honest Thanks — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-207.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-208",
+      "title": "Honest Thanks — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-208.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-209",
+      "title": "Respectful Refusal — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-209.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-210",
+      "title": "Respectful Refusal — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-210.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-211",
+      "title": "Difference — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-211.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-212",
+      "title": "Difference — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-212.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-213",
+      "title": "Slowness — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-213.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-214",
+      "title": "Slowness — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-214.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-215",
+      "title": "Self-Reflection — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-215.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-216",
+      "title": "Self-Reflection — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-216.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-217",
+      "title": "Starting — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-217.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-218",
+      "title": "Starting — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-218.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-219",
+      "title": "Loved Ones — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-219.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-220",
+      "title": "Loved Ones — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-220.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-221",
+      "title": "Listening — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-221.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-222",
+      "title": "Listening — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-222.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-223",
+      "title": "Old Beliefs — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-223.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-224",
+      "title": "Old Beliefs — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-224.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-225",
+      "title": "Worth — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-225.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-226",
+      "title": "Worth — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-226.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-227",
+      "title": "Morning — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-227.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-228",
+      "title": "Morning — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-228.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-229",
+      "title": "Pausing — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-229.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-230",
+      "title": "Pausing — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-230.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-231",
+      "title": "Mistakes — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-231.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-232",
+      "title": "Mistakes — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-232.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-233",
+      "title": "Curiosity — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-233.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-234",
+      "title": "Curiosity — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-234.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-235",
+      "title": "Showing Up — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-235.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-236",
+      "title": "Showing Up — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-236.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-237",
+      "title": "Feedback — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-237.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-238",
+      "title": "Feedback — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-238.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-239",
+      "title": "Empathy — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-239.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-240",
+      "title": "Empathy — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-240.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-241",
+      "title": "Sustainability — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-241.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-242",
+      "title": "Sustainability — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-242.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-243",
+      "title": "Trade-offs — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-243.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-244",
+      "title": "Trade-offs — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-244.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-245",
+      "title": "Waiting — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-245.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-246",
+      "title": "Waiting — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-246.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-247",
+      "title": "Kindness Received — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-247.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-248",
+      "title": "Kindness Received — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-248.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-249",
+      "title": "Courageous Words — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-249.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-250",
+      "title": "Courageous Words — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-250.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-251",
+      "title": "Progress — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-251.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-252",
+      "title": "Progress — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-252.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-253",
+      "title": "Calm — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-253.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-254",
+      "title": "Calm — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-254.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-255",
+      "title": "Dialogue — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-255.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-256",
+      "title": "Dialogue — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-256.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-257",
+      "title": "Opportunity — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-257.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-258",
+      "title": "Opportunity — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-258.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-259",
+      "title": "Balance — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-259.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-260",
+      "title": "Balance — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-260.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-261",
+      "title": "Questions — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-261.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-262",
+      "title": "Questions — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-262.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-263",
+      "title": "Peace — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-263.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-264",
+      "title": "Peace — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-264.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-265",
+      "title": "Milestones — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-265.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-266",
+      "title": "Milestones — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-266.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-267",
+      "title": "Open Mind — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-267.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-268",
+      "title": "Open Mind — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-268.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-269",
+      "title": "Patience With Others — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-269.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-270",
+      "title": "Patience With Others — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-270.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-271",
+      "title": "Risk — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-271.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-272",
+      "title": "Risk — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-272.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-273",
+      "title": "Meaning — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-273.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-274",
+      "title": "Meaning — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-274.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-275",
+      "title": "Routine — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-275.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-276",
+      "title": "Routine — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-276.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-277",
+      "title": "Stopping — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-277.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-278",
+      "title": "Stopping — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-278.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-279",
+      "title": "Beginners Mind — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-279.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-280",
+      "title": "Beginners Mind — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-280.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-281",
+      "title": "Life Story — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-281.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-282",
+      "title": "Life Story — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-282.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-283",
+      "title": "Encouragement — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-283.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-284",
+      "title": "Encouragement — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-284.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-285",
+      "title": "Dignity — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-285.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-286",
+      "title": "Dignity — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-286.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-287",
+      "title": "Steadiness — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-287.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-288",
+      "title": "Steadiness — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-288.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-289",
+      "title": "Preparation — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-289.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-290",
+      "title": "Preparation — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-290.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-291",
+      "title": "Closure — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-291.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-292",
+      "title": "Closure — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-292.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-293",
+      "title": "Wonder — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-293.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-294",
+      "title": "Wonder — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-294.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-295",
+      "title": "Self-Acceptance — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-295.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-296",
+      "title": "Self-Acceptance — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-296.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-297",
+      "title": "Delight — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-297.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-298",
+      "title": "Delight — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-298.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-299",
+      "title": "Belonging — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-299.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-300",
+      "title": "Belonging — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-300.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-301",
+      "title": "Gentle Determination — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-301.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-302",
+      "title": "Gentle Determination — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-302.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-303",
+      "title": "Finding Stillness — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-303.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-304",
+      "title": "Finding Stillness — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-304.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-305",
+      "title": "An Honest Yes — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-305.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-306",
+      "title": "An Honest Yes — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-306.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-307",
+      "title": "Caring for Tomorrow — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-307.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-308",
+      "title": "Caring for Tomorrow — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-308.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-309",
+      "title": "Learning to Receive — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-309.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-310",
+      "title": "Learning to Receive — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-310.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-311",
+      "title": "After a Long Week — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-311.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-312",
+      "title": "After a Long Week — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-312.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-313",
+      "title": "The Next Chapter — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-313.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-314",
+      "title": "The Next Chapter — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-314.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-315",
+      "title": "Keeping My Centre — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-315.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-316",
+      "title": "Keeping My Centre — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-316.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-317",
+      "title": "A Brave Question — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-317.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-318",
+      "title": "A Brave Question — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-318.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-319",
+      "title": "Making Room for Play — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-319.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-320",
+      "title": "Making Room for Play — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-320.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-321",
+      "title": "Unhurried Growth — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-321.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-322",
+      "title": "Unhurried Growth — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-322.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-323",
+      "title": "Choosing Trust — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-323.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-324",
+      "title": "Choosing Trust — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-324.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-325",
+      "title": "Unexpected Kindness — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-325.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-326",
+      "title": "Unexpected Kindness — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-326.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-327",
+      "title": "Stepping Forward — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-327.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-328",
+      "title": "Stepping Forward — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-328.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-329",
+      "title": "Finding My Rhythm — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-329.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-330",
+      "title": "Finding My Rhythm — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-330.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-331",
+      "title": "A Clearer Mind — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-331.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-332",
+      "title": "A Clearer Mind — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-332.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-333",
+      "title": "Everyday Courage — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-333.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-334",
+      "title": "Everyday Courage — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-334.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-335",
+      "title": "The Gift of Attention — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-335.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-336",
+      "title": "The Gift of Attention — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-336.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-337",
+      "title": "Celebrating Small Wins — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-337.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-338",
+      "title": "Celebrating Small Wins — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-338.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-339",
+      "title": "Learning From Silence — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-339.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-340",
+      "title": "Learning From Silence — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-340.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-341",
+      "title": "Holding My Ground — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-341.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-342",
+      "title": "Holding My Ground — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-342.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-343",
+      "title": "A Kind Reset — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-343.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-344",
+      "title": "A Kind Reset — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-344.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-345",
+      "title": "Making Peace With Pace — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-345.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-346",
+      "title": "Making Peace With Pace — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-346.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-347",
+      "title": "Recognising Strength — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-347.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-348",
+      "title": "Recognising Strength — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-348.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-349",
+      "title": "The Power of Enough — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-349.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-350",
+      "title": "The Power of Enough — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-350.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-351",
+      "title": "Welcoming Encouragement — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-351.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-352",
+      "title": "Welcoming Encouragement — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-352.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-353",
+      "title": "Careful Optimism — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-353.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-354",
+      "title": "Careful Optimism — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-354.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-355",
+      "title": "A Meaningful Pause — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-355.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-356",
+      "title": "A Meaningful Pause — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-356.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-357",
+      "title": "Honouring My Energy — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-357.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-358",
+      "title": "Honouring My Energy — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-358.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-359",
+      "title": "Connection Across Distance — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-359.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-360",
+      "title": "Connection Across Distance — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-360.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-361",
+      "title": "A Kinder Inner Voice — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-361.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-362",
+      "title": "A Kinder Inner Voice — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-362.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-363",
+      "title": "Finding Common Ground — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-363.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-364",
+      "title": "Finding Common Ground — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-364.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-365",
+      "title": "The Courage to Rest — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-365.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-366",
+      "title": "The Courage to Rest — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-366.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-367",
+      "title": "Welcoming New Ideas — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-367.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-368",
+      "title": "Welcoming New Ideas — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-368.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-369",
+      "title": "A Thoughtful Boundary — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-369.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-370",
+      "title": "A Thoughtful Boundary — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-370.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-371",
+      "title": "Moving Through Doubt — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-371.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-372",
+      "title": "Moving Through Doubt — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-372.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-373",
+      "title": "Being a Good Friend — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-373.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-374",
+      "title": "Being a Good Friend — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-374.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-375",
+      "title": "Reclaiming Focus — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-375.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-376",
+      "title": "Reclaiming Focus — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-376.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-377",
+      "title": "A Moment of Wonder — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-377.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-378",
+      "title": "A Moment of Wonder — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-378.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-379",
+      "title": "Caring for My Future — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-379.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-380",
+      "title": "Caring for My Future — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-380.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-381",
+      "title": "Making Room for Laughter — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-381.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-382",
+      "title": "Making Room for Laughter — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-382.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-383",
+      "title": "The Strength to Adapt — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-383.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-384",
+      "title": "The Strength to Adapt — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-384.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-385",
+      "title": "Letting Good Things Land — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-385.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-386",
+      "title": "Letting Good Things Land — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-386.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-387",
+      "title": "Choosing Generosity — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-387.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-388",
+      "title": "Choosing Generosity — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-388.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-389",
+      "title": "Learning From Others — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-389.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-390",
+      "title": "Learning From Others — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-390.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-391",
+      "title": "Releasing Perfectionism — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-391.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-392",
+      "title": "Releasing Perfectionism — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-392.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-393",
+      "title": "The Value of Presence — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-393.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-394",
+      "title": "The Value of Presence — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-394.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-395",
+      "title": "A More Peaceful Morning — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-395.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-396",
+      "title": "A More Peaceful Morning — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-396.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-397",
+      "title": "Honouring Small Progress — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-397.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-398",
+      "title": "Honouring Small Progress — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-398.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-399",
+      "title": "Trusting the Journey — Intention",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-399.svg",
+      "qaStatus": "pending visual review"
+    },
+    {
+      "id": "affirmation-400",
+      "title": "Trusting the Journey — Reflection",
+      "path": "/assets/affirmations/bulk-20261108/affirmation-400.svg",
+      "qaStatus": "pending visual review"
+    }
+  ]
+}
