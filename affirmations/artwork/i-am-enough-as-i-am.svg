@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 840" role="img" aria-labelledby="title desc">
+<title id="title">I am enough as I am — KINDELORA affirmation</title><desc id="desc">Warm golden dawn above layered mountains and a reflective lake, with an affirmation in readable ivory type.</desc>
+<defs><linearGradient id="sky" x2="0" y2="1"><stop stop-color="#30172e"/><stop offset=".42" stop-color="#99536a"/><stop offset=".73" stop-color="#edb079"/><stop offset="1" stop-color="#f7d4a0"/></linearGradient><radialGradient id="glow"><stop stop-color="#fff4c5" stop-opacity=".9"/><stop offset=".38" stop-color="#f4ca8d" stop-opacity=".58"/><stop offset="1" stop-color="#f4ca8d" stop-opacity="0"/></radialGradient><linearGradient id="shade" x2="1" y2="0"><stop stop-color="#1d1027" stop-opacity=".96"/><stop offset=".58" stop-color="#24122b" stop-opacity=".7"/><stop offset="1" stop-color="#24122b" stop-opacity=".08"/></linearGradient><linearGradient id="lake" x2="0" y2="1"><stop stop-color="#c48985"/><stop offset="1" stop-color="#332039"/></linearGradient></defs>
+<rect width="1200" height="840" fill="url(#sky)"/><circle cx="940" cy="270" r="300" fill="url(#glow)"/><circle cx="940" cy="270" r="62" fill="#ffe2ab" opacity=".92"/>
+<path d="M0 530 145 365 260 465 410 300 590 480 750 350 920 510 1080 330 1200 435V840H0Z" fill="#59344e" opacity=".58"/>
+<path d="M0 595 170 490 340 585 510 415 710 575 880 455 1040 555 1200 480V840H0Z" fill="#3a2845" opacity=".8"/>
+<path d="M0 655Q250 610 500 660T1200 642V840H0Z" fill="url(#lake)"/>
+<path d="M0 700Q250 670 470 712T1200 690" stroke="#f6cf9b" stroke-width="4" fill="none" opacity=".38"/><path d="M0 755Q250 735 490 760T1200 748" stroke="#f6cf9b" stroke-width="3" fill="none" opacity=".23"/>
+<rect width="1200" height="840" fill="url(#shade)"/>
+<rect x="36" y="36" width="1128" height="768" rx="22" fill="none" stroke="#f4d19b" stroke-opacity=".72" stroke-width="3"/>
+<g fill="#fff5e9"><text x="80" y="105" font-family="Arial,Helvetica,sans-serif" font-size="27" font-weight="700" letter-spacing="8">✦ KINDELORA</text><text x="80" y="240" font-family="Georgia,serif" font-size="70" font-weight="700">I am enough</text><text x="80" y="325" font-family="Georgia,serif" font-size="76" font-style="italic">as I am.</text></g>
+<path d="M80 370H480" stroke="#f2cf98" stroke-width="3"/>
+<g fill="#fff4e7" font-family="Arial,Helvetica,sans-serif" font-size="29"><text x="80" y="438">My worth is not measured by</text><text x="80" y="482">how much I accomplish.</text><text x="80" y="526">I deserve kindness today.</text></g>
+<text x="80" y="752" font-family="Arial,Helvetica,sans-serif" font-size="21" font-weight="700" letter-spacing="4" fill="#f7d7a8">KINDNESS · SELF-WORTH · YOU</text>
+</svg>
