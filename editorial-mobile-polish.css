@@ -26,3 +26,20 @@
  #trust .card{padding:24px}
 }
 @media(prefers-reduced-motion:reduce){#daily .btn,#reflection .btn,#gentle-followup .btn,#affirmations .btn{transition:none}}
+
+/* Mobile editorial rhythm: purposeful density without sacrificing tap targets. */
+@media(max-width:650px){
+  #daily .daily-panel,#reflection .reflection-panel,#gentle-followup .daily-panel,#affirmations .daily-panel{padding:22px 20px}
+  #daily .daily-panel>*,#reflection .reflection-panel>*,#gentle-followup .daily-panel>*,#affirmations .daily-panel>*{min-width:0}
+  #daily .actions,#reflection .actions,#gentle-followup .actions,#affirmations .actions{margin-block:18px}
+  #daily .actions .btn,#reflection .actions .btn,#gentle-followup .actions .btn,#affirmations .actions .btn{min-height:48px;display:inline-flex;align-items:center;justify-content:center;padding:12px 20px;line-height:1.35}
+  #daily .controls .choice,#reflection .controls .choice,#gentle-followup .controls .choice,#affirmations .controls .choice{min-height:48px}
+  #reflection textarea{width:100%;min-height:140px}
+  #reflection select,#gentle-followup select,#affirmations select{width:100%;min-height:48px}
+  #trust .cards{gap:14px}
+  #trust .card{padding:22px 20px}
+}
+@media(max-width:390px){
+  #daily .actions .btn,#reflection .actions .btn,#gentle-followup .actions .btn,#affirmations .actions .btn{width:100%}
+  #daily .controls .choice{flex:1 1 auto}
+}
