@@ -13,6 +13,10 @@ const groups=new Map();
 for(let i=0;i<ids.length;i++){
   // URL variants, width and quality parameters do not make a new photograph.
   const photo=images[i].split('?')[0].replace(/\/$/,'');
+  if (!/^https?:\/\//i.test(photo)) {
+    if (photo.startsWith('//') || photo.includes('..') || !photo.startsWith('/')) throw new Error('Unsafe local artwork path for '+ids[i]+': '+photo);
+    if (!fs.existsSync(new URL('..'+photo,import.meta.url))) throw new Error('Missing local artwork for '+ids[i]+': '+photo);
+  }
   const entries=groups.get(photo)||[];
   entries.push({id:ids[i],title:titles[i]});
   groups.set(photo,entries);
