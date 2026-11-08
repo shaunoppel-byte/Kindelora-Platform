@@ -70,3 +70,21 @@
   #brand-film .film-play{width:20%;height:27%;top:52%}
 }
 @media(prefers-reduced-motion:reduce){#brand-film .film-play{transition:none}}
+
+/* Film section mobile polish: allow anchor navigation to clear the sticky header
+   and remove unnecessary bottom whitespace without altering the approved poster. */
+#brand-film{scroll-margin-top:110px}
+#brand-film .film-intro{margin-bottom:clamp(18px,3vw,26px)}
+#brand-film .film-status{margin-top:12px;line-height:1.45;min-height:0}
+#brand-film .film-actions{margin-top:20px;gap:12px}
+@media(max-width:650px){
+  #brand-film{scroll-margin-top:112px;padding:38px 16px 38px}
+  #brand-film .film-intro{margin-bottom:18px}
+  #brand-film .film-eyebrow{letter-spacing:.13em;line-height:1.5}
+  #brand-film h2{margin:10px auto 14px;line-height:1.12}
+  #brand-film .film-lead{line-height:1.55}
+  #brand-film .film-status{margin-top:12px;line-height:1.45}
+  #brand-film .film-actions{margin:18px auto 0;gap:10px}
+  #brand-film .film-actions a{min-height:52px;padding:12px 18px}
+}
+@media(max-width:390px){#brand-film{scroll-margin-top:104px;padding-bottom:32px}}
