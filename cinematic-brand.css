@@ -21,3 +21,21 @@
 @media(max-width:550px){.kc-actions{flex-direction:column}.kc-button{width:100%}.kc-welcome .kc-orbit{width:190px}.kc-welcome{padding-top:48px}}
 @media(prefers-reduced-motion:no-preference){.kc-orbit{animation:kc-breathe 7s ease-in-out infinite}.kc-stage::before{animation:kc-shimmer 16s ease-in-out infinite alternate}@keyframes kc-breathe{50%{box-shadow:0 0 22px #f8dba9,0 0 64px #eebd7eaa,inset 0 0 30px #f4c78b99,0 0 120px #e6a15a55}}@keyframes kc-shimmer{to{opacity:.55}}}
 @media(prefers-reduced-motion:reduce){.kc-orbit,.kc-stage::before{animation:none!important}}
+
+/* Cohesive guest-to-Plus discovery: no authentication or entitlements implied. */
+.kc-pathways{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:34px auto 20px;max-width:760px;text-align:left}
+.kc-pathway{display:flex;flex-direction:column;gap:12px;padding:clamp(20px,3vw,28px);border:1px solid #e8c99880;border-radius:22px;background:linear-gradient(145deg,#ffffff16,#ffffff08);box-shadow:0 15px 40px #10071933;backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px)}
+.kc-pathway h2{font:normal clamp(1.4rem,3vw,1.8rem)/1.2 Georgia,serif;color:#fff8ee;margin:0}
+.kc-pathway p{margin:0!important;font-size:.96rem!important;line-height:1.6!important;color:#f2e3ec!important}
+.kc-pathway .kc-button{margin-top:auto;min-height:48px;text-align:center}
+.kc-pathway .kc-eyebrow{font-size:.7rem}
+.kc-membership-halo{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 70% 45%,#b8758b30,transparent 48%),linear-gradient(130deg,#230e2d,#522446 70%,#31142f)!important;color:#fff6ec!important;border:1px solid #d9b78c88;border-radius:24px}
+.kc-membership-halo:before{content:"";position:absolute;inset:-45% -12% auto auto;width:min(70%,480px);aspect-ratio:1;border:5px solid #edca9655;border-radius:50%;box-shadow:0 0 65px #d5a77a55,inset 0 0 30px #e7b67a44;pointer-events:none}
+.kc-membership-halo>*{position:relative;z-index:1}
+.kc-membership-halo h2,.kc-membership-halo h3{color:#fff8ee!important}
+.kc-membership-halo p{color:#f6e7ee!important}
+.kc-membership-halo .eyebrow{color:#f4d49e!important}
+.kc-membership-halo .choice{border-color:#efcda1;color:#291529;background:#f6dfb8}
+.kc-membership-halo .choice[aria-pressed="true"]{outline:3px solid #fff8ee;outline-offset:3px}
+@media(max-width:640px){.kc-pathways{grid-template-columns:1fr}.kc-membership-halo:before{opacity:.4}}
+@media(prefers-reduced-motion:reduce){.kc-membership-halo:before{animation:none!important}}
