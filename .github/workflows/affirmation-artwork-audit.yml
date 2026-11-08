@@ -1,0 +1,25 @@
+name: Affirmation artwork uniqueness and asset audit
+on:
+  pull_request:
+    paths:
+      - 'affirmation-library.js'
+      - 'assets/affirmations/**'
+      - 'scripts/audit-affirmation-artwork.mjs'
+      - '.github/workflows/affirmation-artwork-audit.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'affirmation-library.js'
+      - 'assets/affirmations/**'
+      - 'scripts/audit-affirmation-artwork.mjs'
+      - '.github/workflows/affirmation-artwork-audit.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate 400 unique artwork assignments and local file existence
+        run: node scripts/audit-affirmation-artwork.mjs
