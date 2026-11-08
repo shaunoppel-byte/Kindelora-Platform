@@ -1,0 +1,20 @@
+{
+  "batch": "197-206",
+  "status": "automated mapping checks only; independent visual QA pending",
+  "count": 10,
+  "source": "Original first-party vector illustrations authored in this repository; no third-party assets",
+  "license": "Original KINDELORA project artwork; no external photography or fonts",
+  "checks": {
+    "uniquePaths": true,
+    "allMappingsChanged": true,
+    "remainingBulkMappings": 194
+  },
+  "reviewRequired": [
+    "rendered visual quality",
+    "mobile crop",
+    "contrast and accessibility",
+    "CI",
+    "live deployment"
+  ],
+  "rollback": "Revert batch pull request"
+}

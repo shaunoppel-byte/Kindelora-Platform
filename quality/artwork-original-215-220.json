@@ -1,0 +1,52 @@
+{
+  "date": "2026-11-08",
+  "scope": "affirmations 215–220",
+  "authorship": "Original vector compositions authored specifically for KINDELORA in this delivery; no third-party image sources, stock assets, AI image credits or external licenses.",
+  "license": "Original work supplied for KINDELORA's website and app commercial use; no third-party artwork incorporated.",
+  "editorialPreservation": "Affirmation IDs, titles, text and tags unchanged; only image paths updated.",
+  "entries": [
+    {
+      "number": 215,
+      "id": "affirmation-215",
+      "scene": "Open journal and magnifier: mistakes examined with curiosity",
+      "path": "/assets/affirmations/editorial-original-215.svg",
+      "status": "asset committed and mapped; independent visual, mobile cropping and contrast review pending"
+    },
+    {
+      "number": 216,
+      "id": "affirmation-216",
+      "scene": "Winding garden stepping path: noticing recurring patterns",
+      "path": "/assets/affirmations/editorial-original-216.svg",
+      "status": "asset committed and mapped; independent visual, mobile cropping and contrast review pending"
+    },
+    {
+      "number": 217,
+      "id": "affirmation-217",
+      "scene": "Partly open door onto an uncertain horizon: beginning without a full plan",
+      "path": "/assets/affirmations/editorial-original-217.svg",
+      "status": "asset committed and mapped; independent visual, mobile cropping and contrast review pending"
+    },
+    {
+      "number": 218,
+      "id": "affirmation-218",
+      "scene": "Sunlit first step on a hillside: manageable beginnings",
+      "path": "/assets/affirmations/editorial-original-218.svg",
+      "status": "asset committed and mapped; independent visual, mobile cropping and contrast review pending"
+    },
+    {
+      "number": 219,
+      "id": "affirmation-219",
+      "scene": "Two chairs facing one another: undivided attention",
+      "path": "/assets/affirmations/editorial-original-219.svg",
+      "status": "asset committed and mapped; independent visual, mobile cropping and contrast review pending"
+    },
+    {
+      "number": 220,
+      "id": "affirmation-220",
+      "scene": "Hands offering a warm meal: practical gestures of care",
+      "path": "/assets/affirmations/editorial-original-220.svg",
+      "status": "asset committed and mapped; independent visual, mobile cropping and contrast review pending"
+    }
+  ],
+  "releaseGate": "Do not merge until image visual review, contrast, CI and deployment tests are complete; rollback by reverting this PR."
+}

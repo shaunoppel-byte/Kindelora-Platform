@@ -57,6 +57,9 @@ assert len(set(norm))==len(norm), "Duplicate message text"
 assert len(items)==sum(len(c["messages"]) for c in collections), "Batch inventory mismatch"
 themes=Counter(x["theme"] for x in items)
 assert len(themes)>=388 and all(n>=5 for theme,n in themes.items() if not re.match(r"editorial(?:[3-9][0-9]|[1-9][0-9]{2,})_", theme)), "Theme coverage insufficient"
+historical_themes=Counter(x["theme"] for collection in collections[:38] for x in collection["messages"])
+assert len(historical_themes)>=373 and all(n>=5 for n in historical_themes.values()), "Historical theme coverage insufficient"
+assert len(themes)>=len(historical_themes), "Theme inventory regressed"
 assert len(themes)>=373 and all(n>=1 for n in themes.values()), "Theme coverage insufficient"
 for x in items:
     assert x["status"]=="editorial-review", "Do not silently publish unapproved content"
