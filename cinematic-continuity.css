@@ -1,0 +1,30 @@
+/* KINDELORA cinematic continuity: film-inspired depth without sacrificing readable guest flows. */
+:root{--film-velvet:#240f2d;--film-plum:#512b51;--film-gold:#f0ce93;--film-cream:#fff9f5}
+#journey,#experience,#kindness,#membership{position:relative}
+#journey .story-art{overflow:hidden;border-radius:clamp(18px,4vw,32px);box-shadow:0 18px 50px #29152d30}
+#journey .story-photo{transition:transform .8s cubic-bezier(.2,.7,.2,1);object-fit:cover}
+#journey .story-art:hover .story-photo{transform:scale(1.025)}
+#journey .journey-step{position:relative;overflow:hidden;border:1px solid #c99f7a66;background:linear-gradient(145deg,#fffdfa,#fff4ed);box-shadow:0 12px 35px #361d3216}
+#journey .journey-step::after{content:"";position:absolute;right:-60px;top:-65px;width:150px;height:150px;border-radius:50%;background:radial-gradient(circle,#efcf9955,transparent 70%);pointer-events:none}
+#experience{background:radial-gradient(ellipse at 90% 5%,#8e55745c,transparent 48%),linear-gradient(155deg,#28112f,#512b51 80%,#311635);color:#fff8f0}
+#experience h2,#experience> .wrap > p{color:#fff8f0}
+#experience .eyebrow{color:var(--film-gold)!important}
+#experience .moment{background:linear-gradient(135deg,#fffdfb,#fbe8e3);color:#4b3548;border-left-color:var(--film-gold);box-shadow:0 18px 55px #10071944}
+#experience .choice{border-color:#e7c9a5;color:#fff9f5;background:#ffffff12}
+#experience .choice[aria-pressed=true]{background:var(--film-gold);color:#2b1730;border-color:var(--film-gold)}
+#experience .btn{background:linear-gradient(115deg,#f8e0b2,#e9ae81);color:#2b1730}
+#kindness .card{border:1px solid #d6b58b70;box-shadow:0 15px 38px #381f3219;background:linear-gradient(150deg,#fff,#fff9f4)}
+#kindness .card::before{content:"✦";display:block;color:#9b6079;font-size:1.4rem;line-height:1;margin-bottom:12px}
+#membership .kplus-feature{border:1px solid #d9b88b70;background:linear-gradient(150deg,#fffefa,#fff3f0);box-shadow:0 12px 36px #381f3216}
+#membership .kplus-hero{overflow:hidden;box-shadow:0 18px 50px #321a3130}
+#membership .kplus-hero p{text-shadow:0 2px 16px #160b1ccc}
+#journey .story-art,#membership .kplus-hero{isolation:isolate}
+@media(max-width:650px){
+ #journey .journey-step,#kindness .card,#membership .kplus-feature{padding:clamp(22px,5vw,30px)}
+ #experience .controls{gap:10px}
+ #experience .choice{min-height:46px}
+ #experience .moment{font-size:clamp(1.3rem,5vw,1.7rem);line-height:1.5}
+ #experience .actions{gap:12px}
+ #experience .actions>*{max-width:100%}
+}
+@media(prefers-reduced-motion:reduce){#journey .story-photo{transition:none}#journey .story-art:hover .story-photo{transform:none}}
