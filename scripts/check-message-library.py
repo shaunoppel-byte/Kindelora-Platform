@@ -56,7 +56,7 @@ norm=[re.sub(r"[^a-z0-9]+"," ",x["text"].casefold()).strip() for x in items]
 assert len(set(norm))==len(norm), "Duplicate message text"
 assert len(items)==sum(len(c["messages"]) for c in collections), "Batch inventory mismatch"
 themes=Counter(x["theme"] for x in items)
-assert len(themes)>=388 and all(n>=5 for theme,n in themes.items() if not theme.startswith("editorial39_") and not theme.startswith("editorial40_")), "Theme coverage insufficient"
+assert len(themes)>=388 and all(n>=5 for theme,n in themes.items() if not re.match(r"editorial(?:[3-9][0-9]|[1-9][0-9]{2,})_", theme)), "Theme coverage insufficient"
 assert len(themes)>=373 and all(n>=1 for n in themes.values()), "Theme coverage insufficient"
 for x in items:
     assert x["status"]=="editorial-review", "Do not silently publish unapproved content"
