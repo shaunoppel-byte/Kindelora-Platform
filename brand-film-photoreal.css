@@ -88,3 +88,48 @@
   #brand-film .film-actions a{min-height:52px;padding:12px 18px}
 }
 @media(max-width:390px){#brand-film{scroll-margin-top:104px;padding-bottom:32px}}
+
+/* P1: the approved JPG already contains its own complete rounded gold frame.
+   Never crop it or draw a second border, halo, or frame on top of it. */
+#brand-film .film-frame,
+#brand-film .film-frame:hover {
+  width:100%;
+  max-width:1000px;
+  height:auto;
+  aspect-ratio:auto;
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  outline:0;
+  overflow:visible;
+}
+#brand-film .film-poster {
+  display:block;
+  position:static;
+  inset:auto;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  filter:none;
+}
+#brand-film .film-frame::before,
+#brand-film .film-frame::after { content:none;display:none; }
+#brand-film .film-frame-content{position:absolute;inset:0;z-index:2;pointer-events:none}
+#brand-film .film-play{pointer-events:auto}
+@media(max-width:650px) {
+  #brand-film{padding:34px 14px 30px;scroll-margin-top:125px}
+  #brand-film .film-frame{aspect-ratio:auto;border-radius:0;box-shadow:none}
+  #brand-film .film-poster{height:auto;object-fit:contain;border-radius:0}
+  #brand-film .film-intro{margin-bottom:14px}
+  #brand-film .film-status{margin:10px 0 0}
+  #brand-film .film-actions{margin-top:14px;gap:9px}
+  #brand-film .film-actions a{min-height:50px}
+}
