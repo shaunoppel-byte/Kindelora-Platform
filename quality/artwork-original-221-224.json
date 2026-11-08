@@ -1,0 +1,33 @@
+{
+  "batch": "221-224",
+  "type": "original SVG illustrations, not photographs",
+  "authoring": "Original vector compositions authored for KINDELORA; no external images, fonts, or paid assets",
+  "license": "Original project artwork; commercial use within KINDELORA",
+  "entries": [
+    {
+      "affirmation": 221,
+      "asset": "/assets/affirmations/editorial-original-221.svg",
+      "description": "Quiet conversation at the window",
+      "review": "pending independent visual and mobile contrast review"
+    },
+    {
+      "affirmation": 222,
+      "asset": "/assets/affirmations/editorial-original-222.svg",
+      "description": "Two teacups and an open notebook",
+      "review": "pending independent visual and mobile contrast review"
+    },
+    {
+      "affirmation": 223,
+      "asset": "/assets/affirmations/editorial-original-223.svg",
+      "description": "Old labels drifting away in a moonlit garden",
+      "review": "pending independent visual and mobile contrast review"
+    },
+    {
+      "affirmation": 224,
+      "asset": "/assets/affirmations/editorial-original-224.svg",
+      "description": "A new path opening beyond an old stone arch",
+      "review": "pending independent visual and mobile contrast review"
+    }
+  ],
+  "qa": "Artwork paths individually unique; full CI and live verification pending"
+}
