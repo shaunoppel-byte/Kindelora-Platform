@@ -70,3 +70,62 @@
 @media(max-height:600px){
   #brand-film .film-dialog video{max-height:calc(100dvh - 160px)}
 }
+
+/* P1 screenshot regression: portrait video must never push the note below the viewport.
+   Use an actual three-row dialog layout, not just a max-height on the container. */
+#brand-film dialog.film-dialog[open] {
+  position:fixed;
+  inset:0;
+  margin:auto;
+  box-sizing:border-box;
+  display:grid;
+  grid-template-rows:auto minmax(0,1fr) auto;
+  gap:8px;
+  width:min(94vw,720px);
+  height:min(760px,calc(100vh - 36px));
+  height:min(760px,calc(100dvh - 36px));
+  max-height:calc(100dvh - 36px);
+  overflow:hidden;
+  padding:12px;
+}
+#brand-film dialog.film-dialog[open] .film-dialog-head {
+  min-height:44px;
+  padding:0 4px;
+  align-self:center;
+}
+#brand-film dialog.film-dialog[open] video {
+  display:block;
+  box-sizing:border-box;
+  min-width:0;
+  min-height:0;
+  width:100%;
+  height:100%;
+  max-width:100%;
+  max-height:100%;
+  object-fit:contain;
+  border-radius:12px;
+}
+#brand-film dialog.film-dialog[open] .film-dialog-note {
+  box-sizing:border-box;
+  margin:0;
+  padding:4px 5px 2px;
+  font-size:clamp(12px,2.9vw,14px);
+  line-height:1.4;
+  text-align:center;
+  color:#f3d9c8;
+  overflow:visible;
+}
+@media(max-width:650px){
+  #brand-film dialog.film-dialog[open]{
+    width:calc(100vw - 22px);
+    height:calc(100vh - 32px);
+    height:calc(100dvh - 32px);
+    max-height:calc(100dvh - 32px);
+    padding:10px;
+    gap:6px;
+  }
+  #brand-film dialog.film-dialog[open] video{max-height:100%;height:100%}
+  #brand-film .film-frame{margin-block:0;outline:none}
+  #brand-film .film-status{margin-top:8px}
+  #brand-film .film-actions{margin-top:12px}
+}
