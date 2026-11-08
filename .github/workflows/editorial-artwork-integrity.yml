@@ -1,0 +1,17 @@
+name: Editorial artwork integrity
+on:
+  pull_request:
+    paths:
+      - 'assets/affirmations/editorial-*.svg'
+      - 'scripts/check-editorial-svg-artwork.py'
+      - '.github/workflows/editorial-artwork-integrity.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  artwork-integrity:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate original SVG candidates
+        run: python3 scripts/check-editorial-svg-artwork.py
