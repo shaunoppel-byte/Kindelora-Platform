@@ -9,7 +9,7 @@ from collections import defaultdict
 from itertools import combinations
 from pathlib import Path
 
-paths = sorted(Path("content").glob("message-library-v*.json"))
+paths = sorted(Path("content").glob("message-library-v*.json"), key=lambda p: int(re.search(r"v(\\d+)\\.json$", p.name).group(1)))
 items = [m for p in paths for m in json.loads(p.read_text(encoding="utf-8"))["messages"]]
 stop = set("a an the and or of to for in on at from by with as is are was were be been being it its you your yours we our they their that this those these can could may might will would should do does did not no need have has had when while if even still only just something someone anyone anything one some more less than then into through about before after without every each there here what how why who which all another other yourself today tomorrow sometimes often also rather instead".split())
 def tokens(text):
