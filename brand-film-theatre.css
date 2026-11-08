@@ -29,3 +29,44 @@
 #brand-film .film-play[hidden],#brand-film .film-status[hidden]{display:none}
 @media(max-width:650px){#brand-film{padding:62px 18px}#brand-film .film-frame{aspect-ratio:4/5}#brand-film .film-poster{object-position:56% center}#brand-film .film-frame-content{padding:16px}#brand-film .film-frame-title{margin-top:24px}#brand-film .film-actions a{width:100%}#brand-film .film-dialog{padding:8px}#brand-film .film-dialog video{max-height:70vh}}
 @media(prefers-reduced-motion:reduce){#brand-film .film-play{transition:none}#brand-film .film-play:hover{transform:none}}
+
+/* Keep the complete video, header and explanatory note visible inside mobile viewport. */
+#brand-film .film-dialog[open]{
+  box-sizing:border-box;
+  max-height:calc(100vh - 24px);
+  max-height:calc(100dvh - 24px);
+  overflow-y:auto;
+  overscroll-behavior:contain;
+}
+#brand-film .film-dialog-head{flex-shrink:0}
+#brand-film .film-dialog-note{margin:0;line-height:1.5}
+@media(max-width:650px){
+  #brand-film .film-dialog[open]{
+    width:calc(100vw - 24px);
+    max-width:calc(100vw - 24px);
+    max-height:calc(100vh - 24px);
+    max-height:calc(100dvh - 24px);
+    padding:12px;
+    margin:auto;
+    border-radius:18px;
+  }
+  #brand-film .film-dialog-head{padding:2px 2px 10px;min-height:44px}
+  #brand-film .film-close{flex:0 0 44px}
+  #brand-film .film-dialog video{
+    width:100%;
+    height:auto;
+    max-height:calc(100vh - 180px);
+    max-height:calc(100dvh - 180px);
+    object-fit:contain;
+  }
+  #brand-film .film-dialog-note{
+    display:block;
+    padding:12px 3px 4px;
+    font-size:.85rem;
+    line-height:1.5;
+    color:#f3d9c8;
+  }
+}
+@media(max-height:600px){
+  #brand-film .film-dialog video{max-height:calc(100dvh - 160px)}
+}
