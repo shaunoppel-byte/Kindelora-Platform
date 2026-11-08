@@ -2,6 +2,9 @@
 (()=>{'use strict';
 const section=document.getElementById('brand-film');if(!section)return;
 const play=section.querySelector('[data-film-play]'),status=section.querySelector('[data-film-status]'),dialog=section.querySelector('[data-film-dialog]'),video=section.querySelector('video'),close=section.querySelector('[data-film-close]');
+// Move the modal out of the clipped/isolated film section into the document top layer.
+// This also prevents ancestor stacking contexts from constraining mobile playback.
+document.body.appendChild(dialog);
 const source='/kindelora-brand-film.mp4';
 function setStatus(message){status.textContent=message;}
 function showReady(){play.hidden=false;play.disabled=false;play.setAttribute('aria-label','Play the KINDELORA brand film');setStatus('Press play to experience our story. Sound is always your choice.');}
