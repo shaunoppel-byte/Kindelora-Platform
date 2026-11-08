@@ -1,0 +1,46 @@
+{
+  "batch": "2026-11-08-original-scenes-197-200",
+  "status": "awaiting-independent-visual-and-mobile-review",
+  "source": "Four original vector compositions authored for KINDELORA; no external images",
+  "license": "Original artwork, no third-party source",
+  "originalAffirmationTextPreserved": true,
+  "duplicateEntryRemediation": {
+    "before": 424,
+    "after": 400,
+    "duplicateIdsRemoved": 24,
+    "retained": "previously committed editorial artwork entries"
+  },
+  "entries": [
+    {
+      "id": "affirmation-197",
+      "file": "/assets/affirmations/editorial-scene-197.svg",
+      "scene": "outdoor celebration"
+    },
+    {
+      "id": "affirmation-198",
+      "file": "/assets/affirmations/editorial-scene-198.svg",
+      "scene": "sunlit tea by window"
+    },
+    {
+      "id": "affirmation-199",
+      "file": "/assets/affirmations/editorial-scene-199.svg",
+      "scene": "quiet rainy bench"
+    },
+    {
+      "id": "affirmation-200",
+      "file": "/assets/affirmations/editorial-scene-200.svg",
+      "scene": "warm lamp in quiet room"
+    }
+  ],
+  "qa": {
+    "uniqueArtworkPaths": 400,
+    "unreviewedBulkAssignmentsRemaining": 180,
+    "pending": [
+      "CI",
+      "independent aesthetic review",
+      "mobile crop and contrast",
+      "live Cloudflare"
+    ]
+  },
+  "rollback": "Revert PR merge commit."
+}
