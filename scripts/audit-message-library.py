@@ -9,7 +9,7 @@ from collections import defaultdict
 from itertools import combinations
 from pathlib import Path
 
-paths = sorted(Path("content").glob("message-library-v*.json"), key=lambda p: int(re.search(r"v(\\d+)\\.json$", p.name).group(1)))
+paths = sorted(Path("content").glob("message-library-v*.json"), key=lambda p: int(re.search(r"v(\d+)\.json$", p.name).group(1)))
 items = [m for p in paths for m in json.loads(p.read_text(encoding="utf-8"))["messages"]]
 stop = set("a an the and or of to for in on at from by with as is are was were be been being it its you your yours we our they their that this those these can could may might will would should do does did not no need have has had when while if even still only just something someone anyone anything one some more less than then into through about before after without every each there here what how why who which all another other yourself today tomorrow sometimes often also rather instead".split())
 def tokens(text):
@@ -55,7 +55,7 @@ for score,a,b in pairs[:100]:
 lines.extend(["","## Wording requiring attention"])
 lines.extend([f"- {mid}: {label}" for mid,label in flags] or ["- No matches for configured review terms."])
 lines.extend(["","## Release decision","**NOT APPROVED FOR LIVE ROTATION.** Review, revise, and explicitly approve a release manifest first."])
-report="\n".join(lines)+"\\n"
+report="\n".join(lines)+"\n"
 Path("content/EDITORIAL_AUDIT.md").write_text(report,encoding="utf-8")
 print(f"Audit complete: {len(items)} messages; {len(pairs)} advisory overlaps; {len(flags)} wording flags")
 if flags:
