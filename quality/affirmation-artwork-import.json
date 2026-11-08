@@ -1,0 +1,25 @@
+{
+  "note": "Add accessible direct HTTPS sourceUrl for each ORIGINAL image. GitHub Actions cannot fetch sandbox:/ files. Checksums prevent substitution. Do not run until all four sources are populated.",
+  "assets": [
+    {
+      "filename": "growth.webp",
+      "sha256": "2507796a89cbbd4d9634761278b754ecb69566a017f5648197bfdaefc7a48086",
+      "sourceUrl": ""
+    },
+    {
+      "filename": "courage.webp",
+      "sha256": "872433055c44f1f13e564dfba86405bf28bd8729db2208f1791061de4380fa8f",
+      "sourceUrl": ""
+    },
+    {
+      "filename": "balance.webp",
+      "sha256": "133b852bc4c81d6e9a5e5c65972dfc7ef83d1bf21a72accb66508c1676d73015",
+      "sourceUrl": ""
+    },
+    {
+      "filename": "self-worth.webp",
+      "sha256": "3329a0d4b2341c68373f47174eabd1dc4bbc2be9f2d6efa0ffa6ece9f1a6b8be",
+      "sourceUrl": ""
+    }
+  ]
+}

@@ -1,0 +1,55 @@
+{
+  "batch": "01",
+  "releaseStatus": "pending binary asset transfer and visual QA",
+  "origin": "Original AI-generated KINDELORA artwork; local package kindelora_artwork_batch_01.zip",
+  "assets": [
+    {
+      "id": "steady-growth",
+      "filename": "growth.webp",
+      "destination": "/assets/affirmations/growth.webp",
+      "sha256": "2507796a89cbbd4d9634761278b754ecb69566a017f5648197bfdaefc7a48086",
+      "bytes": 196296,
+      "dimensions": [
+        1600,
+        900
+      ],
+      "qaStatus": "pending"
+    },
+    {
+      "id": "quiet-courage",
+      "filename": "courage.webp",
+      "destination": "/assets/affirmations/courage.webp",
+      "sha256": "872433055c44f1f13e564dfba86405bf28bd8729db2208f1791061de4380fa8f",
+      "bytes": 258488,
+      "dimensions": [
+        1600,
+        900
+      ],
+      "qaStatus": "pending"
+    },
+    {
+      "id": "finding-balance",
+      "filename": "balance.webp",
+      "destination": "/assets/affirmations/balance.webp",
+      "sha256": "133b852bc4c81d6e9a5e5c65972dfc7ef83d1bf21a72accb66508c1676d73015",
+      "bytes": 266512,
+      "dimensions": [
+        1600,
+        900
+      ],
+      "qaStatus": "pending"
+    },
+    {
+      "id": "affirmation-225",
+      "filename": "self-worth.webp",
+      "destination": "/assets/affirmations/self-worth.webp",
+      "sha256": "3329a0d4b2341c68373f47174eabd1dc4bbc2be9f2d6efa0ffa6ece9f1a6b8be",
+      "bytes": 260860,
+      "dimensions": [
+        1600,
+        900
+      ],
+      "qaStatus": "pending"
+    }
+  ]
+}

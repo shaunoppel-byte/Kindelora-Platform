@@ -1,0 +1,29 @@
+name: Import verified affirmation artwork binaries
+on:
+  workflow_dispatch:
+permissions:
+  contents: write
+  pull-requests: write
+jobs:
+  import-artwork:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Download and verify original image bytes
+        run: python3 scripts/import-affirmation-artwork.py quality/affirmation-artwork-import.json
+      - name: Create reviewed artwork pull request
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          set -euo pipefail
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          branch="artwork/import-${GITHUB_RUN_ID}"
+          git switch -c "$branch"
+          git add assets/affirmations/
+          if git diff --cached --quiet; then
+            echo "No new artwork to import"; exit 0
+          fi
+          git commit -m "assets: import checksum-verified original affirmation artwork"
+          git push origin "$branch"
+          gh pr create --title "Import verified original affirmation artwork" --body "Binary files fetched by GitHub runner, SHA-256 verified against approved import manifest. Review visual QA and mappings before merge." --base main --head "$branch"
