@@ -5,7 +5,9 @@ const source=fs.readFileSync(new URL('../affirmation-library.js',import.meta.url
 const start=source.indexOf('const items=['),end=source.indexOf('];',start);
 if(start<0||end<0)throw Error('Affirmation catalogue missing');
 const data=source.slice(start,end);
-const get=key=>[...data.matchAll(new RegExp('\\b'+key+':\\s*([\\x22\\x27])([^\\x22\\x27]*?)\\1','g'))].map(x=>x[2]);
+// Match a value using its own quote delimiter; apostrophes inside double-quoted
+// affirmation text must not terminate the value.
+const get=key=>[...data.matchAll(new RegExp('\\b'+key+':\\s*(["\x27])([\\s\\S]*?)\\1','g'))].map(x=>x[2]);
 const ids=get('id'),texts=get('text'),images=get('image'),titles=get('title');
 const repeated=ids.filter((id,i)=>ids.indexOf(id)!==i);
 const errors=[];
