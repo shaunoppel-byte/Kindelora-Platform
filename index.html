@@ -347,4 +347,35 @@ footer{background:#25132e;border-top:2px solid #b99461}
 .platinum-v2-hero .platinum-v2-glow{box-shadow:0 0 60px #e6b97866,0 0 115px #b36d8b44;border-radius:50%}
 .platinum-v2-hero .btn:not(.alt){background:linear-gradient(120deg,#f7e2b6,#e1ae79);color:#29152c}
 .platinum-v2-hero .btn.alt{border-color:#f4d8ad}
+
+/* Featured affirmation cards — deliberate, readable mobile editorial layout.
+   Scoped to the free gallery; preserve all existing download/favourite behavior. */
+#free-affirmations .free-affirmation-grid{align-items:stretch;gap:clamp(12px,2.4vw,24px)}
+#free-affirmations .free-affirmation-card{display:flex;flex-direction:column;min-width:0;border:1px solid #d8b17f;border-radius:20px;background:#fffaf6;box-shadow:0 16px 42px #1008194d;overflow:hidden}
+#free-affirmations .free-affirmation-card .details{display:flex;flex:1;flex-direction:column;min-width:0;padding:clamp(14px,2.5vw,24px);gap:0}
+#free-affirmations .free-affirmation-card h3{margin:0 0 12px;min-height:0;font:700 clamp(1.12rem,2.4vw,1.55rem)/1.2 Georgia,serif;letter-spacing:-.018em;color:#311d38;text-wrap:balance;overflow-wrap:anywhere}
+#free-affirmations .free-affirmation-card .details>p.affirmation-quote{margin:0 0 20px;min-height:0;font:400 clamp(1rem,1.8vw,1.2rem)/1.48 Georgia,serif;color:#422d43;overflow-wrap:break-word}
+#free-affirmations .free-affirmation-card .card-actions{display:grid;grid-template-columns:minmax(0,1fr) 48px;gap:10px;align-items:center;margin-top:auto}
+#free-affirmations .free-affirmation-card .gallery-download{display:flex!important;align-items:center;justify-content:center;box-sizing:border-box;min-width:0;width:100%;min-height:48px;padding:10px 12px;border-radius:999px;font-size:clamp(.79rem,1.5vw,.95rem);line-height:1.25;white-space:normal;overflow-wrap:break-word;text-align:center;background:#462147!important;color:#fff8ef!important;border:1px solid #c49b6c}
+#free-affirmations .free-affirmation-card .gallery-heart{display:inline-flex!important;align-items:center;justify-content:center;box-sizing:border-box;flex:none;width:48px;height:48px;min-height:48px;border-radius:50%;border:1.5px solid #a36c87;background:#fffaf7;color:#743a5a}
+#free-affirmations .free-affirmation-card .fine{margin:14px 0 0!important;font-size:clamp(.78rem,1.3vw,.89rem)!important;line-height:1.45;color:#5c4659}
+#free-affirmations .free-affirmation-card :is(.gallery-download,.gallery-heart):focus-visible{outline:3px solid #8b4c7a;outline-offset:3px}
+@media(min-width:561px) and (max-width:850px){#free-affirmations .free-affirmation-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(min-width:351px) and (max-width:560px){
+ #free-affirmations .free-affirmation-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:12px;max-width:none}
+ #free-affirmations .free-affirmation-card .details{padding:14px 12px 16px}
+ #free-affirmations .free-affirmation-card h3{font-size:clamp(1.04rem,3.9vw,1.25rem);line-height:1.2;margin-bottom:12px}
+ #free-affirmations .free-affirmation-card .details>p.affirmation-quote{font-size:clamp(.91rem,3.2vw,1.04rem);line-height:1.48;margin-bottom:18px}
+ #free-affirmations .free-affirmation-card .card-actions{grid-template-columns:minmax(0,1fr) 42px;gap:7px}
+ #free-affirmations .free-affirmation-card .gallery-download{font-size:clamp(.73rem,2.6vw,.85rem);padding:10px 7px;min-height:46px}
+ #free-affirmations .free-affirmation-card .gallery-heart{width:42px;height:46px;min-height:46px}
+ #free-affirmations .free-affirmation-card .fine{font-size:.8rem!important}
+}
+@media(max-width:350px){
+ #free-affirmations .free-affirmation-grid{grid-template-columns:1fr!important;max-width:430px;margin-inline:auto}
+ #free-affirmations .free-affirmation-card .details{padding:18px}
+ #free-affirmations .free-affirmation-card h3{font-size:1.4rem}
+ #free-affirmations .free-affirmation-card .details>p.affirmation-quote{font-size:1.05rem}
+}
+@media(prefers-reduced-motion:reduce){#free-affirmations .free-affirmation-card{transition:none!important;transform:none!important}}
 </style></body></html>
