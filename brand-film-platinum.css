@@ -1,0 +1,32 @@
+/* KINDELORA platinum film premiere — editorial, cinematic and mobile-first. */
+#brand-film{background:radial-gradient(ellipse at 85% 22%,#75405c 0%,transparent 49%),radial-gradient(ellipse at 12% 80%,#693952 0%,transparent 48%),#211128}
+#brand-film .film-wrap{max-width:1100px}
+#brand-film .film-frame{background:#291a35;border:2px solid #f1c58b;border-radius:clamp(22px,3vw,34px);box-shadow:0 0 0 7px #f4c38c13,0 0 28px #f0b96a42,0 34px 90px #0d0618ad;isolation:isolate}
+#brand-film .film-poster{filter:saturate(1.15) contrast(1.04);object-position:center center}
+#brand-film .film-frame:after{background:linear-gradient(180deg,#130b22ae 0%,#130b2215 30%,#130b2200 55%,#120a20a8 83%,#120a20e8 100%)}
+#brand-film .film-frame-content{justify-content:space-between;padding:clamp(24px,4.5vw,54px) 18px clamp(26px,4vw,50px)}
+#brand-film .film-brand{display:flex;flex-direction:column;align-items:center;gap:8px;color:#ffe6bd;text-shadow:0 3px 24px #150a26;letter-spacing:.25em;text-transform:uppercase;font-size:clamp(1.25rem,3.3vw,2.6rem);font-weight:800}
+#brand-film .film-brand:before{content:"✦";display:block;color:#ffd391;font-size:clamp(2rem,5vw,3.8rem);line-height:1;text-shadow:0 0 18px #ffc776,0 0 38px #ffcb82}
+#brand-film .film-brand small{font-size:clamp(.5rem,1.1vw,.78rem);font-weight:700;letter-spacing:.16em;color:#ffe6d4}
+#brand-film .film-frame-bottom{display:flex;flex-direction:column;align-items:center;gap:10px}
+#brand-film .film-frame-title{margin:0;font-size:clamp(1.25rem,2.6vw,2.2rem);text-shadow:0 2px 18px #140a22}
+#brand-film .film-frame-caption{font-size:clamp(.62rem,1.3vw,.85rem);letter-spacing:.2em;color:#ffda9f}
+#brand-film .film-play{flex-shrink:0;background:linear-gradient(145deg,#ffe0a3,#e7a960);border:3px solid #ffe7b7;box-shadow:0 0 0 12px #ffdd9930,0 0 28px #ffc573a6,0 18px 42px #13081caa;color:#321c36}
+#brand-film .film-play:hover{box-shadow:0 0 0 15px #ffdd9935,0 0 45px #ffc573cf,0 18px 42px #13081caa}
+#brand-film .film-status{color:#f8e2d4}
+#brand-film .film-actions a{box-shadow:0 5px 24px #1a0a2066}
+@media(max-width:650px){
+ #brand-film{padding:52px 16px 65px}
+ #brand-film .film-intro{margin-bottom:24px}
+ #brand-film .film-frame{aspect-ratio:4/5}
+ #brand-film .film-poster{object-position:46% center}
+ #brand-film .film-frame-content{padding:27px 14px 30px}
+ #brand-film .film-brand{font-size:clamp(1.15rem,5vw,1.7rem);letter-spacing:.18em}
+ #brand-film .film-brand small{font-size:.54rem;letter-spacing:.1em}
+ #brand-film .film-play{width:84px;height:84px}
+ #brand-film .film-frame-title{font-size:clamp(1.2rem,5vw,1.7rem)}
+ #brand-film .film-frame-caption{font-size:.6rem;letter-spacing:.13em}
+ #brand-film .film-actions a{min-height:54px}
+}
+@media(max-width:370px){#brand-film .film-brand{font-size:1.05rem}#brand-film .film-brand small{font-size:.46rem}#brand-film .film-frame-caption{font-size:.52rem}}
+@media(prefers-reduced-motion:reduce){#brand-film .film-play{transition:none}}
