@@ -232,3 +232,14 @@
   #brand-film .film-frame > img.film-poster{transform:none}
 }
 
+
+/* Cross-device P1: the approved PNG contains an unwanted secondary gold arc
+   at its extreme right and bottom margins. Fade only those outer margins.
+   The intended inner gold frame is inset farther than these fades. Do not
+   introduce CSS borders, scaling, cropping, or masks on the top/left edges. */
+#brand-film .film-frame > img.film-poster {
+  -webkit-mask-image:linear-gradient(to left,transparent 0%,#000 6.1%,#000 100%),linear-gradient(to top,transparent 0%,#000 3.4%,#000 100%);
+  mask-image:linear-gradient(to left,transparent 0%,#000 6.1%,#000 100%),linear-gradient(to top,transparent 0%,#000 3.4%,#000 100%);
+  -webkit-mask-composite:source-in;
+  mask-composite:intersect;
+}
