@@ -9,7 +9,7 @@
 {id:'purpose',title:'Purpose',text:'Your path is your own. Move toward what matters to you.',tags:'meaning direction clarity',image:'/assets/affirmations/editorial-purpose-candidate.svg'},
 {id:"quiet-courage",title:"Quiet Courage",text:"I can take a brave step without needing to feel fearless.",tags:"courage bravery confidence uncertainty",image:'/assets/affirmations/original-quiet-courage.svg'},
 {id:"gentle-boundaries",title:"Gentle Boundaries",text:"My kindness can include a clear and peaceful no.",tags:"boundaries respect self care",image:'/assets/affirmations/original-gentle-boundaries.svg'},
-{id:"new-beginnings",title:"New Beginnings",text:"I am allowed to begin again, even when the path looks different.",tags:"fresh start renewal change",image:"https://images.unsplash.com/photo-1433086966358-54859d0ed716?auto=format&fit=crop&w=1400&q=85"},
+{id:"new-beginnings",title:"New Beginnings",text:"I am allowed to begin again, even when the path looks different.",tags:"fresh start renewal change",image:"/assets/affirmations/editorial-new-beginnings-gate.svg"},
 {id:"belonging",title:"Belonging",text:"I do not need to become someone else to deserve a place.",tags:"acceptance inclusion belonging",image:'/assets/affirmations/original-belonging.svg'},
 {id:"patience",title:"Patience",text:"I can honour slow progress while still caring about where I am going.",tags:"patience progress perseverance",image:'/assets/affirmations/original-patience.svg'},
 {id:"self-trust",title:"Self-Trust",text:"I can listen to my own wisdom and ask for support when I need it.",tags:"intuition decisions support",image:"https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=85"},
