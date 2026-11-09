@@ -180,3 +180,42 @@
 @media(max-width:650px){
   #brand-film .film-frame{padding:7px;border-radius:20px}
 }
+
+/* P1 desktop screenshot: the source JPG contains its own imperfect gold perimeter.
+   A safety inset preserves that flawed perimeter rather than fixing it.
+   Mask the embedded border with a slight image overscan, then draw ONE continuous
+   four-sided border in CSS, independent of poster dimensions and browser zoom. */
+#brand-film .film-frame{
+  position:relative;
+  isolation:isolate;
+  padding:0;
+  overflow:hidden;
+  border:3px solid #f5cf91;
+  border-radius:clamp(18px,3vw,34px);
+  background:#27142b;
+  box-shadow:0 0 0 2px #4e2943,0 0 0 7px #e6b76e33,0 24px 65px #09020c77;
+}
+#brand-film .film-poster{
+  width:100%;
+  height:auto;
+  display:block;
+  max-width:none;
+  transform:scale(1.075);
+  transform-origin:center;
+  border-radius:0;
+  object-fit:contain;
+}
+#brand-film .film-frame::before{
+  content:"";
+  position:absolute;
+  inset:0;
+  z-index:2;
+  border:1px solid #fff0c4a6;
+  border-radius:inherit;
+  pointer-events:none;
+}
+#brand-film .film-frame-content{z-index:3}
+@media(max-width:650px){
+  #brand-film .film-frame{padding:0;border-width:2px;border-radius:20px}
+  #brand-film .film-poster{transform:scale(1.065)}
+}
