@@ -1,0 +1,18 @@
+{
+  "asset": "assets/affirmations/original-everyday-joy-window.svg",
+  "affirmationId": "everyday-joy",
+  "title": "Everyday Joy",
+  "affirmation": "I can notice one good moment without pretending everything is easy.",
+  "creator": "OpenAI-generated original SVG composition for KINDELORA",
+  "source": "Original vector paths and gradients, no external photos, fonts or stock assets",
+  "license": "Original generated artwork; intended for commercial use by KINDELORA; no third-party asset license required",
+  "created": "2026-11-09",
+  "qa": {
+    "sourceFileCreated": true,
+    "sourceMapping": "pending",
+    "visualUniqueness": "pending independent full-corpus visual review",
+    "mobileContrast": "pending browser review",
+    "deployment": "not deployed"
+  },
+  "rollback": "Restore prior image URL for everyday-joy in affirmation-library.js and remove asset after confirming no other references."
+}
