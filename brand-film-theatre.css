@@ -260,3 +260,47 @@
   #brand-film .film-frame{height:fit-content;border:0;border-radius:clamp(17px,5.4vw,34px);overflow:hidden}
   #brand-film .film-poster{height:auto;width:100%;object-fit:contain}
 }
+
+/* Platinum cinematic frame: one deliberately bold outer frame, not a competing thin keyline.
+   The image's inconsistent embedded corner is hidden behind the unified curved aperture. */
+#brand-film .film-frame{
+  position:relative;
+  display:block;
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  padding:clamp(7px,0.9vw,13px);
+  margin:0 auto;
+  box-sizing:border-box;
+  border:0;
+  border-radius:clamp(54px,7.4vw,112px);
+  overflow:hidden;
+  background:linear-gradient(132deg,#fff0b9 0%,#e7ad55 15%,#fff1c4 32%,#a66a2b 52%,#ffdb82 73%,#fff0c4 89%,#d89c42 100%);
+  box-shadow:0 0 0 2px #fff0c366,0 0 0 8px #efb95d22,0 0 35px #ffcf7973,0 22px 65px #0d0714b8;
+  isolation:isolate;
+}
+#brand-film .film-poster{
+  position:relative;
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:100%;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  padding:0;
+  margin:0;
+  border:0;
+  border-radius:clamp(46px,6.6vw,100px);
+  clip-path:inset(0 round clamp(46px,6.6vw,100px));
+  transform:none;
+  filter:none;
+  box-shadow:none;
+}
+#brand-film .film-frame::before,#brand-film .film-frame::after{content:none;display:none}
+#brand-film .film-frame-content{pointer-events:none;z-index:1}
+#brand-film .film-frame-content .film-play{pointer-events:auto}
+@media(max-width:650px){
+  #brand-film .film-frame{padding:clamp(5px,1.15vw,8px);border:0;border-radius:clamp(26px,7vw,48px);overflow:hidden}
+  #brand-film .film-poster{width:100%;height:auto;border-radius:clamp(21px,6vw,42px);clip-path:inset(0 round clamp(21px,6vw,42px))}
+}
