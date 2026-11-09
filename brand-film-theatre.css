@@ -201,3 +201,26 @@
   #brand-film .film-frame{padding:0;margin:0;border:0;border-radius:0;overflow:visible}
   #brand-film .film-poster{width:100%;height:auto;transform:none}
 }
+
+/* P1: mask malformed source-art corner without cropping brand text.
+   The authored image includes a stray gold arc in its square top-right corner.
+   A unified rounded clip hides that arc; a continuous fine gold keyline follows
+   precisely the same contour. No image scaling or padding. */
+#brand-film .film-frame{
+  position:relative;
+  overflow:hidden;
+  border-radius:clamp(36px,4.5vw,72px);
+  border:2px solid #f3ce8b;
+  box-sizing:border-box;
+  background:#27152e;
+}
+#brand-film .film-poster{
+  width:100%;height:auto;display:block;
+  border-radius:inherit;
+  transform:none;
+}
+#brand-film .film-frame::before,
+#brand-film .film-frame::after{display:none;content:none}
+@media(max-width:650px){
+  #brand-film .film-frame{border-radius:clamp(19px,5vw,30px);border-width:2px;overflow:hidden}
+}
