@@ -224,3 +224,39 @@
 @media(max-width:650px){
   #brand-film .film-frame{border-radius:clamp(19px,5vw,30px);border-width:2px;overflow:hidden}
 }
+
+/* P1 final: the image IS the frame. No independently sized decorative box.
+   Its intrinsic ratio determines the block's height at every viewport. */
+#brand-film .film-frame{
+  display:block;
+  width:100%;
+  height:fit-content;
+  aspect-ratio:auto;
+  padding:0;
+  margin:0;
+  border:0;
+  outline:0;
+  box-shadow:none;
+  background:transparent;
+  border-radius:clamp(22px,5.4%,76px);
+  overflow:hidden;
+}
+#brand-film .film-poster{
+  display:block;
+  position:relative;
+  width:100%;
+  height:auto;
+  max-width:100%;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  border:0;
+  border-radius:inherit;
+  box-shadow:none;
+  transform:none;
+}
+#brand-film .film-frame::before,#brand-film .film-frame::after{display:none;content:none}
+@media(max-width:650px){
+  #brand-film .film-frame{height:fit-content;border:0;border-radius:clamp(17px,5.4vw,34px);overflow:hidden}
+  #brand-film .film-poster{height:auto;width:100%;object-fit:contain}
+}
