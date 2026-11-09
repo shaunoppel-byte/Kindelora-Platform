@@ -159,3 +159,24 @@
   #brand-film .film-frame{aspect-ratio:auto}
   #brand-film .film-poster{height:auto;object-position:center}
 }
+
+/* Desktop screenshot follow-up: the gold perimeter is part of the artwork itself.
+   Never clip its corners against the CSS frame. Give the image a plum safety inset. */
+#brand-film .film-frame{
+  padding:clamp(8px,1.1vw,16px);
+  border-radius:clamp(18px,2.8vw,36px);
+  overflow:visible;
+  background:#29172d;
+  box-shadow:0 24px 65px #09020c77,0 0 0 1px #f1cda75e;
+}
+#brand-film .film-poster{
+  display:block;
+  border-radius:0;
+  width:100%;
+  height:auto;
+  max-width:100%;
+  object-fit:contain;
+}
+@media(max-width:650px){
+  #brand-film .film-frame{padding:7px;border-radius:20px}
+}
