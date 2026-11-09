@@ -129,3 +129,33 @@
   #brand-film .film-status{margin-top:8px}
   #brand-film .film-actions{margin-top:12px}
 }
+
+/* Poster integrity: show the entire authored platinum artwork at its intrinsic ratio.
+   Fixed 16:9 / 4:5 crops the gold border and creates mismatched corners. */
+#brand-film .film-frame{
+  aspect-ratio:auto;
+  height:auto;
+  overflow:hidden;
+  box-sizing:border-box;
+  border:0;
+  border-radius:clamp(16px,2.4vw,28px);
+  background:#241328;
+}
+#brand-film .film-poster{
+  position:relative;
+  inset:auto;
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:100%;
+  object-fit:contain;
+  object-position:center;
+  filter:none;
+}
+#brand-film .film-frame:after{display:none}
+#brand-film .film-frame-content{pointer-events:none}
+#brand-film .film-frame-content .film-play{pointer-events:auto}
+@media(max-width:650px){
+  #brand-film .film-frame{aspect-ratio:auto}
+  #brand-film .film-poster{height:auto;object-position:center}
+}
