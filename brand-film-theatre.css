@@ -130,177 +130,62 @@
   #brand-film .film-actions{margin-top:12px}
 }
 
-/* Poster integrity: show the entire authored platinum artwork at its intrinsic ratio.
-   Fixed 16:9 / 4:5 crops the gold border and creates mismatched corners. */
-#brand-film .film-frame{
-  aspect-ratio:auto;
-  height:auto;
-  overflow:hidden;
+/* Single authoritative film-frame implementation (replaces all historical overrides).
+   The JPEG includes an uneven gold line near its edges. A substantial, consistently
+   rounded overlay conceals that baked-in line while preserving the image's ratio. */
+#brand-film .film-frame {
+  position:relative;
+  display:block;
   box-sizing:border-box;
-  border:0;
-  border-radius:clamp(16px,2.4vw,28px);
-  background:#241328;
-}
-#brand-film .film-poster{
-  position:relative;
-  inset:auto;
-  display:block;
-  width:100%;
-  height:auto;
-  max-width:100%;
-  object-fit:contain;
-  object-position:center;
-  filter:none;
-}
-#brand-film .film-frame:after{display:none}
-#brand-film .film-frame-content{pointer-events:none}
-#brand-film .film-frame-content .film-play{pointer-events:auto}
-@media(max-width:650px){
-  #brand-film .film-frame{aspect-ratio:auto}
-  #brand-film .film-poster{height:auto;object-position:center}
-}
-
-/* Final poster alignment: artwork already includes its complete gold border.
-   Do not add a second frame, padding, zoom, or pseudo-element border.
-   The outside wrapper must adopt the exact dimensions of the image. */
-#brand-film .film-frame{
-  display:block;
-  position:relative;
   width:100%;
   height:auto;
   aspect-ratio:auto;
-  padding:0;
-  margin:0;
-  border:0;
-  border-radius:0;
-  overflow:visible;
-  background:transparent;
-  box-shadow:none;
-  outline:0;
-  isolation:auto;
-}
-#brand-film .film-poster{
-  position:relative;
-  inset:auto;
-  display:block;
-  width:100%;
-  height:auto;
-  max-width:100%;
-  object-fit:contain;
-  object-position:center;
-  transform:none;
-  filter:none;
-  border:0;
-  border-radius:0;
-}
-#brand-film .film-frame::before,
-#brand-film .film-frame::after{content:none;display:none}
-#brand-film .film-frame-content{pointer-events:none;z-index:1}
-#brand-film .film-frame-content .film-play{pointer-events:auto}
-@media(max-width:650px){
-  #brand-film .film-frame{padding:0;margin:0;border:0;border-radius:0;overflow:visible}
-  #brand-film .film-poster{width:100%;height:auto;transform:none}
-}
-
-/* P1: mask malformed source-art corner without cropping brand text.
-   The authored image includes a stray gold arc in its square top-right corner.
-   A unified rounded clip hides that arc; a continuous fine gold keyline follows
-   precisely the same contour. No image scaling or padding. */
-#brand-film .film-frame{
-  position:relative;
-  overflow:hidden;
-  border-radius:clamp(36px,4.5vw,72px);
-  border:2px solid #f3ce8b;
-  box-sizing:border-box;
-  background:#27152e;
-}
-#brand-film .film-poster{
-  width:100%;height:auto;display:block;
-  border-radius:inherit;
-  transform:none;
-}
-#brand-film .film-frame::before,
-#brand-film .film-frame::after{display:none;content:none}
-@media(max-width:650px){
-  #brand-film .film-frame{border-radius:clamp(19px,5vw,30px);border-width:2px;overflow:hidden}
-}
-
-/* P1 final: the image IS the frame. No independently sized decorative box.
-   Its intrinsic ratio determines the block's height at every viewport. */
-#brand-film .film-frame{
-  display:block;
-  width:100%;
-  height:fit-content;
-  aspect-ratio:auto;
-  padding:0;
-  margin:0;
-  border:0;
-  outline:0;
-  box-shadow:none;
-  background:transparent;
-  border-radius:clamp(22px,5.4%,76px);
-  overflow:hidden;
-}
-#brand-film .film-poster{
-  display:block;
-  position:relative;
-  width:100%;
-  height:auto;
-  max-width:100%;
-  aspect-ratio:auto;
-  object-fit:contain;
-  object-position:center;
-  border:0;
-  border-radius:inherit;
-  box-shadow:none;
-  transform:none;
-}
-#brand-film .film-frame::before,#brand-film .film-frame::after{display:none;content:none}
-@media(max-width:650px){
-  #brand-film .film-frame{height:fit-content;border:0;border-radius:clamp(17px,5.4vw,34px);overflow:hidden}
-  #brand-film .film-poster{height:auto;width:100%;object-fit:contain}
-}
-
-/* Platinum cinematic frame: one deliberately bold outer frame, not a competing thin keyline.
-   The image's inconsistent embedded corner is hidden behind the unified curved aperture. */
-#brand-film .film-frame{
-  position:relative;
-  display:block;
-  width:100%;
-  height:auto;
-  aspect-ratio:auto;
-  padding:clamp(7px,0.9vw,13px);
   margin:0 auto;
-  box-sizing:border-box;
+  padding:0;
   border:0;
-  border-radius:clamp(54px,7.4vw,112px);
+  border-radius:clamp(42px,6.4vw,92px);
   overflow:hidden;
-  background:linear-gradient(132deg,#fff0b9 0%,#e7ad55 15%,#fff1c4 32%,#a66a2b 52%,#ffdb82 73%,#fff0c4 89%,#d89c42 100%);
-  box-shadow:0 0 0 2px #fff0c366,0 0 0 8px #efb95d22,0 0 35px #ffcf7973,0 22px 65px #0d0714b8;
   isolation:isolate;
+  background:#2b1730;
+  box-shadow:0 0 0 2px #ffe2a6,0 0 0 8px #e5b96430,0 0 34px #f3c87565,0 25px 65px #0b0612a6;
 }
-#brand-film .film-poster{
-  position:relative;
+#brand-film .film-poster {
   display:block;
+  position:relative;
+  inset:auto;
+  box-sizing:border-box;
   width:100%;
   height:auto;
   max-width:100%;
   aspect-ratio:auto;
   object-fit:contain;
   object-position:center;
-  padding:0;
   margin:0;
+  padding:0;
   border:0;
-  border-radius:clamp(46px,6.6vw,100px);
-  clip-path:inset(0 round clamp(46px,6.6vw,100px));
+  border-radius:0;
+  clip-path:none;
   transform:none;
   filter:none;
-  box-shadow:none;
 }
-#brand-film .film-frame::before,#brand-film .film-frame::after{content:none;display:none}
-#brand-film .film-frame-content{pointer-events:none;z-index:1}
-#brand-film .film-frame-content .film-play{pointer-events:auto}
-@media(max-width:650px){
-  #brand-film .film-frame{padding:clamp(5px,1.15vw,8px);border:0;border-radius:clamp(26px,7vw,48px);overflow:hidden}
-  #brand-film .film-poster{width:100%;height:auto;border-radius:clamp(21px,6vw,42px);clip-path:inset(0 round clamp(21px,6vw,42px))}
+#brand-film .film-frame::before {content:none;display:none}
+#brand-film .film-frame::after {
+  content:"";
+  display:block;
+  position:absolute;
+  z-index:3;
+  inset:0;
+  box-sizing:border-box;
+  pointer-events:none;
+  border:clamp(22px,3.15vw,45px) solid #e7b45c;
+  border-radius:inherit;
+  background:transparent;
+  box-shadow:inset 0 0 0 2px #fff1bd, inset 0 0 15px #fff1bc80,0 0 0 2px #fff1bd;
+  opacity:1;
+}
+#brand-film .film-frame-content {z-index:4;pointer-events:none}
+#brand-film .film-frame-content .film-play {pointer-events:auto}
+@media(max-width:650px) {
+  #brand-film .film-frame {border-radius:clamp(22px,7vw,44px)}
+  #brand-film .film-frame::after {border-width:clamp(9px,2.5vw,16px)}
 }
