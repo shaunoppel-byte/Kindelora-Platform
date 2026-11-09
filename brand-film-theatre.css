@@ -130,9 +130,9 @@
   #brand-film .film-actions{margin-top:12px}
 }
 
-/* Single authoritative film-frame implementation (replaces all historical overrides).
-   The JPEG includes an uneven gold line near its edges. A substantial, consistently
-   rounded overlay conceals that baked-in line while preserving the image's ratio. */
+/* P1: the gold frame in the source JPEG is asymmetric. Crop it completely from
+   view (without changing the source file), then draw exactly one independent
+   uniform cinematic border. Image and frame share the same layout box. */
 #brand-film .film-frame {
   position:relative;
   display:block;
@@ -143,20 +143,19 @@
   margin:0 auto;
   padding:0;
   border:0;
-  border-radius:clamp(42px,6.4vw,92px);
+  border-radius:clamp(32px,4.8vw,64px);
   overflow:hidden;
   isolation:isolate;
-  background:#2b1730;
-  box-shadow:0 0 0 2px #ffe2a6,0 0 0 8px #e5b96430,0 0 34px #f3c87565,0 25px 65px #0b0612a6;
+  background:#241328;
+  box-shadow:0 0 0 2px #fff1c6,0 0 0 8px #e9b95d38,0 0 36px #f8c36a85,0 26px 65px #09040db3;
 }
 #brand-film .film-poster {
-  display:block;
   position:relative;
   inset:auto;
-  box-sizing:border-box;
+  display:block;
   width:100%;
-  height:auto;
   max-width:100%;
+  height:auto;
   aspect-ratio:auto;
   object-fit:contain;
   object-position:center;
@@ -165,8 +164,11 @@
   border:0;
   border-radius:0;
   clip-path:none;
-  transform:none;
   filter:none;
+  /* Crops ~5.4% off each edge, including ALL four sides of the
+     asymmetrically bordered source artwork. */
+  transform:scale(1.12);
+  transform-origin:center center;
 }
 #brand-film .film-frame::before {content:none;display:none}
 #brand-film .film-frame::after {
@@ -177,15 +179,15 @@
   inset:0;
   box-sizing:border-box;
   pointer-events:none;
-  border:clamp(22px,3.15vw,45px) solid #e7b45c;
+  border:clamp(8px,1vw,14px) solid #f1c56e;
   border-radius:inherit;
   background:transparent;
-  box-shadow:inset 0 0 0 2px #fff1bd, inset 0 0 15px #fff1bc80,0 0 0 2px #fff1bd;
+  box-shadow:inset 0 0 0 2px #fff4c9,inset 0 0 12px #ffebae99,0 0 0 1px #fff0c0;
   opacity:1;
 }
 #brand-film .film-frame-content {z-index:4;pointer-events:none}
 #brand-film .film-frame-content .film-play {pointer-events:auto}
 @media(max-width:650px) {
-  #brand-film .film-frame {border-radius:clamp(22px,7vw,44px)}
-  #brand-film .film-frame::after {border-width:clamp(9px,2.5vw,16px)}
+  #brand-film .film-frame {border-radius:clamp(22px,7vw,42px)}
+  #brand-film .film-frame::after {border-width:clamp(6px,1.8vw,9px)}
 }
