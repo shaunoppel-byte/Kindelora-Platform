@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-10",
+  "affirmationId": "steady-growth",
+  "title": "Steady Growth",
+  "sourceAsset": "assets/affirmations/original-steady-growth-20261110.svg",
+  "previousImage": "https://images.unsplash.com/photo-1499750310107-5fef28a66643?auto=format&fit=crop&w=1400&q=85",
+  "license": "Original SVG authored for KINDELORA in this delivery run; no third-party imagery, fonts or paid assets embedded.",
+  "editorialTextChanged": false,
+  "composition": "Olive sapling beside an open sketchbook in a purple-and-gold dawn-lit room; growth through learning.",
+  "verified": [
+    "SVG source committed to repository",
+    "Affirmation image mapping updated without text change"
+  ],
+  "pending": [
+    "Full 400-entry integrity and visual duplicate audit",
+    "Mobile rendering and overlay contrast review",
+    "Relevant GitHub Actions CI",
+    "Independent artwork acceptance",
+    "Cloudflare live deployment"
+  ],
+  "rollback": "Revert this branch's merge commit if merged; original image URL is documented in previousImage.",
+  "releaseApproved": false
+}
