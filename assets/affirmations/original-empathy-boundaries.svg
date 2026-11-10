@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" role="img" aria-label="Two neighboring gardens divided by a graceful low stone wall, both blooming in their own space">
+<defs><linearGradient id="dusk" x2="0" y2="1"><stop stop-color="#242044"/><stop offset=".55" stop-color="#725878"/><stop offset="1" stop-color="#d9aa89"/></linearGradient><linearGradient id="ground" x2="0" y2="1"><stop stop-color="#39494d"/><stop offset="1" stop-color="#182b34"/></linearGradient></defs>
+<rect width="800" height="1100" fill="url(#dusk)"/><circle cx="575" cy="235" r="105" fill="#e6c69e" opacity=".7"/><circle cx="575" cy="235" r="140" fill="none" stroke="#e8cda9" stroke-width="3" opacity=".28"/>
+<path d="M0 640Q175 520 360 632Q570 515 800 610V1100H0Z" fill="url(#ground)"/><path d="M0 820Q165 760 355 805Q570 720 800 800V1100H0Z" fill="#28383c"/>
+<path d="M386 695Q399 640 417 695L437 1100H366Z" fill="#8f7a76"/><path d="M380 735H428M377 815H431M372 895H435M368 975H438" stroke="#e3c3a2" stroke-width="9"/>
+<g fill="none" stroke-linecap="round"><path d="M165 900Q130 720 188 575M240 910Q265 700 290 610M610 910Q600 720 560 590M700 900Q730 730 660 620" stroke="#6f886b" stroke-width="12"/><path d="M175 760Q85 700 108 630M265 775Q350 725 341 670M596 780Q510 710 502 650M692 785Q770 725 745 670" stroke="#799b79" stroke-width="8"/></g>
+<g fill="#e8b4a9"><circle cx="188" cy="575" r="28"/><circle cx="290" cy="610" r="24"/><circle cx="108" cy="630" r="19"/></g><g fill="#d4b8df"><circle cx="560" cy="590" r="28"/><circle cx="660" cy="620" r="25"/><circle cx="745" cy="670" r="20"/></g>
+<g fill="#f6d5a4"><circle cx="188" cy="575" r="9"/><circle cx="290" cy="610" r="8"/><circle cx="108" cy="630" r="7"/><circle cx="560" cy="590" r="9"/><circle cx="660" cy="620" r="8"/><circle cx="745" cy="670" r="7"/></g>
+<path d="M0 1030Q220 990 390 1035Q600 995 800 1030V1100H0Z" fill="#1b2b34"/>
+</svg>
