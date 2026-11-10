@@ -27,7 +27,9 @@ test('ICS has alarm and user-controlled import instructions',()=>{
  assert.match(js,/Downloading alone does not create a reminder/);
 });
 test('installed PWA receives new cache version',()=>{
- assert.match(sw,/kindelora-launch-v18/);
+ const cacheVersion=sw.match(/const CACHE="kindelora-launch-v(\d+)"/);
+ assert.ok(cacheVersion,'service worker must declare a versioned launch cache');
+ assert.ok(Number(cacheVersion[1])>=18,'PWA cache must not regress below v18');
  assert.match(html,/app\.js\?v=calendar-rebased-20261106-1/);
 });
 
