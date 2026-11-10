@@ -1,4 +1,4 @@
-const CACHE="kindelora-launch-v18";
+const CACHE="kindelora-launch-v19";
 const ASSETS=["/","/index.html","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/message-catalogue.json","/manifest.webmanifest","/icon.svg","/sunrise-landscape.svg","/morning-light.svg","/calm-moment.svg","/reflect-grow.svg","/privacy.html","/terms.html"];
 self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",event=>{event.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith("kindelora-launch-")&&key!==CACHE).map(key=>caches.delete(key)))),self.clients.claim()]))});
@@ -12,6 +12,13 @@ self.addEventListener("fetch",event=>{
  }
  if(["/message-catalogue.json","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/manifest.webmanifest","/icon.svg","/privacy.html","/terms.html"].includes(path)){
   event.respondWith(fetch(request).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(path,copy)))}return response}).catch(()=>caches.match(path)));
+  return;
+ }
+ // Stylesheets and film imagery must not be pinned to stale cache entries.
+ // Network-first keeps online refreshes in sync with Cloudflare deployments;
+ // the previously fetched asset remains available when offline.
+ if(request.destination==="style" || (request.destination==="image" && /film|poster|golden/i.test(path))){
+  event.respondWith(fetch(request).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(request,copy)))}return response}).catch(()=>caches.match(request)));
   return;
  }
  event.respondWith(caches.match(request).then(cached=>cached||fetch(request).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(request,copy)))}return response})));
