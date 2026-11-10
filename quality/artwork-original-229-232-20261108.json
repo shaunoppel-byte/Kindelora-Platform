@@ -1,0 +1,40 @@
+{
+  "batch": "2026-11-08-original-229-232",
+  "status": "awaiting-independent-visual-acceptance",
+  "artworkType": "Original authored SVG vector compositions",
+  "license": "Original artwork authored for KINDELORA; no third-party assets or fonts embedded",
+  "items": [
+    {
+      "id": "affirmation-229",
+      "path": "/assets/affirmations/original/affirmation-229-editorial.svg",
+      "visual": "Contemplative figure with slow breath motifs",
+      "theme": "pausing"
+    },
+    {
+      "id": "affirmation-230",
+      "path": "/assets/affirmations/original/affirmation-230-editorial.svg",
+      "visual": "Window with sunset landscape and horizon",
+      "theme": "pausing"
+    },
+    {
+      "id": "affirmation-231",
+      "path": "/assets/affirmations/original/affirmation-231-editorial.svg",
+      "visual": "Repaired clay vessel with golden seams",
+      "theme": "mistakes"
+    },
+    {
+      "id": "affirmation-232",
+      "path": "/assets/affirmations/original/affirmation-232-editorial.svg",
+      "visual": "Open journal with notes and a positive checkmark",
+      "theme": "mistakes"
+    }
+  ],
+  "qa": {
+    "sourceMappings": "4 replacements committed; affirmation texts unchanged",
+    "visualAcceptance": "pending",
+    "mobileCropping": "pending",
+    "contrast": "pending",
+    "liveDeployment": "not verified"
+  },
+  "rollback": "Revert the PR merge commit to restore prior artwork mappings."
+}
