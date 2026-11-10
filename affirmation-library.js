@@ -239,7 +239,7 @@
 {id:"affirmation-238",title:"Feedback — Reflection",text:"Helpful feedback can guide me without defining me.",tags:"feedback reflection",image:'/assets/affirmations/bulk-20261108/affirmation-238.svg'},
 {id:"affirmation-239",title:"Empathy — Intention",text:"I can remember that others have unseen concerns.",tags:"empathy intention",image:'/assets/affirmations/original-empathy-unseen-concerns.svg'},
 {id:"affirmation-240",title:"Empathy — Reflection",text:"Understanding someone does not require abandoning my boundaries.",tags:"empathy reflection",image:'/assets/affirmations/original-empathy-boundaries.svg'},
-{id:"affirmation-241",title:"Sustainability — Intention",text:"I can choose a rhythm I can maintain.",tags:"sustainability intention",image:'/assets/affirmations/bulk-20261108/affirmation-241.svg'},
+{id:"affirmation-241",title:"Sustainability — Intention",text:"I can choose a rhythm I can maintain.",tags:"sustainability intention",image:'/assets/affirmations/original/affirmation-241-sustainable-rhythm.svg'},
 {id:"affirmation-242",title:"Sustainability — Reflection",text:"Steady effort serves me better than constant urgency.",tags:"sustainability reflection",image:'/assets/affirmations/bulk-20261108/affirmation-242.svg'},
 {id:"affirmation-243",title:"Trade-offs — Intention",text:"I can acknowledge that difficult choices involve values.",tags:"trade-offs intention",image:'/assets/affirmations/bulk-20261108/affirmation-243.svg'},
 {id:"affirmation-244",title:"Trade-offs — Reflection",text:"I can decide thoughtfully without demanding a perfect option.",tags:"trade-offs reflection",image:'/assets/affirmations/bulk-20261108/affirmation-244.svg'},
