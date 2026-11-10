@@ -1,0 +1,22 @@
+{
+  "date": "2026-11-09",
+  "baseCommit": "86d09a7beaac926f105901abe6f55e9b91cc124c",
+  "source": "Original hand-authored SVG vector artwork created for KINDELORA; no external assets, stock images, fonts, or paid services",
+  "license": "Original commissioned-by-founder project artwork; no third-party source material",
+  "items": [
+    {
+      "affirmationId": "self-trust",
+      "path": "/assets/affirmations/editorial-self-trust-lighthouse-20261109.svg",
+      "replaced": "https://images.unsplash.com/photo-1470770841072-f978cf4d019e?auto=format&fit=crop&w=1400&q=85",
+      "qa": "Source mapping and SVG structural inspection only; browser rendering, mobile contrast, visual similarity and independent approval pending"
+    },
+    {
+      "affirmationId": "hopeful-rest",
+      "path": "/assets/affirmations/editorial-rest-window-20261109.svg",
+      "replaced": "https://images.unsplash.com/photo-1470252649378-9c29740c9fa8?auto=format&fit=crop&w=1400&q=85",
+      "qa": "Source mapping and SVG structural inspection only; browser rendering, mobile contrast, visual similarity and independent approval pending"
+    }
+  ],
+  "rollback": "Revert this PR to restore previous image assignments. Original affirmation text remains unchanged.",
+  "releaseStatus": "editorial-only pending independent visual QA and full CI"
+}
