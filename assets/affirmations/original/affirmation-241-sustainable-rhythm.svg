@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" role="img" aria-label="A quiet terraced hillside with a winding path and one warmly lit cottage at dawn">
+<defs>
+<linearGradient id="sky" x2=".2" y2="1"><stop stop-color="#140f30"/><stop offset=".44" stop-color="#43345f"/><stop offset=".82" stop-color="#c58c85"/><stop offset="1" stop-color="#edc79b"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#ffe2a8" stop-opacity=".88"/><stop offset=".55" stop-color="#f3c497" stop-opacity=".35"/><stop offset="1" stop-color="#f3c497" stop-opacity="0"/></radialGradient>
+<linearGradient id="hill" x2="0" y2="1"><stop stop-color="#47515c"/><stop offset="1" stop-color="#172e3a"/></linearGradient>
+<linearGradient id="path" x2="1" y2="1"><stop stop-color="#e5bd91"/><stop offset="1" stop-color="#987c77"/></linearGradient>
+<linearGradient id="shade" x2="0" y2="1"><stop stop-color="#110f29" stop-opacity=".26"/><stop offset=".65" stop-color="#0d172b" stop-opacity=".07"/><stop offset="1" stop-color="#090e20" stop-opacity=".7"/></linearGradient>
+</defs>
+<rect width="800" height="1100" fill="url(#sky)"/>
+<circle cx="560" cy="415" r="285" fill="url(#glow)"/>
+<circle cx="560" cy="416" r="51" fill="#f6d6a7" opacity=".8"/>
+<path d="M0 570Q170 500 325 555T800 530V1100H0Z" fill="#63586a" opacity=".65"/>
+<path d="M0 635Q210 557 370 633T800 599V1100H0Z" fill="#465568"/>
+<path d="M0 742Q183 647 368 725T800 664V1100H0Z" fill="url(#hill)"/>
+<path d="M0 840Q196 726 414 818T800 753V1100H0Z" fill="#294653"/>
+<path d="M0 943Q210 833 400 908T800 839V1100H0Z" fill="#1c3945"/>
+<path d="M366 1100Q489 1027 486 964Q483 929 406 914Q337 900 359 869Q382 838 513 821Q589 808 596 770" fill="none" stroke="#ad8c78" stroke-width="59" stroke-linecap="round" opacity=".38"/>
+<path d="M366 1100Q489 1027 486 964Q483 929 406 914Q337 900 359 869Q382 838 513 821Q589 808 596 770" fill="none" stroke="url(#path)" stroke-width="31" stroke-linecap="round"/>
+<g transform="translate(582 701)"><path d="M-56 33L0-11L56 33V99H-56Z" fill="#263443"/><path d="M-69 35L0-25L69 35" fill="none" stroke="#9c7e77" stroke-width="15" stroke-linejoin="round"/><rect x="-17" y="50" width="32" height="34" rx="2" fill="#f5c785"/><rect x="-17" y="50" width="32" height="34" fill="none" stroke="#b08a6b" stroke-width="5"/><rect x="33" y="49" width="15" height="49" fill="#1a2835"/></g>
+<g fill="none" stroke="#a6a47d" stroke-width="3" opacity=".6"><path d="M75 857l-13-31m13 31 15-20M118 842l-9-21m9 21 11-18M685 853l-11-30m11 30 15-22M714 842l-7-20m7 20 12-18M195 980l-11-28m11 28 17-21"/></g>
+<g fill="#e8c39e" opacity=".48"><circle cx="118" cy="202" r="2"/><circle cx="202" cy="314" r="1.7"/><circle cx="676" cy="178" r="1.8"/><circle cx="705" cy="293" r="1.2"/></g>
+<rect width="800" height="1100" fill="url(#shade)"/>
+</svg>

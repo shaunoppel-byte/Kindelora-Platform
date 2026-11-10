@@ -1,0 +1,19 @@
+{
+  "date": "2026-11-09",
+  "affirmationId": "connection",
+  "title": "Meaningful Connection",
+  "textUnchanged": true,
+  "asset": "/assets/affirmations/original-meaningful-connection-20261109.svg",
+  "authoring": "Original manually authored SVG scene generated for KINDELORA in this run; no third-party imagery, fonts, or paid assets",
+  "license": "Original work contributed for KINDELORA commercial web/app use; no external source licenses",
+  "visualConcept": "Two people joining hands across an illuminated garden bridge at dusk, warm plum and gold palette",
+  "verification": {
+    "assetCommitted": true,
+    "sourceMappingCommitted": true,
+    "fullLibraryPerceptualUniqueness": "pending",
+    "mobileCropContrast": "pending",
+    "CI": "pending",
+    "cloudflareDeployment": "not performed"
+  },
+  "rollback": "Revert the PR merge commit to restore the previous image mapping and remove the SVG."
+}
