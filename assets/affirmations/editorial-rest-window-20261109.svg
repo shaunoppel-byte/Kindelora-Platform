@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1100" role="img" aria-label="An empty reading chair beside a window overlooking a quiet dawn garden">
+<defs><linearGradient id="wall" x2="1" y2="1"><stop stop-color="#342541"/><stop offset="1" stop-color="#73556d"/></linearGradient><linearGradient id="morning" x2="0" y2="1"><stop stop-color="#f5c69c"/><stop offset="1" stop-color="#c9b6ad"/></linearGradient><linearGradient id="floor" x2="0" y2="1"><stop stop-color="#54404b"/><stop offset="1" stop-color="#261d31"/></linearGradient></defs>
+<path fill="url(#wall)" d="M0 0h800v1100H0z"/><rect x="90" y="135" width="610" height="630" rx="13" fill="#211d32"/><rect x="112" y="157" width="566" height="584" fill="url(#morning)"/>
+<path fill="#938e86" d="M112 525q160-85 290-15t276-70v301H112z"/><path fill="#52675d" d="M112 600q130-60 230-10t336-45v196H112z"/>
+<path fill="#394c46" d="M150 741V555l28-54 21 57v183zm420 0V522l31-77 23 69v227z"/><path fill="#263d3d" d="M112 700q150-35 270-7t296-40v88H112z"/>
+<path stroke="#e5c4a6" stroke-width="20" d="M395 157v584M112 441h566"/><path fill="#b89b8c" d="M90 746h610v24H90z"/>
+<path fill="url(#floor)" d="M0 770h800v330H0z"/><path fill="#dfc1a0" opacity=".13" d="M130 770h530l140 330H0z"/>
+<path fill="#786075" d="M200 835q0-118 105-120h76q100 0 100 120v105H200z"/><path fill="#aa8192" d="M218 825q0-91 92-91h64q85 0 85 91v105H218z"/><path fill="#4c394e" d="M202 911h284v70H202z"/><path fill="#372d3e" d="M224 973h18v98h-18zm222 0h18v98h-18z"/>
+<path fill="#d5ac8f" d="M500 876h132v16H500z"/><path fill="#594353" d="M513 891h12v150h-12zm94 0h12v150h-12z"/><path fill="#e7d3b6" d="M545 846h50v31h-50z"/><path fill="#c9aa93" d="M552 839h35v9h-35z"/><path fill="none" stroke="#d8c6b0" stroke-opacity=".55" stroke-width="4" d="M105 1080q170-38 340-8"/>
+</svg>

@@ -129,3 +129,117 @@
   #brand-film .film-status{margin-top:8px}
   #brand-film .film-actions{margin-top:12px}
 }
+
+/* P1: the gold frame in the source JPEG is asymmetric. Crop it completely from
+   view (without changing the source file), then draw exactly one independent
+   uniform cinematic border. Image and frame share the same layout box. */
+#brand-film .film-frame {
+  position:relative;
+  display:block;
+  box-sizing:border-box;
+  width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  margin:0 auto;
+  padding:0;
+  border:0;
+  border-radius:clamp(32px,4.8vw,64px);
+  overflow:hidden;
+  isolation:isolate;
+  background:#241328;
+  box-shadow:0 0 0 2px #fff1c6,0 0 0 8px #e9b95d38,0 0 36px #f8c36a85,0 26px 65px #09040db3;
+}
+#brand-film .film-poster {
+  position:relative;
+  inset:auto;
+  display:block;
+  width:100%;
+  max-width:100%;
+  height:auto;
+  aspect-ratio:auto;
+  object-fit:contain;
+  object-position:center;
+  margin:0;
+  padding:0;
+  border:0;
+  border-radius:0;
+  clip-path:none;
+  filter:none;
+  /* Crops ~5.4% off each edge, including ALL four sides of the
+     asymmetrically bordered source artwork. */
+  transform:scale(1.12);
+  transform-origin:center center;
+}
+#brand-film .film-frame::before {content:none;display:none}
+#brand-film .film-frame::after {
+  content:"";
+  display:block;
+  position:absolute;
+  z-index:3;
+  inset:0;
+  box-sizing:border-box;
+  pointer-events:none;
+  border:clamp(8px,1vw,14px) solid #f1c56e;
+  border-radius:inherit;
+  background:transparent;
+  box-shadow:inset 0 0 0 2px #fff4c9,inset 0 0 12px #ffebae99,0 0 0 1px #fff0c0;
+  opacity:1;
+}
+#brand-film .film-frame-content {z-index:4;pointer-events:none}
+#brand-film .film-frame-content .film-play {pointer-events:auto}
+@media(max-width:650px) {
+  #brand-film .film-frame {border-radius:clamp(22px,7vw,42px)}
+  #brand-film .film-frame::after {border-width:clamp(6px,1.8vw,9px)}
+}
+
+/* P1 root-cause correction: the poster artwork already contains its own complete
+   gold border. Never enlarge it or paint a second border on top. Its intrinsic
+   dimensions define the frame, so all four original corners remain aligned. */
+#brand-film .film-frame {
+  aspect-ratio:auto;
+  height:auto;
+  width:100%;
+  border:0;
+  border-radius:0;
+  overflow:visible;
+  background:transparent;
+  box-shadow:0 24px 65px #09040d85;
+  isolation:isolate;
+}
+#brand-film .film-frame > img.film-poster {
+  position:relative;
+  inset:auto;
+  display:block;
+  width:100%;
+  height:auto;
+  max-width:100%;
+  object-fit:contain;
+  transform:none;
+  clip-path:none;
+  border:0;
+  border-radius:0;
+  filter:none;
+}
+#brand-film .film-frame::before,
+#brand-film .film-frame::after {
+  content:none !important;
+  display:none !important;
+  border:0 !important;
+  box-shadow:none !important;
+}
+@media(max-width:650px){
+  #brand-film .film-frame{border-radius:0}
+  #brand-film .film-frame > img.film-poster{transform:none}
+}
+
+
+/* Cross-device P1: the approved PNG contains an unwanted secondary gold arc
+   at its extreme right and bottom margins. Fade only those outer margins.
+   The intended inner gold frame is inset farther than these fades. Do not
+   introduce CSS borders, scaling, cropping, or masks on the top/left edges. */
+#brand-film .film-frame > img.film-poster {
+  -webkit-mask-image:linear-gradient(to left,transparent 0%,#000 6.1%,#000 100%),linear-gradient(to top,transparent 0%,#000 3.4%,#000 100%);
+  mask-image:linear-gradient(to left,transparent 0%,#000 6.1%,#000 100%),linear-gradient(to top,transparent 0%,#000 3.4%,#000 100%);
+  -webkit-mask-composite:source-in;
+  mask-composite:intersect;
+}
