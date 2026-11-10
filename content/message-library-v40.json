@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "batch": 40,
-  "editorial_note": "20 original situational editorial drafts across 10 themes. Not public. Full-corpus cross-batch and human sensitivity review required before release; batch 39 remains a separate open PR.",
+  "editorial_note": "50 original situational editorial drafts across 10 themes (5 per theme). Not public. Full-corpus cross-batch semantic and independent sensitivity review required before release; batch 39 remains separate.",
   "messages": [
     {
       "id": "KDL-WHEN-A-SHARED-PROJECT-ENDS-001",
@@ -162,6 +162,246 @@
       "tone": "warm-grounded",
       "status": "editorial-review",
       "text": "When a journey takes an unexpected turn, a practical next step may be enough for the moment. You need not turn every inconvenience into an adventure."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PROJECT-ENDS-003",
+      "theme": "when_a_shared_project_ends",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The calendar no longer holds those weekly meetings, but the skills you practised together have not disappeared with them."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PROJECT-ENDS-004",
+      "theme": "when_a_shared_project_ends",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you feel unsure what comes after a long collaboration, it may help to write down what the experience taught you before choosing another commitment."
+    },
+    {
+      "id": "KDL-WHEN-A-SHARED-PROJECT-ENDS-005",
+      "theme": "when_a_shared_project_ends",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can thank someone for a season of working together without promising that the connection will stay exactly the same."
+    },
+    {
+      "id": "KDL-WHEN-A-HOUSEPLANT-STRUGGLES-003",
+      "theme": "when_a_houseplant_struggles",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Before replacing a tired-looking plant, you might check whether its pot drains properly. Care sometimes begins with noticing conditions, not trying harder."
+    },
+    {
+      "id": "KDL-WHEN-A-HOUSEPLANT-STRUGGLES-004",
+      "theme": "when_a_houseplant_struggles",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A yellowing leaf can prompt curiosity rather than blame. Different plants respond to the same windowsill in different ways."
+    },
+    {
+      "id": "KDL-WHEN-A-HOUSEPLANT-STRUGGLES-005",
+      "theme": "when_a_houseplant_struggles",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the plant does not recover, the time you spent tending it was still real. Learning from a small disappointment counts too."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOURITE-PLACE-CHANGES-003",
+      "theme": "when_a_favourite_place_changes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may remember a particular sound, smell or familiar face from a place that no longer exists in quite the same way. Those details are worth keeping."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOURITE-PLACE-CHANGES-004",
+      "theme": "when_a_favourite_place_changes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Returning to a changed neighbourhood can bring both affection and distance. You do not have to decide which feeling is the correct one."
+    },
+    {
+      "id": "KDL-WHEN-A-FAVOURITE-PLACE-CHANGES-005",
+      "theme": "when_a_favourite_place_changes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the new shop on an old corner deserves a chance; sometimes you simply want to walk past and remember. Either response can be gentle."
+    },
+    {
+      "id": "KDL-WHEN-A-LANGUAGE-WORD-WONT-COME-003",
+      "theme": "when_a_language_word_wont_come",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Pointing, sketching or asking someone to repeat a phrase can keep a conversation open when vocabulary runs out."
+    },
+    {
+      "id": "KDL-WHEN-A-LANGUAGE-WORD-WONT-COME-004",
+      "theme": "when_a_language_word_wont_come",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your accent carries the history of languages you have known. It need not be erased before you deserve to be understood."
+    },
+    {
+      "id": "KDL-WHEN-A-LANGUAGE-WORD-WONT-COME-005",
+      "theme": "when_a_language_word_wont_come",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a conversation leaves you flustered, note one phrase you wished you had known. That small piece of preparation can make the next exchange easier."
+    },
+    {
+      "id": "KDL-WHEN-A-GROUP-PHOTO-FEELS-UNCOMFORTABLE-003",
+      "theme": "when_a_group_photo_feels_uncomfortable",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A camera catches a fraction of a second, not the full warmth or awkwardness of the gathering. The image is incomplete by nature."
+    },
+    {
+      "id": "KDL-WHEN-A-GROUP-PHOTO-FEELS-UNCOMFORTABLE-004",
+      "theme": "when_a_group_photo_feels_uncomfortable",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can ask not to have a picture posted publicly. Keeping a memory and sharing it online are separate decisions."
+    },
+    {
+      "id": "KDL-WHEN-A-GROUP-PHOTO-FEELS-UNCOMFORTABLE-005",
+      "theme": "when_a_group_photo_feels_uncomfortable",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If looking at a group photo makes you harsh toward yourself, try remembering one conversation from that day before deciding what the picture means."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOUR-MOVES-AWAY-003",
+      "theme": "when_a_neighbour_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The person who collected your parcels or checked on the garden may have been part of your sense of home. It makes sense to notice their absence."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOUR-MOVES-AWAY-004",
+      "theme": "when_a_neighbour_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A street can feel unfamiliar after one household leaves. You may need time before the new rhythm becomes ordinary."
+    },
+    {
+      "id": "KDL-WHEN-A-NEIGHBOUR-MOVES-AWAY-005",
+      "theme": "when_a_neighbour_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you want to stay in touch, a simple message with no expectation of a reply can be a kind way to leave the door open."
+    },
+    {
+      "id": "KDL-WHEN-A-RECIPE-GOES-WRONG-003",
+      "theme": "when_a_recipe_goes_wrong",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If dinner is too salty or the cake sinks, a simpler backup meal can still feed everyone. The evening does not have to become a referendum on your skill."
+    },
+    {
+      "id": "KDL-WHEN-A-RECIPE-GOES-WRONG-004",
+      "theme": "when_a_recipe_goes_wrong",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Recipes leave out details that experienced cooks take for granted. Needing another attempt is not evidence that you lack patience."
+    },
+    {
+      "id": "KDL-WHEN-A-RECIPE-GOES-WRONG-005",
+      "theme": "when_a_recipe_goes_wrong",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You might write one note in the margin about what happened. Next time, that observation could be more useful than criticism."
+    },
+    {
+      "id": "KDL-WHEN-A-VOLUNTEER-SHIFT-IS-HARD-003",
+      "theme": "when_a_volunteer_shift_is_hard",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After a demanding shift, you may need quiet before talking about what you witnessed. Rest can help you return to your own responsibilities."
+    },
+    {
+      "id": "KDL-WHEN-A-VOLUNTEER-SHIFT-IS-HARD-004",
+      "theme": "when_a_volunteer_shift_is_hard",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being dependable does not mean accepting every extra shift. Clear limits help people know what they can genuinely count on."
+    },
+    {
+      "id": "KDL-WHEN-A-VOLUNTEER-SHIFT-IS-HARD-005",
+      "theme": "when_a_volunteer_shift_is_hard",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you leave a volunteer role, the help you offered while you were there still mattered. A season of service does not have to last forever."
+    },
+    {
+      "id": "KDL-WHEN-A-LONG-AWAITED-BOOK-DISAPPOINTS-003",
+      "theme": "when_a_long_awaited_book_disappoints",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can admire the effort behind a novel and still find that its voice is not for you. Appreciation and enjoyment are different things."
+    },
+    {
+      "id": "KDL-WHEN-A-LONG-AWAITED-BOOK-DISAPPOINTS-004",
+      "theme": "when_a_long_awaited_book_disappoints",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Reading a few chapters before deciding to stop is not wasted time. You learned something about what holds your attention."
+    },
+    {
+      "id": "KDL-WHEN-A-LONG-AWAITED-BOOK-DISAPPOINTS-005",
+      "theme": "when_a_long_awaited_book_disappoints",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If friends loved a book you did not, their enthusiasm need not become an argument. There is room for several honest readings."
+    },
+    {
+      "id": "KDL-WHEN-A-TRAVEL-PLAN-CHANGES-003",
+      "theme": "when_a_travel_plan_changes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a train is cancelled, checking the next available option and finding somewhere to sit may matter more than staying cheerful."
+    },
+    {
+      "id": "KDL-WHEN-A-TRAVEL-PLAN-CHANGES-004",
+      "theme": "when_a_travel_plan_changes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A missed museum visit or delayed arrival can be a genuine loss when you saved for the trip. You need not minimise it to move forward."
+    },
+    {
+      "id": "KDL-WHEN-A-TRAVEL-PLAN-CHANGES-005",
+      "theme": "when_a_travel_plan_changes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If plans shift, telling the people affected what you know and what remains uncertain can ease confusion without pretending you control the outcome."
     }
   ]
 }
