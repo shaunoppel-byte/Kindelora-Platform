@@ -1,0 +1,41 @@
+{
+  "batch": "2026-11-08-worth-morning-225-228",
+  "status": "editorial-visual-review-required",
+  "license": "Original SVG vector compositions authored for KINDELORA in this run; no external stock, model, photography, paid API or third-party assets",
+  "affirmationTextModified": false,
+  "source": "Programmatically authored SVG shapes and gradients, each with a distinct thematic composition",
+  "entries": [
+    {
+      "id": "affirmation-225",
+      "asset": "/assets/affirmations/original-editorial-225.svg",
+      "subject": "restful linen and untouched journal; worth without productivity"
+    },
+    {
+      "id": "affirmation-226",
+      "asset": "/assets/affirmations/original-editorial-226.svg",
+      "subject": "gold-repaired clay vessel; value beyond output"
+    },
+    {
+      "id": "affirmation-227",
+      "asset": "/assets/affirmations/original-editorial-227.svg",
+      "subject": "morning journal and tea overlooking hills; intentional beginning"
+    },
+    {
+      "id": "affirmation-228",
+      "asset": "/assets/affirmations/original-editorial-228.svg",
+      "subject": "sunrise garden path and open gate; gentle start"
+    }
+  ],
+  "qa": {
+    "filesCommitted": 4,
+    "sourceMappingsUpdated": 4,
+    "svgViewbox": "800x1100",
+    "externalDependencies": 0,
+    "uniqueArtDirections": 4,
+    "automatedImageDecode": "not yet executed",
+    "mobileContrast": "not yet verified in browser",
+    "visualAcceptance": "pending independent visual review",
+    "liveDeployment": "not claimed",
+    "rollback": "Revert PR merge commit; restore previous image mappings"
+  }
+}
