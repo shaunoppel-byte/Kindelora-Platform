@@ -1,0 +1,16 @@
+{
+  "date": "2026-11-11",
+  "affirmationId": "connection",
+  "title": "Meaningful Connection",
+  "asset": "/assets/affirmations/original-connection-shared-table.svg",
+  "creator": "Original vector artwork authored for KINDELORA in this delivery run; no external photo, fonts or paid assets",
+  "license": "Original work intended for KINDELORA commercial use; no third-party image license required",
+  "dimensions": "900 x 1200 SVG viewBox",
+  "concept": "Two distinct handmade cups on a shared table at dusk; connection without obligation or guaranteed outcome",
+  "originalAffirmationPreserved": true,
+  "visualUniqueness": "Pending independent comparison across 400 artworks",
+  "mobileCropAndContrast": "Pending rendered mobile-device review",
+  "ci": "Pending GitHub Actions",
+  "deployment": "Not deployed",
+  "rollback": "Revert branch commits or PR merge commit; original remote mapping remains in parent main commit a9a8146c"
+}
