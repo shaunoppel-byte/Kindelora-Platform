@@ -26,7 +26,7 @@ for(const match of entries){
  const license=(item.licenseEvidence||'').trim();
  if(!target||!approvedStatus||!license){errors.push(id+': requires approved replacement asset, licensing evidence and QA sign-off');continue}
  // Same-origin immutable local assets or explicit HTTPS media; reject remote randomizers.
- if(!(/^(\/assets\/affirmations\/[a-zA-Z0-9_./-]+\.(?:webp|avif|jpg|jpeg|png))$/.test(target)||/^https:\/\//.test(target)))errors.push(id+': invalid asset URL');
+ if(!(/^(\/assets\/affirmations\/[a-zA-Z0-9_./-]+\.(?:webp|avif|jpg|jpeg|png|svg))$/.test(target)||/^https:\/\//.test(target)))errors.push(id+': invalid asset URL');
  if(/(?:source\.unsplash\.com|picsum\.photos|\/random(?:\/|\?))/.test(target))errors.push(id+': random image endpoint forbidden');
  const identity=target.split('?')[0].replace(/\/$/,'');
  if(urls.has(identity))errors.push(id+': duplicate underlying artwork '+identity);
