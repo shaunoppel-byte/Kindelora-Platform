@@ -57,6 +57,8 @@ def main():
     check("navigator.share" in page_text, "Native sharing capability missing", errors)
     check("planned" in page_text.lower(), "Planned PLUS features must be disclosed", errors)
     check("Carpe Diem!" in page_text, "Editorial signature missing", errors)
+    check("A new message<br>every Monday" not in page_text, "Do not promise automated weekly publishing before it is operational", errors)
+    check("This week\'s featured reflection" not in page_text, "Undated featured preview must not imply a current weekly publication", errors)
     registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
     messages = registry.get("messages", [])
     check(len(messages) > 0, "Editorial registry must not be empty", errors)
