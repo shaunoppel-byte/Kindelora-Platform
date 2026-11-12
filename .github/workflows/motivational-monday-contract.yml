@@ -1,0 +1,28 @@
+name: Motivational Monday static contract
+on:
+  pull_request:
+    paths:
+      - 'motivational-monday.html'
+      - 'index.html'
+      - 'manifest.webmanifest'
+      - 'scripts/check_motivational_monday.py'
+      - '.github/workflows/motivational-monday-contract.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'motivational-monday.html'
+      - 'index.html'
+      - 'manifest.webmanifest'
+      - 'scripts/check_motivational_monday.py'
+      - '.github/workflows/motivational-monday-contract.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  static-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate Monday static-site contract
+        run: python3 scripts/check_motivational_monday.py
