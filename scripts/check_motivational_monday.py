@@ -9,6 +9,7 @@ ROOT = Path(__file__).resolve().parents[1]
 PAGE = ROOT / "motivational-monday.html"
 HOME = ROOT / "index.html"
 MANIFEST = ROOT / "manifest.webmanifest"
+REGISTRY = ROOT / "content/motivational-monday-registry.json"
 
 class Parser(HTMLParser):
     def __init__(self):
@@ -56,6 +57,22 @@ def main():
     check("navigator.share" in page_text, "Native sharing capability missing", errors)
     check("planned" in page_text.lower(), "Planned PLUS features must be disclosed", errors)
     check("Carpe Diem!" in page_text, "Editorial signature missing", errors)
+    registry = json.loads(REGISTRY.read_text(encoding="utf-8"))
+    messages = registry.get("messages", [])
+    check(len(messages) > 0, "Editorial registry must not be empty", errors)
+    ids = [m.get("id") for m in messages]
+    check(len(ids) == len(set(ids)), "Duplicate editorial message IDs", errors)
+    required = ("title", "theme", "emotional_takeaway", "narrative_structure", "quote", "quote_attribution", "editorial_status", "publication_status")
+    for item in messages:
+        check(all(item.get(k) for k in required), f"Incomplete editorial metadata: {item.get('id')}", errors)
+        if item.get("publication_status") == "published":
+            check(item.get("editorial_status") == "approved", f"Published message lacks editorial approval: {item.get('id')}", errors)
+            check(bool(item.get("reviewer") and item.get("approved_at")), f"Published message lacks approval record: {item.get('id')}", errors)
+            check(registry.get("historical_archive_complete") is True, "Do not publish while historical archive is incomplete", errors)
+    titles = [m.get("title", "").casefold().strip() for m in messages]
+    quotes = [m.get("quote", "").casefold().strip() for m in messages]
+    check(len(titles) == len(set(titles)), "Duplicate editorial titles", errors)
+    check(len(quotes) == len(set(quotes)), "Repeated quotation in editorial registry", errors)
     manifest = json.loads(MANIFEST.read_text(encoding="utf-8"))
     check(manifest.get("scope") == "/", "PWA manifest scope must include Monday page", errors)
     for target in ("/icon.svg", "/affirmation-library.html", "/contact.html"):
