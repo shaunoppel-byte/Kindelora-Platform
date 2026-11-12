@@ -1,0 +1,23 @@
+{
+  "createdAt": "2026-11-12",
+  "authoring": "Original SVG vector compositions authored for KINDELORA; no external images, stock photos, fonts, or third-party assets embedded.",
+  "license": "Original artwork supplied for use by KINDELORA in its website/app; no third-party license dependencies.",
+  "entries": [
+    {
+      "id": "affirmation-397",
+      "previous": "/assets/affirmations/bulk-20261108/affirmation-397.svg",
+      "asset": "/assets/affirmations/editorial-small-progress-stepping-stones-397.svg",
+      "theme": "Individual stepping stones toward a garden",
+      "qa": "editorial candidate; visual mobile/contrast/perceptual QA and CI pending"
+    },
+    {
+      "id": "affirmation-398",
+      "previous": "/assets/affirmations/bulk-20261108/affirmation-398.svg",
+      "asset": "/assets/affirmations/editorial-small-progress-journal-398.svg",
+      "theme": "Small progress documented in a journal",
+      "qa": "editorial candidate; visual mobile/contrast/perceptual QA and CI pending"
+    }
+  ],
+  "rollback": "Revert this PR or restore the previous image paths; no affirmation text changes.",
+  "release": "Do not merge until artwork security, mobile, visual uniqueness and CI gates are verified."
+}
