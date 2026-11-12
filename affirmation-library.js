@@ -249,7 +249,7 @@
 {id:"affirmation-248",title:"Kindness Received — Reflection",text:"Care does not always need to be repaid immediately.",tags:"kindness received reflection",image:'/assets/affirmations/bulk-20261108/affirmation-248.svg'},
 {id:"affirmation-249",title:"Courageous Words — Intention",text:"I can say something important with respect.",tags:"courageous words intention",image:'/assets/affirmations/bulk-20261108/affirmation-249.svg'},
 {id:"affirmation-250",title:"Courageous Words — Reflection",text:"Honesty can be calm rather than loud.",tags:"courageous words reflection",image:'/assets/affirmations/bulk-20261108/affirmation-250.svg'},
-{id:"affirmation-251",title:"Progress — Intention",text:"I can notice how far I have travelled.",tags:"progress intention",image:'/assets/affirmations/bulk-20261108/affirmation-251.svg'},
+{id:"affirmation-251",title:"Progress — Intention",text:"I can notice how far I have travelled.",tags:"progress intention",image:'/assets/affirmations/original-progress-251-trail.svg'},
 {id:"affirmation-252",title:"Progress — Reflection",text:"Improvement matters even when I am not finished.",tags:"progress reflection",image:'/assets/affirmations/bulk-20261108/affirmation-252.svg'},
 {id:"affirmation-253",title:"Calm — Intention",text:"I can remove one unnecessary distraction.",tags:"calm intention",image:'/assets/affirmations/bulk-20261108/affirmation-253.svg'},
 {id:"affirmation-254",title:"Calm — Reflection",text:"A practical choice can make space for peace.",tags:"calm reflection",image:'/assets/affirmations/bulk-20261108/affirmation-254.svg'},
