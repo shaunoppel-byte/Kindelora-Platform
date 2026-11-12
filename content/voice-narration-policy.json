@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "brand": "KINDELORA",
+  "default_narrator": {
+    "name": "Joanna",
+    "provider": "HeyGen",
+    "voice_id": "776f9d2ff401499a8f1f2bcb4ca46004",
+    "locale": "en-GB",
+    "description": "Warm and conversational female voice",
+    "status": "approved"
+  },
+  "policy": {
+    "preferred_audio_format": "mp3",
+    "player": "native HTML5 audio",
+    "autoplay": false,
+    "device_speech_fallback": false,
+    "require_verified_recording_before_listen": true,
+    "hosting_target": "first-party Cloudflare Pages asset",
+    "accessibility": "text must always remain readable"
+  },
+  "catalogue": {
+    "motivational_monday": {
+      "status": "first_recording_generated",
+      "reference": "The Difference You May Never See",
+      "asset_status": "HeyGen hosted; first-party migration pending"
+    },
+    "daily_messages": {
+      "status": "recording_backlog",
+      "audio_ready": false
+    },
+    "affirmations": {
+      "status": "recording_backlog",
+      "audio_ready": false
+    },
+    "plus": {
+      "status": "pending_membership_and_audio"
+    }
+  }
+}
