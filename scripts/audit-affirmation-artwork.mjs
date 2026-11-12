@@ -9,6 +9,13 @@ const data=source.slice(start,end);
 const get=(key)=>[...data.matchAll(new RegExp('\\b'+key+':\\s*([\\x22\\x27])([\\s\\S]*?)\\1','g'))].map(x=>x[2]);
 const ids=get('id'),images=get('image'),titles=get('title');
 if(ids.length!==images.length||ids.length!==titles.length)throw new Error('Malformed catalogue: mismatched entry fields');
+const uniqueIds=new Set(ids);
+if(ids.length!==400||uniqueIds.size!==400){
+ const counts=new Map();for(const id of ids)counts.set(id,(counts.get(id)||0)+1);
+ const repeated=[...counts].filter(([,n])=>n>1).map(([id,n])=>({id,count:n}));
+ console.error(JSON.stringify({error:'Affirmation catalogue integrity failure',entries:ids.length,uniqueIds:uniqueIds.size,duplicates:repeated},null,2));
+ process.exit(1);
+}
 const groups=new Map();
 for(let i=0;i<ids.length;i++){
   // URL variants, width and quality parameters do not make a new photograph.
