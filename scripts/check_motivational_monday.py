@@ -55,6 +55,7 @@ def main():
     check("aria-live" in page_text, "Status announcements missing", errors)
     check("speechSynthesis" in page_text, "Narration capability missing", errors)
     check("navigator.share" in page_text, "Native sharing capability missing", errors)
+    check("messageText=document.getElementById(\'message-text\').innerText.trim()" in page_text, "Share fallback must include full featured message, not teaser", errors)
     check("planned" in page_text.lower(), "Planned PLUS features must be disclosed", errors)
     check("Carpe Diem!" in page_text, "Editorial signature missing", errors)
     check("A new message<br>every Monday" not in page_text, "Do not promise automated weekly publishing before it is operational", errors)
