@@ -1,22 +1,8 @@
 name: Motivational Monday static contract
 on:
   pull_request:
-    paths:
-      - 'motivational-monday.html'
-      - 'index.html'
-      - 'manifest.webmanifest'
-      - 'scripts/check_motivational_monday.py'
-      - 'content/motivational-monday-registry.json'
-      - '.github/workflows/motivational-monday-contract.yml'
   push:
     branches: [main]
-    paths:
-      - 'motivational-monday.html'
-      - 'index.html'
-      - 'manifest.webmanifest'
-      - 'scripts/check_motivational_monday.py'
-      - 'content/motivational-monday-registry.json'
-      - '.github/workflows/motivational-monday-contract.yml'
   workflow_dispatch:
 permissions:
   contents: read
