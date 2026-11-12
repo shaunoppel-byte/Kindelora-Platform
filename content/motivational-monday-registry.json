@@ -1,0 +1,22 @@
+{
+  "schema_version": 1,
+  "historical_archive_complete": false,
+  "historical_archive_note": "Original leadership Motivational Monday archive has not yet been imported and reviewed in full. Do not claim exhaustive uniqueness QA.",
+  "messages": [
+    {
+      "id": "mm-001",
+      "title": "The Difference You May Never See",
+      "theme": "Unseen impact of everyday kindness",
+      "emotional_takeaway": "Small acts of care matter even without recognition",
+      "narrative_structure": "Unseen contributions > practical examples > Aesop quotation > invitation to act",
+      "quote": "No act of kindness, no matter how small, is ever wasted.",
+      "quote_attribution": "Aesop",
+      "editorial_status": "pending_historical_uniqueness_review",
+      "publication_status": "preview_only",
+      "source": "Original KINDELORA launch sample",
+      "publication_date": null,
+      "reviewer": null,
+      "approved_at": null
+    }
+  ]
+}
