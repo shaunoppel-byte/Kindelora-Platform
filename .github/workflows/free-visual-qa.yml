@@ -1,0 +1,43 @@
+name: KINDELORA free live visual QA
+on:
+  workflow_dispatch:
+    inputs:
+      base_url:
+        description: "Cloudflare preview URL or production URL"
+        required: false
+        default: "https://kindelora.pages.dev"
+  schedule:
+    - cron: "20 5 * * 0"
+  pull_request:
+    paths:
+      - "index.html"
+      - "affirmations/artwork/**"
+      - "tests/test_live_affirmation_gallery.py"
+      - ".github/workflows/free-visual-qa.yml"
+permissions:
+  contents: read
+jobs:
+  visual-qa:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    env:
+      QA_BASE_URL: ${{ inputs.base_url || 'https://kindelora.pages.dev' }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install free Chromium test runner
+        run: |
+          python -m pip install --disable-pip-version-check playwright==1.56.0
+          python -m playwright install --with-deps chromium
+      - name: Verify all four live gallery cards on desktop and mobile
+        run: python tests/test_live_affirmation_gallery.py
+      - name: Preserve screenshots and failure evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: kindelora-gallery-visual-qa
+          path: qa-artifacts/
+          if-no-files-found: ignore
+          retention-days: 7
