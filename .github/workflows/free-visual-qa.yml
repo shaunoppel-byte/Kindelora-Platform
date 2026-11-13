@@ -8,6 +8,12 @@ on:
         default: "https://kindelora.pages.dev"
   schedule:
     - cron: "20 5 * * 0"
+  push:
+    branches:
+      - qa/playwright-free-visual-regression
+    paths:
+      - "tests/test_live_affirmation_gallery.py"
+      - ".github/workflows/free-visual-qa.yml"
   pull_request:
     paths:
       - "index.html"
