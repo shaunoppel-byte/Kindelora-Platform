@@ -67,7 +67,13 @@ def check_gallery(browser, name, width, height):
             assert asset.ok and len(asset.body()) > 1000, f"Card {i+1}: download missing or empty (HTTP {asset.status})"
         page.locator("#free-affirmations").screenshot(path=str(OUT / f"affirmations-{name}.png"), animations="disabled")
         no_overflow = page.evaluate("document.documentElement.scrollWidth <= window.innerWidth + 2")
-        assert no_overflow, f"{name}: horizontal page overflow"
+        if not no_overflow:
+            offenders = page.evaluate("""() => [...document.querySelectorAll('body *')].map(el => {
+              const r=el.getBoundingClientRect();
+              return {tag:el.tagName, cls:String(el.className).slice(0,100), id:el.id,
+                      left:Math.round(r.left),right:Math.round(r.right),width:Math.round(r.width)};
+            }).filter(x => x.right > innerWidth+2 || x.left < -2).slice(0,25)""")
+            raise AssertionError(f"{name}: horizontal page overflow; offenders={offenders}")
         assert not failures, "; ".join(failures)
         print(f"PASS {name}: all four images rendered, frames aligned, downloads valid, no overflow")
     finally:
