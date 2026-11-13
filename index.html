@@ -456,4 +456,9 @@ footer{background:#25132e;border-top:2px solid #b99461}
 </style><script src="/brand-film-theatre.js?v=20261108-mobile-fix" defer></script><script>
 /* Image errors can occur with old PWA caches or SVG decoding; show a real branded image instead of a blank card. */
 (()=>{'use strict';const gallery=document.getElementById('free-affirmations');if(!gallery)return;gallery.querySelectorAll('img.art').forEach(img=>{const recover=()=>{if(img.dataset.galleryRecovered)return;img.dataset.galleryRecovered='1';img.classList.add('gallery-image-fallback');img.src=img.dataset.galleryFallback||'/assets/kindelora-monday-cinematic-bg.webp';img.loading='eager';};img.addEventListener('error',recover);if(img.complete&&img.naturalWidth===0)recover();});})();
-</script></body></html>
+</script>
+<footer class="group-legal-disclosure" aria-label="Company and legal information" style="position:relative;z-index:2;box-sizing:border-box;width:100%;padding:20px 18px;text-align:center;background:#1b0b29;color:#f3d7a0;font:normal 13px/1.7 system-ui,sans-serif;border-top:1px solid #876c53">
+ <div>KINDELORA is operated by <strong>Oppel Enterprises Group (Pty) Ltd</strong> · Registration No. <span>2026/907492/07</span> · South Africa</div>
+ <nav aria-label="Legal information"><a href="/legal-company.html" style="color:#f3d7a0;text-decoration:underline;text-underline-offset:3px">Legal &amp; Company Information</a> · <a href="/privacy.html" style="color:#f3d7a0;text-decoration:underline;text-underline-offset:3px">Privacy</a> · <a href="/terms.html" style="color:#f3d7a0;text-decoration:underline;text-underline-offset:3px">Terms</a></nav>
+</footer>
+</body></html>
