@@ -65,7 +65,7 @@ def check_gallery(browser, name, width, height):
             assert href and href.startswith("/"), f"Card {i+1}: invalid download path"
             asset = page.request.get(urljoin(BASE, href), timeout=30000)
             assert asset.ok and len(asset.body()) > 1000, f"Card {i+1}: download missing or empty (HTTP {asset.status})"
-        page.locator("#free-affirmations").screenshot(path=str(OUT / f"affirmations-{name}.png"), animations="disabled")
+        page.locator("#free-affirmations").screenshot(path=str(OUT / f"affirmations-{name}.png"), animations="disabled", timeout=30000)
         no_overflow = page.evaluate("document.documentElement.scrollWidth <= window.innerWidth + 2")
         assert no_overflow, f"{name}: horizontal page overflow"
         assert not failures, "; ".join(failures)
