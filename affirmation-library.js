@@ -223,6 +223,8 @@
 {id:"affirmation-222",title:"Listening — Reflection",text:"A thoughtful follow-up question can deepen understanding.",tags:"listening reflection",image:'/assets/affirmations/editorial-original-222.svg'},
 {id:"affirmation-223",title:"Old Beliefs — Intention",text:"I can question a story about myself that no longer fits.",tags:"old beliefs intention",image:'/assets/affirmations/editorial-original-223.svg'},
 {id:"affirmation-224",title:"Old Beliefs — Reflection",text:"Growth makes room for a kinder self-understanding.",tags:"old beliefs reflection",image:'/assets/affirmations/editorial-original-224.svg'},
+{id:"affirmation-225",title:"Worth — Intention",text:"I can respect myself on an unproductive day.",tags:"worth intention",image:'/assets/affirmations/editorial-worth-rest-225-20261113.svg'},
+{id:"affirmation-226",title:"Worth — Reflection",text:"My value is not determined by what I finish.",tags:"worth reflection",image:'/assets/affirmations/bulk-20261108/affirmation-226.svg'},
 {id:"affirmation-225",title:"Worth — Intention",text:"I can respect myself on an unproductive day.",tags:"worth intention",image:'/assets/affirmations/bulk-20261108/affirmation-225.svg'},
 {id:"affirmation-226",title:"Worth — Reflection",text:"My value is not determined by what I finish.",tags:"worth reflection",image:'/assets/affirmations/editorial-worth-seaglass-226.svg'},
 {id:"affirmation-227",title:"Morning — Intention",text:"I can begin with intention instead of rushing.",tags:"morning intention",image:'/assets/affirmations/bulk-20261108/affirmation-227.svg'},

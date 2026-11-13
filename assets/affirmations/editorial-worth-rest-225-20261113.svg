@@ -1,0 +1,22 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1500" viewBox="0 0 1200 1500" role="img" aria-label="A quiet empty desk at twilight with a folded blanket, cup and unmarked calendar, representing worth beyond productivity">
+<defs><linearGradient id="wall" x2="0" y2="1"><stop stop-color="#251c40"/><stop offset=".62" stop-color="#59425b"/><stop offset="1" stop-color="#a77a74"/></linearGradient><linearGradient id="window" x2="0" y2="1"><stop stop-color="#2d315a"/><stop offset="1" stop-color="#d59c81"/></linearGradient><linearGradient id="table" x2="0" y2="1"><stop stop-color="#654151"/><stop offset="1" stop-color="#2d243a"/></linearGradient><radialGradient id="glow"><stop stop-color="#ffdda5" stop-opacity=".68"/><stop offset="1" stop-color="#ffdda5" stop-opacity="0"/></radialGradient><filter id="soft"><feGaussianBlur stdDeviation="24"/></filter></defs>
+<rect width="1200" height="1500" fill="url(#wall)"/>
+<rect x="128" y="146" width="575" height="760" rx="20" fill="#221e37" stroke="#b58b8d" stroke-width="16"/>
+<rect x="157" y="174" width="518" height="704" fill="url(#window)"/>
+<circle cx="536" cy="600" r="255" fill="url(#glow)"/>
+<path d="M157 681 Q250 595 345 664 T535 652 T675 675 V878 H157Z" fill="#4b4a67"/>
+<path d="M157 752 Q270 710 375 768 T675 750 V878 H157Z" fill="#30394f"/>
+<path d="M416 174 V878" stroke="#34283d" stroke-width="18"/><path d="M157 520 H675" stroke="#34283d" stroke-width="18"/>
+<path d="M0 1090 Q600 1020 1200 1090 V1500 H0Z" fill="url(#table)"/>
+<ellipse cx="645" cy="1123" rx="405" ry="57" fill="#201b2f" opacity=".4" filter="url(#soft)"/>
+<path d="M345 1010 Q420 973 538 1005 L820 1087 Q842 1104 826 1126 L755 1223 Q740 1243 709 1231 L328 1126 Q298 1115 309 1089Z" fill="#b5a0a1"/>
+<path d="M345 1010 Q427 994 538 1023 L808 1098 L729 1201 L323 1097Z" fill="#d9c4b7"/>
+<path d="M368 1040 Q475 1031 564 1062 M357 1075 Q477 1062 572 1097 M500 1119 Q590 1124 681 1160" stroke="#eee0cf" stroke-width="9" opacity=".7" fill="none"/>
+<ellipse cx="925" cy="1127" rx="112" ry="31" fill="#251e2c" opacity=".5"/>
+<path d="M850 984 H1010 L990 1115 Q926 1144 869 1114Z" fill="#e4c4ac"/><ellipse cx="930" cy="985" rx="80" ry="20" fill="#f1dac3"/><ellipse cx="930" cy="986" rx="61" ry="12" fill="#73504e"/>
+<path d="M1005 1014 C1087 1003 1080 1091 998 1090" fill="none" stroke="#e4c4ac" stroke-width="20"/>
+<path d="M105 1190 Q255 1135 370 1212 T605 1237 L745 1390 L0 1500 V1280Z" fill="#98748b"/>
+<path d="M105 1190 Q258 1156 380 1230 T605 1255" fill="none" stroke="#c9a7ae" stroke-width="12" opacity=".7"/>
+<circle cx="1045" cy="255" r="160" fill="url(#glow)" opacity=".55"/>
+<path d="M824 705 Q877 628 938 692 T1065 692" fill="none" stroke="#c8a3a0" stroke-width="8" opacity=".5"/>
+</svg>
