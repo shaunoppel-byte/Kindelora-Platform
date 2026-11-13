@@ -1,5 +1,5 @@
-const CACHE="kindelora-launch-v20";
-const ASSETS=["/","/index.html","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/message-catalogue.json","/manifest.webmanifest","/icon.svg","/sunrise-landscape.svg","/morning-light.svg","/calm-moment.svg","/reflect-grow.svg","/privacy.html","/terms.html","/motivational-monday.html","/assets/kindelora-monday-cinematic-bg.webp"];
+const CACHE="kindelora-launch-v21";
+const ASSETS=["/","/index.html","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/message-catalogue.json","/manifest.webmanifest","/icon.svg","/sunrise-landscape.svg","/morning-light.svg","/calm-moment.svg","/reflect-grow.svg","/privacy.html","/terms.html","/motivational-monday.html","/assets/kindelora-monday-cinematic-bg.webp","/affirmations/artwork/small-steps-still-count.png","/affirmations/artwork/rest-is-part-of-growing.png","/affirmations/artwork/the-light-returns.png","/affirmations/artwork/i-am-enough-as-i-am.svg"];
 self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",event=>{event.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith("kindelora-launch-")&&key!==CACHE).map(key=>caches.delete(key)))),self.clients.claim()]))});
 self.addEventListener("fetch",event=>{
@@ -17,7 +17,7 @@ self.addEventListener("fetch",event=>{
  // Keep the approved Motivational Monday artwork fresh in the installed app.
  // Audio streams bypass cache handling to preserve HTTP Range requests and native playback.
  if(request.destination==="audio"||/\\.(mp3|m4a|ogg|wav)$/i.test(path))return;
- if(path==="/assets/kindelora-monday-cinematic-bg.webp"){
+ if(path==="/assets/kindelora-monday-cinematic-bg.webp"||path.startsWith("/affirmations/artwork/")){
   event.respondWith(fetch(request).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(path,copy)))}return response}).catch(()=>caches.match(path)));
   return;
  }
