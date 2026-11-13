@@ -1,0 +1,44 @@
+name: Recover Joanna MP3 for KINDELORA
+on:
+  push:
+    branches: [main]
+    paths:
+      - .github/workflows/recover-joanna-audio.yml
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  recover-audio:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout audio fix branch
+        uses: actions/checkout@v4
+        with:
+          ref: fix/monday-first-party-mp3
+          persist-credentials: true
+      - name: Fetch and validate Joanna recording
+        env:
+          AUDIO_URL: https://resource2.heygen.ai/text_to_speech/df76016f16be459a8f0c04568b6d0ecf/776f9d2ff401499a8f1f2bcb4ca46004/id%3Dd32d899334974752a51c07dc78279140.mp3
+        run: |
+          set -euo pipefail
+          mkdir -p assets/audio
+          curl --fail --location --retry 3 --max-time 90 --silent --show-error "$AUDIO_URL" -o assets/audio/motivational-monday-joanna.mp3
+          python3 - <<'PY'
+          from pathlib import Path
+          p=Path("assets/audio/motivational-monday-joanna.mp3")
+          b=p.read_bytes()
+          assert len(b)>100000, f"File too small: {len(b)}"
+          assert b[:3]==b"ID3" or b[:2] in (bytes.fromhex("fffb"),bytes.fromhex("fff3"),bytes.fromhex("fff2")), "Invalid MP3"
+          print("MP3 validated",len(b))
+          PY
+          duration="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 assets/audio/motivational-monday-joanna.mp3)"
+          python3 -c 'import sys; assert 40<float(sys.argv[1])<46, "Unexpected duration"' "$duration"
+      - name: Commit audio to fix branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+          git add assets/audio/motivational-monday-joanna.mp3
+          git diff --cached --quiet && exit 0
+          git commit -m "assets: store Joanna narration on KINDELORA"
+          git push origin HEAD:fix/monday-first-party-mp3
