@@ -225,7 +225,7 @@
 {id:"affirmation-224",title:"Old Beliefs — Reflection",text:"Growth makes room for a kinder self-understanding.",tags:"old beliefs reflection",image:'/assets/affirmations/editorial-original-224.svg'},
 {id:"affirmation-225",title:"Worth — Intention",text:"I can respect myself on an unproductive day.",tags:"worth intention",image:'/assets/affirmations/bulk-20261108/affirmation-225.svg'},
 {id:"affirmation-226",title:"Worth — Reflection",text:"My value is not determined by what I finish.",tags:"worth reflection",image:'/assets/affirmations/bulk-20261108/affirmation-226.svg'},
-{id:"affirmation-227",title:"Morning — Intention",text:"I can begin with intention instead of rushing.",tags:"morning intention",image:'/assets/affirmations/bulk-20261108/affirmation-227.svg'},
+{id:"affirmation-227",title:"Morning — Intention",text:"I can begin with intention instead of rushing.",tags:"morning intention",image:'/assets/affirmations/editorial-original-morning-227.svg'},
 {id:"affirmation-228",title:"Morning — Reflection",text:"A gentle start may shape the rest of my day.",tags:"morning reflection",image:'/assets/affirmations/bulk-20261108/affirmation-228.svg'},
 {id:"affirmation-229",title:"Pausing — Intention",text:"I can take one breath before responding.",tags:"pausing intention",image:'/assets/affirmations/bulk-20261108/affirmation-229.svg'},
 {id:"affirmation-230",title:"Pausing — Reflection",text:"A brief pause can make space for wisdom.",tags:"pausing reflection",image:'/assets/affirmations/bulk-20261108/affirmation-230.svg'},
