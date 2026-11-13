@@ -1,5 +1,5 @@
-const CACHE="kindelora-launch-v19";
-const ASSETS=["/","/index.html","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/message-catalogue.json","/manifest.webmanifest","/icon.svg","/sunrise-landscape.svg","/morning-light.svg","/calm-moment.svg","/reflect-grow.svg","/privacy.html","/terms.html"];
+const CACHE="kindelora-launch-v20";
+const ASSETS=["/","/index.html","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/message-catalogue.json","/manifest.webmanifest","/icon.svg","/sunrise-landscape.svg","/morning-light.svg","/calm-moment.svg","/reflect-grow.svg","/privacy.html","/terms.html","/motivational-monday.html","/assets/kindelora-monday-cinematic-bg.webp"];
 self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",event=>{event.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith("kindelora-launch-")&&key!==CACHE).map(key=>caches.delete(key)))),self.clients.claim()]))});
 self.addEventListener("fetch",event=>{
@@ -11,6 +11,13 @@ self.addEventListener("fetch",event=>{
   return;
  }
  if(["/message-catalogue.json","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/manifest.webmanifest","/icon.svg","/privacy.html","/terms.html"].includes(path)){
+  event.respondWith(fetch(request).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(path,copy)))}return response}).catch(()=>caches.match(path)));
+  return;
+ }
+ // Keep the approved Motivational Monday artwork fresh in the installed app.
+ // Audio streams bypass cache handling to preserve HTTP Range requests and native playback.
+ if(request.destination==="audio"||/\\.(mp3|m4a|ogg|wav)$/i.test(path))return;
+ if(path==="/assets/kindelora-monday-cinematic-bg.webp"){
   event.respondWith(fetch(request).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(path,copy)))}return response}).catch(()=>caches.match(path)));
   return;
  }
