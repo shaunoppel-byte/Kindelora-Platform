@@ -431,7 +431,19 @@ footer{background:#25132e;border-top:2px solid #b99461}
 #free-affirmations .free-affirmation-card>img.art{display:block!important;box-sizing:border-box!important;width:100%!important;max-width:100%!important;height:auto!important;aspect-ratio:10/7!important;object-fit:contain!important;object-position:center center!important;margin:0!important;padding:0!important;border:0!important;border-radius:0!important;background:#25142d!important;overflow:hidden!important}
 #free-affirmations .free-affirmation-card>img.art.gallery-image-fallback{object-fit:cover!important}
 @media(max-width:700px){#free-affirmations .free-affirmation-card>img.art{aspect-ratio:10/7!important;min-height:0!important}}
+
+/* P0 v2: never crop or distort the original downloadable affirmation artwork.
+   The image itself supplies its natural ratio; the card clips only its outside corners. */
+#free-affirmations .free-affirmation-card>img.art,
+#free-affirmations .free-affirmation-card>img.art.gallery-image-fallback{
+ display:block!important;width:100%!important;max-width:100%!important;
+ height:auto!important;aspect-ratio:auto!important;object-fit:contain!important;
+ object-position:center!important;min-height:0!important;max-height:none!important;
+ margin:0!important;padding:0!important;border:0!important;border-radius:0!important;
+ background:#25142d!important;transform:none!important;clip-path:none!important;
+}
+#free-affirmations .free-affirmation-card{overflow:hidden!important;isolation:isolate}
 </style><script src="/brand-film-theatre.js?v=20261108-mobile-fix" defer></script><script>
 /* Image errors can occur with old PWA caches or SVG decoding; show a real branded image instead of a blank card. */
-(()=>{'use strict';const gallery=document.getElementById('free-affirmations');if(!gallery)return;gallery.querySelectorAll('img.art').forEach(img=>{const recover=()=>{if(img.dataset.galleryRecovered)return;img.dataset.galleryRecovered='1';img.classList.add('gallery-image-fallback');img.src=img.dataset.galleryFallback||'/assets/kindelora-monday-cinematic-bg.webp';};img.addEventListener('error',recover);if(img.complete&&img.naturalWidth===0)recover();});})();
+(()=>{'use strict';const gallery=document.getElementById('free-affirmations');if(!gallery)return;gallery.querySelectorAll('img.art').forEach(img=>{const recover=()=>{if(img.dataset.galleryRecovered)return;img.dataset.galleryRecovered='1';img.classList.add('gallery-image-fallback');img.src=img.dataset.galleryFallback||'/assets/kindelora-monday-cinematic-bg.webp';img.loading='eager';};img.addEventListener('error',recover);if(img.complete&&img.naturalWidth===0)recover();});})();
 </script></body></html>
