@@ -14,6 +14,8 @@ manifest = ROOT / (sys.argv[1] if len(sys.argv) > 1 else "quality/cinematic-rast
 data = json.loads(manifest.read_text(encoding="utf-8"))
 entries = data.get("assets", [])
 errors = []
+if not entries:
+    errors.append("No cinematic raster assets submitted; cannot pass artwork acceptance with an empty manifest")
 seen_paths, seen_hashes = set(), set()
 
 def dimensions(blob, suffix):
@@ -64,6 +66,8 @@ for item in entries:
         errors.append(f"{name}: {exc}")
     if not item.get("provenance") or not (ROOT / item["provenance"]).is_file():
         errors.append(f"{name}: provenance record missing")
+    if "/" + path not in (ROOT / "affirmation-library.js").read_text(encoding="utf-8"):
+        errors.append(f"{name}: artwork not mapped in affirmation-library.js")
     if item.get("review_status") != "approved":
         errors.append(f"{name}: independent visual review not recorded as approved")
 print(json.dumps({"submitted":len(entries),"uniqueBinaryHashes":len(seen_hashes),"errors":errors},indent=2))
