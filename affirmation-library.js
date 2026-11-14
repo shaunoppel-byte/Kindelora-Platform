@@ -1,5 +1,5 @@
 (()=>{'use strict';const items=[
-{id:'confidence',title:'Confidence',text:'Trust your voice. Every small step you take is evidence of your courage.',tags:'self belief courage bravery',image:'/assets/affirmations/editorial-confidence-candidate.svg'},
+{id:'confidence',title:'Confidence',text:'Trust your voice. Every small step you take is evidence of your courage.',tags:'self belief courage bravery',image:'/assets/affirmations/original-confidence-doorway-20261114.svg'},
 {id:'calm',title:'Calm & Peace',text:'You are allowed to slow down. Peace can begin with a single breath.',tags:'rest meditation quiet breathe',image:'/assets/affirmations/editorial-stillness.svg'},
 {id:'strength',title:'Strength',text:'Your strength is not measured by never falling, but by continuing with kindness.',tags:'resilience perseverance',image:'/assets/affirmations/editorial-resilience.svg'},
 {id:'self-love',title:'Self-Love',text:'You are worthy of care, tenderness and belonging, exactly as you are.',tags:'acceptance kindness worth',image:'/assets/affirmations/editorial-self-worth.svg'},
