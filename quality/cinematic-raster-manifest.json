@@ -1,0 +1,5 @@
+{
+  "schema_version": 1,
+  "notes": "Manifest intentionally starts empty. Add each actual committed raster asset and its reviewed provenance before acceptance. An empty manifest is NOT evidence that any cinematic replacement has been deployed.",
+  "assets": []
+}
