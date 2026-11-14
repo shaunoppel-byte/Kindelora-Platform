@@ -1,0 +1,14 @@
+{
+  "asset": "/assets/affirmations/original-confidence-doorway-20261114.svg",
+  "affirmationId": "confidence",
+  "source": "Original SVG vector illustration authored for KINDELORA in this run; no third-party photograph, stock asset, or external image",
+  "license": "Original work prepared for use in KINDELORA; no third-party licensing dependencies identified",
+  "composition": "Single silhouetted person facing a luminous doorway beneath a stone arch, violet and warm gold palette",
+  "review": {
+    "assetExists": "pending CI",
+    "distinctFromCorpus": "pending perceptual/visual review",
+    "mobileContrast": "pending browser review",
+    "editorialFit": "pending independent approval"
+  },
+  "releaseStatus": "draft PR only; not approved for deployment"
+}
