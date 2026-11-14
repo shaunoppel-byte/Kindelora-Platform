@@ -1,0 +1,23 @@
+{
+  "date": "2026-11-14",
+  "source_commit": "bc386364591b8a23b95775a053e433d30bd79e27",
+  "baseline": "message-catalogue.json on main",
+  "baseline_messages": 3000,
+  "batch_messages": 50,
+  "unique_ids": 50,
+  "normalized_exact_duplicates": 0,
+  "lexical_near_overlap_flags": 0,
+  "lexical_rule": "normalized lowercase alphanumeric tokens length >3; overlap >=0.8 of smaller token set and >=7 shared tokens",
+  "length_chars_min": 78,
+  "length_chars_max": 172,
+  "themes": 10,
+  "messages_per_theme": 5,
+  "editorial_status": "editorial-review",
+  "caveats": [
+    "Lexical screening is not semantic equivalence detection",
+    "Compared with public catalogue only, not all unpublished versioned libraries",
+    "No independent human sensitivity review",
+    "No live deployment verification"
+  ],
+  "release_authorized": false
+}
