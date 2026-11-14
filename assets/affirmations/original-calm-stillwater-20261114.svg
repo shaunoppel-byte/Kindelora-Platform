@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+<title id="title">Still water, open sky</title><desc id="desc">A quiet lakeshore at blue hour, with reeds, a pale moon, and a ribbon of reflected light crossing still water toward a distant hill.</desc>
+<defs>
+<linearGradient id="sky" x2="0" y2="1"><stop stop-color="#11132c"/><stop offset=".52" stop-color="#443d70"/><stop offset="1" stop-color="#9a7893"/></linearGradient>
+<linearGradient id="lake" x2="0" y2="1"><stop stop-color="#685979"/><stop offset=".48" stop-color="#262d50"/><stop offset="1" stop-color="#111b35"/></linearGradient>
+<radialGradient id="glow"><stop stop-color="#fff3d3" stop-opacity=".38"/><stop offset="1" stop-color="#fff3d3" stop-opacity="0"/></radialGradient>
+<linearGradient id="shore" x2="0" y2="1"><stop stop-color="#242d3c"/><stop offset="1" stop-color="#101827"/></linearGradient>
+</defs>
+<rect width="1200" height="1600" fill="url(#sky)"/>
+<circle cx="820" cy="345" r="280" fill="url(#glow)"/><circle cx="820" cy="345" r="77" fill="#f7e9cc"/>
+<path d="M0 860Q150 790 310 825T640 807Q790 740 930 790T1200 762V1040H0Z" fill="#393b5b"/>
+<path d="M0 930Q190 845 360 898T735 865Q1000 815 1200 870V1100H0Z" fill="#292f4c"/>
+<path d="M0 985Q330 952 600 965T1200 945V1600H0Z" fill="url(#lake)"/>
+<path d="M790 1000L848 1000 866 1600 702 1600Z" fill="#f4d9a4" opacity=".08"/>
+<g stroke="#f8e3ba" stroke-linecap="round" fill="none">
+<path d="M779 1015h95M788 1045h76M769 1080h111M796 1117h69M753 1163h129M781 1210h95M747 1264h136M775 1320h95M728 1385h155M763 1454h110M730 1520h155" stroke-width="5" opacity=".32"/>
+<path d="M80 1080q270 22 480 0M130 1160q250 16 460 0M900 1120q140 10 240 0M45 1330q240 18 490 0M900 1370q170 12 250 0" stroke="#d0b9c4" stroke-width="3" opacity=".13"/>
+</g>
+<path d="M0 1480Q240 1400 470 1510L590 1600H0Z" fill="url(#shore)"/>
+<path d="M1200 1470Q1030 1415 920 1500L840 1600H1200Z" fill="#172034"/>
+<g stroke="#293d3c" stroke-width="8" fill="none" stroke-linecap="round"><path d="M95 1600q-30-180-5-345M160 1600q45-205 10-390M230 1600q-12-160 35-290M1100 1600q-35-175 20-350M1040 1600q20-150-20-260"/></g>
+<g fill="#a79775" opacity=".75"><ellipse cx="90" cy="1260" rx="10" ry="37" transform="rotate(-15 90 1260)"/><ellipse cx="171" cy="1215" rx="10" ry="38" transform="rotate(12 171 1215)"/><ellipse cx="1120" cy="1250" rx="10" ry="36" transform="rotate(15 1120 1250)"/></g>
+</svg>
