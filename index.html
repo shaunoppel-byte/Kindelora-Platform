@@ -122,6 +122,10 @@ header .nav-more-panel a:hover,header .nav-more-panel a:focus-visible{background
 .kplus-hero p{position:relative;z-index:1;max-width:19ch;color:#fff9ed;text-shadow:0 3px 16px rgba(23,8,29,.58)}
 @media(max-width:700px){.kplus-hero{min-height:280px;padding:28px;background-image:linear-gradient(90deg,rgba(32,12,43,.93),rgba(42,17,51,.62)),url('/assets/kindelora-monday-cinematic-bg.webp');background-position:center,66% center}.kplus-hero p{font-size:clamp(1.8rem,7vw,2.65rem);max-width:17ch}}
 @media(prefers-reduced-data:reduce){.kplus-hero{background-image:linear-gradient(115deg,#2b153a,#684069)}}
+
+/* Narrow-screen form control contract: native select intrinsic width must not overflow its container. */
+#updates-frequency.choice,#updates-channel.choice{box-sizing:border-box;display:block;max-width:100%;min-width:0;width:min(100%,22rem);text-overflow:ellipsis}
+@media(max-width:360px){#updates-frequency.choice,#updates-channel.choice{width:100%;font-size:16px;padding-inline:12px}}
 </style>
 <style id="kindelora-platinum-gold-system-v1">
 /* KINDELORA platinum palette: warm, legible gold on dark plum; ink on light surfaces. */
