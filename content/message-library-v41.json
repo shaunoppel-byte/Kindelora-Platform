@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "batch": 41,
+  "editorial_note": "20 individually drafted, concrete situational messages. Editorial-only: full-corpus near-duplicate and independent sensitive-topic review are pending; not approved for public release.",
+  "messages": [
+    {
+      "id": "KDL-EDITORIAL41-001",
+      "theme": "after_a_hearing_test",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A hearing test can leave you thinking about all the conversations you have worked hard to follow. You deserve clear explanations and time to decide what support would help."
+    },
+    {
+      "id": "KDL-EDITORIAL41-002",
+      "theme": "after_a_hearing_test",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Asking someone to face you when they speak is a practical request, not an apology you owe."
+    },
+    {
+      "id": "KDL-EDITORIAL41-003",
+      "theme": "when_a_pet_needs_medicine",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Giving medicine to a frightened pet can be stressful for both of you. A calm routine and advice from the vet may make the next dose easier."
+    },
+    {
+      "id": "KDL-EDITORIAL41-004",
+      "theme": "when_a_pet_needs_medicine",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If caring for an unwell animal has disrupted your sleep, your tiredness deserves attention too. Rest when another trusted person can take a turn."
+    },
+    {
+      "id": "KDL-EDITORIAL41-005",
+      "theme": "after_a_job_reference_request",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being asked for a reference can bring up mixed memories of working with someone. You can be fair, specific and truthful without carrying their entire future."
+    },
+    {
+      "id": "KDL-EDITORIAL41-006",
+      "theme": "after_a_job_reference_request",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A reference request does not require you to answer immediately. Taking time to recall what you directly observed is a form of care for everyone involved."
+    },
+    {
+      "id": "KDL-EDITORIAL41-007",
+      "theme": "when_a_recipe_fails",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A meal that did not turn out as planned can still be part of a generous evening. The people at your table may remember the conversation more than the texture."
+    },
+    {
+      "id": "KDL-EDITORIAL41-008",
+      "theme": "when_a_recipe_fails",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a recipe failed, you can decide whether to troubleshoot it or make something simpler next time. Neither choice says anything about your worth."
+    },
+    {
+      "id": "KDL-EDITORIAL41-009",
+      "theme": "when_a_library_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a local library closes, the loss may be more than access to books. You may also miss a familiar place where no purchase was expected."
+    },
+    {
+      "id": "KDL-EDITORIAL41-010",
+      "theme": "when_a_library_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is reasonable to speak up for a public space that mattered to you, even when you cannot determine what happens to it."
+    },
+    {
+      "id": "KDL-EDITORIAL41-011",
+      "theme": "after_a_long_queue",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A long queue can leave you feeling as though your day has been taken from you. Before rushing into the next task, notice what energy you have left."
+    },
+    {
+      "id": "KDL-EDITORIAL41-012",
+      "theme": "after_a_long_queue",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you waited patiently and still left without an answer, your frustration makes sense. You can ask what the next practical step is."
+    },
+    {
+      "id": "KDL-EDITORIAL41-013",
+      "theme": "when_a_child_outgrows_a_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a child no longer wants an old family ritual, you may feel the passing of time sharply. The memory can stay precious while the tradition changes."
+    },
+    {
+      "id": "KDL-EDITORIAL41-014",
+      "theme": "when_a_child_outgrows_a_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A new version of a family tradition might begin by asking what everyone enjoys now, rather than insisting it look exactly as it once did."
+    },
+    {
+      "id": "KDL-EDITORIAL41-015",
+      "theme": "after_a_difficult_translation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Finding the right words across languages can be exhausting, especially when the subject matters deeply. It is okay to ask for clarification more than once."
+    },
+    {
+      "id": "KDL-EDITORIAL41-016",
+      "theme": "after_a_difficult_translation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An imperfect translation need not end a meaningful conversation. You can return to the important point slowly and check what each person understood."
+    },
+    {
+      "id": "KDL-EDITORIAL41-017",
+      "theme": "when_a_bus_route_changes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A changed bus route can unsettle a routine built around work, school and care. Needing time to find another way is a practical reality, not a personal failing."
+    },
+    {
+      "id": "KDL-EDITORIAL41-018",
+      "theme": "when_a_bus_route_changes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a journey has become harder, sharing accurate information with other passengers can be a small act of solidarity."
+    },
+    {
+      "id": "KDL-EDITORIAL41-019",
+      "theme": "after_a_forgotten_appointment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Missing an appointment may bring embarrassment before you have even explained. You can acknowledge it, ask about rescheduling and make one useful adjustment."
+    },
+    {
+      "id": "KDL-EDITORIAL41-020",
+      "theme": "after_a_forgotten_appointment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A reminder system that failed once can be improved without turning the mistake into a judgment about your character."
+    }
+  ]
+}
