@@ -1,0 +1,17 @@
+name: Monday PLUS release evidence gate
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - 'scripts/check-monday-release-evidence.py'
+      - 'quality/monday-release-evidence.json'
+      - '.github/workflows/monday-release-evidence.yml'
+permissions:
+  contents: read
+jobs:
+  release-evidence:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Fail closed unless all release evidence is verified
+        run: python3 scripts/check-monday-release-evidence.py

@@ -1,0 +1,12 @@
+{
+  "schema_version": 1,
+  "edition_id": null,
+  "decision": "NO-GO",
+  "reviewer": null,
+  "decision_timestamp_utc": null,
+  "exact_commit_sha": null,
+  "sunday_1500_qa_timestamp_sast": null,
+  "sunday_2000_decision_timestamp_sast": null,
+  "gates": {},
+  "note": "Evidence must be filled from independently verified real QA. Do not infer GO from CI or a planned schedule."
+}
