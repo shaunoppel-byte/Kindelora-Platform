@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 1600" role="img" aria-labelledby="title desc">
+<title id="title">The courage to enter</title><desc id="desc">A solitary figure stands at the edge of a warm illuminated doorway in a deep violet stone arcade, with a gold pathway leading forward.</desc>
+<defs><linearGradient id="wall" x2="1" y2="1"><stop stop-color="#130e2b"/><stop offset=".53" stop-color="#443252"/><stop offset="1" stop-color="#21172f"/></linearGradient><linearGradient id="floor" x2="0" y2="1"><stop stop-color="#7d5270"/><stop offset="1" stop-color="#1b1831"/></linearGradient><linearGradient id="door" x2="0" y2="1"><stop stop-color="#fff1c5"/><stop offset=".55" stop-color="#e4ad76"/><stop offset="1" stop-color="#a8666a"/></linearGradient><radialGradient id="halo"><stop stop-color="#f4d39e" stop-opacity=".48"/><stop offset="1" stop-color="#f4d39e" stop-opacity="0"/></radialGradient></defs>
+<rect width="1200" height="1600" fill="url(#wall)"/><path d="M0 1100 600 900 1200 1100V1600H0Z" fill="url(#floor)"/><circle cx="603" cy="760" r="490" fill="url(#halo)"/>
+<path d="M200 1160V430Q200 160 460 160H740Q1000 160 1000 430V1160H840V438Q840 320 720 320H480Q360 320 360 438V1160Z" fill="#30223e" stroke="#8f6580" stroke-width="12"/>
+<path d="M430 1120V520Q430 365 600 365Q770 365 770 520V1120Z" fill="url(#door)"/>
+<path d="M430 1120 600 975 770 1120 1160 1600H40Z" fill="#e7b681" opacity=".52"/>
+<path d="M0 1320 420 1150M1200 1320 780 1150M0 1490 410 1270M1200 1490 790 1270" fill="none" stroke="#e2bb96" stroke-opacity=".25" stroke-width="8"/>
+<ellipse cx="610" cy="1260" rx="130" ry="28" fill="#17142c" opacity=".48"/>
+<circle cx="608" cy="905" r="49" fill="#211a2d"/><path d="M562 965Q610 938 655 970L693 1180Q610 1218 525 1180Z" fill="#211a2d"/><path d="M572 1020 516 1138M650 1020 712 1125" stroke="#211a2d" stroke-width="27" stroke-linecap="round"/><path d="M569 1170 550 1295M652 1170 680 1290" stroke="#211a2d" stroke-width="31" stroke-linecap="round"/>
+<path d="M610 1180 640 1260" stroke="#f3cf99" stroke-opacity=".65" stroke-width="6" stroke-linecap="round"/>
+<g fill="#f6d49e" opacity=".55"><circle cx="392" cy="670" r="3"/><circle cx="818" cy="750" r="4"/><circle cx="328" cy="830" r="2"/><circle cx="902" cy="575" r="3"/></g>
+</svg>
