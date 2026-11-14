@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "batch": 41,
-  "editorial_note": "20 individually drafted, concrete situational messages. Editorial-only: full-corpus near-duplicate and independent sensitive-topic review are pending; not approved for public release.",
+  "editorial_note": "50 individually drafted situational messages across 10 themes (5 per theme). Editorial-only pending complete-corpus semantic and independent sensitivity review. Expansion resolves static theme-count gate; not evidence of editorial approval.",
   "messages": [
     {
       "id": "KDL-EDITORIAL41-001",
@@ -162,6 +162,246 @@
       "tone": "warm-grounded",
       "status": "editorial-review",
       "text": "A reminder system that failed once can be improved without turning the mistake into a judgment about your character."
+    },
+    {
+      "id": "KDL-EDITORIAL41-021",
+      "theme": "after_a_hearing_test",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A hearing appointment may give you new information without settling every question. Write down what you want to ask at the follow-up."
+    },
+    {
+      "id": "KDL-EDITORIAL41-022",
+      "theme": "after_a_hearing_test",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can choose where to sit in a noisy room so conversation takes less effort. Small adjustments deserve to be taken seriously."
+    },
+    {
+      "id": "KDL-EDITORIAL41-023",
+      "theme": "after_a_hearing_test",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When someone repeats themselves with patience, that is cooperation, not a favour you must repay."
+    },
+    {
+      "id": "KDL-EDITORIAL41-024",
+      "theme": "when_a_pet_needs_medicine",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your pet spits out a tablet, pause before trying again and check the vet's instructions. Safety matters more than finishing quickly."
+    },
+    {
+      "id": "KDL-EDITORIAL41-025",
+      "theme": "when_a_pet_needs_medicine",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A sick pet may need a different rhythm for a while. Ordinary chores can wait when you are attending to something vulnerable."
+    },
+    {
+      "id": "KDL-EDITORIAL41-026",
+      "theme": "when_a_pet_needs_medicine",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Keeping a simple record of doses and symptoms can ease the mental load of care, especially when several people are helping."
+    },
+    {
+      "id": "KDL-EDITORIAL41-027",
+      "theme": "after_a_job_reference_request",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may remember a colleague's strengths and limitations at the same time. A useful reference can describe both with care and precision."
+    },
+    {
+      "id": "KDL-EDITORIAL41-028",
+      "theme": "after_a_job_reference_request",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you cannot speak confidently about someone's recent work, it is reasonable to say which period you actually knew them."
+    },
+    {
+      "id": "KDL-EDITORIAL41-029",
+      "theme": "after_a_job_reference_request",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being honest about what you know is kinder than inventing certainty to make an uncomfortable call end sooner."
+    },
+    {
+      "id": "KDL-EDITORIAL41-030",
+      "theme": "when_a_recipe_fails",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Burnt edges and a messy kitchen can make dinner feel like a defeat. The next meal does not have to carry that story."
+    },
+    {
+      "id": "KDL-EDITORIAL41-031",
+      "theme": "when_a_recipe_fails",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are allowed to laugh at a cooking mishap without making yourself the joke."
+    },
+    {
+      "id": "KDL-EDITORIAL41-032",
+      "theme": "when_a_recipe_fails",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the most useful lesson from a failed dish is simply that your oven runs hot. Practical knowledge counts."
+    },
+    {
+      "id": "KDL-EDITORIAL41-033",
+      "theme": "when_a_library_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A library can be a quiet refuge for someone who has nowhere else to sit. Grieving its closure is not an overreaction."
+    },
+    {
+      "id": "KDL-EDITORIAL41-034",
+      "theme": "when_a_library_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You might keep a list of the books and people you discovered at that library. The place mattered because real encounters happened there."
+    },
+    {
+      "id": "KDL-EDITORIAL41-035",
+      "theme": "when_a_library_closes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If there is a consultation about local services, your experience of using the library is worth sharing in your own words."
+    },
+    {
+      "id": "KDL-EDITORIAL41-036",
+      "theme": "after_a_long_queue",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After a tiring wait, even a small decision may feel unusually difficult. A drink of water and a few minutes of quiet can help you regroup."
+    },
+    {
+      "id": "KDL-EDITORIAL41-037",
+      "theme": "after_a_long_queue",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Someone else's impatience in a queue does not require you to match their pace or tone."
+    },
+    {
+      "id": "KDL-EDITORIAL41-038",
+      "theme": "after_a_long_queue",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a system makes people wait, the problem is not automatically with the people waiting. You can be courteous and still ask for accountability."
+    },
+    {
+      "id": "KDL-EDITORIAL41-039",
+      "theme": "when_a_child_outgrows_a_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can miss the handmade decorations or bedtime stories without asking a growing child to pretend they still want them."
+    },
+    {
+      "id": "KDL-EDITORIAL41-040",
+      "theme": "when_a_child_outgrows_a_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A tradition sometimes survives in a smaller form: a shared meal, a familiar song, a question about the old days."
+    },
+    {
+      "id": "KDL-EDITORIAL41-041",
+      "theme": "when_a_child_outgrows_a_tradition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Watching a child develop different interests can be tender and awkward. Curiosity may make more room than persuasion."
+    },
+    {
+      "id": "KDL-EDITORIAL41-042",
+      "theme": "after_a_difficult_translation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When an important word has no neat equivalent, an example can sometimes carry more meaning than a perfect dictionary match."
+    },
+    {
+      "id": "KDL-EDITORIAL41-043",
+      "theme": "after_a_difficult_translation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is respectful to check whether a translated phrase sounds too formal, too blunt or simply unfamiliar."
+    },
+    {
+      "id": "KDL-EDITORIAL41-044",
+      "theme": "after_a_difficult_translation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A pause to find shared understanding is not wasted time when people are discussing something that matters."
+    },
+    {
+      "id": "KDL-EDITORIAL41-045",
+      "theme": "when_a_bus_route_changes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A transport change may add costs that are invisible to people who do not use that route. Your concern is grounded in everyday reality."
+    },
+    {
+      "id": "KDL-EDITORIAL41-046",
+      "theme": "when_a_bus_route_changes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the timetable is uncertain, asking the operator for written information can help you plan without relying on rumours."
+    },
+    {
+      "id": "KDL-EDITORIAL41-047",
+      "theme": "when_a_bus_route_changes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It is okay to be disappointed when a familiar route disappears. Adjusting a commute takes more than learning a new street name."
+    },
+    {
+      "id": "KDL-EDITORIAL41-048",
+      "theme": "after_a_forgotten_appointment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An appointment you missed can be important without becoming the measure of how responsible you are."
+    },
+    {
+      "id": "KDL-EDITORIAL41-049",
+      "theme": "after_a_forgotten_appointment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you owe someone an apology for a missed meeting, a clear explanation and a practical next step may be enough."
+    },
+    {
+      "id": "KDL-EDITORIAL41-050",
+      "theme": "after_a_forgotten_appointment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can set a second reminder or ask for a confirmation message. Supportive systems are often built through trial and error."
     }
   ]
 }
