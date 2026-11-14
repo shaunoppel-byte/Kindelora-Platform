@@ -6,7 +6,6 @@ automatically reject compassionate language or approve any message for release.
 import json
 import re
 from collections import defaultdict
-from itertools import combinations
 from pathlib import Path
 
 paths = sorted(Path("content").glob("message-library-v*.json"), key=lambda p: int(re.search(r"v(\d+)\.json$", p.name).group(1)))
@@ -19,12 +18,29 @@ def dice(a,b):
 groups=defaultdict(list)
 for m in items:
     groups[m["theme"]].append(m)
+# Exact lexical equivalence to the previous O(n^2) comparison, with a
+# token posting-list index. Only pairs sharing >=3 non-stopword tokens can
+# satisfy the existing review rule; all other pairs are provably ineligible.
+# This keeps full-corpus audits practical as the library approaches 5,000.
+from collections import Counter
+token_sets = [tokens(m["text"]) for m in items]
+postings = defaultdict(list)
+for idx, words in enumerate(token_sets):
+    for word in words:
+        postings[word].append(idx)
+shared_counts = Counter()
+for ids in postings.values():
+    for i, a in enumerate(ids):
+        for b in ids[i+1:]:
+            shared_counts[(a,b)] += 1
 pairs=[]
-for a,b in combinations(items,2):
-    ta,tb=tokens(a["text"]),tokens(b["text"])
-    score=dice(ta,tb)
-    if score>=0.60 and len(ta&tb)>=3:
-        pairs.append((score,a,b))
+for (i,j), overlap in shared_counts.items():
+    if overlap < 3:
+        continue
+    ta,tb=token_sets[i],token_sets[j]
+    score=2*overlap/(len(ta)+len(tb))
+    if score>=0.60:
+        pairs.append((score,items[i],items[j]))
 pairs.sort(key=lambda p:(-p[0],p[1]["id"],p[2]["id"]))
 review_terms = [
     (r"\b(always|never)\b", "absolute language"),
@@ -41,6 +57,7 @@ lines=[
 "",
 f"**Messages inspected:** {len(items)} across {len(groups)} themes.",
 f"**Potential wording/semantic overlap pairs (token Dice >= 0.60):** {len(pairs)}.",
+"**Audit method:** full corpus, indexed exact token-overlap enumeration (same >=3 shared tokens rule).",
 f"**Sensitive wording flags:** {len(flags)}.",
 "",
 "Automated lexical overlap is an advisory signal, **not** proof of duplicated meaning.",
