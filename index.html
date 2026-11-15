@@ -213,7 +213,7 @@ header .nav-more-panel a:hover,header .nav-more-panel a:focus-visible{background
  #motivational-monday .oe-monday-inline-join{display:flex!important;align-items:center;justify-content:center;gap:.55rem;width:max-content;max-width:100%;min-height:52px;box-sizing:border-box;margin:14px 0 0;padding:14px 22px;border-radius:100px;border:1px solid rgba(255,236,182,.65);background:#D9AC61;color:#24102E!important;font:800 clamp(14px,3.8vw,17px)/1.25 system-ui,sans-serif;text-decoration:none!important;box-shadow:0 8px 20px rgba(20,7,28,.25)}
  #motivational-monday .oe-monday-inline-join svg{width:18px;height:18px;flex:none}
  #motivational-monday .oe-monday-inline-join:focus-visible{outline:3px solid #fff;outline-offset:3px}
- .oe-floating-cta.oe-hero-visible{display:none!important}
+ .oe-floating-cta{display:none!important} /* Mobile has a single dedicated in-flow CTA; desktop retains floating CTA. */
  #motivational-monday .monday-signature-note{display:flex;flex-wrap:wrap;gap:.4rem .8rem}
 }
 </style>
@@ -523,7 +523,5 @@ footer{background:#25132e;border-top:2px solid #b99461}
 </script>
 <a class="oe-floating-cta" href="#membership" style="--oe-cta-bg:#D9AC61;--oe-cta-fg:#24102E" aria-label="Join KINDELORA Plus">Join KINDELORA Plus <svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14m-6-6 6 6-6 6"/></svg></a>
 
-<script id="kindelora-mobile-cta-placement-v2-script">
-(()=>{'use strict';const hero=document.getElementById('motivational-monday');const floating=document.querySelector('body > .oe-floating-cta');if(!hero||!floating)return;const update=()=>{const r=hero.getBoundingClientRect();const visible=r.bottom>0&&r.top<window.innerHeight;floating.classList.toggle('oe-hero-visible',visible)};window.addEventListener('scroll',update,{passive:true});window.addEventListener('resize',update,{passive:true});update()})();
-</script>
+
 </body></html>
