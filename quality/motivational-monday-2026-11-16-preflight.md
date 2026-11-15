@@ -24,3 +24,13 @@ Prepared Saturday 14 November 2026 from inspected GitHub main. **PRELIMINARY NO-
 - Exercise paid/free/guest/expired server-side access tests and capture evidence.
 - Preserve historical editions and personal favorites by stable IDs per `docs/MOTIVATIONAL_MONDAY_PERMANENT_LIBRARY_CONTRACT.md` once implemented.
 - Update this report with actual Sunday test evidence; do not change NO-GO merely because a calendar deadline arrives.
+
+## Sunday 15 November update — founder approval and repository verification
+
+- **Founder-approved script:** `content/motivational-monday-2026-11-16-approved.json` on main, via merged PR #314. Preserve exact approved text.
+- **Founder-approved narration:** Joanna (Warm & Conversational), generated MP3, approximately 45.05 seconds, recorded in the same JSON via merged PR #315. This is an **external HeyGen asset reference**, not an uploaded or verified first-party audio file.
+- **Audio candidate source:** `https://resource2.heygen.ai/text_to_speech/df76016f16be459a8f0c04568b6d0ecf/776f9d2ff401499a8f1f2bcb4ca46004/id=5ed713be613b492eb0c323ddd7af8516.mp3`. The founder explicitly approved the listening experience. Independent transcript matching, first-party hosting and mobile playback remain unverified.
+- **Existing first-party audio paths** include `assets/audio/heygen-speech-2.mp3`, `assets/audio/heygen-speech-2(3).mp3` and `assets/audio/motivational-monday-joanna.mp3`; these predate the approved edition and must not be assumed to contain its narration.
+- **GitHub checks:** Motivational Monday static contract and zero-cost configuration guard passed on merged commit `b57c6f03cee464dbf03347f04de9e895e6c189e3`. Static-site QA was in progress at the observation point; static checks cannot establish PLUS entitlement or audio playback.
+- **Unresolved:** quotation attribution, historical originality archive completeness, first-party audio asset, independent script-to-audio verification, mobile playback, server-side PLUS entitlement including guest/free/expired denial, rollback and production release verification.
+- **Release decision:** NO-GO. Founder editorial/audio approval is not the Sunday 20:00 SAST technical GO decision. Do not publish or notify without verified mandatory evidence.
