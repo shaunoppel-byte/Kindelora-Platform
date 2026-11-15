@@ -44,7 +44,7 @@
     "quote_attribution": "unverified",
     "historical_uniqueness": "incomplete",
     "independent_editorial_review": "pending",
-    "approved_final_mp3": "founder_approved_external_source_only",
+    "approved_final_mp3": "first_party_asset_committed_founder_approved",
     "audio_script_match": "input_text_matches_approved_wording; independent_audio_transcript_unverified",
     "audio_mobile_playback": "unverified",
     "server_enforced_plus_access": "unverified",
@@ -64,8 +64,8 @@
     "format": "mp3",
     "reported_duration_seconds": 45.04746031746031,
     "source_url": "https://resource2.heygen.ai/text_to_speech/df76016f16be459a8f0c04568b6d0ecf/776f9d2ff401499a8f1f2bcb4ca46004/id=5ed713be613b492eb0c323ddd7af8516.mp3",
-    "first_party_asset_path": null,
+    "first_party_asset_path": "/assets/audio/motivational-monday-2026-11-16-approved.mp3",
     "source": "Generated from founder-approved message; founder listened and approved",
-    "verification": "generation output and founder approval confirmed; binary not yet integrated in GitHub, first-party availability and actual playback unverified"
+    "verification": "Exact founder-approved source downloaded to first-party repository MP3 (721397 bytes; MPEG Layer III validated by recovery workflow). Independent transcript match, production playback and PLUS entitlement remain unverified."
   }
 }
