@@ -1,4 +1,4 @@
-const CACHE="kindelora-launch-v23";
+const CACHE="kindelora-launch-v24";
 const ASSETS=["/","/index.html","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/message-catalogue.json","/manifest.webmanifest","/icon.svg","/sunrise-landscape.svg","/morning-light.svg","/calm-moment.svg","/reflect-grow.svg","/privacy.html","/terms.html","/motivational-monday.html","/assets/kindelora-monday-cinematic-bg.webp","/affirmations/artwork/small-steps-still-count.png","/affirmations/artwork/rest-is-part-of-growing.png","/affirmations/artwork/the-light-returns.png","/affirmations/artwork/i-am-enough-as-i-am.svg"];
 self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()))});
 self.addEventListener("activate",event=>{event.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith("kindelora-launch-")&&key!==CACHE).map(key=>caches.delete(key)))),self.clients.claim()]))});
@@ -10,7 +10,7 @@ self.addEventListener("fetch",event=>{
   event.respondWith(fetch(request).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(request,copy)))}return response}).catch(async()=>await caches.match(request)||await caches.match("/index.html")));
   return;
  }
- if(["/message-catalogue.json","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/manifest.webmanifest","/icon.svg","/privacy.html","/terms.html"].includes(path)){
+ if(["/affirmation-library.js","/message-catalogue.json","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/manifest.webmanifest","/icon.svg","/privacy.html","/terms.html"].includes(path)){
   event.respondWith(fetch(request).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(path,copy)))}return response}).catch(()=>caches.match(path)));
   return;
  }
@@ -24,7 +24,7 @@ self.addEventListener("fetch",event=>{
  // Stylesheets and film imagery must not be pinned to stale cache entries.
  // Network-first keeps online refreshes in sync with Cloudflare deployments;
  // the previously fetched asset remains available when offline.
- if(request.destination==="style" || (request.destination==="image" && /film|poster|golden/i.test(path))){
+ if(request.destination==="style" || (request.destination==="image" && path.startsWith("/assets/affirmations/")) || (request.destination==="image" && /film|poster|golden/i.test(path))){
   event.respondWith(fetch(request).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(request,copy)))}return response}).catch(()=>caches.match(request)));
   return;
  }
