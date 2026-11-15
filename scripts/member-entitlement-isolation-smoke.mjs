@@ -66,5 +66,12 @@ const withoutPepper = await onRequestGet({request:request(tokenA),env:{...env,ME
 assert.equal(withoutPepper.status,503);
 assert.deepEqual(await get(tokenB,"&plus=1&subscription=active"),{status:200,body:{authenticated:true,plus:false}});
 
+
+const failingDb={prepare(){throw new Error("no such table: subscriptions")}};
+const failedStorage=await onRequestGet({request:request(tokenA),env:{...env,DB:failingDb}});
+assert.equal(failedStorage.status,503);
+assert.deepEqual(await failedStorage.json(),{error:"Member access unavailable"});
+assert.equal(failedStorage.headers.get("cache-control"),"no-store");
+
 assert.ok(queries.some(sql => sql.includes("email_verified_at IS NOT NULL") && sql.includes("current_period_end>?")));
 console.log("PASS: guest denied; unknown session denied; paid account allowed; second account isolated; expired/removed entitlement denied; missing configuration fails closed; URL parameters cannot grant PLUS (mock D1)");
