@@ -4,7 +4,7 @@
   "decision": "NO-GO",
   "reviewer": null,
   "decision_timestamp_utc": null,
-  "exact_commit_sha": "b57c6f03cee464dbf03347f04de9e895e6c189e3",
+  "exact_commit_sha": "0e9ade16bc8c109cbc067be2d98902f8c2d06dbf",
   "sunday_1500_qa_timestamp_sast": null,
   "sunday_2000_decision_timestamp_sast": null,
   "gates": {
@@ -21,7 +21,7 @@
     "release_ci": "PARTIAL_STATIC_CHECKS_ONLY",
     "production_deployment": "NOT_AUTHORIZED"
   },
-  "note": "Sunday preflight, 2026-11-15: founder approved script and Joanna audio; approved external MP3 not integrated in first-party assets. Main static Monday contract and zero-cost guard succeeded on b57c6f0; cannot infer playback or paid authorization. Keep fail-closed. Sunday 15:00 QA and 20:00 final decision not yet performed. Existing 400 affirmation paths are unique SVG files, not verified unique cinematic photographic assets.",
+  "note": "Sunday 15 November 2026 22:39 SAST: post-20:00 final NO-GO reconfirmed on main 0e9ade16bc8c109cbc067be2d98902f8c2d06dbf. No evidenced 20:00 GO; founder-approved MP3 remains external only, edition-specific first-party audio and PLUS authorization/mobile denial unverified. No publication authorized for Sunday 23:00 SAST.",
   "observations": [
     {
       "observed_local": "2026-11-15 15:47 SAST",
@@ -50,6 +50,20 @@
         "Public message-catalogue.json declares 3,000 messages; v42 remains 50 editorial-only entries"
       ],
       "next_gate": "Do not publish at Sunday 23:00 SAST; retain fail-closed until all release evidence and a new authorized decision are recorded"
+    },
+    {
+      "observed_local": "2026-11-15 22:39 SAST",
+      "scope": "Repository-only final release checkpoint; no production/browser/device verification",
+      "main_commit": "0e9ade16bc8c109cbc067be2d98902f8c2d06dbf",
+      "decision": "NO-GO",
+      "findings": [
+        "Sunday 20:00 SAST GO evidence absent; previous explicit NO-GO remains binding",
+        "Edition-approved external MP3 is not committed as first-party asset; audio playback and word-for-word verification incomplete",
+        "PLUS server-side entitlement and anonymous/free/expired denial lack verified evidence",
+        "Historical uniqueness, quotation attribution and independent editorial review remain incomplete",
+        "Public catalogue declares 3,000 messages; 50 v42 entries editorial-only; artwork QA still pending"
+      ],
+      "next_gate": "Block Sunday 23:00 SAST publication and subscriber notifications; require a new complete evidence-backed release decision after remediation"
     }
   ]
 }
