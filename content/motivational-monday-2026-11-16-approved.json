@@ -1,0 +1,54 @@
+{
+  "schema_version": 1,
+  "edition_id": "mm-2026-11-16",
+  "publication_date": "2026-11-16",
+  "title": "You Don't Have to Have It All Figured Out",
+  "status": "founder_editorial_approved_release_blocked",
+  "approval": {
+    "role": "founder",
+    "source": "explicit approval in ChatGPT conversation 2026-11-15",
+    "statement": "I approve the proposed KINDELORA Motivational Monday message for 16 November 2026 exactly as written. Record my editorial approval and proceed with the remaining release QA gates.",
+    "approval_timestamp_utc": null,
+    "independent_editorial_review": false
+  },
+  "content": {
+    "paragraphs": [
+      "Good morning, and welcome to a new week.",
+      "There is something quietly reassuring about remembering that we don't need to have every answer before taking the next step.",
+      "Some days, progress looks like a big achievement. Other days, it's simply making a decision, trying again, or finding the courage to begin something we've been putting off.",
+      "Both matter.",
+      "As Martin Luther King Jr. reminded us:",
+      "“Faith is taking the first step even when you don't see the whole staircase.”",
+      "Whatever this week holds, give yourself permission to move forward without having everything figured out.",
+      "You don't need to see the entire journey to take one meaningful step today.",
+      "A new week. A fresh opportunity. Your next step is enough.",
+      "Carpe Diem!",
+      "With kindness,",
+      "KINDELORA"
+    ],
+    "bold": [
+      "A new week. A fresh opportunity. Your next step is enough.",
+      "KINDELORA"
+    ],
+    "italic": [
+      "“Faith is taking the first step even when you don't see the whole staircase.”"
+    ]
+  },
+  "gates": {
+    "quote_attribution": "unverified",
+    "historical_uniqueness": "incomplete",
+    "independent_editorial_review": "pending",
+    "approved_final_mp3": "missing",
+    "audio_script_match": "unverified",
+    "audio_mobile_playback": "unverified",
+    "server_enforced_plus_access": "unverified",
+    "guest_free_expired_denial": "unverified",
+    "mobile_and_links": "unverified",
+    "ci": "not_run_for_this_edition",
+    "production_deployment": "not_attempted",
+    "sunday_1500_qa": "pending",
+    "sunday_2000_go_nogo": "pending"
+  },
+  "release_decision": "NO-GO",
+  "release_policy": "Do not publish or notify until all release gates pass and explicit Sunday 20:00 SAST GO evidence is recorded."
+}
