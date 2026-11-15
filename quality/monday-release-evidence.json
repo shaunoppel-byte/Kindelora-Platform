@@ -21,5 +21,21 @@
     "release_ci": "PARTIAL_STATIC_CHECKS_ONLY",
     "production_deployment": "NOT_AUTHORIZED"
   },
-  "note": "Sunday preflight, 2026-11-15: founder approved script and Joanna audio; approved external MP3 not integrated in first-party assets. Main static Monday contract and zero-cost guard succeeded on b57c6f0; cannot infer playback or paid authorization. Keep fail-closed. Sunday 15:00 QA and 20:00 final decision not yet performed. Existing 400 affirmation paths are unique SVG files, not verified unique cinematic photographic assets."
+  "note": "Sunday preflight, 2026-11-15: founder approved script and Joanna audio; approved external MP3 not integrated in first-party assets. Main static Monday contract and zero-cost guard succeeded on b57c6f0; cannot infer playback or paid authorization. Keep fail-closed. Sunday 15:00 QA and 20:00 final decision not yet performed. Existing 400 affirmation paths are unique SVG files, not verified unique cinematic photographic assets.",
+  "observations": [
+    {
+      "observed_local": "2026-11-15 15:47 SAST",
+      "scope": "repository evidence review only; not a completed comprehensive mobile/audio/security QA",
+      "main_commit": "108720b88b80a0eb5ea08b2a4c794ac7d37425ad",
+      "decision": "NO-GO",
+      "findings": [
+        "Founder script and external audio approval recorded, but first-party approved edition audio path is null",
+        "No recorded 15:00 comprehensive QA result or independent editorial approval",
+        "Server-enforced PLUS entitlement and anonymous/free/expired denial remain unverified",
+        "400 artwork manifest entries: 0 approved, 8 with replacementAsset paths; binary quality and integration not verified",
+        "PR #317 remains open at 189aa295; 50 editorial-only messages not published"
+      ],
+      "next_gate": "Sunday 20:00 SAST documented decision; absent complete passing evidence remain NO-GO"
+    }
+  ]
 }
