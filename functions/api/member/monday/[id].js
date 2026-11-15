@@ -11,7 +11,7 @@ export async function onRequestGet({request,env,params}){
   const paid=await env.DB.prepare("SELECT s.id FROM subscriptions s JOIN customers c ON c.id=s.customer_id WHERE c.email_normalized=? AND c.email_verified_at IS NOT NULL AND s.status='active' AND s.current_period_end>? LIMIT 1").bind(user.email_normalized,new Date().toISOString()).first();
   if(!paid)return deny(403);
   const id=params?.id;
-  if(typeof id!=="string"||!/^mm-20\\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\\d|3[01])$/.test(id))return deny(404);
+  if(typeof id!=="string"||!/^mm-20\d{2}-(0[1-9]|1[0-2])-(0[1-9]|[12]\d|3[01])$/.test(id))return deny(404);
   const type=new URL(request.url).searchParams.get("format")==="audio"?"audio":"text";
   if(!env.PRIVATE_MONDAY_MEDIA)return deny(503);
   const object=await env.PRIVATE_MONDAY_MEDIA.get("editions/"+id+(type==="audio"?".mp3":".json"));
