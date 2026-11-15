@@ -34,9 +34,9 @@ for item in entries:
     if suffix == ".webp":
         valid = data[:4] == b"RIFF" and data[8:12] == b"WEBP"
     elif suffix in (".jpg", ".jpeg"):
-        valid = data[:3] == b"\\xff\\xd8\\xff" and data[-2:] == b"\\xff\\xd9"
+        valid = data[:3] == bytes.fromhex("ffd8ff") and data[-2:] == bytes.fromhex("ffd9")
     else:
-        valid = data[:8] == b"\\x89PNG\\r\\n\\x1a\\n"
+        valid = data[:8] == bytes.fromhex("89504e470d0a1a0a")
     if not valid:
         raise SystemExit("Image signature does not match extension: " + name)
     actual = hashlib.sha256(data).hexdigest()
