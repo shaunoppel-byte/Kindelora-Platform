@@ -1,7 +1,7 @@
 name: Recover Joanna narration as first-party asset
 on:
   push:
-    branches: [fix/monday-first-party-mp3]
+    branches: [fix/monday-approved-audio-source-20261116]
     paths: [.github/workflows/recover-joanna-audio.yml]
   workflow_dispatch:
 permissions:
@@ -13,32 +13,32 @@ jobs:
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: fix/monday-first-party-mp3
+          ref: fix/monday-approved-audio-source-20261116
           persist-credentials: true
       - name: Fetch Joanna recording
         env:
-          AUDIO_URL: https://resource2.heygen.ai/text_to_speech/df76016f16be459a8f0c04568b6d0ecf/776f9d2ff401499a8f1f2bcb4ca46004/id%3Dd32d899334974752a51c07dc78279140.mp3
+          AUDIO_URL: https://resource2.heygen.ai/text_to_speech/df76016f16be459a8f0c04568b6d0ecf/776f9d2ff401499a8f1f2bcb4ca46004/id%3D5ed713be613b492eb0c323ddd7af8516.mp3
         run: |
           set -euo pipefail
           mkdir -p assets/audio
-          curl --fail --location --retry 3 --max-time 90 --silent --show-error "$AUDIO_URL" -o assets/audio/motivational-monday-joanna.mp3
-          file assets/audio/motivational-monday-joanna.mp3
+          curl --fail --location --retry 3 --max-time 90 --silent --show-error "$AUDIO_URL" -o assets/audio/motivational-monday-2026-11-16-approved.mp3
+          file assets/audio/motivational-monday-2026-11-16-approved.mp3
           python3 - <<'PY'
           from pathlib import Path
-          p=Path('assets/audio/motivational-monday-joanna.mp3')
+          p=Path('assets/audio/motivational-monday-2026-11-16-approved.mp3')
           b=p.read_bytes()
           assert len(b)>100000, f'Audio too small: {len(b)} bytes'
           assert b[:3]==b'ID3' or b[:2] in (bytes.fromhex('fffb'),bytes.fromhex('fff3'),bytes.fromhex('fff2')), 'Not an MP3 file'
           print('Validated MP3 header and file size',len(b))
           PY
-          ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 assets/audio/motivational-monday-joanna.mp3
-          duration="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 assets/audio/motivational-monday-joanna.mp3)"
+          ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1 assets/audio/motivational-monday-2026-11-16-approved.mp3
+          duration="$(ffprobe -v error -show_entries format=duration -of default=noprint_wrappers=1:nokey=1 assets/audio/motivational-monday-2026-11-16-approved.mp3)"
           python3 -c 'import sys; assert 35<float(sys.argv[1])<55, "Unexpected duration"' "$duration"
       - name: Commit recovered audio
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add assets/audio/motivational-monday-joanna.mp3
+          git add assets/audio/motivational-monday-2026-11-16-approved.mp3
           git diff --cached --quiet && exit 0
           git commit -m "assets: host verified Joanna Monday MP3 on Cloudflare Pages"
-          git push origin HEAD:fix/monday-first-party-mp3
+          git push origin HEAD:fix/monday-approved-audio-source-20261116
