@@ -1,0 +1,16 @@
+name: Monday production readiness smoke (read only)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  production-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check public production page, approved MP3, guest denial and PLUS status
+        run: node scripts/monday-production-smoke.mjs
