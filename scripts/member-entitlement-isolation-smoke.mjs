@@ -56,5 +56,15 @@ assert.deepEqual(await get(tokenA), { status: 200, body: { authenticated: true, 
 assert.deepEqual(await get(tokenB, "&member=a"), { status: 200, body: { authenticated: true, plus: false } });
 active = new Set();
 assert.deepEqual(await get(tokenA), { status: 200, body: { authenticated: true, plus: false } });
+
+const unavailable = await onRequestGet({request:request(tokenA),env:{...env,MEMBER_AUTH_ENABLED:"false"}});
+assert.equal(unavailable.status,503);
+assert.equal((await unavailable.json()).error,"Member access unavailable");
+const withoutDatabase = await onRequestGet({request:request(tokenA),env:{...env,DB:null}});
+assert.equal(withoutDatabase.status,503);
+const withoutPepper = await onRequestGet({request:request(tokenA),env:{...env,MEMBER_AUTH_PEPPER:"short"}});
+assert.equal(withoutPepper.status,503);
+assert.deepEqual(await get(tokenB,"&plus=1&subscription=active"),{status:200,body:{authenticated:true,plus:false}});
+
 assert.ok(queries.some(sql => sql.includes("email_verified_at IS NOT NULL") && sql.includes("current_period_end>?")));
-console.log("PASS: guest denied; unknown session denied; paid account allowed; second account isolated; expired/removed entitlement denied (mock D1)");
+console.log("PASS: guest denied; unknown session denied; paid account allowed; second account isolated; expired/removed entitlement denied; missing configuration fails closed; URL parameters cannot grant PLUS (mock D1)");
