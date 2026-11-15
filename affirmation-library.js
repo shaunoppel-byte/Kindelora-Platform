@@ -5,7 +5,7 @@
 {id:'self-love',title:'Self-Love',text:'You are worthy of care, tenderness and belonging, exactly as you are.',tags:'acceptance kindness worth',image:'/assets/affirmations/original-self-love-garden-20261114.svg'},
 {id:'motivation',title:'Motivation',text:'You do not have to see the entire road to take your next meaningful step.',tags:'energy progress goals',image:'/assets/affirmations/original-motivation-first-step-20261114.svg'},
 {id:'growth',title:'Growth',text:'Every new day gives you permission to begin again.',tags:'learning renewal beginnings',image:'/assets/affirmations/original-growth-greenhouse-20261114.svg'},
-{id:'gratitude',title:'Gratitude',text:'There is beauty in the ordinary moments you choose to notice.',tags:'thankfulness joy appreciation',image:'/assets/affirmations/editorial-gratitude-candidate.svg'},
+{id:'gratitude',title:'Gratitude',text:'There is beauty in the ordinary moments you choose to notice.',tags:'thankfulness joy appreciation',image:'/assets/affirmations/original-gratitude-garden-20261115.svg'},
 {id:'purpose',title:'Purpose',text:'Your path is your own. Move toward what matters to you.',tags:'meaning direction clarity',image:'/assets/affirmations/editorial-purpose-candidate.svg'},
 {id:"quiet-courage",title:"Quiet Courage",text:"I can take a brave step without needing to feel fearless.",tags:"courage bravery confidence uncertainty",image:'/assets/affirmations/original-quiet-courage.svg'},
 {id:"gentle-boundaries",title:"Gentle Boundaries",text:"My kindness can include a clear and peaceful no.",tags:"boundaries respect self care",image:'/assets/affirmations/original-gentle-boundaries.svg'},
