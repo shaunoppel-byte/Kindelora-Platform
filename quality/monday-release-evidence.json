@@ -36,6 +36,20 @@
         "PR #317 remains open at 189aa295; 50 editorial-only messages not published"
       ],
       "next_gate": "Sunday 20:00 SAST documented decision; absent complete passing evidence remain NO-GO"
+    },
+    {
+      "observed_local": "2026-11-15 21:38 SAST",
+      "scope": "Post-20:00 evidence audit of latest main and GitHub Actions; no direct device or production testing",
+      "main_commit": "7f86b3065d152ba25d2af0a954ec98453905897d",
+      "decision": "NO-GO",
+      "findings": [
+        "Sunday 20:00 SAST evidence-backed GO decision not recorded; decision field remains NO-GO",
+        "First-party approved MP3, mobile playback and PLUS server-side entitlement/guest denial remain unverified",
+        "Latest main static contract, static-site QA and zero-cost guard succeeded; these do not satisfy release evidence gate",
+        "400 local SVG artwork assignments have unique paths; formal remediation approvals remain 0/400; 8 manifest replacement paths",
+        "Public message-catalogue.json declares 3,000 messages; v42 remains 50 editorial-only entries"
+      ],
+      "next_gate": "Do not publish at Sunday 23:00 SAST; retain fail-closed until all release evidence and a new authorized decision are recorded"
     }
   ]
 }
