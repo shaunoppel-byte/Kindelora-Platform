@@ -58,6 +58,7 @@ jobs:
           node scripts/member-smoke.mjs
           node scripts/member-isolation-smoke.mjs
           node scripts/member-entitlement-isolation-smoke.mjs
+          node scripts/monday-private-access-smoke.mjs
       - name: Verify Pages Functions local imports resolve
         run: |
           python3 - <<'PY'
