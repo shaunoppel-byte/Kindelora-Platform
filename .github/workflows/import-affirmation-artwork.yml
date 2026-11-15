@@ -9,6 +9,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Verify artwork importer regression checks
+        run: python3 scripts/test-artwork-import-signatures.py
       - name: Download and verify original image bytes
         run: python3 scripts/import-affirmation-artwork.py quality/affirmation-artwork-import.json
       - name: Create reviewed artwork pull request
