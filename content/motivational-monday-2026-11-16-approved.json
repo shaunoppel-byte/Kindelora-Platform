@@ -3,13 +3,19 @@
   "edition_id": "mm-2026-11-16",
   "publication_date": "2026-11-16",
   "title": "You Don't Have to Have It All Figured Out",
-  "status": "founder_editorial_approved_release_blocked",
+  "status": "founder_script_and_audio_approved_release_blocked",
   "approval": {
     "role": "founder",
     "source": "explicit approval in ChatGPT conversation 2026-11-15",
     "statement": "I approve the proposed KINDELORA Motivational Monday message for 16 November 2026 exactly as written. Record my editorial approval and proceed with the remaining release QA gates.",
     "approval_timestamp_utc": null,
-    "independent_editorial_review": false
+    "independent_editorial_review": false,
+    "audio": {
+      "role": "founder",
+      "source": "explicit ChatGPT approval 2026-11-15",
+      "statement": "Beautiful, Audio Approved. Please proceed to add to the Message and Deplay everything when required as per the timing agreed",
+      "approved": true
+    }
   },
   "content": {
     "paragraphs": [
@@ -38,8 +44,8 @@
     "quote_attribution": "unverified",
     "historical_uniqueness": "incomplete",
     "independent_editorial_review": "pending",
-    "approved_final_mp3": "missing",
-    "audio_script_match": "unverified",
+    "approved_final_mp3": "founder_approved_external_source_only",
+    "audio_script_match": "input_text_matches_approved_wording; independent_audio_transcript_unverified",
     "audio_mobile_playback": "unverified",
     "server_enforced_plus_access": "unverified",
     "guest_free_expired_denial": "unverified",
@@ -50,5 +56,16 @@
     "sunday_2000_go_nogo": "pending"
   },
   "release_decision": "NO-GO",
-  "release_policy": "Do not publish or notify until all release gates pass and explicit Sunday 20:00 SAST GO evidence is recorded."
+  "release_policy": "Do not publish or notify until all release gates pass and explicit Sunday 20:00 SAST GO evidence is recorded.",
+  "audio": {
+    "provider": "HeyGen",
+    "voice": "Joanna - Warm & Conversational",
+    "voice_id": "776f9d2ff401499a8f1f2bcb4ca46004",
+    "format": "mp3",
+    "reported_duration_seconds": 45.04746031746031,
+    "source_url": "https://resource2.heygen.ai/text_to_speech/df76016f16be459a8f0c04568b6d0ecf/776f9d2ff401499a8f1f2bcb4ca46004/id=5ed713be613b492eb0c323ddd7af8516.mp3",
+    "first_party_asset_path": null,
+    "source": "Generated from founder-approved message; founder listened and approved",
+    "verification": "generation output and founder approval confirmed; binary not yet integrated in GitHub, first-party availability and actual playback unverified"
+  }
 }
