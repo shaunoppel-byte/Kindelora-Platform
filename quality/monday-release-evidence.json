@@ -1,12 +1,25 @@
 {
   "schema_version": 1,
-  "edition_id": null,
+  "edition_id": "mm-2026-11-16",
   "decision": "NO-GO",
   "reviewer": null,
   "decision_timestamp_utc": null,
-  "exact_commit_sha": null,
+  "exact_commit_sha": "b57c6f03cee464dbf03347f04de9e895e6c189e3",
   "sunday_1500_qa_timestamp_sast": null,
   "sunday_2000_decision_timestamp_sast": null,
-  "gates": {},
-  "note": "Evidence must be filled from independently verified real QA. Do not infer GO from CI or a planned schedule."
+  "gates": {
+    "founder_script_approval": "PASS",
+    "founder_audio_approval": "PASS",
+    "approved_audio_source": "EXTERNAL_ONLY_NOT_FIRST_PARTY",
+    "first_party_audio": "BLOCKED",
+    "mobile_playback": "UNVERIFIED",
+    "plus_server_entitlement": "UNVERIFIED",
+    "anonymous_free_expired_denial": "UNVERIFIED",
+    "quotation_attribution": "UNVERIFIED",
+    "historical_uniqueness": "INCOMPLETE",
+    "independent_editorial_review": "PENDING",
+    "release_ci": "PARTIAL_STATIC_CHECKS_ONLY",
+    "production_deployment": "NOT_AUTHORIZED"
+  },
+  "note": "Sunday preflight, 2026-11-15: founder approved script and Joanna audio; approved external MP3 not integrated in first-party assets. Main static Monday contract and zero-cost guard succeeded on b57c6f0; cannot infer playback or paid authorization. Keep fail-closed. Sunday 15:00 QA and 20:00 final decision not yet performed. Existing 400 affirmation paths are unique SVG files, not verified unique cinematic photographic assets."
 }
