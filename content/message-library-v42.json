@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "batch": 42,
-  "editorial_note": "20 independently drafted situational messages. Editorial-only pending full corpus automated QA, semantic sensitivity review and independent editorial approval; not authorized for public catalogue.",
+  "editorial_note": "50 individually drafted situational messages across 10 themes (5 per theme). Exact normalized text and ID uniqueness checked within batch and against the 3,000-entry public catalogue; full editorial-batch semantic near-duplicate and independent sensitivity review remain pending. Editorial-only; not approved for publication.",
   "messages": [
     {
       "id": "KDL-EDITORIAL42-001",
@@ -162,6 +162,246 @@
       "tone": "warm-grounded",
       "status": "editorial-review",
       "text": "You can be flexible and still name the inconvenience. Both can be true without turning a changed plan into a conflict."
+    },
+    {
+      "id": "KDL-EDITORIAL42-021",
+      "theme": "after_a_difficult_apology",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may wish an apology could undo the moment, but trust often returns through ordinary consistency. Let your next actions speak without asking for immediate reassurance."
+    },
+    {
+      "id": "KDL-EDITORIAL42-022",
+      "theme": "after_a_difficult_apology",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If the person you hurt needs a boundary, hearing it can be uncomfortable. Taking it seriously is part of making space for their experience."
+    },
+    {
+      "id": "KDL-EDITORIAL42-023",
+      "theme": "after_a_difficult_apology",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A difficult apology is not a negotiation for forgiveness. It can simply be an honest acknowledgement of harm and a commitment to behave differently."
+    },
+    {
+      "id": "KDL-EDITORIAL42-024",
+      "theme": "returning_to_a_shared_home",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you share a kitchen after a hard conversation, even making tea can feel awkward. There is no need to pretend everything is settled."
+    },
+    {
+      "id": "KDL-EDITORIAL42-025",
+      "theme": "returning_to_a_shared_home",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A shared space should allow both people some breathing room. Agreeing on practical routines can reduce friction while bigger feelings are still tender."
+    },
+    {
+      "id": "KDL-EDITORIAL42-026",
+      "theme": "returning_to_a_shared_home",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you are unsure whether to speak or give space, a gentle question may be kinder than guessing. The other person can answer in their own time."
+    },
+    {
+      "id": "KDL-EDITORIAL42-027",
+      "theme": "waiting_for_an_accessibility_fix",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An access request should not require you to disclose more personal information than is necessary. Your privacy matters while the practical problem is addressed."
+    },
+    {
+      "id": "KDL-EDITORIAL42-028",
+      "theme": "waiting_for_an_accessibility_fix",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A temporary workaround may help today without making the underlying barrier acceptable. You can appreciate assistance and still ask for a lasting fix."
+    },
+    {
+      "id": "KDL-EDITORIAL42-029",
+      "theme": "waiting_for_an_accessibility_fix",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a promised adjustment is delayed again, frustration makes sense. Keeping a written record can help you advocate without retelling every detail."
+    },
+    {
+      "id": "KDL-EDITORIAL42-030",
+      "theme": "after_a_missed_family_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A missed conversation can carry extra weight when someone is far away. You can acknowledge the disappointment and offer a specific time to reconnect."
+    },
+    {
+      "id": "KDL-EDITORIAL42-031",
+      "theme": "after_a_missed_family_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you missed the call because you were overwhelmed, you do not have to invent a more impressive explanation. A simple, considerate reply can be enough."
+    },
+    {
+      "id": "KDL-EDITORIAL42-032",
+      "theme": "after_a_missed_family_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Family connection is not measured by a flawless call history. What matters now may be listening well when you do reach each other."
+    },
+    {
+      "id": "KDL-EDITORIAL42-033",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You might feel happy for your friend's new chapter and lonely about the empty seat beside you. Those feelings do not cancel each other."
+    },
+    {
+      "id": "KDL-EDITORIAL42-034",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first celebration without a nearby friend can sting unexpectedly. Sending a photograph may help you include them without pretending the distance is easy."
+    },
+    {
+      "id": "KDL-EDITORIAL42-035",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Friendships sometimes need a new rhythm after a move. You can suggest one that fits both lives instead of measuring care by reply speed."
+    },
+    {
+      "id": "KDL-EDITORIAL42-036",
+      "theme": "starting_again_after_a_rejection",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Before applying again, you may need a day without advice or encouragement. Disappointment deserves room without becoming your identity."
+    },
+    {
+      "id": "KDL-EDITORIAL42-037",
+      "theme": "starting_again_after_a_rejection",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A closed door can make you question work you were proud of yesterday. Try to separate the decision from the effort you know you made."
+    },
+    {
+      "id": "KDL-EDITORIAL42-038",
+      "theme": "starting_again_after_a_rejection",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If feedback is vague, you can ask a respectful follow-up question. You also have permission to move on without chasing an explanation."
+    },
+    {
+      "id": "KDL-EDITORIAL42-039",
+      "theme": "supporting_someone_after_surgery",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Recovery can be unpredictable, and a loved one's frustration may not be about you. Listening without taking every difficult moment personally can help."
+    },
+    {
+      "id": "KDL-EDITORIAL42-040",
+      "theme": "supporting_someone_after_surgery",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Before offering another solution, ask what kind of help would actually be useful. Some days the answer may be company rather than a task."
+    },
+    {
+      "id": "KDL-EDITORIAL42-041",
+      "theme": "supporting_someone_after_surgery",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Care after surgery can involve uncertainty. For medical questions, the care team is the right place to seek guidance; your role need not include knowing every answer."
+    },
+    {
+      "id": "KDL-EDITORIAL42-042",
+      "theme": "finding_your_way_in_a_new_city",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Getting lost on a familiar-looking street can shake your confidence. It is a navigation problem, not proof that you do not belong."
+    },
+    {
+      "id": "KDL-EDITORIAL42-043",
+      "theme": "finding_your_way_in_a_new_city",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may miss the ease of being known in your old neighbourhood. Building new familiarity takes repeated small encounters, not an instant reinvention."
+    },
+    {
+      "id": "KDL-EDITORIAL42-044",
+      "theme": "finding_your_way_in_a_new_city",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A city becomes less strange when you find one place where you can relax without performing confidence. That place can be modest and still matter."
+    },
+    {
+      "id": "KDL-EDITORIAL42-045",
+      "theme": "after_a_school_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It can be hard to hear several concerns about a child in one sitting. You can ask for the priorities in writing before making decisions."
+    },
+    {
+      "id": "KDL-EDITORIAL42-046",
+      "theme": "after_a_school_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Teachers and families may see different parts of a child's day. Sharing those observations respectfully can create a fuller picture than blame."
+    },
+    {
+      "id": "KDL-EDITORIAL42-047",
+      "theme": "after_a_school_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a meeting ended without a clear plan, requesting a follow-up is reasonable. The next conversation can focus on responsibilities and dates."
+    },
+    {
+      "id": "KDL-EDITORIAL42-048",
+      "theme": "when_a_plan_changes_last_minute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A cancelled outing may have been the bright spot you were counting on. It is okay to be disappointed even when the reason is understandable."
+    },
+    {
+      "id": "KDL-EDITORIAL42-049",
+      "theme": "when_a_plan_changes_last_minute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If plans change and you need quiet instead of an immediate replacement, you can say so. Your evening does not have to be rescued on demand."
+    },
+    {
+      "id": "KDL-EDITORIAL42-050",
+      "theme": "when_a_plan_changes_last_minute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A changed arrangement may affect other people who made time for it. Acknowledging their effort can make rescheduling feel more respectful."
     }
   ]
 }
