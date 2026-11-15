@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "batch": 42,
+  "editorial_note": "20 independently drafted situational messages. Editorial-only pending full corpus automated QA, semantic sensitivity review and independent editorial approval; not authorized for public catalogue.",
+  "messages": [
+    {
+      "id": "KDL-EDITORIAL42-001",
+      "theme": "after_a_difficult_apology",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An apology can be sincere and still leave someone needing time. You can respect their pace without withdrawing the care behind your words."
+    },
+    {
+      "id": "KDL-EDITORIAL42-002",
+      "theme": "after_a_difficult_apology",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you are replaying what you said, notice what you can repair rather than writing a harsher verdict about who you are."
+    },
+    {
+      "id": "KDL-EDITORIAL42-003",
+      "theme": "returning_to_a_shared_home",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first evening back in a shared home after an argument may feel unusually quiet. A small, respectful check-in can matter more than a perfect speech."
+    },
+    {
+      "id": "KDL-EDITORIAL42-004",
+      "theme": "returning_to_a_shared_home",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You are allowed to ask when a conversation would feel manageable. Repair does not have to happen in the doorway."
+    },
+    {
+      "id": "KDL-EDITORIAL42-005",
+      "theme": "waiting_for_an_accessibility_fix",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When an inaccessible service keeps you waiting, the inconvenience belongs to the system, not to your worth. You deserve a clear response and a workable alternative."
+    },
+    {
+      "id": "KDL-EDITORIAL42-006",
+      "theme": "waiting_for_an_accessibility_fix",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Documenting a barrier can be exhausting when you have already explained it once. Asking for a named contact and a timeline is reasonable."
+    },
+    {
+      "id": "KDL-EDITORIAL42-007",
+      "theme": "after_a_missed_family_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Missing a call from someone you love does not erase your affection. A thoughtful message now may be more useful than hours of self-reproach."
+    },
+    {
+      "id": "KDL-EDITORIAL42-008",
+      "theme": "after_a_missed_family_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes you want to reconnect but cannot find the right opening. 'I was thinking of you' is enough to begin."
+    },
+    {
+      "id": "KDL-EDITORIAL42-009",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friend's move can make familiar places feel different. It is okay to miss the ordinary moments, not just the big occasions."
+    },
+    {
+      "id": "KDL-EDITORIAL42-010",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Distance changes how friendship is practiced. A recurring voice note or shared photograph can keep the conversation alive without demanding constant contact."
+    },
+    {
+      "id": "KDL-EDITORIAL42-011",
+      "theme": "starting_again_after_a_rejection",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A rejection may close one opportunity without explaining your whole ability. Take what feedback is useful and leave room for another route."
+    },
+    {
+      "id": "KDL-EDITORIAL42-012",
+      "theme": "starting_again_after_a_rejection",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You do not have to turn disappointment into a lesson by tonight. Let it be disappointing before deciding what comes next."
+    },
+    {
+      "id": "KDL-EDITORIAL42-013",
+      "theme": "supporting_someone_after_surgery",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Helping someone recover can involve quiet tasks no one sees: filling a water glass, checking a schedule, or making the room easier to rest in."
+    },
+    {
+      "id": "KDL-EDITORIAL42-014",
+      "theme": "supporting_someone_after_surgery",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Caregiving is steadier when the helper can ask for relief too. Sharing practical tasks is one way to protect everyone's energy."
+    },
+    {
+      "id": "KDL-EDITORIAL42-015",
+      "theme": "finding_your_way_in_a_new_city",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A new city can feel enormous when even the grocery aisle is unfamiliar. Learning one reliable route is a real beginning."
+    },
+    {
+      "id": "KDL-EDITORIAL42-016",
+      "theme": "finding_your_way_in_a_new_city",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Belonging often arrives in ordinary fragments: a familiar greeting, a favourite bench, a shopkeeper who remembers your order."
+    },
+    {
+      "id": "KDL-EDITORIAL42-017",
+      "theme": "after_a_school_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A school meeting may leave you carrying more questions than answers. Write down what was agreed and ask who will follow up; clarity is a form of care."
+    },
+    {
+      "id": "KDL-EDITORIAL42-018",
+      "theme": "after_a_school_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A child's needs are not a verdict on anyone's parenting. Listening carefully and choosing one useful next step can be enough for today."
+    },
+    {
+      "id": "KDL-EDITORIAL42-019",
+      "theme": "when_a_plan_changes_last_minute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A last-minute change can unsettle more than your calendar. Give yourself a moment to adjust before deciding what still matters."
+    },
+    {
+      "id": "KDL-EDITORIAL42-020",
+      "theme": "when_a_plan_changes_last_minute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can be flexible and still name the inconvenience. Both can be true without turning a changed plan into a conflict."
+    }
+  ]
+}
