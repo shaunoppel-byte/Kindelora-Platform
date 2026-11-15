@@ -1,0 +1,26 @@
+name: Artwork importer regression QA
+on:
+  pull_request:
+    paths:
+      - 'scripts/import-affirmation-artwork.py'
+      - 'scripts/test-artwork-import-signatures.py'
+      - '.github/workflows/import-affirmation-artwork.yml'
+      - '.github/workflows/artwork-import-regression.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/import-affirmation-artwork.py'
+      - 'scripts/test-artwork-import-signatures.py'
+      - '.github/workflows/import-affirmation-artwork.yml'
+      - '.github/workflows/artwork-import-regression.yml'
+permissions:
+  contents: read
+jobs:
+  verify-importer:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check importer Python syntax
+        run: python3 -m py_compile scripts/import-affirmation-artwork.py scripts/test-artwork-import-signatures.py
+      - name: Verify JPEG PNG WebP signature regression tests
+        run: python3 scripts/test-artwork-import-signatures.py
