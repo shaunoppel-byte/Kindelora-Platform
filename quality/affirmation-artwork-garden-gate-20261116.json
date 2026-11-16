@@ -1,0 +1,15 @@
+{
+  "batch": "2026-11-16-gentle-boundaries",
+  "asset": "/assets/affirmations/gentle-boundaries-garden-original-20261116.svg",
+  "affirmationId": "gentle-boundaries",
+  "source": "Original SVG illustration authored specifically for KINDELORA in this automation run",
+  "provenance": "Original procedural vector artwork; no external photographs or third-party stock images",
+  "license": "Original work created for KINDELORA; commercial use intended",
+  "format": "SVG",
+  "viewBox": "0 0 900 1200",
+  "artworkType": "illustration, not photograph",
+  "visualReview": "pending independent mobile visual review",
+  "duplicateReview": "unique new file path; byte-hash audit pending CI",
+  "releaseStatus": "pending CI and independent mobile QA; no live deployment claimed",
+  "rollback": "Revert assignment in affirmation-library.js to /assets/affirmations/original-gentle-boundaries.svg"
+}
