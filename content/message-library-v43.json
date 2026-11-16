@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "batch": 43,
+  "editorial_note": "12 individually written situational messages. Checked against 3,100 accessible public/v41/v42 messages for normalized exact duplicates and token-Dice overlap; advisory lexical comparison is not an independent semantic or sensitivity review. Editorial-only, not approved for publication.",
+  "messages": [
+    {
+      "id": "KDL-EDITORIAL43-001",
+      "theme": "when_the_lift_is_out",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When the lift is out again, the extra journey is not a personal failure to overcome. You can ask the building team for a practical access plan and a clear update."
+    },
+    {
+      "id": "KDL-EDITORIAL43-002",
+      "theme": "when_the_lift_is_out",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "It can be tiring to explain the same access need to a new person each time. Keeping your request brief does not make it less important."
+    },
+    {
+      "id": "KDL-EDITORIAL43-003",
+      "theme": "after_a_community_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Leaving a community meeting with more questions than answers can feel discouraging. One specific follow-up may be more useful than trying to solve every concern tonight."
+    },
+    {
+      "id": "KDL-EDITORIAL43-004",
+      "theme": "after_a_community_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can care deeply about your neighbourhood and still choose which meetings you have the capacity to attend."
+    },
+    {
+      "id": "KDL-EDITORIAL43-005",
+      "theme": "when_a_child_changes_their_mind",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A child changing their mind about an activity may be telling you something worth hearing. Curiosity can open a conversation that persuasion would close."
+    },
+    {
+      "id": "KDL-EDITORIAL43-006",
+      "theme": "when_a_child_changes_their_mind",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Plans can change without anyone becoming the villain of the afternoon. A little room for disappointment and a revised plan can coexist."
+    },
+    {
+      "id": "KDL-EDITORIAL43-007",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The ordinary places you visited together may feel different after a friend moves. Missing those small rituals is a real part of saying goodbye."
+    },
+    {
+      "id": "KDL-EDITORIAL43-008",
+      "theme": "when_a_friend_moves_away",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A friendship does not need a perfect schedule to remain meaningful. You can offer a specific time to reconnect and let the relationship find a new rhythm."
+    },
+    {
+      "id": "KDL-EDITORIAL43-009",
+      "theme": "when_a_public_form_is_confusing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A confusing application form can make a simple task feel much bigger. Asking which section matters first is a sensible way to begin."
+    },
+    {
+      "id": "KDL-EDITORIAL43-010",
+      "theme": "when_a_public_form_is_confusing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If a form asks for information you do not understand, it is reasonable to seek clarification before sharing personal details."
+    },
+    {
+      "id": "KDL-EDITORIAL43-011",
+      "theme": "after_a_quiet_celebration",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A small celebration can still mark something important. You do not need an audience to acknowledge the work behind a milestone."
+    },
+    {
+      "id": "KDL-EDITORIAL43-012",
+      "theme": "after_a_quiet_celebration",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sometimes the best part of reaching a goal is an ordinary evening with no demands. You are allowed to enjoy the quiet instead of planning the next achievement."
+    }
+  ]
+}
