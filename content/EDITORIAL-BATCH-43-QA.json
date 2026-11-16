@@ -1,0 +1,18 @@
+{
+  "batch": 43,
+  "scope": "editorial-only",
+  "baseline": {
+    "public_catalogue_declared": 3000,
+    "additional_batches_41_42": 100,
+    "accessible_texts_compared": 3100
+  },
+  "new_messages": 12,
+  "unique_ids": 12,
+  "normalized_exact_duplicates": 0,
+  "max_token_dice_similarity": 0.4211,
+  "nearest_existing_id": "KDL-WHEN-YOU-HELP-SOMEONE-FILL-OUT-A-FORM-003",
+  "theme_count": 6,
+  "review": "Independent human semantic and sensitive-topic review pending; no production release or count update",
+  "ci": "not yet run",
+  "live_deployment": "not attempted"
+}
