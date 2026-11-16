@@ -8,7 +8,7 @@
 {id:'gratitude',title:'Gratitude',text:'There is beauty in the ordinary moments you choose to notice.',tags:'thankfulness joy appreciation',image:'/assets/affirmations/kindelora_gratitude_cinematic_candidate.jpg'},
 {id:'purpose',title:'Purpose',text:'Your path is your own. Move toward what matters to you.',tags:'meaning direction clarity',image:'/assets/affirmations/kindelora_purpose_cinematic_candidate.jpg'},
 {id:"quiet-courage",title:"Quiet Courage",text:"I can take a brave step without needing to feel fearless.",tags:"courage bravery confidence uncertainty",image:'/assets/affirmations/kindelora_quiet-courage_cinematic_candidate.jpg'},
-{id:"gentle-boundaries",title:"Gentle Boundaries",text:"My kindness can include a clear and peaceful no.",tags:"boundaries respect self care",image:'/assets/affirmations/original-gentle-boundaries.svg'},
+{id:"gentle-boundaries",title:"Gentle Boundaries",text:"My kindness can include a clear and peaceful no.",tags:"boundaries respect self care",image:'/assets/affirmations/gentle-boundaries-garden-original-20261116.svg'},
 {id:"new-beginnings",title:"New Beginnings",text:"I am allowed to begin again, even when the path looks different.",tags:"fresh start renewal change",image:"/assets/affirmations/kindelora_new-beginnings_cinematic_candidate.jpg"},
 {id:"belonging",title:"Belonging",text:"I do not need to become someone else to deserve a place.",tags:"acceptance inclusion belonging",image:'/assets/affirmations/kindelora_belonging_cinematic_candidate.jpg'},
 {id:"patience",title:"Patience",text:"I can honour slow progress while still caring about where I am going.",tags:"patience progress perseverance",image:'/assets/affirmations/kindelora_patience_cinematic_candidate.jpg'},

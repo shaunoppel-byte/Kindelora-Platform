@@ -5,14 +5,18 @@ on:
       - 'quality/cinematic-raster-manifest.json'
       - 'scripts/check-cinematic-raster-assets.py'
       - '.github/workflows/cinematic-raster-artwork.yml'
-      - 'assets/affirmations/**'
+      - 'assets/affirmations/**/*.png'
+      - 'assets/affirmations/**/*.jpg'
+      - 'assets/affirmations/**/*.jpeg'
   push:
     branches: [main]
     paths:
       - 'quality/cinematic-raster-manifest.json'
       - 'scripts/check-cinematic-raster-assets.py'
       - '.github/workflows/cinematic-raster-artwork.yml'
-      - 'assets/affirmations/**'
+      - 'assets/affirmations/**/*.png'
+      - 'assets/affirmations/**/*.jpg'
+      - 'assets/affirmations/**/*.jpeg'
 permissions:
   contents: read
 jobs:
