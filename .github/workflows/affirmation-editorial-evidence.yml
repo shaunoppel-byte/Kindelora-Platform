@@ -1,0 +1,21 @@
+name: Affirmation artwork editorial evidence
+on:
+  push:
+    paths:
+      - 'affirmation-library.js'
+      - 'quality/affirmation-artwork-remediation.json'
+      - 'scripts/report-affirmation-editorial-evidence.mjs'
+      - '.github/workflows/affirmation-editorial-evidence.yml'
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  report:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/report-affirmation-editorial-evidence.mjs
