@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "batch": 45,
+  "editorial_note": "24 original situational messages; editorial-only. Exact-normalized checks against 3,000 public catalogue messages and editorial batches 43/44; advisory token-Dice screening against those accessible texts. Not a full historical corpus review, independent human approval, or release authorization.",
+  "messages": [
+    {
+      "id": "KDL-EDITORIAL45-001",
+      "theme": "after_a_job_rejection",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A rejection email can make an ordinary afternoon feel smaller. Before you rewrite your whole future around it, give yourself time to absorb the news and decide what feedback might help."
+    },
+    {
+      "id": "KDL-EDITORIAL45-002",
+      "theme": "caring_for_an_older_relative",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Helping an older relative can involve tenderness and frustration in the same hour. Needing a break does not cancel the care you have already given."
+    },
+    {
+      "id": "KDL-EDITORIAL45-003",
+      "theme": "when_the_budget_is_tight",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A tight budget can make even small invitations complicated. You can suggest a walk or a shared cup of tea without explaining every detail of your finances."
+    },
+    {
+      "id": "KDL-EDITORIAL45-004",
+      "theme": "after_a_disagreement_with_a_sibling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Old family roles sometimes return in the middle of a new argument. You are allowed to respond as the person you are today, even if the conversation needs another day."
+    },
+    {
+      "id": "KDL-EDITORIAL45-005",
+      "theme": "waiting_for_a_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a message goes unanswered, the mind may invent explanations. You can put the phone down for a while without deciding what the silence means."
+    },
+    {
+      "id": "KDL-EDITORIAL45-006",
+      "theme": "starting_again_after_illness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Returning to ordinary routines after illness may take more patience than expected. A smaller plan can be a sensible plan, not a verdict on your determination."
+    },
+    {
+      "id": "KDL-EDITORIAL45-007",
+      "theme": "when_a_pet_is_aging",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An aging pet may change the rhythm of your days. The extra care can be exhausting and precious at once; both feelings deserve a little room."
+    },
+    {
+      "id": "KDL-EDITORIAL45-008",
+      "theme": "after_a_failed_recipe",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Dinner not turning out as planned can be especially frustrating when everyone is hungry. A simple backup meal is still a way of looking after the people at the table."
+    },
+    {
+      "id": "KDL-EDITORIAL45-009",
+      "theme": "when_the_school_calls",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A call from school can stir worry before you know the facts. Ask what happened and what support is needed; you do not have to solve the entire situation in the first minute."
+    },
+    {
+      "id": "KDL-EDITORIAL45-010",
+      "theme": "moving_out_of_a_shared_home",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Packing a shared home means deciding what to keep while memories appear in unexpected places. You can take the boxes one at a time and leave the larger feelings unnamed for now."
+    },
+    {
+      "id": "KDL-EDITORIAL45-011",
+      "theme": "when_a_colleague_takes_credit",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When your contribution goes unmentioned, it can be hard to stay composed. Keeping a clear record of your work and asking for recognition is a reasonable next step."
+    },
+    {
+      "id": "KDL-EDITORIAL45-012",
+      "theme": "on_a_difficult_anniversary",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Some dates arrive with memories that do not fit neatly into celebration or grief. You can mark today quietly, change your plans, or do something ordinary."
+    },
+    {
+      "id": "KDL-EDITORIAL45-013",
+      "theme": "learning_to_drive_later_in_life",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Learning a new skill as an adult can make you feel conspicuously inexperienced. Every learner needs practice; your age does not make the questions embarrassing."
+    },
+    {
+      "id": "KDL-EDITORIAL45-014",
+      "theme": "after_a_medical_appointment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may leave an appointment remembering the worry more clearly than the instructions. It is reasonable to call back, ask for written guidance, or bring someone you trust next time."
+    },
+    {
+      "id": "KDL-EDITORIAL45-015",
+      "theme": "when_a_friend_is_struggling",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may care about a struggling friend without knowing the right words. A specific offer, such as bringing groceries or sitting together, can be more useful than a perfect speech."
+    },
+    {
+      "id": "KDL-EDITORIAL45-016",
+      "theme": "living_with_a_noisy_neighbour",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Repeated noise can wear down your patience and your sleep. Documenting the problem and asking for a practical resolution is not the same as being difficult."
+    },
+    {
+      "id": "KDL-EDITORIAL45-017",
+      "theme": "when_the_garden_does_not_grow",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A plant that fails to thrive can disappoint you after weeks of attention. Sometimes the soil, season, or light needs changing; effort alone cannot control every outcome."
+    },
+    {
+      "id": "KDL-EDITORIAL45-018",
+      "theme": "returning_to_study",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Opening a textbook after years away can feel strangely vulnerable. Begin with one page and one honest question; familiarity can return gradually."
+    },
+    {
+      "id": "KDL-EDITORIAL45-019",
+      "theme": "when_plans_change_at_the_last_minute",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A last-minute change can unsettle more than the timetable. You can acknowledge the inconvenience before deciding whether to adapt, postpone, or decline."
+    },
+    {
+      "id": "KDL-EDITORIAL45-020",
+      "theme": "after_a_public_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A mistake made in front of others can replay in your mind long after the room has moved on. A clear correction is useful; endless self-punishment is not required."
+    },
+    {
+      "id": "KDL-EDITORIAL45-021",
+      "theme": "sharing_caregiving_responsibilities",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When family care falls unevenly, resentment can grow beside affection. Naming the actual tasks and asking who can take each one may open a fairer conversation."
+    },
+    {
+      "id": "KDL-EDITORIAL45-022",
+      "theme": "when_a_holiday_feels_lonely",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A holiday can amplify the distance between what you expected and what today is. You can make a small plan that suits your circumstances rather than performing someone else's celebration."
+    },
+    {
+      "id": "KDL-EDITORIAL45-023",
+      "theme": "after_selling_something_meaningful",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Selling an object with memories attached can bring relief and sadness together. Letting it go for practical reasons does not erase the life it was part of."
+    },
+    {
+      "id": "KDL-EDITORIAL45-024",
+      "theme": "when_a_child_asks_a_hard_question",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A child's difficult question may deserve more care than an instant answer. Saying that you need time to think can model honesty rather than uncertainty to fear."
+    }
+  ]
+}
