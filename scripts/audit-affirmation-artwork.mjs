@@ -19,13 +19,27 @@ if(ids.length!==400||uniqueIds.size!==400){
 }
 const groups=new Map();
 const contentHashes=new Map();
+const invalidImages=[];
+const undersizedImages=[];
+function webpDimensions(bytes){
+ if(bytes.length<30||bytes.toString('ascii',0,4)!=='RIFF'||bytes.toString('ascii',8,12)!=='WEBP')return null;
+ const kind=bytes.toString('ascii',12,16);
+ if(kind==='VP8X'&&bytes.length>=30)return {width:1+bytes.readUIntLE(24,3),height:1+bytes.readUIntLE(27,3)};
+ if(kind==='VP8L'&&bytes.length>=25){const n=bytes.readUInt32LE(21);return {width:(n&16383)+1,height:((n>>>14)&16383)+1};}
+ if(kind==='VP8 '&&bytes.length>=30&&bytes[23]===0x9d&&bytes[24]===0x01&&bytes[25]===0x2a)return {width:bytes.readUInt16LE(26)&16383,height:bytes.readUInt16LE(28)&16383};
+ return null;
+}
 for(let i=0;i<ids.length;i++){
   // URL variants, width and quality parameters do not make a new photograph.
   const photo=images[i].split('?')[0].replace(/\/$/,'');
   if (!/^https?:\/\//i.test(photo)) {
     if (photo.startsWith('//') || photo.includes('..') || !photo.startsWith('/')) throw new Error('Unsafe local artwork path for '+ids[i]+': '+photo);
     if (!fs.existsSync(new URL('..'+photo,import.meta.url))) throw new Error('Missing local artwork for '+ids[i]+': '+photo);
-    const digest=crypto.createHash('sha256').update(fs.readFileSync(new URL('..'+photo,import.meta.url))).digest('hex');
+    const bytes=fs.readFileSync(new URL('..'+photo,import.meta.url));
+    const dimensions=webpDimensions(bytes);
+    if(!dimensions)invalidImages.push({id:ids[i],path:photo,reason:'not a supported valid WebP header'});
+    else if(dimensions.width<900||dimensions.height<1200)undersizedImages.push({id:ids[i],path:photo,...dimensions});
+    const digest=crypto.createHash('sha256').update(bytes).digest('hex');
     const hashGroup=contentHashes.get(digest)||[];
     hashGroup.push({id:ids[i],path:photo});
     contentHashes.set(digest,hashGroup);
@@ -36,5 +50,5 @@ for(let i=0;i<ids.length;i++){
 }
 const repeatedFiles=[...contentHashes].filter(([,items])=>items.length>1);
 const duplicates=[...groups].filter(([,entries])=>entries.length>1).sort((a,b)=>b[1].length-a[1].length);
-console.log(JSON.stringify({affirmations:ids.length,uniqueUnderlyingImages:groups.size,duplicateAssignments:ids.length-groups.size,duplicateImageGroups:duplicates.length,identicalBinaryGroups:repeatedFiles.length,identicalBinaryAssignments:repeatedFiles.reduce((n,[,items])=>n+items.length-1,0),identicalBinaryDetails:repeatedFiles.map(([sha256,items])=>({sha256,items})),groups:duplicates.map(([url,entries])=>({url,count:entries.length,entries}))},null,2));
-if(duplicates.length||repeatedFiles.length){console.error('Artwork QA FAIL: repeated underlying photographs found. Replace with individually reviewed, licensed, theme-appropriate assets.');process.exitCode=1;}
+console.log(JSON.stringify({affirmations:ids.length,uniqueUnderlyingImages:groups.size,duplicateAssignments:ids.length-groups.size,duplicateImageGroups:duplicates.length,identicalBinaryGroups:repeatedFiles.length,invalidLocalWebp:invalidImages.length,belowPremiumPortraitMinimum:undersizedImages.length,invalidImageDetails:invalidImages,undersizedImageDetails:undersizedImages,identicalBinaryAssignments:repeatedFiles.reduce((n,[,items])=>n+items.length-1,0),identicalBinaryDetails:repeatedFiles.map(([sha256,items])=>({sha256,items})),groups:duplicates.map(([url,entries])=>({url,count:entries.length,entries}))},null,2));
+if(duplicates.length||repeatedFiles.length||invalidImages.length||undersizedImages.length){console.error('Artwork QA FAIL: repeated underlying photographs found. Replace with individually reviewed, licensed, theme-appropriate assets.');process.exitCode=1;}
