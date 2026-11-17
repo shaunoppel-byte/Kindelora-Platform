@@ -4,12 +4,14 @@ on:
     paths:
       - 'affirmation-library.js'
       - 'scripts/check-affirmation-catalogue.mjs'
+      - 'scripts/test-affirmation-catalogue.mjs'
       - '.github/workflows/affirmation-catalogue-integrity.yml'
   push:
     branches: [main]
     paths:
       - 'affirmation-library.js'
       - 'scripts/check-affirmation-catalogue.mjs'
+      - 'scripts/test-affirmation-catalogue.mjs'
       - '.github/workflows/affirmation-catalogue-integrity.yml'
   workflow_dispatch:
 permissions:
@@ -24,3 +26,5 @@ jobs:
           node-version: '22'
       - name: Verify 400 unique cards and required fields
         run: node scripts/check-affirmation-catalogue.mjs
+      - name: Verify exact unique affirmation text and mappings
+        run: node scripts/test-affirmation-catalogue.mjs
