@@ -14,6 +14,25 @@ assert(!page.includes('heygen-speech-2.mp3'),'Premium MP3 referenced from public
 assert(!fs.existsSync(new URL('../assets/audio/heygen-speech-2.mp3',import.meta.url)),'Premium MP3 publicly hosted under static assets');
 assert(!index.includes('heygen-speech-2.mp3'),'Homepage exposes premium MP3');
 assert(!/const ASSETS=\[[^;]*motivational-monday\.html/s.test(sw),'Service worker precaches premium Monday HTML');
+
+// Audit every explicit offline precache entry, not only the Monday page.
+// A future developer must not accidentally cache premium assets or endpoints.
+const precacheMatch=sw.match(/const ASSETS=(\[[^;]*\]);/s);
+assert(Boolean(precacheMatch),'Service worker precache manifest missing');
+if(precacheMatch){
+ let entries=[];
+ try{entries=JSON.parse(precacheMatch[1])}catch{assert(false,'Service worker precache manifest cannot be audited as JSON')}
+ for(const asset of entries){
+  const path=new URL(asset,'https://kindelora.pages.dev').pathname;
+  assert(!/^\/(?:api\/)?(?:plus|premium|members)(?:\/|$)/i.test(path),'Protected namespace in offline precache: '+asset);
+  assert(!/^\/assets\/(?:plus|premium|members)(?:\/|$)/i.test(path),'Protected asset in offline precache: '+asset);
+  assert(!/^\/assets\/audio\/heygen-speech-2\.mp3$/i.test(path),'Protected Monday audio in offline precache');
+  assert(path!=='/motivational-monday.html','Monday preview must not be precached while PLUS is gated');
+ }
+}
+assert(sw.includes('keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))'),'Legacy caches are not purged on service worker activation');
+assert(sw.includes('req.headers.has("Authorization")'),'Authenticated requests may be cached by service worker');
+
 assert(middleware.includes('onRequest')&&middleware.includes('403'),'No fail-closed premium middleware');
 assert(middleware.includes('(?:plus|premium|members)'),'Premium namespaces not denied by default');
 assert(sw.includes('(?:plus|premium|members)'),'Offline premium namespaces not denied by default');
