@@ -3,6 +3,7 @@
 const base='https://kindelora.pages.dev';
 const checks=[
  {path:'/motivational-monday.html',status:200,bodyMustInclude:'currently withheld',bodyMustNotInclude:['The Difference You May Never See','heygen-speech-2.mp3']},
+ {path:'/api/plus/status',status:200,bodyMustInclude:'"checkoutAvailable":false',bodyMustNotInclude:['"checkoutAvailable":true']},
  {path:'/assets/audio/heygen-speech-2.mp3',status:403},
  {path:'/api/plus/weekly',status:403},
  {path:'/plus/archive',status:403},
