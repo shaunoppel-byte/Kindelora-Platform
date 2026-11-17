@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import fs from 'node:fs';
+const src=fs.readFileSync(new URL('../affirmation-library.js',import.meta.url),'utf8');
+const start=src.indexOf('const items=['),end=src.indexOf('];',start);
+assert(start>=0&&end>start,'catalogue array exists');
+const catalogue=src.slice(start,end);
+const extract=key=>[...catalogue.matchAll(new RegExp('\\\\b'+key+':\\\\s*([\\\\x22\\\\x27])([\\\\s\\\\S]*?)\\\\1','g'))].map(m=>m[2]);
+const ids=extract('id'),texts=extract('text'),titles=extract('title'),images=extract('image');
+assert.equal(ids.length,400,'exactly 400 affirmation IDs');
+assert.equal(new Set(ids).size,400,'all IDs distinct');
+assert.equal(texts.length,400,'all texts present');
+assert.equal(titles.length,400,'all titles present');
+assert.equal(images.length,400,'all image mappings present');
+assert(texts.every(x=>x.trim().length>=15),'no empty or placeholder texts');
+assert.equal(new Set(texts.map(x=>x.toLowerCase().replace(/\\s+/g,' ').trim())).size,400,'no exact duplicate affirmation texts');
+assert(images.every(x=>x.startsWith('/assets/affirmations/')||x.startsWith('https://')),'expected artwork paths');
+console.log('PASS: 400 distinct affirmation IDs, 400 unique texts and mapped artwork (visual similarity not assessed)');
