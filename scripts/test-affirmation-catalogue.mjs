@@ -4,7 +4,7 @@ const src=fs.readFileSync(new URL('../affirmation-library.js',import.meta.url),'
 const start=src.indexOf('const items=['),end=src.indexOf('];',start);
 assert(start>=0&&end>start,'catalogue array exists');
 const catalogue=src.slice(start,end);
-const extract=key=>[...catalogue.matchAll(new RegExp('\\\\b'+key+':\\\\s*([\\\\x22\\\\x27])([\\\\s\\\\S]*?)\\\\1','g'))].map(m=>m[2]);
+const extract=key=>[...catalogue.matchAll(new RegExp(String.raw`\\b${key}:\\s*(['"])(.*?)\\1`,'g'))].map(m=>m[2]);
 const ids=extract('id'),texts=extract('text'),titles=extract('title'),images=extract('image');
 assert.equal(ids.length,400,'exactly 400 affirmation IDs');
 assert.equal(new Set(ids).size,400,'all IDs distinct');
