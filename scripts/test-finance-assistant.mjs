@@ -10,6 +10,8 @@ assert.equal(ask('What are the processing fees?').data.fee_minor,750);
 assert.equal(ask('What is the net settlement?').data.net_minor,27250);
 assert.equal(ask('Email the report').status,'requires_integration');
 assert.equal(ask('Change bank details').status,'denied');
+assert.equal(ask('What are the refunds?').data.refund_minor,2000);
+assert.equal(ask('Issue refund to customer').status,'denied');
 assert.equal(ask('Group report',[]).status,'denied');
 assert.equal(ask('What is the weather?').status,'unsupported');
 console.log('PASS: grounded financial answers, business isolation, no email claims, no write actions');
