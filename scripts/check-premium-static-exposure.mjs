@@ -100,7 +100,7 @@ for(const method of ['GET','HEAD','POST','OPTIONS']){
  }
 }
 // Encoded URL segments must not bypass the same server-side deny policy.
-for (const path of ['/api/%70lus/weekly','/%70lus/archive','/assets/%70remium/secret.json','/api/%2570lus/weekly','/api/%2fplus/weekly']) {
+for (const path of ['/api/%70lus/weekly','/%70lus/archive','/assets/%70remium/secret.json','/api/%2570lus/weekly','/api/%2fplus/weekly','/api/%00plus/weekly','/plus/%00archive']) {
  let nextCalled=false;
  const response=await onRequest({
   request:new Request('https://kindelora.pages.dev'+path),
