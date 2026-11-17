@@ -17,6 +17,7 @@ assert(!/const ASSETS=\[[^;]*motivational-monday\.html/s.test(sw),'Service worke
 assert(middleware.includes('onRequest')&&middleware.includes('403'),'No fail-closed premium middleware');
 assert(middleware.includes('(?:plus|premium|members)'),'Premium namespaces not denied by default');
 assert(sw.includes('(?:plus|premium|members)'),'Offline premium namespaces not denied by default');
+assert(sw.includes('url.pathname==="/api/plus/status"'),'Service worker blocks public PLUS readiness endpoint');
 assert(!page.includes('play the professionally narrated recording.'),'Public preview falsely promises live audio');
 assert(page.includes('currently withheld'),'Public Monday teaser is not in fail-closed state');
 
