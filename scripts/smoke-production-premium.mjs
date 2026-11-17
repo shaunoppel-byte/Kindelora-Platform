@@ -31,9 +31,9 @@ for(const c of checks){
   if(c.bodyMustInclude&&!body.includes(c.bodyMustInclude))errors.push('expected public preview text absent');
   for(const secret of c.bodyMustNotInclude||[])if(body.includes(secret))errors.push('premium content marker leaked');
   if(c.checkoutDisabled){
-   const button=body.match(/<button\\b[^>]*\\bid=["']plus-checkout-button["'][^>]*>/i);
+   const button=body.match(/<button\b[^>]*\bid=["']plus-checkout-button["'][^>]*>/i);
    if(!button)errors.push('PLUS checkout button missing from live homepage');
-   else if(!/\\sdisabled(?:\\s|>|=)/i.test(button[0]))errors.push('PLUS checkout button enabled in live homepage HTML');
+   else if(!/\sdisabled(?:\s|>|=)/i.test(button[0]))errors.push('PLUS checkout button enabled in live homepage HTML');
    if(!body.includes('Awaiting PayFast activation'))errors.push('Live homepage lacks pending PayFast activation notice');
   }
   if(c.readinessContract){
