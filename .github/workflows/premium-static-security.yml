@@ -5,6 +5,8 @@ on:
       - 'motivational-monday.html'
       - 'index.html'
       - 'app.js'
+      - 'member-favourites.js'
+      - 'affirmation-preview.js'
       - 'message-catalogue.json'
       - 'sw.js'
       - 'functions/**'
