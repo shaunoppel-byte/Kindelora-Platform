@@ -5,6 +5,7 @@ on:
       - 'index.html'
       - 'app.js'
       - 'functions/**'
+      - 'docs/PLUS-LAUNCH-EVIDENCE-MATRIX.md'
       - 'scripts/check-plus-checkout-guard.mjs'
       - '.github/workflows/plus-checkout-guard.yml'
   pull_request:
