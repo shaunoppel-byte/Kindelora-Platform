@@ -15,6 +15,9 @@ assert(!fs.existsSync(new URL('../assets/audio/heygen-speech-2.mp3',import.meta.
 assert(!index.includes('heygen-speech-2.mp3'),'Homepage exposes premium MP3');
 assert(!/const ASSETS=\[[^;]*motivational-monday\.html/s.test(sw),'Service worker precaches premium Monday HTML');
 assert(middleware.includes('onRequest')&&middleware.includes('403'),'No fail-closed premium middleware');
+assert(middleware.includes('(?:plus|premium|members)'),'Premium namespaces not denied by default');
+assert(sw.includes('(?:plus|premium|members)'),'Offline premium namespaces not denied by default');
+assert(!page.includes('play the professionally narrated recording.'),'Public preview falsely promises live audio');
 assert(page.includes('currently withheld'),'Public Monday teaser is not in fail-closed state');
 console.log(JSON.stringify({check:'known premium static exposure',passed:failures.length===0,failures},null,2));
 if(failures.length)process.exitCode=1;
