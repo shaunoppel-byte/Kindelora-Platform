@@ -1,0 +1,34 @@
+import assert from 'node:assert/strict';
+import {SimulatedCommerce} from './fixtures/simulated-commerce.mjs';
+const s=new SimulatedCommerce();
+const businesses=['OPE','KIN','VEL','KDR','SOL'];
+for(let i=0;i<businesses.length;i++){
+ const business=businesses[i],id='synthetic-order-'+i,customer='synthetic-customer-'+i;
+ s.order({id,business,customer,amount_minor:1099+i*100});
+ assert.equal(s.canAccess(customer,business),false);
+ assert.equal(s.event({eventId:'bad-'+i,orderId:id,paymentId:'pay-'+i,amount_minor:1099+i*100,status:'complete'}).result,'rejected_unverified');
+ assert.equal(s.event({eventId:'wrong-'+i,orderId:id,paymentId:'pay-'+i,amount_minor:999,status:'complete',verified:true}).result,'rejected_mismatch');
+ assert.equal(s.canAccess(customer,business),false);
+ const e={eventId:'ok-'+i,orderId:id,paymentId:'pay-'+i,amount_minor:1099+i*100,status:'complete',verified:true};
+ const paid=s.event(e);
+ assert.equal(paid.result,'paid');
+ assert.match(paid.invoice,new RegExp('^'+business+'-2026-000001$'));
+ assert.equal(s.event(e).result,'duplicate_event');
+ assert.equal(s.event({...e,eventId:'new-event-'+i}).result,'already_paid');
+ assert.equal(s.canAccess(customer,business),true);
+ assert.equal(s.getInvoice(id,'another-user'),null);
+ assert.equal(s.getInvoice(id,customer).watermark,'SYNTHETIC TEST — NOT AN INVOICE');
+ assert.equal(s.deliver(paid.invoice).result,'retry_pending');
+ assert.equal(s.deliver(paid.invoice,{success:true}).result,'sent');
+ assert.equal(s.deliver(paid.invoice,{success:true}).result,'already_sent');
+ assert.equal(s.event({eventId:'refund-'+i,orderId:id,paymentId:'pay-'+i,amount_minor:1099+i*100,status:'refunded',verified:true}).result,'refunded');
+ assert.equal(s.canAccess(customer,business),false);
+ assert.equal(s.getInvoice(id,customer).number,paid.invoice);
+}
+assert.equal(new Set([...s.invoices.values()].map(i=>i.number)).size,5);
+s.order({id:'cancel',business:'KIN',customer:'cancelled',amount_minor:999});
+assert.equal(s.event({eventId:'cancel-1',orderId:'cancel',paymentId:'pc',amount_minor:999,status:'cancelled',verified:true}).result,'cancelled');
+assert.equal(s.event({eventId:'cancel-2',orderId:'cancel',paymentId:'pc',amount_minor:999,status:'complete',verified:true}).result,'rejected_transition');
+assert.equal(s.canAccess('cancelled','KIN'),false);
+assert.equal(s.invoices.size,5);
+console.log('PASS: 5 brands, unique invoice prefixes, synthetic payment replay/mismatch, entitlement revocation, invoice isolation, retryable outbox, cancelled orders');
