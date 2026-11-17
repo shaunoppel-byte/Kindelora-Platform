@@ -82,6 +82,19 @@ for(const [caseIndex,headers] of forgedIdentityHeaders.entries()){
   assert(!(await response.text()).includes('FORGED_MEMBER_SECRET'),'Forged membership leaked content: '+path);
  }
 }
+// The route-level fallback must match middleware's public contract exactly.
+// This prevents Cloudflare routing changes from exposing contradictory flags.
+const {onRequestGet:statusFallback}=await import('../functions/api/plus/status.js');
+const fallbackResponse=await statusFallback({});
+assert(fallbackResponse.status===200,'PLUS status fallback not available');
+assert((fallbackResponse.headers.get('cache-control')||'').includes('no-store'),'PLUS fallback response cacheable');
+const fallbackData=await fallbackResponse.json();
+assert(JSON.stringify(fallbackData)===JSON.stringify({
+ checkoutAvailable:false,
+ membershipVerificationAvailable:false,
+ paymentProvider:'PayFast',
+ status:'pending_merchant_verification'
+}),'PLUS status fallback contract differs from middleware');
 const readiness=await onRequest({
  request:new Request('https://kindelora.pages.dev/api/plus/status'),
  next:()=>new Response('UNEXPECTED_PUBLIC_FALLTHROUGH')
