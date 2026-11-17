@@ -3,7 +3,7 @@
 const base='https://kindelora.pages.dev';
 const checks=[
  {path:'/motivational-monday.html',status:200,bodyMustInclude:'currently withheld',bodyMustNotInclude:['The Difference You May Never See','heygen-speech-2.mp3']},
- {path:'/api/plus/status',status:200,bodyMustInclude:'"checkoutAvailable":false',bodyMustNotInclude:['"checkoutAvailable":true']},
+ {path:'/api/plus/status',status:200,bodyMustInclude:'"checkoutAvailable":false',bodyMustNotInclude:['"checkoutAvailable":true'],readinessContract:true},
  {path:'/assets/audio/heygen-speech-2.mp3',status:403},
  {path:'/api/plus/weekly',status:403},
  {path:'/plus/archive',status:403},
@@ -29,6 +29,18 @@ for(const c of checks){
   if(response.status!==c.status)errors.push('expected HTTP '+c.status+', got '+response.status);
   if(c.bodyMustInclude&&!body.includes(c.bodyMustInclude))errors.push('expected public preview text absent');
   for(const secret of c.bodyMustNotInclude||[])if(body.includes(secret))errors.push('premium content marker leaked');
+  if(c.readinessContract){
+   let data;
+   try{data=JSON.parse(body)}catch{errors.push('PLUS readiness response is not JSON')}
+   if(data){
+    if(data.checkoutAvailable!==false||data.membershipVerificationAvailable!==false)errors.push('PLUS readiness is not fail-closed');
+    if(data.paymentProvider!=='PayFast'||data.status!=='pending_merchant_verification')errors.push('Unexpected readiness state');
+    if(Object.keys(data).sort().join(',')!==['checkoutAvailable','membershipVerificationAvailable','paymentProvider','status'].sort().join(','))errors.push('Readiness exposes unexpected fields');
+   }
+   if(!response.headers.get('content-type')?.includes('application/json'))errors.push('Readiness missing JSON content type');
+   if(!response.headers.get('cache-control')?.includes('no-store'))errors.push('Readiness missing no-store');
+   if(response.headers.get('x-content-type-options')!=='nosniff')errors.push('Readiness missing nosniff');
+  }
   if(c.status===403&&(!response.headers.get('cache-control')?.includes('no-store')))errors.push('protected response missing no-store');
   if(c.status===403&&body.includes('<!doctype html>'))errors.push('protected route returned HTML');
   if(errors.length)failures++;
