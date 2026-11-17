@@ -50,3 +50,14 @@ All permissions checked **server-side per business and resource**. Default deny.
 - Explicit founder sign-off and green CI/production evidence before enabling any payment or invoice email.
 
 **Current state:** No real payment, invoice email, private ledger, staff portal or downloadable invoice is claimed operational. Do not collect financial data or enable checkout until implemented and tested.
+
+## Founder-approved director identity decision — 17 November 2026
+
+- **Exactly two initial Director identities**, one per director. Each signs in with their **own private, individually verified email address** and self-created password. Neither director uses `oppelenterprises@gmail.com` as a shared login or as the other's password-recovery mailbox.
+- `oppelenterprises@gmail.com` remains the **corporate notification inbox**, not a login credential, password reset destination or authentication bypass.
+- Both directors receive Group-wide read access to all five business workspaces; privileged writes, role grants, refunds, financial exports and changes to payout configuration require explicit server-side policy, MFA step-up where appropriate and durable audit logging. Equal visibility does not mean unreviewed money movement.
+- Use a trusted identity provider or a carefully audited server-side identity implementation; enforce phishing-resistant passkeys/WebAuthn or authenticator MFA, secure session cookies, CSRF protection, rate limits, email verification, reauthentication for high-risk actions and immediate session revocation on credential change.
+- Password recovery sends a **single-use, short-lived token** only to the requesting director's verified private inbox. Store only a hash of the reset token; do not disclose whether an email is registered. Reset revokes existing sessions and sends security notifications. Recovery must not silently bypass mandatory MFA: require an independently verified second factor or a documented high-assurance recovery procedure.
+- Founder invitation/onboarding must **not** hard-code or commit either private email, password, reset token, MFA secret or API key to GitHub, the public prototype or logs. Provision identities only through the authenticated private identity administration flow, with the director choosing their own secret.
+- Keep the public `finance-design-preview.html` synthetic and clearly labelled; the future production finance origin, sensitive routes and APIs must fail closed without valid authenticated sessions and authorisation. A cosmetic login page is not a security boundary.
+- **Implementation status:** Approved architecture and requirements only; director accounts, identity provider, password reset email, MFA, private financial portal and production authentication are **not yet provisioned or tested**. Never claim they are live.
