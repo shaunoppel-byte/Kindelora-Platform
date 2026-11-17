@@ -23,6 +23,8 @@ const invalidImages=[];
 const undersizedImages=[];
 const wrongAspectImages=[];
 const missingProvenance=[];
+const svgImages=[];
+const remoteImages=[];
 const manifest=JSON.parse(fs.readFileSync(new URL('../quality/affirmation-artwork-remediation.json',import.meta.url),'utf8'));
 const approvals=new Map(manifest.entries.map(entry=>[entry.id,entry]));
 if(approvals.size!==400)throw new Error('Artwork provenance manifest must contain 400 unique IDs');
@@ -42,7 +44,12 @@ for(let i=0;i<ids.length;i++){
     if (!fs.existsSync(new URL('..'+photo,import.meta.url))) throw new Error('Missing local artwork for '+ids[i]+': '+photo);
     const bytes=fs.readFileSync(new URL('..'+photo,import.meta.url));
     const dimensions=webpDimensions(bytes);
-    if(!dimensions)invalidImages.push({id:ids[i],path:photo,reason:'not a supported valid WebP header'});
+    if(photo.toLowerCase().endsWith('.svg')){
+      const svg=bytes.toString('utf8');
+      const valid=/<svg\\b/i.test(svg)&&/<\\/svg>/i.test(svg);
+      if(!valid)invalidImages.push({id:ids[i],path:photo,reason:'invalid SVG structure'});
+      else svgImages.push({id:ids[i],path:photo,reason:'SVG requires independent editorial and visual review; not a verified premium photograph'});
+    } else if(!dimensions)invalidImages.push({id:ids[i],path:photo,reason:'not a supported valid WebP header'});
     else {
       if(dimensions.width<900||dimensions.height<1200)undersizedImages.push({id:ids[i],path:photo,...dimensions});
       const aspect=dimensions.width/dimensions.height;
@@ -53,6 +60,7 @@ for(let i=0;i<ids.length;i++){
     hashGroup.push({id:ids[i],path:photo});
     contentHashes.set(digest,hashGroup);
   }
+  if(/^https?:\\/\\//i.test(photo))remoteImages.push({id:ids[i],url:photo,reason:'remote asset availability, licensing, dimensions and visual uniqueness not verified offline'});
   const record=approvals.get(ids[i]);
   if(!record||record.replacementAsset!==photo||!record.licenseEvidence?.trim()||record.qaStatus!=='approved')missingProvenance.push({id:ids[i],path:photo,reason:!record?'missing manifest entry':record.replacementAsset!==photo?'asset mapping differs':!record.licenseEvidence?.trim()?'missing license/provenance evidence':'not approved'});
   const entries=groups.get(photo)||[];
@@ -61,5 +69,5 @@ for(let i=0;i<ids.length;i++){
 }
 const repeatedFiles=[...contentHashes].filter(([,items])=>items.length>1);
 const duplicates=[...groups].filter(([,entries])=>entries.length>1).sort((a,b)=>b[1].length-a[1].length);
-console.log(JSON.stringify({affirmations:ids.length,uniqueUnderlyingImages:groups.size,duplicateAssignments:ids.length-groups.size,duplicateImageGroups:duplicates.length,identicalBinaryGroups:repeatedFiles.length,invalidLocalWebp:invalidImages.length,belowPremiumPortraitMinimum:undersizedImages.length,wrongPortraitAspect:wrongAspectImages.length,unapprovedOrUnprovenanced:missingProvenance.length,invalidImageDetails:invalidImages,undersizedImageDetails:undersizedImages,wrongAspectDetails:wrongAspectImages,provenanceDetails:missingProvenance,identicalBinaryAssignments:repeatedFiles.reduce((n,[,items])=>n+items.length-1,0),identicalBinaryDetails:repeatedFiles.map(([sha256,items])=>({sha256,items})),groups:duplicates.map(([url,entries])=>({url,count:entries.length,entries}))},null,2));
-if(duplicates.length||repeatedFiles.length||invalidImages.length||undersizedImages.length||wrongAspectImages.length||missingProvenance.length){console.error('Artwork QA FAIL: duplicate, invalid, undersized, wrong-aspect, unapproved or unprovenanced artwork. Do not release.');process.exitCode=1;}
+console.log(JSON.stringify({affirmations:ids.length,uniqueUnderlyingImages:groups.size,duplicateAssignments:ids.length-groups.size,duplicateImageGroups:duplicates.length,identicalBinaryGroups:repeatedFiles.length,invalidLocalAssets:invalidImages.length,svgRequiringVisualReview:svgImages.length,remoteRequiringVerification:remoteImages.length,belowPremiumPortraitMinimum:undersizedImages.length,wrongPortraitAspect:wrongAspectImages.length,unapprovedOrUnprovenanced:missingProvenance.length,invalidImageDetails:invalidImages,svgReviewDetails:svgImages,remoteReviewDetails:remoteImages,undersizedImageDetails:undersizedImages,wrongAspectDetails:wrongAspectImages,provenanceDetails:missingProvenance,identicalBinaryAssignments:repeatedFiles.reduce((n,[,items])=>n+items.length-1,0),identicalBinaryDetails:repeatedFiles.map(([sha256,items])=>({sha256,items})),groups:duplicates.map(([url,entries])=>({url,count:entries.length,entries}))},null,2));
+if(duplicates.length||repeatedFiles.length||invalidImages.length||undersizedImages.length||wrongAspectImages.length||missingProvenance.length||svgImages.length||remoteImages.length){console.error('Artwork QA FAIL: duplicate, invalid, undersized, wrong-aspect, unapproved or unprovenanced artwork. Do not release.');process.exitCode=1;}
