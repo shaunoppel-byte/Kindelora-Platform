@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
+const html=readFileSync('finance-design-preview.html','utf8');const middleware=readFileSync('functions/_middleware.js','utf8');
+for(const title of ['Executive overview','Invoice register','Payment register','Bank reconciliation','Access & audit','Automation & AI'])assert.ok(html.includes(title),title);
+for(const code of ['OPE-2026-000001','KIN-2026-000001','VEL-2026-000001','KDR-2026-000001','SOL-2026-000001'])assert.ok(html.includes(code));
+assert.ok(html.includes('DESIGN PREVIEW — NOT LIVE.'));
+assert.ok(html.includes('Synthetic demonstration data'));
+assert.ok(html.includes('disabled>Process payment')||html.includes('disabled>Process payment · unavailable'));
+assert.ok(html.includes('requires secure login'));
+assert.ok(html.includes('never approve refunds'));
+assert.ok(middleware.includes('(?:finance|owner-finance|admin-finance)'));
+assert.ok(!/fetch\s*\(/.test(html),'Preview must not call remote APIs');
+assert.ok(!/<form\b/i.test(html),'Preview must not collect credentials');
+console.log('PASS: premium preview sections, demo-only data, disabled actions, finance deny guard');
