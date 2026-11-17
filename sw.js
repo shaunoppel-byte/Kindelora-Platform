@@ -1,4 +1,4 @@
-// Security patch: v25 removes cached premium pages and blocks their offline replay.
+// Security patch: v27 rejects ambiguous encoded paths and purges legacy caches.
 const CACHE="kindelora-launch-v27";
 const ASSETS=["/","/index.html","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/message-catalogue.json","/manifest.webmanifest","/icon.svg","/privacy.html","/terms.html"];
 // Match the server middleware's fail-closed path policy, including encoded paths.
@@ -8,7 +8,7 @@ const classifyPath=raw=>{
   let path;
   try { path=decodeURIComponent(raw); } catch { return 'invalid'; }
   if (/%(?:2f|5c|25)/i.test(path)) return 'invalid';
-  if (/^\\/assets\\/audio\\/heygen-speech-2\\.mp3$/i.test(path)||/^\\/(?:api\\/)?(?:plus|premium|members)(?:\\/|$)/i.test(path)||/^\\/assets\\/(?:plus|premium|members)(?:\\/|$)/i.test(path)) return 'protected';
+  if (/^\/assets\/audio\/heygen-speech-2\.mp3$/i.test(path)||/^\/(?:api\/)?(?:plus|premium|members)(?:\/|$)/i.test(path)||/^\/assets\/(?:plus|premium|members)(?:\/|$)/i.test(path)) return 'protected';
   return 'public';
 };
 self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
