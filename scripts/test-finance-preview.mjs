@@ -4,6 +4,11 @@ for(const title of ['Executive overview','Invoice register','Payment register','
 for(const code of ['OPE-2026-000001','KIN-2026-000001','VEL-2026-000001','KDR-2026-000001','SOL-2026-000001'])assert.ok(js.includes(code));
 assert.ok(html.includes('DESIGN PREVIEW — NOT LIVE.'));
 assert.ok(html.includes('Synthetic demonstration data'));
+assert.ok(html.includes('grid-template-columns:repeat(2,minmax(0,1fr));gap:8px;overflow:visible'));
+assert.ok(html.includes('.nav button{width:100%;min-width:0;white-space:normal'));
+assert.ok(html.includes('.top .controls select{display:block;width:100%'));
+assert.ok(html.includes('<span>Business workspace</span><select'));
+assert.ok(html.includes('max-width:100%;overflow-x:hidden'));
 assert.ok(html.includes('disabled>Process payment')||html.includes('disabled>Process payment · unavailable'));
 assert.ok(html.includes('requires secure login'));
 assert.ok(html.includes('never approve refunds'));assert.ok(html.includes('assets/js/finance-design-preview.js'));assert.ok(html.includes('copy-review'));assert.ok(html.includes('id="reporting"'));assert.ok(html.includes('id="assistant"'));assert.ok(html.includes('id="analytics"'));assert.ok(html.includes('finance-analytics-preview.js'));assert.ok(analyticsPreview.includes('summarise(rows,{period})'));assert.ok(analyticsPreview.includes('conic-gradient'));assert.ok(analyticsPreview.includes('Confirmed bank balance: NOT CONNECTED'));assert.ok(assistantPreview.includes('answerFinanceQuery'));assert.ok(html.includes('finance-reporting-preview.js'));assert.ok(reportingPreview.includes('summarise(synthetic'));
