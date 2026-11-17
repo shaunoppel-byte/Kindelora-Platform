@@ -11,6 +11,8 @@ on:
       - 'assets/js/finance-analytics-preview.js'
       - 'functions/_middleware.js'
       - 'scripts/test-finance-preview.mjs'
+      - 'scripts/test-simulated-commerce.mjs'
+      - 'scripts/fixtures/simulated-commerce.mjs'
       - '.github/workflows/finance-preview-qa.yml'
   pull_request:
   workflow_dispatch:
@@ -25,3 +27,5 @@ jobs:
         with:
           node-version: '22'
       - run: node scripts/test-finance-preview.mjs
+      - run: node scripts/test-simulated-commerce.mjs
+      - run: node scripts/test-finance-assistant.mjs
