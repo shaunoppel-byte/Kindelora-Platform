@@ -62,6 +62,20 @@ for(const path of protectedRoutes){
  assert((response.headers.get('Cache-Control')||'').includes('no-store'),'Protected path cacheable: '+path);
  assert(!(await response.text()).includes('PREMIUM_SECRET_SENTINEL'),'Protected path leaked bytes: '+path);
 }
+// Exercise alternate HTTP methods, query parameters and case variants.
+// Static and API paths must remain denied regardless of request method.
+for(const method of ['GET','HEAD','POST','OPTIONS']){
+ for(const path of ['/api/plus/weekly?preview=1','/PLUS/archive?download=true','/members/favourites?offline=1','/assets/plus/private.mp3?cache=1']){
+  let nextCalled=false;
+  const response=await onRequest({
+   request:new Request('https://kindelora.pages.dev'+path,{method}),
+   next:()=>{nextCalled=true;return new Response('PREMIUM_METHOD_BYPASS')}
+  });
+  assert(!nextCalled&&response.status===403,'Method/query bypass: '+method+' '+path);
+  assert((response.headers.get('cache-control')||'').includes('no-store'),'Method/query response cacheable: '+method+' '+path);
+  assert(!(await response.text()).includes('PREMIUM_METHOD_BYPASS'),'Method/query leaked content: '+method+' '+path);
+ }
+}
 // Issue #359: client-controlled cookies and headers must never grant PLUS access.
 // This is a negative test, not evidence that paid entitlements are implemented.
 const forgedIdentityHeaders=[
