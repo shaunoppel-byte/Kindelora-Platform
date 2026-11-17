@@ -1,32 +1,7 @@
-const CACHE="kindelora-launch-v24";
-const ASSETS=["/","/index.html","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/message-catalogue.json","/manifest.webmanifest","/icon.svg","/sunrise-landscape.svg","/morning-light.svg","/calm-moment.svg","/reflect-grow.svg","/privacy.html","/terms.html","/motivational-monday.html","/assets/kindelora-monday-cinematic-bg.webp","/affirmations/artwork/small-steps-still-count.png","/affirmations/artwork/rest-is-part-of-growing.png","/affirmations/artwork/the-light-returns.png","/affirmations/artwork/i-am-enough-as-i-am.svg"];
-self.addEventListener("install",event=>{event.waitUntil(caches.open(CACHE).then(cache=>cache.addAll(ASSETS)).then(()=>self.skipWaiting()))});
-self.addEventListener("activate",event=>{event.waitUntil(Promise.all([caches.keys().then(keys=>Promise.all(keys.filter(key=>key.startsWith("kindelora-launch-")&&key!==CACHE).map(key=>caches.delete(key)))),self.clients.claim()]))});
-self.addEventListener("fetch",event=>{
- const request=event.request;
- if(request.method!=="GET"||new URL(request.url).origin!==self.location.origin)return;
- const path=new URL(request.url).pathname;
- if(request.mode==="navigate"){
-  event.respondWith(fetch(request).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(request,copy)))}return response}).catch(async()=>await caches.match(request)||await caches.match("/index.html")));
-  return;
- }
- if(["/affirmation-library.js","/message-catalogue.json","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/manifest.webmanifest","/icon.svg","/privacy.html","/terms.html"].includes(path)){
-  event.respondWith(fetch(request).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(path,copy)))}return response}).catch(()=>caches.match(path)));
-  return;
- }
- // Keep the approved Motivational Monday artwork fresh in the installed app.
- // Audio streams bypass cache handling to preserve HTTP Range requests and native playback.
- if(request.destination==="audio"||/\\.(mp3|m4a|ogg|wav)$/i.test(path))return;
- if(path==="/assets/kindelora-monday-cinematic-bg.webp"||path.startsWith("/affirmations/artwork/")){
-  event.respondWith(fetch(request).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(path,copy)))}return response}).catch(()=>caches.match(path)));
-  return;
- }
- // Stylesheets and film imagery must not be pinned to stale cache entries.
- // Network-first keeps online refreshes in sync with Cloudflare deployments;
- // the previously fetched asset remains available when offline.
- if(request.destination==="style" || (request.destination==="image" && path.startsWith("/assets/affirmations/")) || (request.destination==="image" && /film|poster|golden/i.test(path))){
-  event.respondWith(fetch(request).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(request,copy)))}return response}).catch(()=>caches.match(request)));
-  return;
- }
- event.respondWith(caches.match(request).then(cached=>cached||fetch(request).then(response=>{if(response.ok){const copy=response.clone();event.waitUntil(caches.open(CACHE).then(cache=>cache.put(request,copy)))}return response})));
-});
+// Security patch: v25 removes cached premium pages and blocks their offline replay.
+const CACHE="kindelora-launch-v25";
+const ASSETS=["/","/index.html","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/message-catalogue.json","/manifest.webmanifest","/icon.svg","/privacy.html","/terms.html"];
+const protectedPath=p=>/^\/motivational-monday(?:\.html|\/|$)/i.test(p)||/^\/assets\/audio\/heygen-speech-2\.mp3$/i.test(p);
+self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
+self.addEventListener("activate",event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
+self.addEventListener("fetch",event=>{const req=event.request,url=new URL(req.url);if(url.origin!==self.location.origin||req.method!=="GET")return;if(protectedPath(url.pathname)){event.respondWith(Promise.resolve(new Response("PLUS content unavailable until membership verification.",{status:403,headers:{"Cache-Control":"no-store","Content-Type":"text/plain; charset=utf-8"}})));return;}if(req.mode==="navigate"){event.respondWith(fetch(req,{cache:"no-store"}).catch(()=>caches.match("/index.html")));return;}if(req.destination==="audio"||url.pathname.startsWith("/api/")||req.headers.has("Authorization"))return;event.respondWith(fetch(req).catch(()=>caches.match(req)));});
