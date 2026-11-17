@@ -2,6 +2,7 @@
 // Do NOT publish premium payloads under static paths. A real PLUS entitlement
 // service must replace this deny-by-default policy before paid launch.
 const protectedPaths = [
+  /^\/(?:api\/)?(?:finance|owner-finance|admin-finance)(?:\/|$)/i,
   /^\/assets\/audio\/heygen-speech-2\.mp3$/i,
   /^\/(?:api\/)?(?:plus|premium|members)(?:\/|$)/i,
   /^\/assets\/(?:plus|premium|members)(?:\/|$)/i
