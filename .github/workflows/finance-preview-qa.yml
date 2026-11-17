@@ -1,0 +1,21 @@
+name: Finance design preview QA
+on:
+  push:
+    paths:
+      - 'finance-design-preview.html'
+      - 'functions/_middleware.js'
+      - 'scripts/test-finance-preview.mjs'
+      - '.github/workflows/finance-preview-qa.yml'
+  pull_request:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  finance-preview:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/test-finance-preview.mjs
