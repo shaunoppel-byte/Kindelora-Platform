@@ -1,0 +1,103 @@
+{
+  "schema_version": 1,
+  "batch": 44,
+  "editorial_note": "12 individually drafted situational messages. Exact-normalized and token Dice compared against public catalogue and batch 43 only; NOT a full-corpus semantic or independent human editorial review. Editorial-only, no public release authorization.",
+  "messages": [
+    {
+      "id": "KDL-EDITORIAL44-001",
+      "theme": "after_a_missed_train",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Missing the train can turn a carefully planned morning into a scramble. Find the next departure first; you can decide what this delay means later."
+    },
+    {
+      "id": "KDL-EDITORIAL44-002",
+      "theme": "when_a_friend_cancels",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A cancelled plan can sting even when the reason is understandable. You can wish your friend well and still feel disappointed about the evening you pictured."
+    },
+    {
+      "id": "KDL-EDITORIAL44-003",
+      "theme": "before_a_difficult_phone_call",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Before the call, write down the one thing you most need to say. You do not have to deliver every sentence perfectly for the conversation to be worthwhile."
+    },
+    {
+      "id": "KDL-EDITORIAL44-004",
+      "theme": "waiting_for_test_results",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Waiting can make ordinary minutes feel unusually long. If it helps, choose one familiar task for the next hour rather than trying to settle every possible outcome."
+    },
+    {
+      "id": "KDL-EDITORIAL44-005",
+      "theme": "after_a_small_work_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An error at work deserves attention, not a lifelong label. Correct what you can, tell the person affected, and let the repair be part of the story."
+    },
+    {
+      "id": "KDL-EDITORIAL44-006",
+      "theme": "first_day_in_a_new_neighbourhood",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The streets may feel unfamiliar for a while. Learning the name of one shopkeeper or finding a comfortable walking route can be a modest beginning."
+    },
+    {
+      "id": "KDL-EDITORIAL44-007",
+      "theme": "when_the_house_is_quiet",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A quiet house can feel restful one evening and lonely the next. Neither response needs defending; perhaps a familiar voice would be welcome tonight."
+    },
+    {
+      "id": "KDL-EDITORIAL44-008",
+      "theme": "after_saying_no",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may feel uneasy after declining a request, especially if you usually say yes. Discomfort does not automatically mean your decision was unkind."
+    },
+    {
+      "id": "KDL-EDITORIAL44-009",
+      "theme": "supporting_someone_without_answers",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When someone shares hard news, you need not produce a solution. Listening without rushing to improve their mood may be the most useful thing you offer."
+    },
+    {
+      "id": "KDL-EDITORIAL44-010",
+      "theme": "returning_to_a_hobby",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Your hands may not remember the old rhythm straight away. The first awkward attempt is still time spent with something that once brought you pleasure."
+    },
+    {
+      "id": "KDL-EDITORIAL44-011",
+      "theme": "during_a_long_queue",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Standing in a slow queue can leave you feeling powerless over your own time. Notice what is within reach: a message to send, a breath, or simply resting your shoulders."
+    },
+    {
+      "id": "KDL-EDITORIAL44-012",
+      "theme": "when_a_family_recipe_changes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar recipe can taste different without the person who used to make it. Keeping one ingredient the same may be enough to carry a small piece of that memory."
+    }
+  ]
+}
