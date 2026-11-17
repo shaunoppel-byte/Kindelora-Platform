@@ -76,6 +76,17 @@ for(const method of ['GET','HEAD','POST','OPTIONS']){
   assert(!(await response.text()).includes('PREMIUM_METHOD_BYPASS'),'Method/query leaked content: '+method+' '+path);
  }
 }
+// Encoded URL segments must not bypass the same server-side deny policy.
+for (const path of ['/api/%70lus/weekly','/%70lus/archive','/assets/%70remium/secret.json','/api/%2570lus/weekly','/api/%2fplus/weekly']) {
+ let nextCalled=false;
+ const response=await onRequest({
+  request:new Request('https://kindelora.pages.dev'+path),
+  next:()=>{nextCalled=true;return new Response('ENCODED_PREMIUM_BYPASS')}
+ });
+ assert(!nextCalled && [400,403].includes(response.status),'Encoded path bypass: '+path);
+ assert((response.headers.get('cache-control')||'').includes('no-store'),'Encoded path cacheable: '+path);
+ assert(!(await response.text()).includes('ENCODED_PREMIUM_BYPASS'),'Encoded path leaked bytes: '+path);
+}
 // Issue #359: client-controlled cookies and headers must never grant PLUS access.
 // This is a negative test, not evidence that paid entitlements are implemented.
 const forgedIdentityHeaders=[
