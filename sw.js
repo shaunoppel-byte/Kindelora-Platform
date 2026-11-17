@@ -1,7 +1,7 @@
 // Security patch: v25 removes cached premium pages and blocks their offline replay.
 const CACHE="kindelora-launch-v25";
 const ASSETS=["/","/index.html","/app.js","/affirmation-preview.js","/member-favourites.js","/member-favourites.css","/message-catalogue.json","/manifest.webmanifest","/icon.svg","/privacy.html","/terms.html"];
-const protectedPath=p=>/^\/motivational-monday(?:\.html|\/|$)/i.test(p)||/^\/assets\/audio\/heygen-speech-2\.mp3$/i.test(p);
+const protectedPath=p=>/^\/assets\/audio\/heygen-speech-2\.mp3$/i.test(p);
 self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
 self.addEventListener("activate",event=>event.waitUntil(caches.keys().then(keys=>Promise.all(keys.filter(k=>k!==CACHE).map(k=>caches.delete(k)))).then(()=>self.clients.claim())));
 self.addEventListener("fetch",event=>{const req=event.request,url=new URL(req.url);if(url.origin!==self.location.origin||req.method!=="GET")return;if(protectedPath(url.pathname)){event.respondWith(Promise.resolve(new Response("PLUS content unavailable until membership verification.",{status:403,headers:{"Cache-Control":"no-store","Content-Type":"text/plain; charset=utf-8"}})));return;}if(req.mode==="navigate"){event.respondWith(fetch(req,{cache:"no-store"}).catch(()=>caches.match("/index.html")));return;}if(req.destination==="audio"||url.pathname.startsWith("/api/")||req.headers.has("Authorization"))return;event.respondWith(fetch(req).catch(()=>caches.match(req)));});
