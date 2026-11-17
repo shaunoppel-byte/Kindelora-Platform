@@ -43,6 +43,26 @@ for(const path of protectedRoutes){
  assert((response.headers.get('Cache-Control')||'').includes('no-store'),'Protected path cacheable: '+path);
  assert(!(await response.text()).includes('PREMIUM_SECRET_SENTINEL'),'Protected path leaked bytes: '+path);
 }
+// Issue #359: client-controlled cookies and headers must never grant PLUS access.
+// This is a negative test, not evidence that paid entitlements are implemented.
+const forgedIdentityHeaders=[
+ {'Cookie':'kindelora_plus=true; plan=plus; subscription=active'},
+ {'Authorization':'Bearer forged-test-token','X-User-Role':'plus'},
+ {'X-Membership-Status':'active','X-Subscription-Tier':'paid'},
+ {'Cookie':'session=forged; membership=verified','X-PayFast-Status':'COMPLETE'}
+];
+for(const [caseIndex,headers] of forgedIdentityHeaders.entries()){
+ for(const path of ['/api/plus/weekly','/plus/archive','/members/favourites','/assets/plus/private.mp3']){
+  let nextCalled=false;
+  const response=await onRequest({
+   request:new Request('https://kindelora.pages.dev'+path,{headers}),
+   next:()=>{nextCalled=true;return new Response('FORGED_MEMBER_SECRET')}
+  });
+  assert(!nextCalled&&response.status===403,'Forged membership bypass case '+caseIndex+': '+path);
+  assert((response.headers.get('cache-control')||'').includes('no-store'),'Forged membership response cacheable: '+path);
+  assert(!(await response.text()).includes('FORGED_MEMBER_SECRET'),'Forged membership leaked content: '+path);
+ }
+}
 const readiness=await onRequest({
  request:new Request('https://kindelora.pages.dev/api/plus/status'),
  next:()=>new Response('UNEXPECTED_PUBLIC_FALLTHROUGH')
