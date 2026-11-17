@@ -1,5 +1,14 @@
 name: KINDELORA production security smoke
 on:
+  push:
+    branches: [main]
+    paths:
+      - 'functions/**'
+      - 'sw.js'
+      - 'motivational-monday.html'
+      - 'assets/audio/**'
+      - 'scripts/smoke-production-premium.mjs'
+      - '.github/workflows/production-premium-smoke.yml'
   workflow_dispatch:
   schedule:
     - cron: '17 5 * * *'
