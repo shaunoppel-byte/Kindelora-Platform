@@ -4,6 +4,11 @@ on:
     branches: [main]
     paths:
       - 'functions/**'
+      - 'app.js'
+      - 'member-favourites.js'
+      - 'affirmation-preview.js'
+      - 'index.html'
+      - 'docs/PLUS-LAUNCH-EVIDENCE-MATRIX.md'
       - 'sw.js'
       - 'motivational-monday.html'
       - 'assets/audio/**'
