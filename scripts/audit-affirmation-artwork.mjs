@@ -46,7 +46,7 @@ for(let i=0;i<ids.length;i++){
     const dimensions=webpDimensions(bytes);
     if(photo.toLowerCase().endsWith('.svg')){
       const svg=bytes.toString('utf8');
-      const valid=/<svg\\b/i.test(svg)&&/<\\/svg>/i.test(svg);
+      const valid=svg.includes('<svg')&&svg.includes('</svg>');
       if(!valid)invalidImages.push({id:ids[i],path:photo,reason:'invalid SVG structure'});
       else svgImages.push({id:ids[i],path:photo,reason:'SVG requires independent editorial and visual review; not a verified premium photograph'});
     } else if(!dimensions)invalidImages.push({id:ids[i],path:photo,reason:'not a supported valid WebP header'});
@@ -60,7 +60,7 @@ for(let i=0;i<ids.length;i++){
     hashGroup.push({id:ids[i],path:photo});
     contentHashes.set(digest,hashGroup);
   }
-  if(/^https?:\\/\\//i.test(photo))remoteImages.push({id:ids[i],url:photo,reason:'remote asset availability, licensing, dimensions and visual uniqueness not verified offline'});
+  if(photo.startsWith('https://')||photo.startsWith('http://'))remoteImages.push({id:ids[i],url:photo,reason:'remote asset availability, licensing, dimensions and visual uniqueness not verified offline'});
   const record=approvals.get(ids[i]);
   if(!record||record.replacementAsset!==photo||!record.licenseEvidence?.trim()||record.qaStatus!=='approved')missingProvenance.push({id:ids[i],path:photo,reason:!record?'missing manifest entry':record.replacementAsset!==photo?'asset mapping differs':!record.licenseEvidence?.trim()?'missing license/provenance evidence':'not approved'});
   const entries=groups.get(photo)||[];
