@@ -145,6 +145,6 @@ render();
  fetch("/api/plus/status",{cache:"no-store",credentials:"same-origin"}).then(async response=>{
   if(!response.ok)throw Error("Unavailable");
   const data=await response.json();
-  availability.textContent=data.checkoutAvailable===false?"KINDELORA Plus is ready for checkout activation. PayFast merchant approval and secure payment verification are pending; no charge will be made.":"PayFast activation and secure payment verification are required before checkout can be enabled.";
+  availability.textContent=data.checkoutAvailable===false?"KINDELORA PLUS checkout is not yet available. PayFast merchant verification and secure membership checks must be completed before activation. No charge will be made.":"KINDELORA PLUS checkout remains unavailable until verified payment and membership release checks pass.";
  }).catch(()=>{availability.textContent="Checkout activation is pending PayFast verification. You can continue exploring KINDELORA for free.";});
 })();
