@@ -13,8 +13,9 @@ const checks=[
 let failures=0;
 for(const c of checks){
  try{
-  const response=await fetch(base+c.path,{redirect:'manual',headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(12000)});
+  const response=await fetch(base+c.path,{redirect:c.status===200?'follow':'manual',headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(12000)});
   const body=await response.text();
+  if(c.status===200&&new URL(response.url).origin!==new URL(base).origin)throw Error('Public preview redirected off origin');
   const errors=[];
   if(response.status!==c.status)errors.push('expected HTTP '+c.status+', got '+response.status);
   if(c.bodyMustInclude&&!body.includes(c.bodyMustInclude))errors.push('expected public preview text absent');
