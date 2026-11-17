@@ -8,7 +8,12 @@ const checks=[
  {path:'/plus/archive',status:403},
  {path:'/premium/downloads/reflection.pdf',status:403},
  {path:'/members/favourites',status:403},
- {path:'/assets/plus/private.mp3',status:403}
+ {path:'/assets/plus/private.mp3',status:403},
+ {path:'/assets/premium/private.json',status:403},
+ {path:'/api/premium/content',status:403},
+ {path:'/api/members/profile',status:403},
+ {path:'/members/favourites?view=all',status:403},
+ {path:'/plus/archive?week=latest',status:403}
 ];
 let failures=0;
 for(const c of checks){
