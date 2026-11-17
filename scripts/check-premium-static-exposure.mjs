@@ -11,6 +11,9 @@ const index=read('index.html');
 // This checks structural integrity, not independent editorial approval.
 const catalogue=JSON.parse(read('message-catalogue.json'));
 const appSource=read('app.js');
+const favouritesSource=read('member-favourites.js');
+const affirmationSource=read('affirmation-preview.js');
+
 const catalogueMessages=Array.isArray(catalogue.messages)?catalogue.messages:[];
 const validCatalogueMessages=catalogueMessages.filter(m=>m&&typeof m.id==='string'&&typeof m.theme==='string'&&typeof m.text==='string'&&m.text.length>=20&&m.text.length<=400);
 const failures=[];
@@ -20,6 +23,11 @@ assert(validCatalogueMessages.length===3000,'Public catalogue contains invalid m
 assert(new Set(validCatalogueMessages.map(m=>m.id)).size===3000,'Public catalogue contains duplicate IDs');
 assert(appSource.includes('data.messages.length!==3000')&&appSource.includes('valid.length!==3000')&&appSource.includes('size!==3000'),'Public app loader rejects 3000-message catalogue');
 
+// Paid favourites must stay a non-functional preview until server-side entitlement exists.
+assert(favouritesSource.includes('gated preview'),'Favourites no longer explicitly labelled as a gated preview');
+assert(favouritesSource.includes('membership required'),'Favourites no longer display a membership-required gate');
+assert(!/localStorage\\.getItem\\([^)]*(?:plus|paid|member|subscription)/i.test(favouritesSource),'Favourites use localStorage as membership proof');
+assert(!/localStorage\\.getItem\\([^)]*(?:plus|paid|member|subscription)/i.test(affirmationSource),'Affirmation preview uses localStorage as membership proof');
 assert(!page.includes('The Difference You May Never See'),'Premium Monday full-message title leaked in public HTML');
 assert(!page.includes('heygen-speech-2.mp3'),'Premium MP3 referenced from public HTML');
 assert(!fs.existsSync(new URL('../assets/audio/heygen-speech-2.mp3',import.meta.url)),'Premium MP3 publicly hosted under static assets');
