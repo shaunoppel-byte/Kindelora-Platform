@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "batch": 46,
+  "editorial_note": "20 original situational candidates. Exact-normalized and advisory token-Dice checks against public catalogue (3000) and editorial batch 45 (24) performed 2026-11-18; max token Dice 0.5455. Not full historical batch comparison or independent editorial approval. Do not publish.",
+  "messages": [
+    {
+      "id": "KDL-EDITORIAL46-001",
+      "theme": "missed_train",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Missing a train can unravel a carefully arranged morning. You can deal with the next connection without turning a delay into a judgment about your competence."
+    },
+    {
+      "id": "KDL-EDITORIAL46-002",
+      "theme": "forgotten_date",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a friend forgets a date that matters to you, disappointment can sit beside affection. You can name the hurt without deciding the whole friendship is careless."
+    },
+    {
+      "id": "KDL-EDITORIAL46-003",
+      "theme": "parent_needs_help",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a parent begins needing help with familiar tasks, roles can shift quietly. It is reasonable to ask what support is available rather than trying to become an entire care system."
+    },
+    {
+      "id": "KDL-EDITORIAL46-004",
+      "theme": "shared_home",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Living close together can make ordinary noises feel enormous. A conversation about quiet hours may protect connection better than waiting until irritation spills over."
+    },
+    {
+      "id": "KDL-EDITORIAL46-005",
+      "theme": "language_learning",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A new language can make a capable adult feel like a beginner again. Each awkward sentence is a chance to be understood, not a test of your worth."
+    },
+    {
+      "id": "KDL-EDITORIAL46-006",
+      "theme": "unexpected_bill",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected bill can make the future feel suddenly narrow. You may need time, information and a practical conversation before you can see your options."
+    },
+    {
+      "id": "KDL-EDITORIAL46-007",
+      "theme": "unsuccessful_audition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Not being chosen for a role can sting even when you respect the decision. The work you put into preparing still belongs to you."
+    },
+    {
+      "id": "KDL-EDITORIAL46-008",
+      "theme": "child_hard_question",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a child asks something you cannot answer, a gentle 'I don't know yet' can be more trustworthy than rushing to sound certain."
+    },
+    {
+      "id": "KDL-EDITORIAL46-009",
+      "theme": "changed_workplace",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Returning to work after time away can feel like arriving in a room where everyone moved the furniture. You are allowed to ask for orientation without apologising for needing it."
+    },
+    {
+      "id": "KDL-EDITORIAL46-010",
+      "theme": "left_out_photo",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Seeing a gathering you were not invited to can hurt in a strangely public way. A photograph shows one moment, not a complete account of where you belong."
+    },
+    {
+      "id": "KDL-EDITORIAL46-011",
+      "theme": "correcting_a_mistake",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A mistake in a message or meeting may be uncomfortable to revisit. A clear correction is often more useful than hours spent rehearsing embarrassment."
+    },
+    {
+      "id": "KDL-EDITORIAL46-012",
+      "theme": "hospital_waiting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Waiting for news in a hospital corridor can stretch minutes into something heavy. It is all right to drink water, sit down or ask someone to stay with you while you wait."
+    },
+    {
+      "id": "KDL-EDITORIAL46-013",
+      "theme": "declining_to_host",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You can care about bringing people together and still decide your home or energy cannot hold a gathering this month. A kind refusal can be complete without an elaborate explanation."
+    },
+    {
+      "id": "KDL-EDITORIAL46-014",
+      "theme": "first_holiday_after_loss",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first holiday after a loss may make familiar traditions feel unfamiliar. You can keep one ritual, change another or leave the day simple; none of these choices measures your love."
+    },
+    {
+      "id": "KDL-EDITORIAL46-015",
+      "theme": "cancelled_project",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a project ends before it is finished, the effort invested can feel invisible. You can be disappointed about the outcome and still identify what you learned or contributed."
+    },
+    {
+      "id": "KDL-EDITORIAL46-016",
+      "theme": "difficult_school_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A difficult school meeting can leave a parent replaying every sentence. You can take notes, ask for clarity and make the next decision without needing to solve everything tonight."
+    },
+    {
+      "id": "KDL-EDITORIAL46-017",
+      "theme": "good_news_and_grief",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You may hesitate to share happy news with someone carrying grief. Thoughtfulness can mean giving them room to respond in their own way, not hiding your life completely."
+    },
+    {
+      "id": "KDL-EDITORIAL46-018",
+      "theme": "neighbourhood_changes",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When familiar shops close and new faces arrive, a neighbourhood can feel less like the place you knew. Missing what was there does not prevent you from becoming curious about what comes next."
+    },
+    {
+      "id": "KDL-EDITORIAL46-019",
+      "theme": "broken_promise",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After someone breaks a promise, trust may need ordinary evidence rather than a dramatic apology. You can notice consistent actions over time without rushing your decision."
+    },
+    {
+      "id": "KDL-EDITORIAL46-020",
+      "theme": "changing_hobbies",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A hobby that once restored you may now feel like another obligation. You can set it aside for a season without turning a change in interest into a personal failure."
+    }
+  ]
+}
