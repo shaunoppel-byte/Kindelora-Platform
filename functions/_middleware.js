@@ -8,6 +8,23 @@ const protectedPaths = [
 ];
 export async function onRequest(context) {
   const path = new URL(context.request.url).pathname;
+  // Public, non-sensitive readiness endpoint. Never exposes member data or secrets.
+  // This is intentionally independent of PayFast until server-side verification exists.
+  if (path === '/api/plus/status') {
+    return new Response(JSON.stringify({
+      checkoutAvailable: false,
+      membershipVerificationAvailable: false,
+      paymentProvider: 'PayFast',
+      status: 'pending_merchant_verification'
+    }), {
+      status: 200,
+      headers: {
+        'Content-Type': 'application/json; charset=utf-8',
+        'Cache-Control': 'no-store, private',
+        'X-Content-Type-Options': 'nosniff'
+      }
+    });
+  }
   if (!protectedPaths.some(re => re.test(path))) return context.next();
   return new Response("KINDELORA PLUS access requires verified membership and is not yet available.", {
     status: 403,
