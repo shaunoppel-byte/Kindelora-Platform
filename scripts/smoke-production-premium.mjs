@@ -14,12 +14,15 @@ const checks=[
  {path:'/api/premium/content',status:403},
  {path:'/api/members/profile',status:403},
  {path:'/members/favourites?view=all',status:403},
- {path:'/plus/archive?week=latest',status:403}
+ {path:'/plus/archive?week=latest',status:403},
+ {path:'/api/plus/weekly',status:403,headers:{'Cookie':'kindelora_plus=true; plan=plus; subscription=active'}},
+ {path:'/members/favourites',status:403,headers:{'Authorization':'Bearer forged-test-token','X-User-Role':'plus'}},
+ {path:'/plus/archive',status:403,headers:{'X-Membership-Status':'active','X-Subscription-Tier':'paid'}}
 ];
 let failures=0;
 for(const c of checks){
  try{
-  const response=await fetch(base+c.path,{redirect:c.status===200?'follow':'manual',headers:{'Cache-Control':'no-cache'},signal:AbortSignal.timeout(12000)});
+  const response=await fetch(base+c.path,{redirect:c.status===200?'follow':'manual',headers:{'Cache-Control':'no-cache',...(c.headers||{})},signal:AbortSignal.timeout(12000)});
   const body=await response.text();
   if(c.status===200&&new URL(response.url).origin!==new URL(base).origin)throw Error('Public preview redirected off origin');
   const errors=[];
