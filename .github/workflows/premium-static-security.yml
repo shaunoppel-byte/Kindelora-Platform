@@ -4,6 +4,8 @@ on:
     paths:
       - 'motivational-monday.html'
       - 'index.html'
+      - 'app.js'
+      - 'message-catalogue.json'
       - 'sw.js'
       - 'functions/**'
       - 'assets/audio/**'
