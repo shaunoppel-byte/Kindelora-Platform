@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {answerFinanceQuery} from '../lib/finance/assistant-queries.mjs';
+const rows=[{business:'KIN',date:'2026-11-01',gross_minor:10000,fee_minor:250,refund_minor:0,matched:true},{business:'VEL',date:'2026-11-02',gross_minor:20000,fee_minor:500,refund_minor:2000,matched:false}];
+const ask=(question,allowedBusinesses=['KIN','VEL'])=>answerFinanceQuery({question,rows,allowedBusinesses,period:'2026-11'});
+assert.equal(ask('Give me a group report').data.gross_minor,30000);
+assert.equal(ask('Show me KINDELORA payments').data.gross_minor,10000);
+assert.equal(ask('Show me VELORA payments',['KIN']).status,'denied');
+assert.equal(ask('How many reconciliation exceptions?').data.unmatched_count,1);
+assert.equal(ask('What are the processing fees?').data.fee_minor,750);
+assert.equal(ask('What is the net settlement?').data.net_minor,27250);
+assert.equal(ask('Email the report').status,'requires_integration');
+assert.equal(ask('Change bank details').status,'denied');
+assert.equal(ask('Group report',[]).status,'denied');
+assert.equal(ask('What is the weather?').status,'unsupported');
+console.log('PASS: grounded financial answers, business isolation, no email claims, no write actions');
