@@ -32,6 +32,10 @@ if(precacheMatch){
 }
 assert(sw.includes('keys.filter(k=>k!==CACHE).map(k=>caches.delete(k))'),'Legacy caches are not purged on service worker activation');
 assert(sw.includes('req.headers.has("Authorization")'),'Authenticated requests may be cached by service worker');
+assert(sw.includes('const classifyPath=raw=>'),'Service worker does not classify encoded paths');
+assert(sw.includes('classification==="invalid"'),'Service worker may replay ambiguous encoded paths');
+assert(sw.includes('classification==="protected"'),'Service worker may replay protected PLUS routes');
+assert(sw.includes('kindelora-launch-v27'),'Service worker cache version was not rotated after security hardening');
 
 assert(middleware.includes('onRequest')&&middleware.includes('403'),'No fail-closed premium middleware');
 assert(middleware.includes('(?:plus|premium|members)'),'Premium namespaces not denied by default');
