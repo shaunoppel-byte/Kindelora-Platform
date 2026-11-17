@@ -7,7 +7,15 @@ const protectedPaths = [
   /^\/assets\/(?:plus|premium|members)(?:\/|$)/i
 ];
 export async function onRequest(context) {
-  const path = new URL(context.request.url).pathname;
+  const rawPath = new URL(context.request.url).pathname;
+  // Decode once for matching: percent-encoded path segments must not bypass
+  // PLUS namespace protection. Fail closed on malformed path encodings.
+  let path;
+  try { path = decodeURIComponent(rawPath); }
+  catch { return new Response('Invalid request path.', {status: 400, headers: {'Cache-Control':'no-store, private'}}); }
+  // Repeated encoding is ambiguous across proxies; deny instead of passing
+  // a potentially protected path through to the static asset handler.
+  if (/%(?:2f|5c|25)/i.test(path)) return new Response('Invalid request path.', {status: 400, headers: {'Cache-Control':'no-store, private'}});
   // Public, non-sensitive readiness endpoint. Never exposes member data or secrets.
   // This is intentionally independent of PayFast until server-side verification exists.
   if (path === '/api/plus/status') {
