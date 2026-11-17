@@ -4,8 +4,10 @@ on:
     paths:
       - 'finance-design-preview.html'
       - 'assets/js/finance-design-preview.js'
-      - 'assets/js/finance-reporting-preview.mjs'
-      - 'assets/js/finance-assistant-preview.mjs'
+      - 'assets/js/finance-reporting-preview.js'
+      - 'assets/js/finance-reporting-engine.js'
+      - 'assets/js/finance-assistant-engine.js'
+      - 'assets/js/finance-assistant-preview.js'
       - 'functions/_middleware.js'
       - 'scripts/test-finance-preview.mjs'
       - '.github/workflows/finance-preview-qa.yml'
