@@ -8,6 +8,7 @@ on:
       - 'assets/js/finance-reporting-engine.js'
       - 'assets/js/finance-assistant-engine.js'
       - 'assets/js/finance-assistant-preview.js'
+      - 'assets/js/finance-analytics-preview.js'
       - 'functions/_middleware.js'
       - 'scripts/test-finance-preview.mjs'
       - '.github/workflows/finance-preview-qa.yml'
