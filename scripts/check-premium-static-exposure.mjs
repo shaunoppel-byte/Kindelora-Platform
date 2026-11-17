@@ -7,8 +7,19 @@ const page=read('motivational-monday.html');
 const sw=read('sw.js');
 const middleware=read('functions/_middleware.js');
 const index=read('index.html');
+// Public catalogue release guard: the app must accept exactly the shipped catalogue.
+// This checks structural integrity, not independent editorial approval.
+const catalogue=JSON.parse(read('message-catalogue.json'));
+const appSource=read('app.js');
+const catalogueMessages=Array.isArray(catalogue.messages)?catalogue.messages:[];
+const validCatalogueMessages=catalogueMessages.filter(m=>m&&typeof m.id==='string'&&typeof m.theme==='string'&&typeof m.text==='string'&&m.text.length>=20&&m.text.length<=400);
 const failures=[];
 const assert=(ok,msg)=>{if(!ok)failures.push(msg)};
+assert(catalogue.count===3000&&catalogueMessages.length===3000,'Public catalogue count differs from 3000');
+assert(validCatalogueMessages.length===3000,'Public catalogue contains invalid messages');
+assert(new Set(validCatalogueMessages.map(m=>m.id)).size===3000,'Public catalogue contains duplicate IDs');
+assert(appSource.includes('data.messages.length!==3000')&&appSource.includes('valid.length!==3000')&&appSource.includes('size!==3000'),'Public app loader rejects 3000-message catalogue');
+
 assert(!page.includes('The Difference You May Never See'),'Premium Monday full-message title leaked in public HTML');
 assert(!page.includes('heygen-speech-2.mp3'),'Premium MP3 referenced from public HTML');
 assert(!fs.existsSync(new URL('../assets/audio/heygen-speech-2.mp3',import.meta.url)),'Premium MP3 publicly hosted under static assets');
