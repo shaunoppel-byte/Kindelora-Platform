@@ -18,7 +18,10 @@ const checks=[
  {path:'/plus/archive?week=latest',status:403},
  {path:'/api/plus/weekly',status:403,headers:{'Cookie':'kindelora_plus=true; plan=plus; subscription=active'}},
  {path:'/members/favourites',status:403,headers:{'Authorization':'Bearer forged-test-token','X-User-Role':'plus'}},
- {path:'/plus/archive',status:403,headers:{'X-Membership-Status':'active','X-Subscription-Tier':'paid'}}
+ {path:'/plus/archive',status:403,headers:{'X-Membership-Status':'active','X-Subscription-Tier':'paid'}},
+ {path:'/api/plus/weekly',status:403,headers:{'Cookie':'session=forged; membership=verified','X-PayFast-Status':'COMPLETE'}},
+ {path:'/api/plus/weekly?week=latest',status:403,headers:{'Authorization':'Bearer forged-test-token','X-PayFast-Status':'COMPLETE'}},
+ {path:'/assets/plus/private.mp3',status:403,headers:{'Range':'bytes=0-1023','Cookie':'kindelora_plus=true'}}
 ];
 let failures=0;
 for(const c of checks){
