@@ -1,12 +1,12 @@
 import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
-const html=readFileSync('finance-design-preview.html','utf8');const reportingPreview=readFileSync('assets/js/finance-reporting-preview.mjs','utf8');const assistantPreview=readFileSync('assets/js/finance-assistant-preview.mjs','utf8');const js=readFileSync('assets/js/finance-design-preview.js','utf8');const middleware=readFileSync('functions/_middleware.js','utf8');
+const html=readFileSync('finance-design-preview.html','utf8');const reportingPreview=readFileSync('assets/js/finance-reporting-preview.js','utf8');const assistantPreview=readFileSync('assets/js/finance-assistant-preview.js','utf8');const js=readFileSync('assets/js/finance-design-preview.js','utf8');const middleware=readFileSync('functions/_middleware.js','utf8');
 for(const title of ['Executive overview','Invoice register','Payment register','Bank reconciliation','Access & audit','Automation & AI'])assert.ok(html.includes(title),title);
 for(const code of ['OPE-2026-000001','KIN-2026-000001','VEL-2026-000001','KDR-2026-000001','SOL-2026-000001'])assert.ok(js.includes(code));
 assert.ok(html.includes('DESIGN PREVIEW — NOT LIVE.'));
 assert.ok(html.includes('Synthetic demonstration data'));
 assert.ok(html.includes('disabled>Process payment')||html.includes('disabled>Process payment · unavailable'));
 assert.ok(html.includes('requires secure login'));
-assert.ok(html.includes('never approve refunds'));assert.ok(html.includes('assets/js/finance-design-preview.js'));assert.ok(html.includes('copy-review'));assert.ok(html.includes('id="reporting"'));assert.ok(html.includes('id="assistant"'));assert.ok(assistantPreview.includes('answerFinanceQuery'));assert.ok(html.includes('finance-reporting-preview.mjs'));assert.ok(reportingPreview.includes('summarise(synthetic'));
+assert.ok(html.includes('never approve refunds'));assert.ok(html.includes('assets/js/finance-design-preview.js'));assert.ok(html.includes('copy-review'));assert.ok(html.includes('id="reporting"'));assert.ok(html.includes('id="assistant"'));assert.ok(assistantPreview.includes('answerFinanceQuery'));assert.ok(html.includes('finance-reporting-preview.js'));assert.ok(reportingPreview.includes('summarise(synthetic'));
 assert.ok(middleware.includes('(?:finance|owner-finance|admin-finance)'));
 assert.ok(!/fetch\s*\(/.test(html),'Preview must not call remote APIs');
 assert.ok(!/<form\b/i.test(html),'Preview must not collect credentials');
