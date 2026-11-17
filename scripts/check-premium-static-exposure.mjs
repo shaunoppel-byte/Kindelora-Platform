@@ -42,6 +42,14 @@ for(const path of protectedRoutes){
  assert((response.headers.get('Cache-Control')||'').includes('no-store'),'Protected path cacheable: '+path);
  assert(!(await response.text()).includes('PREMIUM_SECRET_SENTINEL'),'Protected path leaked bytes: '+path);
 }
+const readiness=await onRequest({
+ request:new Request('https://kindelora.pages.dev/api/plus/status'),
+ next:()=>new Response('UNEXPECTED_PUBLIC_FALLTHROUGH')
+});
+assert(readiness.status===200,'Public readiness endpoint not available');
+assert((readiness.headers.get('cache-control')||'').includes('no-store'),'Readiness response cacheable');
+const readinessData=await readiness.json();
+assert(readinessData.checkoutAvailable===false&&readinessData.membershipVerificationAvailable===false,'Readiness incorrectly enables paid checkout');
 let publicNext=false;
 const publicResponse=await onRequest({
  request:new Request('https://kindelora.pages.dev/motivational-monday.html'),
