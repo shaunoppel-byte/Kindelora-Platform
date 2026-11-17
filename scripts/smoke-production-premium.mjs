@@ -2,6 +2,7 @@
 // Read-only production smoke. Do not log secrets or trigger payments.
 const base='https://kindelora.pages.dev';
 const checks=[
+ {path:'/',status:200,checkoutDisabled:true},
  {path:'/motivational-monday.html',status:200,bodyMustInclude:'currently withheld',bodyMustNotInclude:['The Difference You May Never See','heygen-speech-2.mp3']},
  {path:'/api/plus/status',status:200,bodyMustInclude:'"checkoutAvailable":false',bodyMustNotInclude:['"checkoutAvailable":true'],readinessContract:true},
  {path:'/assets/audio/heygen-speech-2.mp3',status:403},
@@ -29,6 +30,12 @@ for(const c of checks){
   if(response.status!==c.status)errors.push('expected HTTP '+c.status+', got '+response.status);
   if(c.bodyMustInclude&&!body.includes(c.bodyMustInclude))errors.push('expected public preview text absent');
   for(const secret of c.bodyMustNotInclude||[])if(body.includes(secret))errors.push('premium content marker leaked');
+  if(c.checkoutDisabled){
+   const button=body.match(/<button\\b[^>]*\\bid=["']plus-checkout-button["'][^>]*>/i);
+   if(!button)errors.push('PLUS checkout button missing from live homepage');
+   else if(!/\\sdisabled(?:\\s|>|=)/i.test(button[0]))errors.push('PLUS checkout button enabled in live homepage HTML');
+   if(!body.includes('Awaiting PayFast activation'))errors.push('Live homepage lacks pending PayFast activation notice');
+  }
   if(c.readinessContract){
    let data;
    try{data=JSON.parse(body)}catch{errors.push('PLUS readiness response is not JSON')}
