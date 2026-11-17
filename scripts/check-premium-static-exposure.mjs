@@ -19,5 +19,34 @@ assert(middleware.includes('(?:plus|premium|members)'),'Premium namespaces not d
 assert(sw.includes('(?:plus|premium|members)'),'Offline premium namespaces not denied by default');
 assert(!page.includes('play the professionally narrated recording.'),'Public preview falsely promises live audio');
 assert(page.includes('currently withheld'),'Public Monday teaser is not in fail-closed state');
+
+ // Execute the real Cloudflare Pages middleware with a mocked request.
+ // This checks response statuses and bytes, rather than merely looking for a string.
+const {onRequest}=await import('../functions/_middleware.js');
+const protectedRoutes=[
+ '/assets/audio/heygen-speech-2.mp3',
+ '/api/plus/weekly',
+ '/plus/archive',
+ '/premium/downloads/reflection.pdf',
+ '/members/favourites',
+ '/assets/plus/private.mp3',
+ '/assets/premium/secret.json'
+];
+for(const path of protectedRoutes){
+ let nextCalled=false;
+ const response=await onRequest({
+   request:new Request('https://kindelora.pages.dev'+path),
+   next:()=>{nextCalled=true;return new Response('PREMIUM_SECRET_SENTINEL')}
+ });
+ assert(!nextCalled&&response.status===403,'Protected path served: '+path);
+ assert((response.headers.get('Cache-Control')||'').includes('no-store'),'Protected path cacheable: '+path);
+ assert(!(await response.text()).includes('PREMIUM_SECRET_SENTINEL'),'Protected path leaked bytes: '+path);
+}
+let publicNext=false;
+const publicResponse=await onRequest({
+ request:new Request('https://kindelora.pages.dev/motivational-monday.html'),
+ next:()=>{publicNext=true;return new Response('PUBLIC_SANITISED_PREVIEW')}
+});
+assert(publicNext&&publicResponse.status===200,'Public sanitised Monday preview is blocked');
 console.log(JSON.stringify({check:'known premium static exposure',passed:failures.length===0,failures},null,2));
 if(failures.length)process.exitCode=1;
