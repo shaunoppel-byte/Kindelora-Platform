@@ -21,12 +21,16 @@ const checks=[
  {path:'/plus/archive',status:403,headers:{'X-Membership-Status':'active','X-Subscription-Tier':'paid'}},
  {path:'/api/plus/weekly',status:403,headers:{'Cookie':'session=forged; membership=verified','X-PayFast-Status':'COMPLETE'}},
  {path:'/api/plus/weekly?week=latest',status:403,headers:{'Authorization':'Bearer forged-test-token','X-PayFast-Status':'COMPLETE'}},
- {path:'/assets/plus/private.mp3',status:403,headers:{'Range':'bytes=0-1023','Cookie':'kindelora_plus=true'}}
+ {path:'/assets/plus/private.mp3',status:403,headers:{'Range':'bytes=0-1023','Cookie':'kindelora_plus=true'}},
+ {path:'/api/plus/weekly',status:403,method:'HEAD'},
+ {path:'/api/plus/weekly',status:403,method:'POST',headers:{'Content-Type':'application/json'}},
+ {path:'/members/favourites',status:403,method:'OPTIONS'},
+ {path:'/plus/archive',status:403,method:'HEAD'}
 ];
 let failures=0;
 for(const c of checks){
  try{
-  const response=await fetch(base+c.path,{redirect:c.status===200?'follow':'manual',headers:{'Cache-Control':'no-cache',...(c.headers||{})},signal:AbortSignal.timeout(12000)});
+  const response=await fetch(base+c.path,{method:c.method||'GET',redirect:c.status===200?'follow':'manual',headers:{'Cache-Control':'no-cache',...(c.headers||{})},signal:AbortSignal.timeout(12000)});
   const body=await response.text();
   if(c.status===200&&new URL(response.url).origin!==new URL(base).origin)throw Error('Public preview redirected off origin');
   const errors=[];
@@ -54,8 +58,8 @@ for(const c of checks){
   if(c.status===403&&(!response.headers.get('cache-control')?.includes('no-store')))errors.push('protected response missing no-store');
   if(c.status===403&&body.includes('<!doctype html>'))errors.push('protected route returned HTML');
   if(errors.length)failures++;
-  console.log(JSON.stringify({path:c.path,status:response.status,passed:!errors.length,errors}));
- }catch(error){failures++;console.log(JSON.stringify({path:c.path,passed:false,error:String(error)}));}
+  console.log(JSON.stringify({method:c.method||'GET',path:c.path,status:response.status,passed:!errors.length,errors}));
+ }catch(error){failures++;console.log(JSON.stringify({method:c.method||'GET',path:c.path,passed:false,error:String(error)}));}
 }
 console.log(JSON.stringify({target:base,checks:checks.length,failures,passed:failures===0}));
 if(failures)process.exitCode=1;
