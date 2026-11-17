@@ -10,6 +10,7 @@ on:
       - 'message-catalogue.json'
       - 'sw.js'
       - 'functions/**'
+      - 'docs/PLUS-LAUNCH-EVIDENCE-MATRIX.md'
       - 'assets/audio/**'
       - 'scripts/check-premium-static-exposure.mjs'
       - '.github/workflows/premium-static-security.yml'
