@@ -10,6 +10,8 @@ export async function onRequest(context) {
   const rawPath = new URL(context.request.url).pathname;
   // Decode once for matching: percent-encoded path segments must not bypass
   // PLUS namespace protection. Fail closed on malformed path encodings.
+  // Reject ambiguous encoded separators and double encoding before any routing.
+  if (/%(?:2f|5c|25)/i.test(rawPath)) return new Response('Invalid request path.', {status: 400, headers: {'Cache-Control':'no-store, private'}});
   let path;
   try { path = decodeURIComponent(rawPath); }
   catch { return new Response('Invalid request path.', {status: 400, headers: {'Cache-Control':'no-store, private'}}); }
