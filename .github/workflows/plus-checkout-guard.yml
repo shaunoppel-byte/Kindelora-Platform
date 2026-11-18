@@ -16,6 +16,8 @@ on:
       - 'functions/_lib/plus-entitlement.js'
       - 'functions/_lib/plus-auth-jwt.js'
       - 'scripts/test-plus-auth-jwt.mjs'
+      - 'functions/_lib/plus-authorization.js'
+      - 'scripts/test-plus-authorization.mjs'
       - 'migrations/0001_plus_persistence.sql'
       - 'scripts/fixtures/simulated-commerce.mjs'
       - '.github/workflows/plus-checkout-guard.yml'
@@ -39,3 +41,4 @@ jobs:
       - run: python3 scripts/test-plus-d1-entitlements.py
       - run: node scripts/test-plus-server-entitlement.mjs
       - run: node scripts/test-plus-auth-jwt.mjs
+      - run: node scripts/test-plus-authorization.mjs
