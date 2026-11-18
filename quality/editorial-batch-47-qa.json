@@ -1,0 +1,33 @@
+{
+  "date": "2026-11-18",
+  "batch": 47,
+  "commit": "917dd0b5a5593c98741c582b20a3b45380d55dbd",
+  "messages": 20,
+  "scope": {
+    "publicCatalogue": 3000,
+    "editorialBatch45": 24,
+    "editorialBatch46": 20,
+    "totalCompared": 3044,
+    "excluded": "Other historical editorial batches and repository-wide content files were not fully compared"
+  },
+  "checks": {
+    "ids": "20 distinct IDs with batch prefix",
+    "exactNormalizedDuplicates": 0,
+    "advisoryTokenDiceMax": 0.5882352941176471,
+    "advisoryThreshold": 0.68,
+    "flaggedPairs": 0,
+    "lengthCharacters": {
+      "min": 152,
+      "max": 186
+    },
+    "themes": 20
+  },
+  "limitations": [
+    "Not a complete historical corpus audit",
+    "No independent human editorial approval",
+    "No local check-message-library.py or audit-message-library.py execution",
+    "No GitHub Actions CI pass established",
+    "No public catalogue or service worker changes"
+  ],
+  "release": "EDITORIAL ONLY - NO GO"
+}
