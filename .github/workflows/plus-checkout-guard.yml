@@ -7,6 +7,7 @@ on:
       - 'functions/**'
       - 'docs/PLUS-LAUNCH-EVIDENCE-MATRIX.md'
       - 'scripts/check-plus-checkout-guard.mjs'
+      - 'scripts/test-plus-payment-fail-closed.mjs'
       - '.github/workflows/plus-checkout-guard.yml'
   pull_request:
   workflow_dispatch:
@@ -21,3 +22,4 @@ jobs:
         with:
           node-version: '22'
       - run: node scripts/check-plus-checkout-guard.mjs
+      - run: node scripts/test-plus-payment-fail-closed.mjs
