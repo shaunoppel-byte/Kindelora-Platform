@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "batch": 48,
+  "editorial_note": "Original situation-specific candidates. Automated comparison covers public catalogue and batches 45-47 only; historical batches, independent editorial review and CI remain pending. Editorial-only, not approved for publication.",
+  "messages": [
+    {
+      "id": "KDL-EDITORIAL48-001",
+      "theme": "night_shift_bus",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The bus home after a night shift may be full of people starting their day. Your tiredness deserves practical care, even when the city around you is moving at another pace."
+    },
+    {
+      "id": "KDL-EDITORIAL48-002",
+      "theme": "lost_house_key",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Losing a house key can turn an ordinary evening into a costly scramble. Solve the immediate problem first; the embarrassment does not need to accompany you into tomorrow."
+    },
+    {
+      "id": "KDL-EDITORIAL48-003",
+      "theme": "wheelchair_ramp",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a building has no usable ramp, the obstacle belongs to the design, not to the person trying to enter. Asking for access is a reasonable expectation, not an inconvenience."
+    },
+    {
+      "id": "KDL-EDITORIAL48-004",
+      "theme": "first_language_form",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Filling out a form in a language you are still learning can take more energy than anyone sees. Asking someone to explain a line is a sensible way to protect your understanding."
+    },
+    {
+      "id": "KDL-EDITORIAL48-005",
+      "theme": "broken_glasses",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Broken glasses can make familiar tasks suddenly difficult. It is reasonable to rearrange your day while you work out a repair; an unexpected limitation is not a personal failing."
+    },
+    {
+      "id": "KDL-EDITORIAL48-006",
+      "theme": "missed_funeral",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Missing a funeral because travel was impossible can leave grief tangled with guilt. You may remember someone in a quieter way, at a time and place you can actually reach."
+    },
+    {
+      "id": "KDL-EDITORIAL48-007",
+      "theme": "quiet_after_houseguests",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After guests leave, a quiet house can feel like relief and sadness at once. You do not have to choose one feeling to make the other legitimate."
+    },
+    {
+      "id": "KDL-EDITORIAL48-008",
+      "theme": "unpaid_invoice",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Following up on an unpaid invoice can feel uncomfortable when you value the relationship. Clear dates and a respectful reminder can protect both your work and your dignity."
+    },
+    {
+      "id": "KDL-EDITORIAL48-009",
+      "theme": "child_changes_school",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a child changes schools, their questions may arrive in fragments over several days. Listening without rushing to make everything sound wonderful can help them feel heard."
+    },
+    {
+      "id": "KDL-EDITORIAL48-010",
+      "theme": "old_friend_new_limits",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An old friend may remember a version of you who had more time to give. You can care about that history while explaining what your life can hold now."
+    },
+    {
+      "id": "KDL-EDITORIAL48-011",
+      "theme": "garden_after_drought",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A garden after a long dry season may need careful watering rather than grand promises of recovery. There is something honest in tending what remains, one plant at a time."
+    },
+    {
+      "id": "KDL-EDITORIAL48-012",
+      "theme": "first_public_speech",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first time you speak to a room, your hands may shake even if you know your subject. A steady opening sentence is useful; perfect confidence is not an entry requirement."
+    },
+    {
+      "id": "KDL-EDITORIAL48-013",
+      "theme": "family_photo_disagreement",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Family members can remember the same photograph differently. You can hold your own account without demanding that everyone else carry an identical version of the past."
+    },
+    {
+      "id": "KDL-EDITORIAL48-014",
+      "theme": "stolen_bicycle",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A stolen bicycle is more than a missing object when it was how you reached work. The disruption is real, and asking for practical help does not make you less independent."
+    },
+    {
+      "id": "KDL-EDITORIAL48-015",
+      "theme": "temporary_housing",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Living somewhere temporary can make it difficult to settle into routines. A familiar cup, a short walk, or a regular call may offer continuity without pretending the uncertainty is easy."
+    },
+    {
+      "id": "KDL-EDITORIAL48-016",
+      "theme": "parent_aging_phone",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a parent struggles with a new phone, the lesson may take longer than expected. Patience can look like writing down three steps and letting them try without an audience."
+    },
+    {
+      "id": "KDL-EDITORIAL48-017",
+      "theme": "return_to_hobby",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Picking up a hobby after years away can be awkward, especially when you remember being better at it. The pleasure of beginning again need not depend on matching your old skill."
+    },
+    {
+      "id": "KDL-EDITORIAL48-018",
+      "theme": "unplanned_care_cost",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected care expense can change the whole month's budget. It is sensible to ask about payment options and priorities before deciding what must be postponed."
+    },
+    {
+      "id": "KDL-EDITORIAL48-019",
+      "theme": "rain_on_event",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Rain on a carefully planned celebration may bring real disappointment. The effort you put into gathering people still mattered, even if the photographs look different from the plan."
+    },
+    {
+      "id": "KDL-EDITORIAL48-020",
+      "theme": "new_manager_feedback",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Feedback from a new manager may feel harder to interpret before trust has formed. Asking for one concrete example can turn uncertainty into something you can work with."
+    },
+    {
+      "id": "KDL-EDITORIAL48-021",
+      "theme": "community_meal",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "At a community meal, sitting down among strangers can require quiet courage. You can start with a greeting, and you are allowed to leave before conversation becomes exhausting."
+    },
+    {
+      "id": "KDL-EDITORIAL48-022",
+      "theme": "pet_medication",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Giving an ageing pet medication can make an ordinary evening feel heavy. Following the care plan and making room for tenderness are both meaningful parts of showing up."
+    },
+    {
+      "id": "KDL-EDITORIAL48-023",
+      "theme": "lost_translation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a joke does not survive translation, the silence can feel longer than it is. You can laugh at the awkward moment without making your accent or language the problem."
+    },
+    {
+      "id": "KDL-EDITORIAL48-024",
+      "theme": "repaired_uniform",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A carefully mended school uniform may carry more love than anyone at the gate can see. Children deserve dignity regardless of whether their clothes are new."
+    }
+  ]
+}
