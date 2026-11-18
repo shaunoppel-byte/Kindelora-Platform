@@ -1,6 +1,7 @@
 import assert from 'node:assert/strict';import {readFileSync} from 'node:fs';
 const html=readFileSync('finance-design-preview.html','utf8');const reportingPreview=readFileSync('assets/js/finance-reporting-preview.js','utf8');const assistantPreview=readFileSync('assets/js/finance-assistant-preview.js','utf8');const analyticsPreview=readFileSync('assets/js/finance-analytics-preview.js','utf8');const js=readFileSync('assets/js/finance-design-preview.js','utf8');const middleware=readFileSync('functions/_middleware.js','utf8');
-for(const title of ['Executive overview','Invoice register','Payment register','Bank reconciliation','Access & audit','Automation & AI'])assert.ok(html.includes(title),title);
+for(const title of ['Executive overview','Payment register','Bank reconciliation','Access & audit','Automation & AI'])assert.ok(html.includes(title),title);
+assert.ok(html.includes('<section id="invoices" class="panel">') && html.includes('<h2>Invoices</h2>'),'Invoice register panel and heading');
 for(const code of ['OPE-2026-000001','KIN-2026-000001','VEL-2026-000001','KDR-2026-000001','SOL-2026-000001'])assert.ok(js.includes(code));
 assert.ok(html.includes('DESIGN PREVIEW — NOT LIVE.'));
 assert.ok(html.includes('Synthetic demonstration data'));
