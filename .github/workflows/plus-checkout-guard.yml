@@ -12,6 +12,8 @@ on:
       - 'scripts/test-plus-d1-schema.mjs'
       - 'scripts/test-plus-d1-sqlite.py'
       - 'scripts/test-plus-d1-entitlements.py'
+      - 'scripts/test-plus-server-entitlement.mjs'
+      - 'functions/_lib/plus-entitlement.js'
       - 'migrations/0001_plus_persistence.sql'
       - 'scripts/fixtures/simulated-commerce.mjs'
       - '.github/workflows/plus-checkout-guard.yml'
@@ -33,3 +35,4 @@ jobs:
       - run: node scripts/test-plus-d1-schema.mjs
       - run: python3 scripts/test-plus-d1-sqlite.py
       - run: python3 scripts/test-plus-d1-entitlements.py
+      - run: node scripts/test-plus-server-entitlement.mjs
