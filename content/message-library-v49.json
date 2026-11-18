@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "batch": 49,
+  "editorial_note": "Original situational candidates. Automated screening against public catalogue and batches 45-48 only; older batches, independent review, CI pending. Editorial-only; no publication approval.",
+  "messages": [
+    {
+      "id": "KDL-EDITORIAL49-001",
+      "theme": "missed_train_interview",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Missing the train on the way to an interview can leave you rehearsing every mistake. Once you have contacted the interviewer and found another route, you are allowed to stop putting yourself on trial."
+    },
+    {
+      "id": "KDL-EDITORIAL49-002",
+      "theme": "library_fine",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An overdue library book can feel strangely heavy when money is tight. Asking about a waiver or payment option is a practical conversation, not a measure of your character."
+    },
+    {
+      "id": "KDL-EDITORIAL49-003",
+      "theme": "hearing_aid_battery",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a hearing aid battery runs out halfway through a conversation, you may need people to repeat themselves. That request is ordinary access, not an inconvenience you must apologise for."
+    },
+    {
+      "id": "KDL-EDITORIAL49-004",
+      "theme": "shared_kitchen",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Sharing a kitchen with people whose routines differ from yours can make a small space feel crowded. A clear agreement about one shelf or one quiet hour may do more than another silent resentment."
+    },
+    {
+      "id": "KDL-EDITORIAL49-005",
+      "theme": "school_photo_absence",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If your child was absent on school-photo day, the empty space in the album may sting more than expected. Their place in the family story is not reduced to one missing picture."
+    },
+    {
+      "id": "KDL-EDITORIAL49-006",
+      "theme": "unanswered_application",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Refreshing an application portal does not make an employer respond faster, though uncertainty can make it hard to look away. You can choose a time to check again and give the intervening hours another purpose."
+    },
+    {
+      "id": "KDL-EDITORIAL49-007",
+      "theme": "broken_wheelchair_ramp",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A broken ramp can turn a simple errand into a negotiation you never planned to have. Naming the access problem clearly is reasonable; you should not have to disguise the disruption as a personal failure."
+    },
+    {
+      "id": "KDL-EDITORIAL49-008",
+      "theme": "first_holiday_separated",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first holiday after a separation can make familiar traditions feel unfamiliar. You can keep one ritual, change another, and let the day be different without declaring it ruined."
+    },
+    {
+      "id": "KDL-EDITORIAL49-009",
+      "theme": "care_home_visit",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Leaving a care-home visit while someone you love asks you to stay can be painful. The time you spent together still mattered, even when the goodbye was difficult."
+    },
+    {
+      "id": "KDL-EDITORIAL49-010",
+      "theme": "cancelled_market_stall",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When rain cancels the market where you hoped to sell your work, the lost income is real. You can be disappointed and still take stock of what is safe to store, reschedule or offer another way."
+    },
+    {
+      "id": "KDL-EDITORIAL49-011",
+      "theme": "language_pronunciation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Being corrected on a word in a language you are learning can make you want to go quiet. A pronunciation mistake is part of using the language, not proof that you should stop speaking."
+    },
+    {
+      "id": "KDL-EDITORIAL49-012",
+      "theme": "flooded_photo_box",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Finding family photographs damaged by water can feel like losing a doorway to the past. Save what you safely can, and remember that the stories attached to those faces also live in people's voices."
+    },
+    {
+      "id": "KDL-EDITORIAL49-013",
+      "theme": "shared_custody_pickup",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A late pickup during shared custody can unsettle a carefully arranged evening. It is possible to protect a child's routine while addressing the practical issue without turning the child into a messenger."
+    },
+    {
+      "id": "KDL-EDITORIAL49-014",
+      "theme": "rejected_grant",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A grant rejection may close off a plan you had already begun to imagine. Before deciding what it says about your work, check whether feedback, another deadline or a smaller next step is available."
+    },
+    {
+      "id": "KDL-EDITORIAL49-015",
+      "theme": "pet_surgery_wait",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Waiting while a pet is in surgery can make every minute feel longer. You can ask the clinic when an update is expected and let yourself care deeply without needing to predict the outcome."
+    },
+    {
+      "id": "KDL-EDITORIAL49-016",
+      "theme": "shift_swap_refusal",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a colleague cannot swap shifts, it may leave you with a problem that still needs solving. Their answer can be disappointing without becoming evidence that nobody cares about you."
+    },
+    {
+      "id": "KDL-EDITORIAL49-017",
+      "theme": "power_cut_medicine",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A power cut can create urgent worries when medication needs refrigeration. Follow the storage guidance or contact a pharmacist; taking the practical concern seriously is more useful than blaming yourself for the outage."
+    },
+    {
+      "id": "KDL-EDITORIAL49-018",
+      "theme": "moving_out_roommate",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Packing up after years with a roommate can bring relief and grief into the same room. A shared home can have mattered even when leaving is the right choice."
+    },
+    {
+      "id": "KDL-EDITORIAL49-019",
+      "theme": "unread_family_group",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A family group chat can move quickly while you are working, resting or caring for someone. Catching up later does not mean you care less about the people in it."
+    },
+    {
+      "id": "KDL-EDITORIAL49-020",
+      "theme": "repair_shop_delay",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Hearing that a repaired appliance will take another week can be exhausting when you have already rearranged daily life around its absence. Asking for a realistic timeline is fair; you do not have to make the delay sound easy."
+    }
+  ]
+}
