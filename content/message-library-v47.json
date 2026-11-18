@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "batch": 47,
+  "editorial_note": "Original candidate writing; exact-normalized and advisory token similarity checked against accessible public catalogue and batches 45/46 only. Historical corpus and independent human review incomplete. Editorial-only; no publication approval.",
+  "messages": [
+    {
+      "id": "KDL-EDITORIAL47-001",
+      "theme": "neighbour_after_storm",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After the storm, the neighbour who usually waves may be busy clearing water from their doorway. A small offer of help can be enough; you need not know the perfect thing to say."
+    },
+    {
+      "id": "KDL-EDITORIAL47-002",
+      "theme": "waiting_room_silence",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "In a waiting room, other people's quiet can make your own worry louder. You can bring a book, ask for an update, or simply sit without pretending to feel calm."
+    },
+    {
+      "id": "KDL-EDITORIAL47-003",
+      "theme": "first_payday_gap",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When your first pay cheque is smaller than you expected, the numbers may need a second look. Disappointment is understandable; asking for a breakdown is a practical next step."
+    },
+    {
+      "id": "KDL-EDITORIAL47-004",
+      "theme": "family_recipe_lost",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Losing a handwritten family recipe can feel like losing a familiar voice. The dish may change as you recreate it, while the memories around the table remain yours to tell."
+    },
+    {
+      "id": "KDL-EDITORIAL47-005",
+      "theme": "unanswered_application",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unanswered application can leave you checking your inbox more often than you want. Silence is incomplete information, not a reliable verdict on what you have to offer."
+    },
+    {
+      "id": "KDL-EDITORIAL47-006",
+      "theme": "cancelled_visit",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Cancelling a visit because you are exhausted may disappoint someone you love. A thoughtful explanation and a different date can make room for both care and limits."
+    },
+    {
+      "id": "KDL-EDITORIAL47-007",
+      "theme": "hearing_aid_adjustment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Getting used to a hearing aid may involve awkward conversations and repeated adjustments. You deserve patience while you learn what works in the places you actually live."
+    },
+    {
+      "id": "KDL-EDITORIAL47-008",
+      "theme": "late_library_book",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Returning a library book late is an inconvenience to sort out, not a character study. You can ask about the fee and bring the book back without rehearsing a speech of shame."
+    },
+    {
+      "id": "KDL-EDITORIAL47-009",
+      "theme": "new_city_groceries",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "In a new city, even finding the right grocery aisle can be tiring. Familiarity grows through ordinary errands, often before a place begins to feel like home."
+    },
+    {
+      "id": "KDL-EDITORIAL47-010",
+      "theme": "friend_in_recovery",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a friend is recovering, you may want to help without making them explain everything. Offering one specific errand gives them an easy choice and room to decline."
+    },
+    {
+      "id": "KDL-EDITORIAL47-011",
+      "theme": "school_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A difficult school meeting can leave a parent replaying every sentence. You can request the notes, ask what happens next, and remember that one meeting is not your child's whole story."
+    },
+    {
+      "id": "KDL-EDITORIAL47-012",
+      "theme": "broken_heirloom",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a treasured object breaks, being told 'it's only a thing' may miss what it carried. You can mourn the connection it represented while deciding whether repair is possible."
+    },
+    {
+      "id": "KDL-EDITORIAL47-013",
+      "theme": "work_shift_change",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A sudden change to your work shift can unsettle childcare, travel and rest all at once. Asking for the new schedule in writing is a reasonable way to regain some footing."
+    },
+    {
+      "id": "KDL-EDITORIAL47-014",
+      "theme": "public_speaking_pause",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Losing your place during a presentation can feel endless, even when the room waits only a few seconds. Looking at your notes is part of speaking, not proof that you should stop."
+    },
+    {
+      "id": "KDL-EDITORIAL47-015",
+      "theme": "different_holiday_traditions",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When two families celebrate differently, choosing one tradition need not erase the other. It may take several conversations to build a celebration that feels honest to everyone."
+    },
+    {
+      "id": "KDL-EDITORIAL47-016",
+      "theme": "pet_aging",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An older pet may move more slowly toward the door that once sent them running. There is tenderness in noticing what has changed and making their ordinary days more comfortable."
+    },
+    {
+      "id": "KDL-EDITORIAL47-017",
+      "theme": "community_event_alone",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Arriving alone at a community event can make the doorway feel like the hardest part. You can stay for ten minutes, talk to one person, or leave without treating the evening as a failure."
+    },
+    {
+      "id": "KDL-EDITORIAL47-018",
+      "theme": "repair_estimate",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A repair estimate can be more than your budget allows. Asking which work is urgent and which can wait may help you make a decision without being rushed."
+    },
+    {
+      "id": "KDL-EDITORIAL47-019",
+      "theme": "unfamiliar_form",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A complicated form can make a straightforward need feel unnecessarily difficult. You can ask someone to explain a section; needing clarity does not make your question small."
+    },
+    {
+      "id": "KDL-EDITORIAL47-020",
+      "theme": "birthday_after_loss",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first birthday after a loss may feel strange in ways you did not expect. You can mark the day quietly, share a memory, or let it pass without organising your feelings for others."
+    }
+  ]
+}
