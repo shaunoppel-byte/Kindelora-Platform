@@ -13,16 +13,16 @@
   "reportedSha256": "85b7a3a532fbaa456d882855e1f78740496384b6d9dba2cfd8da23128f72eaad",
   "sourceProvenance": "AI-generated in founder-directed ChatGPT conversation; user uploaded to repository 2026-11-18",
   "existingManifestAsset": "/assets/affirmations/editorial-receiving-help-carrying-box.svg",
-  "status": "uploaded_candidate_not_released",
+  "status": "uploaded_candidate_technical_review_partial",
   "qa": {
     "binaryExistsInRepository": true,
-    "sha256IndependentRecheck": false,
-    "visualReview": false,
+    "sha256IndependentRecheck": true,
+    "visualReview": "assistant-reviewed original local WebP: photorealistic two-person tea-sharing scene, no embedded text or watermark visible; human editorial acceptance pending",
     "perceptualDuplicateCheck": false,
     "licenseReview": false,
-    "mobileCropAndOverlay": false,
+    "mobileCropAndOverlay": "source 900x1200, upper 280px mean luminance ~26.8/255 supports light title overlay in principle; actual rendered mobile crop and contrast not verified",
     "staticCi": false,
     "liveDeployment": false
   },
-  "releaseDecision": "NO-GO until independent visual, provenance, duplicate, mobile and CI gates pass; do not alter public mapping or mark approved"
+  "releaseDecision": "NO-GO: source hash and basic visual review passed, but human acceptance, full-corpus perceptual comparison, rendered mobile overlay, dedicated CI and live deployment unverified"
 }
