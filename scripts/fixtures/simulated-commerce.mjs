@@ -33,7 +33,7 @@ export class SimulatedCommerce {
   }
   if(status==='refunded'){
    if(o.status!=='paid')return {result:'rejected_transition'};
-   o.status='refunded';this.entitlements.set(o.customer+'|'+o.business,false);
+   o.status='refunded';this.entitlements.set(o.customer+'|'+o.business,[...this.orders.values()].some(other=>other.customer===o.customer&&other.business===o.business&&other.status==='paid'));
    this.audit.push({action:'synthetic_refund',orderId});return {result:'refunded'};
   }
   if(o.status!=='pending')return {result:'rejected_transition'};
