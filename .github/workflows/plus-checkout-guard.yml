@@ -10,6 +10,7 @@ on:
       - 'scripts/test-plus-payment-fail-closed.mjs'
       - 'scripts/test-simulated-commerce.mjs'
       - 'scripts/test-plus-d1-schema.mjs'
+      - 'scripts/test-plus-d1-sqlite.py'
       - 'migrations/0001_plus_persistence.sql'
       - 'scripts/fixtures/simulated-commerce.mjs'
       - '.github/workflows/plus-checkout-guard.yml'
@@ -29,3 +30,4 @@ jobs:
       - run: node scripts/test-plus-payment-fail-closed.mjs
       - run: node scripts/test-simulated-commerce.mjs
       - run: node scripts/test-plus-d1-schema.mjs
+      - run: python3 scripts/test-plus-d1-sqlite.py
