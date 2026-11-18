@@ -57,4 +57,17 @@ assert.equal(brandEvent('brand-kin','brand-kin-refund','refunded','pay-brand-kin
 assert.equal(s.canAccess('same-person','KIN'),false);
 assert.equal(s.canAccess('same-person','VEL'),true,'KIN refund must not revoke VEL');
 assert.equal(s.getInvoice('brand-vel','another-person'),null);
+// Negative payment matrix: failed, forged amount/currency/status, and terminal states never grant membership.
+s.order({id:'negative-kin',business:'KIN',customer:'negative-customer',amount_minor:1500});
+const negative=(eventId,overrides={})=>s.event({eventId,orderId:'negative-kin',paymentId:'negative-payment',amount_minor:1500,currency:'ZAR',status:'complete',verified:true,...overrides});
+assert.equal(negative('negative-unverified',{verified:false}).result,'rejected_unverified');
+assert.equal(negative('negative-amount',{amount_minor:1499}).result,'rejected_mismatch');
+assert.equal(negative('negative-currency',{currency:'USD'}).result,'rejected_mismatch');
+assert.equal(negative('negative-status',{status:'pending'}).result,'rejected_status');
+assert.equal(s.canAccess('negative-customer','KIN'),false);
+assert.equal(s.getInvoice('negative-kin','negative-customer'),null);
+assert.equal(negative('negative-failed',{status:'failed'}).result,'failed');
+assert.equal(negative('negative-late-paid').result,'rejected_transition');
+assert.equal(s.canAccess('negative-customer','KIN'),false);
+assert.equal(s.getInvoice('negative-kin','negative-customer'),null);
 console.log('PASS: 5 brands, unique invoice prefixes, synthetic payment replay/mismatch, entitlement revocation, invoice isolation, retryable outbox, cancelled orders');
