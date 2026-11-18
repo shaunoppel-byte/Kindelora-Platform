@@ -3,6 +3,11 @@ on:
   pull_request:
   push:
     branches: [main]
+permissions:
+  contents: read
+concurrency:
+  group: kindelora-zero-cost-${{ github.event.pull_request.number || github.ref }}
+  cancel-in-progress: true
 jobs:
   zero-cost-guard:
     runs-on: ubuntu-latest
