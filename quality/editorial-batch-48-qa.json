@@ -1,0 +1,30 @@
+{
+  "date": "2026-11-18",
+  "batch": 48,
+  "editorialCommit": "b3731b23b87a61a0835834c35377a8d0ce6e9446",
+  "messages": 24,
+  "comparison": {
+    "publicCatalogue": 3000,
+    "editorialBatches45to47": 64,
+    "totalCompared": 3064,
+    "fullHistoricalCorpus": false
+  },
+  "checks": {
+    "uniqueBatchIds": 24,
+    "exactNormalizedDuplicates": 0,
+    "advisoryTokenDiceMax": 0.375,
+    "threshold": 0.68,
+    "flaggedPairs": 0,
+    "characterLengthMin": 143,
+    "characterLengthMax": 186,
+    "distinctThemes": 24
+  },
+  "limitations": [
+    "Automated comparison did not include all historical editorial batches 1-44",
+    "No independent human editorial review or signoff",
+    "Local Python editorial validators not executed in this run",
+    "No CI success or production deployment verified",
+    "No public catalogue or service worker changes"
+  ],
+  "release": "EDITORIAL ONLY - NO GO"
+}
