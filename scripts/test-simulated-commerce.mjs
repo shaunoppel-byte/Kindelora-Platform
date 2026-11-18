@@ -31,4 +31,15 @@ assert.equal(s.event({eventId:'cancel-1',orderId:'cancel',paymentId:'pc',amount_
 assert.equal(s.event({eventId:'cancel-2',orderId:'cancel',paymentId:'pc',amount_minor:999,status:'complete',verified:true}).result,'rejected_transition');
 assert.equal(s.canAccess('cancelled','KIN'),false);
 assert.equal(s.invoices.size,5);
+// Multiple orders for one customer/brand: refunding one must not revoke another paid order.
+s.order({id:'multi-a',business:'KIN',customer:'shared-customer',amount_minor:1000});
+s.order({id:'multi-b',business:'KIN',customer:'shared-customer',amount_minor:1000});
+const multi=(orderId,eventId,status)=>s.event({eventId,orderId,paymentId:'payment-'+orderId,amount_minor:1000,status,verified:true});
+assert.equal(multi('multi-a','multi-a-paid','complete').result,'paid');
+assert.equal(multi('multi-b','multi-b-paid','complete').result,'paid');
+assert.equal(s.canAccess('shared-customer','KIN'),true);
+assert.equal(multi('multi-a','multi-a-refund','refunded').result,'refunded');
+assert.equal(s.canAccess('shared-customer','KIN'),true,'one refunded order must not revoke another active paid order');
+assert.equal(multi('multi-b','multi-b-refund','refunded').result,'refunded');
+assert.equal(s.canAccess('shared-customer','KIN'),false,'last refunded order must revoke access');
 console.log('PASS: 5 brands, unique invoice prefixes, synthetic payment replay/mismatch, entitlement revocation, invoice isolation, retryable outbox, cancelled orders');
