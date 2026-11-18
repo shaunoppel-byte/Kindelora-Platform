@@ -19,15 +19,26 @@
     "sha256IndependentRecheck": true,
     "visualReview": "Actual uploaded image inspected: warm photorealistic scene of one adult offering another a steaming cup, emotionally appropriate to accepting support; no lettering or visible watermark",
     "perceptualDuplicateCheck": false,
-    "licenseReview": "AI-generated source recorded; independent commercial-use entitlement verification not completed",
-    "mobileCropAndOverlay": "Not verified on rendered website; source 900x1200 (3:4) is suitable candidate for portrait display, subject faces occupy middle third",
+    "licenseReview": "Generated in ChatGPT image generation; independent terms/provenance acceptance pending.",
+    "mobileCropAndOverlay": "Portrait 900x1200; sampled top 200px brightness 22.72/255, promising for light title text. Actual mobile rendering and WCAG contrast not yet verified.",
     "staticCi": false,
     "liveDeployment": false
   },
-  "releaseDecision": "NO-GO until visual near-duplicate scan against all 400 images, rendered mobile contrast, provenance acceptance, CI and live checks",
+  "releaseDecision": "NO-GO: no verified full-corpus visual near-duplicate scan, live mobile overlay test, provenance sign-off, dedicated CI or live deployment",
   "pagination": {
     "pageSize": 8,
     "unfilteredPage": 19,
     "verifiedFrom": "affirmation-library.js main"
+  },
+  "localFileVerification": {
+    "verifiedDate": "2026-11-18",
+    "file": "kindelora_affirmation_152_receiving_help.webp",
+    "bytes": 107778,
+    "width": 900,
+    "height": 1200,
+    "sha256": "85b7a3a532fbaa456d882855e1f78740496384b6d9dba2cfd8da23128f72eaad",
+    "meanTop200PixelBrightnessApprox": 22.72,
+    "method": "Pillow decoded WebP; SHA-256 computed from local binary; top-region RGB mean sampled at 10px intervals",
+    "note": "Local verification is not a substitute for deployed mobile rendering or full-corpus perceptual similarity checks"
   }
 }
