@@ -150,7 +150,7 @@
 {id:"affirmation-149",title:"Apologies — Intention",text:"I can acknowledge harm without hiding behind excuses.",tags:"apologies intention",image:'/assets/affirmations/149_affirmation-149_CONCEPT_ONLY.webp'},
 {id:"affirmation-150",title:"Apologies — Reflection",text:"Sincere words become stronger through changed behaviour.",tags:"apologies reflection",image:'/assets/affirmations/150_affirmation-150_CONCEPT_ONLY.webp'},
 {id:"affirmation-151",title:"Receiving Help — Intention",text:"I can accept practical support with gratitude.",tags:"receiving help intention",image:'/assets/affirmations/editorial-receiving-help-shared-umbrella.svg'},
-{id:"affirmation-152",title:"Receiving Help — Reflection",text:"Letting someone help does not make me less capable.",tags:"receiving help reflection",image:'/assets/affirmations/editorial-receiving-help-carrying-box.svg'},
+{id:"affirmation-152",title:"Receiving Help — Reflection",text:"Letting someone help does not make me less capable.",tags:"receiving help reflection",image:'/assets/affirmations/kindelora_affirmation_152_receiving_help.webp'},
 {id:"affirmation-153",title:"Giving Help — Intention",text:"I can ask what support would actually be useful.",tags:"giving help intention",image:'/assets/affirmations/editorial-giving-help-practical-list.svg'},
 {id:"affirmation-154",title:"Giving Help — Reflection",text:"My presence may matter more than a perfect answer.",tags:"giving help reflection",image:'/assets/affirmations/editorial-giving-help-bench-company.svg'},
 {id:"affirmation-155",title:"Hope — Intention",text:"I can make room for one encouraging possibility.",tags:"hope intention",image:'/assets/affirmations/editorial-hope-sunlit-seed-envelope.svg'},
