@@ -1,0 +1,29 @@
+{
+  "batch": 49,
+  "date": "2026-11-18",
+  "editorialCommit": "b9f02dc52a7b1abe9d37d3613720253ac44044de",
+  "messageCount": 20,
+  "uniqueThemes": 20,
+  "comparisonScope": {
+    "message-catalogue.json": 3000,
+    "content/message-library-v45.json": 24,
+    "content/message-library-v46.json": 20,
+    "content/message-library-v47.json": 20,
+    "content/message-library-v48.json": 24
+  },
+  "normalizedExactDuplicates": 0,
+  "maximumAdvisoryTokenDiceSimilarity": 0.6060606060606061,
+  "lengthRangeCharacters": [
+    156,
+    225
+  ],
+  "method": "Casefold, Unicode alphanumeric normalized exact-text comparison; advisory token Dice similarity against 3088 existing messages, with common stopwords excluded.",
+  "limits": [
+    "Editorial batches 1-44 not compared",
+    "No independent human editorial approval",
+    "No local validator or GitHub Actions run verified",
+    "No artwork binary integration or production deployment"
+  ],
+  "publication": "BLOCKED_EDITORIAL_ONLY",
+  "rollback": "Revert batch 49 editorial commit; public catalogue untouched."
+}
