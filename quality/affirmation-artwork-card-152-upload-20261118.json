@@ -17,12 +17,17 @@
   "qa": {
     "binaryExistsInRepository": true,
     "sha256IndependentRecheck": true,
-    "visualReview": "assistant-reviewed original local WebP: photorealistic two-person tea-sharing scene, no embedded text or watermark visible; human editorial acceptance pending",
+    "visualReview": "Actual uploaded image inspected: warm photorealistic scene of one adult offering another a steaming cup, emotionally appropriate to accepting support; no lettering or visible watermark",
     "perceptualDuplicateCheck": false,
-    "licenseReview": false,
-    "mobileCropAndOverlay": "source 900x1200, upper 280px mean luminance ~26.8/255 supports light title overlay in principle; actual rendered mobile crop and contrast not verified",
+    "licenseReview": "AI-generated source recorded; independent commercial-use entitlement verification not completed",
+    "mobileCropAndOverlay": "Not verified on rendered website; source 900x1200 (3:4) is suitable candidate for portrait display, subject faces occupy middle third",
     "staticCi": false,
     "liveDeployment": false
   },
-  "releaseDecision": "NO-GO: source hash and basic visual review passed, but human acceptance, full-corpus perceptual comparison, rendered mobile overlay, dedicated CI and live deployment unverified"
+  "releaseDecision": "NO-GO until visual near-duplicate scan against all 400 images, rendered mobile contrast, provenance acceptance, CI and live checks",
+  "pagination": {
+    "pageSize": 8,
+    "unfilteredPage": 19,
+    "verifiedFrom": "affirmation-library.js main"
+  }
 }
