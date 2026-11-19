@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {normalizedMemberEmail,newVerificationToken,verificationTokenHash,verificationTokenEligible} from '../functions/_lib/member-email-verification.js';
+assert.equal(normalizedMemberEmail(' Person@Example.COM '),'person@example.com');
+for(const bad of [null,'','not-email','a@b','a'.repeat(65)+'@example.com'])assert.equal(normalizedMemberEmail(bad),null);
+const token=newVerificationToken();assert.match(token,/^[a-f0-9]{64}$/);assert.notEqual(newVerificationToken(),token);
+const pepper='x'.repeat(40);const hash=await verificationTokenHash(token,pepper);assert.match(hash,/^[a-f0-9]{64}$/);assert.notEqual(hash,token);assert.notEqual(hash,await verificationTokenHash(token,'y'.repeat(40)));
+await assert.rejects(verificationTokenHash('bad',pepper),/Invalid token/);await assert.rejects(verificationTokenHash(token,'short'),/not configured/);
+const base={email:'person@example.com',requestedEmail:'PERSON@EXAMPLE.COM',expiresAt:'2026-11-20T00:00:00Z',consumedAt:null,now:'2026-11-19T00:00:00Z'};
+assert.equal(verificationTokenEligible(base),true);
+for(const bad of [{requestedEmail:'attacker@example.com'},{expiresAt:'2026-11-19T00:00:00Z'},{consumedAt:'2026-11-19T00:00:00Z'},{expiresAt:'invalid'}])assert.equal(verificationTokenEligible({...base,...bad}),false);
+console.log('PASS: registration verification token randomness, hashing, identity binding, expiry and replay checks');
