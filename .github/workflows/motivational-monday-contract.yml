@@ -14,3 +14,5 @@ jobs:
       - uses: actions/checkout@v4
       - name: Validate Monday static-site contract
         run: python3 scripts/check_motivational_monday.py
+      - name: Verify website and PWA private Monday reader contract
+        run: node scripts/check-monday-plus-reader-contract.mjs
