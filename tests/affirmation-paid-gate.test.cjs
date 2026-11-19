@@ -10,9 +10,10 @@ test('private artwork routes fail closed for guests and unpaid members',()=>{
  for(const code of [route,library]){
   assert.ok(code.includes('if(!ready(env))'));
   assert.ok(code.includes('if(!user)'));
-  assert.ok(code.includes('if(!row)'));
-  assert.ok(code.includes("s.status='active'"));
-  assert.ok(code.includes('email_verified_at IS NOT NULL'));
+  assert.ok(code.includes('if(!access.entitled)'));
+  assert.ok(code.includes('verifiedIdentitySubject:user.id'));
+  assert.ok(code.includes('access.reason===\"unavailable\"'));
+  assert.ok(code.includes('verifyPlusEntitlement'));
  }
  assert.ok(route.includes('PRIVATE_AFFIRMATION_ARTWORK.get'));
  assert.ok(route.includes('private, no-store'));
