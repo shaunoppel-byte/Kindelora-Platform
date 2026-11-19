@@ -68,6 +68,8 @@ assert(page.includes('Checking secure PLUS access')&&page.includes('/monday-plus
 const {onRequest}=await import('../functions/_middleware.js');
 const protectedRoutes=[
  '/assets/audio/heygen-speech-2.mp3',
+ '/assets/audio/motivational-monday-2026-11-16-approved.mp3',
+ '/assets/audio/motivational-monday-joanna.mp3',
  '/api/plus/weekly',
  '/plus/archive',
  '/premium/downloads/reflection.pdf',
