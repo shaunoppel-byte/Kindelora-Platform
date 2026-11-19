@@ -19,7 +19,7 @@ assert(middleware.includes('(?:plus|premium|members)'),'PLUS API namespace lacks
 for (const [name, source] of [['middleware',middleware],['status fallback',statusFallback]]) {
   assert(/checkoutAvailable:\s*false/.test(source),`${name} does not explicitly disable checkout`);
   assert(/membershipVerificationAvailable:\s*false/.test(source),`${name} does not explicitly disable membership verification`);
-  assert(/status:\s*'pending_merchant_verification'/.test(source),`${name} lacks pending merchant verification state`);
+  assert(/status:\s*'pending_secure_payment_integration'/.test(source),`${name} lacks pending merchant verification state`);
   assert(/Cache-Control['"]?\s*:\s*['"]no-store, private/.test(source),`${name} does not prohibit caching PLUS readiness`);
 }
 assert(/path\s*===\s*'\/api\/plus\/status'/.test(middleware),'Public PLUS status exception missing from middleware');

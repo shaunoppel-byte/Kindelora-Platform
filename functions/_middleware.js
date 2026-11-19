@@ -20,13 +20,13 @@ export async function onRequest(context) {
   // a potentially protected path through to the static asset handler.
   if (/%(?:2f|5c|25|00)/i.test(path)) return new Response('Invalid request path.', {status: 400, headers: {'Cache-Control':'no-store, private'}});
   // Public, non-sensitive readiness endpoint. Never exposes member data or secrets.
-  // This is intentionally independent of PayFast until server-side verification exists.
+  // Merchant activation was confirmed by the founder on 2026-11-19. Checkout remains disabled until server-side payment and entitlement verification exist.
   if (path === '/api/plus/status') {
     return new Response(JSON.stringify({
       checkoutAvailable: false,
       membershipVerificationAvailable: false,
       paymentProvider: 'PayFast',
-      status: 'pending_merchant_verification'
+      status: 'pending_secure_payment_integration'
     }), {
       status: 200,
       headers: {
