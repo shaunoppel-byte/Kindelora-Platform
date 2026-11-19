@@ -7,7 +7,7 @@ function database(result, fail=false) {
     assert.match(sql,/JOIN plus_customers c ON c.id = s.customer_id/);
     assert.match(sql,/c.identity_subject = \?1/);
     assert.match(sql,/s.brand = 'KIN'/);
-    assert.match(sql,/s.status IN \\('active','cancelled'\\)/);
+    assert.ok(sql.includes("s.status IN ('active','cancelled')"));
     assert.match(sql,/s.current_period_end > \?2/);
     return {bind(subject,now) {
       assert.equal(subject,'trusted-server-subject');
