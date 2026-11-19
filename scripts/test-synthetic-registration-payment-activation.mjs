@@ -1,0 +1,38 @@
+// OFFLINE ONLY: synthetic successful account-to-payment-to-access lifecycle.
+// A fixture's verified:true is NOT PayFast verification and must never be used in production.
+import assert from 'node:assert/strict';
+import {SimulatedCommerce} from './fixtures/simulated-commerce.mjs';
+const commerce=new SimulatedCommerce();
+const customer='verified-synthetic-account-001';
+const monthly={id:'synthetic-kin-monthly-001',business:'KIN',customer,amount_minor:899,currency:'ZAR'};
+commerce.order(monthly);
+assert.equal(commerce.canAccess(customer,'KIN'),false,'account creation alone must not activate PLUS');
+assert.equal(commerce.canAccess(customer,'VEL'),false);
+const wrong=commerce.event({eventId:'forged-amount',orderId:monthly.id,paymentId:'synthetic-pay-001',amount_minor:898,currency:'ZAR',status:'complete',verified:true});
+assert.equal(wrong.result,'rejected_mismatch');
+assert.equal(commerce.canAccess(customer,'KIN'),false);
+const unverified=commerce.event({eventId:'unverified',orderId:monthly.id,paymentId:'synthetic-pay-001',amount_minor:899,currency:'ZAR',status:'complete',verified:false});
+assert.equal(unverified.result,'rejected_unverified');
+assert.equal(commerce.canAccess(customer,'KIN'),false);
+const paid={eventId:'synthetic-confirmation',orderId:monthly.id,paymentId:'synthetic-pay-001',amount_minor:899,currency:'ZAR',status:'complete',verified:true};
+const result=commerce.event(paid);
+assert.equal(result.result,'paid');
+assert.equal(commerce.canAccess(customer,'KIN'),true,'synthetic verified payment should activate only matching brand');
+assert.equal(commerce.canAccess(customer,'VEL'),false,'KIN purchase must not unlock VELORA');
+assert.equal(commerce.canAccess('another-customer','KIN'),false,'another account must not inherit PLUS');
+assert.equal(commerce.getInvoice(monthly.id,'another-customer'),null);
+assert.equal(commerce.getInvoice(monthly.id,customer).watermark,'SYNTHETIC TEST — NOT AN INVOICE');
+assert.equal(commerce.event(paid).result,'duplicate_event','webhook replay must be idempotent');
+assert.equal(commerce.deliver(result.invoice).result,'retry_pending');
+assert.equal(commerce.deliver(result.invoice,{success:true}).result,'sent');
+assert.equal(commerce.deliver(result.invoice,{success:true}).result,'already_sent');
+assert.equal(commerce.event({eventId:'refund-wrong-reference',orderId:monthly.id,paymentId:'other-brand-payment',amount_minor:899,currency:'ZAR',status:'refunded',verified:true}).result,'rejected_payment_reference');
+assert.equal(commerce.canAccess(customer,'KIN'),true);
+assert.equal(commerce.event({eventId:'refund-valid',orderId:monthly.id,paymentId:'synthetic-pay-001',amount_minor:899,currency:'ZAR',status:'refunded',verified:true}).result,'refunded');
+assert.equal(commerce.canAccess(customer,'KIN'),false,'refunded last order must revoke access');
+const next={id:'synthetic-kin-renewal-002',business:'KIN',customer,amount_minor:899,currency:'ZAR'};
+commerce.order(next);
+assert.equal(commerce.canAccess(customer,'KIN'),false,'unpaid renewal must not reactivate');
+assert.equal(commerce.event({eventId:'renewal-paid',orderId:next.id,paymentId:'synthetic-pay-002',amount_minor:899,currency:'ZAR',status:'complete',verified:true}).result,'paid');
+assert.equal(commerce.canAccess(customer,'KIN'),true);
+console.log('PASS: synthetic account -> pending -> verified payment -> access -> receipt retry -> refund revocation -> paid renewal, with replay and cross-account/brand isolation');
