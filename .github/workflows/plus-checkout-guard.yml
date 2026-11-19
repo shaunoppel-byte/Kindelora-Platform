@@ -9,6 +9,7 @@ on:
       - 'scripts/check-plus-checkout-guard.mjs'
       - 'scripts/test-plus-payment-fail-closed.mjs'
       - 'scripts/test-simulated-commerce.mjs'
+      - 'scripts/test-registration-payment-journey.mjs'
       - 'scripts/test-plus-d1-schema.mjs'
       - 'scripts/test-plus-d1-sqlite.py'
       - 'scripts/test-plus-d1-entitlements.py'
@@ -37,6 +38,7 @@ jobs:
       - run: node scripts/check-plus-checkout-guard.mjs
       - run: node scripts/test-plus-payment-fail-closed.mjs
       - run: node scripts/test-simulated-commerce.mjs
+      - run: node scripts/test-registration-payment-journey.mjs
       - run: node scripts/test-plus-d1-schema.mjs
       - run: python3 scripts/test-plus-d1-sqlite.py
       - run: python3 scripts/test-plus-d1-entitlements.py
