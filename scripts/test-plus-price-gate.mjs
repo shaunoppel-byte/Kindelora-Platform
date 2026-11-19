@@ -1,0 +1,18 @@
+import assert from 'node:assert/strict';
+import {PLANS,resolvePayfastCharge} from '../functions/_lib/plus-price-gate.js';
+assert.equal(PLANS.monthly.displayAmountMinor,899);
+assert.equal(PLANS.annual.displayAmountMinor,8999);
+assert.equal(resolvePayfastCharge({planId:'lifetime'}).reason,'invalid_plan');
+assert.equal(resolvePayfastCharge({planId:'monthly'}).reason,'release_disabled');
+const env={PAYFAST_CHECKOUT_ENABLED:'true',PAYFAST_RECURRING_VERIFIED:'true'};
+assert.equal(resolvePayfastCharge({planId:'monthly',env}).reason,'billing_currency_unverified');
+env.PAYFAST_BILLING_CURRENCY='ZAR';
+assert.equal(resolvePayfastCharge({planId:'monthly',env}).reason,'provider_currency_price_unapproved');
+env.PAYFAST_MONTHLY_AMOUNT_MINOR='0';
+assert.equal(resolvePayfastCharge({planId:'monthly',env}).reason,'provider_currency_price_unapproved');
+env.PAYFAST_MONTHLY_AMOUNT_MINOR='9999';
+assert.equal(resolvePayfastCharge({planId:'monthly',env}).reason,'price_not_approved');
+env.PAYFAST_PRICE_APPROVED='true';
+assert.deepEqual(resolvePayfastCharge({planId:'monthly',env}),{ready:true,planId:'monthly',currency:'ZAR',amountMinor:9999});
+assert.equal(resolvePayfastCharge({planId:'annual',env}).reason,'provider_currency_price_unapproved');
+console.log('PASS: founder USD display pricing and fail-closed PayFast currency/charge approval');
