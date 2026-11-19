@@ -11,15 +11,40 @@ logout.addEventListener('click',async()=>{try{const r=await request('/api/member
 let registrationWidget=null;
 const registerForm=by('register'),registerButton=by('registration-submit');
 const turnstileBox=by('registration-turnstile');
+const registrationStatus=by('registration-status');
+const registrationMessage=t=>{if(registrationStatus)registrationStatus.textContent=t;};
 async function initRegistration(){
+ registrationMessage('Checking registration availability…');
  try{
   const config=await request('/api/member/registration-config');
   const siteKey=config.data?.turnstileSiteKey;
-  if(config.code!==200||config.data?.available!==true||typeof siteKey!=='string'||!siteKey)return;
-  const script=document.createElement('script');script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';script.async=true;script.defer=true;
-  script.onload=()=>{if(!window.turnstile)return;try{registrationWidget=window.turnstile.render(turnstileBox,{sitekey:siteKey,theme:'auto'});registerButton.disabled=false;registerButton.textContent='Create free account';registerButton.removeAttribute('title');}catch{say('Security verification could not load. Registration is unavailable.')}};
-  script.onerror=()=>say('Security verification could not load. Registration is unavailable.');document.head.appendChild(script);
- }catch{/* Fail closed on network or server errors. */}
+  if(config.code!==200||config.data?.available!==true||typeof siteKey!=='string'||!siteKey){
+   registrationMessage('Registration is not enabled by the membership service yet.');
+   return;
+  }
+  registrationMessage('Registration is enabled. Loading security verification…');
+  const script=document.createElement('script');
+  script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+  script.async=true;
+  let completed=false;
+  const fail=message=>{if(completed)return;completed=true;registrationMessage(message);};
+  const timeout=setTimeout(()=>fail('Security verification did not load. Please disable browser content blocking for this page and reload.'),12000);
+  script.onload=()=>{
+   clearTimeout(timeout);
+   if(completed)return;
+   if(!window.turnstile){fail('Security verification is unavailable in this browser.');return;}
+   try{
+    registrationWidget=window.turnstile.render(turnstileBox,{sitekey:siteKey,theme:'auto'});
+    completed=true;
+    registerButton.disabled=false;
+    registerButton.textContent='Create free account';
+    registerButton.removeAttribute('title');
+    registrationMessage('Registration is open. Complete the security check, then create your account.');
+   }catch{fail('Security verification could not initialize. Check browser privacy or content-blocking settings.');}
+  };
+  script.onerror=()=>{clearTimeout(timeout);fail('Security verification script was blocked or could not load. Check browser privacy or content-blocking settings.');};
+  document.head.appendChild(script);
+ }catch{registrationMessage('Unable to check registration availability. Please refresh the page.');}
 }
 registerForm.addEventListener('submit',async e=>{
  e.preventDefault();if(registerButton.disabled||registrationWidget===null||!window.turnstile)return;
