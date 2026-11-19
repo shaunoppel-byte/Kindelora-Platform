@@ -1,5 +1,5 @@
 #!/usr/bin/env node
-// P0: checkout must remain disabled until PayFast merchant approval and
+// P0: checkout must remain disabled until PayFast merchant activation is followed by
 // server-verified subscription entitlements are released and tested.
 import fs from 'node:fs';
 const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
@@ -19,11 +19,11 @@ assert(middleware.includes('(?:plus|premium|members)'),'PLUS API namespace lacks
 for (const [name, source] of [['middleware',middleware],['status fallback',statusFallback]]) {
   assert(/checkoutAvailable:\s*false/.test(source),`${name} does not explicitly disable checkout`);
   assert(/membershipVerificationAvailable:\s*false/.test(source),`${name} does not explicitly disable membership verification`);
-  assert(/status:\s*'pending_secure_payment_integration'/.test(source),`${name} lacks pending merchant verification state`);
+  assert(/status:\s*'pending_secure_payment_integration'/.test(source),`${name} lacks pending secure integration state`);
   assert(/Cache-Control['"]?\s*:\s*['"]no-store, private/.test(source),`${name} does not prohibit caching PLUS readiness`);
 }
 assert(/path\s*===\s*'\/api\/plus\/status'/.test(middleware),'Public PLUS status exception missing from middleware');
-assert(html.includes('Awaiting PayFast activation'),'Checkout availability messaging missing');
+assert(html.includes('Awaiting secure payment integration'),'Checkout availability messaging missing');
 assert(html.includes('$8.99')&&html.includes('$89.99'),'Founder-approved USD prices missing or changed without release review');
 console.log(JSON.stringify({check:'PLUS payment release guard',passed:failures.length===0,failures},null,2));
 if(failures.length)process.exitCode=1;

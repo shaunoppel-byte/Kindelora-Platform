@@ -21,7 +21,7 @@ assert.deepEqual(state,{
   checkoutAvailable:false,
   membershipVerificationAvailable:false,
   paymentProvider:'PayFast',
-  status:'pending_merchant_verification'
+  status:'pending_secure_payment_integration'
 });
 for(const path of [
  '/plus','/api/plus/checkout','/premium','/members/profile',
