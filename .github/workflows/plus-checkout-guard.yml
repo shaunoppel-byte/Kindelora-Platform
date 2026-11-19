@@ -8,6 +8,8 @@ on:
       - 'functions/_lib/payfast-checkout-signing.js'
       - 'functions/_lib/plus-price-gate.js'
       - 'scripts/test-plus-price-gate.mjs'
+      - 'functions/_lib/plus-subscription-policy.js'
+      - 'scripts/test-plus-subscription-policy.mjs'
       - 'scripts/test-payfast-checkout-signing.mjs'
       - 'scripts/test-plus-account-ui-contract.mjs'
       - 'app.js'
@@ -49,6 +51,7 @@ jobs:
       - run: node scripts/test-plus-account-ui-contract.mjs
       - run: node scripts/test-payfast-checkout-signing.mjs
       - run: node scripts/test-plus-price-gate.mjs
+      - run: node scripts/test-plus-subscription-policy.mjs
       - run: node scripts/test-plus-payment-fail-closed.mjs
       - run: node scripts/test-simulated-commerce.mjs
       - run: node scripts/test-registration-payment-journey.mjs
