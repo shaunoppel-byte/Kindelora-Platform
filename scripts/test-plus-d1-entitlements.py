@@ -36,7 +36,8 @@ subscription("bob-past-due","bob","past_due","2026-12-01T00:00:00Z")
 subscription("charlie-expired","charlie","active","2026-11-18T00:00:00Z")
 now="2026-11-18T00:00:00Z"
 assert entitled("alice",now)
-assert entitled("bob",now), "cancelled subscription retains access until paid-through end"\nfor owner in ("charlie","unknown","",None):
+assert entitled("bob",now), "cancelled subscription retains access until paid-through end"
+for owner in ("charlie","unknown","",None):
     assert not entitled(owner,now), owner
 assert not entitled("alice",None)
 assert not entitled("alice","2026-12-01T00:00:00Z"), "end time must be exclusive"
