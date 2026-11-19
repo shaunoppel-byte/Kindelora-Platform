@@ -1,0 +1,30 @@
+name: Public registration security contract
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'functions/api/member/registration-request.js'
+      - 'functions/api/member/verify-email.js'
+      - 'functions/_lib/member-verification-delivery.js'
+      - 'plus-account.html'
+      - 'migrations/0002_member_verified_email.sql'
+      - 'scripts/test-public-registration-security-contract.mjs'
+      - '.github/workflows/public-registration-security.yml'
+  pull_request:
+    paths:
+      - 'functions/api/member/registration-request.js'
+      - 'functions/api/member/verify-email.js'
+      - 'functions/_lib/member-verification-delivery.js'
+      - 'plus-account.html'
+      - 'migrations/0002_member_verified_email.sql'
+      - 'scripts/test-public-registration-security-contract.mjs'
+      - '.github/workflows/public-registration-security.yml'
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/test-public-registration-security-contract.mjs
