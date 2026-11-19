@@ -6,7 +6,7 @@ export const random=()=>Array.from(crypto.getRandomValues(new Uint8Array(32)),x=
 export const tokenFrom=req=>(req.headers.get("cookie")||"").split(";").map(x=>x.trim()).find(x=>x.startsWith("kindelora_session="))?.slice(18)||"";
 export const originOK=req=>req.headers.get("origin")===new URL(req.url).origin;
 export const cookie=token=>"kindelora_session="+token+"; Path=/api; Secure; HttpOnly; SameSite=Strict; Max-Age=604800";
-export const clearCookie="kindelora_session=; Path=/api/member; Secure; HttpOnly; SameSite=Strict; Max-Age=0";
+export const clearCookie="kindelora_session=; Path=/api; Secure; HttpOnly; SameSite=Strict; Max-Age=0";
 export async function member(req,env){
  const token=tokenFrom(req);
  if(!/^[a-f0-9]{64}$/.test(token))return null;
