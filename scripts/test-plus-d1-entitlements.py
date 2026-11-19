@@ -17,7 +17,7 @@ def subscription(id, owner, status, end):
                   VALUES (?,?,?,?,?)""", (id,owner,"KIN",status,end))
 
 def entitled(owner, at):
-    # Fail closed: only a server-resolved customer ID, active state and unexpired
+    # Fail closed: only a server-resolved customer ID, active or paid-through cancelled state and unexpired
     # subscription qualify. The caller must authenticate identity before this query.
     if not owner or not at:
         return False
@@ -36,7 +36,7 @@ subscription("bob-past-due","bob","past_due","2026-12-01T00:00:00Z")
 subscription("charlie-expired","charlie","active","2026-11-18T00:00:00Z")
 now="2026-11-18T00:00:00Z"
 assert entitled("alice",now)
-for owner in ("bob","charlie","unknown","",None):
+assert entitled("bob",now), "cancelled subscription retains access until paid-through end"\nfor owner in ("charlie","unknown","",None):
     assert not entitled(owner,now), owner
 assert not entitled("alice",None)
 assert not entitled("alice","2026-12-01T00:00:00Z"), "end time must be exclusive"
@@ -48,4 +48,4 @@ subscription("alice-renewed","alice","active","2027-01-01T00:00:00Z")
 assert entitled("alice",now)
 db.execute("UPDATE plus_subscriptions SET status='expired' WHERE id='alice-renewed'")
 assert not entitled("alice",now)
-print("PASS: SQLite PLUS entitlement isolates customers, rejects expired/cancelled/past-due, and respects renewal/revocation")
+print("PASS: SQLite PLUS entitlement isolates customers, rejects expired/past-due and honours paid-through cancelled, and respects renewal/revocation")
