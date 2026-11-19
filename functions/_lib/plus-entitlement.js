@@ -16,7 +16,7 @@ export async function verifyPlusEntitlement({db, verifiedIdentitySubject, now = 
         SELECT 1 FROM plus_subscriptions s
         JOIN plus_customers c ON c.id = s.customer_id
         WHERE c.identity_subject = ?1 AND s.brand = 'KIN'
-          AND s.status = 'active' AND s.current_period_end > ?2
+          AND s.status IN ('active','cancelled') AND s.current_period_end > ?2
       ) AS entitled
     `).bind(verifiedIdentitySubject, now).first();
     return row?.entitled === 1 ? {entitled:true, reason:'active'} :
