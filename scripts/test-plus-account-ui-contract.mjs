@@ -9,8 +9,12 @@ for(const endpoint of ['/api/member/login','/api/member/me','/api/member/entitle
 assert.match(html,/\$8\.99 USD/);assert.match(html,/\$89\.99 USD/);
 assert.doesNotMatch(html,/Invitation code|invitation-only|Create invited account/i);
 assert.match(html,/Public registration coming soon/);
+assert.match(html,/id="registration-turnstile"/);
+assert.match(html,/id="registration-submit"/);
+assert.match(js,/\/api\/member\/registration-config/);
+assert.match(js,/\/api\/member\/registration-request/);
 assert.match(html,/email verification/i);
-assert.match(html,/<button type="submit" disabled title="Email verification is being configured">Public registration coming soon<\/button>/);
+assert.match(html,/<button id="registration-submit" type="submit" disabled title="Email verification is being configured">Public registration coming soon<\/button>/);
 assert.doesNotMatch(js,/\/api\/member\/register/);
 assert.match(html,/Checkout coming soon/);
 assert.equal((html.match(/disabled>Checkout coming soon<\/button>/g)||[]).length,2,'both checkout buttons must be disabled');
