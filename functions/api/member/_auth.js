@@ -5,7 +5,7 @@ export const hash=async text=>Array.from(new Uint8Array(await crypto.subtle.dige
 export const random=()=>Array.from(crypto.getRandomValues(new Uint8Array(32)),x=>x.toString(16).padStart(2,"0")).join("");
 export const tokenFrom=req=>(req.headers.get("cookie")||"").split(";").map(x=>x.trim()).find(x=>x.startsWith("kindelora_session="))?.slice(18)||"";
 export const originOK=req=>req.headers.get("origin")===new URL(req.url).origin;
-export const cookie=token=>"kindelora_session="+token+"; Path=/api/member; Secure; HttpOnly; SameSite=Strict; Max-Age=604800";
+export const cookie=token=>"kindelora_session="+token+"; Path=/api; Secure; HttpOnly; SameSite=Strict; Max-Age=604800";
 export const clearCookie="kindelora_session=; Path=/api/member; Secure; HttpOnly; SameSite=Strict; Max-Age=0";
 export async function member(req,env){
  const token=tokenFrom(req);

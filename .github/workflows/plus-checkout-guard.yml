@@ -11,6 +11,7 @@ on:
       - 'scripts/test-simulated-commerce.mjs'
       - 'scripts/test-registration-payment-journey.mjs'
       - 'scripts/test-member-plus-subject-binding.mjs'
+      - 'scripts/test-member-payment-session-cookie.mjs'
       - 'scripts/test-synthetic-registration-payment-activation.mjs'
       - 'scripts/test-plus-d1-schema.mjs'
       - 'scripts/test-plus-d1-sqlite.py'
@@ -42,6 +43,7 @@ jobs:
       - run: node scripts/test-simulated-commerce.mjs
       - run: node scripts/test-registration-payment-journey.mjs
       - run: node scripts/test-member-plus-subject-binding.mjs
+      - run: node scripts/test-member-payment-session-cookie.mjs
       - run: node scripts/test-synthetic-registration-payment-activation.mjs
       - run: node scripts/test-plus-d1-schema.mjs
       - run: python3 scripts/test-plus-d1-sqlite.py
