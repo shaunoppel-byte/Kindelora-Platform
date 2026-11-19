@@ -10,7 +10,7 @@ for(const [name,src] of [['request',request],['verify',verify],['delivery',deliv
 for(const term of ['originOK(request)','turnstile(env','member_registration_limits','verificationTokenHash','newVerificationToken','expiresAt','sendRegistrationVerification','member_email_verifications'])assert.ok(request.includes(term),'missing registration protection '+term);
 assert.match(request,/900000/,'verification expiry must be 15 minutes');
 assert.match(request,/310000/,'password PBKDF2 work factor');
-assert.match(request,/existing\)return generic\(\)/,'existing account must not be enumerated');
+assert.match(request,/if\(existing\)\{audit\('existing_account'\);return generic\(\);\}/,'existing account must not be enumerated');
 assert.match(verify,/env\.DB\.batch/,'activation must use D1 batch');
 assert.match(verify,/consumed_at IS NULL/,'replay must be denied');
 assert.match(verify,/expires_at>/,'expired tokens must be denied');
