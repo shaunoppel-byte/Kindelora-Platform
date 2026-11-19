@@ -21,6 +21,10 @@ assert "PBKDF2" in Path("functions/api/member/login.js").read_text()
 assert "locked_until" in Path("functions/api/member/login.js").read_text()
 assert "DELETE FROM member_sessions" in Path("functions/api/member/logout.js").read_text()
 entitlement=Path("functions/api/member/entitlement.js").read_text()
-assert "subscriptions" in entitlement and "status='active'" in entitlement
-assert "current_period_end>?" in entitlement and "email_verified_at IS NOT NULL" in entitlement
-print("PASS: registration invitation, login hashing and lockout, logout revocation, paid entitlement static gates")
+assert "verifyPlusEntitlement" in entitlement and "verifiedIdentitySubject:user.id" in entitlement
+assert 'verified.reason==="unavailable"' in entitlement and "status" not in entitlement
+plus=Path("functions/_lib/plus-entitlement.js").read_text()
+assert "plus_subscriptions" in plus and "s.status = 'active'" in plus
+assert "s.current_period_end > ?2" in plus and "c.identity_subject = ?1" in plus
+assert "s.brand = 'KIN'" in plus and "entitled:false" in plus
+print("PASS: invitation registration, login hashing/lockout, logout revocation and verified-ID subscription gates")
