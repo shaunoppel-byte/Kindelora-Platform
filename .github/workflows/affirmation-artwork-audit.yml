@@ -29,6 +29,27 @@ jobs:
         run: node scripts/audit-affirmation-artwork.mjs
         env:
           ARTWORK_AUDIT_REPORT_PATH: affirmation-artwork-audit-report.json
+      - name: Summarise premium artwork blockers
+        if: always()
+        run: |
+          node --input-type=module <<'NODE'
+          import fs from 'node:fs';
+          const path='affirmation-artwork-audit-report.json';
+          if(!fs.existsSync(path))process.exit(0);
+          const r=JSON.parse(fs.readFileSync(path,'utf8'));
+          const rows=[
+            ['Catalogue',r.affirmations],
+            ['Unique images',r.uniqueUnderlyingImages],
+            ['Duplicate assignments',r.duplicateAssignments],
+            ['Invalid local assets',r.invalidLocalAssets],
+            ['SVGs requiring independent review',r.svgRequiringVisualReview],
+            ['Below 900 x 1200 pixels',r.belowPremiumPortraitMinimum],
+            ['Outside 0.70-0.80 aspect ratio',r.wrongPortraitAspect],
+            ['Unapproved or unprovenanced',r.unapprovedOrUnprovenanced]
+          ];
+          const markdown=['## KINDELORA artwork remediation','', '| Check | Count |','|---|---:|',...rows.map(([k,v])=>'| '+k+' | '+v+' |'),'','These categories overlap. Quality failures remain release-blocking; this summary does not approve artwork.',''];
+          fs.appendFileSync(process.env.GITHUB_STEP_SUMMARY,markdown.join('\\n'));
+          NODE
       - name: Preserve actionable artwork audit for remediation
         if: always()
         uses: actions/upload-artifact@v4
