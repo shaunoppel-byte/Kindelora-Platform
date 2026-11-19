@@ -12,6 +12,8 @@ let registrationWidget=null;
 const registerForm=by('register'),registerButton=by('registration-submit');
 const turnstileBox=by('registration-turnstile');
 const registrationStatus=by('registration-status');
+const registrationResult=by('registration-result');
+const registrationFeedback=t=>{if(registrationResult)registrationResult.textContent=t;};
 const registrationMessage=t=>{if(registrationStatus)registrationStatus.textContent=t;};
 async function initRegistration(){
  registrationMessage('Checking registration availability…');
@@ -49,13 +51,13 @@ async function initRegistration(){
 registerForm.addEventListener('submit',async e=>{
  e.preventDefault();if(registerButton.disabled||registrationWidget===null||!window.turnstile)return;
  const turnstileToken=window.turnstile.getResponse(registrationWidget);
- if(!turnstileToken){say('Please complete the security check before registering.');return;}
- registerButton.disabled=true;say('Requesting secure email verification…');
+ if(!turnstileToken){registrationFeedback('Please complete the security check before registering.');return;}
+ registerButton.disabled=true;registrationFeedback('Submitting your registration request…');
  try{const r=await request('/api/member/registration-request',{email:by('register-email').value.trim(),password:by('register-password').value,turnstileToken});
-  if(r.code===202){say('If registration is available, check your email for a verification link.');by('register-password').value='';}
-  else if(r.code===503){say('Registration is temporarily unavailable. Please try again later.');}
-  else if(r.code===403){say('Security check was unsuccessful. Please try again.');}
-  else{say('Registration could not be completed. Please check your details and try again.');}
+  if(r.code===202){registrationFeedback('Request received. If your email is eligible, a verification link will arrive shortly. Please check your Inbox and Spam folders.');by('register-password').value='';}
+  else if(r.code===503){registrationFeedback('Registration could not be completed: the registration or email service is temporarily unavailable. Please do not keep resubmitting.');}
+  else if(r.code===403){registrationFeedback('Security check was unsuccessful. Please refresh the challenge before trying again.');}
+  else{registrationFeedback('Registration was not completed (HTTP '+r.code+'). Please check your details.');}
  }catch{say('Registration service could not be reached.');}
  finally{window.turnstile.reset(registrationWidget);registerButton.disabled=false;}
 });
