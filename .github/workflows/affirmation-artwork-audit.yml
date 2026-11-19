@@ -27,3 +27,12 @@ jobs:
           node-version: '22'
       - name: Validate 400 unique artwork assignments and local file existence
         run: node scripts/audit-affirmation-artwork.mjs
+        env:
+          ARTWORK_AUDIT_REPORT_PATH: affirmation-artwork-audit-report.json
+      - name: Preserve actionable artwork audit for remediation
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: affirmation-artwork-audit-report
+          path: affirmation-artwork-audit-report.json
+          if-no-files-found: warn
