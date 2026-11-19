@@ -1,6 +1,15 @@
 name: Production registration read-only smoke
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/smoke-production-registration-readonly.py'
+      - '.github/workflows/production-registration-readonly-smoke.yml'
+  pull_request:
+    paths:
+      - 'scripts/smoke-production-registration-readonly.py'
+      - '.github/workflows/production-registration-readonly-smoke.yml'
 jobs:
   read-only-registration-smoke:
     runs-on: ubuntu-latest
