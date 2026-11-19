@@ -18,3 +18,5 @@ jobs:
         run: node scripts/check-monday-plus-reader-contract.mjs
       - name: Exercise actual protected Monday endpoint against guest and subscriber mocks
         run: node scripts/monday-private-access-smoke.mjs
+      - name: Verify NO-GO blocks private R2 publication payload
+        run: node scripts/test-monday-private-r2-preparation.mjs
