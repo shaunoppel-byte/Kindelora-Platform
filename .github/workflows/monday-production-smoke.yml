@@ -1,6 +1,8 @@
 name: Monday production readiness smoke (read only)
 on:
   workflow_dispatch:
+  schedule:
+    - cron: "20 5 * * *" # Daily read-only production security check; UTC
 permissions:
   contents: read
 jobs:
