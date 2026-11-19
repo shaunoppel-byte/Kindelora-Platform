@@ -36,7 +36,14 @@ export async function onRequestPost({request,env}){
   const passwordHash=Array.from(new Uint8Array(derived),b=>b.toString(16).padStart(2,'0')).join('');
   const token=newVerificationToken(),tokenHash=await verificationTokenHash(token,env.MEMBER_AUTH_PEPPER),expiresAt=new Date(now.getTime()+900000).toISOString();
   await env.DB.prepare('INSERT INTO member_email_verifications(token_hash,email_normalized,password_salt,password_hash,expires_at) VALUES(?,?,?,?,?)').bind(tokenHash,email,salt,passwordHash,expiresAt).run();
-  await sendRegistrationVerification(env,{email,token,origin:new URL(request.url).origin});
+  // A provider failure must not leave an unusable pending registration behind.
+  // Delete only this request's token; never delete another concurrent request's token.
+  try {
+   await sendRegistrationVerification(env,{email,token,origin:new URL(request.url).origin});
+  } catch {
+   await env.DB.prepare('DELETE FROM member_email_verifications WHERE token_hash=? AND consumed_at IS NULL').bind(tokenHash).run();
+   return reply({error:'Verification email delivery is temporarily unavailable'},503);
+  }
   return generic();
  }catch{return reply({error:'Registration temporarily unavailable'},503)}
 }
