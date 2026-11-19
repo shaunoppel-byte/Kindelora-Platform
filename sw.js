@@ -8,7 +8,7 @@ const classifyPath=raw=>{
   let path;
   try { path=decodeURIComponent(raw); } catch { return 'invalid'; }
   if (/%(?:2f|5c|25)/i.test(path)) return 'invalid';
-  if (/^\/assets\/audio\/heygen-speech-2\.mp3$/i.test(path)||/^\/(?:api\/)?(?:plus|premium|members)(?:\/|$)/i.test(path)||/^\/assets\/(?:plus|premium|members)(?:\/|$)/i.test(path)) return 'protected';
+  if (/^\/assets\/audio\/(?:heygen-speech-2|motivational-monday-2026-11-16-approved|motivational-monday-joanna)\.mp3$/i.test(path)||/^\/(?:api\/)?(?:plus|premium|members)(?:\/|$)/i.test(path)||/^\/assets\/(?:plus|premium|members)(?:\/|$)/i.test(path)) return 'protected';
   return 'public';
 };
 self.addEventListener("install",event=>event.waitUntil(caches.open(CACHE).then(c=>c.addAll(ASSETS)).then(()=>self.skipWaiting())));
