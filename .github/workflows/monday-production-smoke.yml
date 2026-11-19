@@ -1,6 +1,14 @@
 name: Monday production readiness smoke (read only)
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'motivational-monday.html'
+      - 'monday-plus-reader.js'
+      - 'functions/api/member/monday/**'
+      - 'scripts/monday-production-smoke.mjs'
+      - '.github/workflows/monday-production-smoke.yml'
   schedule:
     - cron: "20 5 * * *" # Daily read-only production security check; UTC
 permissions:
