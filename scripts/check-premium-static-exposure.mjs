@@ -61,7 +61,7 @@ assert(middleware.includes('(?:plus|premium|members)'),'Premium namespaces not d
 assert(sw.includes('(?:plus|premium|members)'),'Offline premium namespaces not denied by default');
 assert(sw.includes('url.pathname==="/api/plus/status"'),'Service worker blocks public PLUS readiness endpoint');
 assert(!page.includes('play the professionally narrated recording.'),'Public preview falsely promises live audio');
-assert(page.includes('currently withheld'),'Public Monday teaser is not in fail-closed state');
+assert(page.includes('Checking secure PLUS access')&&page.includes('/monday-plus-reader.js')&&!page.includes('src="/assets/audio/'),'Public Monday reader must remain server-gated without public audio source');
 
  // Execute the real Cloudflare Pages middleware with a mocked request.
  // This checks response statuses and bytes, rather than merely looking for a string.
