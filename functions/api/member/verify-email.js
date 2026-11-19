@@ -1,4 +1,4 @@
-import {reply,ready,hash,originOK} from './_auth.js';
+import {reply,ready,originOK} from './_auth.js';
 import {verificationTokenHash} from '../../_lib/member-email-verification.js';
 // Atomic one-time verification. No public signup enabled by this endpoint.
 export async function onRequestPost({request,env}){
@@ -15,8 +15,8 @@ export async function onRequestPost({request,env}){
  // D1 batch is transactional; rollback prevents partial activation.
  try{
   const results=await env.DB.batch([
-   env.DB.prepare("INSERT INTO members(id,email_normalized,password_salt,password_hash,email_verified_at) SELECT ?,v.email_normalized,v.password_salt,v.password_hash,? FROM member_email_verifications v WHERE v.token_hash=? AND v.consumed_at IS NULL AND v.expires_at>? AND NOT EXISTS (SELECT 1 FROM members m WHERE m.email_normalized=v.email_normalized)").bind(crypto.randomUUID(),now,tokenHash,now),
-   env.DB.prepare("UPDATE member_email_verifications SET consumed_at=? WHERE token_hash=? AND consumed_at IS NULL AND expires_at>?").bind(now,tokenHash,now)
+   env.DB.prepare("UPDATE member_email_verifications SET consumed_at=? WHERE token_hash=? AND consumed_at IS NULL AND expires_at>? AND NOT EXISTS (SELECT 1 FROM members WHERE email_normalized=member_email_verifications.email_normalized)").bind(now,tokenHash,now),
+   env.DB.prepare("INSERT INTO members(id,email_normalized,password_salt,password_hash,email_verified_at) SELECT ?,v.email_normalized,v.password_salt,v.password_hash,? FROM member_email_verifications v WHERE v.token_hash=? AND v.consumed_at=? AND NOT EXISTS (SELECT 1 FROM members m WHERE m.email_normalized=v.email_normalized)").bind(crypto.randomUUID(),now,tokenHash,now)
   ]);
   if(results?.[0]?.meta?.changes!==1||results?.[1]?.meta?.changes!==1)return reply({error:'Invalid or expired verification link'},409);
  }catch{return reply({error:'Verification unavailable or already completed'},409)}
