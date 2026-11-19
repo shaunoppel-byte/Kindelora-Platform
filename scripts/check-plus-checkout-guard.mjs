@@ -24,6 +24,6 @@ for (const [name, source] of [['middleware',middleware],['status fallback',statu
 }
 assert(/path\s*===\s*'\/api\/plus\/status'/.test(middleware),'Public PLUS status exception missing from middleware');
 assert(html.includes('Awaiting PayFast activation'),'Checkout availability messaging missing');
-assert(html.includes('$8.99')&&html.includes('$80.99'),'Founder-approved USD prices missing or changed without release review');
+assert(html.includes('$8.99')&&html.includes('$89.99'),'Founder-approved USD prices missing or changed without release review');
 console.log(JSON.stringify({check:'PLUS payment release guard',passed:failures.length===0,failures},null,2));
 if(failures.length)process.exitCode=1;
