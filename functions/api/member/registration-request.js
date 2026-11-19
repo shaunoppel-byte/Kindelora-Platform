@@ -33,11 +33,14 @@ export async function onRequestPost({request,env}){
   if(attempts>3){audit('rate_limit_exceeded');return generic();}
   const existing=await env.DB.prepare('SELECT id FROM members WHERE email_normalized=?').bind(email).first();
   if(existing){audit('existing_account');return generic();}
+  audit('password_hash_started');
   const salt=random(),keyMaterial=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveBits']);
   const derived=await crypto.subtle.deriveBits({name:'PBKDF2',salt:new TextEncoder().encode(salt),iterations:310000,hash:'SHA-256'},keyMaterial,256);
   const passwordHash=Array.from(new Uint8Array(derived),b=>b.toString(16).padStart(2,'0')).join('');
+  audit('password_hash_completed');
   const token=newVerificationToken(),tokenHash=await verificationTokenHash(token,env.MEMBER_AUTH_PEPPER),expiresAt=new Date(now.getTime()+900000).toISOString();
   await env.DB.prepare('INSERT INTO member_email_verifications(token_hash,email_normalized,password_salt,password_hash,expires_at) VALUES(?,?,?,?,?)').bind(tokenHash,email,salt,passwordHash,expiresAt).run();
+  audit('verification_record_created');
   // A provider failure must not leave an unusable pending registration behind.
   // Delete only this request's token; never delete another concurrent request's token.
   try {
