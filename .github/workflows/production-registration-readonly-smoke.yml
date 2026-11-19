@@ -1,0 +1,13 @@
+name: Production registration read-only smoke
+on:
+  workflow_dispatch:
+jobs:
+  read-only-registration-smoke:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - name: Check deployed registration contracts without writes or secrets
+        run: python3 scripts/smoke-production-registration-readonly.py
