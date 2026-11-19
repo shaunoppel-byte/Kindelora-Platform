@@ -141,7 +141,7 @@ assert(JSON.stringify(fallbackData)===JSON.stringify({
  checkoutAvailable:false,
  membershipVerificationAvailable:false,
  paymentProvider:'PayFast',
- status:'pending_merchant_verification'
+ status:'pending_secure_payment_integration'
 }),'PLUS status fallback contract differs from middleware');
 const readiness=await onRequest({
  request:new Request('https://kindelora.pages.dev/api/plus/status'),
