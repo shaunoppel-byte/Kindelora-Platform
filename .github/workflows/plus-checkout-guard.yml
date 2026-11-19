@@ -51,6 +51,7 @@ jobs:
       - run: node scripts/test-plus-account-ui-contract.mjs
       - run: node scripts/test-payfast-checkout-signing.mjs
       - run: node scripts/test-plus-price-gate.mjs
+      - run: node scripts/test-plus-itn-order-match.mjs
       - run: node scripts/test-plus-subscription-policy.mjs
       - run: node scripts/test-plus-payment-fail-closed.mjs
       - run: node scripts/test-simulated-commerce.mjs
