@@ -1,0 +1,27 @@
+name: KINDELORA PLUS production guest smoke
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '22 7 * * *'
+  push:
+    branches: [main]
+    paths:
+      - 'plus-account.html'
+      - 'plus-account.js'
+      - 'functions/api/plus/**'
+      - 'functions/api/member/**'
+      - 'scripts/plus-account-production-smoke.mjs'
+      - '.github/workflows/plus-account-production-smoke.yml'
+permissions:
+  contents: read
+jobs:
+  read-only-guest-smoke:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Probe deployed account screens and fail-closed payment routes
+        run: node scripts/plus-account-production-smoke.mjs
