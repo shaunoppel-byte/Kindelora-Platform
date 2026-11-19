@@ -411,34 +411,50 @@ function wrapCardText(ctx,text,maxWidth){const words=text.split(/\s+/),lines=[];
 async function downloadAffirmation(item){
  const image=new Image();image.decoding='async';image.src=item.image;
  try{await image.decode()}catch(e){throw Error('Artwork could not load')}
- const canvas=document.createElement('canvas');canvas.width=1080;canvas.height=1350;
+ if(!image.naturalWidth||!image.naturalHeight)throw Error('Artwork has no usable dimensions');
+ // Render at twice the original export resolution; preserve all original editorial copy.
+ const W=1080,H=1350,exportScale=2;
+ const canvas=document.createElement('canvas');canvas.width=W*exportScale;canvas.height=H*exportScale;
  const c=canvas.getContext('2d');if(!c)throw Error('Canvas unavailable');
- const scale=Math.max(canvas.width/image.naturalWidth,canvas.height/image.naturalHeight);
+ c.scale(exportScale,exportScale);c.imageSmoothingEnabled=true;c.imageSmoothingQuality='high';
+ const scale=Math.max(W/image.naturalWidth,H/image.naturalHeight);
  const dw=image.naturalWidth*scale,dh=image.naturalHeight*scale;
- c.drawImage(image,(1080-dw)/2,(1350-dh)/2,dw,dh);
- const shade=c.createLinearGradient(0,0,0,1350);
- shade.addColorStop(0,'rgba(21,7,31,.72)');shade.addColorStop(.27,'rgba(21,7,31,.16)');
- shade.addColorStop(.49,'rgba(21,7,31,.36)');shade.addColorStop(.73,'rgba(21,7,31,.82)');
- shade.addColorStop(1,'rgba(16,5,24,.96)');c.fillStyle=shade;c.fillRect(0,0,1080,1350);
+ c.drawImage(image,(W-dw)/2,(H-dh)/2,dw,dh);
+ // Keep scenery visible while providing local contrast behind the writing.
+ const shade=c.createLinearGradient(0,0,0,H);
+ shade.addColorStop(0,'rgba(21,7,31,.55)');shade.addColorStop(.25,'rgba(21,7,31,.08)');
+ shade.addColorStop(.45,'rgba(21,7,31,.18)');shade.addColorStop(.62,'rgba(21,7,31,.53)');
+ shade.addColorStop(.83,'rgba(21,7,31,.72)');shade.addColorStop(1,'rgba(16,5,24,.85)');
+ c.fillStyle=shade;c.fillRect(0,0,W,H);
  c.strokeStyle='#f4d08e';c.lineWidth=3;c.strokeRect(44,44,992,1262);
- c.strokeStyle='rgba(255,225,174,.58)';c.lineWidth=1;c.strokeRect(60,60,960,1230);
- c.textAlign='center';c.shadowColor='rgba(12,3,20,.8)';c.shadowBlur=14;
+ c.strokeStyle='rgba(255,225,174,.65)';c.lineWidth=1;c.strokeRect(60,60,960,1230);
+ c.textAlign='center';c.textBaseline='alphabetic';c.shadowColor='rgba(12,3,20,.85)';c.shadowBlur=12;
  c.fillStyle='#f9dda8';c.font='bold 34px Arial,sans-serif';c.fillText('K I N D E L O R A',540,156);
  c.font='bold 19px Arial,sans-serif';c.fillText('A F F I R M A T I O N S',540,210);
- c.font='italic 49px Georgia,serif';c.fillStyle='#fff0d7';
- const lines=wrapCardText(c,item.text,860);const lineHeight=72;
- let y=880-(lines.length-1)*lineHeight/2;
- if(lines.length>7){c.font='italic 39px Georgia,serif';y=850-(lines.length-1)*59/2}
- for(const line of lines){c.fillText(line,540,y);y+=lines.length>7?59:lineHeight}
- c.strokeStyle='#f4d08e';c.beginPath();c.moveTo(330,1100);c.lineTo(750,1100);c.stroke();
- c.fillStyle='#f9dda8';c.font='37px Georgia,serif';c.fillText(item.title,540,1170);
+ // Fit longer affirmations without clipping or intruding into the footer.
+ const maxTextWidth=850,top=650,bottom=1015;
+ let lines=[],fontSize=49,lineHeight=69;
+ while(fontSize>=29){
+   c.font='italic '+fontSize+'px Georgia,serif';
+   lines=wrapCardText(c,item.text,maxTextWidth);
+   lineHeight=Math.round(fontSize*1.42);
+   if(lines.length*lineHeight<=bottom-top)break;
+   fontSize-=2;
+ }
+ if(lines.length*lineHeight>bottom-top)throw Error('Affirmation is too long for a legible export');
+ c.fillStyle='#fff4e5';c.font='italic '+fontSize+'px Georgia,serif';
+ let y=(top+bottom)/2-(lines.length-1)*lineHeight/2;
+ for(const line of lines){c.fillText(line,540,y);y+=lineHeight}
+ c.shadowBlur=6;c.strokeStyle='#f4d08e';c.beginPath();c.moveTo(330,1100);c.lineTo(750,1100);c.stroke();
+ c.fillStyle='#f9dda8';c.font='37px Georgia,serif';c.fillText(item.title,540,1170,880);
  c.fillStyle='#f1dce9';c.font='23px Arial,sans-serif';c.fillText('Small moments. Brighter days.',540,1232);
  const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));
  if(!blob)throw Error('Card export failed');
  const url=URL.createObjectURL(blob),a=document.createElement('a');a.href=url;a.download='kindelora-'+item.id+'-affirmation.png';
  document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),30000);
- $('download-status').textContent='Your artwork-backed affirmation card is ready.';
+ $('download-status').textContent='Your high-resolution 2160 × 2700 affirmation card is ready.';
 }
+
 $('download-card').addEventListener('click',async()=>{if(!active)return;$('download-status').textContent='Preparing your KINDELORA card…';try{await downloadAffirmation(active)}catch(e){$('download-status').textContent='Artwork could not be prepared. Please retry when online.'}});
 
 function updateFav(){$('favourite').textContent=saved.includes(active?.id)?'♥ Saved to favourites':'♡ Save to favourites'}
