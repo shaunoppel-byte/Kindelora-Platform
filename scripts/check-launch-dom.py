@@ -35,6 +35,6 @@ if "prefers-reduced-motion:reduce" not in html:raise SystemExit("Reduced motion 
 if "scroll-margin-top" not in html:raise SystemExit("Sticky header anchor offset missing")
 print("Validated offline assets, policy links and accessibility CSS")
 
-if not all(x in html for x in ("$6.99","$69.99","16.6%","plus-monthly-choice","plus-annual-choice")):raise SystemExit("KINDELORA Plus price display missing or outdated")
+if not all(x in html for x in ("$8.99","$89.99","17%","plus-monthly-choice","plus-annual-choice")):raise SystemExit("KINDELORA Plus price display missing or outdated")
 if "No payment is taken." not in html:raise SystemExit("Plus prelaunch disclaimer missing")
-print("Verified proposed Plus monthly and annual pricing and checkout disclaimer")
+print("Verified founder-approved Plus monthly and annual pricing and checkout disclaimer")
