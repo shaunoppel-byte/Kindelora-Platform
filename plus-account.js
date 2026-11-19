@@ -6,6 +6,35 @@ const request=async(path,body)=>{const options={credentials:'same-origin',cache:
 async function refresh(){try{const r=await request('/api/member/me');if(r.code===200&&r.data.authenticated){account.textContent='Signed in as '+r.data.member.email;logout.hidden=false;const e=await request('/api/member/entitlement');entitlement.textContent=e.code===200&&e.data.plus===true?'Verified PLUS membership active.':'PLUS membership is not active or cannot be verified.';}else{logout.hidden=true;account.textContent=r.code===503?'Account service is not configured yet.':'You are not signed in.';entitlement.textContent='PLUS access has not been verified.';}}catch{account.textContent='Account service is temporarily unavailable.';entitlement.textContent='PLUS access has not been verified.';logout.hidden=true;}}
 by('login').addEventListener('submit',async e=>{e.preventDefault();const b=e.currentTarget.querySelector('button');b.disabled=true;say('Checking sign-in…');try{const r=await request('/api/member/login',{email:by('login-email').value.trim(),password:by('login-password').value});say(r.code===200?'Signed in successfully.':r.code===503?'Secure sign-in is not available yet.':r.code===429?'Too many attempts. Please try again later.':'Sign-in unsuccessful. Please check your details.');if(r.code===200){by('login-password').value='';await refresh()}}catch{say('Sign-in service could not be reached.')}finally{b.disabled=false}});
 logout.addEventListener('click',async()=>{try{const r=await request('/api/member/logout',{});say(r.code===200?'Signed out.':'Sign-out could not be confirmed.')}catch{say('Sign-out could not be confirmed.')}await refresh()});
+// Registration remains disabled until server readiness is explicitly confirmed.
+// The public site key is safe to expose; never expose the Turnstile secret.
+let registrationWidget=null;
+const registerForm=by('register'),registerButton=by('registration-submit');
+const turnstileBox=by('registration-turnstile');
+async function initRegistration(){
+ try{
+  const config=await request('/api/member/registration-config');
+  const siteKey=config.data?.turnstileSiteKey;
+  if(config.code!==200||config.data?.available!==true||typeof siteKey!=='string'||!siteKey)return;
+  const script=document.createElement('script');script.src='https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';script.async=true;script.defer=true;
+  script.onload=()=>{if(!window.turnstile)return;try{registrationWidget=window.turnstile.render(turnstileBox,{sitekey:siteKey,theme:'auto'});registerButton.disabled=false;registerButton.textContent='Create free account';registerButton.removeAttribute('title');}catch{say('Security verification could not load. Registration is unavailable.')}};
+  script.onerror=()=>say('Security verification could not load. Registration is unavailable.');document.head.appendChild(script);
+ }catch{/* Fail closed on network or server errors. */}
+}
+registerForm.addEventListener('submit',async e=>{
+ e.preventDefault();if(registerButton.disabled||registrationWidget===null||!window.turnstile)return;
+ const turnstileToken=window.turnstile.getResponse(registrationWidget);
+ if(!turnstileToken){say('Please complete the security check before registering.');return;}
+ registerButton.disabled=true;say('Requesting secure email verification…');
+ try{const r=await request('/api/member/registration-request',{email:by('register-email').value.trim(),password:by('register-password').value,turnstileToken});
+  if(r.code===202){say('If registration is available, check your email for a verification link.');by('register-password').value='';}
+  else if(r.code===503){say('Registration is temporarily unavailable. Please try again later.');}
+  else if(r.code===403){say('Security check was unsuccessful. Please try again.');}
+  else{say('Registration could not be completed. Please check your details and try again.');}
+ }catch{say('Registration service could not be reached.');}
+ finally{window.turnstile.reset(registrationWidget);registerButton.disabled=false;}
+});
+initRegistration();
 // Verification links require an explicit click; mail scanners must not consume tokens.
 // Remove the token from the visible URL before any asynchronous network request.
 const params=new URLSearchParams(location.search),verificationToken=params.get('verify');
