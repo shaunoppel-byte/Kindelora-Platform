@@ -1,0 +1,25 @@
+import assert from 'node:assert/strict';
+import {webcrypto} from 'node:crypto';
+import {onRequestGet} from '../functions/api/member/entitlement.js';
+if(!globalThis.crypto)globalThis.crypto=webcrypto;
+const pepper='integration-test-pepper-'.repeat(3);
+const token='a'.repeat(64);
+const hash=async v=>Array.from(new Uint8Array(await crypto.subtle.digest('SHA-256',new TextEncoder().encode(v))),b=>b.toString(16).padStart(2,'0')).join('');
+const expected=await hash(token+pepper);
+const request=new Request('https://kindelora.pages.dev/api/member/entitlement',{headers:{cookie:'kindelora_session='+token}});
+const call=async(db)=>onRequestGet({request,env:{DB:db,MEMBER_AUTH_ENABLED:'true',MEMBER_AUTH_PEPPER:pepper}});
+let subject=null;
+const db={prepare(sql){
+ if(sql.includes('FROM member_sessions'))return {bind:(h)=>({first:async()=>h===expected?{id:'verified-member-123',email_normalized:'member@example.test',email_verified_at:'2026-01-01'}:null})};
+ if(sql.includes('FROM plus_subscriptions'))return {bind:(id,now)=>({first:async()=>{subject=id;return {entitled:id==='verified-member-123'&&now>'2026-01-01'?1:0}}})};
+ throw Error('Unexpected query');
+}};
+const ok=await call(db);
+assert.equal(ok.status,200);
+assert.deepEqual(await ok.json(),{authenticated:true,plus:true});
+assert.equal(subject,'verified-member-123','entitlement must use authenticated member ID, not email');
+const unavailable=await call({prepare(sql){if(sql.includes('FROM member_sessions'))return db.prepare(sql);throw Error('D1 unavailable')}});
+assert.equal(unavailable.status,503,'database failure must never silently claim an active or inactive subscription');
+const missing=await onRequestGet({request:new Request('https://kindelora.pages.dev/api/member/entitlement'),env:{DB:db,MEMBER_AUTH_ENABLED:'true',MEMBER_AUTH_PEPPER:pepper}});
+assert.equal(missing.status,401);
+console.log('PASS: authenticated member ID determines PLUS entitlement; no email identity fallback, missing session denied, D1 errors fail closed');
