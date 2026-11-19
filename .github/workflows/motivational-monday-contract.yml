@@ -16,3 +16,5 @@ jobs:
         run: python3 scripts/check_motivational_monday.py
       - name: Verify website and PWA private Monday reader contract
         run: node scripts/check-monday-plus-reader-contract.mjs
+      - name: Exercise actual protected Monday endpoint against guest and subscriber mocks
+        run: node scripts/monday-private-access-smoke.mjs
