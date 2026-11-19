@@ -1,7 +1,7 @@
 (()=>{'use strict';const items=[
 {id:'confidence',title:'Confidence',text:'Trust your voice. Every small step you take is evidence of your courage.',tags:'self belief courage bravery',image:'/assets/affirmations/01_confidence.webp'},
 {id:'calm',title:'Calm & Peace',text:'You are allowed to slow down. Peace can begin with a single breath.',tags:'rest meditation quiet breathe',image:'/assets/affirmations/02_calm.webp'},
-{id:'strength',title:'Strength',text:'Your strength is not measured by never falling, but by continuing with kindness.',tags:'resilience perseverance',image:'/assets/affirmations/03_strength.webp'},
+{id:'strength',title:'Strength',text:'Your strength is not measured by never falling, but by continuing with kindness.',tags:'resilience perseverance',image:'/assets/affirmations/kindelora_strength_platinum_approved(2).webp',precomposedCard:true},
 {id:'self-love',title:'Self-Love',text:'You are worthy of care, tenderness and belonging, exactly as you are.',tags:'acceptance kindness worth',image:'/assets/affirmations/04_self-love.webp'},
 {id:'motivation',title:'Motivation',text:'You do not have to see the entire road to take your next meaningful step.',tags:'energy progress goals',image:'/assets/affirmations/05_motivation.webp'},
 {id:'growth',title:'Growth',text:'Every new day gives you permission to begin again.',tags:'learning renewal beginnings',image:'/assets/affirmations/06_growth.webp'},
@@ -409,6 +409,21 @@ $('listen').addEventListener('click',()=>{if(!active)return;if(speaking){stopAud
 
 function wrapCardText(ctx,text,maxWidth){const words=text.split(/\s+/),lines=[];let line='';for(const word of words){const trial=line?line+' '+word:word;if(ctx.measureText(trial).width>maxWidth&&line){lines.push(line);line=word}else line=trial}if(line)lines.push(line);return lines}
 async function downloadAffirmation(item){
+ // Approved Strength artwork is already a finished, branded card.
+ // Do not draw a second frame, title, or affirmation over it.
+ if(item.precomposedCard){
+   const response=await fetch(item.image,{cache:'no-store'});
+   if(!response.ok)throw Error('Approved card unavailable');
+   const blob=await response.blob();
+   if(!blob.type.startsWith('image/')||blob.size<10000)throw Error('Invalid card asset');
+   const url=URL.createObjectURL(blob),a=document.createElement('a');
+   a.href=url;a.download='kindelora-'+item.id+'-affirmation.webp';
+   document.body.append(a);a.click();a.remove();
+   setTimeout(()=>URL.revokeObjectURL(url),30000);
+   $('download-status').textContent='Your approved Platinum affirmation card is ready.';
+   return;
+ }
+
  const image=new Image();image.decoding='async';image.src=item.image;
  try{await image.decode()}catch(e){throw Error('Artwork could not load')}
  if(!image.naturalWidth||!image.naturalHeight)throw Error('Artwork has no usable dimensions');
