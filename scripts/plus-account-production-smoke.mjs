@@ -5,7 +5,7 @@ const origin=(process.env.KINDELORA_ORIGIN||'https://kindelora.pages.dev').repla
 const results=[];
 async function check(path,verify){
  const controller=new AbortController(),timer=setTimeout(()=>controller.abort(),15000);
- try{const r=await fetch(origin+path,{redirect:'manual',signal:controller.signal,headers:{'accept':'text/html,application/json'}});const body=await r.text();verify(r,body);results.push({path,status:r.status,pass:true});}
+ try{const r=await fetch(origin+path,{redirect:'follow',signal:controller.signal,headers:{'accept':'text/html,application/json'}});const body=await r.text();assert.equal(new URL(r.url).origin,new URL(origin).origin,'unexpected cross-origin redirect');verify(r,body);results.push({path,status:r.status,pass:true});}
  catch(e){results.push({path,pass:false,error:String(e.message||e)});}finally{clearTimeout(timer);}
 }
 await check('/plus-account.html',(r,s)=>{assert.equal(r.status,200);for(const v of ['id="login"','id="register"','$8.99 USD','$89.99 USD','Public registration coming soon','Checkout coming soon'])assert.ok(s.includes(v),'missing '+v)});
