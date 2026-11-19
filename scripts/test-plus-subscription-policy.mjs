@@ -1,0 +1,16 @@
+import assert from 'node:assert/strict';
+import {subscriptionTransition,subscriptionAccess} from '../functions/_lib/plus-subscription-policy.js';
+assert.deepEqual(subscriptionTransition({status:'pending',event:'verified_payment'}),{allowed:false,reason:'payment_not_verified'});
+assert.deepEqual(subscriptionTransition({status:'pending',event:'verified_payment',providerVerified:true}),{allowed:true,nextStatus:'active'});
+assert.deepEqual(subscriptionTransition({status:'active',event:'payment_failed'}),{allowed:true,nextStatus:'past_due'});
+assert.deepEqual(subscriptionTransition({status:'past_due',event:'verified_renewal'}),{allowed:false,reason:'payment_not_verified'});
+assert.deepEqual(subscriptionTransition({status:'past_due',event:'verified_renewal',providerVerified:true}),{allowed:true,nextStatus:'active'});
+assert.deepEqual(subscriptionTransition({status:'active',event:'cancel'}),{allowed:true,nextStatus:'cancelled'});
+assert.deepEqual(subscriptionTransition({status:'cancelled',event:'verified_renewal',providerVerified:true}),{allowed:false,reason:'invalid_transition'});
+assert.deepEqual(subscriptionTransition({status:'active',event:'verified_refund',providerVerified:true}),{allowed:true,nextStatus:'expired'});
+assert.equal(subscriptionAccess({status:'active',currentPeriodEnd:'2027-01-01T00:00:00Z',now:'2026-11-19T00:00:00Z'}),true);
+assert.equal(subscriptionAccess({status:'cancelled',currentPeriodEnd:'2027-01-01T00:00:00Z',now:'2026-11-19T00:00:00Z'}),true);
+assert.equal(subscriptionAccess({status:'cancelled',currentPeriodEnd:'2026-11-01T00:00:00Z',now:'2026-11-19T00:00:00Z'}),false);
+assert.equal(subscriptionAccess({status:'past_due',currentPeriodEnd:'2027-01-01T00:00:00Z',now:'2026-11-19T00:00:00Z'}),false);
+assert.equal(subscriptionAccess({status:'active',currentPeriodEnd:'invalid',now:'2026-11-19T00:00:00Z'}),false);
+console.log('PASS: subscription state transitions and cancellation paid-through policy');
