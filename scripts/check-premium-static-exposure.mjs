@@ -66,7 +66,9 @@ assert(page.includes('Checking secure PLUS access')&&page.includes('/monday-plus
  // Execute the real Cloudflare Pages middleware with a mocked request.
  // This checks response statuses and bytes, rather than merely looking for a string.
 const {onRequest}=await import('../functions/_middleware.js');
+assert(!fs.existsSync(new URL('../assets/audio/motivational-monday-2026-11-16-approved.mp3',import.meta.url)),'Approved November 16 audio must stay outside static assets');
 const protectedRoutes=[
+ '/content/motivational-monday-2026-11-16-approved.json',
  '/assets/audio/heygen-speech-2.mp3',
  '/assets/audio/motivational-monday-2026-11-16-approved.mp3',
  '/assets/audio/motivational-monday-joanna.mp3',
