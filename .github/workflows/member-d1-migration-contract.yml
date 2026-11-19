@@ -1,0 +1,12 @@
+name: Member D1 migration contract
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  member-d1-migration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate member D1 schema and verification nonce
+        run: python3 scripts/test-member-d1-migration-contract.py
