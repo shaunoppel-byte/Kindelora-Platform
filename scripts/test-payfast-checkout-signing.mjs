@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {payfastParameterString,signPayfastCheckout,requirePayfastServerConfig} from '../functions/_lib/payfast-checkout-signing.js';
+const fields={merchant_id:'10000100',merchant_key:'abc',amount:'150.00',item_name:'KINDELORA PLUS'};
+assert.equal(payfastParameterString(fields,'secret'),'merchant_id=10000100&merchant_key=abc&amount=150.00&item_name=KINDELORA+PLUS&passphrase=secret');
+assert.match(signPayfastCheckout(fields,'secret'),/^[0-9a-f]{32}$/);
+assert.notEqual(signPayfastCheckout(fields,'secret'),signPayfastCheckout({...fields,amount:'0.01'},'secret'));
+assert.throws(()=>signPayfastCheckout(fields,''),/Passphrase required/);
+assert.throws(()=>payfastParameterString({...fields,signature:'injected'},'secret'),/Invalid field/);
+assert.deepEqual(requirePayfastServerConfig({}),{ready:false,reason:'release_disabled'});
+assert.deepEqual(requirePayfastServerConfig({PAYFAST_CHECKOUT_ENABLED:'true',PAYFAST_RECURRING_VERIFIED:'true'}),{ready:false,reason:'merchant_configuration_missing'});
+const config={PAYFAST_CHECKOUT_ENABLED:'true',PAYFAST_RECURRING_VERIFIED:'true',PAYFAST_MERCHANT_ID:'id',PAYFAST_MERCHANT_KEY:'key',PAYFAST_PASSPHRASE:'secret',DB:{prepare(){}}};
+assert.deepEqual(requirePayfastServerConfig(config),{ready:true});
+console.log('PASS: PayFast signing parameters, tamper detection and disabled-by-default configuration');
