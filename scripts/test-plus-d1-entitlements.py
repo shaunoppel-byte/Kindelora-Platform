@@ -23,7 +23,7 @@ def entitled(owner, at):
         return False
     return db.execute("""SELECT EXISTS(
         SELECT 1 FROM plus_subscriptions
-        WHERE customer_id=? AND brand='KIN' AND status='active'
+        WHERE customer_id=? AND brand='KIN' AND status IN ('active','cancelled')
           AND current_period_end > ?
     )""", (owner,at)).fetchone()[0] == 1
 
@@ -44,7 +44,9 @@ assert not entitled("alice","2026-12-01T00:00:00Z"), "end time must be exclusive
 # Refund/cancellation of one order must not revoke a separate active subscription;
 # revoking the actual active subscription must deny immediately.
 db.execute("UPDATE plus_subscriptions SET status='cancelled' WHERE id='alice-active'")
-assert not entitled("alice",now)
+assert entitled("alice",now), "cancelled access remains valid through prepaid period"
+db.execute("UPDATE plus_subscriptions SET current_period_end='2026-11-17T00:00:00Z' WHERE id='alice-active'")
+assert not entitled("alice",now), "cancelled access must expire at prepaid period end"
 subscription("alice-renewed","alice","active","2027-01-01T00:00:00Z")
 assert entitled("alice",now)
 db.execute("UPDATE plus_subscriptions SET status='expired' WHERE id='alice-renewed'")
