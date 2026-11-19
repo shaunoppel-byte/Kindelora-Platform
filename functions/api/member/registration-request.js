@@ -7,7 +7,7 @@ async function turnstile(env,token,ip){
  const body=new URLSearchParams({secret:env.TURNSTILE_SECRET_KEY,response:token,remoteip:ip});
  const r=await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify',{method:'POST',body});
  if(!r.ok)return false;
- const result=await r.json();return result.success===true&&(!result.hostname||result.hostname==='kindelora.pages.dev');
+ const result=await r.json();return result.success===true&&result.hostname==='kindelora.pages.dev';
 }
 export async function onRequestPost({request,env}){
  if(env?.PUBLIC_REGISTRATION_ENABLED!=='true'||!ready(env)||typeof env?.RESEND_API_KEY!=='string'||typeof env?.REGISTRATION_FROM_EMAIL!=='string')return reply({error:'Public registration is not configured'},503);
@@ -25,8 +25,9 @@ export async function onRequestPost({request,env}){
  try{
   const limit=await env.DB.prepare('SELECT attempts,window_started_at,blocked_until FROM member_registration_limits WHERE key_hash=?').bind(key).first();
   if(limit?.blocked_until&&limit.blocked_until>now.toISOString())return generic();
-  const attempts=limit?.window_started_at>windowStart?(limit.attempts||0)+1:1;
-  await env.DB.prepare('INSERT INTO member_registration_limits(key_hash,attempts,window_started_at,blocked_until) VALUES(?,?,?,?) ON CONFLICT(key_hash) DO UPDATE SET attempts=excluded.attempts,window_started_at=excluded.window_started_at,blocked_until=excluded.blocked_until').bind(key,attempts,attempts===1?now.toISOString():limit.window_started_at,attempts>3?blockedUntil:null).run();
+  const inWindow=typeof limit?.window_started_at==='string'&&limit.window_started_at>windowStart;
+  const attempts=inWindow?(limit.attempts||0)+1:1;
+  await env.DB.prepare('INSERT INTO member_registration_limits(key_hash,attempts,window_started_at,blocked_until) VALUES(?,?,?,?) ON CONFLICT(key_hash) DO UPDATE SET attempts=excluded.attempts,window_started_at=excluded.window_started_at,blocked_until=excluded.blocked_until').bind(key,attempts,inWindow?limit.window_started_at:now.toISOString(),attempts>3?blockedUntil:null).run();
   if(attempts>3)return generic();
   const existing=await env.DB.prepare('SELECT id FROM members WHERE email_normalized=?').bind(email).first();
   if(existing)return generic();
