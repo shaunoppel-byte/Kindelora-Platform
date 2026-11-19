@@ -8,8 +8,8 @@ async function check(path,verify){
  try{const r=await fetch(origin+path,{redirect:'manual',signal:controller.signal,headers:{'accept':'text/html,application/json'}});const body=await r.text();verify(r,body);results.push({path,status:r.status,pass:true});}
  catch(e){results.push({path,pass:false,error:String(e.message||e)});}finally{clearTimeout(timer);}
 }
-await check('/plus-account.html',(r,s)=>{assert.equal(r.status,200);for(const v of ['id="login"','id="register"','id="register-invite"','$8.99 USD','$89.99 USD','Checkout coming soon'])assert.ok(s.includes(v),'missing '+v)});
-await check('/plus-account.js',(r,s)=>{assert.equal(r.status,200);for(const v of ['/api/member/register','/api/member/login','/api/member/entitlement'])assert.ok(s.includes(v),'missing '+v)});
+await check('/plus-account.html',(r,s)=>{assert.equal(r.status,200);for(const v of ['id="login"','id="register"','$8.99 USD','$89.99 USD','Public registration coming soon','Checkout coming soon'])assert.ok(s.includes(v),'missing '+v)});
+await check('/plus-account.js',(r,s)=>{assert.equal(r.status,200);for(const v of ['/api/member/login','/api/member/entitlement'])assert.ok(s.includes(v),'missing '+v)});
 await check('/api/plus/status',(r,s)=>{assert.equal(r.status,200);const j=JSON.parse(s);assert.equal(j.checkoutAvailable,false);assert.equal(j.membershipVerificationAvailable,false)});
 await check('/api/plus/checkout',(r,s)=>{assert.ok([403,503].includes(r.status),'checkout GET must be denied');assert.doesNotMatch(s,/payment_url|checkout_url|payfast\.co\.za\/eng\/process/i)});
 await check('/api/member/me',(r,s)=>{assert.ok([401,403,503].includes(r.status),'guest must not be authenticated');assert.doesNotMatch(s,/"authenticated"\s*:\s*true/)});
