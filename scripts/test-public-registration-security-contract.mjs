@@ -19,7 +19,7 @@ assert.match(delivery,/https:\/\/api\.resend\.com\/emails/);
 assert.match(delivery,/https:\/\/kindelora\.pages\.dev/,'email origin must be fixed');
 assert.doesNotMatch(ui,/Invitation code|Create invited account/i);
 assert.match(ui,/Public registration coming soon/);
-assert.match(ui,/<button type="submit" disabled title="Email verification is being configured">/);
+assert.match(ui,/<button id="registration-submit" type="submit" disabled title="Email verification is being configured">/);
 assert.match(migration,/token_hash TEXT PRIMARY KEY/);
 assert.doesNotMatch(request+verify+delivery,/PAYFAST_PASSPHRASE|checkoutAvailable:\s*true/);
 console.log('PASS: fail-closed public registration security source contract');
