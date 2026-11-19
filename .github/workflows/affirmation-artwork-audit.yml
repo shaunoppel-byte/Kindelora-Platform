@@ -5,6 +5,8 @@ on:
       - 'affirmation-library.js'
       - 'assets/affirmations/**'
       - 'scripts/audit-affirmation-artwork.mjs'
+      - 'scripts/apply-approved-affirmation-artwork.mjs'
+      - 'quality/affirmation-artwork-remediation.json'
       - '.github/workflows/affirmation-artwork-audit.yml'
   push:
     branches: [main]
@@ -12,6 +14,8 @@ on:
       - 'affirmation-library.js'
       - 'assets/affirmations/**'
       - 'scripts/audit-affirmation-artwork.mjs'
+      - 'scripts/apply-approved-affirmation-artwork.mjs'
+      - 'quality/affirmation-artwork-remediation.json'
       - '.github/workflows/affirmation-artwork-audit.yml'
 jobs:
   audit:
