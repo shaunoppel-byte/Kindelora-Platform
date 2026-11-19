@@ -70,4 +70,18 @@ assert.equal(negative('negative-failed',{status:'failed'}).result,'failed');
 assert.equal(negative('negative-late-paid').result,'rejected_transition');
 assert.equal(s.canAccess('negative-customer','KIN'),false);
 assert.equal(s.getInvoice('negative-kin','negative-customer'),null);
+
+// Group-wide negative controls: the merchant may be shared, but order/customer/brand boundaries are not.
+assert.throws(()=>s.order({id:'invalid-brand',business:'UNKNOWN',customer:'c',amount_minor:100}),/invalid order/);
+assert.throws(()=>s.order({id:'invalid-zero',business:'OPE',customer:'c',amount_minor:0}),/invalid order/);
+assert.throws(()=>s.order({id:'invalid-fraction',business:'OPE',customer:'c',amount_minor:10.5}),/invalid order/);
+assert.throws(()=>s.order({id:'invalid-usd',business:'KIN',customer:'c',amount_minor:899,currency:'USD'}),/invalid order/);
+assert.throws(()=>s.order({id:'brand-vel',business:'OPE',customer:'c',amount_minor:100}),/invalid order/,'duplicate order IDs across brands must be rejected');
+assert.equal(s.canAccess('same-person','OPE'),false,'a shared customer must not inherit consulting entitlements');
+assert.equal(s.canAccess('same-person','KDR'),false,'a shared customer must not inherit KINDRA entitlements');
+assert.equal(s.canAccess('same-person','SOL'),false,'a shared customer must not inherit SOLELAB entitlements');
+assert.equal(s.getInvoice('brand-vel','same-person').number.startsWith('VEL-'),true,'brand invoice prefix must be preserved');
+assert.equal(s.event({eventId:'brand-vel-replayed',orderId:'brand-vel',paymentId:'pay-brand-kin',amount_minor:1200,status:'refunded',verified:true}).result,'rejected_payment_reference','another brand payment cannot reverse this order');
+assert.equal(s.canAccess('same-person','VEL'),true);
+
 console.log('PASS: 5 brands, unique invoice prefixes, synthetic payment replay/mismatch, entitlement revocation, invoice isolation, retryable outbox, cancelled orders');
