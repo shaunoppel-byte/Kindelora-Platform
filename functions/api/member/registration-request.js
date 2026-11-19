@@ -2,6 +2,8 @@ import {reply,ready,hash,random,originOK} from './_auth.js';
 import {normalizedMemberEmail,newVerificationToken,verificationTokenHash} from '../../_lib/member-email-verification.js';
 import {sendRegistrationVerification} from '../../_lib/member-verification-delivery.js';
 const generic=()=>reply({message:'If registration is available, check your email for the next step.'},202);
+// Log only fixed reason codes: never email addresses, passwords, tokens, or secrets.
+const audit=(reason)=>console.info('member_registration_outcome',reason);
 async function turnstile(env,token,ip){
  if(typeof env.TURNSTILE_SECRET_KEY!=='string'||!env.TURNSTILE_SECRET_KEY||typeof token!=='string'||token.length>2048)return false;
  const body=new URLSearchParams({secret:env.TURNSTILE_SECRET_KEY,response:token,remoteip:ip});
@@ -24,13 +26,13 @@ export async function onRequestPost({request,env}){
  // Per-email rate limit; Turnstile provides additional abuse resistance.
  try{
   const limit=await env.DB.prepare('SELECT attempts,window_started_at,blocked_until FROM member_registration_limits WHERE key_hash=?').bind(key).first();
-  if(limit?.blocked_until&&limit.blocked_until>now.toISOString())return generic();
+  if(limit?.blocked_until&&limit.blocked_until>now.toISOString()){audit('rate_limit_blocked');return generic();}
   const inWindow=typeof limit?.window_started_at==='string'&&limit.window_started_at>windowStart;
   const attempts=inWindow?(limit.attempts||0)+1:1;
   await env.DB.prepare('INSERT INTO member_registration_limits(key_hash,attempts,window_started_at,blocked_until) VALUES(?,?,?,?) ON CONFLICT(key_hash) DO UPDATE SET attempts=excluded.attempts,window_started_at=excluded.window_started_at,blocked_until=excluded.blocked_until').bind(key,attempts,inWindow?limit.window_started_at:now.toISOString(),attempts>3?blockedUntil:null).run();
-  if(attempts>3)return generic();
+  if(attempts>3){audit('rate_limit_exceeded');return generic();}
   const existing=await env.DB.prepare('SELECT id FROM members WHERE email_normalized=?').bind(email).first();
-  if(existing)return generic();
+  if(existing){audit('existing_account');return generic();}
   const salt=random(),keyMaterial=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveBits']);
   const derived=await crypto.subtle.deriveBits({name:'PBKDF2',salt:new TextEncoder().encode(salt),iterations:310000,hash:'SHA-256'},keyMaterial,256);
   const passwordHash=Array.from(new Uint8Array(derived),b=>b.toString(16).padStart(2,'0')).join('');
@@ -41,9 +43,11 @@ export async function onRequestPost({request,env}){
   try {
    await sendRegistrationVerification(env,{email,token,origin:new URL(request.url).origin});
   } catch {
+   audit('provider_delivery_failed');
    await env.DB.prepare('DELETE FROM member_email_verifications WHERE token_hash=? AND consumed_at IS NULL').bind(tokenHash).run();
    return reply({error:'Verification email delivery is temporarily unavailable'},503);
   }
+  audit('provider_accepted');
   return generic();
- }catch{return reply({error:'Registration temporarily unavailable'},503)}
+ }catch{audit('registration_internal_error');return reply({error:'Registration temporarily unavailable'},503)}
 }
