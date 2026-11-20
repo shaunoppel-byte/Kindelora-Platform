@@ -24,9 +24,18 @@ export async function onRequestPost({request,env}){
  const email=normalizedMemberEmail(data?.email),password=data?.password;
  if(!email||typeof password!=='string'||password.length<12||password.length>256)return reply({error:'Invalid registration details'},400);
  const ip=request.headers.get('cf-connecting-ip')||'unknown';
- if(!await turnstile(env,data.turnstileToken,ip))return reply({error:'Security challenge failed'},403);
+ let challengePassed=false;
+ try {challengePassed=await turnstile(env,data.turnstileToken,ip);} catch {
+  audit('turnstile_provider_unavailable');
+  return reply({error:'Registration temporarily unavailable'},503);
+ }
+ if(!challengePassed)return reply({error:'Security challenge failed'},403);
  const now=new Date(),windowStart=new Date(now.getTime()-3600000).toISOString(),blockedUntil=new Date(now.getTime()+3600000).toISOString();
- const key=await hash('signup:'+email+':'+env.MEMBER_AUTH_PEPPER);
+ let key;
+ try {key=await hash('signup:'+email+':'+env.MEMBER_AUTH_PEPPER);} catch {
+  audit('rate_limit_key_unavailable');
+  return reply({error:'Registration temporarily unavailable'},503);
+ }
  // Per-email rate limit; Turnstile provides additional abuse resistance.
  try{
   const limit=await env.DB.prepare('SELECT attempts,window_started_at,blocked_until FROM member_registration_limits WHERE key_hash=?').bind(key).first();
