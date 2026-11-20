@@ -1,0 +1,19 @@
+name: Member Turnstile fail-closed audit
+on:
+  pull_request:
+    paths:
+      - 'functions/api/member/registration-request.js'
+      - 'scripts/test-member-turnstile-failclosed.mjs'
+      - '.github/workflows/member-turnstile-failclosed.yml'
+  workflow_dispatch:
+jobs:
+  security:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-member-turnstile-failclosed.mjs
