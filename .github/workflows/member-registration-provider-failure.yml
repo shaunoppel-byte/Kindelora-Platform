@@ -1,0 +1,24 @@
+name: Member registration provider failure cleanup
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'functions/api/member/registration-request.js'
+      - 'functions/_lib/member-verification-delivery.js'
+      - 'scripts/test-member-registration-provider-failure.mjs'
+      - '.github/workflows/member-registration-provider-failure.yml'
+  pull_request:
+    paths:
+      - 'functions/api/member/registration-request.js'
+      - 'functions/_lib/member-verification-delivery.js'
+      - 'scripts/test-member-registration-provider-failure.mjs'
+      - '.github/workflows/member-registration-provider-failure.yml'
+jobs:
+  provider-failure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-member-registration-provider-failure.mjs
