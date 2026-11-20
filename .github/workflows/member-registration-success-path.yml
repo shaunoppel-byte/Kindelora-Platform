@@ -1,0 +1,22 @@
+name: Member registration success-path contract
+on:
+  pull_request:
+    paths:
+      - 'functions/api/member/**'
+      - 'functions/_lib/member-**'
+      - 'scripts/test-member-registration-success-path.mjs'
+      - '.github/workflows/member-registration-success-path.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  registration-contract:
+    runs-on: ubuntu-latest
+    timeout-minutes: 4
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify complete registration handler with isolated fake D1 and provider
+        run: node --test scripts/test-member-registration-success-path.mjs
