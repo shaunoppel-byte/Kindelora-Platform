@@ -60,9 +60,25 @@ export async function onRequestPost({request,env}){
   }
   const passwordHash=Array.from(new Uint8Array(derived),b=>b.toString(16).padStart(2,'0')).join('');
   audit('password_hash_completed');
-  const token=newVerificationToken(),tokenHash=await verificationTokenHash(token,env.MEMBER_AUTH_PEPPER),expiresAt=new Date(now.getTime()+900000).toISOString();
-  await env.DB.prepare('INSERT INTO member_email_verifications(token_hash,email_normalized,password_salt,password_hash,expires_at) VALUES(?,?,?,?,?)').bind(tokenHash,email,salt,passwordHash,expiresAt).run();
-  audit('verification_record_created');
+  let token,tokenHash,expiresAt;
+  try {
+   token=newVerificationToken();
+   tokenHash=await verificationTokenHash(token,env.MEMBER_AUTH_PEPPER);
+   expiresAt=new Date(now.getTime()+900000).toISOString();
+   audit('verification_token_prepared');
+  } catch {
+   audit('verification_token_preparation_failed');
+   return reply({error:'Registration temporarily unavailable'},503);
+  }
+  try {
+   await env.DB.prepare('INSERT INTO member_email_verifications(token_hash,email_normalized,password_salt,password_hash,expires_at) VALUES(?,?,?,?,?)').bind(tokenHash,email,salt,passwordHash,expiresAt).run();
+   audit('verification_record_created');
+  } catch {
+   // Common cause: legacy 0002 migration created this table without password columns.
+   // Never expose database error details or customer information to clients/logs.
+   audit('verification_record_insert_failed');
+   return reply({error:'Registration temporarily unavailable'},503);
+  }
   // A provider failure must not leave an unusable pending registration behind.
   // Delete only this request's token; never delete another concurrent request's token.
   try {

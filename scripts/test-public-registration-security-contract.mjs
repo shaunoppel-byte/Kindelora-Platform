@@ -26,4 +26,5 @@ for(const code of ['password_hash_started','password_salt_generated','password_s
 assert.match(request,/catch\s*\{\s*audit\('password_salt_generation_failed'\)/,'salt failure must be isolated');
 assert.match(request,/catch\s*\{\s*audit\('password_key_import_failed'\)/,'key import failure must be isolated');
 assert.match(request,/catch\s*\{\s*\/\/ Fixed diagnostic code only;[^]*?audit\('password_derivation_failed'\)/,'derivation failure must be isolated');
+for(const code of ['verification_token_prepared','verification_token_preparation_failed','verification_record_insert_failed'])assert.ok(request.includes("audit('"+code+"')"),'missing P0 verification stage audit '+code);
 console.log('PASS: fail-closed public registration security source contract');
