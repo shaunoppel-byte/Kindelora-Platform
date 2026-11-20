@@ -1,0 +1,22 @@
+name: Member verification one-time replay contract
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'functions/api/member/verify-email.js'
+      - 'scripts/test-member-verification-replay.mjs'
+      - '.github/workflows/member-verification-replay.yml'
+  pull_request:
+    paths:
+      - 'functions/api/member/verify-email.js'
+      - 'scripts/test-member-verification-replay.mjs'
+      - '.github/workflows/member-verification-replay.yml'
+jobs:
+  replay:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-member-verification-replay.mjs
