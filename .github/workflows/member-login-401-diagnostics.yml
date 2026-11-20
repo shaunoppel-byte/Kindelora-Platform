@@ -1,0 +1,22 @@
+name: Member login 401 diagnostic matrix
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'functions/api/member/login.js'
+      - 'scripts/test-member-login-401-diagnostics.mjs'
+      - '.github/workflows/member-login-401-diagnostics.yml'
+  pull_request:
+    paths:
+      - 'functions/api/member/login.js'
+      - 'scripts/test-member-login-401-diagnostics.mjs'
+      - '.github/workflows/member-login-401-diagnostics.yml'
+jobs:
+  diagnostic:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-member-login-401-diagnostics.mjs
