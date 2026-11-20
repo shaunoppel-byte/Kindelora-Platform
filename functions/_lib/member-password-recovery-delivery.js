@@ -1,7 +1,7 @@
 // Server-side password recovery delivery, deliberately NOT connected to a public route.
 // Recovery links are restricted to the production origin and the verified Resend sender.
 export async function sendPasswordRecovery(env,{email,token,origin}={}){
- if(typeof env?.RESEND_API_KEY!=='string'||!env.RESEND_API_KEY.startsWith('re_')||typeof env?.REGISTRATION_FROM_EMAIL!=='string'||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(env.REGISTRATION_FROM_EMAIL))throw Error('Recovery email is not configured');
+ if(typeof env?.RESEND_API_KEY!=='string'||!env.RESEND_API_KEY.startsWith('re_')||typeof env?.REGISTRATION_FROM_EMAIL!=='string'||!/^(?:[^<>\r\n]{1,80}\s*<)?[^\s<>@]+@[^\s<>@]+\.[^\s<>@]+>?$/.test(env.REGISTRATION_FROM_EMAIL))throw Error('Recovery email is not configured');
  if(typeof email!=='string'||!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)||typeof token!=='string'||!/^[a-f0-9]{64}$/.test(token))throw Error('Invalid recovery request');
  if(origin!=='https://kindelora.pages.dev')throw Error('Untrusted recovery origin');
  const url=origin+'/recover-account.html#reset='+encodeURIComponent(token);
