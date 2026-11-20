@@ -9,6 +9,7 @@ on:
       - 'scripts/test-member-password-migration.mjs'
       - 'scripts/test-member-v2-auth-parity.mjs'
       - 'scripts/test-member-login-handler-integration.mjs'
+      - 'scripts/test-member-login-v2-e2e.mjs'
       - 'functions/_lib/member-password-recovery.js'
       - 'scripts/test-member-password-recovery-primitives.mjs'
       - 'functions/_lib/member-password-recovery-delivery.js'
@@ -42,4 +43,4 @@ jobs:
       - run: python3 scripts/test-member-password-recovery-sqlite.py -v
       - run: python3 scripts/test-member-recovery-atomic-throttle.py -v
       - run: python3 scripts/test-member-recovery-d1-preflight.py -v
-      - run: node --test scripts/test-member-pbkdf2-compatibility.mjs scripts/test-member-password-migration.mjs scripts/test-member-v2-auth-parity.mjs scripts/test-member-login-handler-integration.mjs scripts/test-member-password-recovery-primitives.mjs scripts/test-member-password-recovery-delivery.mjs scripts/test-member-password-recovery-migration.mjs scripts/test-member-password-recovery-request.mjs scripts/test-member-password-recovery-confirm.mjs scripts/test-member-password-recovery-transaction.mjs scripts/test-member-recovery-discovery.mjs
+      - run: node --test scripts/test-member-pbkdf2-compatibility.mjs scripts/test-member-password-migration.mjs scripts/test-member-v2-auth-parity.mjs scripts/test-member-login-handler-integration.mjs scripts/test-member-login-v2-e2e.mjs scripts/test-member-password-recovery-primitives.mjs scripts/test-member-password-recovery-delivery.mjs scripts/test-member-password-recovery-migration.mjs scripts/test-member-password-recovery-request.mjs scripts/test-member-password-recovery-confirm.mjs scripts/test-member-password-recovery-transaction.mjs scripts/test-member-recovery-discovery.mjs
