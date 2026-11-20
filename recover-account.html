@@ -7,7 +7,7 @@
 <script type="module">
 const requestForm=document.getElementById('request-form'),confirmForm=document.getElementById('confirm-form'),status=document.getElementById('status');
 // Remove token from URL immediately to avoid referrer, history and analytics exposure.
-const params=new URLSearchParams(location.search),token=params.get('reset');if(location.search)history.replaceState(null,'',location.pathname);
+const params=new URLSearchParams(location.hash.slice(1)),token=params.get('reset');if(location.hash||location.search)history.replaceState(null,'',location.pathname);
 const validToken=typeof token==='string'&&/^[a-f0-9]{64}$/.test(token);
 if(validToken){requestForm.hidden=true;confirmForm.hidden=false;document.getElementById('heading').textContent='Choose a new password';document.getElementById('intro').textContent='Your recovery link is valid for up to 15 minutes and can be used once.'}
 else if(token){status.textContent='This recovery link is invalid. Request a new one below.'}
