@@ -29,6 +29,9 @@ export async function onRequestPost({request,env}){
  }
  const valid=!!user?.email_verified_at&&!user.disabled_at&&same(candidate,user.password_hash);
  if(!valid){
+  // Fixed, privacy-safe reason codes only; do not log email, passwords, hashes or member IDs.
+  const reason=!user?'account_not_found':!user.email_verified_at?'account_unverified':user.disabled_at?'account_disabled':'password_mismatch';
+  console.info("member_login_outcome",reason);
   const count=(limit?.failures||0)+1,locked=count>=5?new Date(now+900000).toISOString():null;
   await env.DB.prepare("INSERT INTO member_login_limits(key_hash,failures,locked_until) VALUES(?,?,?) ON CONFLICT(key_hash) DO UPDATE SET failures=excluded.failures,locked_until=excluded.locked_until").bind(key,count,locked).run();
   return reply({error:"Invalid credentials"},401);
