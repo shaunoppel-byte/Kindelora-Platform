@@ -1,0 +1,22 @@
+name: PayFast ITN signature compatibility
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'functions/_lib/payfast-itn-signature.js'
+      - 'scripts/test-payfast-itn-provider-compat.mjs'
+      - '.github/workflows/payfast-itn-provider-compat.yml'
+  pull_request:
+    paths:
+      - 'functions/_lib/payfast-itn-signature.js'
+      - 'scripts/test-payfast-itn-provider-compat.mjs'
+      - '.github/workflows/payfast-itn-provider-compat.yml'
+jobs:
+  compatibility:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-payfast-itn-provider-compat.mjs
