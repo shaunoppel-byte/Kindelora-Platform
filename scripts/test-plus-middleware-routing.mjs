@@ -21,7 +21,7 @@ test('checkout GET and POST reach dedicated handler but always fail closed',asyn
  }
 });
 test('protected PLUS paths and unsupported checkout methods cannot bypass guard',async()=>{
- for(const [path,method] of [['/api/plus/checkout','PUT'],['/api/plus/membership','GET'],['/api/plus/checkout/extra','POST'],['/api/plus/%63heckout','POST']]){
+ for(const [path,method] of [['/api/plus/checkout','PUT'],['/api/plus/membership','GET'],['/api/plus/checkout/extra','POST']]){
   const {response,calls}=await run(path,method);
   assert.equal(calls,0,path);
   assert.equal(response.status,403,path);
@@ -41,4 +41,11 @@ test('public readiness never claims payments are enabled',async()=>{
  const body=await response.json();
  assert.equal(body.checkoutAvailable,false);
  assert.equal(body.membershipVerificationAvailable,false);
+});
+
+test('encoded checkout spelling normalizes only into disabled handler',async()=>{
+ const {response,calls}=await run('/api/plus/%63heckout','POST');
+ assert.equal(calls,1);
+ assert.equal(response.status,503);
+ assert.equal((await response.json()).error,'checkout_unavailable');
 });
