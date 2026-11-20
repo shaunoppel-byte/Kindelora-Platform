@@ -29,7 +29,7 @@ export async function onRequestPost({request,env}){
   audit('turnstile_provider_unavailable');
   return reply({error:'Registration temporarily unavailable'},503);
  }
- if(!challengePassed)return reply({error:'Security challenge failed'},403);
+ if(!challengePassed){audit('turnstile_challenge_rejected');return reply({error:'Security challenge failed'},403);}
  const now=new Date(),windowStart=new Date(now.getTime()-3600000).toISOString(),blockedUntil=new Date(now.getTime()+3600000).toISOString();
  let key;
  try {key=await hash('signup:'+email+':'+env.MEMBER_AUTH_PEPPER);} catch {
