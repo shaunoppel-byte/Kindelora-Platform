@@ -24,7 +24,7 @@ assert.deepEqual(state,{
   status:'pending_secure_payment_integration'
 });
 for(const path of [
- '/plus','/api/plus/checkout','/premium','/members/profile',
+ '/plus','/premium','/members/profile',
  '/assets/premium/private.json','/assets/members/content.json',
  '/finance','/api/owner-finance','/admin-finance',
  '/assets/audio/heygen-speech-2.mp3','/PLUS/checkout',
@@ -34,6 +34,14 @@ for(const path of [
   assert.equal(passed,false,path+' must never reach static handler');
   assert.equal(response.status,403,path);
   assert.match(response.headers.get('cache-control')||'',/no-store/,path);
+}
+// Checkout is intentionally routed to a dedicated fail-closed handler (HTTP 503),
+// rather than blocked by middleware. Never interpret routing as charging.
+for(const method of ['GET','POST']) {
+ const {response,passed}=await request('/api/plus/checkout',{method});
+ assert.equal(passed,true,'checkout must reach dedicated handler');
+ // The mock next() returns 200; actual dedicated checkout handler is tested separately.
+ assert.equal(response.status,200);
 }
 for(const path of ['/api/%2fplus/checkout','/api/%5cplus','/api/%252fplus','/api/%00plus']) {
   const {response,passed}=await request(path);
