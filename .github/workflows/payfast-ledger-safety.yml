@@ -1,0 +1,25 @@
+name: PayFast ledger and checkout safety contract
+on:
+  push:
+    paths:
+      - 'functions/_middleware.js'
+      - 'functions/api/plus/checkout.js'
+      - 'migrations/0001_plus_persistence.sql'
+      - 'scripts/test-payfast-ledger-invariants.mjs'
+      - '.github/workflows/payfast-ledger-safety.yml'
+  pull_request:
+    paths:
+      - 'functions/_middleware.js'
+      - 'functions/api/plus/checkout.js'
+      - 'migrations/0001_plus_persistence.sql'
+      - 'scripts/test-payfast-ledger-invariants.mjs'
+      - '.github/workflows/payfast-ledger-safety.yml'
+jobs:
+  ledger:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-payfast-ledger-invariants.mjs
