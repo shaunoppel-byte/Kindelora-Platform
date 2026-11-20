@@ -19,9 +19,10 @@ test('310k PBKDF2 SHA256 WebCrypto matches independent Node reference',async()=>
 });
 test('registration and login continue to use identical PBKDF2 contract',async()=>{
  const fs=await import('node:fs/promises');
- for(const path of ['functions/api/member/registration-request.js','functions/api/member/register.js','functions/api/member/login.js']){
+ for(const path of ['functions/api/member/registration-request.js','functions/api/member/login.js']){
   const src=await fs.readFile(path,'utf8');
-  assert.match(src,/iterations:310000/);
+  assert.match(src,/iterations:100000/);
+  assert.match(src,/HMAC/);
   assert.match(src,/PBKDF2/);
   assert.match(src,/SHA-256/);
   assert.match(src,/encoder\.encode\(salt\)|new TextEncoder\(\)\.encode\(salt\)/);

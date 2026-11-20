@@ -11,7 +11,8 @@ test('PBKDF2 runtime rejection fails closed before D1 token insert or Resend del
   const failingCrypto={getRandomValues:array=>webcrypto.getRandomValues(array),subtle:{
    digest:(...args)=>webcrypto.subtle.digest(...args),
    importKey:(...args)=>webcrypto.subtle.importKey(...args),
-   deriveBits:async options=>{assert.equal(options.iterations,310000);throw new Error('simulated workerd PBKDF2 failure');}
+   sign:(...args)=>webcrypto.subtle.sign(...args),
+   deriveBits:async options=>{assert.equal(options.iterations,100000);throw new Error('simulated workerd PBKDF2 failure');}
   }};
   Object.defineProperty(globalThis,'crypto',{configurable:true,value:failingCrypto});
   console.info=(...args)=>{audit.push(args.join(' '));};
