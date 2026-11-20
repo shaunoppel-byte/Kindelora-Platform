@@ -14,6 +14,9 @@ export async function onRequestPost({request,env}){
  try{
   const tokenHash=await recoveryTokenHash(token,env.MEMBER_AUTH_PEPPER);
   const now=new Date().toISOString(),claim=crypto.randomUUID();
+  const eligible=await env.DB.prepare('SELECT m.email_normalized FROM member_password_resets r JOIN members m ON m.id=r.member_id WHERE r.token_hash=? AND r.consumed_at IS NULL AND r.expires_at>? AND m.email_verified_at IS NOT NULL AND m.disabled_at IS NULL').bind(tokenHash,now).first();
+  if(!eligible)return invalid();
+  const loginLimitKey=await hash(eligible.email_normalized+env.MEMBER_AUTH_PEPPER);
   // Derive before claiming token so a runtime crypto failure cannot consume it.
   const {salt,passwordHash}=await newRecoveryPasswordHash(password,env.MEMBER_AUTH_PEPPER);
   // D1 batch is a transaction. Each subsequent mutation is gated on this
@@ -22,7 +25,7 @@ export async function onRequestPost({request,env}){
    env.DB.prepare('UPDATE member_password_resets SET consumed_at=?,consumed_nonce=? WHERE token_hash=? AND consumed_at IS NULL AND expires_at>? AND EXISTS (SELECT 1 FROM members m WHERE m.id=member_password_resets.member_id AND m.email_verified_at IS NOT NULL AND m.disabled_at IS NULL)').bind(now,claim,tokenHash,now),
    env.DB.prepare('UPDATE members SET password_salt=?,password_hash=? WHERE id=(SELECT member_id FROM member_password_resets WHERE token_hash=? AND consumed_nonce=?) AND email_verified_at IS NOT NULL AND disabled_at IS NULL').bind(salt,passwordHash,tokenHash,claim),
    env.DB.prepare('DELETE FROM member_sessions WHERE member_id=(SELECT member_id FROM member_password_resets WHERE token_hash=? AND consumed_nonce=?)').bind(tokenHash,claim),
-   env.DB.prepare('DELETE FROM member_login_limits WHERE key_hash=(SELECT lower(hex(sha256(email_normalized))) FROM members WHERE id=(SELECT member_id FROM member_password_resets WHERE token_hash=? AND consumed_nonce=?))').bind(tokenHash,claim)
+   env.DB.prepare('DELETE FROM member_login_limits WHERE key_hash=? AND EXISTS (SELECT 1 FROM member_password_resets WHERE token_hash=? AND consumed_nonce=?)').bind(loginLimitKey,tokenHash,claim)
   ]);
   if(results?.[0]?.meta?.changes!==1||results?.[1]?.meta?.changes!==1)return invalid();
   console.info('member_recovery_outcome','password_updated');
