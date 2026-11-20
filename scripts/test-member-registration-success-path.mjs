@@ -40,7 +40,7 @@ test('registration reaches provider acknowledgement and stores a pending verific
     assert.equal(stored,true,'verification record must exist before email send');
     const payload=JSON.parse(options.body);
     assert.deepEqual(payload.to,['offline-test@example.invalid']);
-    assert.match(payload.text,/plus-account.html\\?verify=/);
+    assert.ok(payload.text.includes('/plus-account.html?verify='),'verification email must contain account verification URL');
     emailAccepted=true;
     return new Response(JSON.stringify({id:'offline-provider-ack'}),{status:200});
    }
