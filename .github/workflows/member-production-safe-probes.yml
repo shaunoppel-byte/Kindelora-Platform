@@ -1,0 +1,22 @@
+name: Member production safe HTTP probes
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '29 */4 * * *'
+  pull_request:
+    paths:
+      - 'scripts/test-member-production-negative-paths.mjs'
+      - '.github/workflows/member-production-safe-probes.yml'
+permissions:
+  contents: read
+jobs:
+  production-safe-probes:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify live registration guards and disabled checkout without customer data
+        run: node --test scripts/test-member-production-negative-paths.mjs
