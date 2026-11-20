@@ -22,7 +22,7 @@ for(const token of [
  sign(claims,{alg:'HS256',typ:'JWT',kid:'test-key'}),
  sign(claims,{alg:'none',typ:'JWT',kid:'test-key'}),
  sign(claims,{alg:'RS256',typ:'JWT',kid:'unknown'}),
- good.slice(0,-2)+'AA','not-a-jwt'
+ good.slice(0,good.lastIndexOf('.')+1)+(good[good.lastIndexOf('.')+1]==='A'?'B':'A')+good.slice(good.lastIndexOf('.')+2),'not-a-jwt'
 ]) assert.equal(await verifyTrustedJwtIdentity({...base,token}),null);
 assert.equal(await verifyTrustedJwtIdentity({...base,token:good,trustedKeys:[]}),null);
 assert.equal(await verifyTrustedJwtIdentity({...base,token:good,audience:'wrong'}),null);
