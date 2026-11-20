@@ -5,9 +5,13 @@ on:
       - 'functions/api/checkout-preflight.js'
       - 'functions/_lib/plus-pricing.mjs'
       - 'functions/_lib/payfast-itn-contract.mjs'
+      - 'functions/_lib/payfast-form-signature.mjs'
+      - 'functions/_lib/plus-orders.mjs'
       - 'tests/checkout-preflight.test.mjs'
       - 'tests/plus-pricing.test.mjs'
       - 'tests/payfast-itn-contract.test.mjs'
+      - 'tests/payfast-form-signature.test.mjs'
+      - 'tests/plus-orders.test.mjs'
       - '.github/workflows/payfast-security.yml'
   push:
     branches: [main]
@@ -15,9 +19,13 @@ on:
       - 'functions/api/checkout-preflight.js'
       - 'functions/_lib/plus-pricing.mjs'
       - 'functions/_lib/payfast-itn-contract.mjs'
+      - 'functions/_lib/payfast-form-signature.mjs'
+      - 'functions/_lib/plus-orders.mjs'
       - 'tests/checkout-preflight.test.mjs'
       - 'tests/plus-pricing.test.mjs'
       - 'tests/payfast-itn-contract.test.mjs'
+      - 'tests/payfast-form-signature.test.mjs'
+      - 'tests/plus-orders.test.mjs'
       - '.github/workflows/payfast-security.yml'
   workflow_dispatch:
 permissions:
@@ -32,4 +40,4 @@ jobs:
         with:
           node-version: '22'
       - name: Verify pricing, ITN and authenticated checkout safeguards
-        run: node --test tests/plus-pricing.test.mjs tests/payfast-itn-contract.test.mjs tests/checkout-preflight.test.mjs
+        run: node --test tests/plus-pricing.test.mjs tests/payfast-itn-contract.test.mjs tests/checkout-preflight.test.mjs tests/payfast-form-signature.test.mjs tests/plus-orders.test.mjs
