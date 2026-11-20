@@ -4,6 +4,8 @@ on:
     branches: [main]
     paths:
       - 'functions/api/member/registration-request.js'
+      - 'functions/_lib/member-password-kdf-candidate.js'
+      - 'scripts/test-member-password-kdf-candidate.mjs'
       - 'functions/api/member/verify-email.js'
       - 'functions/_lib/member-verification-delivery.js'
       - 'plus-account.html'
@@ -14,6 +16,8 @@ on:
   pull_request:
     paths:
       - 'functions/api/member/registration-request.js'
+      - 'functions/_lib/member-password-kdf-candidate.js'
+      - 'scripts/test-member-password-kdf-candidate.mjs'
       - 'functions/api/member/verify-email.js'
       - 'functions/_lib/member-verification-delivery.js'
       - 'plus-account.html'
@@ -31,3 +35,4 @@ jobs:
           node-version: '22'
       - run: node scripts/test-public-registration-security-contract.mjs
       - run: node scripts/test-resend-verification-delivery.mjs
+      - run: node scripts/test-member-password-kdf-candidate.mjs
