@@ -19,6 +19,7 @@ on:
       - 'scripts/test-member-password-recovery-request.mjs'
       - 'functions/api/member/confirm-password-reset.js'
       - 'scripts/test-member-password-recovery-confirm.mjs'
+      - 'recover-account.html'
       - '.github/workflows/member-pbkdf2-compatibility.yml'
   workflow_dispatch:
 jobs:
