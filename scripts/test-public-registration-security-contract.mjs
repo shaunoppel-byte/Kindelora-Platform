@@ -2,6 +2,9 @@ import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
 const read=p=>readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const request=read('functions/api/member/registration-request.js');
+const readiness=read('functions/api/member/registration-config.js');
+for(const term of ['LIMIT 0','member_email_verifications','member_registration_limits','schema_unavailable','available:false'])assert.ok(readiness.includes(term),'missing production schema readiness gate: '+term);
+
 const verify=read('functions/api/member/verify-email.js');
 const delivery=read('functions/_lib/member-verification-delivery.js');
 const ui=read('plus-account.html');
