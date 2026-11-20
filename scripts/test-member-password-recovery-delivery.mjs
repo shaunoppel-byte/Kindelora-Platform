@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import {sendPasswordRecovery} from '../functions/_lib/member-password-recovery-delivery.js';
-const env={RESEND_API_KEY:'re_synthetic_test_only',REGISTRATION_FROM_EMAIL:'KINDELORA <support@example.com>'};
+const env={RESEND_API_KEY:'re_synthetic_test_only',REGISTRATION_FROM_EMAIL:'support@example.com'};
 const token='a'.repeat(64),email='test@example.com',origin='https://kindelora.pages.dev';
 test('rejects untrusted origins and invalid tokens before any email call',async()=>{
  const original=globalThis.fetch;let calls=0;globalThis.fetch=async()=>{calls++;throw Error('must not call')};
