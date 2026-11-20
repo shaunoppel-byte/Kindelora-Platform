@@ -1,0 +1,22 @@
+name: Production registration readiness smoke
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 6 * * *'
+permissions:
+  contents: read
+jobs:
+  registration-readiness:
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Check public registration configuration only (no signup)
+        shell: bash
+        run: |
+          set -euo pipefail
+          response=$(mktemp)
+          status=$(curl --silent --show-error --location --max-time 15 --output "$response" --write-out '%{http_code}' 'https://kindelora.pages.dev/api/member/registration-config')
+          echo "Registration configuration HTTP status: $status"
+          test "$status" = 200 || { echo "::error::Registration config endpoint returned non-200"; exit 1; }
+          # Parse locally and report ONLY the readiness boolean; never print the site key.
+          node -e 'const fs=require("fs");const x=JSON.parse(fs.readFileSync(process.argv[1],"utf8"));if(typeof x.available!=="boolean")process.exit(2);console.log("Production public registration available: "+x.available);if(!x.available)process.exit(1)' "$response"
