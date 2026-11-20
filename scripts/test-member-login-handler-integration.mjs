@@ -39,3 +39,18 @@ test('unverified or disabled V2 account cannot sign in with correct password',as
   assert.equal((await attempt(db)).status,401);assert.equal(db.sessions.length,0);
  }
 });
+
+test('expired lockout starts fresh count; active lockout still returns 429',async()=>{
+ const db=mockDB(null);
+ const key=Buffer.from(await crypto.subtle.digest('SHA-256',enc.encode('test@example.com'+pepper))).toString('hex');
+ db.limits.set(key,{failures:5,locked_until:new Date(Date.now()-60_000).toISOString()});
+ const expired=await attempt(db);
+ assert.equal(expired.status,401);
+ assert.equal(db.limits.get(key).failures,1);
+ assert.equal(db.limits.get(key).locked_until,null);
+ db.limits.set(key,{failures:5,locked_until:new Date(Date.now()+60_000).toISOString()});
+ const active=await attempt(db);
+ assert.equal(active.status,429);
+ assert.equal(db.limits.get(key).failures,5);
+ assert.equal(db.sessions.length,0);
+});
