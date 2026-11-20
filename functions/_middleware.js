@@ -37,6 +37,13 @@ export async function onRequest(context) {
       }
     });
   }
+  // Route payment-initiation requests to their dedicated server-side handler.
+  // This does NOT authorize a payment: checkout.js remains fail-closed until
+  // signed requests, verified ITNs, durable orders and entitlements are ready.
+  // Do not allow the public status endpoint to imply that checkout is enabled.
+  if (path === '/api/plus/checkout' && ['GET', 'POST'].includes(context.request.method)) {
+    return context.next();
+  }
   if (!protectedPaths.some(re => re.test(path))) return context.next();
   return new Response("KINDELORA PLUS access requires verified membership and is not yet available.", {
     status: 403,
