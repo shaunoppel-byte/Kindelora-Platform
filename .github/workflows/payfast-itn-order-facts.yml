@@ -1,0 +1,22 @@
+name: PayFast ITN order facts offline guard
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'functions/_lib/payfast-itn-order-facts.js'
+      - 'scripts/test-payfast-itn-order-facts.mjs'
+      - '.github/workflows/payfast-itn-order-facts.yml'
+  pull_request:
+    paths:
+      - 'functions/_lib/payfast-itn-order-facts.js'
+      - 'scripts/test-payfast-itn-order-facts.mjs'
+      - '.github/workflows/payfast-itn-order-facts.yml'
+jobs:
+  itn-order-facts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-payfast-itn-order-facts.mjs
