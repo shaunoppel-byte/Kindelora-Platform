@@ -33,7 +33,7 @@ export async function onRequestPost({request,env}){
   catch{
    await env.DB.prepare('DELETE FROM member_password_resets WHERE token_hash=? AND consumed_at IS NULL').bind(tokenHash).run();
    console.info('member_recovery_outcome','provider_delivery_failed');
-   return reply({error:'Recovery email temporarily unavailable'},503);
+   return generic();
   }
   console.info('member_recovery_outcome','provider_accepted');
   return generic();
