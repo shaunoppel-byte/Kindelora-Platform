@@ -1,0 +1,19 @@
+name: PayFast subscription offline contract
+on:
+  pull_request:
+    paths:
+      - 'functions/_lib/payfast-subscription-contract.mjs'
+      - 'scripts/test-payfast-subscription-contract.mjs'
+      - '.github/workflows/payfast-subscription-contract.yml'
+  workflow_dispatch:
+jobs:
+  offline-subscription:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-payfast-subscription-contract.mjs
