@@ -12,6 +12,7 @@ test('read-only production registration readiness is safely observable',async()=
   assert.ok(Object.keys(body).every(key=>['available','turnstileSiteKey'].includes(key)),'readiness response unexpectedly exposes internal data');
   // Never print the Turnstile key or environment configuration to CI logs.
   console.info('registration_readiness',body.available?'available':'unavailable');
-  // A false result is a real NO-GO, but do not fail the CI on pre-existing production state.
+  // Report production readiness as a separate failing gate; never confuse an HTTP 200 with launch readiness.
+  assert.equal(body.available,true,'PRODUCTION REGISTRATION NO-GO: configuration or D1 schema unavailable');
  }finally{clearTimeout(timeout)}
 });
