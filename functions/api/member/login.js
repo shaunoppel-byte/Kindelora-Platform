@@ -16,7 +16,14 @@ export async function onRequestPost({request,env}){
  const limit=await env.DB.prepare("SELECT failures,locked_until FROM member_login_limits WHERE key_hash=?").bind(key).first();
  if(limit?.locked_until&&Date.parse(limit.locked_until)>now)return reply({error:"Too many attempts; try later"},429);
  const user=await env.DB.prepare("SELECT id,email_normalized,password_salt,password_hash,email_verified_at,disabled_at FROM members WHERE email_normalized=?").bind(email).first();
- const candidate=await derive(password,user?.password_salt||"invalid-member-placeholder");
+ let candidate;
+ try {candidate=await derive(password,user?.password_salt||"invalid-member-placeholder");}
+ catch {
+  // Runtime crypto compatibility errors are service failures, not invalid credentials.
+  // Never log email, password, salt, hash or exception text.
+  console.info("member_login_outcome","password_derivation_failed");
+  return reply({error:"Member login temporarily unavailable"},503);
+ }
  const valid=!!user?.email_verified_at&&!user.disabled_at&&same(candidate,user.password_hash);
  if(!valid){
   const count=(limit?.failures||0)+1,locked=count>=5?new Date(now+900000).toISOString():null;
