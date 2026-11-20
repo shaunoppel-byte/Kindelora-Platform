@@ -1,0 +1,24 @@
+name: Member verified login success path
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'functions/api/member/login.js'
+      - 'functions/api/member/_auth.js'
+      - 'scripts/test-member-verified-login.mjs'
+      - '.github/workflows/member-verified-login.yml'
+  pull_request:
+    paths:
+      - 'functions/api/member/login.js'
+      - 'functions/api/member/_auth.js'
+      - 'scripts/test-member-verified-login.mjs'
+      - '.github/workflows/member-verified-login.yml'
+jobs:
+  verified-login:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-member-verified-login.mjs
