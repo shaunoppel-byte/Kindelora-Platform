@@ -35,7 +35,14 @@ export async function onRequestPost({request,env}){
   if(existing){audit('existing_account');return generic();}
   audit('password_hash_started');
   const salt=random(),keyMaterial=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveBits']);
-  const derived=await crypto.subtle.deriveBits({name:'PBKDF2',salt:new TextEncoder().encode(salt),iterations:310000,hash:'SHA-256'},keyMaterial,256);
+  let derived;
+  try {
+   derived=await crypto.subtle.deriveBits({name:'PBKDF2',salt:new TextEncoder().encode(salt),iterations:310000,hash:'SHA-256'},keyMaterial,256);
+  } catch {
+   // Fixed diagnostic code only; never expose password, salt, key material or exception text.
+   audit('password_derivation_failed');
+   return reply({error:'Registration temporarily unavailable'},503);
+  }
   const passwordHash=Array.from(new Uint8Array(derived),b=>b.toString(16).padStart(2,'0')).join('');
   audit('password_hash_completed');
   const token=newVerificationToken(),tokenHash=await verificationTokenHash(token,env.MEMBER_AUTH_PEPPER),expiresAt=new Date(now.getTime()+900000).toISOString();
