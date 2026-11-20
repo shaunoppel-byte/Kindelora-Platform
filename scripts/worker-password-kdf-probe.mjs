@@ -5,7 +5,19 @@ const enc=new TextEncoder();
 export default {
  async fetch(request) {
   const path=new URL(request.url).pathname;
-  if(path!=='/probe'&&path!=='/legacy-limit')return new Response('Not found',{status:404});
+  if(path!=='/probe'&&path!=='/legacy-limit'&&path!=='/production-parity')return new Response('Not found',{status:404});
+  if(path==='/production-parity'){
+   try {
+    // Match production: random() creates 32 bytes encoded as 64 hex chars,
+    // and the password is UTF-8 encoded before WebCrypto PBKDF2.
+    const salt=Array.from(crypto.getRandomValues(new Uint8Array(32)),x=>x.toString(16).padStart(2,'0')).join('');
+    const key=await crypto.subtle.importKey('raw',enc.encode('production-parity-test-password'),'PBKDF2',false,['deriveBits']);
+    const result=await crypto.subtle.deriveBits({name:'PBKDF2',salt:enc.encode(salt),iterations:310000,hash:'SHA-256'},key,256);
+    return new Response(result.byteLength===32?'PRODUCTION_KDF_PARITY_OK':'PRODUCTION_KDF_PARITY_MISMATCH',{status:result.byteLength===32?200:500});
+   } catch {
+    return new Response('PRODUCTION_KDF_PARITY_FAILED',{status:503});
+   }
+  }
   if(path==='/legacy-limit'){
    try {
     const key=await crypto.subtle.importKey('raw',enc.encode('runtime-test-only'),'PBKDF2',false,['deriveBits']);
