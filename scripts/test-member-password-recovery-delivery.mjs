@@ -20,7 +20,7 @@ test('sends only trusted HTTPS reset link with 15-minute expiry wording',async()
   assert.equal(call.url,'https://api.resend.com/emails');
   const body=JSON.parse(call.opts.body);
   assert.deepEqual(body.to,[email]);
-  assert.match(body.text,/https:\/\/kindelora\.pages\.dev\/plus-account\.html\?reset=/);
+  assert.match(body.text,/https:\/\/kindelora\.pages\.dev\/recover-account\.html\?reset=/);
   assert.match(body.text,/15 minutes/);
   assert.doesNotMatch(body.text,/verify=/);
  }finally{globalThis.fetch=original;}
