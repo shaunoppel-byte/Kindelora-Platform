@@ -22,4 +22,8 @@ assert.match(ui,/Public registration coming soon/);
 assert.match(ui,/<button id="registration-submit" type="submit" disabled title="Email verification is being configured">/);
 assert.match(migration,/token_hash TEXT PRIMARY KEY/);
 assert.doesNotMatch(request+verify+delivery,/PAYFAST_PASSPHRASE|checkoutAvailable:\s*true/);
+for(const code of ['password_hash_started','password_salt_generated','password_salt_generation_failed','password_key_imported','password_key_import_failed','password_derivation_failed','password_hash_completed','verification_record_created','provider_delivery_failed','provider_accepted'])assert.ok(request.includes("audit('"+code+"')"),'missing privacy-safe diagnostic '+code);
+assert.match(request,/catch\s*\{\s*audit\('password_salt_generation_failed'\)/,'salt failure must be isolated');
+assert.match(request,/catch\s*\{\s*audit\('password_key_import_failed'\)/,'key import failure must be isolated');
+assert.match(request,/catch\s*\{\s*\/\/ Fixed diagnostic code only;[^]*?audit\('password_derivation_failed'\)/,'derivation failure must be isolated');
 console.log('PASS: fail-closed public registration security source contract');
