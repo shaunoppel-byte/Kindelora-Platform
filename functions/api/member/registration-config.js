@@ -12,9 +12,11 @@ export async function onRequestGet({env}){
   // Read-only, zero-row selects ensure production tables and required columns exist.
   // The query planner still resolves referenced column names on empty tables.
   await env.DB.batch([
-   env.DB.prepare('SELECT id,email_normalized,password_salt,password_hash,email_verified_at FROM members LIMIT 0'),
+   env.DB.prepare('SELECT id,email_normalized,password_salt,password_hash,email_verified_at,disabled_at FROM members LIMIT 0'),
    env.DB.prepare('SELECT token_hash,email_normalized,password_salt,password_hash,expires_at,consumed_at,consumed_nonce FROM member_email_verifications LIMIT 0'),
-   env.DB.prepare('SELECT key_hash,attempts,window_started_at,blocked_until FROM member_registration_limits LIMIT 0')
+   env.DB.prepare('SELECT key_hash,attempts,window_started_at,blocked_until FROM member_registration_limits LIMIT 0'),
+   env.DB.prepare('SELECT token_hash,member_id,expires_at FROM member_sessions LIMIT 0'),
+   env.DB.prepare('SELECT key_hash,failures,locked_until FROM member_login_limits LIMIT 0')
   ]);
  } catch {
   console.info('member_registration_readiness','schema_unavailable');
