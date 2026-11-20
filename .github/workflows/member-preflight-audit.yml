@@ -1,0 +1,19 @@
+name: Member registration preflight audit
+on:
+  pull_request:
+    paths:
+      - 'functions/api/member/registration-request.js'
+      - 'scripts/test-member-preflight-audit.mjs'
+      - '.github/workflows/member-preflight-audit.yml'
+  workflow_dispatch:
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-member-preflight-audit.mjs

@@ -12,7 +12,11 @@ async function turnstile(env,token,ip){
  const result=await r.json();return result.success===true&&result.hostname==='kindelora.pages.dev';
 }
 export async function onRequestPost({request,env}){
- if(env?.PUBLIC_REGISTRATION_ENABLED!=='true'||!ready(env)||typeof env?.RESEND_API_KEY!=='string'||typeof env?.REGISTRATION_FROM_EMAIL!=='string')return reply({error:'Public registration is not configured'},503);
+ if(env?.PUBLIC_REGISTRATION_ENABLED!=='true'||!ready(env)||typeof env?.RESEND_API_KEY!=='string'||typeof env?.REGISTRATION_FROM_EMAIL!=='string'){
+  // Privacy-safe preflight signal: never expose which secret/binding is missing.
+  audit('registration_preflight_unavailable');
+  return reply({error:'Public registration is not configured'},503);
+ }
  if(!originOK(request))return reply({error:'Invalid origin'},403);
  if(!(request.headers.get('content-type')||'').startsWith('application/json'))return reply({error:'JSON required'},415);
  if(Number(request.headers.get('content-length')||0)>4096)return reply({error:'Request too large'},413);
