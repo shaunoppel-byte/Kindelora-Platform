@@ -18,12 +18,18 @@ export async function onRequestPost({request,env}){
  try{
   for(const keyInput of ['recovery:email:'+email,'recovery:ip:'+ip]){
    const key=await hash(keyInput+':'+env.MEMBER_AUTH_PEPPER);
-   const limit=await env.DB.prepare('SELECT attempts,window_started_at,blocked_until FROM member_password_reset_limits WHERE key_hash=?').bind(key).first();
-   if(limit?.blocked_until&&limit.blocked_until>nowIso)return generic();
-   const inWindow=typeof limit?.window_started_at==='string'&&limit.window_started_at>windowStart;
-   const attempts=inWindow?(limit.attempts||0)+1:1;
-   await env.DB.prepare('INSERT INTO member_password_reset_limits(key_hash,attempts,window_started_at,blocked_until) VALUES(?,?,?,?) ON CONFLICT(key_hash) DO UPDATE SET attempts=excluded.attempts,window_started_at=excluded.window_started_at,blocked_until=excluded.blocked_until').bind(key,attempts,inWindow?limit.window_started_at:nowIso,attempts>3?blockedUntil:null).run();
-   if(attempts>3)return generic();
+   // Atomic UPSERT: concurrent requests cannot read the same old attempt count.
+   // Existing blocks remain blocked; stale windows reset to one attempt.
+   const limit=await env.DB.prepare(`INSERT INTO member_password_reset_limits(key_hash,attempts,window_started_at,blocked_until)
+     VALUES(?,1,?,NULL)
+     ON CONFLICT(key_hash) DO UPDATE SET
+       attempts=CASE WHEN member_password_reset_limits.blocked_until>? THEN 4
+         WHEN member_password_reset_limits.window_started_at>? THEN member_password_reset_limits.attempts+1 ELSE 1 END,
+       window_started_at=CASE WHEN member_password_reset_limits.window_started_at>? THEN member_password_reset_limits.window_started_at ELSE excluded.window_started_at END,
+       blocked_until=CASE WHEN member_password_reset_limits.blocked_until>? THEN member_password_reset_limits.blocked_until
+         WHEN member_password_reset_limits.window_started_at>? AND member_password_reset_limits.attempts>=3 THEN ? ELSE NULL END
+     RETURNING attempts,blocked_until`).bind(key,nowIso,nowIso,windowStart,windowStart,nowIso,windowStart,blockedUntil).first();
+   if(!limit||limit.attempts>3||(limit.blocked_until&&limit.blocked_until>nowIso))return generic();
   }
   const member=await env.DB.prepare('SELECT id FROM members WHERE email_normalized=? AND email_verified_at IS NOT NULL AND disabled_at IS NULL').bind(email).first();
   if(!member)return generic();
