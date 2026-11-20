@@ -1,0 +1,22 @@
+name: PayFast provider confirmation contract
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'functions/_lib/payfast-provider-confirmation.js'
+      - 'scripts/test-payfast-provider-confirmation.mjs'
+      - '.github/workflows/payfast-provider-confirmation.yml'
+  pull_request:
+    paths:
+      - 'functions/_lib/payfast-provider-confirmation.js'
+      - 'scripts/test-payfast-provider-confirmation.mjs'
+      - '.github/workflows/payfast-provider-confirmation.yml'
+jobs:
+  confirmation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-payfast-provider-confirmation.mjs
