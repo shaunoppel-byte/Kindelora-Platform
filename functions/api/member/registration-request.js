@@ -34,7 +34,22 @@ export async function onRequestPost({request,env}){
   const existing=await env.DB.prepare('SELECT id FROM members WHERE email_normalized=?').bind(email).first();
   if(existing){audit('existing_account');return generic();}
   audit('password_hash_started');
-  const salt=random(),keyMaterial=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveBits']);
+  // Stage-only diagnostics; never log member data, salt, password or exception text.
+  let salt,keyMaterial;
+  try {
+   salt=random();
+   audit('password_salt_generated');
+  } catch {
+   audit('password_salt_generation_failed');
+   return reply({error:'Registration temporarily unavailable'},503);
+  }
+  try {
+   keyMaterial=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveBits']);
+   audit('password_key_imported');
+  } catch {
+   audit('password_key_import_failed');
+   return reply({error:'Registration temporarily unavailable'},503);
+  }
   let derived;
   try {
    derived=await crypto.subtle.deriveBits({name:'PBKDF2',salt:new TextEncoder().encode(salt),iterations:310000,hash:'SHA-256'},keyMaterial,256);
