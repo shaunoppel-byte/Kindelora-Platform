@@ -7,9 +7,11 @@ test('verified member can login and receive secure session, without PLUS entitle
  const priorCrypto=globalThis.crypto;
  try{
   if(!globalThis.crypto)Object.defineProperty(globalThis,'crypto',{configurable:true,value:webcrypto});
-  const password='offline-only-test-password',salt='offline-only-salt';
-  const key=await crypto.subtle.importKey('raw',new TextEncoder().encode(password),'PBKDF2',false,['deriveBits']);
-  const passwordHash=Array.from(new Uint8Array(await crypto.subtle.deriveBits({name:'PBKDF2',salt:new TextEncoder().encode(salt),iterations:310000,hash:'SHA-256'},key,256)),b=>b.toString(16).padStart(2,'0')).join('');
+  const password='offline-only-test-password',salt='v2:offline-only-salt';
+  const pepperKey=await crypto.subtle.importKey('raw',new TextEncoder().encode('p'.repeat(40)),{name:'HMAC',hash:'SHA-256'},false,['sign']);
+  const peppered=await crypto.subtle.sign('HMAC',pepperKey,new TextEncoder().encode(password));
+  const key=await crypto.subtle.importKey('raw',peppered,'PBKDF2',false,['deriveBits']);
+  const passwordHash=Array.from(new Uint8Array(await crypto.subtle.deriveBits({name:'PBKDF2',salt:new TextEncoder().encode(salt),iterations:100000,hash:'SHA-256'},key,256)),b=>b.toString(16).padStart(2,'0')).join('');
   let sessionCreated=false,rateLimitCleared=false;
   const DB={prepare(sql){return {bind(...args){return {
    async first(){
