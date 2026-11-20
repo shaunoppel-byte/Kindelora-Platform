@@ -8,6 +8,7 @@ on:
       - 'scripts/test-member-pbkdf2-compatibility.mjs'
       - 'scripts/test-member-password-migration.mjs'
       - 'scripts/test-member-v2-auth-parity.mjs'
+      - 'scripts/test-member-login-handler-integration.mjs'
       - '.github/workflows/member-pbkdf2-compatibility.yml'
   workflow_dispatch:
 jobs:
@@ -20,4 +21,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test scripts/test-member-pbkdf2-compatibility.mjs scripts/test-member-password-migration.mjs scripts/test-member-v2-auth-parity.mjs
+      - run: node --test scripts/test-member-pbkdf2-compatibility.mjs scripts/test-member-password-migration.mjs scripts/test-member-v2-auth-parity.mjs scripts/test-member-login-handler-integration.mjs
