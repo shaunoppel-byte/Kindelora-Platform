@@ -28,7 +28,7 @@ for(const path of [
  '/assets/premium/private.json','/assets/members/content.json',
  '/finance','/api/owner-finance','/admin-finance',
  '/assets/audio/heygen-speech-2.mp3','/PLUS/checkout',
- '/%70lus','/api/%70lus/checkout'
+ '/%70lus'
 ]) {
   const {response,passed}=await request(path);
   assert.equal(passed,false,path+' must never reach static handler');
@@ -37,11 +37,13 @@ for(const path of [
 }
 // Checkout is intentionally routed to a dedicated fail-closed handler (HTTP 503),
 // rather than blocked by middleware. Never interpret routing as charging.
-for(const method of ['GET','POST']) {
- const {response,passed}=await request('/api/plus/checkout',{method});
- assert.equal(passed,true,'checkout must reach dedicated handler');
- // The mock next() returns 200; actual dedicated checkout handler is tested separately.
- assert.equal(response.status,200);
+for(const path of ['/api/plus/checkout','/api/%70lus/checkout']) {
+ for(const method of ['GET','POST']) {
+  const {response,passed}=await request(path,{method});
+  assert.equal(passed,true,path+' must reach dedicated disabled checkout handler');
+  // Mock next() returns 200; the dedicated handler's HTTP 503 is tested separately.
+  assert.equal(response.status,200);
+ }
 }
 for(const path of ['/api/%2fplus/checkout','/api/%5cplus','/api/%252fplus','/api/%00plus']) {
   const {response,passed}=await request(path);
