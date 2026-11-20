@@ -62,7 +62,14 @@ export async function onRequestPost({request,env}){
    audit('password_derivation_failed');
    return reply({error:'Registration temporarily unavailable'},503);
   }
-  const passwordHash=Array.from(new Uint8Array(derived),b=>b.toString(16).padStart(2,'0')).join('');
+  let passwordHash;
+  try {
+   passwordHash=Array.from(new Uint8Array(derived),b=>b.toString(16).padStart(2,'0')).join('');
+   if(!/^[a-f0-9]{64}$/.test(passwordHash))throw Error('Invalid password hash output');
+  } catch {
+   audit('password_hash_encoding_failed');
+   return reply({error:'Registration temporarily unavailable'},503);
+  }
   audit('password_hash_completed');
   let token,tokenHash,expiresAt;
   try {
