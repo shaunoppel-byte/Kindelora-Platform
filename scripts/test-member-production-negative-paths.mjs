@@ -26,8 +26,14 @@ test('production member routes reject unsafe requests without creating accounts'
  });
  assert.equal(invalidDetails.status,400,'registration must reject invalid details before Turnstile');
  const checkout=await probe('/api/plus/checkout');
- assert.equal(checkout.status,503,'checkout must remain disabled until payment E2E approval');
- const payment=await checkout.json();
- assert.equal(payment.error,'checkout_unavailable');
+ // Global Pages middleware intentionally denies /api/plus/* before checkout.js executes.
+ assert.equal(checkout.status,403,'global middleware must deny PLUS checkout');
+ const checkoutBody=await checkout.text();
+ assert.match(checkoutBody,/PLUS access requires verified membership and is not yet available/);
+ const status=await probe('/api/plus/status');
+ assert.equal(status.status,200,'public PLUS status endpoint unavailable');
+ const payment=await status.json();
+ assert.equal(payment.checkoutAvailable,false);
+ assert.equal(payment.membershipVerificationAvailable,false);
  console.info('PASS: live readiness and negative-path route guards; no customer signup/payment attempted');
 });
