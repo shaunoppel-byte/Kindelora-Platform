@@ -1,0 +1,16 @@
+name: PayFast D1 idempotency contract
+on:
+  pull_request:
+    paths:
+      - 'migrations/0001_plus_persistence.sql'
+      - 'scripts/test-payfast-d1-idempotency.py'
+      - '.github/workflows/payfast-d1-idempotency.yml'
+  workflow_dispatch:
+jobs:
+  offline-d1:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/test-payfast-d1-idempotency.py
