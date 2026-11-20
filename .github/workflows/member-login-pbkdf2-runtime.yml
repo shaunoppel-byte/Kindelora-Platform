@@ -1,0 +1,22 @@
+name: Member login PBKDF2 runtime failure
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'functions/api/member/login.js'
+      - 'scripts/test-member-login-pbkdf2-runtime.mjs'
+      - '.github/workflows/member-login-pbkdf2-runtime.yml'
+  pull_request:
+    paths:
+      - 'functions/api/member/login.js'
+      - 'scripts/test-member-login-pbkdf2-runtime.mjs'
+      - '.github/workflows/member-login-pbkdf2-runtime.yml'
+jobs:
+  crypto-failure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-member-login-pbkdf2-runtime.mjs
