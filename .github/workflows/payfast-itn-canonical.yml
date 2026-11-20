@@ -1,0 +1,22 @@
+name: PayFast ITN canonicalization offline
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'functions/_lib/payfast-itn-canonical.js'
+      - 'scripts/test-payfast-itn-canonical.mjs'
+      - '.github/workflows/payfast-itn-canonical.yml'
+  pull_request:
+    paths:
+      - 'functions/_lib/payfast-itn-canonical.js'
+      - 'scripts/test-payfast-itn-canonical.mjs'
+      - '.github/workflows/payfast-itn-canonical.yml'
+jobs:
+  offline-canonicalization:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-payfast-itn-canonical.mjs
