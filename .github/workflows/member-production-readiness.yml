@@ -1,0 +1,21 @@
+name: Member production readiness (read-only)
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: '17 5 * * *'
+  pull_request:
+    paths:
+      - 'scripts/test-member-production-readiness.mjs'
+      - '.github/workflows/member-production-readiness.yml'
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 3
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-member-production-readiness.mjs
