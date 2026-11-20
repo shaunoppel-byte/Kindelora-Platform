@@ -1,0 +1,17 @@
+name: Member consumed nonce migration contract
+on:
+  pull_request:
+    paths:
+      - 'migrations/0002_member_verified_email.sql'
+      - 'migrations/0003_member_verification_consumed_nonce.sql'
+      - 'scripts/test-member-consumed-nonce-migration.py'
+      - '.github/workflows/member-consumed-nonce-contract.yml'
+  workflow_dispatch:
+jobs:
+  migration:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/test-member-consumed-nonce-migration.py
