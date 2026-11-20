@@ -9,6 +9,7 @@ on:
       - 'plus-account.html'
       - 'migrations/0002_member_verified_email.sql'
       - 'scripts/test-public-registration-security-contract.mjs'
+      - 'scripts/test-resend-verification-delivery.mjs'
       - '.github/workflows/public-registration-security.yml'
   pull_request:
     paths:
@@ -18,6 +19,7 @@ on:
       - 'plus-account.html'
       - 'migrations/0002_member_verified_email.sql'
       - 'scripts/test-public-registration-security-contract.mjs'
+      - 'scripts/test-resend-verification-delivery.mjs'
       - '.github/workflows/public-registration-security.yml'
 jobs:
   contract:
@@ -28,3 +30,4 @@ jobs:
         with:
           node-version: '22'
       - run: node scripts/test-public-registration-security-contract.mjs
+      - run: node scripts/test-resend-verification-delivery.mjs
