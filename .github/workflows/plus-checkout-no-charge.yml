@@ -3,6 +3,8 @@ on:
   pull_request:
     paths:
       - 'functions/api/plus/checkout.js'
+      - 'functions/api/plus/status.js'
+      - 'scripts/test-plus-status-checkout-consistency.mjs'
       - 'scripts/test-plus-checkout-no-charge.mjs'
       - '.github/workflows/plus-checkout-no-charge.yml'
   workflow_dispatch:
@@ -16,4 +18,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test scripts/test-plus-checkout-no-charge.mjs
+      - run: node --test scripts/test-plus-checkout-no-charge.mjs scripts/test-plus-status-checkout-consistency.mjs
