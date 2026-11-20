@@ -1,7 +1,5 @@
 // Offline candidate verification; does not establish Cloudflare workerd compatibility.
 import assert from 'node:assert/strict';
-import {webcrypto} from 'node:crypto';
-globalThis.crypto=webcrypto;
 const {newPasswordSalt,derivePassword}=await import('../functions/_lib/member-password-kdf-candidate.js');
 const salt=newPasswordSalt();
 assert.match(salt,/^v2:[a-f0-9]{64}$/);
