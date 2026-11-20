@@ -13,6 +13,8 @@ on:
       - 'scripts/test-member-password-recovery-primitives.mjs'
       - 'functions/_lib/member-password-recovery-delivery.js'
       - 'scripts/test-member-password-recovery-delivery.mjs'
+      - 'migrations/0005_member_password_recovery.sql'
+      - 'scripts/test-member-password-recovery-migration.mjs'
       - '.github/workflows/member-pbkdf2-compatibility.yml'
   workflow_dispatch:
 jobs:
@@ -25,4 +27,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test scripts/test-member-pbkdf2-compatibility.mjs scripts/test-member-password-migration.mjs scripts/test-member-v2-auth-parity.mjs scripts/test-member-login-handler-integration.mjs scripts/test-member-password-recovery-primitives.mjs scripts/test-member-password-recovery-delivery.mjs
+      - run: node --test scripts/test-member-pbkdf2-compatibility.mjs scripts/test-member-password-migration.mjs scripts/test-member-v2-auth-parity.mjs scripts/test-member-login-handler-integration.mjs scripts/test-member-password-recovery-primitives.mjs scripts/test-member-password-recovery-delivery.mjs scripts/test-member-password-recovery-migration.mjs
