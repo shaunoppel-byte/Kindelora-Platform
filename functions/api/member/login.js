@@ -13,7 +13,7 @@ async function legacyDerive(password,salt){
 }
 function same(a,b){if(typeof a!=="string"||typeof b!=="string"||a.length!==b.length)return false;let n=0;for(let i=0;i<a.length;i++)n|=a.charCodeAt(i)^b.charCodeAt(i);return n===0;}
 export async function onRequestPost({request,env}){
- if(!ready(env))return reply({error:"Member access is not configured"},503);
+ if(!ready(env)){console.info("member_login_outcome","auth_not_configured");return reply({error:"Member access is not configured"},503);}
  if(!originOK(request))return reply({error:"Invalid origin"},403);
  if(!(request.headers.get("content-type")||"").startsWith("application/json"))return reply({error:"JSON required"},415);
  let data;try{data=await request.json()}catch{return reply({error:"Invalid JSON"},400);}
@@ -21,7 +21,7 @@ export async function onRequestPost({request,env}){
  if(email.length>254||!/^\S+@\S+\.\S+$/.test(email)||typeof password!=="string"||password.length>1024)return reply({error:"Invalid credentials"},401);
  const key=await hash(email+env.MEMBER_AUTH_PEPPER),now=Date.now();
  const limit=await env.DB.prepare("SELECT failures,locked_until FROM member_login_limits WHERE key_hash=?").bind(key).first();
- if(limit?.locked_until&&Date.parse(limit.locked_until)>now)return reply({error:"Too many attempts; try later"},429);
+ if(limit?.locked_until&&Date.parse(limit.locked_until)>now){console.info("member_login_outcome","rate_limit_active");return reply({error:"Too many attempts; try later"},429);}
  const user=await env.DB.prepare("SELECT id,email_normalized,password_salt,password_hash,email_verified_at,disabled_at FROM members WHERE email_normalized=?").bind(email).first();
  let candidate;
  try {candidate=user?.password_salt?.startsWith('v2:')?await derive(password,user.password_salt,env.MEMBER_AUTH_PEPPER):await legacyDerive(password,user?.password_salt||'invalid-member-placeholder');}
@@ -47,10 +47,11 @@ export async function onRequestPost({request,env}){
   const newSalt='v2:'+random();
   const newHash=await derive(password,newSalt,env.MEMBER_AUTH_PEPPER);
   const upgraded=await env.DB.prepare("UPDATE members SET password_salt=?,password_hash=? WHERE id=? AND password_salt=? AND password_hash=?").bind(newSalt,newHash,user.id,user.password_salt,user.password_hash).run();
-  if(upgraded?.meta?.changes!==1)return reply({error:"Please retry sign-in"},409);
+  if(upgraded?.meta?.changes!==1){console.info("member_login_outcome","legacy_upgrade_conflict");return reply({error:"Please retry sign-in"},409);}
  }
  await env.DB.prepare("DELETE FROM member_login_limits WHERE key_hash=?").bind(key).run();
  const token=random();
  await env.DB.prepare("INSERT INTO member_sessions(token_hash,member_id,expires_at) VALUES(?,?,?)").bind(await hash(token+env.MEMBER_AUTH_PEPPER),user.id,new Date(now+604800000).toISOString()).run();
+ console.info("member_login_outcome","login_success");
  return reply({authenticated:true,member:{id:user.id,email:user.email_normalized}},200,{"set-cookie":cookie(token)});
 }
