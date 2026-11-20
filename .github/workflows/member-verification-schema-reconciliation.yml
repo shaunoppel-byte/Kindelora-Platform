@@ -1,0 +1,30 @@
+name: Member verification schema reconciliation
+on:
+  pull_request:
+    paths:
+      - 'scripts/audit_member_verification_schema.py'
+      - '.github/workflows/member-verification-schema-reconciliation.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'scripts/audit_member_verification_schema.py'
+      - '.github/workflows/member-verification-schema-reconciliation.yml'
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Reproduce legacy migration conflict and validate repair instructions
+        run: |
+          set -eu
+          python3 - <<'PY'
+          import sqlite3
+          db=sqlite3.connect('/tmp/legacy-verification.sqlite')
+          db.executescript(open('migrations/0002_member_email_verifications.sql').read())
+          db.commit()
+          PY
+          python3 scripts/audit_member_verification_schema.py /tmp/legacy-verification.sqlite --emit-repair > /tmp/schema-audit.txt && { echo 'Expected legacy audit to fail'; exit 1; } || true
+          grep -q 'password_hash' /tmp/schema-audit.txt
+          grep -q 'ADD COLUMN password_salt' /tmp/schema-audit.txt
+          grep -q 'ADD COLUMN password_hash' /tmp/schema-audit.txt
+          echo 'PASS: legacy schema detected and repair statements generated without mutations'
