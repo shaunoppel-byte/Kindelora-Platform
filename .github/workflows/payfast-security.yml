@@ -1,0 +1,35 @@
+name: PayFast P0 Security Regression
+on:
+  pull_request:
+    paths:
+      - 'functions/api/checkout-preflight.js'
+      - 'functions/_lib/plus-pricing.mjs'
+      - 'functions/_lib/payfast-itn-contract.mjs'
+      - 'tests/checkout-preflight.test.mjs'
+      - 'tests/plus-pricing.test.mjs'
+      - 'tests/payfast-itn-contract.test.mjs'
+      - '.github/workflows/payfast-security.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'functions/api/checkout-preflight.js'
+      - 'functions/_lib/plus-pricing.mjs'
+      - 'functions/_lib/payfast-itn-contract.mjs'
+      - 'tests/checkout-preflight.test.mjs'
+      - 'tests/plus-pricing.test.mjs'
+      - 'tests/payfast-itn-contract.test.mjs'
+      - '.github/workflows/payfast-security.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  payfast-security:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify pricing, ITN and authenticated checkout safeguards
+        run: node --test tests/plus-pricing.test.mjs tests/payfast-itn-contract.test.mjs tests/checkout-preflight.test.mjs
