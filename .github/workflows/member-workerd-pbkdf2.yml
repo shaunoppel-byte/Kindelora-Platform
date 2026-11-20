@@ -1,0 +1,20 @@
+name: Member Cloudflare workerd PBKDF2
+on:
+  pull_request:
+    paths:
+      - 'scripts/test-member-workerd-pbkdf2.mjs'
+      - '.github/workflows/member-workerd-pbkdf2.yml'
+  workflow_dispatch:
+jobs:
+  workerd:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    timeout-minutes: 8
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: npm install --no-save --ignore-scripts --package-lock=false miniflare@3
+      - run: node --test scripts/test-member-workerd-pbkdf2.mjs
