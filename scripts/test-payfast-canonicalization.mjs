@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import {createHash} from 'node:crypto';
-import {hostedCheckoutSignatureInput,restApiSignatureInput,payfastEncode} from '../functions/_lib/payfast-canonicalization.js';
+import {hostedCheckoutSignatureInput,restApiSignatureInput,payfastEncode} from '../functions/_lib/payfast-canonicalization.mjs';
 test('hosted preserves input order, REST sorts keys', () => {
   const fields={merchant_key:'key',merchant_id:'123',amount:'10.00'};
   assert.equal(hostedCheckoutSignatureInput(fields),'merchant_key=key&merchant_id=123&amount=10.00');
