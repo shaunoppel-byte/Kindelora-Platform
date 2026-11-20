@@ -4,6 +4,7 @@
 //        node scripts/apply-approved-affirmation-artwork.mjs --write
 // The source catalogue is never modified unless every entry passes validation.
 import fs from 'node:fs';
+import crypto from 'node:crypto';
 const root=new URL('../',import.meta.url);
 const manifest=JSON.parse(fs.readFileSync(new URL('quality/affirmation-artwork-remediation.json',root),'utf8'));
 const sourceUrl=new URL('affirmation-library.js',root);
@@ -19,6 +20,7 @@ if(entries.length!==400)errors.push('Expected 400 catalogue entries; got '+entri
 if(approved.size!==400)errors.push('Expected 400 unique manifest IDs');
 const urls=new Set();
 const replacements=new Map();
+const binaryDigests=new Map();
 for(const match of entries){
  const id=match[2],current=match[10],item=approved.get(id);
  if(!item){errors.push(id+': missing manifest record');continue}
@@ -36,6 +38,13 @@ for(const match of entries){
  if(target.startsWith('/')){
   const file=new URL('.'+target,root);
   if(!fs.existsSync(file))errors.push(id+': local asset missing '+target);
+  else {
+   const bytes=fs.readFileSync(file);
+   const digest=crypto.createHash('sha256').update(bytes).digest('hex');
+   if(binaryDigests.has(digest))errors.push(id+': duplicate underlying image binary shared with '+binaryDigests.get(digest));
+   else binaryDigests.set(digest,id);
+   if(bytes.length<30000)errors.push(id+': suspiciously small image binary ('+bytes.length+' bytes)');
+  }
  }
  replacements.set(id,target);
 }
