@@ -105,7 +105,13 @@ export async function onRequestPost({request,env}){
    await sendRegistrationVerification(env,{email,token,origin:new URL(request.url).origin});
   } catch {
    audit('provider_delivery_failed');
-   await env.DB.prepare('DELETE FROM member_email_verifications WHERE token_hash=? AND consumed_at IS NULL').bind(tokenHash).run();
+   try {
+    await env.DB.prepare('DELETE FROM member_email_verifications WHERE token_hash=? AND consumed_at IS NULL').bind(tokenHash).run();
+   } catch {
+    // Do not mask the provider failure with an unhandled cleanup rejection.
+    // The unverified token still expires after 15 minutes; never activate it.
+    audit('provider_failure_cleanup_failed');
+   }
    return reply({error:'Verification email delivery is temporarily unavailable'},503);
   }
   audit('provider_accepted');
