@@ -20,7 +20,7 @@ test('sends only trusted HTTPS reset link with 15-minute expiry wording',async()
   assert.equal(call.url,'https://api.resend.com/emails');
   const body=JSON.parse(call.opts.body);
   assert.deepEqual(body.to,[email]);
-  assert.match(body.text,/https:\/\/kindelora\.pages\.dev\/recover-account\.html\?reset=/);
+  assert.match(body.text,/https:\/\/kindelora\.pages\.dev\/recover-account\.html#reset=/);
   assert.match(body.text,/15 minutes/);
   assert.doesNotMatch(body.text,/verify=/);
  }finally{globalThis.fetch=original;}
@@ -28,4 +28,11 @@ test('sends only trusted HTTPS reset link with 15-minute expiry wording',async()
 test('provider failure fails closed without claiming delivery',async()=>{
  const original=globalThis.fetch;globalThis.fetch=async()=>({ok:false,status:503});
  try{await assert.rejects(sendPasswordRecovery(env,{email,token,origin}));}finally{globalThis.fetch=original;}
+});
+
+test('verified display-name sender is accepted without changing registration',async()=>{
+ const original=globalThis.fetch;let sent;
+ globalThis.fetch=async(_url,opts)=>{sent=JSON.parse(opts.body);return {ok:true,json:async()=>({id:'synthetic-id'})}};
+ try{assert.deepEqual(await sendPasswordRecovery({...env,REGISTRATION_FROM_EMAIL:'KINDELORA <support@example.com>'},{email,token,origin}),{accepted:true});assert.equal(sent.from,'KINDELORA <support@example.com>');}
+ finally{globalThis.fetch=original;}
 });
