@@ -1,0 +1,18 @@
+name: Member PBKDF2 failure safety
+on:
+  pull_request:
+    paths:
+      - 'functions/api/member/registration-request.js'
+      - 'scripts/test-member-pbkdf2-failure.mjs'
+      - '.github/workflows/member-pbkdf2-failure.yml'
+  push:
+    branches: [main]
+jobs:
+  failure:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-member-pbkdf2-failure.mjs
