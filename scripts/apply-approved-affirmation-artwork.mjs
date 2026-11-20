@@ -11,7 +11,8 @@ const source=fs.readFileSync(sourceUrl,'utf8');
 const start=source.indexOf('const items=['),end=source.indexOf('];',start);
 if(start<0||end<0)throw Error('Catalogue not found');
 const section=source.slice(start,end);
-const entries=[...section.matchAll(/\{id:(['"])(.*?)\1,title:(['"])(.*?)\3,text:(['"])(.*?)\5,tags:(['"])(.*?)\7,image:(['"])(.*?)\9\}/g)];
+// Allow optional trailing catalogue fields (for example precomposedCard) without dropping an affirmation.
+const entries=[...section.matchAll(/\{id:(['"])(.*?)\1,title:(['"])(.*?)\3,text:(['"])(.*?)\5,tags:(['"])(.*?)\7,image:(['"])(.*?)\9(?:,[^}]*?)?\}/g)];
 const approved=new Map(manifest.entries.map(e=>[e.id,e]));
 const errors=[];
 if(entries.length!==400)errors.push('Expected 400 catalogue entries; got '+entries.length);
