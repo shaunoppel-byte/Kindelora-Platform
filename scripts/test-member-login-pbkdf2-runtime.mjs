@@ -14,7 +14,7 @@ test('unsupported PBKDF2 rejects login safely without creating session or rate-l
   const request=new Request('https://kindelora.pages.dev/api/member/login',{method:'POST',headers:{origin:'https://kindelora.pages.dev','content-type':'application/json'},body:JSON.stringify({email:'offline@example.invalid',password:'test-password'})});
   const response=await onRequestPost({request,env});
   assert.equal(response.status,503);assert.equal(created,false);
-  assert.deepEqual(logs,[['member_login_outcome','password_derivation_failed']]);
+  assert.deepEqual(logs,[['member_login_outcome','password_derivation_failed','missing_account']]);
   assert.equal(response.headers.get('set-cookie'),null);
  }finally{console.info=priorLog;if(prior)Object.defineProperty(globalThis,'crypto',{configurable:true,value:prior});else delete globalThis.crypto;}
 });
