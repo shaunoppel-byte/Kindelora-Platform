@@ -1,0 +1,17 @@
+name: P0 recovery CSP regression
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  recovery-csp:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Check external recovery script and strict CSP
+        run: node scripts/test-p0-recovery-csp.mjs
