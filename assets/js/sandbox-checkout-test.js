@@ -8,7 +8,10 @@ button.addEventListener('click',async()=>{
   const contentType=response.headers.get('content-type')||'';
   if(!contentType.toLowerCase().includes('application/json')){
    status.dataset.state='error';status.textContent='Checkout service returned an unexpected response (HTTP '+response.status+').';
-   details.textContent='Diagnostic: non_json_response · HTTP '+response.status+' · Content-Type: '+(contentType.slice(0,80)||'missing')+'. This usually indicates a routing or server configuration problem, not a card or plan selection issue.';
+   const ray=response.headers.get('cf-ray');
+   const server=response.headers.get('server');
+   const edgeInfo=[ray?'Cloudflare Ray ID: '+ray:null,server?'Server: '+server.slice(0,60):null].filter(Boolean).join(' · ');
+   details.textContent='Diagnostic: non_json_response · HTTP '+response.status+' · Content-Type: '+(contentType.slice(0,80)||'missing')+(edgeInfo?' · '+edgeInfo:'')+'. The checkout API did not return its expected JSON response. If this is HTTP 403, inspect Cloudflare Security Events for the Ray ID and request path /api/plus/sandbox-checkout. No payment was initiated.';
    return;
   }
   let result;try{result=await response.json()}catch{
