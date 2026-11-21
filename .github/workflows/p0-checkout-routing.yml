@@ -1,0 +1,26 @@
+name: P0 checkout middleware fail-closed routing
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'functions/_middleware.js'
+      - 'functions/api/plus/checkout.js'
+      - 'scripts/test-plus-middleware-routing.mjs'
+      - '.github/workflows/p0-checkout-routing.yml'
+  pull_request:
+    paths:
+      - 'functions/_middleware.js'
+      - 'functions/api/plus/checkout.js'
+      - 'scripts/test-plus-middleware-routing.mjs'
+      - '.github/workflows/p0-checkout-routing.yml'
+permissions:
+  contents: read
+jobs:
+  routing:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test scripts/test-plus-middleware-routing.mjs
