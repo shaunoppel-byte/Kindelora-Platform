@@ -5,7 +5,7 @@ import {issueTrustedSandboxFxQuote} from '../../_lib/payfast-sandbox-trusted-fx.
 import {prepareSandboxCheckout} from '../../_lib/payfast-sandbox-checkout-orchestration.js';
 const deny=(status,reason)=>reply({ok:false,reason,checkoutReady:false},status);
 export async function onRequestPost({request,env}={}){
- if(!request||!ready(env)||env.PAYFAST_SANDBOX_CHECKOUT_ENABLED==='false')return deny(503,'sandbox_checkout_disabled');
+ if(!request||!ready(env)||env.PAYFAST_SANDBOX_CHECKOUT_ENABLED!=='true')return deny(503,'sandbox_checkout_disabled');
  if(!originOK(request))return deny(403,'invalid_origin');
  if(!(request.headers.get('content-type')||'').startsWith('application/json'))return deny(415,'json_required');
  if(Number(request.headers.get('content-length')||0)>1024)return deny(413,'body_too_large');
