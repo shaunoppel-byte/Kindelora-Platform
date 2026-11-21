@@ -14,7 +14,11 @@ export function buildPayFastSandboxRedirect({order,merchantId,merchantKey,passph
  typeof passphrase!=='string'||passphrase.length<1||passphrase.length>256)return deny('merchant_configuration_unavailable');
  if(![returnUrl,cancelUrl,notifyUrl].every(validUrl))return deny('invalid_callback_url');
  const fields={merchant_id:merchantId,merchant_key:merchantKey,return_url:returnUrl,cancel_url:cancelUrl,notify_url:notifyUrl,
- m_payment_id:order.reference,amount:(order.zarMinor/100).toFixed(2),item_name:order.plan==='monthly'?'KINDELORA Plus Monthly':'KINDELORA Plus Annual'};
+ m_payment_id:order.reference,amount:(order.zarMinor/100).toFixed(2),item_name:order.plan==='monthly'?'KINDELORA Plus Monthly':'KINDELORA Plus Annual',
+ // PayFast recurring billing requires explicit subscription metadata; without
+ // these fields checkout is a once-off payment, not a subscription.
+ subscription_type:'1',frequency:order.plan==='monthly'?'3':'6',cycles:'0',
+ recurring_amount:(order.zarMinor/100).toFixed(2)};
  const pairs=Object.entries(fields).map(([k,v])=>k+'='+encode(v.trim()));
  pairs.push('passphrase='+encode(passphrase));
  return {ok:true,environment:'sandbox',action:'https://sandbox.payfast.co.za/eng/process',
