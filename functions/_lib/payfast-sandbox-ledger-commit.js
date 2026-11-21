@@ -14,6 +14,7 @@ export async function commitVerifiedSandboxLedger({db,decision,order}={}){
   // D1 batch atomicity is required: if an UPDATE matched no pending order,
   // the INSERT may already have committed. Never claim success in that case.
   if(!Array.isArray(result)||result.length!==2||
+   result[0]?.success!==true||result[1]?.success!==true||
    result[0]?.meta?.changes!==1||result[1]?.meta?.changes!==1)
    return deny('commit_unconfirmed');
   return {committed:true,grantEntitlement:false,reason:'ledger_committed'};
