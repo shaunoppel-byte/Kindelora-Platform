@@ -1,0 +1,14 @@
+name: P0 PayFast sandbox ledger schema contract
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  ledger-schema:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test review-only SQLite ledger uniqueness and constraints
+        run: python3 scripts/test-p0-payfast-ledger-schema.py
