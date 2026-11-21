@@ -20,3 +20,27 @@ CREATE TABLE IF NOT EXISTS payfast_sandbox_transactions (
  status TEXT NOT NULL CHECK(status='COMPLETE'),
  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Enforce ledger integrity in SQLite/D1, not only in JavaScript.
+-- The transaction INSERT must target exactly one pending order at the quoted amount.
+CREATE TRIGGER IF NOT EXISTS payfast_sandbox_transaction_pending_order
+BEFORE INSERT ON payfast_sandbox_transactions
+BEGIN
+ SELECT CASE WHEN NOT EXISTS (
+  SELECT 1 FROM payfast_sandbox_orders
+  WHERE order_reference=NEW.order_reference
+    AND status='pending'
+    AND zar_minor=NEW.paid_zar_minor
+ ) THEN RAISE(ABORT,'sandbox_order_not_pending_or_amount_mismatch') END;
+END;
+-- A paid state is valid only if its matching completed transaction is recorded.
+CREATE TRIGGER IF NOT EXISTS payfast_sandbox_paid_requires_transaction
+BEFORE UPDATE OF status ON payfast_sandbox_orders
+WHEN NEW.status='paid' AND OLD.status='pending'
+BEGIN
+ SELECT CASE WHEN NOT EXISTS (
+  SELECT 1 FROM payfast_sandbox_transactions
+  WHERE order_reference=NEW.order_reference
+    AND paid_zar_minor=NEW.zar_minor AND status='COMPLETE'
+ ) THEN RAISE(ABORT,'sandbox_paid_without_matching_transaction') END;
+END;
