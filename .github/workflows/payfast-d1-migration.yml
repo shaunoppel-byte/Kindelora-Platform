@@ -1,0 +1,16 @@
+name: PayFast D1 additive migration SQLite integration
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  migration:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/test-payfast-d1-migration.py
