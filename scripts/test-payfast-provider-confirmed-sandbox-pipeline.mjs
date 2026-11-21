@@ -1,0 +1,22 @@
+import assert from 'node:assert/strict';
+import {processProviderConfirmedSandboxItn as process} from '../functions/_lib/payfast-provider-confirmed-sandbox-pipeline.js';
+const raw=new URLSearchParams({m_payment_id:'order_12345678',pf_payment_id:'provider_12345678',payment_status:'COMPLETE',amount_gross:'170.00',merchant_id:'10000100',signature:'a'.repeat(32)}).toString();
+const contentType='application/x-www-form-urlencoded';
+const verification={signatureVerified:true,sourceVerified:true,quoteVerified:true,serverVerified:true};
+let dbCalls=0;
+const db={prepare(sql){dbCalls++;return {bind(){return {async first(){
+ if(sql.includes('FROM payfast_sandbox_orders WHERE'))return {order_reference:'order_12345678',member_id:'member_12345678',plan:'monthly',usd_minor:899,zar_minor:17000,fx_reference:'quote_12345678',status:'pending'};
+ if(sql.includes('FROM members WHERE'))return {id:'member_12345678',email_verified_at:'2026-11-21T00:00:00Z',disabled_at:null};
+ if(sql.includes('FROM payfast_sandbox_transactions'))return null;
+ throw Error('unexpected query');
+ }}}}},async batch(){return [{success:true,meta:{changes:1}},{success:true,meta:{changes:1}}]}};
+let calls=0;
+const provider=async(url,opts)=>{calls++;assert.equal(url,'https://sandbox.payfast.co.za/eng/query/validate');assert.equal(opts.method,'POST');return {status:200,ok:true,text:async()=> 'VALID'}};
+let result=await process({db,raw,contentType,expectedMerchantId:'10000100',verification:{...verification,serverVerified:false},fetchImpl:provider});
+assert.equal(result.committed,true);assert.equal(result.grantEntitlement,false);assert.equal(calls,1);
+const before=dbCalls;
+result=await process({db,raw,contentType,expectedMerchantId:'10000100',verification,fetchImpl:async()=>({status:200,ok:true,text:async()=> 'INVALID'})});
+assert.equal(result.committed,false);assert.equal(dbCalls,before);
+result=await process({db,raw,contentType,expectedMerchantId:'10000100',verification:{...verification,signatureVerified:false},fetchImpl:async()=>{throw Error('must not call')}});
+assert.equal(result.committed,false);
+console.log('PASS: sandbox pipeline independently confirms PayFast provider response; invalid provider cannot reach DB');
