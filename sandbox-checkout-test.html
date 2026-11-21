@@ -10,23 +10,4 @@
 <aside class="aside"><div class="section-tag">YOUR PEACE OF MIND</div><h2>A little reassurance.<br>Every step of the way.</h2><p>Your peace of mind matters. We are carefully validating the payment journey before inviting real subscriptions.</p><ol class="steps"><li><span class="num">1</span><span>Sign in to your verified KINDELORA account.</span></li><li><span class="num">2</span><span>Choose the membership you would like to test.</span></li><li><span class="num">3</span><span>Review the PayFast sandbox redirect and payment confirmation.</span></li></ol></aside></div>
 <div class="notice"><strong>Testing environment only.</strong> This page connects exclusively to PayFast sandbox. No actual payment will be collected and sandbox transactions do not activate PLUS membership. The displayed USD prices are plan references; the secure server calculates the ZAR test amount.</div></main>
 <footer><span>© KINDELORA · Kindness at heart.</span><span><a href="/privacy.html">Privacy</a> · <a href="/terms.html">Terms</a></span></footer>
-<script>
-let selectedPlan='monthly';
-const button=document.getElementById('start'),status=document.getElementById('status'),details=document.getElementById('details');
-document.querySelectorAll('[data-plan]').forEach(el=>el.addEventListener('click',()=>{selectedPlan=el.dataset.plan;document.querySelectorAll('[data-plan]').forEach(b=>b.setAttribute('aria-pressed',String(b===el)))}));
-button.addEventListener('click',async()=>{
- button.disabled=true;status.hidden=false;status.dataset.state='';status.textContent='Checking your secure sandbox checkout…';details.textContent='';
- try{
-  const response=await fetch('/api/plus/sandbox-checkout',{method:'POST',credentials:'same-origin',headers:{'content-type':'application/json'},body:JSON.stringify({plan:selectedPlan})});
-  const result=await response.json();
-  if(!response.ok||result.ok!==true){status.dataset.state='error';status.textContent='Sandbox checkout could not start (HTTP '+response.status+').';details.textContent='Diagnostic: '+String(result.reason||'unknown');return}
-  const redirect=result.redirect;
-  if(result.environment!=='sandbox'||redirect?.method!=='POST'||redirect.action!=='https://sandbox.payfast.co.za/eng/process'||!redirect.fields||typeof redirect.fields!=='object')throw Error('Unexpected sandbox redirect response');
-  status.dataset.state='success';status.textContent='Sandbox order created. Opening PayFast sandbox…';
-  const form=document.createElement('form');form.method='POST';form.action=redirect.action;
-  for(const [key,value] of Object.entries(redirect.fields)){if(typeof value!=='string')throw Error('Invalid sandbox field');const input=document.createElement('input');input.type='hidden';input.name=key;input.value=value;form.appendChild(input)}
-  document.body.appendChild(form);form.submit();
- }catch{status.dataset.state='error';status.textContent='The sandbox test could not continue.';details.textContent='Check your sign-in and connection, then try again.'}
- finally{button.disabled=false}
-});
-</script></body></html>
+<script src="/assets/js/sandbox-checkout-test.js" defer></script></body></html>
