@@ -1,0 +1,17 @@
+name: P0 PayFast sandbox atomic ledger contract
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  ledger-atomic:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test fail-closed ledger atomic SQL statement preparation
+        run: node scripts/test-p0-payfast-ledger-atomic.mjs
