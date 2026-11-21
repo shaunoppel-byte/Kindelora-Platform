@@ -1,0 +1,13 @@
+import assert from 'node:assert/strict';
+import {persistSandboxOrderAndQuote as persist} from '../functions/_lib/payfast-sandbox-order-quote-commit.js';
+const order={environment:'sandbox',status:'pending',reference:'order_12345678',memberId:'member_12345678',plan:'monthly',usdMinor:899,zarMinor:17000,settlementCurrency:'ZAR',fxReference:'quote_12345678',quoteExpiresAtMs:Date.now()+600000};
+let writes=0;
+const db={prepare(sql){return {bind(...args){return {sql,args}}}},async batch(stmts){writes++;assert.equal(stmts.length,2);assert.match(stmts[0].sql,/payfast_sandbox_orders/);assert.match(stmts[1].sql,/payfast_sandbox_fx_quotes/);return [{success:true,meta:{changes:1}},{success:true,meta:{changes:1}}]}};
+assert.equal((await persist({db,order})).persisted,true);
+assert.equal(writes,1);
+assert.equal((await persist({db,order:{...order,usdMinor:1}})).persisted,false);
+assert.equal((await persist({db,order:{...order,quoteExpiresAtMs:Date.now()-1}})).persisted,false);
+assert.equal(writes,1);
+assert.equal((await persist({db:{...db,batch:async()=>[{success:true,meta:{changes:1}},{success:false,meta:{changes:0}}]},order})).persisted,false);
+assert.equal((await persist({db:{...db,batch:async()=>{throw Error('duplicate')}},order})).persisted,false);
+console.log('PASS: pending sandbox order and FX quote persist together; invalid/partial results fail closed');
