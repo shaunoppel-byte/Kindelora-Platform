@@ -20,6 +20,9 @@ await check(req({body:'{' }),400);
 await check(req({type:'text/plain'}),415);
 await check(req({urlOverride:'https://attacker.example/api/plus/sandbox-checkout',origin:'https://attacker.example'}),403);
 await check(req(),503); // FX configuration missing: must fail closed before persistence.
+const missingOptIn=await onRequestPost({request:req(),env:{...env,PAYFAST_SANDBOX_CHECKOUT_ENABLED:undefined}});
+assert.equal(missingOptIn.status,503);
+assert.equal((await missingOptIn.json()).reason,'sandbox_checkout_disabled');
 const disabled=await onRequestPost({request:req(),env:{...env,PAYFAST_SANDBOX_CHECKOUT_ENABLED:'false'}});
 assert.equal(disabled.status,503);
 assert.equal((await onRequestGet()).status,405);
