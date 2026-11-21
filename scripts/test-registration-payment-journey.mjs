@@ -30,11 +30,24 @@ for(const body of [{plan:'monthly'},{plan:'annual'},{plan:'monthly',amount:0,cur
 }
 assert.equal((await subscription({request:new Request(base+'/api/plus/subscription'),env:unconfigured})).status,503);
 let nextCalled=false;
-for(const path of ['/api/plus/checkout','/api/plus/subscription','/premium','/members']){
+for(const path of ['/api/plus/subscription','/premium','/members']){
  const response=await middleware({request:new Request(base+path),next:()=>{nextCalled=true;return new Response('bypass')}});
  assert.equal(response.status,403,'protected route must be blocked: '+path);
 }
 assert.equal(nextCalled,false,'protected routes must not reach static assets');
+// Checkout routing is intentional: middleware delegates to a dedicated fail-closed handler.
+// Do not confuse successful routing with permission to charge.
+for(const method of ['GET','POST']){
+ let delegated=0;
+ const request=new Request(base+'/api/plus/checkout',{method});
+ const response=await middleware({request,next:()=>{
+  delegated++;
+  return checkout({request,env:unconfigured});
+ }});
+ assert.equal(delegated,1,'checkout must reach its disabled handler');
+ assert.equal(response.status,503,'checkout must remain unavailable');
+ assert.equal((await response.json()).error,'checkout_unavailable');
+}
 const readiness=await middleware({request:new Request(base+'/api/plus/status'),next:()=>{throw Error('readiness must be handled by guard')}});
 assert.equal(readiness.status,200);
 const status=await readiness.json();
