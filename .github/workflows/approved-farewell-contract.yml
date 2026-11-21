@@ -1,0 +1,17 @@
+name: Approved KINDELORA farewell contract
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  approved-farewell:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify exact approved artwork and secure logout flow
+        run: node scripts/test-approved-farewell.mjs
