@@ -16,6 +16,9 @@ export async function onRequestGet({request,env}={}){
   typeof env.PAYFAST_SANDBOX_MERCHANT_KEY==='string'&&env.PAYFAST_SANDBOX_MERCHANT_KEY.length>=8&&
   typeof env.PAYFAST_SANDBOX_PASSPHRASE==='string'&&env.PAYFAST_SANDBOX_PASSPHRASE.length>0;
  const sourceConfigured=typeof env.PAYFAST_SANDBOX_ALLOWED_CIDRS==='string'&&env.PAYFAST_SANDBOX_ALLOWED_CIDRS.length>0;
- const blockers=[...(!schema?['schema_incomplete']:[]),...(!merchantConfigured?['sandbox_merchant_configuration_missing']:[]),...(!sourceConfigured?['source_allowlist_missing']:[]),'trusted_fx_issuance_not_verified','sandbox_end_to_end_not_verified','production_checkout_disabled'];
- return reply({ready:false,checkoutReady:false,sandboxConfigurationReady:schema&&merchantConfigured&&sourceConfigured,blockers},503);
+ const fxEndpointConfigured=typeof env.PAYFAST_SANDBOX_FX_ENDPOINT==='string'&&(()=>{try{const u=new URL(env.PAYFAST_SANDBOX_FX_ENDPOINT);return u.protocol==='https:'&&!u.username&&!u.password&&!u.hash&&!u.search&&!u.port&&u.hostname!=='localhost'&&!u.hostname.endsWith('.local')}catch{return false}})();
+ const itnEnabled=env.PAYFAST_SANDBOX_ITN_ENABLED==='true';
+ const checkoutEnabled=env.PAYFAST_SANDBOX_CHECKOUT_ENABLED!=='false';
+ const blockers=[...(!schema?['schema_incomplete']:[]),...(!merchantConfigured?['sandbox_merchant_configuration_missing']:[]),...(!sourceConfigured?['source_allowlist_missing']:[]),...(!fxEndpointConfigured?['trusted_fx_endpoint_missing']:[]),...(!itnEnabled?['sandbox_notification_receiver_disabled']:[]),...(!checkoutEnabled?['sandbox_checkout_disabled']:[]),'trusted_fx_issuance_not_verified','sandbox_end_to_end_not_verified','production_checkout_disabled'];
+ return reply({ready:false,checkoutReady:false,sandboxConfigurationReady:schema&&merchantConfigured&&sourceConfigured&&fxEndpointConfigured&&itnEnabled&&checkoutEnabled,blockers},503);
 }
