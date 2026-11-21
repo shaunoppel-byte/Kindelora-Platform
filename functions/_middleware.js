@@ -37,6 +37,13 @@ export async function onRequest(context) {
       }
     });
   }
+  // Safe route probe: GET never initiates checkout. Return JSON here so a
+  // deployed middleware version can be distinguished from legacy PLUS guards.
+  if (path === '/api/plus/sandbox-checkout' && context.request.method === 'GET') {
+    return new Response(JSON.stringify({ok:false,reason:'method_not_allowed',route:'sandbox_checkout',probe:'middleware_v2'}), {
+      status:405,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store, private','Allow':'POST','X-Content-Type-Options':'nosniff'}
+    });
+  }
   // Route payment-initiation requests to their dedicated server-side handler.
   // This does NOT authorize a payment: checkout.js remains fail-closed until
   // signed requests, verified ITNs, durable orders and entitlements are ready.
