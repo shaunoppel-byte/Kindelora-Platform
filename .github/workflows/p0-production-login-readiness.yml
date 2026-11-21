@@ -1,0 +1,15 @@
+name: P0 production login readiness
+on:
+  workflow_dispatch:
+jobs:
+  production-login-readiness:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Read-only live login configuration, schema and crypto readiness
+        run: node scripts/test-p0-production-login-readiness.mjs
