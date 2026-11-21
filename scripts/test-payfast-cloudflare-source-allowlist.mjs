@@ -6,7 +6,7 @@ assert.equal(verify({request:request('192.0.2.10'),allowedCidrs:'192.0.2.10'}).v
 assert.equal(verify({request:request('192.0.3.10'),allowedCidrs:'192.0.2.0/24'}).verified,false);
 assert.equal(verify({request:request('192.0.2.10'),allowedCidrs:''}).verified,false);
 assert.equal(verify({request:request('192.0.2.10'),allowedCidrs:'192.0.2.1/24'}).verified,false);
-assert.equal(verify({request:request('192.0.2.10'),allowedCidrs:'0.0.0.0/0'}).verified,true); // operator must never configure wildcard
+assert.equal(verify({request:request('192.0.2.10'),allowedCidrs:'0.0.0.0/0'}).verified,false); // reject broad wildcard
 for(const ip of ['192.0.2.999','192.0.2.010','::1','192.0.2.10,192.0.2.11',null]){
  assert.equal(verify({request:request(ip),allowedCidrs:'192.0.2.0/24'}).verified,false);
 }
