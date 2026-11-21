@@ -7,7 +7,7 @@ const fetchImpl=async(url,options)=>{
  calls++;
  assert.equal(url,'https://rates.example.org/daily');
  assert.equal(options.method,'GET');
- assert.equal(options.redirect,'error');
+ assert.equal(options.redirect,'manual');
  return new Response(JSON.stringify({base:'USD',quote:'ZAR',rate:18,asOf}),{headers:{'content-type':'application/json'}});
 };
 for(const [plan,usdMinor,zarMinor] of [['monthly',899,16182],['annual',8999,161982]]){
@@ -24,3 +24,16 @@ const missing=await issueTrustedSandboxFxQuote({plan:'monthly',nowMs,reference:'
 assert.equal(missing.reason,'fx_configuration_missing');
 assert.equal(calls,2);
 console.log('PASS: server-only trusted USD/ZAR FX quote amounts and missing-provider fail-closed');
+
+// Cloudflare Workers supports manual redirect handling; never accept an FX redirect.
+let redirectedCalls=0;
+const redirected=await issueTrustedSandboxFxQuote({plan:'monthly',nowMs,reference:'fx_reference_123',fxEndpoint:'https://rates.example.org/daily',fetchImpl:async(_url,options)=>{
+ redirectedCalls++;
+ assert.equal(options.redirect,'manual');
+ return new Response(null,{status:302,headers:{location:'https://example.org/redirect','content-type':'application/json'}});
+}});
+assert.equal(redirected.ok,false);
+assert.equal(redirected.reason,'fx_provider_rejected');
+assert.equal(redirected.authorizesPayment,false);
+assert.equal(redirectedCalls,1);
+console.log('PASS: FX redirect rejected without following to another host');
