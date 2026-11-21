@@ -2,13 +2,14 @@
 // This test must remain green while checkout is unavailable.
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {onRequestGet as checkoutGet,onRequestPost as checkoutPost} from '../functions/api/plus/checkout.js';
 const source=readFileSync('functions/_middleware.js','utf8');
 const {onRequest}=await import('data:text/javascript,'+encodeURIComponent(source));
 async function request(path, options={}) {
   let passed=false;
   const response=await onRequest({
     request:new Request('https://kindelora.example'+path,options),
-    next:()=>{passed=true;return new Response('public',{status:200});}
+    next:()=>{passed=true;return options.checkoutHandler ? (options.method==='POST' ? checkoutPost() : checkoutGet()) : new Response('public',{status:200});}
   });
   return {response,passed};
 }
@@ -24,16 +25,27 @@ assert.deepEqual(state,{
   status:'pending_secure_payment_integration'
 });
 for(const path of [
- '/plus','/api/plus/checkout','/premium','/members/profile',
+ '/plus','/premium','/members/profile',
  '/assets/premium/private.json','/assets/members/content.json',
  '/finance','/api/owner-finance','/admin-finance',
  '/assets/audio/heygen-speech-2.mp3','/PLUS/checkout',
- '/%70lus','/api/%70lus/checkout'
+ '/%70lus'
 ]) {
   const {response,passed}=await request(path);
   assert.equal(passed,false,path+' must never reach static handler');
   assert.equal(response.status,403,path);
   assert.match(response.headers.get('cache-control')||'',/no-store/,path);
+}
+// Checkout is intentionally routed to a dedicated fail-closed handler (HTTP 503),
+// rather than blocked by middleware. Never interpret routing as charging.
+for(const path of ['/api/plus/checkout','/api/%70lus/checkout']) {
+ for(const method of ['GET','POST']) {
+  const {response,passed}=await request(path,{method,checkoutHandler:true});
+  assert.equal(passed,true,path+' must reach dedicated disabled checkout handler');
+  assert.equal(response.status,503,path+' must fail closed');
+  assert.equal(response.headers.get('cache-control'),'no-store');
+  assert.equal((await response.json()).error,'checkout_unavailable');
+ }
 }
 for(const path of ['/api/%2fplus/checkout','/api/%5cplus','/api/%252fplus','/api/%00plus']) {
   const {response,passed}=await request(path);
