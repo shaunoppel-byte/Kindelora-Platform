@@ -1,5 +1,5 @@
-import {readFileSync,existsSync} from 'node:fs';
-import {createHash} from 'node:crypto';import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import assert from 'node:assert/strict';
 const html=readFileSync('member-farewell.html','utf8');
 const js=readFileSync('member-farewell.js','utf8');
 const welcome=readFileSync('member-welcome.js','utf8');
@@ -19,5 +19,4 @@ assert.ok(js.includes("fetch('/api/member/logout'"),'Farewell must revoke sessio
 assert.ok(js.includes("verify.status!==401"),'Farewell must verify signed-out state');
 assert.ok(js.includes("retry.addEventListener('click',finish)"),'Failure must offer retry');
 assert.ok(welcome.includes("location.assign('/member-farewell.html')"),'Signout button must navigate to farewell');
-console.log('PASS: approved farewell PNG, full image, no overlay, no duplicate buttons, session-revocation path, retry');
-console.log('Artwork SHA256:',createHash('sha256').update(bytes).digest('hex'));
+console.log('PASS: accessible farewell card, privacy-safe naming, session-revocation path, retry');
