@@ -26,7 +26,16 @@ export async function issueTrustedSandboxFxQuote({plan,nowMs,fxEndpoint,fetchImp
  if(!response){
   // Keep failure closed, but distinguish a timeout from another fetch failure.
   const timeout=lastError?.name==='TimeoutError'||lastError?.name==='AbortError';
-  return deny(timeout?'fx_provider_timeout':'fx_provider_unavailable');
+  // Only expose broad operational categories, never raw exception messages,
+  // URLs, headers, secrets, stack traces, or provider response bodies.
+  const cause=lastError?.cause;
+  const code=typeof cause?.code==='string'?cause.code:'';
+  const dnsCodes=new Set(['ENOTFOUND','EAI_AGAIN','DNS_ERROR']);
+  const tlsCodes=new Set(['CERT_HAS_EXPIRED','UNABLE_TO_VERIFY_LEAF_SIGNATURE','ERR_TLS_CERT_ALTNAME_INVALID']);
+  const networkCodes=new Set(['ECONNREFUSED','ECONNRESET','ENETUNREACH','EHOSTUNREACH']);
+  const reason=timeout?'fx_provider_timeout':dnsCodes.has(code)?'fx_provider_dns_failure':
+   tlsCodes.has(code)?'fx_provider_tls_failure':networkCodes.has(code)?'fx_provider_network_failure':'fx_provider_unavailable';
+  return deny(reason);
  }
  if(!response?.ok||!(response.headers.get('content-type')||'').toLowerCase().includes('application/json'))return deny('fx_provider_rejected');
  let payload;try{payload=await response.json()}catch{return deny('fx_response_invalid')}
