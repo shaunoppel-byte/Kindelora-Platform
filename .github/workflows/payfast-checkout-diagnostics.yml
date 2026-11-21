@@ -1,0 +1,17 @@
+name: PayFast checkout diagnostics
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  checkout-diagnostics:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify authenticated checkout failure reasons
+        run: node --experimental-default-type=module scripts/test-payfast-sandbox-checkout-diagnostics.mjs
