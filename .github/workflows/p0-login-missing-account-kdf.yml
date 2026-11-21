@@ -1,0 +1,17 @@
+name: P0 login unknown-account KDF regression
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  login-kdf:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify missing-account KDF regression contract
+        run: node scripts/test-p0-login-missing-account-kdf.mjs
