@@ -1,0 +1,17 @@
+name: P0 PayFast sandbox merchant gate contract
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  merchant-gate:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Reject wrong merchant order and amount
+        run: node scripts/test-p0-payfast-sandbox-merchant-gate.mjs
