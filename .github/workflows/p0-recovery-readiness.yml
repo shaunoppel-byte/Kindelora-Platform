@@ -1,0 +1,16 @@
+name: P0 recovery readiness
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  readiness:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/test-p0-recovery-readiness.mjs
