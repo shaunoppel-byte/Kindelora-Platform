@@ -1,4 +1,5 @@
-import {readFileSync,existsSync} from 'node:fs';import assert from 'node:assert/strict';
+import {readFileSync,existsSync} from 'node:fs';
+import {createHash} from 'node:crypto';import assert from 'node:assert/strict';
 const html=readFileSync('member-farewell.html','utf8');
 const js=readFileSync('member-farewell.js','utf8');
 const welcome=readFileSync('member-welcome.js','utf8');
