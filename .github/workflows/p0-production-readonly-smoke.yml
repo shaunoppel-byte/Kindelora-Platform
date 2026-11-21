@@ -1,6 +1,9 @@
 name: P0 production read-only smoke
 on:
   workflow_dispatch:
+  push:
+    branches: [main]
+  pull_request:
 jobs:
   public-readonly-smoke:
     runs-on: ubuntu-latest
