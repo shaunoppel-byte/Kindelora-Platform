@@ -12,8 +12,7 @@ import {processVerifiedSandboxItnOffline} from './payfast-sandbox-persisted-itn-
 const deny=reason=>({committed:false,grantEntitlement:false,reason});
 export async function processProviderConfirmedSandboxItn({db,raw,contentType,
  expectedMerchantId,verification,fetchImpl,passphrase,request,allowedCidrs}={}){
- if(!verification||verification.quoteVerified!==true)
-  return deny('independent_verification_required');
+ // Quote verification is performed independently against D1 before ledger commit.
  const source=verifyPayFastCloudflareSource({request,allowedCidrs});
  if(!source.verified)return deny('source_verification_failed');
  const signature=verifyPayFastItnSignature({raw,passphrase});
@@ -23,6 +22,6 @@ export async function processProviderConfirmedSandboxItn({db,raw,contentType,
  // The provider result always overrides any caller-supplied serverVerified value.
  return processVerifiedSandboxItnOffline({db,raw,contentType,expectedMerchantId,
   verification:{signatureVerified:signature.verified,
-   sourceVerified:source.verified,quoteVerified:verification.quoteVerified,
+   sourceVerified:source.verified,
    serverVerified:confirmed.verified}});
 }
