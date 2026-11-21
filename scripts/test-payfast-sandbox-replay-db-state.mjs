@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {loadSandboxReplayState as load} from '../functions/_lib/payfast-sandbox-replay-db-state.js';
+const tx={provider_transaction_id:'provider_12345678',order_reference:'order_12345678',paid_zar_minor:17000,status:'COMPLETE',plan:'monthly'};
+const db=(a,b)=>({prepare(sql){const isTx=sql.includes('JOIN payfast_sandbox_orders');return {bind(value){assert.equal(value,isTx?tx.provider_transaction_id:tx.order_reference);return {async first(){return isTx?a:b}}}}}});
+let r=await load({db:db(null,null),providerTransactionId:tx.provider_transaction_id,orderReference:tx.order_reference});
+assert.deepEqual(r,{ok:true,storedTransaction:null,storedOrder:null,grantEntitlement:false});
+r=await load({db:db(tx,tx),providerTransactionId:tx.provider_transaction_id,orderReference:tx.order_reference});
+assert.equal(r.ok,true);assert.equal(r.storedTransaction.plan,'monthly');assert.equal(r.storedOrder.merchantReference,tx.order_reference);
+r=await load({db:db(null,tx),providerTransactionId:tx.provider_transaction_id,orderReference:tx.order_reference});
+assert.equal(r.storedTransaction,null);assert.ok(r.storedOrder);
+r=await load({db:db(tx,null),providerTransactionId:tx.provider_transaction_id,orderReference:tx.order_reference});
+assert.ok(r.storedTransaction);assert.equal(r.storedOrder,null);
+r=await load({db:db(null,null),providerTransactionId:"' OR 1=1 --",orderReference:tx.order_reference});assert.equal(r.ok,false);
+r=await load({db:{prepare(){throw Error('secret error')}},providerTransactionId:tx.provider_transaction_id,orderReference:tx.order_reference});assert.equal(r.ok,false);assert.ok(!JSON.stringify(r).includes('secret'));
+console.log('PASS: read-only D1 sandbox replay state handles new, duplicate, conflict and DB failure');
