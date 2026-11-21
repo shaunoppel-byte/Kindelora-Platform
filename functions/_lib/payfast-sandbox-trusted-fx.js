@@ -9,12 +9,20 @@ export async function issueTrustedSandboxFxQuote({plan,nowMs,fxEndpoint,fetchImp
  let url;
  try{url=new URL(fxEndpoint)}catch{return deny('fx_configuration_missing')}
  // No redirects or user-controlled URL. Operator must explicitly configure an HTTPS source.
- if(url.protocol!=='https:'||url.username||url.password||url.hash||url.search||url.port||
+ const frankfurterUrl='https://api.frankfurter.dev/v1/latest?base=USD&symbols=ZAR';
+ const isFrankfurter=url.href===frankfurterUrl;
+ if(url.protocol!=='https:'||url.username||url.password||url.hash||(!isFrankfurter&&url.search)||url.port||
  !/^[a-z0-9.-]+$/i.test(url.hostname)||url.hostname==='localhost'||url.hostname.endsWith('.local'))return deny('fx_configuration_invalid');
  let response;
  try{response=await fetchImpl(url.href,{method:'GET',redirect:'error',headers:{accept:'application/json'},signal:AbortSignal.timeout(5000)})}catch{return deny('fx_provider_unavailable')}
  if(!response?.ok||!(response.headers.get('content-type')||'').toLowerCase().includes('application/json'))return deny('fx_provider_rejected');
  let payload;try{payload=await response.json()}catch{return deny('fx_response_invalid')}
+ // Frankfurter's documented v1 format is {amount:1,base:'USD',date:'YYYY-MM-DD',rates:{ZAR:number}}.
+ // Only transform this exact allowlisted endpoint; keep the existing trusted adapter contract.
+ if(isFrankfurter){
+  if(payload?.base!=='USD'||payload?.amount!==1||!payload?.rates||typeof payload.rates.ZAR!=='number')return deny('fx_response_invalid');
+  payload={base:'USD',quote:'ZAR',rate:payload.rates.ZAR,asOf:payload.date};
+ }
  if(payload?.base!=='USD'||payload?.quote!=='ZAR'||typeof payload.rate!=='number'||
  !Number.isFinite(payload.rate)||payload.rate<=0||payload.rate>1000||
  typeof payload.asOf!=='string'||!/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/.test(payload.asOf))return deny('fx_response_invalid');
