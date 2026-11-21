@@ -11,8 +11,7 @@ const deny=reason=>({committed:false,grantEntitlement:false,reason});
 export async function processVerifiedSandboxItnOffline({db,raw,contentType,expectedMerchantId,
  verification}={}){
  if(!verification||verification.signatureVerified!==true||verification.serverVerified!==true||
-  verification.sourceVerified!==true||verification.quoteVerified!==true||
-  false)return deny('independent_verification_required');
+  verification.sourceVerified!==true||verification.quoteVerified!==true)return deny('independent_verification_required');
  const envelope=parseSandboxItnEnvelope(raw,contentType);
  if(!envelope.ok)return deny('invalid_envelope');
  const pending=await loadPendingSandboxOrder({db,reference:envelope.merchantReference});
