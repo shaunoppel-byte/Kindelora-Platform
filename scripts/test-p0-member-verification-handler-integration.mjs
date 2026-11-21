@@ -17,7 +17,7 @@ const db={prepare(sql){return {bind(...args){return {sql,args}}}},async batch(st
  if(consumed)return [{meta:{changes:0}},{meta:{changes:0}}];
  consumed=true;memberCreated=true;
  return [{meta:{changes:1}},{meta:{changes:1}}];
-}}};
+}};
 const env={PUBLIC_REGISTRATION_ENABLED:'true',MEMBER_AUTH_ENABLED:'true',MEMBER_AUTH_PEPPER:pepper,DB:db};
 async function verify(value=token,origin='https://kindelora.pages.dev',override=env){
  const request=new Request('https://kindelora.pages.dev/api/member/verify-email',{
