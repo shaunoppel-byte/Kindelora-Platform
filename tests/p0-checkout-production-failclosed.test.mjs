@@ -18,7 +18,8 @@ for(const [method,handler] of [['POST',onRequestPost],['GET',onRequestGet]]){
  });
 }
 test('production checkout source does not invoke a payment provider or grant entitlements',()=>{
- assert.doesNotMatch(source,/fetch\\s*\\(/);
- assert.doesNotMatch(source,/env\\.DB|\.prepare\\s*\\(/);
+ assert.equal(source.includes('fetch('),false);
+ assert.equal(source.includes('env.DB'),false);
+ assert.equal(source.includes('.prepare('),false);
  assert.doesNotMatch(source,/302|303|307|308/);
 });
