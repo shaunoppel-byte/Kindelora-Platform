@@ -1,0 +1,17 @@
+name: P0 PayFast sandbox quote adversarial contract
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  quote-security:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate sandbox-only server quote, fixed prices and adversarial rejection
+        run: node scripts/test-p0-payfast-sandbox-quote-adversarial.mjs
