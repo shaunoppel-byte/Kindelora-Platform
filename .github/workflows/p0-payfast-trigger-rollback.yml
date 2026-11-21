@@ -1,0 +1,13 @@
+name: P0 PayFast atomic rollback regression
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  rollback:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/test-p0-payfast-trigger-rollback.py
