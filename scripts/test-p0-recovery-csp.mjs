@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const html=readFileSync('recover-account.html','utf8');
+const js=readFileSync('recover-account.js','utf8');
+const headers=readFileSync('_headers','utf8');
+assert.match(headers,/script-src 'self'/);
+assert.match(html,/<script type="module" src="\/recover-account\.js"><\/script>/);
+assert.doesNotMatch(html,/<script[^>]*>[\s\S]*?\S[\s\S]*?<\/script>/);
+assert.match(js,/requestForm\.addEventListener\('submit'/);
+assert.match(js,/event\.preventDefault\(\)/);
+assert.match(js,/confirmForm\.addEventListener\('submit'/);
+assert.match(js,/\/api\/member\/request-password-reset/);
+assert.match(js,/\/api\/member\/confirm-password-reset/);
+assert.match(js,/status\.textContent/);
+console.log('PASS: recovery handlers load as same-origin external module under strict CSP');
