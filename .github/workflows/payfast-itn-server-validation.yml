@@ -1,0 +1,16 @@
+name: PayFast ITN server validation
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  server-validation:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/test-payfast-itn-server-validation.mjs
