@@ -69,3 +69,19 @@ BEGIN
  ) THEN RAISE(ABORT,'sandbox_paid_without_matching_transaction') END;
 END;
 
+
+-- Prevent direct or partial mutation of completed sandbox payment evidence.
+CREATE TRIGGER IF NOT EXISTS payfast_sandbox_transaction_immutable_update
+BEFORE UPDATE ON payfast_sandbox_transactions
+BEGIN SELECT RAISE(ABORT,'sandbox_transaction_immutable'); END;
+CREATE TRIGGER IF NOT EXISTS payfast_sandbox_transaction_immutable_delete
+BEFORE DELETE ON payfast_sandbox_transactions
+BEGIN SELECT RAISE(ABORT,'sandbox_transaction_immutable'); END;
+CREATE TRIGGER IF NOT EXISTS payfast_sandbox_paid_order_immutable
+BEFORE UPDATE ON payfast_sandbox_orders
+WHEN OLD.status='paid'
+BEGIN SELECT RAISE(ABORT,'sandbox_paid_order_immutable'); END;
+CREATE TRIGGER IF NOT EXISTS payfast_sandbox_paid_order_no_delete
+BEFORE DELETE ON payfast_sandbox_orders
+WHEN OLD.status='paid'
+BEGIN SELECT RAISE(ABORT,'sandbox_paid_order_immutable'); END;
