@@ -3,7 +3,7 @@
 // settings verified. No public route or live payment activation.
 import {md5} from './payfast-md5.js';
 const encode=v=>encodeURIComponent(v).replace(/%20/g,'+').replace(/[!'()*~]/g,ch=>'%'+ch.charCodeAt(0).toString(16).toUpperCase());
-const validUrl=v=>{try{const u=new URL(v);return u.protocol==='https:'&&!u.username&&!u.password&&!u.hash&&u.hostname.endsWith('.pages.dev')}catch{return false}};
+const validUrl=v=>{try{const u=new URL(v);return u.protocol==='https:'&&!u.username&&!u.password&&!u.hash&&u.hostname==='kindelora.pages.dev'}catch{return false}};
 const deny=reason=>({ok:false,reason,authorizesPayment:false});
 export function buildPayFastSandboxRedirect({order,merchantId,merchantKey,passphrase,returnUrl,cancelUrl,notifyUrl}={}){
  if(!order||order.environment!=='sandbox'||order.status!=='pending'||!['monthly','annual'].includes(order.plan)||
