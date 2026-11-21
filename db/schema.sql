@@ -80,3 +80,22 @@ CREATE TABLE IF NOT EXISTS member_invitations (
  consumed_at TEXT,
  created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
 );
+
+-- Dormant PLUS entitlement tables used by functions/_lib/plus-entitlement.js.
+-- These definitions do not activate any subscription and are not auto-deployed.
+-- identity_subject MUST be derived from server-verified member identity.
+CREATE TABLE IF NOT EXISTS plus_customers (
+ id TEXT PRIMARY KEY,
+ identity_subject TEXT NOT NULL UNIQUE,
+ created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE TABLE IF NOT EXISTS plus_subscriptions (
+ id TEXT PRIMARY KEY,
+ customer_id TEXT NOT NULL REFERENCES plus_customers(id),
+ brand TEXT NOT NULL CHECK(brand='KIN'),
+ status TEXT NOT NULL CHECK(status IN ('pending','active','past_due','cancelled','expired','refunded')),
+ current_period_end TEXT,
+ created_at TEXT NOT NULL DEFAULT CURRENT_TIMESTAMP
+);
+CREATE INDEX IF NOT EXISTS plus_subscriptions_customer_idx ON plus_subscriptions(customer_id);
+CREATE INDEX IF NOT EXISTS plus_subscriptions_entitlement_idx ON plus_subscriptions(brand,status,current_period_end);
