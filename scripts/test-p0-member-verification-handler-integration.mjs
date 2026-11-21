@@ -6,7 +6,7 @@ import {onRequestPost} from '../functions/api/member/verify-email.js';
 if(!globalThis.crypto)globalThis.crypto=webcrypto;
 const token='a'.repeat(64), pepper='synthetic-pepper-0123456789abcdef0123456789';
 let consumed=false, memberCreated=false, failBatch=false, calls=0;
-const db={prepare(sql){return {bind(...args){return {sql,args}}},async batch(stmts){
+const db={prepare(sql){return {bind(...args){return {sql,args}}}},async batch(stmts){
  calls++;
  assert.equal(stmts.length,2);
  assert.match(stmts[0].sql,/UPDATE member_email_verifications/);
