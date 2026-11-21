@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {onRequestGet} from '../functions/api/plus/preflight.js';
+const request=new Request('https://kindelora.pages.dev/api/plus/preflight',{headers:{cookie:''}});
+const notReady=await onRequestGet({request,env:{}});
+assert.equal(notReady.status,503);
+assert.equal((await notReady.json()).reason,'member_service_unavailable');
+const env={MEMBER_AUTH_ENABLED:'true',MEMBER_AUTH_PEPPER:'a'.repeat(32),DB:{prepare(){throw Error('unauthenticated request must never access D1')}}};
+const unauth=await onRequestGet({request,env});
+assert.equal(unauth.status,401);
+assert.equal((await unauth.json()).reason,'authentication_required');
+assert.equal(unauth.headers.get('cache-control'),'no-store');
+console.log('PASS: PayFast preflight runtime fails closed for missing environment and unauthenticated users');
