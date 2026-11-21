@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {onRequestPost} from '../functions/api/plus/validate-plan.js';
+const url='https://kindelora.pages.dev/api/plus/validate-plan';
+const env={MEMBER_AUTH_ENABLED:'true',MEMBER_AUTH_PEPPER:'x'.repeat(32),DB:{prepare(){throw Error('unauthenticated must not query D1')}}};
+const req=(body,headers={})=>new Request(url,{method:'POST',headers:{origin:'https://kindelora.pages.dev','content-type':'application/json',...headers},body:JSON.stringify(body)});
+let r=await onRequestPost({request:req({plan:'monthly'}),env:{}});assert.equal(r.status,503);
+r=await onRequestPost({request:req({plan:'monthly'},{origin:'https://evil.example'}),env});assert.equal(r.status,403);
+r=await onRequestPost({request:req({plan:'monthly'}),env});assert.equal(r.status,401);
+assert.equal(r.headers.get('cache-control'),'no-store');
+console.log('PASS: isolated plan route rejects missing environment, cross-origin and unauthenticated requests');
