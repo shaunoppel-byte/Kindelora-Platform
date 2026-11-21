@@ -8,9 +8,15 @@ export async function onRequestPost({request,env}){
  let data;try{data=await request.json()}catch{return reply({error:'Invalid request'},400)}
  const token=data?.token;
  if(typeof token!=='string'||!/^[a-f0-9]{64}$/.test(token))return reply({error:'Invalid or expired verification link'},400);
- const tokenHash=await verificationTokenHash(token,env.MEMBER_AUTH_PEPPER);
+ let tokenHash,claim;
+ try {
+  tokenHash=await verificationTokenHash(token,env.MEMBER_AUTH_PEPPER);
+  claim=crypto.randomUUID();
+ } catch {
+  // Never expose pepper, token, crypto errors, or member details.
+  return reply({error:'Verification temporarily unavailable'},503);
+ }
  const now=new Date().toISOString();
- const claim=crypto.randomUUID();
  // Each request claims a unique nonce; even concurrent calls in the same millisecond
  // cannot both insert a member from the same consumed token.
  try{
