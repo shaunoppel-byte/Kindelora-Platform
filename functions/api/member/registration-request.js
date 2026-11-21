@@ -7,7 +7,7 @@ const audit=(reason)=>console.info('member_registration_outcome',reason);
 async function turnstile(env,token,ip){
  if(typeof env.TURNSTILE_SECRET_KEY!=='string'||!env.TURNSTILE_SECRET_KEY||typeof token!=='string'||token.length>2048)return false;
  const body=new URLSearchParams({secret:env.TURNSTILE_SECRET_KEY,response:token,remoteip:ip});
- const r=await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify',{method:'POST',body});
+ const r=await fetch('https://challenges.cloudflare.com/turnstile/v0/siteverify',{method:'POST',body,signal:AbortSignal.timeout(8000)});
  if(!r.ok)return false;
  const result=await r.json();return result.success===true&&result.hostname==='kindelora.pages.dev';
 }
