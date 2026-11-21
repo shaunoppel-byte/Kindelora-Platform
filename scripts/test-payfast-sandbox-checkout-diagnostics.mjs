@@ -1,0 +1,17 @@
+import assert from 'node:assert/strict';
+import {onRequestPost} from '../functions/api/plus/sandbox-checkout.js';
+import {hash} from '../functions/api/member/_auth.js';
+const url='https://kindelora.pages.dev/api/plus/sandbox-checkout';
+const token='a'.repeat(64);
+const pepper='p'.repeat(40);
+const tokenHash=await hash(token+pepper);
+const request=new Request(url,{method:'POST',headers:{origin:'https://kindelora.pages.dev','content-type':'application/json',cookie:'kindelora_session='+token},body:JSON.stringify({plan:'monthly'})});
+let response=await onRequestPost({request,env:{}});
+assert.equal(response.status,503);
+assert.equal((await response.json()).reason,'sandbox_checkout_disabled');
+const db={prepare(sql){assert.match(sql,/member_sessions/);return {bind(value){assert.equal(value,tokenHash);return {first:async()=>({id:'member_12345678'})}}}}};
+const env={DB:db,MEMBER_AUTH_ENABLED:'true',MEMBER_AUTH_PEPPER:pepper};
+response=await onRequestPost({request,env});
+assert.equal(response.status,503);
+assert.equal((await response.json()).reason,'fx_configuration_missing');
+console.log('PASS: missing auth config and missing trusted FX source return distinct safe failure codes');
