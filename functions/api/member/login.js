@@ -25,7 +25,9 @@ export async function onRequestPost({request,env}){
  const user=await env.DB.prepare("SELECT id,email_normalized,password_salt,password_hash,email_verified_at,disabled_at FROM members WHERE email_normalized=?").bind(email).first();
  let candidate;
  const kdfPath=user?.password_salt?.startsWith('v2:')?'v2':user?'legacy':'missing_account';
- try {candidate=kdfPath==='v2'?await derive(password,user.password_salt,env.MEMBER_AUTH_PEPPER):await legacyDerive(password,user?.password_salt||'invalid-member-placeholder');}
+ // Unknown accounts must not execute the 310k-iteration legacy KDF on every attempt.
+ // Keep a real v2 derivation for timing work, without changing registration or legacy members.
+ try {candidate=kdfPath==='v2'?await derive(password,user.password_salt,env.MEMBER_AUTH_PEPPER):kdfPath==='legacy'?await legacyDerive(password,user.password_salt):await derive(password,'v2:invalid-member-placeholder',env.MEMBER_AUTH_PEPPER);}
  catch {
   // Fixed internal reason codes only. Never log email, password, salt, hash, member ID or exception text.
   // The public HTTP 503 response remains identical across account states.
