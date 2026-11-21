@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {issueTrustedSandboxFxQuote as issue} from '../functions/_lib/payfast-sandbox-trusted-fx.js';
+const now=Date.parse('2026-11-21T12:00:00Z'),endpoint='https://fx.example.org/rates';
+const fetchImpl=async()=>new Response(JSON.stringify({base:'USD',quote:'ZAR',rate:18.25,asOf:'2026-11-20'}),{headers:{'content-type':'application/json'}});
+const args={plan:'monthly',nowMs:now,fxEndpoint:endpoint,fetchImpl,reference:'fxref_12345678'};
+let r=await issue(args);assert.equal(r.ok,true);assert.equal(r.quote.usdMinor,899);assert.equal(r.quote.zarMinor,16407);assert.equal(r.quote.source,'server_verified');
+r=await issue({...args,plan:'annual'});assert.equal(r.quote.usdMinor,8999);
+r=await issue({...args,fxEndpoint:'http://fx.example.org/rates'});assert.equal(r.ok,false);
+r=await issue({...args,fetchImpl:async()=>new Response(JSON.stringify({base:'USD',quote:'ZAR',rate:18.25,asOf:'2026-10-01'}),{headers:{'content-type':'application/json'})});assert.equal(r.ok,false);
+r=await issue({...args,fetchImpl:async()=>new Response(JSON.stringify({base:'USD',quote:'EUR',rate:18.25,asOf:'2026-11-20'}),{headers:{'content-type':'application/json'})});assert.equal(r.ok,false);
+console.log('PASS: trusted server-issued sandbox FX, plan amounts, stale/wrong-currency/insecure-source fail closed');
