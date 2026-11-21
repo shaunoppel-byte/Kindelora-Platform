@@ -1,0 +1,17 @@
+name: P0 PayFast trigger-backed atomic insert contract
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  atomic-insert:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Test guarded trigger-backed payment insert
+        run: node scripts/test-p0-payfast-atomic-insert.mjs
