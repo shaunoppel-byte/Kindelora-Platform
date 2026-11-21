@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {prepareSandboxCheckout as prepare} from '../functions/_lib/payfast-sandbox-checkout-orchestration.js';
+const now=Date.now();
+const quote={source:'server_verified',environment:'sandbox',plan:'monthly',usdMinor:899,zarMinor:17000,settlementCurrency:'ZAR',fxReference:'quote_12345678',issuedAtMs:now-1000,expiresAtMs:now+600000};
+const merchant={merchantId:'10000100',merchantKey:'testmerchantkey',passphrase:'test-secret',returnUrl:'https://kindelora.pages.dev/plus/success',cancelUrl:'https://kindelora.pages.dev/plus/cancel',notifyUrl:'https://kindelora.pages.dev/api/plus/payfast-itn'};
+let writes=0;
+const db={prepare(sql){return {bind(...args){return {sql,args}}}},async batch(){writes++;return [{success:true,meta:{changes:1}},{success:true,meta:{changes:1}}]}};
+const args={db,plan:'monthly',verifiedMemberId:'member_12345678',reference:'order_12345678',quote,nowMs:now,merchant};
+let result=await prepare(args);assert.equal(result.ok,true);assert.equal(result.redirect.fields.amount,'170.00');assert.equal(writes,1);
+result=await prepare({...args,merchant:{...merchant,notifyUrl:'https://attacker.pages.dev/itn'}});assert.equal(result.ok,false);assert.equal(writes,1);
+result=await prepare({...args,quote:{...quote,usdMinor:900}});assert.equal(result.ok,false);assert.equal(writes,1);
+result=await prepare({...args,verifiedMemberId:''});assert.equal(result.ok,false);assert.equal(writes,1);
+result=await prepare({...args,db:{...db,batch:async()=>{throw Error('db offline')}}});assert.equal(result.ok,false);
+console.log('PASS: sandbox checkout builds approved order, validates redirect before atomic persistence, fails closed');
