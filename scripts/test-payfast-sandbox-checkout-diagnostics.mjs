@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {onRequestPost} from '../functions/api/plus/sandbox-checkout.js';
+const url='https://kindelora.pages.dev/api/plus/sandbox-checkout';
+const request=new Request(url,{method:'POST',headers:{origin:'https://kindelora.pages.dev','content-type':'application/json'},body:JSON.stringify({plan:'monthly'})});
+const response=await onRequestPost({request,env:{}});
+assert.equal(response.status,503);
+const body=await response.json();
+assert.equal(body.reason,'sandbox_checkout_disabled');
+assert.equal(body.checkoutReady,false);
+console.log('PASS: checkout fails closed without member authentication configuration');
