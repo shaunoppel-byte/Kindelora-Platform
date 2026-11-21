@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const schema=readFileSync(new URL('../db/payfast-sandbox-schema.sql',import.meta.url),'utf8');
+const order=readFileSync(new URL('../functions/_lib/payfast-sandbox-order-sql.js',import.meta.url),'utf8');
+const ledger=readFileSync(new URL('../functions/_lib/payfast-sandbox-ledger-atomic.js',import.meta.url),'utf8');
+for(const table of ['payfast_sandbox_orders','payfast_sandbox_transactions'])assert.match(schema,new RegExp('CREATE TABLE IF NOT EXISTS '+table+'\\s*\\('));
+for(const col of ['order_reference','member_id','plan','usd_minor','zar_minor','fx_reference','status','paid_at'])assert.match(schema,new RegExp('\\b'+col+'\\b'));
+for(const col of ['provider_transaction_id','order_reference','paid_zar_minor','status'])assert.match(schema,new RegExp('\\b'+col+'\\b'));
+assert.match(schema,/provider_transaction_id TEXT PRIMARY KEY/);
+assert.match(schema,/order_reference TEXT NOT NULL UNIQUE REFERENCES payfast_sandbox_orders/);
+assert.match(schema,/REFERENCES members\(id\)/);
+assert.match(order,/INSERT INTO payfast_sandbox_orders/);
+assert.match(ledger,/INSERT INTO payfast_sandbox_transactions/);
+assert.match(ledger,/UPDATE payfast_sandbox_orders/);
+console.log('PASS: sandbox D1 schema includes exact order and transaction columns, member FK and replay uniqueness');
