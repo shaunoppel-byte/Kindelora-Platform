@@ -1,0 +1,14 @@
+name: P0 PayFast single-statement atomic ledger design
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  atomic-trigger:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Prove no partial ledger commits with SQLite triggers
+        run: python3 scripts/test-p0-payfast-atomic-trigger.py
