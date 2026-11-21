@@ -1,0 +1,17 @@
+name: P0 secure login contract
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  secure-login:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify synthetic account login, lockout and origin guards
+        run: node scripts/test-p0-login-verified-account-contract.mjs
