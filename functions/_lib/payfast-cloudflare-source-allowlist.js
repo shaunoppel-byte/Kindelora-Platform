@@ -14,10 +14,10 @@ function cidr(entry){
  const [ip,prefix]=entry.split('/');
  if(entry.split('/').length>2)return null;
  const n=prefix===undefined?32:Number(prefix);
- if(!Number.isInteger(n)||n<0||n>32||prefix!==undefined&&String(n)!==prefix)return null;
+ if(!Number.isInteger(n)||n<8||n>32||prefix!==undefined&&String(n)!==prefix)return null;
  const value=ip4(ip);if(value===null)return null;
  const mask=n===0?0:(0xffffffff<<(32-n))>>>0;
- if((value&mask)!==(value>>>0))return null; // require canonical network address
+ if(((value&mask)>>>0)!==value)return null; // require canonical network address
  return {value,mask};
 }
 export function verifyPayFastCloudflareSource({request,allowedCidrs}={}){
@@ -30,6 +30,6 @@ export function verifyPayFastCloudflareSource({request,allowedCidrs}={}){
  const source=request.headers.get('cf-connecting-ip');
  const ip=ip4(source);
  if(ip===null)return deny('untrusted_source');
- return networks.some(x=>(ip&x.mask)===x.value)?
+ return networks.some(x=>((ip&x.mask)>>>0)===x.value)?
   {verified:true,reason:'source_allowlisted'}:deny('source_not_allowlisted');
 }
