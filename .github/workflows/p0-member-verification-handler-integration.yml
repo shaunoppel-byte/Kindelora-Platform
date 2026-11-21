@@ -1,0 +1,17 @@
+name: P0 member email verification handler integration
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  verification-handler:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --check scripts/test-p0-member-verification-handler-integration.mjs
+      - run: node scripts/test-p0-member-verification-handler-integration.mjs
