@@ -2,13 +2,14 @@
 // This test must remain green while checkout is unavailable.
 import assert from 'node:assert/strict';
 import {readFileSync} from 'node:fs';
+import {onRequestGet as checkoutGet,onRequestPost as checkoutPost} from '../functions/api/plus/checkout.js';
 const source=readFileSync('functions/_middleware.js','utf8');
 const {onRequest}=await import('data:text/javascript,'+encodeURIComponent(source));
 async function request(path, options={}) {
   let passed=false;
   const response=await onRequest({
     request:new Request('https://kindelora.example'+path,options),
-    next:()=>{passed=true;return new Response('public',{status:200});}
+    next:()=>{passed=true;return options.checkoutHandler ? (options.method==='POST' ? checkoutPost() : checkoutGet()) : new Response('public',{status:200});}
   });
   return {response,passed};
 }
@@ -39,10 +40,11 @@ for(const path of [
 // rather than blocked by middleware. Never interpret routing as charging.
 for(const path of ['/api/plus/checkout','/api/%70lus/checkout']) {
  for(const method of ['GET','POST']) {
-  const {response,passed}=await request(path,{method});
+  const {response,passed}=await request(path,{method,checkoutHandler:true});
   assert.equal(passed,true,path+' must reach dedicated disabled checkout handler');
-  // Mock next() returns 200; the dedicated handler's HTTP 503 is tested separately.
-  assert.equal(response.status,200);
+  assert.equal(response.status,503,path+' must fail closed');
+  assert.equal(response.headers.get('cache-control'),'no-store');
+  assert.equal((await response.json()).error,'checkout_unavailable');
  }
 }
 for(const path of ['/api/%2fplus/checkout','/api/%5cplus','/api/%252fplus','/api/%00plus']) {
