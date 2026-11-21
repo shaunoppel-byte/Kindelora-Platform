@@ -24,11 +24,12 @@ export async function onRequestPost({request,env}){
  if(limit?.locked_until&&Date.parse(limit.locked_until)>now){console.info("member_login_outcome","rate_limit_active");return reply({error:"Too many attempts; try later"},429);}
  const user=await env.DB.prepare("SELECT id,email_normalized,password_salt,password_hash,email_verified_at,disabled_at FROM members WHERE email_normalized=?").bind(email).first();
  let candidate;
- try {candidate=user?.password_salt?.startsWith('v2:')?await derive(password,user.password_salt,env.MEMBER_AUTH_PEPPER):await legacyDerive(password,user?.password_salt||'invalid-member-placeholder');}
+ const kdfPath=user?.password_salt?.startsWith('v2:')?'v2':user?'legacy':'missing_account';
+ try {candidate=kdfPath==='v2'?await derive(password,user.password_salt,env.MEMBER_AUTH_PEPPER):await legacyDerive(password,user?.password_salt||'invalid-member-placeholder');}
  catch {
-  // Runtime crypto compatibility errors are service failures, not invalid credentials.
-  // Never log email, password, salt, hash or exception text.
-  console.info("member_login_outcome","password_derivation_failed");
+  // Fixed internal reason codes only. Never log email, password, salt, hash, member ID or exception text.
+  // The public HTTP 503 response remains identical across account states.
+  console.info("member_login_outcome","password_derivation_failed",kdfPath);
   return reply({error:"Member login temporarily unavailable"},503);
  }
  const valid=!!user?.email_verified_at&&!user.disabled_at&&same(candidate,user.password_hash);
