@@ -1,0 +1,15 @@
+name: P0 production read-only smoke
+on:
+  workflow_dispatch:
+jobs:
+  public-readonly-smoke:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Read-only production readiness and fail-closed checks
+        run: node scripts/test-p0-production-public-readonly.mjs
