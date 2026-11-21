@@ -1,0 +1,16 @@
+name: PayFast authenticated D1 readiness route
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  readiness-route:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/test-payfast-schema-readiness-route.mjs
