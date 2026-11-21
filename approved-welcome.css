@@ -1,0 +1,17 @@
+/* Approved founder image is the exact visual reference, not a generated substitute. */
+/* Place the approved original at /assets/kindelora-approved-welcome.png to activate. */
+.welcome-stage{background:#230e30;min-height:100svh;padding:0 16px 28px}
+.welcome-content{width:min(100%,720px);max-width:720px;aspect-ratio:1024/1536;min-height:0;position:relative;isolation:isolate;display:block;margin:auto}
+.approved-artwork{position:absolute;inset:0;z-index:-1;background-image:url('/assets/kindelora-approved-welcome.png');background-position:center;background-size:100% 100%;background-repeat:no-repeat}
+.welcome-content .kc-eyebrow,.welcome-content .welcome-orbit,.welcome-content .welcome-message,.welcome-content .welcome-reassurance{position:absolute;width:1px;height:1px;overflow:hidden;clip-path:inset(50%);white-space:nowrap}
+.welcome-content h1{position:absolute;top:16.5%;left:9%;width:82%;margin:0;text-align:center;font:italic clamp(1.5rem,5vw,3.5rem)/1.12 Georgia,serif;color:#fff6e9;text-shadow:0 2px 14px #290e31;overflow:visible}
+.welcome-content h1 span{display:block;font:normal clamp(3rem,11vw,7rem)/1.1 Georgia,serif;color:#ffda87;text-shadow:0 2px 14px #3b1a30}
+.welcome-choices{position:absolute;top:62.6%;left:23%;width:58%;height:15%;display:flex;flex-direction:column;gap:10%;margin:0}
+.welcome-choices a{width:100%;height:45%;min-height:0;padding:0 8px;border-radius:999px;opacity:.01;font-size:1px}
+.welcome-choices a:focus-visible{opacity:1;outline:4px solid #fff;outline-offset:2px;font-size:1rem;background:#321535;color:#fff}
+.member-state{position:absolute;left:10%;right:10%;bottom:5%;font-size:.85rem;text-align:center;color:#fff7e5;text-shadow:0 2px 6px #18051c}
+.member-nav,.member-footer{background:#210c28}
+@media(max-width:540px){.welcome-stage{padding:0 0 12px}.welcome-content h1{top:17%;font-size:clamp(1.5rem,5vw,2.4rem)}.welcome-content h1 span{font-size:clamp(3rem,12vw,5rem)}.welcome-choices{gap:9%}}
+@media(prefers-reduced-motion:reduce){.approved-artwork{animation:none}}
+/* Until approved asset is uploaded, retain existing readable accessible layout. */
+@supports not (background-image:url('/assets/kindelora-approved-welcome.png')){}
