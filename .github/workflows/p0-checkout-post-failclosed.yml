@@ -1,0 +1,17 @@
+name: P0 checkout POST fail-closed contract
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  checkout-post-guard:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify no forged POST can trigger payment while disabled
+        run: node scripts/test-p0-checkout-post-failclosed.mjs
