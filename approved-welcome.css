@@ -15,3 +15,10 @@
 @media(prefers-reduced-motion:reduce){.approved-artwork{animation:none}}
 /* Until approved asset is uploaded, retain existing readable accessible layout. */
 @supports not (background-image:url('/assets/file_000000006170820e8fbfcee5327aa110.png')){}
+
+/* Mobile readability: approved artwork already contains its own greeting and labels.
+   Do not paint a second live heading or status over baked-in lettering. */
+.welcome-content h1{position:absolute!important;width:1px!important;height:1px!important;padding:0!important;margin:-1px!important;overflow:hidden!important;clip-path:inset(50%)!important;white-space:nowrap!important;border:0!important}
+.member-state{position:static;display:block;margin:12px auto 0;padding:10px 14px;max-width:90%;min-height:2.5em;border-radius:12px;background:#210c28;color:#fff8ee;text-shadow:none;line-height:1.5}
+.welcome-content{margin-bottom:12px}
+@media(max-width:540px){.member-state{font-size:.85rem;margin-top:12px}.welcome-content{margin-bottom:8px}}
