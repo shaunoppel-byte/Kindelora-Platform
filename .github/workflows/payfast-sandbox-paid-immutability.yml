@@ -1,0 +1,16 @@
+name: PayFast sandbox paid ledger immutability
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  integrity:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - run: python3 scripts/test-payfast-sandbox-paid-immutability.py
