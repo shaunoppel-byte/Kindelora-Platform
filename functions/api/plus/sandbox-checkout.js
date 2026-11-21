@@ -22,9 +22,15 @@ export async function onRequestPost({request,env}={}){
  notifyUrl:origin+'/api/plus/payfast-itn'};
  const nowMs=Date.now(),reference='kin_'+random(),fxReference='fx_'+random();
  const fx=await issueTrustedSandboxFxQuote({plan:data.plan,nowMs,reference:fxReference,fxEndpoint:env.PAYFAST_SANDBOX_FX_ENDPOINT});
- if(!fx.ok)return deny(503,'trusted_fx_unavailable');
+ if(!fx.ok){
+  const allowed=new Set(['fx_configuration_missing','fx_configuration_invalid','fx_provider_unavailable','fx_provider_rejected','fx_response_invalid','fx_rate_stale','fx_amount_invalid']);
+  return deny(503,allowed.has(fx.reason)?fx.reason:'trusted_fx_unavailable');
+ }
  const result=await prepareSandboxCheckout({db:env.DB,plan:data.plan,verifiedMemberId:user.id,reference,quote:fx.quote,nowMs,merchant});
- if(!result.ok)return deny(503,'sandbox_checkout_unavailable');
+ if(!result.ok){
+  const allowed=new Set(['merchant_unavailable','order_invalid','redirect_unavailable','persistence_failed']);
+  return deny(503,allowed.has(result.reason)?result.reason:'sandbox_checkout_unavailable');
+ }
  return reply({ok:true,environment:'sandbox',reference,redirect:result.redirect,checkoutReady:false});
 }
 export async function onRequestGet(){return deny(405,'method_not_allowed')}
