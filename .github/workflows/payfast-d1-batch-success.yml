@@ -1,0 +1,16 @@
+name: PayFast D1 batch success guard
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  batch:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node scripts/test-payfast-d1-batch-success.mjs
