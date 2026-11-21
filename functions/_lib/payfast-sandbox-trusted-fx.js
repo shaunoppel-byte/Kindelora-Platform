@@ -37,7 +37,9 @@ export async function issueTrustedSandboxFxQuote({plan,nowMs,fxEndpoint,fetchImp
    tlsCodes.has(code)?'fx_provider_tls_failure':networkCodes.has(code)?'fx_provider_network_failure':'fx_provider_unavailable';
   return deny(reason);
  }
- // Cloudflare Workers does not implement redirect:error; manual + explicit rejection is fail-closed.\n if(response?.status>=300&&response.status<400)return deny('fx_provider_rejected');\n if(!response?.ok||!(response.headers.get('content-type')||'').toLowerCase().includes('application/json'))return deny('fx_provider_rejected');
+ // Cloudflare Workers does not implement redirect:error; reject redirects explicitly.
+ if(response?.status>=300&&response.status<400)return deny('fx_provider_rejected');
+ if(!response?.ok||!(response.headers.get('content-type')||'').toLowerCase().includes('application/json'))return deny('fx_provider_rejected');
  let payload;try{payload=await response.json()}catch{return deny('fx_response_invalid')}
  // Frankfurter's documented v1 format is {amount:1,base:'USD',date:'YYYY-MM-DD',rates:{ZAR:number}}.
  // Only transform this exact allowlisted endpoint; keep the existing trusted adapter contract.
