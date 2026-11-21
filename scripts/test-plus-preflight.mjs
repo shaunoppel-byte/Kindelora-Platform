@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const src=readFileSync('functions/api/plus/preflight.js','utf8');
+assert.match(src,/ready\(env\)/);
+assert.match(src,/await member\(request,env\)/);
+assert.match(src,/authentication_required/);
+assert.match(src,/checkout_not_enabled/);
+assert.match(src,/ready:false/);
+assert.match(src,/amountMinor:899\b/);
+assert.match(src,/amountMinor:8999\b/);
+assert.doesNotMatch(src,/merchant_id|merchant_key|passphrase|process\.env/ig);
+console.log('PASS: authenticated fail-closed PayFast preflight contract');
