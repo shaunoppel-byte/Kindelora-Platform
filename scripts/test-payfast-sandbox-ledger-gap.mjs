@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {evaluateSandboxPayment} from '../functions/_lib/payfast-sandbox-payment-decision.js';
+import {sandboxLedgerAtomicStatements} from '../functions/_lib/payfast-sandbox-ledger-atomic.js';
+const verified={environment:'sandbox',signatureVerified:true,merchantVerified:true,serverVerified:true,quoteVerified:true,memberVerified:true,transactionStatus:'COMPLETE',alreadyProcessed:false,providerTransactionId:'provider_tx_12345678',merchantReference:'order_ref_12345678',expectedMerchantReference:'order_ref_12345678',paidCurrency:'ZAR',paidMinor:17000,expectedZarMinor:17000,plan:'monthly'};
+const decision=evaluateSandboxPayment(verified);
+assert.equal(decision.accepted,true);
+assert.equal(decision.grantEntitlement,true);
+const order={environment:'sandbox',status:'pending',reference:verified.merchantReference,zarMinor:verified.paidMinor,plan:'monthly',memberId:'member_123'};
+const db={prepare(sql){return {bind(...args){return {sql,args}}}}};
+assert.equal(sandboxLedgerAtomicStatements({db,decision,order}),null,'Current ledger refuses accepted decision: payment activation remains unimplemented');
+console.log('PASS: verified decision cannot currently generate ledger statements; integration gap is documented and fail-closed');
