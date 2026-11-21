@@ -1,0 +1,167 @@
+{
+  "schema_version": 1,
+  "batch": 50,
+  "editorial_note": "20 new situation-specific candidates. Exact normalized duplicate screening against 3,000 public catalogue entries and editorial batch 49 performed in this run; no exact collisions. Full v1-v48 near-duplicate review, independent editorial review, CI and release approval NOT completed. Editorial-only; do not publish.",
+  "messages": [
+    {
+      "id": "KDL-EDITORIAL50-001",
+      "theme": "returning_to_a_hobby",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The paintbrush may feel unfamiliar after months away from it. You can begin with a scrap of paper and no intention of showing anyone what appears."
+    },
+    {
+      "id": "KDL-EDITORIAL50-002",
+      "theme": "waiting_for_a_reply",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a message goes unanswered, your mind may invent a dozen explanations. None is confirmed by the silence. You can put your phone down while the uncertainty remains."
+    },
+    {
+      "id": "KDL-EDITORIAL50-003",
+      "theme": "family_recipe_loss",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "You might remember the smell of a family dish but not its measurements. Making an imperfect version can be a way of remembering without pretending you can recreate the person who made it."
+    },
+    {
+      "id": "KDL-EDITORIAL50-004",
+      "theme": "first_day_with_a_cane",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Using a cane in a familiar street can make the street feel unexpectedly public. You are entitled to move at the pace that keeps you steady, whether anyone understands or not."
+    },
+    {
+      "id": "KDL-EDITORIAL50-005",
+      "theme": "after_a_difficult_meeting",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If you leave a meeting wishing you had spoken more clearly, jot down the point you still want heard. A follow-up note can carry what the room did not make space for."
+    },
+    {
+      "id": "KDL-EDITORIAL50-006",
+      "theme": "empty_nest_evening",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The quiet after someone moves out can be both relief and grief. You do not have to choose which feeling is the true one before making dinner for yourself."
+    },
+    {
+      "id": "KDL-EDITORIAL50-007",
+      "theme": "repairing_a_friendship",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An apology may open a door without restoring trust immediately. You can appreciate the effort and still need time to see whether the relationship feels different."
+    },
+    {
+      "id": "KDL-EDITORIAL50-008",
+      "theme": "community_garden_failure",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When the seedlings fail despite careful watering, it can feel like a verdict on your effort. Soil, weather and timing all have a say. You can learn something without calling yourself careless."
+    },
+    {
+      "id": "KDL-EDITORIAL50-009",
+      "theme": "shared_caregiving_calendar",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Coordinating care through a crowded family calendar can turn affection into logistics. The practical messages matter, even when there is little energy left for tender ones."
+    },
+    {
+      "id": "KDL-EDITORIAL50-010",
+      "theme": "job_search_fatigue",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After another afternoon changing the same résumé, a break may feel undeserved. Your attention is a resource, not evidence of how badly you want the job."
+    },
+    {
+      "id": "KDL-EDITORIAL50-011",
+      "theme": "moving_into_a_smaller_home",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Packing a smaller home can ask you to decide what to keep before you are ready to let anything go. One drawer is enough of a decision for today."
+    },
+    {
+      "id": "KDL-EDITORIAL50-012",
+      "theme": "hearing_unexpected_good_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Good news can arrive while you are still carrying worry. You are allowed to enjoy a small part of it without requiring the rest of your life to be settled."
+    },
+    {
+      "id": "KDL-EDITORIAL50-013",
+      "theme": "mispronounced_name",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Correcting someone who repeatedly mispronounces your name can be tiring. You can choose when to speak up without treating their mistake as your responsibility to manage."
+    },
+    {
+      "id": "KDL-EDITORIAL50-014",
+      "theme": "school_pickup_lateness",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Arriving late to collect a child can leave your heart racing long after everyone is safe. Once the immediate need is handled, you can address what happened without turning one delay into a judgment of your care."
+    },
+    {
+      "id": "KDL-EDITORIAL50-015",
+      "theme": "after_a_failed_audition",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An audition can end before you have shown what you practised. Disappointment deserves its moment; it does not erase the hours of work or settle what you might try next."
+    },
+    {
+      "id": "KDL-EDITORIAL50-016",
+      "theme": "unopened_birthday_card",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unopened birthday card from someone you miss can sit on the table for weeks. You can decide when to read it. There is no deadline for being ready."
+    },
+    {
+      "id": "KDL-EDITORIAL50-017",
+      "theme": "navigating_a_language_barrier",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Asking someone to repeat a sentence in a language you are learning takes patience on both sides. Understanding slowly is still understanding."
+    },
+    {
+      "id": "KDL-EDITORIAL50-018",
+      "theme": "returning_a_borrowed_item",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "If returning something you borrowed has become awkward because too much time passed, a simple message and a clear plan can be kinder than another week of avoidance."
+    },
+    {
+      "id": "KDL-EDITORIAL50-019",
+      "theme": "unplanned_day_off",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected day without work may not feel restful when money is uncertain. You can acknowledge the practical worry and still allow yourself one ordinary moment of ease."
+    },
+    {
+      "id": "KDL-EDITORIAL50-020",
+      "theme": "first_holiday_after_separation",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "A familiar holiday may look different after a separation. Keeping one tradition, changing another, or doing very little are all ways to make room for the day you actually have."
+    }
+  ]
+}
