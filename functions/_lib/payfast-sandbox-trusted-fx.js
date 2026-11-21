@@ -14,7 +14,20 @@ export async function issueTrustedSandboxFxQuote({plan,nowMs,fxEndpoint,fetchImp
  if(url.protocol!=='https:'||url.username||url.password||url.hash||(!isFrankfurter&&url.search)||url.port||
  !/^[a-z0-9.-]+$/i.test(url.hostname)||url.hostname==='localhost'||url.hostname.endsWith('.local'))return deny('fx_configuration_invalid');
  let response;
- try{response=await fetchImpl(url.href,{method:'GET',redirect:'error',headers:{accept:'application/json'},signal:AbortSignal.timeout(5000)})}catch{return deny('fx_provider_unavailable')}
+ // Retry once for transient upstream/network failures. Both attempts use the
+ // exact operator-configured endpoint and strict TLS/redirect policy.
+ let lastError;
+ for(let attempt=0;attempt<2;attempt++){
+  try{
+   response=await fetchImpl(url.href,{method:'GET',redirect:'error',headers:{accept:'application/json'},signal:AbortSignal.timeout(8000)});
+   break;
+  }catch(error){lastError=error}
+ }
+ if(!response){
+  // Keep failure closed, but distinguish a timeout from another fetch failure.
+  const timeout=lastError?.name==='TimeoutError'||lastError?.name==='AbortError';
+  return deny(timeout?'fx_provider_timeout':'fx_provider_unavailable');
+ }
  if(!response?.ok||!(response.headers.get('content-type')||'').toLowerCase().includes('application/json'))return deny('fx_provider_rejected');
  let payload;try{payload=await response.json()}catch{return deny('fx_response_invalid')}
  // Frankfurter's documented v1 format is {amount:1,base:'USD',date:'YYYY-MM-DD',rates:{ZAR:number}}.
