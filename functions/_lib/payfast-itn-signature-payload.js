@@ -2,7 +2,7 @@
 // Never treat this payload as authentication or activate a subscription.
 // PayFast custom ITN signs ordered, non-empty form values, omitting signature,
 // with optional merchant passphrase appended as &passphrase=... .
-const encode=value=>encodeURIComponent(value).replace(/%20/g,'+').replace(/[!'()*~]/g,ch=>'%'+ch.charCodeAt(0).toString(16).toUpperCase();
+const encode=value=>encodeURIComponent(value).replace(/%20/g,'+').replace(/[!'()*~]/g,ch=>'%'+ch.charCodeAt(0).toString(16).toUpperCase());
 export function buildPayFastItnSignaturePayload({raw,passphrase}={}){
  if(typeof raw!=='string'||raw.length===0||raw.length>16384)return {ok:false,reason:'invalid_body'};
  if(typeof passphrase!=='string'||passphrase.length>256)return {ok:false,reason:'invalid_passphrase'};
