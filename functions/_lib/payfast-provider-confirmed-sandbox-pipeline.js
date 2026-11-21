@@ -17,8 +17,11 @@ export async function processProviderConfirmedSandboxItn({db,raw,contentType,
  if(!source.verified)return deny('source_verification_failed');
  const signature=verifyPayFastItnSignature({raw,passphrase});
  if(!signature.verified)return deny('signature_verification_failed');
- const confirmed=await verifyPayFastItnWithServer({raw,environment:'sandbox',fetchImpl});
- if(!confirmed.verified)return deny('provider_confirmation_failed');
+ // Provider outages and malformed responses must never reach ledger persistence.
+ let confirmed;
+ try {confirmed=await verifyPayFastItnWithServer({raw,environment:'sandbox',fetchImpl});}
+ catch {return deny('provider_confirmation_unavailable');}
+ if(!confirmed?.verified)return deny('provider_confirmation_failed');
  // The provider result always overrides any caller-supplied serverVerified value.
  return processVerifiedSandboxItnOffline({db,raw,contentType,expectedMerchantId,
   verification:{signatureVerified:signature.verified,
