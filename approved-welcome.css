@@ -22,3 +22,8 @@
 .member-state{position:static;display:block;margin:12px auto 0;padding:10px 14px;max-width:90%;min-height:2.5em;border-radius:12px;background:#210c28;color:#fff8ee;text-shadow:none;line-height:1.5}
 .welcome-content{margin-bottom:12px}
 @media(max-width:540px){.member-state{font-size:.85rem;margin-top:12px}.welcome-content{margin-bottom:8px}}
+
+/* Membership status is now a sibling of the artwork, never an overlay. */
+.welcome-stage{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:0}
+.welcome-stage>.member-state{position:static!important;flex:none;display:block;width:min(100%,720px);max-width:720px;margin:12px auto 0;padding:12px 18px;text-align:center;background:#321638;border:1px solid #e9c58d55;border-radius:14px;color:#fff8ee;line-height:1.5;box-shadow:0 8px 25px #10051b55}
+.welcome-stage>.member-state[hidden]{display:none!important}
