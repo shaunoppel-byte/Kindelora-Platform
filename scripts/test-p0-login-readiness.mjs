@@ -10,10 +10,10 @@ const missing=await onRequestGet({env:{...env,MEMBER_AUTH_PEPPER:''}});
 assert.deepEqual(await missing.json(),{available:false,stage:'configuration'});
 const broken=await onRequestGet({env:{...env,DB:{...db,async batch(){throw Error('private database detail')}}}});
 assert.deepEqual(await broken.json(),{available:false,stage:'schema'});
-const original=globalThis.crypto;
+const originalDescriptor=Object.getOwnPropertyDescriptor(globalThis,'crypto');
 try{
- globalThis.crypto={subtle:{importKey:async()=>{throw Error('private crypto detail')}}};
+ Object.defineProperty(globalThis,'crypto',{configurable:true,value:{subtle:{importKey:async()=>{throw Error('private crypto detail')}}}});
  const failure=await onRequestGet({env});
  assert.deepEqual(await failure.json(),{available:false,stage:'crypto'});
-}finally{globalThis.crypto=original}
+}finally{if(originalDescriptor)Object.defineProperty(globalThis,'crypto',originalDescriptor);else delete globalThis.crypto}
 console.log('PASS: read-only login preflight stages and no secret/account data exposure (synthetic offline only)');
