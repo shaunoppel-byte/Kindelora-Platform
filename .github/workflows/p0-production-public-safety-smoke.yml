@@ -1,0 +1,17 @@
+name: P0 production public safety smoke
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+jobs:
+  public-safety:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify live public login preflight and fail-closed checkout
+        run: node scripts/test-p0-production-public-safety-smoke.mjs
