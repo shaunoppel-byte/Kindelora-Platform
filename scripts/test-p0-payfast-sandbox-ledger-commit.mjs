@@ -6,7 +6,7 @@ const order={environment:'sandbox',status:'pending',reference:'order_12345678',z
 let calls=0;
 const db={prepare(sql){return {bind(...args){return {sql,args}}}},async batch(statements){
  calls++;assert.equal(statements.length,2);
- return [{meta:{changes:1}},{meta:{changes:1}}];
+ return [{success:true,meta:{changes:1}},{success:true,meta:{changes:1}}];
 }};
 assert.deepEqual(await commit({db,decision,order}),{committed:true,grantEntitlement:false,reason:'ledger_committed'});
 for(const bad of [
