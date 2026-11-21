@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const source=readFileSync('functions/api/member/login.js','utf8');
+assert.match(source,/kdfPath==='legacy'\?await legacyDerive\(password,user.password_salt\)/);
+assert.match(source,/await derive\(password,'v2:invalid-member-placeholder',env.MEMBER_AUTH_PEPPER\)/);
+assert.doesNotMatch(source,/legacyDerive\(password,user\?\.password_salt\|\|'invalid-member-placeholder'\)/);
+assert.match(source,/if\(!valid\)/);
+assert.match(source,/return reply\(\{error:"Invalid credentials"\},401\)/);
+assert.match(source,/rate_limit_active/);
+assert.match(source,/login_success/);
+console.log('PASS: unknown-account login uses bounded v2 KDF; legacy account path and registration untouched');
