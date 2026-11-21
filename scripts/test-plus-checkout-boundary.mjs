@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {onRequestGet,onRequestPost} from '../functions/api/plus/checkout.js';
+const base='https://kindelora.pages.dev/api/plus/checkout';
+const env={MEMBER_AUTH_ENABLED:'true',MEMBER_AUTH_PEPPER:'a'.repeat(32),DB:{prepare(){throw Error('no session should query database')}}};
+const post=(body,headers={})=>new Request(base,{method:'POST',headers:{origin:'https://kindelora.pages.dev','content-type':'application/json',...headers},body});
+let r=await onRequestGet();assert.equal(r.status,503);
+r=await onRequestPost({request:post(JSON.stringify({plan:'monthly'})),env:{}});assert.equal(r.status,503);
+r=await onRequestPost({request:post(JSON.stringify({plan:'monthly'}),{origin:'https://evil.example'}),env});assert.equal(r.status,403);
+r=await onRequestPost({request:post(JSON.stringify({plan:'monthly'})),env});assert.equal(r.status,401);
+assert.equal((await r.json()).error,'authentication_required');
+console.log('PASS: checkout stays disabled without merchant verification; missing auth and invalid origin denied');
