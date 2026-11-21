@@ -21,7 +21,7 @@ test('yearly all-day event is local and calendar compatible',async()=>{
 test('escapes event labels to prevent ICS field injection',async()=>{
  const data=await download({label:'Family, friends; together\\forever\nBEGIN:VALARM',month:1,day:1});
  assert.equal((data.match(/BEGIN:VEVENT/g)||[]).length,1);
- assert.equal((data.match(/BEGIN:VALARM/g)||[]).length,0);
+ assert.equal((data.match(/(?:^|\r\n)BEGIN:VALARM(?:\r\n|$)/g)||[]).length,0);
  assert.match(data,/SUMMARY:Family\\, friends\\; together/);
 });
 test('rejects impossible calendar dates',()=>assert.throws(()=>ctx.window.KindeloraCalendar.download({label:'Invalid',month:4,day:31}),/Invalid date/));
