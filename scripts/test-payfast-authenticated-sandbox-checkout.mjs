@@ -1,5 +1,30 @@
 import assert from 'node:assert/strict';
 import {onRequestPost,onRequestGet} from '../functions/api/plus/sandbox-checkout.js';
+import {hash} from '../functions/api/member/_auth.js';
+const url='https://kindelora.pages.dev/api/plus/sandbox-checkout';
+const token='a'.repeat(64),pepper='p'.repeat(40),tokenHash=await hash(token+pepper);
+let sessionQueries=0;
+const db={prepare(sql){return {bind(...args){return {async first(){
+ if(!sql.includes('FROM member_sessions'))throw Error('unexpected database query');
+ sessionQueries++;assert.equal(args[0],tokenHash);
+ return {id:'member_12345678',email_verified_at:'2026-11-20T00:00:00Z'};
+ }}}}}};
+const env={MEMBER_AUTH_ENABLED:'true',MEMBER_AUTH_PEPPER:pepper,DB:db,PAYFAST_SANDBOX_CHECKOUT_ENABLED:'true'};
+const req=({origin='https://kindelora.pages.dev',cookie=true,body={plan:'monthly'},type='application/json',urlOverride=url}={})=>new Request(urlOverride,{method:'POST',headers:{origin,'content-type':type,...(cookie?{cookie:'kindelora_session='+token}:{})},body:typeof body==='string'?body:JSON.stringify(body)});
+const check=async(request,expected)=>{const response=await onRequestPost({request,env});assert.equal(response.status,expected);assert.equal((await response.json()).checkoutReady,false)};
+await check(req({origin:'https://evil.example'}),403);
+await check(req({cookie:false}),401);
+await check(req({body:{plan:'monthly',usdMinor:1}}),400);
+await check(req({body:{plan:'lifetime'}}),400);
+await check(req({body:'{' }),400);
+await check(req({type:'text/plain'}),415);
+await check(req({urlOverride:'https://attacker.example/api/plus/sandbox-checkout',origin:'https://attacker.example'}),403);
+await check(req(),503); // FX configuration missing: must fail closed before persistence.
+const disabled=await onRequestPost({request:req(),env:{...env,PAYFAST_SANDBOX_CHECKOUT_ENABLED:'false'}});
+assert.equal(disabled.status,503);
+assert.equal((await onRequestGet()).status,405);
+assert.ok(sessionQueries>=5);
+console.log('PASS: checkout rejects cross-origin, anonymous, client price injection, invalid plan/body, wrong host, missing FX and disabled config');
 const request=new Request('https://kindelora.pages.dev/api/plus/sandbox-checkout',{method:'POST',headers:{origin:'https://kindelora.pages.dev','content-type':'application/json'},body:JSON.stringify({plan:'monthly'})});
 let result=await onRequestPost({request,env:{}});assert.equal(result.status,503);
 result=await onRequestGet();assert.equal(result.status,405);
