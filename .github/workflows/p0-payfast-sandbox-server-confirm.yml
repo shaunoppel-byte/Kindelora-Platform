@@ -1,0 +1,17 @@
+name: P0 PayFast sandbox server confirmation contract
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  sandbox-confirmation:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Validate fixed PayFast sandbox endpoint and fail-closed responses
+        run: node scripts/test-p0-payfast-sandbox-server-confirm.mjs
