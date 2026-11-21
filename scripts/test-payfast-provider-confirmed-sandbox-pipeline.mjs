@@ -8,6 +8,8 @@ const payload=buildPayFastItnSignaturePayload({raw:unsigned+'&signature='+('0'.r
 const raw=unsigned+'&signature='+md5(payload);
 const contentType='application/x-www-form-urlencoded';
 const verification={sourceVerified:true,quoteVerified:true,serverVerified:true};
+const request={headers:{get:name=>name==='cf-connecting-ip'?'192.0.2.10':null}};
+const allowedCidrs='192.0.2.0/24';
 let dbCalls=0;
 const db={prepare(sql){dbCalls++;return {bind(){return {async first(){
  if(sql.includes('FROM payfast_sandbox_orders WHERE'))return {order_reference:'order_12345678',member_id:'member_12345678',plan:'monthly',usd_minor:899,zar_minor:17000,fx_reference:'quote_12345678',status:'pending'};
@@ -17,18 +19,23 @@ const db={prepare(sql){dbCalls++;return {bind(){return {async first(){
  }}}}},async batch(){return [{success:true,meta:{changes:1}},{success:true,meta:{changes:1}}]}};
 let calls=0;
 const provider=async(url,opts)=>{calls++;assert.equal(url,'https://sandbox.payfast.co.za/eng/query/validate');assert.equal(opts.method,'POST');return {status:200,ok:true,text:async()=> 'VALID'}};
-let result=await process({db,raw,contentType,expectedMerchantId:'10000100',verification:{...verification,signatureVerified:false,serverVerified:false},fetchImpl:provider,passphrase});
+let result=await process({db,raw,contentType,expectedMerchantId:'10000100',verification:{...verification,signatureVerified:false,serverVerified:false},fetchImpl:provider,passphrase,request,allowedCidrs});
 assert.equal(result.committed,true);assert.equal(result.grantEntitlement,false);assert.equal(calls,1);
 const before=dbCalls;
-result=await process({db,raw,contentType,expectedMerchantId:'10000100',verification,passphrase,fetchImpl:async()=>({status:200,ok:true,text:async()=> 'INVALID'})});
+result=await process({db,raw,contentType,expectedMerchantId:'10000100',verification,passphrase,request,allowedCidrs,fetchImpl:async()=>({status:200,ok:true,text:async()=> 'INVALID'})});
 assert.equal(result.committed,false);assert.equal(dbCalls,before);
-result=await process({db,raw,contentType,expectedMerchantId:'10000100',verification:{...verification,sourceVerified:false},passphrase,fetchImpl:async()=>{throw Error('must not call')}});
+result=await process({db,raw,contentType,expectedMerchantId:'10000100',verification:{...verification,sourceVerified:false},passphrase,request,allowedCidrs,fetchImpl:async()=>{throw Error('must not call')}});
 assert.equal(result.committed,false);
 const beforeTamper=dbCalls;
 result=await process({db,raw:raw.replace('170.00','171.00'),contentType,expectedMerchantId:'10000100',verification,passphrase,fetchImpl:async()=>{throw Error('signature failure must not call provider')}});
 assert.equal(result.committed,false);assert.equal(dbCalls,beforeTamper);
 result=await process({db,raw,contentType,expectedMerchantId:'10000100',verification,passphrase:'wrong-passphrase',fetchImpl:async()=>{throw Error('bad secret must not call provider')}});
 assert.equal(result.committed,false);
-result=await process({db,raw,contentType,expectedMerchantId:'10000100',verification,fetchImpl:async()=>{throw Error('missing secret must not call provider')}});
+result=await process({db,raw,contentType,expectedMerchantId:'10000100',verification,request,allowedCidrs,fetchImpl:async()=>{throw Error('missing secret must not call provider')}});
 assert.equal(result.committed,false);
-console.log('PASS: sandbox pipeline independently checks MD5 signature and PayFast provider; no entitlement');
+const beforeSource=dbCalls;
+result=await process({db,raw,contentType,expectedMerchantId:'10000100',verification,passphrase,request:{headers:{get:()=> '198.51.100.99'}},allowedCidrs,fetchImpl:async()=>{throw Error('bad source must not call provider')}});
+assert.equal(result.committed,false);assert.equal(dbCalls,beforeSource);
+result=await process({db,raw,contentType,expectedMerchantId:'10000100',verification,passphrase,request,fetchImpl:async()=>{throw Error('missing allowlist must not call provider')}});
+assert.equal(result.committed,false);
+console.log('PASS: sandbox pipeline independently checks Cloudflare source, MD5 signature and provider; no entitlement');

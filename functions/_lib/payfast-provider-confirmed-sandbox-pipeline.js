@@ -1,17 +1,21 @@
 // Server-only sandbox integration. PayFast provider confirmation is performed
 // independently, never accepted as a caller-supplied serverVerified flag.
 // Signature and provider confirmation are independently verified here.
-// Source and quote verification still require trusted server implementation;
+// Source is checked against an operator-configured allowlist; quote verification
+// still requires independent trusted server implementation;
 // these flags must NEVER originate from a public HTTP request.
 // No public route, charges, or PLUS entitlement activation.
 import {verifyPayFastItnWithServer} from './payfast-itn-server-validation.js';
 import {verifyPayFastItnSignature} from './payfast-itn-signature-verification.js';
+import {verifyPayFastCloudflareSource} from './payfast-cloudflare-source-allowlist.js';
 import {processVerifiedSandboxItnOffline} from './payfast-sandbox-persisted-itn-pipeline.js';
 const deny=reason=>({committed:false,grantEntitlement:false,reason});
 export async function processProviderConfirmedSandboxItn({db,raw,contentType,
- expectedMerchantId,verification,fetchImpl,passphrase}={}){
- if(!verification||verification.sourceVerified!==true||verification.quoteVerified!==true)
+ expectedMerchantId,verification,fetchImpl,passphrase,request,allowedCidrs}={}){
+ if(!verification||verification.quoteVerified!==true)
   return deny('independent_verification_required');
+ const source=verifyPayFastCloudflareSource({request,allowedCidrs});
+ if(!source.verified)return deny('source_verification_failed');
  const signature=verifyPayFastItnSignature({raw,passphrase});
  if(!signature.verified)return deny('signature_verification_failed');
  const confirmed=await verifyPayFastItnWithServer({raw,environment:'sandbox',fetchImpl});
@@ -19,6 +23,6 @@ export async function processProviderConfirmedSandboxItn({db,raw,contentType,
  // The provider result always overrides any caller-supplied serverVerified value.
  return processVerifiedSandboxItnOffline({db,raw,contentType,expectedMerchantId,
   verification:{signatureVerified:signature.verified,
-   sourceVerified:verification.sourceVerified,quoteVerified:verification.quoteVerified,
+   sourceVerified:source.verified,quoteVerified:verification.quoteVerified,
    serverVerified:confirmed.verified}});
 }
