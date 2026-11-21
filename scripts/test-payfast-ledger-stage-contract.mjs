@@ -1,0 +1,15 @@
+import assert from 'node:assert/strict';
+import {sandboxLedgerAtomicStatements} from '../functions/_lib/payfast-sandbox-ledger-atomic.js';
+import {evaluateSandboxItnOffline} from '../functions/_lib/payfast-sandbox-itn-orchestrator.js';
+assert.equal(typeof evaluateSandboxItnOffline,'function');
+const order={environment:'sandbox',status:'pending',reference:'order_ref_12345678',zarMinor:17000,plan:'monthly',memberId:'member_123'};
+const decision={stage:'pending_atomic_commit',accepted:false,grantEntitlement:false,providerTransactionId:'provider_tx_12345678',merchantReference:order.reference,paidMinor:order.zarMinor,plan:order.plan};
+const db={prepare(sql){return {bind(...args){return {sql,args}}}}};
+const statements=sandboxLedgerAtomicStatements({db,decision,order});
+assert.equal(statements.length,2);
+assert.match(statements[0].sql,/INSERT INTO payfast_sandbox_transactions/);
+assert.match(statements[1].sql,/UPDATE payfast_sandbox_orders/);
+assert.equal(sandboxLedgerAtomicStatements({db,decision:{...decision,grantEntitlement:true},order}),null);
+assert.equal(sandboxLedgerAtomicStatements({db,decision,order:{...order,status:'paid'}}),null);
+assert.equal(sandboxLedgerAtomicStatements({db,decision,order:{...order,zarMinor:1}}),null);
+console.log('PASS: orchestrator-stage decision builds exactly two ledger statements; unsafe states denied; no writes executed');
