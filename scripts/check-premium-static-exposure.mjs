@@ -54,7 +54,8 @@ assert(sw.includes('req.headers.has("Authorization")'),'Authenticated requests m
 assert(sw.includes('const classifyPath=raw=>'),'Service worker does not classify encoded paths');
 assert(sw.includes('classification==="invalid"'),'Service worker may replay ambiguous encoded paths');
 assert(sw.includes('classification==="protected"'),'Service worker may replay protected PLUS routes');
-assert(sw.includes('kindelora-launch-v27'),'Service worker cache version was not rotated after security hardening');
+assert(sw.includes('kindelora-launch-v28'),'Service worker cache version must be rotated for checkout diagnostic bypass');
+assert(sw.includes('url.pathname==="/api/plus/sandbox-checkout"'),'Service worker must not mask the sandbox checkout diagnostic GET route');
 
 assert(middleware.includes('onRequest')&&middleware.includes('403'),'No fail-closed premium middleware');
 assert(middleware.includes('(?:plus|premium|members)'),'Premium namespaces not denied by default');
