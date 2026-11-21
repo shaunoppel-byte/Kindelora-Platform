@@ -23,7 +23,7 @@ export async function onRequestPost({request,env}={}){
  const nowMs=Date.now(),reference='kin_'+random(),fxReference='fx_'+random();
  const fx=await issueTrustedSandboxFxQuote({plan:data.plan,nowMs,reference:fxReference,fxEndpoint:env.PAYFAST_SANDBOX_FX_ENDPOINT});
  if(!fx.ok){
-  const allowed=new Set(['fx_configuration_missing','fx_configuration_invalid','fx_provider_unavailable','fx_provider_rejected','fx_response_invalid','fx_rate_stale','fx_amount_invalid']);
+  const allowed=new Set(['fx_configuration_missing','fx_configuration_invalid','fx_provider_unavailable','fx_provider_timeout','fx_provider_rejected','fx_response_invalid','fx_rate_stale','fx_amount_invalid']);
   return deny(503,allowed.has(fx.reason)?fx.reason:'trusted_fx_unavailable');
  }
  const result=await prepareSandboxCheckout({db:env.DB,plan:data.plan,verifiedMemberId:user.id,reference,quote:fx.quote,nowMs,merchant});
