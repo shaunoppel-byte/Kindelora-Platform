@@ -9,20 +9,32 @@ async function legacyHash(salt){
 }
 function db(user){
  const state={attempts:0,sessions:0,upgrades:0};
- return {state,prepare(sql){return {bind(...args){return {
-  async first(){
-   if(sql.includes('FROM member_login_limits'))return null;
-   if(sql.includes('FROM members WHERE'))return user;
-   throw Error('unexpected read');
-  },
-  async run(){
-   if(sql.startsWith('INSERT INTO member_login_limits'))state.attempts++;
-   else if(sql.startsWith('UPDATE members SET password_salt=')){state.upgrades++;assert.match(args[0],/^v2:/);assert.match(args[1],/^[a-f0-9]{64}$/);}
-   else if(sql.startsWith('INSERT INTO member_sessions'))state.sessions++;
-   else if(!sql.startsWith('DELETE FROM member_login_limits'))throw Error('unexpected write');
-   return {meta:{changes:1}};
+ return {
+  state,
+  prepare(sql){
+   return {
+    bind(...args){
+     return {
+      async first(){
+       if(sql.includes('FROM member_login_limits'))return null;
+       if(sql.includes('FROM members WHERE'))return user;
+       throw Error('unexpected read');
+      },
+      async run(){
+       if(sql.startsWith('INSERT INTO member_login_limits'))state.attempts++;
+       else if(sql.startsWith('UPDATE members SET password_salt=')){
+        state.upgrades++;
+        assert.match(args[0],/^v2:/);
+        assert.match(args[1],/^[a-f0-9]{64}$/);
+       }else if(sql.startsWith('INSERT INTO member_sessions'))state.sessions++;
+       else if(!sql.startsWith('DELETE FROM member_login_limits'))throw Error('unexpected write');
+       return {meta:{changes:1}};
+      }
+     };
+    }
+   };
   }
- };}};}}};
+ };
 }
 async function login(database,pass=password){
  const request=new Request('https://kindelora.pages.dev/api/member/login',{method:'POST',headers:{origin:'https://kindelora.pages.dev','content-type':'application/json'},body:JSON.stringify({email,password:pass})});
