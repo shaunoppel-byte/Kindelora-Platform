@@ -26,7 +26,7 @@ const db={prepare(sql){return {bind(...args){return {
   if(sql.includes('INSERT INTO member_login_limits')){limitWrites++;return {meta:{changes:1}}}
   if(sql.includes('DELETE FROM member_login_limits'))return {meta:{changes:1}};
   throw Error('unexpected write');
- }};}}};
+ }};}}}};
 const env={MEMBER_AUTH_ENABLED:'true',MEMBER_AUTH_PEPPER:pepper,DB:db};
 async function login(pass=password,origin='https://kindelora.pages.dev'){
  const request=new Request('https://kindelora.pages.dev/api/member/login',{method:'POST',
