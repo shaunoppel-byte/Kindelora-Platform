@@ -1,6 +1,7 @@
 // Separate live PayFast ITN callback. Explicitly OFF until production D1,
 // subscription lifecycle, secrets and live E2E readiness are approved.
 // Never changes the existing sandbox callback or registration workflow.
+import {verifyLivePlusD1Schema} from '../../_lib/payfast-live-d1-schema-preflight.js';
 import {processAuthenticatedLivePlusPayment} from '../../_lib/payfast-live-transaction-pipeline.js';
 const reply=(status,reason)=>new Response(JSON.stringify({accepted:status===200,reason,grantEntitlement:false}),{status,headers:{'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff'}});
 export async function onRequestPost({request,env}={}){
@@ -16,6 +17,8 @@ export async function onRequestPost({request,env}={}){
  let raw;try{raw=await request.text()}catch{return reply(400,'invalid_body')}
  if(!raw||new TextEncoder().encode(raw).byteLength>16384)return reply(400,'invalid_body');
  // A fresh server-generated ID; renewals use the existing persisted ID.
+ const schema=await verifyLivePlusD1Schema({db:env.DB});
+ if(!schema.ready)return reply(503,'live_d1_schema_unavailable');
  const subscriptionId='sub_'+crypto.randomUUID().replaceAll('-','');
  const result=await processAuthenticatedLivePlusPayment({db:env.DB,request,raw,
   merchantId:env.PAYFAST_LIVE_MERCHANT_ID,passphrase:env.PAYFAST_LIVE_PASSPHRASE,
