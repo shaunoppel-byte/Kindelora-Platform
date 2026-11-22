@@ -24,4 +24,4 @@ jobs:
         with:
           node-version: '22'
       - name: Run all six production payment foundation tests against the same checkout
-        run: node --test scripts/test-payfast-live-redirect.mjs scripts/test-payfast-live-order-preflight.mjs scripts/test-payfast-live-order-persistence.mjs scripts/test-payfast-live-persisted-payment-facts.mjs scripts/test-payfast-live-ledger-plan.mjs scripts/test-plus-entitlement-period-policy.mjs scripts/test-plus-verified-member-customer.mjs scripts/test-plus-live-activation-atomic-plan.mjs
+        run: node --test scripts/test-payfast-live-redirect.mjs scripts/test-payfast-live-order-preflight.mjs scripts/test-payfast-live-order-persistence.mjs scripts/test-payfast-live-persisted-payment-facts.mjs scripts/test-payfast-live-ledger-plan.mjs scripts/test-plus-entitlement-period-policy.mjs scripts/test-plus-verified-member-customer.mjs scripts/test-plus-live-activation-atomic-plan.mjs scripts/test-payfast-live-authenticated-itn.mjs
