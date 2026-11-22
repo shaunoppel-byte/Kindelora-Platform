@@ -14,10 +14,11 @@ export async function prepareAuthenticatedLivePlusActivation({db,request,raw,mer
  if(!reconciliation.ready)return deny('payment_not_authenticated_or_reconciled');
  const state=await loadLivePlusSubscriptionState({db,verifiedPayment:reconciliation.payment});
  if(!state.ready)return deny('subscription_state_unavailable');
- const verifiedPayment={...reconciliation.payment,subscriptionId};
+ const resolvedSubscriptionId=state.existingSubscription?.id??subscriptionId;
+ const verifiedPayment={...reconciliation.payment,subscriptionId:resolvedSubscriptionId};
  const plan=livePlusActivationStatements({db,verifiedPayment,existingSubscription:state.existingSubscription,paidAt:new Date(nowMs).toISOString()});
  if(!plan||!plan.requiresAtomicBatch||plan.statements?.length!==3)return deny('activation_plan_unavailable');
  return {ready:true,reason:'authenticated_payment_and_subscription_plan_prepared',
   grantEntitlement:false,execute:false,requiresRollbackOnZeroChanges:true,
-  plan,verifiedPayment};
+  plan,verifiedPayment,existingSubscription:state.existingSubscription};
 }
