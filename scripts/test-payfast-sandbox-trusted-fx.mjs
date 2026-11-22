@@ -19,4 +19,18 @@ result=await issueTrustedSandboxFxQuote({...args,fetchImpl:makeProvider({...good
 assert.equal(result.ok,false);
 result=await issueTrustedSandboxFxQuote({...args,fetchImpl:makeProvider({...good,quote:'EUR'})});
 assert.equal(result.ok,false);
+let attempts=0;
+result=await issueTrustedSandboxFxQuote({...args,fetchImpl:async()=>{
+ attempts++;
+ return attempts===1?new Response('temporarily unavailable',{status:503}):new Response(JSON.stringify(good),{headers:{'content-type':'application/json'}});
+}});
+assert.equal(result.ok,true);
+assert.equal(attempts,2);
+attempts=0;
+result=await issueTrustedSandboxFxQuote({...args,fetchImpl:async()=>{
+ attempts++;
+ return new Response('redirect',{status:302,headers:{location:'https://example.org'}});
+}});
+assert.equal(result.ok,false);
+assert.equal(attempts,1);
 console.log('PASS: trusted sandbox FX accepted; invalid source, stale rate and wrong currency rejected');
