@@ -6,5 +6,15 @@ check('monthly','2028-01-31T10:30:00.000Z','2028-02-29T10:30:00.000Z');
 check('annual','2028-02-29T10:30:00.000Z','2029-02-28T10:30:00.000Z');
 check('annual','2026-11-22T10:30:00.000Z','2027-11-22T10:30:00.000Z');
 check('monthly','2026-11-22T10:30:00.000Z','2027-01-01T10:30:00.000Z','2026-12-01T10:30:00.000Z');
+// Approved monthly cycle: initial 22 Nov payment, next charges 22 Dec and 22 Jan.
+const first=period({plan:'monthly',paidAt:'2026-11-22T10:00:00.000Z'});
+assert.equal(first.periodStart,'2026-11-22T10:00:00.000Z');
+assert.equal(first.periodEnd,'2026-12-22T10:00:00.000Z');
+const second=period({plan:'monthly',paidAt:'2026-12-22T10:00:00.000Z',previousPeriodEnd:first.periodEnd});
+assert.equal(second.periodStart,first.periodEnd);
+assert.equal(second.periodEnd,'2027-01-22T10:00:00.000Z');
+const third=period({plan:'monthly',paidAt:'2027-01-22T10:00:00.000Z',previousPeriodEnd:second.periodEnd});
+assert.equal(third.periodStart,second.periodEnd);
+assert.equal(third.periodEnd,'2027-02-22T10:00:00.000Z');
 for(const bad of [{plan:'weekly',paidAt:'2026-11-22T10:30:00.000Z'},{plan:'monthly',paidAt:'2026-02-30T10:30:00.000Z'},{plan:'monthly',paidAt:'2026-11-22'},{plan:'monthly',paidAt:'2026-11-22T10:30:00.000Z',previousPeriodEnd:'invalid'}])assert.equal(period(bad).ok,false);
 console.log('PASS: PLUS monthly and annual periods clamp calendar dates and never directly grant access');
