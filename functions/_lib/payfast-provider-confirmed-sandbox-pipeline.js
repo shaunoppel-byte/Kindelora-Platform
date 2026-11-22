@@ -5,6 +5,7 @@
 // still requires independent trusted server implementation;
 // these flags must NEVER originate from a public HTTP request.
 // No public route, charges, or PLUS entitlement activation.
+import {parseSandboxItnEnvelope} from './payfast-sandbox-itn-envelope.js';
 import {verifyPayFastItnWithServer} from './payfast-itn-server-validation.js';
 import {verifyPayFastItnSignature} from './payfast-itn-signature-verification.js';
 import {verifyPayFastCloudflareSource} from './payfast-cloudflare-source-allowlist.js';
@@ -12,6 +13,12 @@ import {processVerifiedSandboxItnOffline} from './payfast-sandbox-persisted-itn-
 const deny=reason=>({committed:false,grantEntitlement:false,reason});
 export async function processProviderConfirmedSandboxItn({db,raw,contentType,
  expectedMerchantId,verification,fetchImpl,passphrase,request,allowedCidrs}={}){
+ // Reject malformed or wrong-merchant notifications before any provider network call.
+ // This is only a preflight: it does not authenticate the notification or grant PLUS.
+ const envelope=parseSandboxItnEnvelope(raw,contentType);
+ if(!envelope.ok)return deny('invalid_envelope');
+ if(typeof expectedMerchantId!=='string'||envelope.merchantId!==expectedMerchantId)
+  return deny('merchant_mismatch');
  // Quote verification is performed independently against D1 before ledger commit.
  const source=verifyPayFastCloudflareSource({request,allowedCidrs});
  if(!source.verified)return deny('source_verification_failed');
