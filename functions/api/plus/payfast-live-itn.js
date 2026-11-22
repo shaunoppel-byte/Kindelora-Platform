@@ -10,8 +10,6 @@ export async function onRequestPost({request,env}={}){
   !/^[0-9]{8,16}$/.test(env.PAYFAST_LIVE_MERCHANT_ID||'')||
   typeof env.PAYFAST_LIVE_PASSPHRASE!=='string'||!env.PAYFAST_LIVE_PASSPHRASE||
   typeof env.PAYFAST_LIVE_ALLOWED_CIDRS!=='string'||!env.PAYFAST_LIVE_ALLOWED_CIDRS.trim())return reply(503,'live_itn_unconfigured');
- const schema=await verifyLivePlusD1Schema({db:env.DB});
- if(!schema.ready)return reply(503,'live_d1_schema_unavailable');
  const type=request.headers.get('content-type')||'';
  if(!/^application\/x-www-form-urlencoded(?:\s*;|\s*$)/i.test(type))return reply(415,'unsupported_content_type');
  const length=Number(request.headers.get('content-length')||'0');
@@ -19,6 +17,8 @@ export async function onRequestPost({request,env}={}){
  let raw;try{raw=await request.text()}catch{return reply(400,'invalid_body')}
  if(!raw||new TextEncoder().encode(raw).byteLength>16384)return reply(400,'invalid_body');
  // A fresh server-generated ID; renewals use the existing persisted ID.
+ const schema=await verifyLivePlusD1Schema({db:env.DB});
+ if(!schema.ready)return reply(503,'live_d1_schema_unavailable');
  const subscriptionId='sub_'+crypto.randomUUID().replaceAll('-','');
  const result=await processAuthenticatedLivePlusPayment({db:env.DB,request,raw,
   merchantId:env.PAYFAST_LIVE_MERCHANT_ID,passphrase:env.PAYFAST_LIVE_PASSPHRASE,
