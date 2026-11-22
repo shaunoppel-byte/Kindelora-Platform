@@ -9,7 +9,7 @@ assert.equal(result.amountZarMinor,17890);
 assert.equal(result.authenticated,false);
 assert.equal(result.grantEntitlement,false);
 for(const [raw,ct] of [
- [valid,'application/json'],['',type],['x'.repeat(16385),type],
+ [valid,'application/json'],['',type],['x'.repeat(16385),type],['é'.repeat(8200),type],
  [valid+'&signature='+('b'.repeat(32)),type],
  [valid.replace('178.90','-1.00'),type],
  [valid.replace('178.90','1e3'),type],
