@@ -22,11 +22,23 @@ return c}
 const PREMIUM_ASSET='/assets/file_00000000bbe8820eb12d4d9ba94ae770.png';
 async function file(){try{const response=await fetch(PREMIUM_ASSET,{cache:'no-store'});if(!response.ok)throw Error('Premium artwork unavailable');const blob=await response.blob();if(!blob.type.startsWith('image/')||!blob.size)throw Error('Invalid artwork');return new File([blob],'KINDELORA-premium-kindness-card.png',{type:blob.type||'image/png'});}catch{return new Promise((resolve,reject)=>{render().toBlob(b=>b?resolve(new File([b],'KINDELORA-a-little-kindness.png',{type:'image/png'})):reject(Error('Image creation failed')),'image/png')})}}
 function download(f){const u=URL.createObjectURL(f),a=document.createElement('a');a.href=u;a.download=f.name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),2500)}
-async function share(choice='signature'){const f=choice==='signature'?await file():await generated(choice);if(typeof navigator.share==='function'&&typeof navigator.canShare==='function'&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],title:'A little kindness from KINDELORA',text:(captions[choice]||captions.signature)+' https://kindelora.pages.dev/'});return 'shared'}catch(e){if(e?.name==='AbortError')return 'cancelled';}}
-download(f);return 'downloaded'}
+const prepared=new Map();
+function prepare(choice='signature'){if(!['signature','strength','gratitude'].includes(choice))return Promise.reject(Error('Unknown card'));if(!prepared.has(choice)){const task=(choice==='signature'?file():generated(choice)).then(f=>{prepared.set(choice,{file:f});return f}).catch(e=>{prepared.delete(choice);throw e});prepared.set(choice,{task});}const entry=prepared.get(choice);return entry.file?Promise.resolve(entry.file):entry.task;}
+function share(choice='signature'){
+ const ready=prepared.get(choice);
+ if(ready?.file)return send(ready.file,choice);
+ return prepare(choice).then(f=>send(f,choice));
+}
+function send(f,choice){
+ if(typeof navigator.share==='function'&&typeof navigator.canShare==='function'&&navigator.canShare({files:[f]})){
+  try{return navigator.share({files:[f],title:'A little kindness from KINDELORA',text:(captions[choice]||captions.signature)+' https://kindelora.pages.dev/'}).then(()=> 'shared').catch(e=>e?.name==='AbortError'?'cancelled':(download(f),'downloaded'));}
+  catch{download(f);return Promise.resolve('downloaded')}
+ }
+ download(f);return Promise.resolve('downloaded');
+}
 const captions=Object.freeze({signature:'Thinking of you today. ♡',strength:'A gentle reminder: you are stronger than you know. ♡',gratitude:'Your presence makes a difference. Thank you for being you. ♡'});
-async function preview(choice='signature'){const f=choice==='signature'?await file():await generated(choice);return URL.createObjectURL(f)}
+async function preview(choice='signature'){const f=await prepare(choice);return URL.createObjectURL(f)}
 async function generated(choice){if(!themes[choice])throw Error('Unknown card');const canvas=render(choice);const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!blob)throw Error('Image creation failed');return new File([blob],'KINDELORA-'+choice+'-card.png',{type:'image/png'});}
 
-window.KindeloraKindnessCard=Object.freeze({share,preview,download:async()=>download(await file()),captions});
+window.KindeloraKindnessCard=Object.freeze({share,preview,prepare,download:async()=>download(await file()),captions});
 })();
