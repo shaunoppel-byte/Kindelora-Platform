@@ -5,7 +5,7 @@ const deny=reason=>({ok:false,reason});
 export function parseSandboxItnEnvelope(raw,contentType){
  if(typeof contentType!=='string'||!/^application\/x-www-form-urlencoded(?:\s*;|\s*$)/i.test(contentType))
   return deny('unsupported_content_type');
- if(typeof raw!=='string'||raw.length===0||raw.length>16384)return deny('invalid_body_size');
+ if(typeof raw!=='string'||raw.length===0||new TextEncoder().encode(raw).byteLength>16384)return deny('invalid_body_size');
  const params=new URLSearchParams(raw),values=Object.create(null);
  let count=0;
  for(const [key,value] of params){
