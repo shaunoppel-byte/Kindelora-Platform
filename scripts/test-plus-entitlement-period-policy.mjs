@@ -1,0 +1,10 @@
+import assert from 'node:assert/strict';
+import {calculatePlusEntitlementPeriod as period} from '../functions/_lib/plus-entitlement-period-policy.js';
+const check=(plan,paidAt,expected,previousPeriodEnd=null)=>{const r=period({plan,paidAt,previousPeriodEnd});assert.equal(r.ok,true);assert.equal(r.periodEnd,expected);assert.equal(r.grantEntitlement,false)};
+check('monthly','2026-01-31T10:30:00.000Z','2026-02-28T10:30:00.000Z');
+check('monthly','2028-01-31T10:30:00.000Z','2028-02-29T10:30:00.000Z');
+check('annual','2028-02-29T10:30:00.000Z','2029-02-28T10:30:00.000Z');
+check('annual','2026-11-22T10:30:00.000Z','2027-11-22T10:30:00.000Z');
+check('monthly','2026-11-22T10:30:00.000Z','2027-01-01T10:30:00.000Z','2026-12-01T10:30:00.000Z');
+for(const bad of [{plan:'weekly',paidAt:'2026-11-22T10:30:00.000Z'},{plan:'monthly',paidAt:'2026-02-30T10:30:00.000Z'},{plan:'monthly',paidAt:'2026-11-22'},{plan:'monthly',paidAt:'2026-11-22T10:30:00.000Z',previousPeriodEnd:'invalid'}])assert.equal(period(bad).ok,false);
+console.log('PASS: PLUS monthly and annual periods clamp calendar dates and never directly grant access');
