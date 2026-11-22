@@ -50,7 +50,8 @@ export async function onRequest(context) {
   // Do not allow the public status endpoint to imply that checkout is enabled.
   if ((path === '/api/plus/checkout' && ['GET', 'POST'].includes(context.request.method)) ||
       (path === '/api/plus/sandbox-checkout' && ['GET', 'POST'].includes(context.request.method)) ||
-      (path === '/api/plus/payfast-itn' && context.request.method === 'POST')) {
+      (path === '/api/plus/payfast-itn' && context.request.method === 'POST') ||
+      (path === '/api/plus/payfast-live-itn' && context.request.method === 'POST')) {
     return context.next();
   }
   if (!protectedPaths.some(re => re.test(path))) return context.next();
