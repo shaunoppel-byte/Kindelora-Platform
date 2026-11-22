@@ -13,6 +13,10 @@ export function buildPayFastLiveRedirect({order,merchantId,merchantKey,passphras
  if(!/^[0-9]{8,16}$/.test(merchantId||'')||typeof merchantKey!=='string'||merchantKey.length<8||merchantKey.length>128||
   typeof passphrase!=='string'||!passphrase||passphrase.length>256)return deny('merchant_configuration_unavailable');
  if(![returnUrl,cancelUrl,notifyUrl].every(callback))return deny('invalid_callback_url');
+ // Live payment notifications must never be routed to the sandbox receiver,
+ // generic PLUS endpoints, or a URL with a query string.
+ const notify=new URL(notifyUrl);
+ if(notify.pathname!=='/api/plus/payfast-live-itn'||notify.search)return deny('invalid_live_notify_url');
  const fields={merchant_id:merchantId,merchant_key:merchantKey,return_url:returnUrl,cancel_url:cancelUrl,notify_url:notifyUrl,
   m_payment_id:order.reference,amount:(order.zarMinor/100).toFixed(2),item_name:order.plan==='monthly'?'KINDELORA Plus Monthly':'KINDELORA Plus Annual',
   subscription_type:'1',frequency:order.plan==='monthly'?'3':'6',cycles:'0',recurring_amount:(order.zarMinor/100).toFixed(2)};
