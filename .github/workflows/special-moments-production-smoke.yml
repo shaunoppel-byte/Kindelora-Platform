@@ -1,0 +1,20 @@
+name: Special Moments production smoke
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - 'special-moments.html'
+      - 'special-moments.js'
+      - 'special-moments-kindness-card.js'
+      - 'tests/special-moments-production-smoke.sh'
+      - '.github/workflows/special-moments-production-smoke.yml'
+jobs:
+  production-public-assets:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify public production page and assets
+        run: bash tests/special-moments-production-smoke.sh
