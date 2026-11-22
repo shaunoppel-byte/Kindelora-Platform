@@ -14,7 +14,7 @@ assert.equal(r.status,400); // Missing Content-Length; oversized body rejected a
 const oversizedWithLength={headers:{get(name){return name==='content-type'?'application/x-www-form-urlencoded':name==='content-length'?'16385':null}},async text(){throw Error('body must not be read')}};
 r=await onRequestPost({request:oversizedWithLength,env:configured});assert.equal(r.status,413);
 r=await onRequestPost({request:post('payment_status=COMPLETE',{'content-type':'application/x-www-form-urlencoded'}),env:configured});
-assert.equal(r.status,403);
-assert.equal((await r.json()).accepted,false);
+assert.equal(r.status,503);
+assert.equal((await r.json()).reason,'live_d1_schema_unavailable');
 
 console.log('PASS: live ITN route disabled by default and fails closed without server configuration');
