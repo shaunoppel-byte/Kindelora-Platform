@@ -37,7 +37,7 @@ function send(f,choice){
  download(f);return Promise.resolve('downloaded');
 }
 const captions=Object.freeze({signature:'Thinking of you today. ♡',strength:'A gentle reminder: you are stronger than you know. ♡',gratitude:'Your presence makes a difference. Thank you for being you. ♡'});
-async function preview(choice='signature'){const f=await prepare(choice);return URL.createObjectURL(f)}
+async function preview(choice='signature'){const f=await prepare(choice);if(typeof FileReader==='function'){try{return await new Promise((resolve,reject)=>{const reader=new FileReader();reader.onload=()=>resolve(reader.result);reader.onerror=()=>reject(Error('Preview image could not be read'));reader.readAsDataURL(f)})}catch{/* Use a blob URL if this browser cannot read the file as a data URL. */}}return URL.createObjectURL(f)}
 async function generated(choice){if(!themes[choice])throw Error('Unknown card');const canvas=render(choice);const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!blob)throw Error('Image creation failed');return new File([blob],'KINDELORA-'+choice+'-card.png',{type:'image/png'});}
 
 window.KindeloraKindnessCard=Object.freeze({share,preview,prepare,download:async()=>download(await file()),captions});
