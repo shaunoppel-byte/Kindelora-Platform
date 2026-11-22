@@ -10,7 +10,7 @@ export async function onRequestPost({request,env}={}){
   typeof env.PAYFAST_LIVE_PASSPHRASE!=='string'||!env.PAYFAST_LIVE_PASSPHRASE||
   typeof env.PAYFAST_LIVE_ALLOWED_CIDRS!=='string'||!env.PAYFAST_LIVE_ALLOWED_CIDRS.trim())return reply(503,'live_itn_unconfigured');
  const type=request.headers.get('content-type')||'';
- if(!/^application\\/x-www-form-urlencoded(?:\\s*;|\\s*$)/i.test(type))return reply(415,'unsupported_content_type');
+ if(!/^application\/x-www-form-urlencoded(?:\s*;|\s*$)/i.test(type))return reply(415,'unsupported_content_type');
  const length=Number(request.headers.get('content-length')||'0');
  if(!Number.isSafeInteger(length)||length>16384)return reply(413,'body_too_large');
  let raw;try{raw=await request.text()}catch{return reply(400,'invalid_body')}
