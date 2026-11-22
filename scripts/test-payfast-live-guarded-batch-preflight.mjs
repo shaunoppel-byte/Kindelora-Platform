@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {prepareGuardedLivePlusBatch as prepare} from '../functions/_lib/payfast-live-guarded-batch-preflight.js';
+const db={prepare(sql){return {bind(...args){return {sql,args}}}}};
+const payment={verified:true,environment:'live',paymentStatus:'COMPLETE',orderId:'order_12345678',customerId:'customer_12345678',providerTransactionId:'provider_12345678',subscriptionId:'subscription_12345678',amountMinor:16500};
+const preflight={ready:true,execute:false,requiresRollbackOnZeroChanges:true,grantEntitlement:false,verifiedPayment:payment,plan:{statements:[{}, {}, {}],requiresAtomicBatch:true,periodEnd:'2026-12-22T12:00:00.000Z'}};
+const verifiedAt='2026-11-22T12:00:00.000Z';
+let result=prepare({db,preflight,verifiedAt});assert.equal(result.ready,true);assert.equal(result.statements.length,4);assert.equal(result.execute,false);
+result=prepare({db,preflight:{...preflight,existingSubscription:{id:'subscription_12345678'}},verifiedAt});assert.equal(result.ready,true);
+result=prepare({db,preflight:{...preflight,existingSubscription:{id:'subscription_87654321'}},verifiedAt});assert.equal(result.ready,false);assert.equal(result.reason,'subscription_id_mismatch');
+result=prepare({db,preflight:{...preflight,execute:true},verifiedAt});assert.equal(result.ready,false);
+console.log('PASS: guarded payment batch prevents renewal against mismatched subscription ID');
