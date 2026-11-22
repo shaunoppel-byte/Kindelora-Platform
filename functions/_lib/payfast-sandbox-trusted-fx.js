@@ -20,6 +20,9 @@ export async function issueTrustedSandboxFxQuote({plan,nowMs,fxEndpoint,fetchImp
  for(let attempt=0;attempt<2;attempt++){
   try{
    response=await fetchImpl(url.href,{method:'GET',redirect:'manual',headers:{accept:'application/json'},signal:AbortSignal.timeout(8000)});
+   // Retry one transient HTTP failure; do not retry malformed data, redirects,
+   // authentication errors, or other permanent failures.
+   if(attempt===0&&(response.status===429||response.status===502||response.status===503||response.status===504))continue;
    break;
   }catch(error){lastError=error}
  }
