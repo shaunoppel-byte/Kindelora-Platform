@@ -1,0 +1,33 @@
+name: P0 PayFast live payment foundation regression
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'functions/_lib/payfast-live-*.js'
+      - 'functions/_lib/plus-entitlement-period-policy.js'
+      - 'scripts/test-payfast-live-*.mjs'
+      - 'scripts/test-plus-entitlement-period-policy.mjs'
+      - '.github/workflows/p0-payfast-live-foundation.yml'
+  pull_request:
+    paths:
+      - 'functions/_lib/payfast-live-*.js'
+      - 'functions/_lib/plus-entitlement-period-policy.js'
+      - 'scripts/test-payfast-live-*.mjs'
+      - 'scripts/test-plus-entitlement-period-policy.mjs'
+      - '.github/workflows/p0-payfast-live-foundation.yml'
+jobs:
+  live-foundation-regressions:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run production payment foundation tests
+        run: |
+          node --test scripts/test-payfast-live-redirect.mjs
+          node --test scripts/test-payfast-live-order-preflight.mjs
+          node --test scripts/test-payfast-live-order-persistence.mjs
+          node --test scripts/test-payfast-live-persisted-payment-facts.mjs
+          node --test scripts/test-payfast-live-ledger-plan.mjs
+          node --test scripts/test-plus-entitlement-period-policy.mjs
