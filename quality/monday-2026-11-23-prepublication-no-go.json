@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "edition_id": "mm-2026-11-23",
+  "checkpoint": "2026-11-22 15:43 SAST",
+  "decision": "NO-GO",
+  "scope": "Repository and GitHub Actions evidence audit; not full mobile/device or authenticated subscriber testing",
+  "observed_main_sha": "dd30861f9a5bca7c796a620c3f048bfab70f9e00",
+  "observations": {
+    "dated_edition_in_content_directory": false,
+    "registry_historical_archive_complete": false,
+    "registry_edition_present": false,
+    "release_evidence_file_edition": "mm-2026-11-16",
+    "sunday_1500_full_qa_evidence": false,
+    "first_party_approved_mp3_verified": false,
+    "paid_plus_access_verified": false,
+    "guest_free_expired_denial_for_23_nov_verified": false,
+    "full_script_audio_match_verified": false,
+    "independent_editorial_approval_verified": false,
+    "rollback_verified": false,
+    "anonymous_monday_production_smoke": {
+      "run_id": 45027217536,
+      "conclusion": "success",
+      "limitation": "Script hardcodes 2026-11-16 and checks anonymous access only"
+    },
+    "free_live_visual_qa": {
+      "run_id": 45027423814,
+      "conclusion": "success",
+      "limitation": "Not edition-specific 23 November publication approval"
+    }
+  },
+  "next_decision": "At Sunday 20:00 SAST remain NO-GO unless complete edition-specific evidence is independently recorded; never auto-publish without GO.",
+  "publication_authorized": false
+}
