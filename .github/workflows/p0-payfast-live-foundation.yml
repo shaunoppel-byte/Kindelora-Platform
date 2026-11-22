@@ -23,5 +23,7 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Run all six production payment foundation tests against the same checkout
+      - name: Verify actual SQLite atomic rollback and replay behavior
+        run: python3 scripts/test-payfast-live-sqlite-atomicity.py
+      - name: Run production payment foundation tests against the same checkout
         run: node --test scripts/test-payfast-live-redirect.mjs scripts/test-payfast-live-order-preflight.mjs scripts/test-payfast-live-order-persistence.mjs scripts/test-payfast-live-persisted-payment-facts.mjs scripts/test-payfast-live-ledger-plan.mjs scripts/test-plus-entitlement-period-policy.mjs scripts/test-plus-verified-member-customer.mjs scripts/test-plus-live-activation-atomic-plan.mjs scripts/test-plus-live-subscription-state.mjs scripts/test-payfast-live-authenticated-itn.mjs scripts/test-payfast-live-authenticated-reconciliation.mjs scripts/test-payfast-live-plus-activation-preflight.mjs scripts/test-payfast-live-atomic-rollback-guard.mjs scripts/test-payfast-live-guarded-batch-preflight.mjs
