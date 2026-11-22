@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {liveVerifiedPaymentLedgerStatements as plan,verifiedLiveLedgerCommitResult as result} from '../functions/_lib/payfast-live-ledger-plan.js';
+const sql=[];const db={prepare(s){sql.push(s);return {bind(...args){return {sql:s,args}}}}};
+const payment={verified:true,environment:'live',paymentStatus:'COMPLETE',orderId:'order_12345678',providerTransactionId:'provider_12345678',amountMinor:16500};
+const verifiedAt='2026-11-22T12:00:00.000Z';
+let statements=plan({db,payment,verifiedAt});assert.equal(statements.length,2);assert.equal(sql.length,2);assert.match(sql[0],/status='pending'/);assert.match(sql[1],/status='pending'/);assert.equal(statements[0].args[1],payment.providerTransactionId);
+for(const invalid of [{verified:false},{environment:'sandbox'},{paymentStatus:'FAILED'},{amountMinor:0},{orderId:'bad'},{providerTransactionId:'bad'}])assert.equal(plan({db,payment:{...payment,...invalid},verifiedAt}),null);
+assert.equal(plan({db,payment,verifiedAt:'invalid'}),null);
+assert.deepEqual(result([{success:true,meta:{changes:1}},{success:true,meta:{changes:1}}]),{committed:true,grantEntitlement:false,reason:'payment_ledger_recorded'});
+for(const bad of [[],[{success:true,meta:{changes:1}}],[{success:true,meta:{changes:1}},{success:true,meta:{changes:0}}],[{success:false,meta:{changes:1}},{success:true,meta:{changes:1}}]])assert.equal(result(bad).committed,false);
+console.log('PASS: live payment ledger plan is conditional, replay-resistant, and does not grant PLUS');
