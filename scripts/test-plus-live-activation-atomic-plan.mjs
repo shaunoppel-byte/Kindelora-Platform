@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {livePlusActivationStatements as plan,evaluateLivePlusActivationBatch as evaluate} from '../functions/_lib/plus-live-activation-atomic-plan.js';
+const db={prepare(sql){return {bind(...args){return {sql,args}}}}};
+const verifiedPayment={verified:true,environment:'live',paymentStatus:'COMPLETE',orderId:'order_12345678',customerId:'customer_12345678',providerTransactionId:'provider_12345678',subscriptionId:'subscription_12345678',plan:'monthly',amountMinor:16500};
+const paidAt='2026-11-22T12:00:00.000Z';
+let r=plan({db,verifiedPayment,paidAt});assert.equal(r.statements.length,3);assert.equal(r.periodEnd,'2026-12-22T12:00:00.000Z');assert.equal(r.grantEntitlement,false);assert.match(r.statements[2].sql,/INSERT INTO plus_subscriptions/);
+r=plan({db,verifiedPayment,paidAt,existingSubscription:{id:'subscription_87654321',customerId:'customer_12345678',status:'active',currentPeriodEnd:'2026-12-31T12:00:00.000Z'}});assert.equal(r.periodEnd,'2027-01-31T12:00:00.000Z');assert.match(r.statements[2].sql,/UPDATE plus_subscriptions/);
+for(const bad of [{verified:false},{environment:'sandbox'},{paymentStatus:'PENDING'},{customerId:'bad'},{amountMinor:0},{plan:'weekly'}])assert.equal(plan({db,verifiedPayment:{...verifiedPayment,...bad},paidAt}),null);
+assert.equal(plan({db,verifiedPayment,paidAt,existingSubscription:{id:'subscription_87654321',customerId:'other',status:'active',currentPeriodEnd:'2026-12-31T12:00:00.000Z'}}),null);
+assert.equal(plan({db,verifiedPayment,paidAt:'bad'}),null);
+assert.equal(evaluate([{success:true,meta:{changes:1}},{success:true,meta:{changes:1}},{success:true,meta:{changes:1}}]).committed,true);
+assert.equal(evaluate([{success:true,meta:{changes:1}},{success:true,meta:{changes:1}},{success:true,meta:{changes:0}}]).committed,false);
+assert.equal(evaluate([]).grantEntitlement,false);
+console.log('PASS: atomic live payment and subscription plan is conditional and fail-closed');
