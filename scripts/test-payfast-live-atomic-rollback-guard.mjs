@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {guardedLivePlusActivationBatch as guard,evaluateGuardedLivePlusBatch as evaluate} from '../functions/_lib/payfast-live-atomic-rollback-guard.js';
+const db={prepare(sql){return {bind(...args){return {sql,args}}}}};
+const payment={verified:true,environment:'live',paymentStatus:'COMPLETE',orderId:'order_12345678',customerId:'customer_12345678',providerTransactionId:'provider_12345678',amountMinor:16500};
+const plan={statements:[{sql:'event'},{sql:'order'},{sql:'subscription'}],requiresAtomicBatch:true,periodEnd:'2026-12-22T12:00:00.000Z'};
+const r=guard({db,plan,verifiedPayment:payment,subscriptionId:'subscription_12345678',verifiedAt:'2026-11-22T12:00:00.000Z'});
+assert.equal(r.statements.length,4);assert.equal(r.grantEntitlement,false);
+assert.match(r.statements[3].sql,/changes\(\)=1/);assert.match(r.statements[3].sql,/THEN \? ELSE NULL END/);
+assert.match(r.statements[3].sql,/plus_payment_reconciliations/);assert.equal(r.statements[3].args[9],payment.orderId);
+for(const bad of [{verified:false},{environment:'sandbox'},{paymentStatus:'PENDING'},{orderId:'bad'}])assert.equal(guard({db,plan,verifiedPayment:{...payment,...bad},subscriptionId:'subscription_12345678',verifiedAt:'2026-11-22T12:00:00.000Z'}),null);
+assert.equal(guard({db,plan:{...plan,statements:[]},verifiedPayment:payment,subscriptionId:'subscription_12345678',verifiedAt:'2026-11-22T12:00:00.000Z'}),null);
+assert.equal(evaluate(Array(4).fill({success:true,meta:{changes:1}})).committed,true);
+assert.equal(evaluate([{success:true,meta:{changes:1}},{success:true,meta:{changes:1}},{success:true,meta:{changes:1}},{success:true,meta:{changes:0}}]).committed,false);
+console.log('PASS: D1 commit guard enforces constraint failure for incomplete payment or subscription');
