@@ -16,7 +16,7 @@ export function calculatePlusEntitlementPeriod({plan,paidAt,previousPeriodEnd=nu
  }
  const start=new Date(startMs);
  const months=plan==='monthly'?1:12;
- // Calendar-month billing with end-of-month clamping, not fixed 30/365-day periods.
+ // The initial successful payment covers [paidAt, periodEnd). A subsequent\n // successfully verified recurring payment covers [previousPeriodEnd, nextPeriodEnd)\n // when paid on/before the prior expiry; never rebill the initial period.\n // Calendar-month billing with end-of-month clamping, not fixed 30/365-day periods.
  const targetMonth=start.getUTCMonth()+months;
  const year=start.getUTCFullYear()+Math.floor(targetMonth/12);
  const month=targetMonth%12;
