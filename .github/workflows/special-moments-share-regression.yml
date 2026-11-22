@@ -1,0 +1,26 @@
+name: Special Moments share regression
+on:
+  pull_request:
+    paths:
+      - 'special-moments*.js'
+      - 'special-moments.html'
+      - 'tests/special-moments-share-regression.cjs'
+      - '.github/workflows/special-moments-share-regression.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'special-moments*.js'
+      - 'special-moments.html'
+      - 'tests/special-moments-share-regression.cjs'
+      - '.github/workflows/special-moments-share-regression.yml'
+jobs:
+  share-contract:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node tests/special-moments-share-regression.cjs
