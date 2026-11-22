@@ -6,8 +6,8 @@ trap 'rm -rf "$dir"' EXIT
 curl --fail --silent --show-error --location --max-time 25 --retry 2 "$base/special-moments.html" -o "$dir/page"
 grep -Fq 'Special Moments' "$dir/page" || { echo 'Missing Special Moments page'; exit 1; }
 grep -Fq 'moment-card-preview' "$dir/page" || { echo 'Missing preview styling'; exit 1; }
-grep -Fq 'special-moments-kindness-card.js?v=4' "$dir/page" || { echo 'Production kindness card script version not deployed'; exit 1; }
-grep -Fq 'special-moments.js?v=12' "$dir/page" || { echo 'Production member UI script version not deployed'; exit 1; }
+grep -Fq 'special-moments-kindness-card.js?v=5' "$dir/page" || { echo 'Production kindness card script version not deployed'; exit 1; }
+grep -Fq 'special-moments.js?v=13' "$dir/page" || { echo 'Production member UI script version not deployed'; exit 1; }
 for file in special-moments.js special-moments-kindness-card.js; do
   curl --fail --silent --show-error --location --max-time 25 --retry 2 "$base/$file" -o "$dir/$file"
 done
