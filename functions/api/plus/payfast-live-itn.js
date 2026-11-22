@@ -23,6 +23,11 @@ export async function onRequestPost({request,env}={}){
  const result=await processAuthenticatedLivePlusPayment({db:env.DB,request,raw,
   merchantId:env.PAYFAST_LIVE_MERCHANT_ID,passphrase:env.PAYFAST_LIVE_PASSPHRASE,
   allowedCidrs:env.PAYFAST_LIVE_ALLOWED_CIDRS,subscriptionId});
- return result.committed===true?reply(200,'verified_payment_recorded'):reply(403,'notification_rejected');
+ if(result.committed===true)return reply(200,'verified_payment_recorded');
+ // A transient database/transaction failure is not an invalid PayFast notice.
+ // Return 503 so the provider can retry instead of treating the notice as rejected.
+ if(['transaction_failed','transaction_not_committed','pipeline_failed'].includes(result.reason))
+  return reply(503,'payment_recording_unavailable');
+ return reply(403,'notification_rejected');
 }
 export async function onRequestGet(){return reply(405,'method_not_allowed')}
