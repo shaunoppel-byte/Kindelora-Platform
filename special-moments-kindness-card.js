@@ -19,11 +19,12 @@ g.strokeStyle='rgba(246,213,163,.7)';g.beginPath();g.moveTo(250,1150);g.lineTo(8
 g.fillStyle='#f6d69d';g.font='bold 31px Georgia, serif';g.fillText('KINDELORA',W/2,1201);
 g.font='25px Georgia, serif';g.fillText('Kindness is at the heart of everything.',W/2,1240);
 return c}
-const PREMIUM_ASSET='/assets/file_00000000bbe8820eb12d4d9ba94ae770.png';
-async function file(){try{const response=await fetch(PREMIUM_ASSET,{cache:'no-store'});if(!response.ok)throw Error('Premium artwork unavailable');const blob=await response.blob();if(!blob.type.startsWith('image/')||!blob.size)throw Error('Invalid artwork');return new File([blob],'KINDELORA-premium-kindness-card.png',{type:blob.type||'image/png'});}catch{return new Promise((resolve,reject)=>{render().toBlob(b=>b?resolve(new File([b],'KINDELORA-a-little-kindness.png',{type:'image/png'})):reject(Error('Image creation failed')),'image/png')})}}
+const PREMIUM_ASSETS=Object.freeze({signature:'/assets/file_00000000bbe8820eb12d4d9ba94ae770.png',strength:'/assets/file_000000006a9c820e97e73deecb044c16.png',gratitude:'/assets/file_00000000f0e4820e8f4eda3d9338ece2.png'});
+async function file(choice='signature'){try{const response=await fetch(PREMIUM_ASSETS[choice],{cache:'no-store'});if(!response.ok)throw Error('Premium artwork unavailable');const blob=await response.blob();if(!blob.type.startsWith('image/')||!blob.size)throw Error('Invalid artwork');return new File([blob],'KINDELORA-'+choice+'-premium-card.png',{type:blob.type||'image/png'});}catch{return generatedFallback(choice)}}
+function generatedFallback(choice){return new Promise((resolve,reject)=>{render(choice).toBlob(b=>b?resolve(new File([b],'KINDELORA-'+choice+'-fallback.png',{type:'image/png'})):reject(Error('Image creation failed')),'image/png')})}
 function download(f){const u=URL.createObjectURL(f),a=document.createElement('a');a.href=u;a.download=f.name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),2500)}
 const prepared=new Map();
-function prepare(choice='signature'){if(!['signature','strength','gratitude'].includes(choice))return Promise.reject(Error('Unknown card'));if(!prepared.has(choice)){const task=(choice==='signature'?file():generated(choice)).then(f=>{prepared.set(choice,{file:f});return f}).catch(e=>{prepared.delete(choice);throw e});prepared.set(choice,{task});}const entry=prepared.get(choice);return entry.file?Promise.resolve(entry.file):entry.task;}
+function prepare(choice='signature'){if(!['signature','strength','gratitude'].includes(choice))return Promise.reject(Error('Unknown card'));if(!prepared.has(choice)){const task=file(choice).then(f=>{prepared.set(choice,{file:f});return f}).catch(e=>{prepared.delete(choice);throw e});prepared.set(choice,{task});}const entry=prepared.get(choice);return entry.file?Promise.resolve(entry.file):entry.task;}
 function share(choice='signature'){
  const ready=prepared.get(choice);
  if(ready?.file)return send(ready.file,choice);
