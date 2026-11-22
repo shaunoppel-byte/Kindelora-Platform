@@ -25,7 +25,8 @@ function download(f){const u=URL.createObjectURL(f),a=document.createElement('a'
 async function share(choice='signature'){const f=choice==='signature'?await file():await generated(choice);if(typeof navigator.share==='function'&&typeof navigator.canShare==='function'&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],title:'A little kindness from KINDELORA',text:(captions[choice]||captions.signature)+' https://kindelora.pages.dev/'});return 'shared'}catch(e){if(e?.name==='AbortError')return 'cancelled';}}
 download(f);return 'downloaded'}
 const captions=Object.freeze({signature:'Thinking of you today. ♡',strength:'A gentle reminder: you are stronger than you know. ♡',gratitude:'Your presence makes a difference. Thank you for being you. ♡'});
+async function preview(choice='signature'){const f=choice==='signature'?await file():await generated(choice);return URL.createObjectURL(f)}
 async function generated(choice){if(!themes[choice])throw Error('Unknown card');const canvas=render(choice);const blob=await new Promise(resolve=>canvas.toBlob(resolve,'image/png'));if(!blob)throw Error('Image creation failed');return new File([blob],'KINDELORA-'+choice+'-card.png',{type:'image/png'});}
 
-window.KindeloraKindnessCard=Object.freeze({share,download:async()=>download(await file()),captions});
+window.KindeloraKindnessCard=Object.freeze({share,preview,download:async()=>download(await file()),captions});
 })();
