@@ -23,11 +23,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - name: Run production payment foundation tests
-        run: |
-          node --test scripts/test-payfast-live-redirect.mjs
-          node --test scripts/test-payfast-live-order-preflight.mjs
-          node --test scripts/test-payfast-live-order-persistence.mjs
-          node --test scripts/test-payfast-live-persisted-payment-facts.mjs
-          node --test scripts/test-payfast-live-ledger-plan.mjs
-          node --test scripts/test-plus-entitlement-period-policy.mjs
+      - name: Run all six production payment foundation tests against the same checkout
+        run: node --test scripts/test-payfast-live-redirect.mjs scripts/test-payfast-live-order-preflight.mjs scripts/test-payfast-live-order-persistence.mjs scripts/test-payfast-live-persisted-payment-facts.mjs scripts/test-payfast-live-ledger-plan.mjs scripts/test-plus-entitlement-period-policy.mjs
