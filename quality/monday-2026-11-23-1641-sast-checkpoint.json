@@ -1,0 +1,30 @@
+{
+  "schema_version": 1,
+  "edition_id": "mm-2026-11-23",
+  "checkpoint": "2026-11-22 16:41 SAST",
+  "decision": "NO-GO",
+  "observed_latest_commit_search_sha": "31179973bf79587c1a798c2b9b12d2552724aff4",
+  "prior_evidence": "quality/monday-2026-11-23-prepublication-no-go.json",
+  "observations": {
+    "catalogue_declared_count": 3000,
+    "catalogue_release": "2026-11-07-founder-approved-3000-release-candidate-PENDING-INDEPENDENT-EDITORIAL-QA",
+    "editorial_v50_status": "review-only",
+    "edition_specific_search_results": 0,
+    "approved_mp3_verified": false,
+    "full_editorial_qa_verified": false,
+    "paid_access_and_guest_denial_verified": false,
+    "mobile_audio_playback_verified": false,
+    "rollback_verified": false,
+    "latest_commit_pr_workflow_runs_returned": 0,
+    "artwork_manifest_total": 400,
+    "artwork_manifest_original_required_replacements": 388
+  },
+  "limitations": [
+    "Search results are not proof of absence of differently named assets.",
+    "No authenticated device or production entitlement test was performed.",
+    "No new artwork binary generated or deployed.",
+    "No full corpus audit executed."
+  ],
+  "publication_authorized": false,
+  "next_gate": "2026-11-22 20:00 SAST evidence-backed GO/NO-GO; fail closed if any gate incomplete"
+}
