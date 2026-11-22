@@ -18,7 +18,8 @@ g.strokeStyle='rgba(246,213,163,.7)';g.beginPath();g.moveTo(250,1150);g.lineTo(8
 g.fillStyle='#f6d69d';g.font='bold 31px Georgia, serif';g.fillText('KINDELORA',W/2,1201);
 g.font='25px Georgia, serif';g.fillText('Kindness is at the heart of everything.',W/2,1240);
 return c}
-function file(){return new Promise((resolve,reject)=>{render().toBlob(b=>b?resolve(new File([b],'KINDELORA-a-little-kindness.png',{type:'image/png'})):reject(Error('Image creation failed')),'image/png')})}
+const PREMIUM_ASSET='/assets/file_00000000bbe8820eb12d4d9ba94ae770.png';
+async function file(){try{const response=await fetch(PREMIUM_ASSET,{cache:'no-store'});if(!response.ok)throw Error('Premium artwork unavailable');const blob=await response.blob();if(!blob.type.startsWith('image/')||!blob.size)throw Error('Invalid artwork');return new File([blob],'KINDELORA-premium-kindness-card.png',{type:blob.type||'image/png'});}catch{return new Promise((resolve,reject)=>{render().toBlob(b=>b?resolve(new File([b],'KINDELORA-a-little-kindness.png',{type:'image/png'})):reject(Error('Image creation failed')),'image/png')})}}
 function download(f){const u=URL.createObjectURL(f),a=document.createElement('a');a.href=u;a.download=f.name;document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(u),2500)}
 async function share(){const f=await file();if(typeof navigator.share==='function'&&typeof navigator.canShare==='function'&&navigator.canShare({files:[f]})){try{await navigator.share({files:[f],title:'A little kindness from KINDELORA',text:'Thinking of you today. ♡  https://kindelora.pages.dev/'});return 'shared'}catch(e){if(e?.name==='AbortError')return 'cancelled';}}
 download(f);return 'downloaded'}
