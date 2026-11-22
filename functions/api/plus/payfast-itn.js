@@ -14,7 +14,7 @@ export async function onRequestPost({request,env}={}){
  if(!Number.isSafeInteger(length)||length>16384)return reply(413,'body_too_large');
  let raw;
  try{raw=await request.text()}catch{return reply(400,'invalid_body')}
- if(!raw||raw.length>16384)return reply(400,'invalid_body');
+ if(!raw||new TextEncoder().encode(raw).byteLength>16384)return reply(400,'invalid_body');
  const result=await processProviderConfirmedSandboxItn({db:env.DB,raw,contentType:type,request,
   expectedMerchantId:env.PAYFAST_SANDBOX_MERCHANT_ID,passphrase:env.PAYFAST_SANDBOX_PASSPHRASE,
   allowedCidrs:env.PAYFAST_SANDBOX_ALLOWED_CIDRS});
