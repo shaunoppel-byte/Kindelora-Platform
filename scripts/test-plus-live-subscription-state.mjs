@@ -1,0 +1,11 @@
+import assert from 'node:assert/strict';
+import {loadLivePlusSubscriptionState as load} from '../functions/_lib/plus-live-subscription-state.js';
+const payment={verified:true,environment:'live',paymentStatus:'COMPLETE',customerId:'customer_12345678',orderId:'order_12345678'};
+function dbFor(rows,customer=true){return {prepare(sql){return {bind(){return {async first(){return customer?{id:payment.customerId}:null},async all(){return {results:rows}}}}}}}};
+let r=await load({db:dbFor([]),verifiedPayment:payment});assert.equal(r.ready,true);assert.equal(r.existingSubscription,null);assert.equal(r.grantEntitlement,false);
+const record={id:'subscription_12345678',customer_id:payment.customerId,status:'active',current_period_end:'2026-12-22T12:00:00.000Z'};
+r=await load({db:dbFor([record]),verifiedPayment:payment});assert.equal(r.ready,true);assert.equal(r.existingSubscription.id,record.id);
+for(const rows of [[record,record],[{...record,customer_id:'wrong'}],[{...record,current_period_end:'bad'}]])assert.equal((await load({db:dbFor(rows),verifiedPayment:payment})).ready,false);
+assert.equal((await load({db:dbFor([],false),verifiedPayment:payment})).ready,false);
+assert.equal((await load({db:dbFor([]),verifiedPayment:{...payment,verified:false}})).ready,false);
+console.log('PASS: live PLUS subscription state preflight rejects ambiguous and invalid mappings');
