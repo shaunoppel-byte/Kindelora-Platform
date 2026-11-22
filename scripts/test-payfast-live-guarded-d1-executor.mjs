@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {executeGuardedLivePlusBatch as execute} from '../functions/_lib/payfast-live-guarded-d1-executor.js';
+const payment={verified:true,environment:'live',paymentStatus:'COMPLETE',orderId:'order_12345678',customerId:'customer_12345678',providerTransactionId:'provider_12345678',subscriptionId:'subscription_12345678',amountMinor:16500};
+const preflight={ready:true,execute:false,requiresRollbackOnZeroChanges:true,grantEntitlement:false,verifiedPayment:payment,plan:{statements:[{},{},{}],requiresAtomicBatch:true,periodEnd:'2026-12-22T12:00:00.000Z'}};
+const verifiedAt='2026-11-22T12:00:00.000Z';let calls=0;
+const db={prepare(sql){return {bind(...args){return {sql,args}}}},async batch(statements){calls++;assert.equal(statements.length,4);return Array.from({length:4},()=>({success:true,meta:{changes:1}}))}};
+let r=await execute({db,preflight,verifiedAt});assert.equal(r.committed,true);assert.equal(r.grantEntitlement,false);assert.equal(calls,1);
+r=await execute({db,preflight:{...preflight,existingSubscription:{id:'subscription_WRONG123'}},verifiedAt});assert.equal(r.committed,false);assert.equal(calls,1);
+r=await execute({db:{...db,batch:async()=>{throw Error('constraint violation')}},preflight,verifiedAt});assert.equal(r.committed,false);assert.equal(r.grantEntitlement,false);
+r=await execute({db:{...db,batch:async()=>Array.from({length:4},()=>({success:true,meta:{changes:0}}))},preflight,verifiedAt});assert.equal(r.committed,false);
+r=await execute({db:{prepare:db.prepare},preflight,verifiedAt});assert.equal(r.reason,'d1_batch_unavailable');
+console.log('PASS: guarded D1 executor commits only confirmed batch and fails closed');
