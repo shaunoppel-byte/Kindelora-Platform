@@ -4,12 +4,12 @@
 const deny=reason=>({ok:false,reason,grantEntitlement:false});
 export function calculatePlusEntitlementPeriod({plan,paidAt,previousPeriodEnd=null}={}){
  if(!['monthly','annual'].includes(plan)||typeof paidAt!=='string'||
-  !/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$/.test(paidAt))return deny('invalid_payment_period');
+  !/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(paidAt))return deny('invalid_payment_period');
  const paidMs=Date.parse(paidAt);
  if(!Number.isFinite(paidMs)||new Date(paidMs).toISOString()!==paidAt)return deny('invalid_payment_date');
  let startMs=paidMs;
  if(previousPeriodEnd!==null){
-  if(typeof previousPeriodEnd!=='string'||!/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$/.test(previousPeriodEnd))return deny('invalid_previous_period');
+  if(typeof previousPeriodEnd!=='string'||!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(previousPeriodEnd))return deny('invalid_previous_period');
   const previousMs=Date.parse(previousPeriodEnd);
   if(!Number.isFinite(previousMs)||new Date(previousMs).toISOString()!==previousPeriodEnd)return deny('invalid_previous_period');
   startMs=Math.max(startMs,previousMs);
