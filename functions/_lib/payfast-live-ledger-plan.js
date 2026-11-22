@@ -8,7 +8,7 @@ export function liveVerifiedPaymentLedgerStatements({db,payment,verifiedAt}={}){
   !/^[A-Za-z0-9_-]{8,128}$/.test(payment.orderId||'')||
   !/^[A-Za-z0-9_-]{8,128}$/.test(payment.providerTransactionId||'')||
   !Number.isSafeInteger(payment.amountMinor)||payment.amountMinor<500||
-  typeof verifiedAt!=='string'||!/^\\d{4}-\\d{2}-\\d{2}T\\d{2}:\\d{2}:\\d{2}\\.\\d{3}Z$/.test(verifiedAt)||
+  typeof verifiedAt!=='string'||!/^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}:\d{2}\.\d{3}Z$/.test(verifiedAt)||
   !Number.isFinite(Date.parse(verifiedAt)))return null;
  const eventId='payfast_'+payment.providerTransactionId;
  return [
