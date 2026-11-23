@@ -63,12 +63,26 @@ jobs:
           import json
           result=json.load(open('/tmp/issue806-result.json'))
           print(json.dumps(result))
+          required={
+            'isolated fixture',
+            'concurrent duplicate: one commit one rejection',
+            'single atomic commit',
+            'replay rejected',
+            'replay no state change',
+            'wrong recurring token rollback',
+            'four additional D1 rollback cases'
+          }
           if result.get('status')!='PASS':raise SystemExit('D1 staging transaction test failed')
+          if result.get('productionCharging') is not False:raise SystemExit('Production charging isolation not proven')
+          if result.get('fixturePrefix')!='stg806_':raise SystemExit('Unexpected fixture scope')
+          missing=required-set(result.get('tests',[]))
+          if missing:raise SystemExit('Missing staging assertions: '+', '.join(sorted(missing)))
           PY
       - name: Record explicit test boundary
         if: always()
         run: |
           echo '## Issue #806 — isolated D1 staging batch test' >> "$GITHUB_STEP_SUMMARY"
           echo '- See step logs for actual PASS/FAIL; never infer pass from deployment' >> "$GITHUB_STEP_SUMMARY"
-          echo '- Provider authentication, rollback matrix and concurrency: NOT VERIFIED by this run' >> "$GITHUB_STEP_SUMMARY"
+          echo '- On successful job completion: concurrency, replay and five fixture-scoped rollback cases verified in isolated staging D1' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Provider authentication, remaining rollback cases and live PayFast end-to-end: NOT VERIFIED' >> "$GITHUB_STEP_SUMMARY"
           echo '- Production registration and live charging: unchanged' >> "$GITHUB_STEP_SUMMARY"
