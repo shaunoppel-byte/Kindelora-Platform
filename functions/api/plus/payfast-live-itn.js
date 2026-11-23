@@ -22,7 +22,8 @@ export async function onRequestPost({request,env}={}){
  const subscriptionId='sub_'+crypto.randomUUID().replaceAll('-','');
  const result=await processAuthenticatedLivePlusPayment({db:env.DB,request,raw,
   merchantId:env.PAYFAST_LIVE_MERCHANT_ID,passphrase:env.PAYFAST_LIVE_PASSPHRASE,
-  allowedCidrs:env.PAYFAST_LIVE_ALLOWED_CIDRS,subscriptionId});
+  allowedCidrs:env.PAYFAST_LIVE_ALLOWED_CIDRS,subscriptionId,
+  requireRecurringLink:env.PAYFAST_LIVE_INITIAL_RECURRING_LINK_ENABLED==='true'});
  if(result.committed===true)return reply(200,'verified_payment_recorded');
  // A transient database/transaction failure is not an invalid PayFast notice.
  // Return 503 so the provider can retry instead of treating the notice as rejected.
