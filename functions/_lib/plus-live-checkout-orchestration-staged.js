@@ -1,11 +1,11 @@
 // STAGED ONLY: not a deployed Pages route. Production checkout remains disabled until all release safety checks pass.
-import {reply,ready,member,originOK,random} from '../member/_auth.js';
-import {issueTrustedSandboxFxQuote} from '../../_lib/payfast-sandbox-trusted-fx.js';
-import {prepareLiveOrderFacts} from '../../_lib/payfast-live-order-preflight.js';
-import {ensurePlusCustomerForVerifiedMember} from '../../_lib/plus-verified-member-customer.js';
-import {persistLivePendingOrder} from '../../_lib/payfast-live-order-persistence.js';
-import {buildPayFastLiveRedirect} from '../../_lib/payfast-live-redirect.js';
-import {verifyLivePlusD1Schema} from '../../_lib/payfast-live-d1-schema-preflight.js';
+import {reply,ready,member,originOK,random} from '../api/member/_auth.js';
+import {issueTrustedSandboxFxQuote} from './payfast-sandbox-trusted-fx.js';
+import {prepareLiveOrderFacts} from './payfast-live-order-preflight.js';
+import {ensurePlusCustomerForVerifiedMember} from './plus-verified-member-customer.js';
+import {persistLivePendingOrder} from './payfast-live-order-persistence.js';
+import {buildPayFastLiveRedirect} from './payfast-live-redirect.js';
+import {verifyLivePlusD1Schema} from './payfast-live-d1-schema-preflight.js';
 const deny=(status,reason)=>reply({ok:false,reason,checkoutReady:false},status);
 export async function onRequestPost({request,env}={}){
  if(!request||!ready(env)||env.PAYFAST_LIVE_CHECKOUT_ENABLED!=='true'||
