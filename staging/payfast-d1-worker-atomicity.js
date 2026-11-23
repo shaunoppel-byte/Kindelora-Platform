@@ -2,7 +2,7 @@
 // Only a separately deployed, staging-bound Worker may call runStagingAtomicity.
 import {prepareAtomicPayFastRenewal} from '../functions/_lib/payfast-live-renewal-atomic-design.js';
 const sql=(db,s,...args)=>db.prepare(s).bind(...args);
-const id='stg806_'+crypto.randomUUID().replaceAll('-','');
+// Worker global scope must not generate random values (Cloudflare error 10021).
 const period='2026-12-22T10:00:00.000Z';
 function renewal(ids){return {orderId:ids.order,customerId:ids.customer,subscriptionId:ids.subscription,providerTransactionId:ids.tx,providerSubscriptionToken:ids.token,plan:'monthly',amountMinor:16500,previousPeriodEnd:period};}
 async function state(db,ids){
@@ -13,6 +13,7 @@ async function state(db,ids){
 function check(value,message){if(!value)throw Error('STAGING_ASSERTION_FAILED: '+message);}
 export async function runStagingAtomicity(db){
  check(db&&typeof db.batch==='function','D1 batch binding required');
+ const id='stg806_'+crypto.randomUUID().replaceAll('-','');
  const ids={customer:id+'_customer',order:id+'_order',subscription:id+'_subscription',token:id+'_token',tx:id+'_transaction'};
  const cleanup=async()=>{
   // Fixture-scoped only; never delete or update unrelated customer records.
