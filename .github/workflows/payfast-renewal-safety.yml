@@ -29,3 +29,4 @@ jobs:
           node scripts/test-payfast-renewal-atomic-plan-regression.mjs
           node scripts/test-payfast-live-renewal-link-preflight.mjs
           node scripts/test-payfast-renewal-atomic-design.mjs
+          node --experimental-sqlite scripts/test-payfast-renewal-sqlite-atomicity.mjs
