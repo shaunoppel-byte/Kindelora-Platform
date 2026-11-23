@@ -13,6 +13,10 @@ on:
       - 'functions/_lib/payfast-live-recurring-link-atomic-plan.js'
       - 'functions/_lib/payfast-live-recurring-link-atomic-batch.js'
       - 'functions/_lib/payfast-initial-recurring-isolated-staging-executor.js'
+      - 'functions/_lib/payfast-live-initial-recurring-guarded-executor.js'
+      - 'functions/_lib/payfast-live-transaction-pipeline.js'
+      - 'functions/api/plus/payfast-live-itn.js'
+      - 'scripts/test-payfast-live-initial-recurring-guarded-executor.mjs'
       - 'scripts/test-payfast-initial-recurring-isolated-staging-executor.mjs'
       - 'scripts/test-payfast-live-recurring-link-*.mjs'
       - 'functions/_lib/payfast-itn-signature-verification.js'
@@ -61,5 +65,6 @@ jobs:
           node scripts/test-payfast-live-recurring-link-atomic-plan.mjs
           node scripts/test-payfast-live-recurring-link-atomic-batch.mjs
           node scripts/test-payfast-initial-recurring-isolated-staging-executor.mjs
+          node scripts/test-payfast-live-initial-recurring-guarded-executor.mjs
           node scripts/test-payfast-live-authenticated-reconciliation.mjs
           node --experimental-sqlite scripts/test-payfast-renewal-sqlite-atomicity.mjs
