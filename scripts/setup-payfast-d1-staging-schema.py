@@ -79,11 +79,11 @@ if application_tables:
         existing_ddl = query("SELECT sql FROM sqlite_master WHERE type='table' AND name='" + table + "'")
         if len(existing_ddl) != 1 or not isinstance(existing_ddl[0].get("sql"), str):
             fail("staging baseline DDL missing for " + table)
-        expected_match = re.search(r"CREATE TABLE IF NOT EXISTS\\s+" + table + r"\\s*\\(", baseline_sql)
+        expected_match = re.search(r"CREATE TABLE IF NOT EXISTS\s+" + table + r"\s*\(", baseline_sql)
         if not expected_match:
             fail("checked-in baseline definition missing for " + table)
         ddl = baseline_sql[expected_match.start():baseline_sql.find(";", expected_match.start())]
-        normalize = lambda sql: re.sub(r"\\s+", "", sql.replace("IF NOT EXISTS", "")).lower()
+        normalize = lambda sql: re.sub(r"\s+", "", sql.replace("IF NOT EXISTS", "")).lower()
         if normalize(existing_ddl[0]["sql"]) != normalize(ddl):
             fail("staging baseline DDL mismatch for " + table + "; refusing schema changes")
     print("PASS: existing staging baseline schema matches checked-in table definitions")
