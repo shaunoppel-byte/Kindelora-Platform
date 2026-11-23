@@ -24,7 +24,7 @@ function fixture(){
  return db;
 }
 function design(db,renewal=ids){
- const adapter={prepare(sql){return {bind(...args){return {sql,args}}}}};
+ const adapter={prepare(sql){return {sql,args:[],bind(...args){return {sql,args}}}}};
  const plan=prepareAtomicPayFastRenewal({db:adapter,
   verifiedRenewal:{ready:true,execute:false,grantEntitlement:false,renewal},
   paidAt});
