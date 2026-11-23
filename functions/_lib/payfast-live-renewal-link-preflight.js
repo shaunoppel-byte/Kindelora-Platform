@@ -5,8 +5,16 @@ const deny=reason=>({ready:false,reason,grantEntitlement:false});
 const validId=v=>typeof v==='string'&&/^[A-Za-z0-9_-]{8,128}$/.test(v);
 export async function verifyPersistedPayFastRenewalLink({
  db,merchantReference,providerTransactionId,customerId,subscriptionId,
- plan,paidZarMinor,providerSubscriptionToken
+ plan,paidZarMinor,providerSubscriptionToken,authenticatedPayment
 }={}){
+ if(!authenticatedPayment||authenticatedPayment.verified!==true||
+  authenticatedPayment.environment!=='live'||
+  authenticatedPayment.paymentStatus!=='COMPLETE'||
+  authenticatedPayment.providerTransactionId!==providerTransactionId||
+  authenticatedPayment.merchantReference!==merchantReference||
+  authenticatedPayment.providerSubscriptionToken!==providerSubscriptionToken||
+  authenticatedPayment.amountMinor!==paidZarMinor)
+  return deny('provider_authentication_required');
  if(!db||typeof db.prepare!=='function'||!validId(merchantReference)||
   !validId(providerTransactionId)||!validId(customerId)||!validId(subscriptionId)||
   !['monthly','annual'].includes(plan)||!Number.isSafeInteger(paidZarMinor)||
