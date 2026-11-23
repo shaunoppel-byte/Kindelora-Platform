@@ -27,6 +27,16 @@ function fakeDb({linkRow=link,prior=null,initialEvent=null,orderRow=order,subscr
 }
 const accepted=await verify({...args,authenticatedPayment,db:fakeDb()});
 assert.equal(accepted.ready,true);
+// The existing live ITN authenticator returns `authenticated:true` but no
+// independently verified recurring token. Its output must not be mistaken
+// for a renewal-ready authenticatedPayment object.
+const liveItnResult={authenticated:true,reason:'live_provider_confirmed',grantEntitlement:false,
+ payment:{environment:'live',paymentStatus:'COMPLETE',merchantReference:args.merchantReference,
+ providerTransactionId:args.providerTransactionId,amountMinor:args.paidZarMinor}};
+assert.equal((await verify({...args,authenticatedPayment:liveItnResult.payment,db:fakeDb()})).ready,false,
+ 'live ITN result without verified recurring token cannot authorize renewal');
+assert.equal((await verify({...args,authenticatedPayment:liveItnResult,db:fakeDb()})).ready,false,
+ 'authenticated wrapper is not a verified recurring payment');
 assert.equal((await verify({...args,db:fakeDb()})).ready,false,'missing provider authentication');
 assert.equal((await verify({...args,authenticatedPayment:{...authenticatedPayment,environment:'sandbox'},db:fakeDb()})).ready,false,'sandbox envelope');
 assert.equal((await verify({...args,authenticatedPayment:{...authenticatedPayment,verified:false},db:fakeDb()})).ready,false,'unverified envelope');
