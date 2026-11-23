@@ -7,3 +7,11 @@ let result=await reconcile({...base,db});assert.equal(result.ready,false);assert
 result=await reconcile({...base,db:null});assert.equal(result.reason,'db_unavailable');
 result=await reconcile({...base,db,raw:base.raw.replace('COMPLETE','FAILED')});assert.equal(result.ready,false);assert.equal(reads,0);
 console.log('PASS: live reconciliation rejects unauthenticated ITN before database access');
+
+// The reconciliation boundary must preserve the independently authenticated
+// provider token, while continuing to deny all unauthenticated input.
+import {readFileSync} from 'node:fs';
+const source=readFileSync(new URL('../functions/_lib/payfast-live-authenticated-reconciliation.js',import.meta.url),'utf8');
+assert.match(source,/providerSubscriptionToken:payment\.providerSubscriptionToken\?\?null/);
+assert.match(source,/if\(!authentication\.authenticated\)return deny\('authentication_failed'\)/);
+console.log('PASS: authenticated recurring token forwarding contract');

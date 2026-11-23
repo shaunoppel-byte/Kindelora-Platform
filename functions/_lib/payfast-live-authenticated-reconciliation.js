@@ -18,5 +18,8 @@ export async function reconcileAuthenticatedLivePayFastItn({db,request,raw,merch
   payment:Object.freeze({environment:'live',paymentStatus:'COMPLETE',verified:true,
    orderId:persisted.order.id,customerId:persisted.order.customerId,
    providerTransactionId:payment.providerTransactionId,amountMinor:persisted.order.amountMinor,
-   plan:persisted.order.plan})};
+   plan:persisted.order.plan,
+   // Only the source-, signature- and provider-verified ITN token may flow
+   // into a future atomic recurring-link persistence step. Never use browser input.
+   providerSubscriptionToken:payment.providerSubscriptionToken??null})};
 }
