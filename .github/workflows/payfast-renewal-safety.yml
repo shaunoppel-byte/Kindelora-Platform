@@ -7,6 +7,7 @@ on:
   pull_request:
     paths:
       - 'functions/_lib/payfast-live-renewal-*.js'
+      - 'functions/_lib/payfast-live-renewal-transaction-pipeline.js'
       - 'functions/_lib/payfast-renewal-isolated-staging-executor.js'
       - 'functions/_lib/payfast-live-authenticated-itn.js'
       - 'functions/_lib/payfast-live-authenticated-reconciliation.js'
