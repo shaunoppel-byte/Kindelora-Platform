@@ -1,0 +1,32 @@
+{
+  "date": "2026-11-23",
+  "scope": "PR #800, v51 vs main message-catalogue.json",
+  "main": "65794c7c949b1f9df32683a9da74ec345a25d279",
+  "prHeadBeforeEvidence": "ae97a73e553e50d65f986c40465b64c0082310cf",
+  "publicCatalogue": {
+    "declared": 3000,
+    "parsed": 3000,
+    "releaseApproval": "pending independent editorial QA"
+  },
+  "candidateCount": 15,
+  "uniqueIdsVsPublic": true,
+  "normalizedExactMatchesVsPublic": 0,
+  "similarityMethod": "lowercase NFKC, Unicode alphanumeric whitespace normalization; lexical Dice over distinct tokens length>3 with explicit common-word exclusion; all 15 compared against all 3000 public catalogue messages",
+  "similarityThreshold": 0.6,
+  "aboveThreshold": 0,
+  "maxSimilarity": 0.4,
+  "maxSimilarityCandidate": "KDL-EDITORIAL51-009",
+  "maxSimilarityExisting": "KDL-WHEN-YOU-RETURN-A-BORROWED-BOOK-005",
+  "lengthRange": [
+    149,
+    186
+  ],
+  "limitations": [
+    "Not full editorial v1-v50 corpus: comparison only with public message-catalogue.json",
+    "Lexical similarity is not semantic duplicate detection",
+    "No independent human editorial approval",
+    "No complete repository test suite run",
+    "No Cloudflare deployment verification"
+  ],
+  "releaseDecision": "EDITORIAL ONLY / DO NOT MERGE FOR PUBLIC RELEASE"
+}
