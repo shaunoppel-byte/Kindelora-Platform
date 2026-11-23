@@ -7,7 +7,7 @@ for(const [method,handler] of [['GET',onRequestGet],['POST',onRequestPost]]){
    method,headers:{origin:'https://kindelora.pages.dev','content-type':'application/json',cookie:'kindelora_session=synthetic-only'},
    ...(method==='POST'?{body:JSON.stringify({plan:'annual',amount:0,merchant:'forged',paymentToken:'synthetic'})}:{})
   }),
-  env:new Proxy({}, {get(){throw Error('checkout must not access payment credentials or database while disabled');}})
+  env:new Proxy({}, {get(_target,key){if(key==='KINDELORA_PLUS_CHECKOUT_RELEASE_APPROVED')return undefined;throw Error('checkout must not access payment credentials or database while disabled');}})
  });
  assert.equal(response.status,503,method+' checkout must remain fail-closed');
  assert.match(response.headers.get('cache-control')||'',/no-store/i);
