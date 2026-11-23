@@ -5,6 +5,9 @@ const args={
  customerId:'kin_customer_12345678',subscriptionId:'sub_1234567890123456',
  plan:'monthly',paidZarMinor:16500,providerSubscriptionToken:'pf_token_12345678'
 };
+const authenticatedPayment={verified:true,environment:'live',paymentStatus:'COMPLETE',
+ providerTransactionId:args.providerTransactionId,merchantReference:args.merchantReference,
+ providerSubscriptionToken:args.providerSubscriptionToken,amountMinor:args.paidZarMinor};
 const link={
  initial_order_id:args.merchantReference,subscription_id:args.subscriptionId,
  customer_id:args.customerId,plan_id:args.plan,expected_zar_minor:args.paidZarMinor,
@@ -22,8 +25,12 @@ function fakeDb({linkRow=link,prior=null,initialEvent=null,orderRow=order,subscr
   throw Error('unexpected SQL');
  }}}}}};
 }
-const accepted=await verify({...args,db:fakeDb()});
+const accepted=await verify({...args,authenticatedPayment,db:fakeDb()});
 assert.equal(accepted.ready,true);
+assert.equal((await verify({...args,db:fakeDb()})).ready,false,'missing provider authentication');
+assert.equal((await verify({...args,authenticatedPayment:{...authenticatedPayment,environment:'sandbox'},db:fakeDb()})).ready,false,'sandbox envelope');
+assert.equal((await verify({...args,authenticatedPayment:{...authenticatedPayment,verified:false},db:fakeDb()})).ready,false,'unverified envelope');
+assert.equal((await verify({...args,authenticatedPayment:{...authenticatedPayment,providerTransactionId:'different_transaction_12345678'},db:fakeDb()})).ready,false,'mismatched provider transaction');
 assert.equal(accepted.grantEntitlement,false);
 assert.equal(accepted.execute,false);
 assert.equal(accepted.renewal.previousPeriodEnd,subscription.current_period_end);
@@ -34,13 +41,13 @@ for(const [label,changes] of [
  ['wrong customer',{customerId:'wrong_customer_12345678'}],
  ['wrong subscription',{subscriptionId:'wrong_subscription_12345678'}]
 ]){
- const result=await verify({...args,...changes,db:fakeDb()});
+ const result=await verify({...args,...changes,authenticatedPayment,db:fakeDb()});
  assert.equal(result.ready,false,label);
 }
-assert.equal((await verify({...args,db:fakeDb({prior:{provider_transaction_id:args.providerTransactionId}})})).ready,false);
-assert.equal((await verify({...args,db:fakeDb({initialEvent:{id:'initial_event_12345678'}})})).ready,false);
-assert.equal((await verify({...args,db:fakeDb({orderRow:{...order,status:'pending'}})})).ready,false);
-assert.equal((await verify({...args,db:fakeDb({subscriptionRow:{...subscription,status:'cancelled'}})})).ready,false);
-assert.equal((await verify({...args,db:fakeDb({linkRow:{...link,provider_subscription_token:null}})})).ready,false);
-assert.equal((await verify({...args,db:{prepare(){throw Error('D1 down')}}})).ready,false);
+assert.equal((await verify({...args,authenticatedPayment,db:fakeDb({prior:{provider_transaction_id:args.providerTransactionId}})})).ready,false);
+assert.equal((await verify({...args,authenticatedPayment,db:fakeDb({initialEvent:{id:'initial_event_12345678'}})})).ready,false);
+assert.equal((await verify({...args,authenticatedPayment,db:fakeDb({orderRow:{...order,status:'pending'}})})).ready,false);
+assert.equal((await verify({...args,authenticatedPayment,db:fakeDb({subscriptionRow:{...subscription,status:'cancelled'}})})).ready,false);
+assert.equal((await verify({...args,authenticatedPayment,db:fakeDb({linkRow:{...link,provider_subscription_token:null}})})).ready,false);
+assert.equal((await verify({...args,authenticatedPayment,db:{prepare(){throw Error('D1 down')}}})).ready,false);
 console.log('PASS: recurring identity preflight accepts linked paid order and rejects mismatches/replays; no writes');
