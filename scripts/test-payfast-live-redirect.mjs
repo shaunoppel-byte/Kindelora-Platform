@@ -14,5 +14,8 @@ for(const invalid of [
  {notifyUrl:'https://kindelora.pages.dev/api/plus/payfast-live-itn?test=1'},
  {merchantId:'bad'},{passphrase:''},{notifyUrl:'https://evil.example/api/plus/live-itn'},
  {returnUrl:'http://kindelora.pages.dev/plus-account.html'},
+ {returnUrl:'https://kindelora.pages.dev/admin?payment=live-return'},
+ {returnUrl:'https://kindelora.pages.dev/plus-account.html?payment=live-return&next=evil'},
+ {cancelUrl:'https://kindelora.pages.dev/plus-account.html?payment=live-return'},
 ]){r=build({...args,...invalid});assert.equal(r.ok,false);assert.equal(r.authorizesPayment,false)}
 console.log('PASS: production PayFast redirect contract enforces trusted live orders and recurring fields');
