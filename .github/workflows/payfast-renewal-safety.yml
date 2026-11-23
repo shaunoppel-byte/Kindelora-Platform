@@ -4,6 +4,7 @@ on:
   push:
     branches:
       - fix/payfast-renewal-regression-806
+      - fix/payfast-renewal-sqlite-ci-806
   pull_request:
     paths:
       - 'functions/_lib/payfast-live-renewal-*.js'
@@ -27,6 +28,8 @@ jobs:
         with:
           node-version: '22'
       - name: Run read-only renewal regression tests
+        env:
+          PAYFAST_RENEWAL_SQL_DEBUG: '1'
         run: |
           node scripts/test-payfast-renewal-paid-order-regression.mjs
           node scripts/test-payfast-renewal-atomic-plan-regression.mjs

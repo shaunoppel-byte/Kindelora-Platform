@@ -40,8 +40,9 @@ function simulateBatch(db,statements){
   for(const stmt of statements)db.prepare(stmt.sql).run(...stmt.args);
   db.exec('COMMIT');
   return true;
- }catch{
+ }catch(error){
   db.exec('ROLLBACK');
+  if(process.env.PAYFAST_RENEWAL_SQL_DEBUG==='1') console.error('SQLite renewal transaction rejected:',error.message);
   return false;
  }
 }
