@@ -1,0 +1,42 @@
+name: PayFast D1 staging schema setup
+
+# Issue #806: manual staging-only schema initialization. No production database access.
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_staging_only:
+        description: 'Type STAGING_ONLY to authorize migrations on empty isolated staging D1'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: payfast-d1-staging-schema
+  cancel-in-progress: false
+
+jobs:
+  staging-schema:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: payfast-d1-staging
+    env:
+      CONFIRM_STAGING_ONLY: ${{ inputs.confirm_staging_only }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.KINDELORA_D1_STAGING_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.KINDELORA_D1_STAGING_ACCOUNT_ID }}
+      STAGING_DATABASE_ID: ${{ vars.KINDELORA_D1_STAGING_DATABASE_ID }}
+      PRODUCTION_DATABASE_ID: ${{ vars.KINDELORA_D1_PRODUCTION_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Apply schema to verified empty staging D1 only
+        run: python3 scripts/setup-payfast-d1-staging-schema.py
+      - name: Summarize staging-only setup
+        if: success()
+        run: |
+          echo '## Issue #806 — D1 staging schema' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Isolated staging database identity: verified' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Baseline and two recurring migrations: applied' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Required staging tables: verified' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Renewal, replay, rollback and concurrency tests: NOT YET EXECUTED' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Production registration and charging: unchanged / NO-GO' >> "$GITHUB_STEP_SUMMARY"
