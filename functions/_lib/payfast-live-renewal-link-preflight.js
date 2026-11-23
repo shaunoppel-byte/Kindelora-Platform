@@ -26,6 +26,11 @@ export async function verifyPersistedPayFastRenewalLink({
    'SELECT provider_transaction_id FROM plus_payfast_renewal_events WHERE provider_transaction_id=? LIMIT 1'
   ).bind(providerTransactionId).first();
   if(prior)return deny('renewal_reference_already_recorded');
+  // Provider references must not be reusable across initial payments and renewals.
+  const initialEvent=await db.prepare(
+   'SELECT id FROM plus_payment_events WHERE provider_event_reference=? LIMIT 1'
+  ).bind(providerTransactionId).first();
+  if(initialEvent)return deny('provider_reference_already_recorded');
   const original=await db.prepare(
    "SELECT id,status,customer_id,amount_minor,currency FROM plus_orders WHERE id=? AND brand='KIN' LIMIT 1"
   ).bind(merchantReference).first();
