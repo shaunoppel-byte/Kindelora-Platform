@@ -5,6 +5,7 @@ on:
     branches: [main]
     paths:
       - 'staging/payfast-d1-worker-atomicity.js'
+      - 'staging/migrations/20261123_issue806_payment_reconciliations.sql'
       - 'staging/payfast-d1-initial-recurring-atomicity.js'
       - 'functions/_lib/payfast-initial-recurring-isolated-staging-executor.js'
       - 'functions/_lib/payfast-live-recurring-link-atomic-batch.js'
@@ -48,6 +49,15 @@ jobs:
       - name: Verify isolated staging database
         id: verify_staging
         run: python3 scripts/prepare-payfast-d1-private-test.py
+      - name: Apply missing reconciliation schema to verified staging D1 only
+        run: |
+          set -euo pipefail
+          # Previous step verified staging UUID and name against Cloudflare API.
+          # This command is explicitly remote, uses the isolated staging config,
+          # and is restricted to the staging database name.
+          npx --yes wrangler@4 d1 execute kindelora-payfast-d1-staging --remote \\
+            --config .staging-worker/wrangler-test.toml \\
+            --file staging/migrations/20261123_issue806_payment_reconciliations.sql
       - name: Run staging-only D1 batch test in remote preview
         id: remote_d1_test
         shell: bash
