@@ -34,6 +34,13 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
+      - name: Parse-check production payment modules and regression scripts
+        shell: bash
+        run: |
+          set -euo pipefail
+          for file in functions/_lib/payfast-live-*.js functions/_lib/payfast-itn-*.js functions/api/plus/checkout.js scripts/test-payfast-*.mjs; do
+            node --check "$file"
+          done
       - name: Run read-only renewal regression tests
         env:
           PAYFAST_RENEWAL_SQL_DEBUG: '1'
