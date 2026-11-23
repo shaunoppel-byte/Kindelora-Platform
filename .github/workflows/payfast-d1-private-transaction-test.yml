@@ -66,7 +66,25 @@ jobs:
             tail -n 30 /tmp/issue806-wrangler.log
             exit 1
           fi
-          curl -fsS -X POST http://127.0.0.1:8799/__issue806_test -o /tmp/issue806-result.json
+          # Preserve the staging-only JSON error response even when the Worker
+          # returns HTTP 500; otherwise curl -f hides the root cause.
+          http_status="$(curl -sS -X POST http://127.0.0.1:8799/__issue806_test -o /tmp/issue806-result.json -w '%{http_code}')"
+          echo "Staging D1 test endpoint HTTP status: $http_status"
+          if [ "$http_status" != "200" ]; then
+            python3 - <<'PYERR'
+          import json
+          from pathlib import Path
+          raw=Path('/tmp/issue806-result.json').read_text()[:2000]
+          try:
+           body=json.loads(raw)
+           print('Staging-only error:',json.dumps({'status':body.get('status'),'reason':str(body.get('reason',''))[:240]}))
+          except Exception:
+           print('Staging-only response was not JSON; no response body published')
+          PYERR
+            echo 'Remote Worker diagnostic tail (review for secrets before sharing):'
+            tail -n 15 /tmp/issue806-wrangler.log | sed -E 's/(Bearer |token[=: ]+)[A-Za-z0-9._-]+/\\1[REDACTED]/Ig'
+            exit 1
+          fi
           python3 - <<'PY'
           import json
           result=json.load(open('/tmp/issue806-result.json'))
