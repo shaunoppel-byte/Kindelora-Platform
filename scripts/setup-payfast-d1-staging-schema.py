@@ -50,10 +50,10 @@ def query(sql):
         fail("D1 SQL statement failed (statement text withheld)")
     return results[0].get("results", [])
 
-existing = query("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'")
+existing = query("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' AND name != '_cf_KV'")
 if existing:
     fail("staging database is not empty; refusing schema setup to prevent overwriting data")
-print("PASS: isolated staging database is empty")
+print("PASS: isolated staging database has no application tables (Cloudflare _cf_KV allowed)")
 
 names = ["0001_plus_persistence.sql", "20261123_plus_payfast_recurring_linkage.sql",
          "20261123_plus_payfast_renewal_atomic_guard.sql"]
