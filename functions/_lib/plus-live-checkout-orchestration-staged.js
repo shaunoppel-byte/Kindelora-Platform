@@ -38,7 +38,7 @@ export async function onRequestPost({request,env}={}){
   merchantKey:env.PAYFAST_LIVE_MERCHANT_KEY,passphrase:env.PAYFAST_LIVE_PASSPHRASE,
   returnUrl:origin+'/plus-account.html?payment=live-return',
   cancelUrl:origin+'/plus-account.html?payment=live-cancel',
-  notifyUrl:origin+'/api/plus/payfast-live-itn',nowMs});
+  notifyUrl:origin+'/api/plus/payfast-live-itn',recurringApproved:env.PAYFAST_LIVE_RECURRING_VERIFIED==='true',nowMs});
  if(!redirect.ok)return deny(503,'redirect_unavailable');
  const mapping=await ensurePlusCustomerForVerifiedMember({db:env.DB,verifiedMemberId:user.id,customerId:'cus_'+random()});
  if(!mapping.mapped)return deny(503,'customer_mapping_unavailable');
