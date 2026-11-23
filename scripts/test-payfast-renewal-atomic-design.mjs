@@ -10,7 +10,7 @@ function fakeDb(){
 const renewal={ready:true,execute:false,grantEntitlement:false,renewal:{
  orderId:'kin_order_12345678',customerId:'kin_customer_12345678',
  subscriptionId:'sub_1234567890123456',providerTransactionId:'pf_renewal_12345678',
- plan:'monthly',amountMinor:16500,previousPeriodEnd:'2026-12-22T10:00:00.000Z'
+ plan:'monthly',providerSubscriptionToken:'token_12345678',amountMinor:16500,previousPeriodEnd:'2026-12-22T10:00:00.000Z'
 }};
 const db=fakeDb();
 const plan=prepare({db,verifiedRenewal:renewal,paidAt:'2026-12-22T10:00:00.000Z'});
@@ -18,12 +18,20 @@ assert.equal(plan.ready,false);
 assert.equal(plan.execute,false);
 assert.equal(plan.grantEntitlement,false);
 assert.deepEqual(plan.statements,[]);
-assert.equal(plan.proposedStatements.length,2);
+assert.equal(plan.proposedStatements.length,6);
 assert.equal(plan.periodEnd,'2027-01-22T10:00:00.000Z');
 assert.match(db.prepared[0].sql,/INSERT INTO plus_payfast_renewal_events/);
 assert.match(db.prepared[0].sql,/NOT EXISTS/);
-assert.match(db.prepared[1].sql,/UPDATE plus_subscriptions/);
-assert.match(db.prepared[1].sql,/current_period_end=\?/);
+assert.ok(db.prepared[0].sql.includes('provider_subscription_token=?'));
+assert.match(db.prepared[0].sql,/FROM plus_payment_events/);
+assert.match(db.prepared[1].sql,/INSERT INTO plus_payfast_renewal_atomic_guard/);
+assert.match(db.prepared[2].sql,/DELETE FROM plus_payfast_renewal_atomic_guard/);
+assert.match(db.prepared[3].sql,/UPDATE plus_subscriptions/);
+assert.match(db.prepared[3].sql,/current_period_end=\?/);
+assert.match(db.prepared[1].sql,/changes\(\)/);
+assert.match(db.prepared[4].sql,/INSERT INTO plus_payfast_renewal_atomic_guard/);
+assert.match(db.prepared[4].sql,/changes\(\)/);
+assert.match(db.prepared[5].sql,/DELETE FROM plus_payfast_renewal_atomic_guard/);
 assert.equal(prepare({db,verifiedRenewal:{...renewal,ready:false},paidAt:'2026-12-22T10:00:00.000Z'}),null);
 assert.equal(prepare({db,verifiedRenewal:{...renewal,execute:true},paidAt:'2026-12-22T10:00:00.000Z'}),null);
 assert.equal(prepare({db,verifiedRenewal:{...renewal,grantEntitlement:true},paidAt:'2026-12-22T10:00:00.000Z'}),null);

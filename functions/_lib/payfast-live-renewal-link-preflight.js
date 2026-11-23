@@ -5,8 +5,16 @@ const deny=reason=>({ready:false,reason,grantEntitlement:false});
 const validId=v=>typeof v==='string'&&/^[A-Za-z0-9_-]{8,128}$/.test(v);
 export async function verifyPersistedPayFastRenewalLink({
  db,merchantReference,providerTransactionId,customerId,subscriptionId,
- plan,paidZarMinor,providerSubscriptionToken
+ plan,paidZarMinor,providerSubscriptionToken,authenticatedPayment
 }={}){
+ if(!authenticatedPayment||authenticatedPayment.verified!==true||
+  authenticatedPayment.environment!=='live'||
+  authenticatedPayment.paymentStatus!=='COMPLETE'||
+  authenticatedPayment.providerTransactionId!==providerTransactionId||
+  authenticatedPayment.merchantReference!==merchantReference||
+  authenticatedPayment.providerSubscriptionToken!==providerSubscriptionToken||
+  authenticatedPayment.amountMinor!==paidZarMinor)
+  return deny('provider_authentication_required');
  if(!db||typeof db.prepare!=='function'||!validId(merchantReference)||
   !validId(providerTransactionId)||!validId(customerId)||!validId(subscriptionId)||
   !['monthly','annual'].includes(plan)||!Number.isSafeInteger(paidZarMinor)||
@@ -26,6 +34,11 @@ export async function verifyPersistedPayFastRenewalLink({
    'SELECT provider_transaction_id FROM plus_payfast_renewal_events WHERE provider_transaction_id=? LIMIT 1'
   ).bind(providerTransactionId).first();
   if(prior)return deny('renewal_reference_already_recorded');
+  // Provider references must not be reusable across initial payments and renewals.
+  const initialEvent=await db.prepare(
+   'SELECT id FROM plus_payment_events WHERE provider_event_reference=? LIMIT 1'
+  ).bind(providerTransactionId).first();
+  if(initialEvent)return deny('provider_reference_already_recorded');
   const original=await db.prepare(
    "SELECT id,status,customer_id,amount_minor,currency FROM plus_orders WHERE id=? AND brand='KIN' LIMIT 1"
   ).bind(merchantReference).first();
@@ -44,7 +57,7 @@ export async function verifyPersistedPayFastRenewalLink({
   return {ready:true,reason:'persisted_recurring_identity_matches',
    grantEntitlement:false,execute:false,
    renewal:Object.freeze({orderId:merchantReference,customerId,subscriptionId,
-    providerTransactionId,plan,amountMinor:paidZarMinor,
+    providerTransactionId,providerSubscriptionToken,plan,amountMinor:paidZarMinor,
     previousPeriodEnd:subscription.current_period_end})};
  }catch{return deny('renewal_database_unavailable')}
 }
