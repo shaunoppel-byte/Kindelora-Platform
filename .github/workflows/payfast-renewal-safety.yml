@@ -1,0 +1,31 @@
+name: PayFast renewal safety tests
+
+on:
+  pull_request:
+    paths:
+      - 'functions/_lib/payfast-live-renewal-*.js'
+      - 'functions/_lib/payfast-live-persisted-payment-facts.js'
+      - 'functions/_lib/plus-live-activation-atomic-plan.js'
+      - 'scripts/test-payfast-renewal-*.mjs'
+      - 'scripts/test-payfast-live-renewal-*.mjs'
+      - '.github/workflows/payfast-renewal-safety.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  renewal-safety:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run read-only renewal regression tests
+        run: |
+          node scripts/test-payfast-renewal-paid-order-regression.mjs
+          node scripts/test-payfast-renewal-atomic-plan-regression.mjs
+          node scripts/test-payfast-live-renewal-link-preflight.mjs
+          node scripts/test-payfast-renewal-atomic-design.mjs
