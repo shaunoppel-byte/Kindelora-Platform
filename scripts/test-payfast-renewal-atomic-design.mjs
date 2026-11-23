@@ -18,7 +18,7 @@ assert.equal(plan.ready,false);
 assert.equal(plan.execute,false);
 assert.equal(plan.grantEntitlement,false);
 assert.deepEqual(plan.statements,[]);
-assert.equal(plan.proposedStatements.length,2);
+assert.equal(plan.proposedStatements.length,4);
 assert.equal(plan.periodEnd,'2027-01-22T10:00:00.000Z');
 assert.match(db.prepared[0].sql,/INSERT INTO plus_payfast_renewal_events/);
 assert.match(db.prepared[0].sql,/NOT EXISTS/);
