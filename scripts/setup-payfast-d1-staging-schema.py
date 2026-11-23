@@ -59,9 +59,36 @@ if not isinstance(existing, list) or any(not isinstance(row, dict) or not isinst
 application_tables = sorted(row["name"] for row in existing
     if row["name"] != "_cf_KV" and not row["name"].startswith("sqlite_"))
 print("INFO: staging table inventory: " + ", ".join(row["name"] for row in existing))
+baseline_tables = {"plus_customers", "plus_orders", "plus_payment_events", "plus_subscriptions"}
 if application_tables:
-    fail("staging contains application tables: " + ", ".join(application_tables) + "; refusing schema setup")
-print("PASS: isolated staging database has no application tables (Cloudflare _cf_KV allowed)")
+    if set(application_tables) != baseline_tables:
+        fail("unexpected or partially initialized staging application tables: " + ", ".join(application_tables))
+    baseline_sql = (pathlib.Path("migrations") / "0001_plus_persistence.sql").read_text()
+    expected_columns = {
+        "plus_customers": {"id", "identity_subject", "created_at"},
+        "plus_orders": {"id", "customer_id", "brand", "amount_minor", "currency", "status", "payment_reference", "created_at", "updated_at"},
+        "plus_payment_events": {"id", "order_id", "provider", "provider_event_reference", "event_type", "verified_at", "received_at"},
+        "plus_subscriptions": {"id", "customer_id", "brand", "status", "current_period_end", "created_at", "updated_at"},
+    }
+    for table, expected in expected_columns.items():
+        rows = query("PRAGMA table_info(" + table + ")")
+        actual = {row["name"] for row in rows if isinstance(row, dict) and isinstance(row.get("name"), str)}
+        if actual != expected:
+            fail("staging baseline column mismatch for " + table + "; refusing schema changes")
+        # Validate the existing DDL has the same constraints as checked-in baseline.
+        existing_ddl = query("SELECT sql FROM sqlite_master WHERE type='table' AND name='" + table + "'")
+        if len(existing_ddl) != 1 or not isinstance(existing_ddl[0].get("sql"), str):
+            fail("staging baseline DDL missing for " + table)
+        expected_match = re.search(r"CREATE TABLE IF NOT EXISTS\\s+" + table + r"\\s*\\(", baseline_sql)
+        if not expected_match:
+            fail("checked-in baseline definition missing for " + table)
+        ddl = baseline_sql[expected_match.start():baseline_sql.find(";", expected_match.start())]
+        normalize = lambda sql: re.sub(r"\\s+", "", sql.replace("IF NOT EXISTS", "")).lower()
+        if normalize(existing_ddl[0]["sql"]) != normalize(ddl):
+            fail("staging baseline DDL mismatch for " + table + "; refusing schema changes")
+    print("PASS: existing staging baseline schema matches checked-in table definitions")
+else:
+    print("PASS: isolated staging database has no application tables (Cloudflare _cf_KV allowed)")
 
 names = ["0001_plus_persistence.sql", "20261123_plus_payfast_recurring_linkage.sql",
          "20261123_plus_payfast_renewal_atomic_guard.sql"]
