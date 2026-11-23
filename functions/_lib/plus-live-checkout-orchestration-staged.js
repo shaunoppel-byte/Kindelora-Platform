@@ -16,7 +16,7 @@ export async function onRequestPost({request,env}={}){
  if(new URL(request.url).origin!=='https://kindelora.pages.dev')return deny(403,'invalid_host');
  let user;try{user=await member(request,env)}catch{return deny(503,'authentication_unavailable')}
  if(!user)return deny(401,'authentication_required');
- let data;try{data=await request.json()}catch{return deny(400,'invalid_request')}
+ let data;try{const raw=await request.text();if(new TextEncoder().encode(raw).byteLength>1024)return deny(413,'body_too_large');data=JSON.parse(raw)}catch{return deny(400,'invalid_request')}
  if(!data||typeof data!=='object'||Array.isArray(data)||!['monthly','annual'].includes(data.plan)||
   Object.keys(data).length!==1)return deny(400,'invalid_plan');
  if(!/^[0-9]{8,16}$/.test(env.PAYFAST_LIVE_MERCHANT_ID||'')||
