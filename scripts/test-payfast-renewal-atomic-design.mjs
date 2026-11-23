@@ -22,7 +22,7 @@ assert.equal(plan.proposedStatements.length,6);
 assert.equal(plan.periodEnd,'2027-01-22T10:00:00.000Z');
 assert.match(db.prepared[0].sql,/INSERT INTO plus_payfast_renewal_events/);
 assert.match(db.prepared[0].sql,/NOT EXISTS/);
-assert.match(db.prepared[0].sql,/provider_subscription_token=\\?/);
+assert.ok(db.prepared[0].sql.includes('provider_subscription_token=?'));
 assert.match(db.prepared[0].sql,/FROM plus_payment_events/);
 assert.match(db.prepared[1].sql,/INSERT INTO plus_payfast_renewal_atomic_guard/);
 assert.match(db.prepared[2].sql,/DELETE FROM plus_payfast_renewal_atomic_guard/);
