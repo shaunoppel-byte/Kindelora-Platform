@@ -46,8 +46,10 @@ jobs:
         with:
           node-version: '22'
       - name: Verify isolated staging database
+        id: verify_staging
         run: python3 scripts/prepare-payfast-d1-private-test.py
       - name: Run staging-only D1 batch test in remote preview
+        id: remote_d1_test
         shell: bash
         run: |
           set -euo pipefail
@@ -95,18 +97,21 @@ jobs:
         if: always()
         uses: actions/github-script@v7
         env:
-          D1_JOB_STATUS: ${{ job.status }}
+          D1_STAGING_IDENTITY: ${{ steps.verify_staging.outcome }}
+          D1_TRANSACTION_OUTCOME: ${{ steps.remote_d1_test.outcome }}
           D1_RUN_URL: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}
         with:
           github-token: ${{ secrets.GITHUB_TOKEN }}
           script: |
-            const status = process.env.D1_JOB_STATUS;
+            const identity = process.env.D1_STAGING_IDENTITY;
+            const transaction = process.env.D1_TRANSACTION_OUTCOME;
             const url = process.env.D1_RUN_URL;
-            const outcome = status === 'success' ? 'PASS' : 'NOT PASS';
+            const outcome = identity === 'success' && transaction === 'success' ? 'PASS' : 'NOT PASS';
             const body = [
               'Issue #806 isolated Cloudflare D1 staging workflow: **' + outcome + '**',
               'Run: ' + url,
-              'Workflow job status: ' + status,
+              'Staging identity verification: ' + identity,
+              'Remote D1 transaction assertions: ' + transaction,
               'PASS means the workflow asserted isolated D1 identity, renewal concurrency, replay, rollback, two billing cycles, and initial recurring-link atomicity.',
               'This is synthetic staging evidence only. Provider-authenticated live PayFast E2E and production charging remain NOT VERIFIED / NO-GO.',
               'No production D1 or registration changes are authorized by this workflow.'
