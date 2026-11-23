@@ -44,14 +44,6 @@ export async function onRequest(context) {
       status:405,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store, private','Allow':'POST','X-Content-Type-Options':'nosniff'}
     });
   }
-  // Public GET checkout is a read-only availability probe. Handle it at the
-  // middleware boundary to guarantee a consistent fail-closed 503 regardless
-  // of Pages function routing or stale GET handler behaviour. POST stays gated.
-  if (path === '/api/plus/checkout' && context.request.method === 'GET') {
-    return new Response(JSON.stringify({error:'checkout_unavailable',message:'KINDELORA Plus checkout is not yet available. No payment was taken.'}), {
-      status:503,headers:{'Content-Type':'application/json; charset=utf-8','Cache-Control':'no-store','X-Content-Type-Options':'nosniff','Retry-After':'86400'}
-    });
-  }
   // Route payment-initiation requests to their dedicated server-side handler.
   // This does NOT authorize a payment: checkout.js remains fail-closed until
   // signed requests, verified ITNs, durable orders and entitlements are ready.
