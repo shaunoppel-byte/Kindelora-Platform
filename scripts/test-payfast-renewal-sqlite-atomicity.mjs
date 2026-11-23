@@ -11,7 +11,7 @@ const initialPeriod='2026-12-22T10:00:00.000Z';
 const paidAt=initialPeriod;
 const ids={orderId:'kin_order_12345678',customerId:'kin_customer_12345678',
  subscriptionId:'sub_1234567890123456',providerTransactionId:'pf_renewal_12345678',
- plan:'monthly',amountMinor:16500,previousPeriodEnd:initialPeriod};
+ plan:'monthly',providerSubscriptionToken:'token_12345678',amountMinor:16500,previousPeriodEnd:initialPeriod};
 function fixture(){
  const db=new DatabaseSync(':memory:');
  db.exec(migration('0001_plus_persistence.sql'));
