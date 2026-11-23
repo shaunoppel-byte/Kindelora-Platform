@@ -26,7 +26,7 @@ const result=await verifyPersistedLivePaymentFacts({
   nowMs:Date.parse('2026-12-22T10:00:00Z')
 });
 assert.equal(result.verified,false);
-assert.equal(result.reason,'order_mismatch');
+assert.equal(result.reason,'renewal_requires_verified_recurring_link');
 assert.equal(result.grantEntitlement,false);
 assert.equal(queries,1,'Renewal is rejected before replay detection');
 // Initial COMPLETE ITN with a pending order remains eligible for reconciliation.
