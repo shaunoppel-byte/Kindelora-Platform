@@ -45,6 +45,21 @@ export async function runStagingAtomicity(db){
   try{await db.batch(plan.proposedStatements);}catch{replayRejected=true;}
   check(replayRejected,'duplicate transaction must fail');
   check(JSON.stringify(await state(db,ids))===JSON.stringify(committed),'replay must not change state');
-  return {status:'PASS',tests:['isolated fixture','concurrent duplicate: one commit one rejection','single atomic commit','replay rejected','replay no state change'],fixturePrefix:'stg806_',productionCharging:false};
+  // Negative-path atomic rollback: a mismatched provider token must not
+  // insert a renewal event or extend the paid period.
+  const negativeTx=id+'_wrong_token_transaction';
+  const invalid={...renewal(ids),providerTransactionId:negativeTx,
+   providerSubscriptionToken:id+'_incorrect_token',previousPeriodEnd:committed.period};
+  const invalidPlan=prepareAtomicPayFastRenewal({db,verifiedRenewal:{
+   ready:true,execute:false,grantEntitlement:false,renewal:invalid
+  },paidAt:committed.period});
+  check(invalidPlan?.proposedStatements?.length===6,'negative composer');
+  const negativeBefore=await state(db,ids);
+  let mismatchRejected=false;
+  try{await db.batch(invalidPlan.proposedStatements);}catch{mismatchRejected=true;}
+  check(mismatchRejected,'wrong recurring token must roll back');
+  check(JSON.stringify(await state(db,ids))===JSON.stringify(negativeBefore),
+   'wrong recurring token must not change entitlement or ledger');
+  return {status:'PASS',tests:['isolated fixture','concurrent duplicate: one commit one rejection','single atomic commit','replay rejected','replay no state change','wrong recurring token rollback'],fixturePrefix:'stg806_',productionCharging:false};
  }finally{await cleanup();}
 }
