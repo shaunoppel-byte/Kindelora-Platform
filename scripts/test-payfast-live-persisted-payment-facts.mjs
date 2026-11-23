@@ -7,4 +7,8 @@ let r=await verify(args);assert.equal(r.verified,true);assert.equal(r.grantEntit
 for(const override of [{merchantId:'10000101'},{paidZarMinor:16501},{paymentStatus:'PENDING'},{providerTransactionId:'bad'},{db:dbFor({...row,status:'paid'})},{db:dbFor({...row,customer_id:'other'})},{db:dbFor({...row,display_usd_minor:900})},{db:dbFor({...row,settlement_zar_minor:16501})},{db:dbFor(row,{order_id:row.id})}]){
  r=await verify({...args,...override});assert.equal(r.verified,false);assert.equal(r.grantEntitlement,false);
 }
-r=await verify({...args,db:dbFor({...row,status:'paid'})});\nassert.equal(r.reason,'renewal_requires_verified_recurring_link');\nassert.equal(r.verified,false);\nassert.equal(r.grantEntitlement,false);\nconsole.log('PASS: live payment reconciliation checks D1 order, quote, merchant, amount and replay');
+r=await verify({...args,db:dbFor({...row,status:'paid'})});
+assert.equal(r.reason,'renewal_requires_verified_recurring_link');
+assert.equal(r.verified,false);
+assert.equal(r.grantEntitlement,false);
+console.log('PASS: live payment reconciliation checks D1 order, quote, merchant, amount and replay');
