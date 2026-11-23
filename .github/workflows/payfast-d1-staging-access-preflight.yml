@@ -1,0 +1,74 @@
+name: PayFast D1 staging access preflight
+
+# Issue #806: manual, read-only access check. Never run migrations or write to D1.
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_staging_only:
+        description: 'Type STAGING_ONLY to confirm no production access is intended'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: payfast-d1-staging-preflight
+  cancel-in-progress: false
+
+jobs:
+  staging-access:
+    runs-on: ubuntu-latest
+    timeout-minutes: 8
+    environment: payfast-d1-staging
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.KINDELORA_D1_STAGING_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.KINDELORA_D1_STAGING_ACCOUNT_ID }}
+      STAGING_DATABASE_ID: ${{ vars.KINDELORA_D1_STAGING_DATABASE_ID }}
+      PRODUCTION_DATABASE_ID: ${{ vars.KINDELORA_D1_PRODUCTION_DATABASE_ID }}
+    steps:
+      - name: Enforce explicit isolation and credentials
+        shell: bash
+        env:
+          CONFIRM: ${{ inputs.confirm_staging_only }}
+        run: |
+          set -euo pipefail
+          [[ "$CONFIRM" == "STAGING_ONLY" ]] || { echo "::error::Explicit staging confirmation required"; exit 1; }
+          [[ -n "$CLOUDFLARE_API_TOKEN" && -n "$CLOUDFLARE_ACCOUNT_ID" ]] || { echo "::error::Dedicated staging Cloudflare credentials missing"; exit 1; }
+          [[ -n "$STAGING_DATABASE_ID" && -n "$PRODUCTION_DATABASE_ID" ]] || { echo "::error::Both staging and production database IDs must be configured for isolation"; exit 1; }
+          [[ "$STAGING_DATABASE_ID" != "$PRODUCTION_DATABASE_ID" ]] || { echo "::error::Staging and production D1 database IDs must differ"; exit 1; }
+          [[ "$STAGING_DATABASE_ID" =~ ^[0-9a-fA-F-]{36}$ && "$PRODUCTION_DATABASE_ID" =~ ^[0-9a-fA-F-]{36}$ ]] || { echo "::error::Database IDs must be UUIDs"; exit 1; }
+          echo "Isolation preflight passed: staging and production IDs are distinct; no database writes performed."
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify Cloudflare staging API access (read-only)
+        shell: bash
+        run: |
+          set -euo pipefail
+          # Avoid leaking token or account ID in command logs.
+          response="$(curl --fail-with-body --silent --show-error --max-time 20 \
+            --header "Authorization: Bearer ${CLOUDFLARE_API_TOKEN}" \
+            --header "Accept: application/json" \
+            "https://api.cloudflare.com/client/v4/accounts/${CLOUDFLARE_ACCOUNT_ID}/d1/database/${STAGING_DATABASE_ID}")" || {
+              echo "::error::Cloudflare staging D1 read-only lookup failed"; exit 1;
+            }
+          printf '%s' "$response" | node -e '
+            let s=""; process.stdin.on("data",x=>s+=x); process.stdin.on("end",()=>{
+              let d; try { d=JSON.parse(s) } catch { process.exit(1) }
+              if (d.success!==true || !d.result?.uuid) { console.error("::error::Cloudflare did not confirm staging database access"); process.exit(1) }
+              if (d.result.uuid.toLowerCase()!==process.env.STAGING_DATABASE_ID.toLowerCase()) { console.error("::error::Database identity mismatch"); process.exit(1) }
+              console.log("Cloudflare confirmed staging D1 database identity; no SQL or migrations executed.")
+            })'
+      - name: Record safe preflight summary
+        if: success()
+        shell: bash
+        run: |
+          {
+            echo "## Issue #806 — staging D1 access preflight"
+            echo "- Dedicated staging API access: verified"
+            echo "- Staging/production database identifiers: distinct"
+            echo "- Database changes: none"
+            echo "- Renewal, replay, rollback, concurrency tests: NOT YET EXECUTED"
+            echo "- Live charging: unchanged / NO-GO"
+          } >> "$GITHUB_STEP_SUMMARY"
