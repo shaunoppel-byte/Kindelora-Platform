@@ -72,7 +72,9 @@ jobs:
             'replay rejected',
             'replay no state change',
             'wrong recurring token rollback',
-            'four additional D1 rollback cases'
+            'four additional D1 rollback cases',
+            'second billing cycle extends next month once',
+            'second cycle replay rejected'
           }
           if result.get('status')!='PASS':raise SystemExit('D1 staging transaction test failed')
           if result.get('productionCharging') is not False:raise SystemExit('Production charging isolation not proven')
