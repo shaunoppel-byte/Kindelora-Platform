@@ -6,7 +6,7 @@ const wait=()=>new Promise(resolve=>setImmediate(resolve));
 async function scenario({status=503,payload,clickAnnual=false}={}){
  const elements=new Map(),posted=[];
  const element=id=>{if(!elements.has(id))elements.set(id,{id,textContent:'',disabled:false,attributes:{},listeners:{},setAttribute(k,v){this.attributes[k]=v},addEventListener(k,fn){this.listeners[k]=fn}});return elements.get(id)};
- const document={getElementById:element,body:{appendChild(node){posted.push(node)}},createElement(tag){return {tag,children:[],appendChild(node){this.children.push(node)},submit(){this.submitted=true}}}};
+ const document={getElementById:element,body:{appendChild(node){posted.push(node)}},createElement(tag){return {tag,style:{},children:[],appendChild(node){this.children.push(node)},submit(){this.submitted=true}}}};
  let requested;
  const fetch=async(url,opts)=>{requested={url,opts};return {ok:status===200,status,async json(){return payload}}};
  vm.runInNewContext(source,{document,fetch,Object,Set,JSON,Error});
