@@ -13,7 +13,7 @@ const recurring={
  plus_payfast_renewal_events:['provider_transaction_id','initial_order_id','subscription_id','paid_zar_minor','previous_period_end','new_period_end'],
  plus_payfast_renewal_atomic_guard:['singleton','expected_changes']
 };
-const db=columns=>({prepare(sql){const name=/^PRAGMA table_info\\(([^)]+)\\)$/.exec(sql)?.[1];assert.ok(name,'read-only schema query');return {async all(){return {results:(columns[name]||[]).map(name=>({name}))}}}}});
+const db=columns=>({prepare(sql){const name=/^PRAGMA table_info\(([^)]+)\)$/.exec(sql)?.[1];assert.ok(name,'read-only schema query');return {async all(){return {results:(columns[name]||[]).map(name=>({name}))}}}}});
 assert.equal((await verify({db:db(base)})).ready,true,'legacy schema accepted when recurring not required');
 assert.equal((await verify({db:db(base),requireRecurring:true})).ready,false,'recurring missing must fail');
 assert.equal((await verify({db:db({...base,...recurring}),requireRecurring:true})).ready,true,'complete recurring schema accepted');
