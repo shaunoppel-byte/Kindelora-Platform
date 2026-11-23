@@ -38,6 +38,9 @@ export function prepareAtomicPayFastRenewal({db,verifiedRenewal,paidAt}={}){
    .bind(r.providerTransactionId,r.amountMinor,r.previousPeriodEnd,
     period.periodEnd,paidAt,r.orderId,r.subscriptionId,r.customerId,r.plan,
     r.amountMinor,r.amountMinor,r.previousPeriodEnd,r.providerTransactionId),
+  // Guard the INSERT too: zero inserted rows must abort the entire batch.
+  db.prepare('INSERT INTO plus_payfast_renewal_atomic_guard (singleton,expected_changes) VALUES (1,changes())'),
+  db.prepare('DELETE FROM plus_payfast_renewal_atomic_guard WHERE singleton=1'),
   db.prepare(`UPDATE plus_subscriptions
    SET status='active',current_period_end=?,updated_at=CURRENT_TIMESTAMP
    WHERE id=? AND customer_id=? AND brand='KIN'
