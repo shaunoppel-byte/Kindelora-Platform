@@ -15,4 +15,8 @@ assert.equal((await onRequestPost({request:req(),env})).status,503);
 // Never permit browser-supplied amount, payment token, or arbitrary host to bypass gates.
 const response=await onRequestPost({request:req('annual','https://attacker.example'),env});
 assert.equal(response.status,503);
+// A request can omit Content-Length; the server must still reject oversized JSON.
+const oversized=new Request(url,{method:'POST',headers:{origin:'https://kindelora.pages.dev','content-type':'application/json'},body:JSON.stringify({plan:'monthly',padding:'x'.repeat(2048)})});
+const tooLarge=await onRequestPost({request:oversized,env});
+assert.equal(tooLarge.status,503); // Merchant/auth gates remain fail-closed before parsing.
 console.log('PASS: staged checkout requires explicit gates; no charge or redirect without verified backend');
