@@ -102,7 +102,9 @@ for name in names:
             if statement:
                 statements.append(statement)
             buffer = ""
-    if buffer.strip():
+    # A trailing SQL comment is not an incomplete executable statement.
+    remaining = "\n".join(line for line in buffer.splitlines() if not line.lstrip().startswith("--")).strip()
+    if remaining:
         fail("incomplete migration: " + name)
     for statement in statements:
         query(statement)
