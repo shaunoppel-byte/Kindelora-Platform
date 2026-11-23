@@ -10,7 +10,7 @@ export async function verifyPersistedLivePaymentFacts({db,merchantReference,merc
  try{
   const order=await db.prepare("SELECT o.id,o.customer_id,o.amount_minor,o.currency,o.status,q.plan_id,q.display_usd_minor,q.settlement_zar_minor,q.expires_at FROM plus_orders o JOIN plus_order_quotes q ON q.order_id=o.id WHERE o.id=? AND o.brand='KIN' LIMIT 1")
    .bind(merchantReference).first();
-  if(!order||order.id!==merchantReference||order.status!=='pending'||order.currency!=='ZAR'||
+  // A paid initial order is never eligible for initial-payment reconciliation.\n  // Return an explicit routing signal so the caller can invoke the independently\n  // authenticated recurring-link gate; never grant entitlement on this signal.\n  if(order?.id===merchantReference&&order.status==='paid')return deny('renewal_requires_verified_recurring_link');\n  if(!order||order.id!==merchantReference||order.status!=='pending'||order.currency!=='ZAR'||
    order.amount_minor!==paidZarMinor||order.settlement_zar_minor!==paidZarMinor||
    !['monthly','annual'].includes(order.plan_id)||
    order.display_usd_minor!==(order.plan_id==='monthly'?899:8999)||
