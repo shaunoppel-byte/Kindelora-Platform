@@ -8,10 +8,15 @@ const required={
  plus_subscriptions:['id','customer_id','brand','status','current_period_end'],
  plus_payment_reconciliations:['order_id','payment_reference','verification_method','amount_minor','currency']
 };
-export async function verifyLivePlusD1Schema({db}={}){
+const recurringRequired={
+ plus_payfast_recurring_links:['initial_order_id','subscription_id','customer_id','plan_id','expected_zar_minor','provider_subscription_token'],
+ plus_payfast_renewal_events:['provider_transaction_id','initial_order_id','subscription_id','paid_zar_minor','previous_period_end','new_period_end'],
+ plus_payfast_renewal_atomic_guard:['singleton','expected_changes']
+};
+export async function verifyLivePlusD1Schema({db,requireRecurring=false}={}){
  if(!db||typeof db.prepare!=='function')return {ready:false,reason:'db_unavailable'};
  try{
-  for(const [table,columns] of Object.entries(required)){
+  for(const [table,columns] of Object.entries(requireRecurring?{...required,...recurringRequired}:required)){
    // Identifiers are constants in this module; never interpolate user input.
    const result=await db.prepare('PRAGMA table_info('+table+')').all();
    if(!Array.isArray(result?.results)||!columns.every(col=>result.results.some(row=>row.name===col)))
