@@ -96,6 +96,16 @@ export async function runStagingAtomicity(db){
   }
   check(JSON.stringify(await state(db,ids))===JSON.stringify(committed),
    'all negative scenarios must restore original fixture state');
-  return {status:'PASS',tests:['isolated fixture','executor staging gate denies without D1 mutation','concurrent duplicate: one commit one rejection','single atomic commit','replay rejected','replay no state change','wrong recurring token rollback','four additional D1 rollback cases'],fixturePrefix:'stg806_',productionCharging:false};
+  // A distinct provider-verified second billing event must extend the NEXT
+  // month, never reapply the first period or overwrite the original order.
+  const second={...renewal(ids),providerTransactionId:id+'_second_transaction',previousPeriodEnd:committed.period};
+  const secondResult=await executeIsolatedPayFastRenewalStaging({db,verifiedRenewal:{ready:true,execute:false,grantEntitlement:false,renewal:second},paidAt:committed.period,stagingOnly:true});
+  check(secondResult.committed===true&&secondResult.grantEntitlement===false,'second distinct renewal commits');
+  const afterSecond=await state(db,ids);
+  check(afterSecond.period==='2027-02-22T10:00:00.000Z'&&afterSecond.events===2,'second renewal extends next period exactly once');
+  const secondReplay=await executeIsolatedPayFastRenewalStaging({db,verifiedRenewal:{ready:true,execute:false,grantEntitlement:false,renewal:second},paidAt:committed.period,stagingOnly:true});
+  check(secondReplay.committed===false,'second renewal replay rejected');
+  check(JSON.stringify(await state(db,ids))===JSON.stringify(afterSecond),'second renewal replay no state change');
+  return {status:'PASS',tests:['isolated fixture','executor staging gate denies without D1 mutation','concurrent duplicate: one commit one rejection','single atomic commit','replay rejected','replay no state change','wrong recurring token rollback','four additional D1 rollback cases','second billing cycle extends next month once','second cycle replay rejected'],fixturePrefix:'stg806_',productionCharging:false};
  }finally{await cleanup();}
 }
