@@ -63,7 +63,8 @@ export async function runStagingAtomicity(db){
   check(invalidPlan?.proposedStatements?.length===6,'negative composer');
   const negativeBefore=await state(db,ids);
   let mismatchRejected=false;
-  try{await db.batch(invalidPlan.proposedStatements);}catch{mismatchRejected=true;}
+  const mismatch=await executeIsolatedPayFastRenewalStaging({db,verifiedRenewal:{ready:true,execute:false,grantEntitlement:false,renewal:invalid},paidAt:committed.period,stagingOnly:true});
+  mismatchRejected=mismatch.committed===false;
   check(mismatchRejected,'wrong recurring token must roll back');
   check(JSON.stringify(await state(db,ids))===JSON.stringify(negativeBefore),
    'wrong recurring token must not change entitlement or ledger');
@@ -86,7 +87,8 @@ export async function runStagingAtomicity(db){
     },paidAt:committed.period});
     check(candidate?.proposedStatements?.length===6,scenario.name+' composer');
     let rejected=false;
-    try{await db.batch(candidate.proposedStatements);}catch{rejected=true;}
+    const attempt=await executeIsolatedPayFastRenewalStaging({db,verifiedRenewal:{ready:true,execute:false,grantEntitlement:false,renewal:{...renewal(ids),providerTransactionId:id+'_negative_'+i,previousPeriodEnd:committed.period}},paidAt:committed.period,stagingOnly:true});
+    rejected=attempt.committed===false;
     check(rejected,scenario.name+' must reject');
     check(JSON.stringify(await state(db,ids))===JSON.stringify(beforeFailure),
      scenario.name+' must leave ledger and entitlement unchanged');
