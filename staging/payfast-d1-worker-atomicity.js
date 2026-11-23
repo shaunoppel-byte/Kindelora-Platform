@@ -32,6 +32,10 @@ export async function runStagingAtomicity(db){
   const plan=prepareAtomicPayFastRenewal({db,verifiedRenewal:{ready:true,execute:false,grantEntitlement:false,renewal:renewal(ids)},paidAt:period});
   check(plan?.ready===false&&plan?.execute===false&&plan?.statements?.length===0&&plan?.proposedStatements?.length===6,'composer must remain inert');
   const before=await state(db,ids);check(before.period===period&&before.events===0,'initial fixture');
+  // Verify the staging-only executor refuses an unapproved call against REAL D1.
+  const denied=await executeIsolatedPayFastRenewalStaging({db,verifiedRenewal:{ready:true,execute:false,grantEntitlement:false,renewal:renewal(ids)},paidAt:period});
+  check(denied.committed===false&&denied.grantEntitlement===false,'staging executor must deny without explicit opt-in');
+  check(JSON.stringify(await state(db,ids))===JSON.stringify(before),'denied execution must not mutate D1');
   // Submit the same authenticated synthetic event concurrently to the real D1 binding.
   // Exactly one batch must commit, even when requests race.
   const outcomes=await Promise.allSettled([
@@ -90,6 +94,6 @@ export async function runStagingAtomicity(db){
   }
   check(JSON.stringify(await state(db,ids))===JSON.stringify(committed),
    'all negative scenarios must restore original fixture state');
-  return {status:'PASS',tests:['isolated fixture','concurrent duplicate: one commit one rejection','single atomic commit','replay rejected','replay no state change','wrong recurring token rollback','four additional D1 rollback cases'],fixturePrefix:'stg806_',productionCharging:false};
+  return {status:'PASS',tests:['isolated fixture','executor staging gate denies without D1 mutation','concurrent duplicate: one commit one rejection','single atomic commit','replay rejected','replay no state change','wrong recurring token rollback','four additional D1 rollback cases'],fixturePrefix:'stg806_',productionCharging:false};
  }finally{await cleanup();}
 }
