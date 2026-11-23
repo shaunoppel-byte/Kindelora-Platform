@@ -1,6 +1,9 @@
 name: PayFast renewal safety tests
 
 on:
+  push:
+    branches:
+      - fix/payfast-renewal-regression-806
   pull_request:
     paths:
       - 'functions/_lib/payfast-live-renewal-*.js'
