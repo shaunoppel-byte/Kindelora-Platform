@@ -3,8 +3,7 @@ name: PayFast renewal safety tests
 on:
   push:
     branches:
-      - fix/payfast-renewal-regression-806
-      - fix/payfast-renewal-sqlite-ci-806
+      - main
   pull_request:
     paths:
       - 'functions/_lib/payfast-live-renewal-*.js'
@@ -12,6 +11,9 @@ on:
       - 'functions/_lib/plus-live-activation-atomic-plan.js'
       - 'scripts/test-payfast-renewal-*.mjs'
       - 'scripts/test-payfast-live-renewal-*.mjs'
+      - 'migrations/0001_plus_persistence.sql'
+      - 'migrations/20261123_plus_payfast_recurring_linkage.sql'
+      - 'migrations/20261123_plus_payfast_renewal_atomic_guard.sql'
       - '.github/workflows/payfast-renewal-safety.yml'
   workflow_dispatch:
 
