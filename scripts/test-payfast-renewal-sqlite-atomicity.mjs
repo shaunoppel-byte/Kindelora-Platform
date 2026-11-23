@@ -64,6 +64,8 @@ function state(db){
 for(const [label,modify] of [
  ['missing provider token',db=>db.exec('UPDATE plus_payfast_recurring_links SET provider_subscription_token=NULL')],
  ['original order pending',db=>db.exec("UPDATE plus_orders SET status='pending'")],
+ ['original order reassigned',db=>{db.prepare('INSERT INTO plus_customers(id,identity_subject) VALUES (?,?)').run('other_customer_12345678','other_subject_123');db.exec("UPDATE plus_orders SET customer_id='other_customer_12345678'")}],
+ ['subscription reassigned',db=>{db.prepare('INSERT INTO plus_customers(id,identity_subject) VALUES (?,?)').run('other_customer_12345678','other_subject_123');db.exec("UPDATE plus_subscriptions SET customer_id='other_customer_12345678'")}],
  ['subscription cancelled',db=>db.exec("UPDATE plus_subscriptions SET status='cancelled'")],
  ['changed period',db=>db.exec("UPDATE plus_subscriptions SET current_period_end='2026-12-23T10:00:00.000Z'")],
  ['wrong settlement amount',db=>db.exec('UPDATE plus_payfast_recurring_links SET expected_zar_minor=999')],
@@ -77,4 +79,4 @@ for(const [label,modify] of [
  assert.deepEqual(state(db),before,label+' must roll back without ledger or entitlement changes');
  db.close();
 }
-console.log('PASS: SQLite atomic renewal, replay and seven rollback scenarios (staging D1 verification still required)');
+console.log('PASS: SQLite atomic renewal, replay and nine rollback scenarios (staging D1 verification still required)');
