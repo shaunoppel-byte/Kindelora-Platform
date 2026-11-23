@@ -23,7 +23,7 @@ export async function onRequestPost({request,env}={}){
   typeof env.PAYFAST_LIVE_MERCHANT_KEY!=='string'||env.PAYFAST_LIVE_MERCHANT_KEY.length<8||
   typeof env.PAYFAST_LIVE_PASSPHRASE!=='string'||!env.PAYFAST_LIVE_PASSPHRASE||
   typeof env.PAYFAST_LIVE_ALLOWED_CIDRS!=='string'||!env.PAYFAST_LIVE_ALLOWED_CIDRS.trim())return deny(503,'merchant_unavailable');
- const schema=await verifyLivePlusD1Schema({db:env.DB});
+ const schema=await verifyLivePlusD1Schema({db:env.DB,requireRecurring:true});
  if(!schema.ready)return deny(503,'live_schema_unavailable');
  const nowMs=Date.now(),reference='kin_'+random(),fxReference='fx_'+random();
  // Reuse the strict trusted HTTPS FX provider adapter; convert only its
