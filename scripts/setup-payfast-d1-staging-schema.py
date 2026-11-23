@@ -50,9 +50,17 @@ def query(sql):
         fail("D1 SQL statement failed (statement text withheld)")
     return results[0].get("results", [])
 
-existing = query("SELECT name FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%' AND name != '_cf_KV'")
-if existing:
-    fail("staging database is not empty; refusing schema setup to prevent overwriting data")
+existing = query("SELECT name FROM sqlite_master WHERE type='table' ORDER BY name")
+# Cloudflare's own _cf_KV and SQLite's sqlite_* tables do not represent application data.
+# Fail closed for every other table, but print its name so operators can diagnose
+# an unexpectedly populated staging database without exposing any row contents.
+if not isinstance(existing, list) or any(not isinstance(row, dict) or not isinstance(row.get("name"), str) for row in existing):
+    fail("unexpected D1 table inventory response; refusing schema setup")
+application_tables = sorted(row["name"] for row in existing
+    if row["name"] != "_cf_KV" and not row["name"].startswith("sqlite_"))
+print("INFO: staging table inventory: " + ", ".join(row["name"] for row in existing))
+if application_tables:
+    fail("staging contains application tables: " + ", ".join(application_tables) + "; refusing schema setup")
 print("PASS: isolated staging database has no application tables (Cloudflare _cf_KV allowed)")
 
 names = ["0001_plus_persistence.sql", "20261123_plus_payfast_recurring_linkage.sql",
