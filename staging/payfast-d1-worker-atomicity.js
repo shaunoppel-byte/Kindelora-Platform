@@ -31,13 +31,20 @@ export async function runStagingAtomicity(db){
   const plan=prepareAtomicPayFastRenewal({db,verifiedRenewal:{ready:true,execute:false,grantEntitlement:false,renewal:renewal(ids)},paidAt:period});
   check(plan?.ready===false&&plan?.execute===false&&plan?.statements?.length===0&&plan?.proposedStatements?.length===6,'composer must remain inert');
   const before=await state(db,ids);check(before.period===period&&before.events===0,'initial fixture');
-  await db.batch(plan.proposedStatements);
+  // Submit the same authenticated synthetic event concurrently to the real D1 binding.
+  // Exactly one batch must commit, even when requests race.
+  const outcomes=await Promise.allSettled([
+   db.batch(plan.proposedStatements),db.batch(plan.proposedStatements)
+  ]);
+  const successes=outcomes.filter(x=>x.status==='fulfilled').length;
+  const failures=outcomes.filter(x=>x.status==='rejected').length;
+  check(successes===1&&failures===1,'concurrent duplicate: exactly one batch may commit');
   const committed=await state(db,ids);
-  check(committed.period==='2027-01-22T10:00:00.000Z'&&committed.events===1,'first renewal commits once');
+  check(committed.period==='2027-01-22T10:00:00.000Z'&&committed.events===1,'concurrent renewal commits once');
   let replayRejected=false;
   try{await db.batch(plan.proposedStatements);}catch{replayRejected=true;}
   check(replayRejected,'duplicate transaction must fail');
   check(JSON.stringify(await state(db,ids))===JSON.stringify(committed),'replay must not change state');
-  return {status:'PASS',tests:['isolated fixture','single atomic commit','replay rejected','replay no state change'],fixturePrefix:'stg806_',productionCharging:false};
+  return {status:'PASS',tests:['isolated fixture','concurrent duplicate: one commit one rejection','single atomic commit','replay rejected','replay no state change'],fixturePrefix:'stg806_',productionCharging:false};
  }finally{await cleanup();}
 }
