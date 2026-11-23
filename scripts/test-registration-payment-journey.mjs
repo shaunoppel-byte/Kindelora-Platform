@@ -30,11 +30,20 @@ for(const body of [{plan:'monthly'},{plan:'annual'},{plan:'monthly',amount:0,cur
 }
 assert.equal((await subscription({request:new Request(base+'/api/plus/subscription'),env:unconfigured})).status,503);
 let nextCalled=false;
-for(const path of ['/api/plus/subscription','/premium','/members']){
+for(const path of ['/premium','/members']){
  const response=await middleware({request:new Request(base+path),next:()=>{nextCalled=true;return new Response('bypass')}});
  assert.equal(response.status,403,'protected route must be blocked: '+path);
 }
 assert.equal(nextCalled,false,'protected routes must not reach static assets');
+// Authenticated subscription GET now routes to a fail-closed handler, never to static assets.
+const subReq=new Request(base+'/api/plus/subscription');
+let subscriptionDelegated=0;
+const subResponse=await middleware({request:subReq,next:()=>{subscriptionDelegated++;return subscription({request:subReq,env:unconfigured})}});
+assert.equal(subscriptionDelegated,1);
+assert.equal(subResponse.status,503);
+const subPost=await middleware({request:new Request(base+'/api/plus/subscription',{method:'POST'}),next:()=>new Response('bypass')});
+assert.equal(subPost.status,403);
+
 // Checkout routing is intentional: middleware delegates to a dedicated fail-closed handler.
 // Do not confuse successful routing with permission to charge.
 for(const method of ['GET','POST']){
