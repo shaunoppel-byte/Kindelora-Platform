@@ -19,8 +19,16 @@ export async function authenticateLivePayFastItn({request,raw,merchantId,passphr
  if(!signature.verified)return deny('signature_not_verified');
  const provider=await verifyPayFastItnWithServer({raw,environment:'live',fetchImpl});
  if(!provider.verified)return deny('provider_not_verified');
+ // Only consume a recurring token from the exact signed, source-checked,
+ // provider-validated notification. Never accept a browser-provided token.
+ // Missing or malformed tokens remain ineligible for renewal reconciliation.
+ const fields=new URLSearchParams(raw);
+ const token=fields.get('token');
+ const providerSubscriptionToken=typeof token==='string'&&
+  /^[A-Za-z0-9_-]{8,128}$/.test(token)?token:null;
  return {authenticated:true,reason:'live_provider_confirmed',grantEntitlement:false,
-  payment:Object.freeze({environment:'live',paymentStatus:'COMPLETE',
+  payment:Object.freeze({verified:true,environment:'live',paymentStatus:'COMPLETE',
    merchantReference:envelope.merchantReference,providerTransactionId:envelope.providerTransactionId,
-   merchantId:envelope.merchantId,amountMinor:envelope.amountZarMinor})};
+   merchantId:envelope.merchantId,amountMinor:envelope.amountZarMinor,
+   providerSubscriptionToken})};
 }
