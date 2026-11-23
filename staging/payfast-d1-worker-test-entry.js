@@ -8,12 +8,14 @@ export default {
    return new Response('Not found',{status:404});
   if(env.ISSUE806_STAGING_ONLY!=='STAGING_ONLY'||!env.DB)
    return Response.json({status:'BLOCKED',reason:'staging_binding_required'},{status:403});
-  try{
-   const renewal=await runStagingAtomicity(env.DB);
-   const initial=await runInitialRecurringAtomicity(env.DB);
-   return Response.json({...renewal,tests:[...renewal.tests,...initial]},{headers:{'cache-control':'no-store'}});
-  }catch(e){
-   return Response.json({status:'FAIL',reason:String(e?.message||e).slice(0,240)},{status:500});
-  }
+  const run=async(stage,fn)=>{
+   try{return {ok:true,result:await fn(env.DB)};}
+   catch(e){return {ok:false,response:Response.json({status:'FAIL',stage,reason:String(e?.message||e).slice(0,240)},{status:500})};}
+  };
+  const renewal=await run('renewal_atomicity',runStagingAtomicity);
+  if(!renewal.ok)return renewal.response;
+  const initial=await run('initial_recurring_atomicity',runInitialRecurringAtomicity);
+  if(!initial.ok)return initial.response;
+  return Response.json({...renewal.result,tests:[...renewal.result.tests,...initial.result]},{headers:{'cache-control':'no-store'}});
  }
 };
