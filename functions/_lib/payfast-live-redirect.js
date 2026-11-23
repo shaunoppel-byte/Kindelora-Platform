@@ -5,11 +5,12 @@ import {md5} from './payfast-md5.js';
 const deny=reason=>({ok:false,reason,authorizesPayment:false});
 const encode=v=>encodeURIComponent(v).replace(/%20/g,'+').replace(/[!'()*~]/g,ch=>'%'+ch.charCodeAt(0).toString(16).toUpperCase());
 const callback=v=>{try{const u=new URL(v);return u.protocol==='https:'&&!u.username&&!u.password&&!u.hash&&u.hostname==='kindelora.pages.dev'}catch{return false}};
-export function buildPayFastLiveRedirect({order,merchantId,merchantKey,passphrase,returnUrl,cancelUrl,notifyUrl,nowMs=Date.now()}={}){
+export function buildPayFastLiveRedirect({order,merchantId,merchantKey,passphrase,returnUrl,cancelUrl,notifyUrl,recurringApproved=false,nowMs=Date.now()}={}){
  if(!order||order.environment!=='live'||order.status!=='pending'||!['monthly','annual'].includes(order.plan)||
   order.usdMinor!==(order.plan==='monthly'?899:8999)||!Number.isSafeInteger(order.zarMinor)||order.zarMinor<500||
   order.settlementCurrency!=='ZAR'||!/^[A-Za-z0-9_-]{8,128}$/.test(order.reference||'')||
   !Number.isSafeInteger(nowMs)||!Number.isSafeInteger(order.quoteExpiresAtMs)||order.quoteExpiresAtMs<=nowMs)return deny('invalid_order');
+ if(recurringApproved!==true)return deny('merchant_recurring_not_approved');
  if(!/^[0-9]{8,16}$/.test(merchantId||'')||typeof merchantKey!=='string'||merchantKey.length<8||merchantKey.length>128||
   typeof passphrase!=='string'||!passphrase||passphrase.length>256)return deny('merchant_configuration_unavailable');
  if(![returnUrl,cancelUrl,notifyUrl].every(callback))return deny('invalid_callback_url');
