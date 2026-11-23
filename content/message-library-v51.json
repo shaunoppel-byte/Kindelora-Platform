@@ -1,0 +1,127 @@
+{
+  "schema_version": 1,
+  "batch": 51,
+  "editorial_note": "15 individually drafted situational candidates. Local intra-batch ID/text checks completed. Full corpus duplicate/semantic screening, independent editorial review, GitHub CI and publication approval are not claimed. Editorial-only; do not publish.",
+  "messages": [
+    {
+      "id": "KDL-EDITORIAL51-001",
+      "theme": "returning_to_shift_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first night shift after a long break can unsettle your sense of time. Preparing a meal and a place to rest may be enough of a plan for this first return."
+    },
+    {
+      "id": "KDL-EDITORIAL51-002",
+      "theme": "unexpected_school_fee",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "An unexpected school expense can make an ordinary envelope feel intimidating. You can ask what is essential now and what can wait without having to explain every detail of your finances."
+    },
+    {
+      "id": "KDL-EDITORIAL51-003",
+      "theme": "after_a_neighbour_moves",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The hallway sounds different after a neighbour moves away. Missing those small greetings is a real kind of loss, even if you never knew much about each other's lives."
+    },
+    {
+      "id": "KDL-EDITORIAL51-004",
+      "theme": "learning_a_new_route",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Taking a different bus after a route change may require more attention than anyone sees. Checking the stop twice is sensible, not evidence that you should already know your way."
+    },
+    {
+      "id": "KDL-EDITORIAL51-005",
+      "theme": "caregiving_appointment",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When you accompany someone to another appointment, you may remember the paperwork and forget your own lunch. Your needs belong on the day's list too."
+    },
+    {
+      "id": "KDL-EDITORIAL51-006",
+      "theme": "a_forgotten_name",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Forgetting a name at a gathering can feel embarrassing long after the moment passes. A simple introduction again is often kinder than spending the evening hiding from the conversation."
+    },
+    {
+      "id": "KDL-EDITORIAL51-007",
+      "theme": "first_meal_alone",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first meal at a table that used to hold two can feel unusually quiet. You may set the table differently tonight; there is no correct arrangement for missing someone."
+    },
+    {
+      "id": "KDL-EDITORIAL51-008",
+      "theme": "slow_internet_work",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "When a connection drops during work, the lost minutes can feel like a personal failure. The interruption belongs to the connection, not to your worth or effort."
+    },
+    {
+      "id": "KDL-EDITORIAL51-009",
+      "theme": "returning_a_borrowed_item",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Returning something borrowed later than promised may feel awkward. An honest apology and a clear plan can be more useful than a long explanation made from embarrassment."
+    },
+    {
+      "id": "KDL-EDITORIAL51-010",
+      "theme": "hearing_difficult_news",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "After difficult news, ordinary errands may seem strangely unreal. It is reasonable to write down the one thing that cannot wait and leave the rest for another day."
+    },
+    {
+      "id": "KDL-EDITORIAL51-011",
+      "theme": "language_practice",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Searching for a word in a language you are learning can make a conversation feel slow. The pause is part of communicating, not proof that your voice does not belong there."
+    },
+    {
+      "id": "KDL-EDITORIAL51-012",
+      "theme": "first_rain_after_repairs",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "The first rain after a roof repair can bring back the worry of the last leak. You can check the ceiling once and give yourself permission to enjoy the sound of rain as well."
+    },
+    {
+      "id": "KDL-EDITORIAL51-013",
+      "theme": "shared_grief_different_paces",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Two people can miss the same person in very different ways. One may want to talk while the other washes dishes; neither response has to become a contest over love."
+    },
+    {
+      "id": "KDL-EDITORIAL51-014",
+      "theme": "job_application_silence",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Refreshing an application portal may feel like doing something when there is nothing new to do. You can choose a time to check again and give the hours between back to yourself."
+    },
+    {
+      "id": "KDL-EDITORIAL51-015",
+      "theme": "small_accessibility_request",
+      "audience": "all",
+      "tone": "warm-grounded",
+      "status": "editorial-review",
+      "text": "Asking someone to move a chair so you can pass may draw attention you did not want. Making room is an ordinary courtesy; you do not need to turn the request into an apology."
+    }
+  ]
+}
