@@ -15,7 +15,7 @@ const annualRenewal=period({plan:'annual',paidAt:'2027-11-22T10:00:00.000Z',prev
 assert.equal(annualRenewal.periodEnd,'2028-11-22T10:00:00.000Z');
 const nowMs=Date.parse('2026-11-22T10:00:00.000Z');
 const order={environment:'live',status:'pending',plan:'monthly',usdMinor:899,zarMinor:16500,settlementCurrency:'ZAR',reference:'kin_live_test_12345',quoteExpiresAtMs:nowMs+600000};
-const merchant={merchantId:'10000100',merchantKey:'merchant_key_12345',passphrase:'test_passphrase',returnUrl:'https://kindelora.pages.dev/plus-account.html?payment=return',cancelUrl:'https://kindelora.pages.dev/plus-account.html?payment=cancel',notifyUrl:'https://kindelora.pages.dev/api/plus/payfast-live-itn'};
+const merchant={merchantId:'10000100',merchantKey:'merchant_key_12345',passphrase:'test_passphrase',returnUrl:'https://kindelora.pages.dev/plus-account.html?payment=live-return',cancelUrl:'https://kindelora.pages.dev/plus-account.html?payment=live-cancel',notifyUrl:'https://kindelora.pages.dev/api/plus/payfast-live-itn'};
 const form=redirect({order,...merchant,recurringApproved:true,nowMs});
 assert.equal(form.ok,true);assert.equal(form.fields.subscription_type,'1');
 assert.equal(form.fields.frequency,'3');assert.equal(form.fields.cycles,'0');

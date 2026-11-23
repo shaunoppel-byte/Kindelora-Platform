@@ -2,7 +2,7 @@ import assert from 'node:assert/strict';
 import {buildPayFastLiveRedirect as build} from '../functions/_lib/payfast-live-redirect.js';
 const nowMs=Date.parse('2026-11-22T10:00:00Z');
 const order={environment:'live',status:'pending',plan:'monthly',usdMinor:899,zarMinor:16500,settlementCurrency:'ZAR',reference:'kin_live_12345678',quoteExpiresAtMs:nowMs+600000};
-const merchant={merchantId:'10000100',merchantKey:'merchant_key_12345',passphrase:'secret_passphrase',returnUrl:'https://kindelora.pages.dev/plus-account.html?payment=return',cancelUrl:'https://kindelora.pages.dev/plus-account.html?payment=cancel',notifyUrl:'https://kindelora.pages.dev/api/plus/payfast-live-itn'};
+const merchant={merchantId:'10000100',merchantKey:'merchant_key_12345',passphrase:'secret_passphrase',returnUrl:'https://kindelora.pages.dev/plus-account.html?payment=live-return',cancelUrl:'https://kindelora.pages.dev/plus-account.html?payment=live-cancel',notifyUrl:'https://kindelora.pages.dev/api/plus/payfast-live-itn'};
 const args={order,...merchant,recurringApproved:true,nowMs};
 let r=build(args);assert.equal(r.ok,true);assert.equal(r.action,'https://www.payfast.co.za/eng/process');assert.equal(r.fields.amount,'165.00');assert.equal(r.fields.frequency,'3');assert.equal(r.fields.recurring_amount,'165.00');assert.match(r.fields.signature,/^[a-f0-9]{32}$/);assert.equal(r.authorizesPayment,false);
 r=build({...args,order:{...order,plan:'annual',usdMinor:8999}});assert.equal(r.ok,true);assert.equal(r.fields.frequency,'6');
