@@ -47,10 +47,13 @@ export function prepareAtomicPayFastRenewal({db,verifiedRenewal,paidAt}={}){
      AND previous_period_end=? AND new_period_end=? AND status='committed')`)
    .bind(period.periodEnd,r.subscriptionId,r.customerId,r.previousPeriodEnd,
     r.providerTransactionId,r.subscriptionId,r.previousPeriodEnd,period.periodEnd),
-
+  // D1 batch rollback guard: a zero-row or multi-row UPDATE violates CHECK.
+  // A successful guard leaves no row behind, allowing future renewals.
+  db.prepare('INSERT INTO plus_payfast_renewal_atomic_guard (singleton,expected_changes) VALUES (1,changes())'),
+  db.prepare('DELETE FROM plus_payfast_renewal_atomic_guard WHERE singleton=1')
  ];
- // No rollback guard exists yet: these are design-only statements and must not execute.
- return {ready:false,reason:'requires_d1_atomic_guard_and_d1_tests',
+ // Remains design-only until staging D1 transaction semantics and provider identity are verified.
+ return {ready:false,reason:'requires_staging_d1_atomicity_and_provider_identity_tests',
   statements:[],proposedStatements:statements,periodEnd:period.periodEnd,
   execute:false,grantEntitlement:false};
 }
