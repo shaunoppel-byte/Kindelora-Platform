@@ -55,8 +55,8 @@ jobs:
           # Previous step verified staging UUID and name against Cloudflare API.
           # This command is explicitly remote, uses the isolated staging config,
           # and is restricted to the staging database name.
-          npx --yes wrangler@4 d1 execute kindelora-payfast-d1-staging --remote \\
-            --config .staging-worker/wrangler-test.toml \\
+          npx --yes wrangler@4 d1 execute kindelora-payfast-d1-staging --remote \
+            --config .staging-worker/wrangler-test.toml \
             --file staging/migrations/20261123_issue806_payment_reconciliations.sql
       - name: Run staging-only D1 batch test in remote preview
         id: remote_d1_test
