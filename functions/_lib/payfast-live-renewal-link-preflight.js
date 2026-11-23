@@ -49,7 +49,7 @@ export async function verifyPersistedPayFastRenewalLink({
   return {ready:true,reason:'persisted_recurring_identity_matches',
    grantEntitlement:false,execute:false,
    renewal:Object.freeze({orderId:merchantReference,customerId,subscriptionId,
-    providerTransactionId,plan,amountMinor:paidZarMinor,
+    providerTransactionId,providerSubscriptionToken,plan,amountMinor:paidZarMinor,
     previousPeriodEnd:subscription.current_period_end})};
  }catch{return deny('renewal_database_unavailable')}
 }
