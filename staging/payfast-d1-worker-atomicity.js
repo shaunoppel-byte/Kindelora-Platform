@@ -1,6 +1,7 @@
 // Issue #806: isolated D1 batch test harness. Never import into production routes.
 // Only a separately deployed, staging-bound Worker may call runStagingAtomicity.
 import {prepareAtomicPayFastRenewal} from '../functions/_lib/payfast-live-renewal-atomic-design.js';
+import {executeIsolatedPayFastRenewalStaging} from '../functions/_lib/payfast-renewal-isolated-staging-executor.js';
 const sql=(db,s,...args)=>db.prepare(s).bind(...args);
 // Worker global scope must not generate random values (Cloudflare error 10021).
 const period='2026-12-22T10:00:00.000Z';
@@ -34,15 +35,17 @@ export async function runStagingAtomicity(db){
   // Submit the same authenticated synthetic event concurrently to the real D1 binding.
   // Exactly one batch must commit, even when requests race.
   const outcomes=await Promise.allSettled([
-   db.batch(plan.proposedStatements),db.batch(plan.proposedStatements)
+   executeIsolatedPayFastRenewalStaging({db,verifiedRenewal:{ready:true,execute:false,grantEntitlement:false,renewal:renewal(ids)},paidAt:period,stagingOnly:true}),
+   executeIsolatedPayFastRenewalStaging({db,verifiedRenewal:{ready:true,execute:false,grantEntitlement:false,renewal:renewal(ids)},paidAt:period,stagingOnly:true})
   ]);
-  const successes=outcomes.filter(x=>x.status==='fulfilled').length;
-  const failures=outcomes.filter(x=>x.status==='rejected').length;
+  const successes=outcomes.filter(x=>x.status==='fulfilled'&&x.value.committed===true).length;
+  const failures=outcomes.filter(x=>x.status==='fulfilled'&&x.value.committed===false).length;
   check(successes===1&&failures===1,'concurrent duplicate: exactly one batch may commit');
   const committed=await state(db,ids);
   check(committed.period==='2027-01-22T10:00:00.000Z'&&committed.events===1,'concurrent renewal commits once');
   let replayRejected=false;
-  try{await db.batch(plan.proposedStatements);}catch{replayRejected=true;}
+  const replay=await executeIsolatedPayFastRenewalStaging({db,verifiedRenewal:{ready:true,execute:false,grantEntitlement:false,renewal:renewal(ids)},paidAt:period,stagingOnly:true});
+  replayRejected=replay.committed===false;
   check(replayRejected,'duplicate transaction must fail');
   check(JSON.stringify(await state(db,ids))===JSON.stringify(committed),'replay must not change state');
   // Negative-path atomic rollback: a mismatched provider token must not
