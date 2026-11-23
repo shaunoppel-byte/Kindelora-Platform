@@ -18,7 +18,7 @@ export async function onRequestPost({request,env}={}){
  let raw;try{raw=await request.text()}catch{return reply(400,'invalid_body')}
  if(!raw||new TextEncoder().encode(raw).byteLength>16384)return reply(400,'invalid_body');
  // A fresh server-generated ID; renewals use the existing persisted ID.
- const schema=await verifyLivePlusD1Schema({db:env.DB});
+ const schema=await verifyLivePlusD1Schema({db:env.DB,requireRecurring:env.PAYFAST_LIVE_RENEWAL_ITN_ENABLED==='true'||env.PAYFAST_LIVE_INITIAL_RECURRING_LINK_ENABLED==='true'});
  if(!schema.ready)return reply(503,'live_d1_schema_unavailable');
  // Renewal path is explicitly server-gated. The renewal pipeline independently
  // authenticates the ITN and verifies the persisted recurring link; no browser
