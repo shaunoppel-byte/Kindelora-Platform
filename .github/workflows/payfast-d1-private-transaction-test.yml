@@ -7,6 +7,7 @@ on:
       - 'staging/payfast-d1-worker-atomicity.js'
       - 'staging/payfast-d1-worker-test-entry.js'
       - 'functions/_lib/payfast-live-renewal-atomic-design.js'
+      - 'functions/_lib/payfast-renewal-isolated-staging-executor.js'
       - 'scripts/prepare-payfast-d1-private-test.py'
       - '.github/workflows/payfast-d1-private-transaction-test.yml'
   workflow_dispatch:
