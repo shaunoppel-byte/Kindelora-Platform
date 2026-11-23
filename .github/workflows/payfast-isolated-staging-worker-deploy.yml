@@ -1,0 +1,42 @@
+name: PayFast isolated staging Worker deployment
+
+on:
+  workflow_dispatch:
+    inputs:
+      confirm_staging_only:
+        description: 'Type STAGING_ONLY to deploy a non-routed, non-charging Worker'
+        required: true
+        type: string
+
+permissions:
+  contents: read
+
+concurrency:
+  group: payfast-issue806-staging-worker
+  cancel-in-progress: false
+
+jobs:
+  isolated-worker:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: payfast-d1-staging
+    env:
+      CONFIRM_STAGING_ONLY: ${{ inputs.confirm_staging_only }}
+      CLOUDFLARE_API_TOKEN: ${{ secrets.KINDELORA_D1_STAGING_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.KINDELORA_D1_STAGING_ACCOUNT_ID }}
+      STAGING_DATABASE_ID: ${{ vars.KINDELORA_D1_STAGING_DATABASE_ID }}
+      PRODUCTION_DATABASE_ID: ${{ vars.KINDELORA_D1_PRODUCTION_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify staging D1 identity and generate non-routed Worker config
+        run: python3 scripts/prepare-payfast-staging-worker.py
+      - name: Deploy isolated Worker only
+        run: npx --yes wrangler@4 deploy --config .staging-worker/wrangler.toml
+      - name: Report deployment boundary
+        if: success()
+        run: |
+          echo '## Issue #806 — isolated Worker deployment' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Dedicated staging-only Worker deployed, with no public route' >> "$GITHUB_STEP_SUMMARY"
+          echo '- D1 staging identity checked before deployment' >> "$GITHUB_STEP_SUMMARY"
+          echo '- D1 renewal/replay/rollback/concurrency tests: NOT YET EXECUTED' >> "$GITHUB_STEP_SUMMARY"
+          echo '- Production charging and registration: UNCHANGED' >> "$GITHUB_STEP_SUMMARY"
