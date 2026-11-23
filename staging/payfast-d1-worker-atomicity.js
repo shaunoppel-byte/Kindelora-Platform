@@ -60,6 +60,33 @@ export async function runStagingAtomicity(db){
   check(mismatchRejected,'wrong recurring token must roll back');
   check(JSON.stringify(await state(db,ids))===JSON.stringify(negativeBefore),
    'wrong recurring token must not change entitlement or ledger');
-  return {status:'PASS',tests:['isolated fixture','concurrent duplicate: one commit one rejection','single atomic commit','replay rejected','replay no state change','wrong recurring token rollback'],fixturePrefix:'stg806_',productionCharging:false};
+  // Additional independently isolated rejection cases. Restore every mutation
+  // before moving to the next case; never touch records outside this fixture.
+  const negativeCases=[
+   {name:'original order pending',set:"UPDATE plus_orders SET status='pending' WHERE id=?",restore:"UPDATE plus_orders SET status='paid' WHERE id=?",target:ids.order},
+   {name:'subscription cancelled',set:"UPDATE plus_subscriptions SET status='cancelled' WHERE id=?",restore:"UPDATE plus_subscriptions SET status='active' WHERE id=?",target:ids.subscription},
+   {name:'wrong settlement amount',set:"UPDATE plus_payfast_recurring_links SET expected_zar_minor=16501 WHERE initial_order_id=?",restore:"UPDATE plus_payfast_recurring_links SET expected_zar_minor=16500 WHERE initial_order_id=?",target:ids.order},
+   {name:'changed previous period',set:"UPDATE plus_subscriptions SET current_period_end='2027-01-23T10:00:00.000Z' WHERE id=?",restore:"UPDATE plus_subscriptions SET current_period_end='2027-01-22T10:00:00.000Z' WHERE id=?",target:ids.subscription}
+  ];
+  for(const [i,scenario] of negativeCases.entries()){
+   await sql(db,scenario.set,scenario.target).run();
+   try{
+    const beforeFailure=await state(db,ids);
+    const candidate=prepareAtomicPayFastRenewal({db,verifiedRenewal:{
+     ready:true,execute:false,grantEntitlement:false,
+     renewal:{...renewal(ids),providerTransactionId:id+'_negative_'+i,
+      previousPeriodEnd:committed.period}
+    },paidAt:committed.period});
+    check(candidate?.proposedStatements?.length===6,scenario.name+' composer');
+    let rejected=false;
+    try{await db.batch(candidate.proposedStatements);}catch{rejected=true;}
+    check(rejected,scenario.name+' must reject');
+    check(JSON.stringify(await state(db,ids))===JSON.stringify(beforeFailure),
+     scenario.name+' must leave ledger and entitlement unchanged');
+   }finally{await sql(db,scenario.restore,scenario.target).run();}
+  }
+  check(JSON.stringify(await state(db,ids))===JSON.stringify(committed),
+   'all negative scenarios must restore original fixture state');
+  return {status:'PASS',tests:['isolated fixture','concurrent duplicate: one commit one rejection','single atomic commit','replay rejected','replay no state change','wrong recurring token rollback','four additional D1 rollback cases'],fixturePrefix:'stg806_',productionCharging:false};
  }finally{await cleanup();}
 }
