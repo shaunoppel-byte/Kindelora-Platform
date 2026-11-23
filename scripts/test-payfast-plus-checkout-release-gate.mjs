@@ -6,6 +6,6 @@ for(const env of [undefined,{}, {KINDELORA_PLUS_CHECKOUT_RELEASE_APPROVED:'false
  assert.equal(response.status,503);
  assert.equal((await response.json()).error,'checkout_unavailable');
 }
-const response=await onRequestGet();
+// Even an explicitly approved release must fail closed when the independent\n// authenticated checkout and PayFast readiness gates are not satisfied.\nfor(const env of [\n {KINDELORA_PLUS_CHECKOUT_RELEASE_APPROVED:'true'},\n {KINDELORA_PLUS_CHECKOUT_RELEASE_APPROVED:'true',PAYFAST_LIVE_CHECKOUT_ENABLED:'true'},\n {KINDELORA_PLUS_CHECKOUT_RELEASE_APPROVED:'true',PAYFAST_LIVE_CHECKOUT_ENABLED:'true',PAYFAST_LIVE_ITN_ENABLED:'true'}\n]){\n const response=await onRequestPost({env});\n assert.equal(response.status,503,'release approval alone must never enable charging');\n}\nconst response=await onRequestGet();
 assert.equal(response.status,503);
 console.log('PASS: PLUS checkout requires explicit release approval and GET remains disabled');
