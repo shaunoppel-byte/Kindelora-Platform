@@ -5,6 +5,10 @@ on:
     branches: [main]
     paths:
       - 'staging/payfast-d1-worker-atomicity.js'
+      - 'staging/payfast-d1-initial-recurring-atomicity.js'
+      - 'functions/_lib/payfast-initial-recurring-isolated-staging-executor.js'
+      - 'functions/_lib/payfast-live-recurring-link-atomic-batch.js'
+      - 'functions/_lib/payfast-live-recurring-link-atomic-plan.js'
       - 'staging/payfast-d1-worker-test-entry.js'
       - 'functions/_lib/payfast-live-renewal-atomic-design.js'
       - 'functions/_lib/payfast-renewal-isolated-staging-executor.js'
@@ -74,7 +78,10 @@ jobs:
             'wrong recurring token rollback',
             'four additional D1 rollback cases',
             'second billing cycle extends next month once',
-            'second cycle replay rejected'
+            'second cycle replay rejected',
+            'initial recurring staging gate no mutation',
+            'initial recurring five-statement atomic commit',
+            'initial recurring replay rollback'
           }
           if result.get('status')!='PASS':raise SystemExit('D1 staging transaction test failed')
           if result.get('productionCharging') is not False:raise SystemExit('Production charging isolation not proven')
