@@ -3,6 +3,7 @@
 // Never changes the existing sandbox callback or registration workflow.
 import {verifyLivePlusD1Schema} from '../../_lib/payfast-live-d1-schema-preflight.js';
 import {processAuthenticatedLivePlusPayment} from '../../_lib/payfast-live-transaction-pipeline.js';
+import {processAuthenticatedLivePayFastRenewal} from '../../_lib/payfast-live-renewal-transaction-pipeline.js';
 const reply=(status,reason)=>new Response(JSON.stringify({accepted:status===200,reason,grantEntitlement:false}),{status,headers:{'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff'}});
 export async function onRequestPost({request,env}={}){
  if(!request||!env||env.PAYFAST_LIVE_ITN_ENABLED!=='true')return reply(503,'live_itn_disabled');
@@ -19,6 +20,29 @@ export async function onRequestPost({request,env}={}){
  // A fresh server-generated ID; renewals use the existing persisted ID.
  const schema=await verifyLivePlusD1Schema({db:env.DB});
  if(!schema.ready)return reply(503,'live_d1_schema_unavailable');
+ // Renewal path is explicitly server-gated. The renewal pipeline independently
+ // authenticates the ITN and verifies the persisted recurring link; no browser
+ // or raw ITN field can select a customer, plan or subscription identity.
+ // A paid original order is required to select renewal, never a pending order.
+ let renewal=false;
+ if(env.PAYFAST_LIVE_RENEWAL_ITN_ENABLED==='true'){
+  try{
+   const reference=new URLSearchParams(raw).get('m_payment_id');
+   if(reference&&/^[A-Za-z0-9_-]{8,128}$/.test(reference)){
+    const order=await env.DB.prepare("SELECT status FROM plus_orders WHERE id=? AND brand='KIN' LIMIT 1").bind(reference).first();
+    renewal=order?.status==='paid';
+   }
+  }catch{return reply(503,'renewal_identity_lookup_unavailable')}
+ }
+ if(renewal){
+  const result=await processAuthenticatedLivePayFastRenewal({db:env.DB,request,raw,
+   merchantId:env.PAYFAST_LIVE_MERCHANT_ID,passphrase:env.PAYFAST_LIVE_PASSPHRASE,
+   allowedCidrs:env.PAYFAST_LIVE_ALLOWED_CIDRS});
+  if(result.committed===true)return reply(200,'verified_renewal_recorded');
+  if(['renewal_transaction_failed','transaction_not_committed'].includes(result.reason))
+   return reply(503,'renewal_recording_unavailable');
+  return reply(403,'renewal_notification_rejected');
+ }
  const subscriptionId='sub_'+crypto.randomUUID().replaceAll('-','');
  const result=await processAuthenticatedLivePlusPayment({db:env.DB,request,raw,
   merchantId:env.PAYFAST_LIVE_MERCHANT_ID,passphrase:env.PAYFAST_LIVE_PASSPHRASE,
