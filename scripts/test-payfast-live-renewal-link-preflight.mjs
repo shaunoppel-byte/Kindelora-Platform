@@ -12,10 +12,11 @@ const link={
 };
 const order={id:args.merchantReference,status:'paid',customer_id:args.customerId,amount_minor:16500,currency:'ZAR'};
 const subscription={id:args.subscriptionId,customer_id:args.customerId,status:'active',current_period_end:'2026-12-22T10:00:00.000Z'};
-function fakeDb({linkRow=link,prior=null,orderRow=order,subscriptionRow=subscription}={}){
+function fakeDb({linkRow=link,prior=null,initialEvent=null,orderRow=order,subscriptionRow=subscription}={}){
  return {prepare(sql){return {bind(){return {async first(){
   if(sql.includes('FROM plus_payfast_recurring_links'))return linkRow;
   if(sql.includes('FROM plus_payfast_renewal_events'))return prior;
+  if(sql.includes('FROM plus_payment_events'))return initialEvent;
   if(sql.includes('FROM plus_orders'))return orderRow;
   if(sql.includes('FROM plus_subscriptions'))return subscriptionRow;
   throw Error('unexpected SQL');
@@ -37,6 +38,7 @@ for(const [label,changes] of [
  assert.equal(result.ready,false,label);
 }
 assert.equal((await verify({...args,db:fakeDb({prior:{provider_transaction_id:args.providerTransactionId}})})).ready,false);
+assert.equal((await verify({...args,db:fakeDb({initialEvent:{id:'initial_event_12345678'}})})).ready,false);
 assert.equal((await verify({...args,db:fakeDb({orderRow:{...order,status:'pending'}})})).ready,false);
 assert.equal((await verify({...args,db:fakeDb({subscriptionRow:{...subscription,status:'cancelled'}})})).ready,false);
 assert.equal((await verify({...args,db:fakeDb({linkRow:{...link,provider_subscription_token:null}})})).ready,false);
