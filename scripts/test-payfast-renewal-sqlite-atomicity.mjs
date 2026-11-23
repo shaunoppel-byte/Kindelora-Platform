@@ -65,7 +65,9 @@ for(const [label,modify] of [
  ['original order pending',db=>db.exec("UPDATE plus_orders SET status='pending'")],
  ['subscription cancelled',db=>db.exec("UPDATE plus_subscriptions SET status='cancelled'")],
  ['changed period',db=>db.exec("UPDATE plus_subscriptions SET current_period_end='2026-12-23T10:00:00.000Z'")],
- ['wrong settlement amount',db=>db.exec('UPDATE plus_payfast_recurring_links SET expected_zar_minor=999')]
+ ['wrong settlement amount',db=>db.exec('UPDATE plus_payfast_recurring_links SET expected_zar_minor=999')],
+ ['wrong provider subscription token',db=>db.exec("UPDATE plus_payfast_recurring_links SET provider_subscription_token='different_token_12345678'")],
+ ['provider reference used by initial payment',db=>db.prepare('INSERT INTO plus_payment_events(id,order_id,provider,provider_event_reference,event_type,verified_at) VALUES (?,?,?,?,?,?)').run('initial_event_12345678',ids.orderId,'PayFast',ids.providerTransactionId,'COMPLETE',paidAt)]
 ]){
  const db=fixture();
  modify(db);
@@ -74,4 +76,4 @@ for(const [label,modify] of [
  assert.deepEqual(state(db),before,label+' must roll back without ledger or entitlement changes');
  db.close();
 }
-console.log('PASS: SQLite atomic renewal, replay and five rollback scenarios (staging D1 verification still required)');
+console.log('PASS: SQLite atomic renewal, replay and seven rollback scenarios (staging D1 verification still required)');
