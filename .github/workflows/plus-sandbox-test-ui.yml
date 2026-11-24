@@ -12,4 +12,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
-      - run: node --test tests/plus-sandbox-test-ui.test.mjs
+      - run: node --experimental-default-type=module --test tests/plus-sandbox-test-ui.test.mjs tests/plus-sandbox-isolation.test.mjs
