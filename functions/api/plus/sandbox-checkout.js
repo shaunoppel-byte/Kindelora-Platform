@@ -12,7 +12,8 @@ export async function onRequestPost({request,env}={}){
   if(env?.PAYFAST_SANDBOX_CHECKOUT_ENABLED!=='true')console.warn('sandbox_checkout_preflight sandbox_opt_in_missing');
   return deny(503,'sandbox_checkout_disabled');
  }
- if(env.PAYFAST_SANDBOX_ISOLATED_DB_ENABLED==='true'&&(!env.PAYFAST_SANDBOX_DB||env.PAYFAST_SANDBOX_DB===env.DB))return deny(503,'sandbox_database_unavailable');
+ // Sandbox orders must never fall back to the production member/order D1.
+ if(env.PAYFAST_SANDBOX_ISOLATED_DB_ENABLED!=='true'||!env.PAYFAST_SANDBOX_DB||env.PAYFAST_SANDBOX_DB===env.DB)return deny(503,'sandbox_database_unavailable');
  if(!originOK(request))return deny(403,'invalid_origin');
  if(!(request.headers.get('content-type')||'').startsWith('application/json'))return deny(415,'json_required');
  if(Number(request.headers.get('content-length')||0)>1024)return deny(413,'body_too_large');
@@ -33,10 +34,9 @@ export async function onRequestPost({request,env}={}){
   const allowed=new Set(['fx_configuration_missing','fx_configuration_invalid','fx_provider_unavailable','fx_provider_timeout','fx_provider_dns_failure','fx_provider_tls_failure','fx_provider_network_failure','fx_provider_rejected','fx_response_invalid','fx_rate_stale','fx_amount_invalid']);
   return deny(503,allowed.has(fx.reason)?fx.reason:'trusted_fx_unavailable');
  }
- const isolated=env.PAYFAST_SANDBOX_ISOLATED_DB_ENABLED==='true';
- const db=isolated?env.PAYFAST_SANDBOX_DB:env.DB;
+ const db=env.PAYFAST_SANDBOX_DB;
  let verifiedMemberId=user.id;
- if(isolated){
+ {
   try{
    const encoder=new TextEncoder();
    const key=await crypto.subtle.importKey('raw',encoder.encode(env.MEMBER_AUTH_PEPPER),{name:'HMAC',hash:'SHA-256'},false,['sign']);
