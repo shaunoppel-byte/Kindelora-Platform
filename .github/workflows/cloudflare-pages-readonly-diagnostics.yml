@@ -8,6 +8,7 @@ permissions:
   contents: read
 jobs:
   inspect:
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'p0-sandbox-binding-verification')
     if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.head.ref == 'p0-post-893-readonly-gate-audit' || github.event.pull_request.head.ref == 'p0-fail-closed-sandbox-d1' || github.event.pull_request.head.ref == 'p0-sandbox-itn-live-tail-806'))
     runs-on: ubuntu-latest
     timeout-minutes: 3
@@ -43,6 +44,12 @@ jobs:
           print('Pages project access: PASS')
           prod=project.get('deployment_configs',{}).get('production',{})
           env=prod.get('env_vars') or {}
+          for name in ('PAYFAST_SANDBOX_CHECKOUT_ENABLED','MEMBER_AUTH_ENABLED','PAYFAST_SANDBOX_ISOLATED_DB_ENABLED','PAYFAST_SANDBOX_ITN_ENABLED'):
+              item=env.get(name)
+              status='missing' if item is None else ('enabled' if item.get('type')=='plain_text' and item.get('value')=='true' else ('not_enabled' if item.get('type')=='plain_text' else 'opaque'))
+              print(name+': '+status)
+          print('MEMBER_AUTH_PEPPER configured: '+str('MEMBER_AUTH_PEPPER' in env))
+          print('DB binding configured: '+str('DB' in (prod.get('d1_databases') or {})))
           names=(
               'PAYFAST_SANDBOX_CHECKOUT_ENABLED','PAYFAST_SANDBOX_ISOLATED_DB_ENABLED',
               'PAYFAST_SANDBOX_ITN_ENABLED','MEMBER_AUTH_ENABLED',
@@ -63,6 +70,10 @@ jobs:
           def dbid(name):
               item=bindings.get(name)
               return item.get('id') if isinstance(item,dict) else item
+          isolated=dbid('PAYFAST_SANDBOX_DB')
+          primary=dbid('DB')
+          print('Sandbox binding configured: '+str(bool(isolated)))
+          print('Sandbox and primary IDs distinct: '+str(bool(isolated and primary and isolated != primary)))
           primary=dbid('DB')
           sandbox=dbid('PAYFAST_SANDBOX_DB')
           print('Production DB binding configured: '+str(bool(primary)))
