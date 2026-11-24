@@ -20,6 +20,12 @@ export async function onRequestPost({request,env}={}){
  const result=await processProviderConfirmedSandboxItn({db,raw,contentType:type,request,
   expectedMerchantId:env.PAYFAST_SANDBOX_MERCHANT_ID,passphrase:env.PAYFAST_SANDBOX_PASSPHRASE,
   allowedCidrs:env.PAYFAST_SANDBOX_ALLOWED_CIDRS});
+ if(result.committed!==true){
+  // Keep the public response generic, but retain the safe failure code in
+  // Cloudflare invocation logs so Sandbox ITN failures can be diagnosed.
+  // Never log raw ITN values, provider tokens, signatures, or customer data.
+  console.warn('[payfast-sandbox-itn] notification rejected', {reason:result.reason||'unknown'});
+ }
  return result.committed===true?reply(200,'sandbox_ledger_committed'):reply(403,'notification_rejected');
 }
 export async function onRequestGet(){return reply(405,'method_not_allowed')}
