@@ -33,7 +33,7 @@ export async function processAuthenticatedLivePayFastRenewal({
   });
   if(!verified.ready)return deny('renewal_preflight_failed');
   const plan=prepareAtomicPayFastRenewal({db,verifiedRenewal:verified,paidAt:new Date(nowMs).toISOString()});
-  if(!plan||plan.execute!==false||plan.grantEntitlement!==false||
+  if(!plan||plan.ready!==true||plan.execute!==false||plan.grantEntitlement!==false||
    plan.proposedStatements?.length!==6||plan.statements?.length!==0)
    return deny('renewal_atomic_plan_unavailable');
   const results=await db.batch(plan.proposedStatements);
