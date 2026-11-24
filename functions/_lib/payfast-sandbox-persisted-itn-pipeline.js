@@ -27,6 +27,6 @@ export async function processVerifiedSandboxItnOffline({db,raw,contentType,expec
  const decision=evaluateSandboxItnOffline({raw,contentType,expectedMerchantId,
   expectedOrder:pending.order,...verification,quoteVerified:quote.verified,memberVerified:owner.verified,
   storedTransaction:replay.storedTransaction,storedOrder:replay.storedOrder});
- if(decision.stage!=='pending_atomic_commit')return deny('itn_rejected');
+ if(decision.stage!=='pending_atomic_commit')return deny(`itn_rejected_${decision.stage}`);
  return commitVerifiedSandboxLedger({db,decision,order:pending.order});
 }
