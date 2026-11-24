@@ -3,31 +3,34 @@ import {readFileSync} from 'node:fs';
 import vm from 'node:vm';
 const source=readFileSync(new URL('../plus-checkout.js',import.meta.url),'utf8');
 const wait=()=>new Promise(resolve=>setImmediate(resolve));
-async function scenario({status=503,payload,clickAnnual=false}={}){
+async function scenario({status=503,payload,clickAnnual=false,checkoutEnabled=false}={}){
  const elements=new Map(),posted=[];
  const element=id=>{if(!elements.has(id))elements.set(id,{id,textContent:'',disabled:false,attributes:{},listeners:{},setAttribute(k,v){this.attributes[k]=v},addEventListener(k,fn){this.listeners[k]=fn}});return elements.get(id)};
- const document={getElementById:element,body:{appendChild(node){posted.push(node)}},createElement(tag){return {tag,style:{},children:[],appendChild(node){this.children.push(node)},submit(){this.submitted=true}}}};
+ const document={documentElement:{dataset:{plusCheckoutEnabled:String(checkoutEnabled)}},getElementById:element,body:{appendChild(node){posted.push(node)}},createElement(tag){return {tag,style:{},children:[],appendChild(node){this.children.push(node)},submit(){this.submitted=true}}}};
  let requested;
  const fetch=async(url,opts)=>{requested={url,opts};return {ok:status===200,status,async json(){return payload}}};
  vm.runInNewContext(source,{document,fetch,Object,Set,JSON,Error});
  if(clickAnnual)element('annual').listeners.click();
  assert.equal(element('summary-price').textContent,clickAnnual?'$89.99 USD':'$8.99 USD');
  await element('checkout-submit').listeners.click();await wait();
- assert.equal(requested.url,'/api/plus/checkout');
- assert.equal(JSON.parse(requested.opts.body).plan,clickAnnual?'annual':'monthly');
- return {element,posted};
+ if(checkoutEnabled){
+  assert.equal(requested.url,'/api/plus/checkout');
+  assert.equal(JSON.parse(requested.opts.body).plan,clickAnnual?'annual':'monthly');
+ }else assert.equal(requested,undefined,'unavailable checkout must not make a payment request');
+ return {element,posted,button:element('checkout-submit')};
 }
-const unavailable=await scenario({status:503,clickAnnual:true});
-assert.match(unavailable.element('checkout-status').textContent,/temporarily unavailable/);
-assert.equal(unavailable.posted.length,0,'disabled checkout must never submit a payment form');
-const unauthenticated=await scenario({status:401});
+const unavailable=await scenario({clickAnnual:true});
+assert.equal(unavailable.button.disabled,true);
+assert.match(unavailable.element('checkout-status').textContent,/not available yet/);
+assert.equal(unavailable.posted.length,0,'unavailable checkout must never submit a payment form');
+const unauthenticated=await scenario({checkoutEnabled:true,status:401});
 assert.match(unauthenticated.element('checkout-status').textContent,/sign in/);
 assert.equal(unauthenticated.posted.length,0);
-const forged=await scenario({status:200,payload:{ok:true,checkoutReady:true,redirect:{action:'https://attacker.example/collect',method:'POST',fields:{merchant_id:'123',merchant_key:'key',m_payment_id:'kin_123',amount:'1.00',signature:'fake'}}}});
+const forged=await scenario({checkoutEnabled:true,status:200,payload:{ok:true,checkoutReady:true,redirect:{action:'https://attacker.example/collect',method:'POST',fields:{merchant_id:'123',merchant_key:'key',m_payment_id:'kin_123',amount:'1.00',signature:'fake'}}}});
 assert.equal(forged.posted.length,0,'untrusted payment redirect must never submit');
-const valid=await scenario({status:200,clickAnnual:true,payload:{ok:true,checkoutReady:true,redirect:{action:'https://www.payfast.co.za/eng/process',method:'POST',fields:{merchant_id:'12345678',merchant_key:'key12345',m_payment_id:'kin_reference',amount:'1500.00',signature:'synthetic_signature'}}}});
+const valid=await scenario({checkoutEnabled:true,status:200,clickAnnual:true,payload:{ok:true,checkoutReady:true,redirect:{action:'https://www.payfast.co.za/eng/process',method:'POST',fields:{merchant_id:'12345678',merchant_key:'key12345',m_payment_id:'kin_reference',amount:'1500.00',signature:'synthetic_signature'}}}});
 assert.equal(valid.posted.length,1);
 assert.equal(valid.posted[0].submitted,true);
 assert.equal(valid.posted[0].method,'POST');
 assert.equal(valid.posted[0].children.length,5);
-console.log('PASS: checkout monthly/annual UI, 401/503 fail-closed, malicious redirect rejection and synthetic PayFast handoff');
+console.log('PASS: unavailable checkout stays disabled; enabled path handles 401/503, rejects forged redirects and permits only a synthetic PayFast handoff');
