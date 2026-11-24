@@ -1,8 +1,7 @@
 // Server-only PayFast sandbox redirect contract. Never accepts browser-supplied price.
 // Must only be called AFTER authenticated order+quote are persisted and merchant
 // settings verified. No public route or live payment activation.
-import {md5} from './payfast-md5.js';
-const encode=v=>encodeURIComponent(v).replace(/%20/g,'+').replace(/[!'()*~]/g,ch=>'%'+ch.charCodeAt(0).toString(16).toUpperCase());
+import {signPayfastForm} from './payfast-form-signature.mjs';
 const validUrl=v=>{try{const u=new URL(v);return u.protocol==='https:'&&!u.username&&!u.password&&!u.hash&&u.hostname==='kindelora.pages.dev'}catch{return false}};
 const deny=reason=>({ok:false,reason,authorizesPayment:false});
 export function buildPayFastSandboxRedirect({order,merchantId,merchantKey,passphrase,returnUrl,cancelUrl,notifyUrl}={}){
@@ -17,10 +16,8 @@ export function buildPayFastSandboxRedirect({order,merchantId,merchantKey,passph
  m_payment_id:order.reference,amount:(order.zarMinor/100).toFixed(2),item_name:order.plan==='monthly'?'KINDELORA Plus Monthly':'KINDELORA Plus Annual',
  // PayFast recurring billing requires explicit subscription metadata; without
  // these fields checkout is a once-off payment, not a subscription.
- subscription_type:'1',frequency:order.plan==='monthly'?'3':'6',cycles:'0',
- recurring_amount:(order.zarMinor/100).toFixed(2)};
- const pairs=Object.entries(fields).map(([k,v])=>k+'='+encode(v.trim()));
- pairs.push('passphrase='+encode(passphrase));
+ subscription_type:'1',recurring_amount:(order.zarMinor/100).toFixed(2),
+ frequency:order.plan==='monthly'?'3':'6',cycles:'0'};
  return {ok:true,environment:'sandbox',action:'https://sandbox.payfast.co.za/eng/process',
-  method:'POST',fields:{...fields,signature:md5(pairs.join('&'))},authorizesPayment:false};
+  method:'POST',fields:{...fields,signature:signPayfastForm(fields,passphrase)},authorizesPayment:false};
 }

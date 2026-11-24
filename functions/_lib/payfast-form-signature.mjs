@@ -3,7 +3,9 @@
 // Build fields in PayFast's prescribed order, then append the passphrase last.
 // This module does not initiate a payment or expose the passphrase to clients.
 const ORDER=['merchant_id','merchant_key','return_url','cancel_url','notify_url','name_first','name_last','email_address','cell_number','m_payment_id','amount','item_name','item_description','custom_int1','custom_int2','custom_int3','custom_int4','custom_int5','custom_str1','custom_str2','custom_str3','custom_str4','custom_str5','email_confirmation','confirmation_address','payment_method','subscription_type','billing_date','recurring_amount','frequency','cycles'];
-const enc=value=>encodeURIComponent(String(value).trim()).replace(/%20/g,'+');
+// Match PHP urlencode used in PayFast's official form-signature examples,
+// including escaping punctuation that encodeURIComponent leaves unescaped.
+const enc=value=>encodeURIComponent(String(value).trim()).replace(/%20/g,'+').replace(/[!'()*~]/g,ch=>'%'+ch.charCodeAt(0).toString(16).toUpperCase());
 export function canonicalPayfastForm(fields,passphrase) {
   if (!fields||typeof fields!=='object'||Array.isArray(fields))throw new TypeError('invalid_fields');
   if(typeof passphrase!=='string'||!passphrase.trim())throw new TypeError('missing_passphrase');
