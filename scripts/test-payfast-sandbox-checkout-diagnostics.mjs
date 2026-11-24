@@ -10,7 +10,9 @@ let response=await onRequestPost({request,env:{}});
 assert.equal(response.status,503);
 assert.equal((await response.json()).reason,'sandbox_checkout_disabled');
 const db={prepare(sql){assert.match(sql,/member_sessions/);return {bind(value){assert.equal(value,tokenHash);return {first:async()=>({id:'member_12345678'})}}}}};
-const env={DB:db,MEMBER_AUTH_ENABLED:'true',MEMBER_AUTH_PEPPER:pepper,PAYFAST_SANDBOX_CHECKOUT_ENABLED:'true'};
+const sandboxDb={prepare(){throw Error('sandbox order persistence must not run before trusted FX quote')}};
+const env={DB:db,PAYFAST_SANDBOX_DB:sandboxDb,PAYFAST_SANDBOX_ISOLATED_DB_ENABLED:'true',
+ MEMBER_AUTH_ENABLED:'true',MEMBER_AUTH_PEPPER:pepper,PAYFAST_SANDBOX_CHECKOUT_ENABLED:'true'};
 response=await onRequestPost({request,env});
 assert.equal(response.status,503);
 assert.equal((await response.json()).reason,'fx_configuration_missing');
