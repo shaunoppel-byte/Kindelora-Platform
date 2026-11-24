@@ -1,0 +1,55 @@
+name: P0 Cloudflare Pages read-only diagnostics
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - '.github/workflows/cloudflare-pages-readonly-diagnostics.yml'
+permissions:
+  contents: read
+jobs:
+  inspect:
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'p0-cloudflare-readonly-diagnostics')
+    runs-on: ubuntu-latest
+    timeout-minutes: 3
+    steps:
+      - name: Inspect KINDELORA Pages configuration without exposing values
+        env:
+          CF_TOKEN: ${{ secrets.CLOUDFLARE_DIAGNOSTICS_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          CF_ACCOUNT_VAR: ${{ vars.CLOUDFLARE_ACCOUNT_ID }}
+        shell: bash
+        run: |
+          python3 - <<'PY'
+          import os, json, urllib.request, urllib.error, re, sys
+          token = os.environ.get('CF_TOKEN', '')
+          account = os.environ.get('CF_ACCOUNT') or os.environ.get('CF_ACCOUNT_VAR')
+          if not token:
+              sys.exit('Diagnostic token missing')
+          def get(path):
+              req = urllib.request.Request('https://api.cloudflare.com/client/v4'+path, headers={'Authorization':'Bearer '+token,'Accept':'application/json'})
+              try:
+                  with urllib.request.urlopen(req, timeout=20) as response:
+                      data=json.load(response)
+              except urllib.error.HTTPError as exc:
+                  sys.exit('Cloudflare API HTTP '+str(exc.code))
+              except Exception:
+                  sys.exit('Cloudflare API request failed')
+              if not data.get('success'):
+                  sys.exit('Cloudflare API returned unsuccessful response')
+              return data.get('result')
+          if not account or not re.fullmatch('[a-fA-F0-9]{32}',account):
+              sys.exit('Account ID missing or invalid; configure CLOUDFLARE_ACCOUNT_ID')
+          project=get('/accounts/'+account+'/pages/projects/kindelora')
+          print('Pages project access: PASS')
+          prod=project.get('deployment_configs',{}).get('production',{})
+          env=prod.get('env_vars') or {}
+          for name in ('PAYFAST_SANDBOX_CHECKOUT_ENABLED','MEMBER_AUTH_ENABLED'):
+              item=env.get(name)
+              status='missing' if item is None else ('enabled' if item.get('type')=='plain_text' and item.get('value')=='true' else ('not_enabled' if item.get('type')=='plain_text' else 'opaque'))
+              print(name+': '+status)
+          print('MEMBER_AUTH_PEPPER configured: '+str('MEMBER_AUTH_PEPPER' in env))
+          print('DB binding configured: '+str('DB' in (prod.get('d1_databases') or {})))
+          deployment=project.get('canonical_deployment') or {}
+          commit=(deployment.get('deployment_trigger') or {}).get('metadata',{}).get('commit_hash','')
+          print('Production commit: '+(commit if re.fullmatch('[a-fA-F0-9]{7,64}',commit) else 'unavailable'))
+          PY
