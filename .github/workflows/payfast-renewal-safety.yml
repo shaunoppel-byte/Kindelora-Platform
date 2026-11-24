@@ -64,6 +64,7 @@ jobs:
           node scripts/test-payfast-live-authenticated-itn.mjs
           node scripts/test-payfast-live-renewal-link-preflight.mjs
           node scripts/test-payfast-live-renewal-transaction-pipeline.mjs
+          node scripts/test-payfast-live-itn-renewal-unready-503.mjs
           node scripts/test-payfast-renewal-atomic-design.mjs
           node scripts/test-payfast-renewal-isolated-staging-executor.mjs
           node scripts/test-payfast-live-recurring-link-atomic-plan.mjs
