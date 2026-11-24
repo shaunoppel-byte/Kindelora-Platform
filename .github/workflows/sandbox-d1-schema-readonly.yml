@@ -1,0 +1,41 @@
+name: P0 isolated sandbox D1 schema verification
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/sandbox-d1-schema-readonly.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  schema:
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'p0-staging-schema-readonly')
+    runs-on: ubuntu-latest
+    environment: payfast-d1-staging
+    timeout-minutes: 5
+    steps:
+      - name: Read staging schema only
+        env:
+          CF_TOKEN: ${{ secrets.KINDELORA_D1_STAGING_API_TOKEN }}
+          CF_ACCOUNT: ${{ secrets.KINDELORA_D1_STAGING_ACCOUNT_ID }}
+        run: |
+          python3 - <<'PY'
+          import os,json,urllib.request,sys
+          base='https://api.cloudflare.com/client/v4/accounts/'+os.environ['CF_ACCOUNT']+'/d1/database/2a619e39-fd80-49f5-8a88-e42d90a965fd'
+          def request(path='',sql=None):
+              req=urllib.request.Request(base+path,data=json.dumps({'sql':sql}).encode() if sql else None,headers={'Authorization':'Bearer '+os.environ['CF_TOKEN'],'Content-Type':'application/json'})
+              with urllib.request.urlopen(req,timeout=25) as r: d=json.load(r)
+              if not d.get('success'): sys.exit('D1 API failed')
+              return d['result']
+          if request().get('name')!='kindelora-payfast-d1-staging': sys.exit('Unexpected database; abort')
+          rows=request('/query',"SELECT name,sql FROM sqlite_schema WHERE type='table' AND name LIKE 'payfast_sandbox_%'")[0]['results']
+          for row in rows: print(row['name'],row['sql'])
+          required={'payfast_sandbox_orders':{'order_reference','member_id','plan','usd_minor','zar_minor','fx_reference','status'},'payfast_sandbox_fx_quotes':{'quote_reference','order_reference','plan','usd_minor','zar_minor','settlement_currency','environment','source','expires_at_ms'}}
+          failed=False
+          for table,columns in required.items():
+              actual={r['name'] for r in request('/query','PRAGMA table_info('+table+')')[0]['results']}
+              missing=columns-actual
+              print(table+': '+('PASS' if not missing else 'MISSING '+','.join(sorted(missing))))
+              print('Foreign keys:',request('/query','PRAGMA foreign_key_list('+table+')')[0]['results'])
+              failed |= bool(missing)
+          if failed: sys.exit('Sandbox schema incomplete')
+          PY
