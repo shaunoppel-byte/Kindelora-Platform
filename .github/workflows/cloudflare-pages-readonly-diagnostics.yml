@@ -8,7 +8,7 @@ permissions:
   contents: read
 jobs:
   inspect:
-    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.head.ref == 'p0-post-893-readonly-gate-audit' || github.event.pull_request.head.ref == 'p0-fail-closed-sandbox-d1'))
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.head.ref == 'p0-post-893-readonly-gate-audit' || github.event.pull_request.head.ref == 'p0-fail-closed-sandbox-d1' || github.event.pull_request.head.ref == 'p0-sandbox-itn-live-tail-806'))
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
@@ -72,3 +72,62 @@ jobs:
           commit=(deployment.get('deployment_trigger') or {}).get('metadata',{}).get('commit_hash','')
           print('Production commit: '+(commit if re.fullmatch('[a-fA-F0-9]{7,64}',commit) else 'unavailable'))
           PY
+
+  sandbox-itn-live-tail:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'p0-sandbox-itn-live-tail-806'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_DIAGNOSTICS_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Tail only sanitized Sandbox ITN rejection logs
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -z "${CLOUDFLARE_API_TOKEN:-}" || -z "${CLOUDFLARE_ACCOUNT_ID:-}" ]]; then
+            echo "Cloudflare tail credentials unavailable"
+            exit 1
+          fi
+          set +e
+          timeout --foreground --signal=INT --kill-after=5s 180s \
+            npx --yes wrangler@4 pages deployment tail --project-name=kindelora --environment=production --search='[payfast-sandbox-itn]' --format=json --log-level=error 2>/dev/null \
+            | python3 -u -c '
+          import json, re, sys
+          marker = "[payfast-sandbox-itn] notification rejected"
+          def reasons(value):
+              if isinstance(value, dict):
+                  for key, item in value.items():
+                      if key == "reason" and isinstance(item, str) and re.fullmatch(r"[a-z0-9_]+", item):
+                          yield item
+                      yield from reasons(item)
+              elif isinstance(value, list):
+                  for item in value:
+                      yield from reasons(item)
+          seen = False
+          for line in sys.stdin:
+              try:
+                  event = json.loads(line)
+              except Exception:
+                  continue
+              if marker not in json.dumps(event, ensure_ascii=True):
+                  continue
+              safe = sorted(set(reasons(event)))
+              if safe:
+                  print("Sandbox callback rejection stage: " + ",".join(safe), flush=True)
+              else:
+                  print("Sanitized Sandbox ITN rejection observed; stage unavailable", flush=True)
+              seen = True
+          if not seen:
+              print("No matching rejection log arrived during the bounded tail.", flush=True)
+          '
+          tail_status=${PIPESTATUS[0]}
+          set -e
+          if [[ "$tail_status" -ne 0 && "$tail_status" -ne 124 && "$tail_status" -ne 130 ]]; then
+            echo "Cloudflare log tail failed; raw diagnostics suppressed."
+            exit 1
+          fi
