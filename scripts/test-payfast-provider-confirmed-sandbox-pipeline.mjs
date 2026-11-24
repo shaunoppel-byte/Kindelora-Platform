@@ -14,7 +14,7 @@ let dbCalls=0;
 const db={prepare(sql){dbCalls++;return {bind(){return {async first(){
  if(sql.includes('FROM payfast_sandbox_orders WHERE'))return {order_reference:'order_12345678',member_id:'member_12345678',plan:'monthly',usd_minor:899,zar_minor:17000,fx_reference:'quote_12345678',status:'pending'};
  if(sql.includes('FROM payfast_sandbox_fx_quotes WHERE'))return {quote_reference:'quote_12345678',order_reference:'order_12345678',plan:'monthly',usd_minor:899,zar_minor:17000,settlement_currency:'ZAR',environment:'sandbox',source:'server_verified',expires_at_ms:Date.now()+600000};
- if(sql.includes('FROM members WHERE'))return {id:'member_12345678',email_verified_at:'2026-11-21T00:00:00Z',disabled_at:null};
+ if(sql.includes('FROM members WHERE'))return {id:'member_12345678',email_normalized:'member_12345678@sandbox.invalid',disabled_at:'2026-11-24 12:00:00'};
  if(sql.includes('FROM payfast_sandbox_transactions'))return null;
  throw Error('unexpected query');
  }}}}},async batch(){return [{success:true,meta:{changes:1}},{success:true,meta:{changes:1}}]}};

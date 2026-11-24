@@ -5,7 +5,7 @@ const raw=new URLSearchParams({m_payment_id:reference,pf_payment_id:tx,payment_s
 const contentType='application/x-www-form-urlencoded';
 const verification={signatureVerified:true,serverVerified:true,sourceVerified:true,quoteVerified:true};
 const order={order_reference:reference,member_id:'member_12345678',plan:'monthly',usd_minor:899,zar_minor:17000,fx_reference:'quote_12345678',status:'pending'};
-function fakeDb({storedTx=null,storedOrder=null,orderRow=order,memberRow={id:order.member_id,email_verified_at:'2026-11-21T00:00:00Z',disabled_at:null},changes=1}={}){
+function fakeDb({storedTx=null,storedOrder=null,orderRow=order,memberRow={id:order.member_id,email_normalized:order.member_id+'@sandbox.invalid',disabled_at:'2026-11-24 12:00:00'},changes=1}={}){
  let writes=0;
  const db={prepare(sql){return {bind(...args){return {async first(){
  if(sql.includes('FROM payfast_sandbox_orders WHERE'))return orderRow;
@@ -27,8 +27,8 @@ for(const [options,override] of [
  [{storedTx:{provider_transaction_id:tx,order_reference:reference,paid_zar_minor:17000,status:'COMPLETE',plan:'monthly'},storedOrder:{provider_transaction_id:tx,order_reference:reference,paid_zar_minor:17000,status:'COMPLETE'}},{}],
  [{orderRow:{...order,status:'paid'}},{}],
  [{memberRow:null},{}],
- [{memberRow:{id:order.member_id,email_verified_at:null,disabled_at:null}},{}],
- [{memberRow:{id:order.member_id,email_verified_at:'yes',disabled_at:'disabled'}},{}],
+ [{memberRow:{id:order.member_id,email_normalized:order.member_id+'@sandbox.invalid',disabled_at:null}},{}],
+ [{memberRow:{id:order.member_id,email_normalized:'user@example.com',disabled_at:'disabled'}},{}],
  [{changes:0},{}]
 ]){
  state=fakeDb(options);r=await process({db:state.db,raw,contentType,expectedMerchantId:merchant,verification,...override});
