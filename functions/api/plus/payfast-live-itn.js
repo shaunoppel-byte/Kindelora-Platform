@@ -38,8 +38,9 @@ export async function onRequestPost({request,env}={}){
   const result=await processAuthenticatedLivePayFastRenewal({db:env.DB,request,raw,
    merchantId:env.PAYFAST_LIVE_MERCHANT_ID,passphrase:env.PAYFAST_LIVE_PASSPHRASE,
    allowedCidrs:env.PAYFAST_LIVE_ALLOWED_CIDRS});
-  if(result.committed===true)return reply(200,'verified_renewal_recorded');
-  if(['renewal_transaction_failed','transaction_not_committed'].includes(result.reason))
+  if(result.committed===true)return reply(200,result.duplicate===true?
+   'verified_renewal_duplicate_acknowledged':'verified_renewal_recorded');
+  if(['renewal_transaction_failed','transaction_not_committed','renewal_atomic_plan_unavailable'].includes(result.reason))
    return reply(503,'renewal_recording_unavailable');
   return reply(403,'renewal_notification_rejected');
  }

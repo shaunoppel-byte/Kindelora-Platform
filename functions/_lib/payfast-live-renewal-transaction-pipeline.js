@@ -1,6 +1,7 @@
 // Server-only renewal transaction pipeline. No public route or charging toggle.
 // Authenticates the raw PayFast ITN before reading persisted recurring identity.
-// Reuses the six-statement transaction proved in isolated D1 staging.
+// Uses the proposed six-statement batch only after readiness is verified.
+// Cloudflare D1 staging proof is still outstanding.
 import {authenticateLivePayFastItn} from './payfast-live-authenticated-itn.js';
 import {verifyPersistedPayFastRenewalLink} from './payfast-live-renewal-link-preflight.js';
 import {prepareAtomicPayFastRenewal} from './payfast-live-renewal-atomic-design.js';
@@ -31,9 +32,11 @@ export async function processAuthenticatedLivePayFastRenewal({
    providerSubscriptionToken:payment.providerSubscriptionToken,
    authenticatedPayment:payment
   });
+  if(verified.duplicate===true&&verified.grantEntitlement===false&&verified.execute===false)
+   return {committed:true,duplicate:true,reason:'authenticated_renewal_already_committed',grantEntitlement:false};
   if(!verified.ready)return deny('renewal_preflight_failed');
   const plan=prepareAtomicPayFastRenewal({db,verifiedRenewal:verified,paidAt:new Date(nowMs).toISOString()});
-  if(!plan||plan.execute!==false||plan.grantEntitlement!==false||
+  if(!plan||plan.ready!==true||plan.execute!==false||plan.grantEntitlement!==false||
    plan.proposedStatements?.length!==6||plan.statements?.length!==0)
    return deny('renewal_atomic_plan_unavailable');
   const results=await db.batch(plan.proposedStatements);

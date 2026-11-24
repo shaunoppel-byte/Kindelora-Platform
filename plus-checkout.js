@@ -3,12 +3,16 @@
  const plans={monthly:{name:'Monthly',price:'$8.99 USD',term:'Every month'},annual:{name:'Annual',price:'$89.99 USD',term:'Every year'}};
  const buttons={monthly:document.getElementById('monthly'),annual:document.getElementById('annual')};
  const submit=document.getElementById('checkout-submit'),status=document.getElementById('checkout-status');
+ const checkoutEnabled=document.documentElement?.dataset?.plusCheckoutEnabled==='true';
  let selected='monthly',busy=false;
  function choose(id){if(busy||!Object.hasOwn(plans,id))return;selected=id;for(const [key,button] of Object.entries(buttons))button.setAttribute('aria-pressed',String(key===id));const p=plans[id];for(const [field,value] of Object.entries({'summary-plan':p.name,'summary-price':p.price,'summary-term':p.term,'summary-total':p.price}))document.getElementById(field).textContent=value;}
  for(const [id,button] of Object.entries(buttons))button.addEventListener('click',()=>choose(id));
  function message(value){status.textContent=value;}
+ if(!checkoutEnabled){submit.disabled=true;message('KINDELORA Plus checkout is not available yet. No payment has been taken.');}
  submit.addEventListener('click',async()=>{
-  if(busy)return;busy=true;submit.disabled=true;message('Preparing your secure checkout…');
+  if(busy)return;
+  if(!checkoutEnabled){message('KINDELORA Plus checkout is not available yet. No payment has been taken.');return;}
+  busy=true;submit.disabled=true;message('Preparing your secure checkout…');
   try{
    const response=await fetch('/api/plus/checkout',{method:'POST',credentials:'same-origin',headers:{'content-type':'application/json'},body:JSON.stringify({plan:selected}),cache:'no-store'});
    if(response.status===401){message('Please sign in to your account before continuing.');return;}
@@ -22,7 +26,7 @@
    for(const [key,value] of Object.entries(redirect.fields)){if(typeof value!=='string')throw Error('Invalid payment field');const input=document.createElement('input');input.type='hidden';input.name=key;input.value=value;form.appendChild(input);}
    document.body.appendChild(form);message('Redirecting to PayFast for final payment review…');form.submit();return;
   }catch{message('Secure checkout could not be prepared. No payment has been taken. Please try again.');}
-  finally{busy=false;submit.disabled=false;}
+  finally{busy=false;submit.disabled=!checkoutEnabled;}
  });
  choose('monthly');
 })();

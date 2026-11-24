@@ -9,6 +9,7 @@ permissions:
 jobs:
   inspect:
     if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'p0-sandbox-binding-verification')
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.head.ref == 'p0-post-893-readonly-gate-audit' || github.event.pull_request.head.ref == 'p0-fail-closed-sandbox-d1' || github.event.pull_request.head.ref == 'p0-sandbox-itn-live-tail-806'))
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
@@ -49,6 +50,22 @@ jobs:
               print(name+': '+status)
           print('MEMBER_AUTH_PEPPER configured: '+str('MEMBER_AUTH_PEPPER' in env))
           print('DB binding configured: '+str('DB' in (prod.get('d1_databases') or {})))
+          names=(
+              'PAYFAST_SANDBOX_CHECKOUT_ENABLED','PAYFAST_SANDBOX_ISOLATED_DB_ENABLED',
+              'PAYFAST_SANDBOX_ITN_ENABLED','MEMBER_AUTH_ENABLED',
+              'KINDELORA_PLUS_CHECKOUT_RELEASE_APPROVED','PAYFAST_LIVE_CHECKOUT_ENABLED',
+              'PAYFAST_LIVE_ITN_ENABLED','PAYFAST_LIVE_RECURRING_VERIFIED',
+              'PAYFAST_LIVE_INITIAL_RECURRING_LINK_ENABLED','PAYFAST_LIVE_RENEWAL_ITN_ENABLED'
+          )
+          def status(item):
+              if item is None:
+                  return 'missing'
+              if item.get('type')!='plain_text':
+                  return 'opaque'
+              return 'enabled' if item.get('value')=='true' else 'not_enabled'
+          for name in names:
+              print(name+': '+status(env.get(name)))
+          print('MEMBER_AUTH_PEPPER configured: '+str('MEMBER_AUTH_PEPPER' in env))
           bindings=prod.get('d1_databases') or {}
           def dbid(name):
               item=bindings.get(name)
@@ -57,7 +74,71 @@ jobs:
           primary=dbid('DB')
           print('Sandbox binding configured: '+str(bool(isolated)))
           print('Sandbox and primary IDs distinct: '+str(bool(isolated and primary and isolated != primary)))
+          primary=dbid('DB')
+          sandbox=dbid('PAYFAST_SANDBOX_DB')
+          print('Production DB binding configured: '+str(bool(primary)))
+          print('Sandbox DB binding configured: '+str(bool(sandbox)))
+          print('Sandbox and production DB IDs distinct: '+str(bool(primary and sandbox and primary!=sandbox)))
           deployment=project.get('canonical_deployment') or {}
           commit=(deployment.get('deployment_trigger') or {}).get('metadata',{}).get('commit_hash','')
           print('Production commit: '+(commit if re.fullmatch('[a-fA-F0-9]{7,64}',commit) else 'unavailable'))
           PY
+
+  sandbox-itn-live-tail:
+    if: github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'p0-sandbox-itn-live-tail-806'
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_DIAGNOSTICS_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+    steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Tail only sanitized Sandbox ITN rejection logs
+        shell: bash
+        run: |
+          set -euo pipefail
+          if [[ -z "${CLOUDFLARE_API_TOKEN:-}" || -z "${CLOUDFLARE_ACCOUNT_ID:-}" ]]; then
+            echo "Cloudflare tail credentials unavailable"
+            exit 1
+          fi
+          set +e
+          timeout --foreground --signal=INT --kill-after=5s 180s \
+            npx --yes wrangler@4 pages deployment tail --project-name=kindelora --environment=production --search='[payfast-sandbox-itn]' --format=json --log-level=error 2>/dev/null \
+            | python3 -u -c '
+          import json, re, sys
+          marker = "[payfast-sandbox-itn] notification rejected"
+          def reasons(value):
+              if isinstance(value, dict):
+                  for key, item in value.items():
+                      if key == "reason" and isinstance(item, str) and re.fullmatch(r"[a-z0-9_]+", item):
+                          yield item
+                      yield from reasons(item)
+              elif isinstance(value, list):
+                  for item in value:
+                      yield from reasons(item)
+          seen = False
+          for line in sys.stdin:
+              try:
+                  event = json.loads(line)
+              except Exception:
+                  continue
+              if marker not in json.dumps(event, ensure_ascii=True):
+                  continue
+              safe = sorted(set(reasons(event)))
+              if safe:
+                  print("Sandbox callback rejection stage: " + ",".join(safe), flush=True)
+              else:
+                  print("Sanitized Sandbox ITN rejection observed; stage unavailable", flush=True)
+              seen = True
+          if not seen:
+              print("No matching rejection log arrived during the bounded tail.", flush=True)
+          '
+          tail_status=${PIPESTATUS[0]}
+          set -e
+          if [[ "$tail_status" -ne 0 && "$tail_status" -ne 124 && "$tail_status" -ne 130 ]]; then
+            echo "Cloudflare log tail failed; raw diagnostics suppressed."
+            exit 1
+          fi

@@ -9,7 +9,9 @@ const db={prepare(sql){return {bind(...args){return {async first(){
  sessionQueries++;assert.equal(args[0],tokenHash);
  return {id:'member_12345678',email_verified_at:'2026-11-20T00:00:00Z'};
  }}}}}};
-const env={MEMBER_AUTH_ENABLED:'true',MEMBER_AUTH_PEPPER:pepper,DB:db,PAYFAST_SANDBOX_CHECKOUT_ENABLED:'true'};
+const sandboxDb={prepare(){throw Error('no sandbox persistence expected before trusted FX quote')}};
+const env={MEMBER_AUTH_ENABLED:'true',MEMBER_AUTH_PEPPER:pepper,DB:db,PAYFAST_SANDBOX_DB:sandboxDb,
+ PAYFAST_SANDBOX_ISOLATED_DB_ENABLED:'true',PAYFAST_SANDBOX_CHECKOUT_ENABLED:'true'};
 const req=({origin='https://kindelora.pages.dev',cookie=true,body={plan:'monthly'},type='application/json',urlOverride=url}={})=>new Request(urlOverride,{method:'POST',headers:{origin,'content-type':type,...(cookie?{cookie:'kindelora_session='+token}:{})},body:typeof body==='string'?body:JSON.stringify(body)});
 const check=async(request,expected)=>{const response=await onRequestPost({request,env});assert.equal(response.status,expected);assert.equal((await response.json()).checkoutReady,false)};
 await check(req({origin:'https://evil.example'}),403);
@@ -25,9 +27,20 @@ assert.equal(missingOptIn.status,503);
 assert.equal((await missingOptIn.json()).reason,'sandbox_checkout_disabled');
 const disabled=await onRequestPost({request:req(),env:{...env,PAYFAST_SANDBOX_CHECKOUT_ENABLED:'false'}});
 assert.equal(disabled.status,503);
+assert.equal((await disabled.json()).reason,'sandbox_checkout_disabled');
+for(const broken of [
+ {...env,PAYFAST_SANDBOX_ISOLATED_DB_ENABLED:undefined},
+ {...env,PAYFAST_SANDBOX_ISOLATED_DB_ENABLED:'false'},
+ {...env,PAYFAST_SANDBOX_DB:undefined},
+ {...env,PAYFAST_SANDBOX_DB:db}
+]){
+ const response=await onRequestPost({request:req(),env:broken});
+ assert.equal(response.status,503);
+ assert.equal((await response.json()).reason,'sandbox_database_unavailable');
+}
 assert.equal((await onRequestGet()).status,405);
 assert.ok(sessionQueries>=5);
-console.log('PASS: checkout rejects cross-origin, anonymous, client price injection, invalid plan/body, wrong host, missing FX and disabled config');
+console.log('PASS: checkout rejects unsafe isolation, cross-origin, anonymous, client price injection, invalid plan/body, wrong host, missing FX and disabled config');
 const request=new Request('https://kindelora.pages.dev/api/plus/sandbox-checkout',{method:'POST',headers:{origin:'https://kindelora.pages.dev','content-type':'application/json'},body:JSON.stringify({plan:'monthly'})});
 let result=await onRequestPost({request,env:{}});assert.equal(result.status,503);
 result=await onRequestGet();assert.equal(result.status,405);
