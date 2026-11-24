@@ -11,6 +11,9 @@ const link={initial_order_id:input.merchantReference,subscription_id:input.subsc
 const order={id:input.merchantReference,status:'paid',customer_id:input.customerId,amount_minor:16500,currency:'ZAR'};
 const subscription={id:input.subscriptionId,customer_id:input.customerId,status:'active',
  current_period_end:'2026-12-22T10:00:00.000Z'};
+const authenticated=value=>({verified:true,environment:'live',paymentStatus:'COMPLETE',
+ providerTransactionId:value.providerTransactionId,merchantReference:value.merchantReference,
+ providerSubscriptionToken:value.providerSubscriptionToken,amountMinor:value.paidZarMinor});
 function readOnlyDb({linkRow=link,orderRow=order,subscriptionRow=subscription,prior=null}={}){
  const reads=[];
  return {reads,prepare(sql){
@@ -19,6 +22,7 @@ function readOnlyDb({linkRow=link,orderRow=order,subscriptionRow=subscription,pr
    reads.push({sql,params});
    if(sql.includes('FROM plus_payfast_recurring_links'))return linkRow;
    if(sql.includes('FROM plus_payfast_renewal_events'))return prior;
+   if(sql.includes('FROM plus_payment_events'))return null;
    if(sql.includes('FROM plus_orders'))return orderRow;
    if(sql.includes('FROM plus_subscriptions'))return subscriptionRow;
    throw Error('unknown query');
@@ -35,12 +39,16 @@ for(const [name,db,reason] of [
  ['cancelled subscription',readOnlyDb({subscriptionRow:{...subscription,status:'cancelled'}}),'subscription_not_renewable'],
  ['replayed provider transaction',readOnlyDb({prior:{provider_transaction_id:input.providerTransactionId}}),'renewal_reference_already_recorded']
 ]){
- const outcome=await verify({...input,db});
+ const outcome=await verify({...input,db,authenticatedPayment:authenticated(input)});
  assert.equal(outcome.ready,false,name);
  assert.equal(outcome.reason,reason,name);
  assert.equal(outcome.grantEntitlement,false,name);
  assert.ok(db.reads.length>0,name);
 }
+const unauthenticatedDb=readOnlyDb();
+const unauthenticated=await verify({...input,db:unauthenticatedDb});
+assert.equal(unauthenticated.reason,'provider_authentication_required');
+assert.equal(unauthenticatedDb.reads.length,0,'unverified provider facts must not query D1');
 for(const [name,changes] of [
  ['missing provider token',{providerSubscriptionToken:''}],
  ['fractional amount',{paidZarMinor:16500.1}],
@@ -48,7 +56,8 @@ for(const [name,changes] of [
  ['malformed reference',{merchantReference:'../../etc/passwd'}]
 ]){
  const db=readOnlyDb();
- const outcome=await verify({...input,...changes,db});
+ const candidate={...input,...changes};
+ const outcome=await verify({...candidate,db,authenticatedPayment:authenticated(candidate)});
  assert.equal(outcome.ready,false,name);
  assert.equal(outcome.reason,'invalid_renewal_identity',name);
  assert.equal(db.reads.length,0,name);
