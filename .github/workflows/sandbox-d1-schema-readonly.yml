@@ -8,12 +8,13 @@ permissions:
   contents: read
 jobs:
   schema:
-    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'p0-staging-schema-readonly')
+    if: (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'p0-staging-schema-migration-execute')
     runs-on: ubuntu-latest
     environment: payfast-d1-staging
     timeout-minutes: 5
     steps:
-      - name: Read staging schema only
+      - uses: actions/checkout@v4
+      - name: Apply reviewed staging-only schema and verify
         env:
           CF_TOKEN: ${{ secrets.KINDELORA_D1_STAGING_API_TOKEN }}
           CF_ACCOUNT: ${{ secrets.KINDELORA_D1_STAGING_ACCOUNT_ID }}
@@ -27,6 +28,11 @@ jobs:
               if not d.get('success'): sys.exit('D1 API failed')
               return d['result']
           if request().get('name')!='kindelora-payfast-d1-staging': sys.exit('Unexpected database; abort')
+          from pathlib import Path
+          # Use repository DDL, restricted to the explicitly identified staging database.
+          for file in ['db/schema.sql','db/payfast-sandbox-schema.sql']:
+              request('/query',Path(file).read_text())
+          request('/query',"CREATE TABLE IF NOT EXISTS payfast_sandbox_fx_quotes (quote_reference TEXT PRIMARY KEY, order_reference TEXT NOT NULL UNIQUE REFERENCES payfast_sandbox_orders(order_reference), plan TEXT NOT NULL CHECK(plan IN ('monthly','annual')), usd_minor INTEGER NOT NULL CHECK((plan='monthly' AND usd_minor=899) OR (plan='annual' AND usd_minor=8999)), zar_minor INTEGER NOT NULL CHECK(zar_minor>0), settlement_currency TEXT NOT NULL CHECK(settlement_currency='ZAR'), environment TEXT NOT NULL CHECK(environment='sandbox'), source TEXT NOT NULL CHECK(source='server_verified'), expires_at_ms INTEGER NOT NULL CHECK(expires_at_ms>0))")
           rows=request('/query',"SELECT name,sql FROM sqlite_schema WHERE type='table' AND name LIKE 'payfast_sandbox_%'")[0]['results']
           for row in rows: print(row['name'],row['sql'])
           required={'payfast_sandbox_orders':{'order_reference','member_id','plan','usd_minor','zar_minor','fx_reference','status'},'payfast_sandbox_fx_quotes':{'quote_reference','order_reference','plan','usd_minor','zar_minor','settlement_currency','environment','source','expires_at_ms'}}
@@ -38,4 +44,5 @@ jobs:
               print('Foreign keys:',request('/query','PRAGMA foreign_key_list('+table+')')[0]['results'])
               failed |= bool(missing)
           if failed: sys.exit('Sandbox schema incomplete')
+          print('Staging schema migration and column verification PASS; no member data copied')
           PY
