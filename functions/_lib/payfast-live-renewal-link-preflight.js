@@ -31,13 +31,30 @@ export async function verifyPersistedPayFastRenewalLink({
    link.provider_subscription_token!==providerSubscriptionToken)
    return deny('recurring_link_mismatch');
   const prior=await db.prepare(
-   'SELECT provider_transaction_id FROM plus_payfast_renewal_events WHERE provider_transaction_id=? LIMIT 1'
+   'SELECT provider_transaction_id,initial_order_id,subscription_id,paid_zar_minor,status FROM plus_payfast_renewal_events WHERE provider_transaction_id=? LIMIT 1'
   ).bind(providerTransactionId).first();
-  if(prior)return deny('renewal_reference_already_recorded');
   // Provider references must not be reusable across initial payments and renewals.
   const initialEvent=await db.prepare(
    'SELECT id FROM plus_payment_events WHERE provider_event_reference=? LIMIT 1'
   ).bind(providerTransactionId).first();
+  if(prior){
+   // PayFast can retry an ITN after its first response is lost. A retry may be
+   // acknowledged only when this authenticated provider event exactly matches
+   // a committed ledger row and the persisted recurring link. This is an
+   // acknowledgement-only result: no plan or D1 batch is produced.
+   if(initialEvent||prior.provider_transaction_id!==providerTransactionId||
+    prior.initial_order_id!==merchantReference||prior.subscription_id!==subscriptionId||
+    prior.paid_zar_minor!==paidZarMinor||prior.status!=='committed')
+    return deny('renewal_reference_conflict');
+   const original=await db.prepare(
+    "SELECT id,status,customer_id,amount_minor,currency FROM plus_orders WHERE id=? AND brand='KIN' LIMIT 1"
+   ).bind(merchantReference).first();
+   if(!original||original.id!==merchantReference||original.status!=='paid'||
+    original.customer_id!==customerId||original.amount_minor!==paidZarMinor||
+    original.currency!=='ZAR')return deny('original_order_mismatch');
+   return {ready:false,duplicate:true,reason:'authenticated_renewal_already_committed',
+    grantEntitlement:false,execute:false};
+  }
   if(initialEvent)return deny('provider_reference_already_recorded');
   const original=await db.prepare(
    "SELECT id,status,customer_id,amount_minor,currency FROM plus_orders WHERE id=? AND brand='KIN' LIMIT 1"
