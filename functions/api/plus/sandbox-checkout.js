@@ -12,6 +12,7 @@ export async function onRequestPost({request,env}={}){
   if(env?.PAYFAST_SANDBOX_CHECKOUT_ENABLED!=='true')console.warn('sandbox_checkout_preflight sandbox_opt_in_missing');
   return deny(503,'sandbox_checkout_disabled');
  }
+ if(env.PAYFAST_SANDBOX_ISOLATED_DB_ENABLED==='true'&&(!env.PAYFAST_SANDBOX_DB||env.PAYFAST_SANDBOX_DB===env.DB))return deny(503,'sandbox_database_unavailable');
  if(!originOK(request))return deny(403,'invalid_origin');
  if(!(request.headers.get('content-type')||'').startsWith('application/json'))return deny(415,'json_required');
  if(Number(request.headers.get('content-length')||0)>1024)return deny(413,'body_too_large');
@@ -32,7 +33,7 @@ export async function onRequestPost({request,env}={}){
   const allowed=new Set(['fx_configuration_missing','fx_configuration_invalid','fx_provider_unavailable','fx_provider_timeout','fx_provider_dns_failure','fx_provider_tls_failure','fx_provider_network_failure','fx_provider_rejected','fx_response_invalid','fx_rate_stale','fx_amount_invalid']);
   return deny(503,allowed.has(fx.reason)?fx.reason:'trusted_fx_unavailable');
  }
- const result=await prepareSandboxCheckout({db:env.DB,plan:data.plan,verifiedMemberId:user.id,reference,quote:fx.quote,nowMs,merchant});
+ const result=await prepareSandboxCheckout({db:env.PAYFAST_SANDBOX_ISOLATED_DB_ENABLED==='true'?env.PAYFAST_SANDBOX_DB:env.DB,plan:data.plan,verifiedMemberId:user.id,reference,quote:fx.quote,nowMs,merchant});
  if(!result.ok){
   const allowed=new Set(['merchant_unavailable','order_invalid','redirect_unavailable','persistence_failed']);
   return deny(503,allowed.has(result.reason)?result.reason:'sandbox_checkout_unavailable');
