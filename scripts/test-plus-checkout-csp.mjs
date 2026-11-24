@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+const headers=readFileSync(new URL('../_headers',import.meta.url),'utf8');
+const checkout=readFileSync(new URL('../plus-checkout.js',import.meta.url),'utf8');
+const csp=headers.split('\n').find(line=>line.trim().startsWith('Content-Security-Policy:'));
+assert.ok(csp,'global CSP required');
+const formAction=csp.match(/(?:^|;)\s*form-action\s+([^;]+)/)?.[1]||'';
+const allowed=new Set(formAction.trim().split(/\s+/));
+assert.ok(allowed.has("'self'"));
+assert.ok(allowed.has('https://sandbox.payfast.co.za'));
+assert.ok(allowed.has('https://www.payfast.co.za'),'live PayFast form handoff must not be blocked by CSP');
+assert.ok(!allowed.has('*'),'payment form actions must remain allowlisted');
+assert.match(checkout,/https:\/\/www\.payfast\.co\.za\/eng\/process/,'checkout must use allowlisted live host');
+console.log('PASS: CSP form-action allows only self, sandbox and live PayFast payment destinations');
