@@ -27,7 +27,7 @@ for(const [options,override] of [
  [{storedTx:{provider_transaction_id:tx,order_reference:reference,paid_zar_minor:17000,status:'COMPLETE',plan:'monthly'},storedOrder:{provider_transaction_id:tx,order_reference:reference,paid_zar_minor:17000,status:'COMPLETE'}},{}],
  [{orderRow:{...order,status:'paid'}},{}],
  [{memberRow:null},{}],
- [{memberRow:{id:order.member_id,email_normalized:order.member_id+'@sandbox.invalid',disabled_at:'2026-11-24 12:00:00'}},{}],
+ [{memberRow:{id:order.member_id,email_normalized:order.member_id+'@sandbox.invalid',disabled_at:null}},{}],
  [{memberRow:{id:order.member_id,email_normalized:'user@example.com',disabled_at:'disabled'}},{}],
  [{changes:0},{}]
 ]){
