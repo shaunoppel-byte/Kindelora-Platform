@@ -4,8 +4,8 @@ import {processProviderConfirmedSandboxItn} from '../../_lib/payfast-provider-co
 const reply=(status,reason)=>new Response(JSON.stringify({accepted:status===200,reason,grantEntitlement:false}),{status,headers:{'content-type':'application/json; charset=utf-8','cache-control':'no-store','x-content-type-options':'nosniff'}});
 export async function onRequestPost({request,env}={}){
  if(!request||!env||env.PAYFAST_SANDBOX_ITN_ENABLED!=='true')return reply(503,'sandbox_disabled');
- const db=env.PAYFAST_SANDBOX_ISOLATED_DB_ENABLED==='true'?env.PAYFAST_SANDBOX_DB:env.DB;
- if(env.PAYFAST_SANDBOX_ISOLATED_DB_ENABLED==='true'&&db===env.DB)return reply(503,'sandbox_database_unavailable');
+ const db=env.PAYFAST_SANDBOX_DB;
+ if(env.PAYFAST_SANDBOX_ISOLATED_DB_ENABLED!=='true'||!db||db===env.DB)return reply(503,'sandbox_database_unavailable');
  if(!db||typeof db.prepare!=='function'||typeof db.batch!=='function'||
  !/^[0-9]{8,16}$/.test(env.PAYFAST_SANDBOX_MERCHANT_ID||'')||
  typeof env.PAYFAST_SANDBOX_PASSPHRASE!=='string'||!env.PAYFAST_SANDBOX_PASSPHRASE||

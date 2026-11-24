@@ -8,7 +8,7 @@ permissions:
   contents: read
 jobs:
   inspect:
-    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'p0-post-893-readonly-gate-audit')
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.head.ref == 'p0-post-893-readonly-gate-audit' || github.event.pull_request.head.ref == 'p0-fail-closed-sandbox-d1'))
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
