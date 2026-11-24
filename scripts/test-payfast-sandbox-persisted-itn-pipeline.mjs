@@ -36,4 +36,11 @@ for(const [options,override] of [
 }
 state=fakeDb();r=await process({db:state.db,raw,contentType,expectedMerchantId:merchant,verification:{...verification,memberVerified:false}});
 assert.equal(r.committed,true); // caller cannot override D1-derived member verification
+state=fakeDb();
+const wrongAmountRaw=new URLSearchParams({m_payment_id:reference,pf_payment_id:tx,
+ payment_status:'COMPLETE',amount_gross:'169.00',merchant_id:merchant,signature:'a'.repeat(32)}).toString();
+r=await process({db:state.db,raw:wrongAmountRaw,contentType,expectedMerchantId:merchant,verification});
+assert.equal(r.committed,false);
+assert.equal(r.reason,'itn_rejected_merchant_order','preserve the safe static denial stage for Cloudflare diagnostics');
+assert.equal(state.getWrites(),0,'a rejected payment decision never writes the ledger');
 console.log('PASS: persisted sandbox ITN verifies member from D1; fail closed; no entitlement granted');
