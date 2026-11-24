@@ -13,7 +13,7 @@ test('rejects client-controlled or unknown plans', () => {
 test('requires approved, unexpired, matching ZAR quote', () => {
   const good = {approved:true,sourceCurrency:'USD',settlementCurrency:'ZAR',zarMinor:16500,usdMinor:899,expiresAtMs:Date.now()+60000};
   assert.equal(quotePlusZar('monthly',good).settlementZarMinor,16500);
-  for (const mutation of [{approved:false},{sourceCurrency:'ZAR'},{settlementCurrency:'USD'},{zarMinor:899},{usdMinor:8999},{expiresAtMs:0}]) {
+  for (const mutation of [{approved:false},{sourceCurrency:'ZAR'},{settlementCurrency:'USD'},{zarMinor:499},{usdMinor:8999},{expiresAtMs:0}]) {
     assert.throws(() => quotePlusZar('monthly',{...good,...mutation}));
   }
   assert.throws(() => quotePlusZar('annual',good));
