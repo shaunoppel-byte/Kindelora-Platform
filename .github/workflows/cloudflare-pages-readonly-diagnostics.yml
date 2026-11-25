@@ -8,8 +8,7 @@ permissions:
   contents: read
 jobs:
   inspect:
-    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && github.event.pull_request.head.ref == 'p0-sandbox-binding-verification')
-    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.head.ref == 'p0-post-893-readonly-gate-audit' || github.event.pull_request.head.ref == 'p0-fail-closed-sandbox-d1' || github.event.pull_request.head.ref == 'p0-sandbox-itn-live-tail-806'))
+    if: github.event_name == 'workflow_dispatch' || (github.event.pull_request.head.repo.full_name == github.repository && (github.event.pull_request.head.ref == 'p0-sandbox-binding-verification' || github.event.pull_request.head.ref == 'p0-post-893-readonly-gate-audit' || github.event.pull_request.head.ref == 'p0-fail-closed-sandbox-d1' || github.event.pull_request.head.ref == 'p0-sandbox-itn-live-tail-806' || github.event.pull_request.head.ref == 'p0-sandbox-allowlist-audit'))
     runs-on: ubuntu-latest
     timeout-minutes: 3
     steps:
@@ -21,7 +20,7 @@ jobs:
         shell: bash
         run: |
           python3 - <<'PY'
-          import os, json, urllib.request, urllib.error, re, sys
+          import os, json, urllib.request, urllib.error, re, sys, ipaddress
           token = os.environ.get('CF_TOKEN', '')
           account = os.environ.get('CF_ACCOUNT') or os.environ.get('CF_ACCOUNT_VAR')
           if not token:
@@ -44,6 +43,48 @@ jobs:
           print('Pages project access: PASS')
           prod=project.get('deployment_configs',{}).get('production',{})
           env=prod.get('env_vars') or {}
+          # Compare the configured source allowlist to PayFast's published ranges.
+          # Never print the configured value or a raw address into the Actions log.
+          required=[ipaddress.ip_network(x) for x in (
+              '197.97.145.144/28','41.74.179.192/27','102.216.36.0/28',
+              '102.216.36.128/28','144.126.193.139/32')]
+          item=env.get('PAYFAST_SANDBOX_ALLOWED_CIDRS')
+          if item is None:
+              print('PayFast Sandbox source allowlist: missing')
+          elif item.get('type')!='plain_text' or not isinstance(item.get('value'),str):
+              print('PayFast Sandbox source allowlist: opaque; values not inspected')
+          else:
+              try:
+                  configured=[ipaddress.ip_network(x.strip(),strict=True) for x in item['value'].split(',') if x.strip()]
+                  if not configured:
+                      raise ValueError()
+                  # Do not treat an overbroad network as a safe match.
+                  restricted=all(any(net.subnet_of(published) for published in required) for net in configured)
+                  def covers(target, networks):
+                      remaining=[target]
+                      for allowed in networks:
+                          updated=[]
+                          for part in remaining:
+                              if part.subnet_of(allowed):
+                                  continue
+                              if allowed.subnet_of(part):
+                                  updated.extend(part.address_exclude(allowed))
+                              else:
+                                  updated.append(part)
+                          remaining=updated
+                      return not remaining
+                  complete=all(covers(target,configured) for target in required)
+                  if complete and restricted:
+                      print('PayFast Sandbox source allowlist: complete and limited to published ranges')
+                  elif complete:
+                      print('PayFast Sandbox source allowlist: complete but broader than published ranges')
+                  elif restricted:
+                      covered=sum(1 for target in required if covers(target,configured))
+                      print('PayFast Sandbox source allowlist: incomplete ('+str(covered)+' of '+str(len(required))+' published ranges covered)')
+                  else:
+                      print('PayFast Sandbox source allowlist: invalid or includes unpublished ranges')
+              except Exception:
+                  print('PayFast Sandbox source allowlist: invalid format')
           for name in ('PAYFAST_SANDBOX_CHECKOUT_ENABLED','MEMBER_AUTH_ENABLED','PAYFAST_SANDBOX_ISOLATED_DB_ENABLED','PAYFAST_SANDBOX_ITN_ENABLED'):
               item=env.get(name)
               status='missing' if item is None else ('enabled' if item.get('type')=='plain_text' and item.get('value')=='true' else ('not_enabled' if item.get('type')=='plain_text' else 'opaque'))
