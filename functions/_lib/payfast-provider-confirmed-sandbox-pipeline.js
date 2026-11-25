@@ -28,7 +28,7 @@ export async function processProviderConfirmedSandboxItn({db,raw,contentType,
  let confirmed;
  try {confirmed=await verifyPayFastItnWithServer({raw,environment:'sandbox',fetchImpl});}
  catch {return deny('provider_confirmation_unavailable');}
- if(!confirmed?.verified)return deny('provider_confirmation_failed');
+ if(!confirmed?.verified)return deny(confirmed?.reason==='provider_unavailable'?'provider_confirmation_unavailable':'provider_confirmation_failed');
  // The provider result always overrides any caller-supplied serverVerified value.
  return processVerifiedSandboxItnOffline({db,raw,contentType,expectedMerchantId,
   verification:{signatureVerified:signature.verified,
