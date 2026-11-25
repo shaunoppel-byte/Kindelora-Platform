@@ -2,7 +2,7 @@
 // No public route, credentials, charges, payment acceptance or PLUS grant.
 export async function loadSandboxReplayState({db,providerTransactionId,orderReference}={}){
  const valid=s=>typeof s==='string'&&/^[A-Za-z0-9_-]{8,128}$/.test(s);
- if(!db||typeof db.prepare!=='function'||!valid(providerTransactionId)||!valid(orderReference))
+ if(!db||typeof db.prepare!=='function'||!(typeof providerTransactionId==='string'&&/^[A-Za-z0-9_-]{1,128}$/.test(providerTransactionId))||!valid(orderReference))
   return {ok:false,reason:'invalid_request'};
  try{
   const transaction=await db.prepare("SELECT t.provider_transaction_id,t.order_reference,t.paid_zar_minor,t.status,o.plan FROM payfast_sandbox_transactions t JOIN payfast_sandbox_orders o ON o.order_reference=t.order_reference WHERE t.provider_transaction_id=? LIMIT 1").bind(providerTransactionId).first();
