@@ -8,6 +8,11 @@ assert.equal(result.ok,true);
 assert.equal(result.amountZarMinor,17890);
 assert.equal(result.authenticated,false);
 assert.equal(result.grantEntitlement,false);
+// PayFast sandbox payloads observed in the merchant dashboard use seven-digit pf_payment_id values.
+const sevenDigit=parse(valid.replace('provider_12345678','3549408'),type);
+assert.equal(sevenDigit.ok,true);
+assert.equal(sevenDigit.providerTransactionId,'3549408');
+assert.equal(parse(valid.replace('order_12345678','short'),type).ok,false,'merchant order references retain their minimum length');
 // Accept PayFast's valid form body even if the transport media-type header is missing or mislabeled.
 assert.equal(parse(valid,'').ok,true);
 assert.equal(parse(valid,'application/json').ok,true);
