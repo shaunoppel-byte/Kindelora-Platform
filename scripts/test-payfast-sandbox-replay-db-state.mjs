@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import {loadSandboxReplayState as load} from '../functions/_lib/payfast-sandbox-replay-db-state.js';
-const tx={provider_transaction_id:'provider_12345678',order_reference:'order_12345678',paid_zar_minor:17000,status:'COMPLETE',plan:'monthly'};
+const tx={provider_transaction_id:'1234567',order_reference:'order_12345678',paid_zar_minor:17000,status:'COMPLETE',plan:'monthly'};
 const db=(a,b)=>({prepare(sql){const isTx=sql.includes('JOIN payfast_sandbox_orders');return {bind(value){assert.equal(value,isTx?tx.provider_transaction_id:tx.order_reference);return {async first(){return isTx?a:b}}}}}});
 let r=await load({db:db(null,null),providerTransactionId:tx.provider_transaction_id,orderReference:tx.order_reference});
 assert.deepEqual(r,{ok:true,storedTransaction:null,storedOrder:null,grantEntitlement:false});
