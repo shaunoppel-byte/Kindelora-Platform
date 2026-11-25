@@ -10,7 +10,7 @@ export function evaluateSandboxPayment(input){
  if(environment!=='sandbox'||signatureVerified!==true||merchantVerified!==true||
   serverVerified!==true||quoteVerified!==true||memberVerified!==true)return DENY;
  if(transactionStatus!=='COMPLETE'||alreadyProcessed!==false)return DENY;
- if(typeof providerTransactionId!=='string'||! /^[A-Za-z0-9_-]{8,128}$/.test(providerTransactionId))return DENY;
+ if(typeof providerTransactionId!=='string'||! /^[A-Za-z0-9_-]{1,128}$/.test(providerTransactionId))return DENY;
  if(typeof merchantReference!=='string'||! /^[A-Za-z0-9_-]{8,128}$/.test(merchantReference)||
   merchantReference!==expectedMerchantReference)return DENY;
  if(paidCurrency!=='ZAR'||!Number.isSafeInteger(paidMinor)||paidMinor<=0||
