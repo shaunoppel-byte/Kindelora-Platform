@@ -12,8 +12,11 @@ assert.equal(result.grantEntitlement,false);
 assert.equal(parse(valid,'').ok,true);
 assert.equal(parse(valid,'application/json').ok,true);
 assert.equal(parse(JSON.stringify({m_payment_id:'order_12345678'}),'application/json').ok,false);
-// Match the precision visible in the founder-provided PayFast ITN payload using exact cent rounding.
-assert.equal(parse(valid.replace('178.90','157.728')).amountZarMinor,15773);
+// PayFast Sandbox reported 157.728 for a checkout/order of R157.72. Sub-cent precision
+// must not round the reported amount up to a different cent or change the order amount.
+assert.equal(parse(valid.replace('178.90','157.728')).amountZarMinor,15772);
+assert.equal(parse(valid.replace('178.90','157.729')).amountZarMinor,15772);
+assert.equal(parse(valid.replace('178.90','157.730')).amountZarMinor,15773);
 for(const [raw,ct] of [
  ['',type],['x'.repeat(16385),type],['é'.repeat(8200),type],
  [valid+'&signature='+('b'.repeat(32)),type],
@@ -33,4 +36,4 @@ const pending=parse(valid.replace('COMPLETE','PENDING'),type);
 assert.equal(pending.ok,true);
 assert.equal(pending.authenticated,false);
 assert.equal(pending.grantEntitlement,false);
-console.log('PASS: bounded PayFast ITN parsing is content-type tolerant and rounds supported precision to cents without authenticating or granting entitlements');
+console.log('PASS: bounded ITN parsing preserves cent-denominated order amounts when PayFast reports sub-cent precision');
