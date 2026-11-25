@@ -18,4 +18,8 @@ result=await verify({raw,environment:'sandbox',fetchImpl:async()=>({type:'basic'
 result=await verify({raw,environment:'live',fetchImpl:async(url)=>{assert.equal(url,'https://www.payfast.co.za/eng/query/validate');return {status:403,ok:false}}});assert.equal(result.verified,false);
 result=await verify({raw,environment:'bogus',fetchImpl:async()=>{throw Error('must not call')}});assert.equal(result.verified,false);
 result=await verify({raw,environment:'sandbox',fetchImpl:async()=>{throw Error('network')}});assert.equal(result.verified,false);
+for(const response of [{status:302,ok:false,type:'basic'},{status:403,ok:false},{status:500,ok:false},{status:200,ok:true,type:'opaqueredirect'},{status:200,ok:false}]){
+ result=await verify({raw,environment:'sandbox',fetchImpl:async()=>({...response,text:async()=> 'VALID'})});
+ assert.deepEqual(result,{verified:false,reason:'provider_rejected'});
+}
 console.log('PASS: PayFast server ITN confirmation uses fixed HTTPS endpoints and exact VALID response');
