@@ -14,6 +14,7 @@ export function canonicalPayFastItnBody(raw){
  try{
   for(const [key,value] of new URLSearchParams(raw)){
    if(!/^[A-Za-z][A-Za-z0-9_]{0,63}$/.test(key)||seen.has(key)||value.length>2048)return null;
+   if(seen.has('signature')||key==='passphrase')return null;
    seen.add(key);
    if(key==='signature')continue;
    // PayFast's custom integration uses PHP urlencode (spaces -> +) and original field order.
