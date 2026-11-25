@@ -29,8 +29,8 @@ console.warn=(...args)=>logs.push(args);
 try{
  r=await onRequestPost({request:rejectedRequest,env:diagnosticEnv});
  assert.equal(r.status,403,'non-form bodies fail parser validation, not an early 415');
- assert.equal((await r.json()).reason,'notification_rejected','keep provider-facing error generic');
+ assert.equal((await r.json()).reason,'invalid_envelope','expose only the bounded parser rejection code');
  assert.deepEqual(logs,[['[payfast-sandbox-itn] notification rejected',{reason:'invalid_envelope'}]],
   'log only the safe stage reason, never the raw callback');
 }finally{console.warn=originalWarn;}
-console.log('PASS: mislabeled form reaches bounded parser; rejected Sandbox ITN keeps generic response and sanitized diagnostics');
+console.log('PASS: mislabeled form reaches bounded parser; rejected Sandbox ITN returns a bounded reason and sanitized diagnostics');
