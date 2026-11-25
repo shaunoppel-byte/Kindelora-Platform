@@ -9,7 +9,7 @@ function fakeDb({storedTx=null,storedOrder=null,orderRow=order,memberRow={id:ord
  let writes=0;
  const db={prepare(sql){return {bind(...args){return {async first(){
  if(sql.includes('FROM payfast_sandbox_orders WHERE'))return orderRow;
- if(sql.includes('FROM payfast_sandbox_fx_quotes WHERE'))return {quote_reference:'quote_12345678',order_reference:'order_12345678',plan:'monthly',usd_minor:899,zar_minor:17000,settlement_currency:'ZAR',environment:'sandbox',source:'server_verified',expires_at_ms:Date.now()+600000};
+ if(sql.includes('FROM payfast_sandbox_fx_quotes WHERE'))return {quote_reference:'quote_12345678',order_reference:'order_12345678',plan:'monthly',usd_minor:899,zar_minor:17000,settlement_currency:'ZAR',environment:'sandbox',source:'server_verified',expires_at_ms:1};
  if(sql.includes('FROM members WHERE id=?'))return memberRow;
  if(sql.includes('JOIN payfast_sandbox_orders'))return storedTx;
  if(sql.includes('FROM payfast_sandbox_transactions WHERE'))return storedOrder;
