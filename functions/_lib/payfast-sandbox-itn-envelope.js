@@ -22,7 +22,7 @@ export function parseSandboxItnEnvelope(raw){
  // PayFast Sandbox can return amount_gross with a third fractional digit although
  // checkout and persisted ZAR orders are denominated in cents. Ignore only this
  // sub-cent digit (do not round it up), preserving the amount the buyer was shown.
- if(!/^[0-9]+(?:\\.[0-9]{1,3})?$/.test(values.amount_gross))return deny('invalid_amount');
+ if(!/^[0-9]+(?:\.[0-9]{1,3})?$/.test(values.amount_gross))return deny('invalid_amount');
  const [whole,fraction='']=values.amount_gross.split('.');
  const minor=Number(whole)*100+Number(fraction.padEnd(2,'0').slice(0,2));
  if(!Number.isSafeInteger(minor)||minor<=0)return deny('invalid_amount');
