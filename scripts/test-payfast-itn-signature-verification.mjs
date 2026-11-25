@@ -12,8 +12,10 @@ const payload=build({raw:unsigned+'&signature='+('0'.repeat(32)),passphrase}).pa
 const signature=createHash('md5').update(payload).digest('hex');
 const raw=unsigned+'&signature='+signature;
 assert.equal(verify({raw,passphrase}).verified,true);
+assert.equal(verify({raw,passphrase:'  '+passphrase+'  '}).verified,true);
 assert.equal(verify({raw:raw.replace('170.00','171.00'),passphrase}).verified,false);
 assert.equal(verify({raw,passphrase:'wrong'}).verified,false);
 assert.equal(verify({raw,passphrase:''}).verified,false);
+assert.equal(verify({raw,passphrase:'   '}).verified,false);
 assert.equal(verify({raw:raw+'&merchant_id=10000100',passphrase}).verified,false);
 console.log('PASS: RFC MD5 known vectors and PayFast signature matching/tampering/secret denial');

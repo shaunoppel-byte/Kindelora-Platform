@@ -19,6 +19,10 @@ export function buildPayFastItnSignaturePayload({raw,passphrase}={}){
  }catch{return {ok:false,reason:'invalid_body'}}
  if(!signature||!/^[a-fA-F0-9]{32}$/.test(signature)||pairs.length===0)
   return {ok:false,reason:'invalid_signature'};
- if(passphrase!=='')pairs.push('passphrase='+encode(passphrase));
+ // PayFast's custom ITN recipe uses urlencode(trim($passPhrase)); trim the
+ // configured value as well so harmless copy/paste whitespace cannot cause
+ // every provider signature check to fail.
+ const normalizedPassphrase=passphrase.trim();
+ if(normalizedPassphrase!=='')pairs.push('passphrase='+encode(normalizedPassphrase));
  return {ok:true,payload:pairs.join('&'),signature:signature.toLowerCase(),verified:false};
 }

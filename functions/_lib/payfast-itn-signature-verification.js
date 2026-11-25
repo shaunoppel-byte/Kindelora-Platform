@@ -4,7 +4,7 @@ import {md5} from './payfast-md5.js';
 import {buildPayFastItnSignaturePayload} from './payfast-itn-signature-payload.js';
 const deny=reason=>({verified:false,reason});
 export function verifyPayFastItnSignature({raw,passphrase}={}){
- if(typeof passphrase!=='string'||passphrase.length<1||passphrase.length>256)return deny('passphrase_unavailable');
+ if(typeof passphrase!=='string'||passphrase.trim().length<1||passphrase.length>256)return deny('passphrase_unavailable');
  const candidate=buildPayFastItnSignaturePayload({raw,passphrase});
  if(!candidate.ok)return deny('invalid_payload');
  const expected=md5(candidate.payload),received=candidate.signature;
