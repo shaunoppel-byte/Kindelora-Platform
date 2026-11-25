@@ -31,7 +31,9 @@ export async function verifyPayFastItnWithServer({raw,environment,fetchImpl=fetc
    method:'POST',headers:{'content-type':'application/x-www-form-urlencoded'},
    body,redirect:'manual',cache:'no-store',signal:AbortSignal.timeout(8000)
   });
-  // Cloudflare Workers supports manual redirects, not redirect:error.\n  // Reject every redirect (including opaque redirects) and accept only HTTP 200.\n  if(!response||response.type==='opaqueredirect'||response.status!==200||!response.ok)return deny('provider_rejected');
+  // Cloudflare Workers supports manual redirects, not redirect:error.
+  // Reject every redirect (including opaque redirects) and accept only HTTP 200.
+  if(!response||response.type==='opaqueredirect'||response.status!==200||!response.ok)return deny('provider_rejected');
   const result=await response.text();
   return result==='VALID'?{verified:true,reason:'provider_valid'}:deny('provider_rejected');
  }catch{return deny('provider_unavailable')}
