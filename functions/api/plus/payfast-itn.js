@@ -10,8 +10,10 @@ export async function onRequestPost({request,env}={}){
  !/^[0-9]{8,16}$/.test(env.PAYFAST_SANDBOX_MERCHANT_ID||'')||
  typeof env.PAYFAST_SANDBOX_PASSPHRASE!=='string'||!env.PAYFAST_SANDBOX_PASSPHRASE||
  typeof env.PAYFAST_SANDBOX_ALLOWED_CIDRS!=='string'||!env.PAYFAST_SANDBOX_ALLOWED_CIDRS)return reply(503,'sandbox_unconfigured');
+ // Some PayFast delivery paths mislabel or omit the media type. The bounded
+ // envelope parser validates the actual form body; independent source, merchant,
+ // signature, provider confirmation and isolated-ledger checks remain mandatory.
  const type=request.headers.get('content-type')||'';
- if(!/^application\/x-www-form-urlencoded(?:\s*;|\s*$)/i.test(type))return reply(415,'unsupported_content_type');
  const length=Number(request.headers.get('content-length')||'0');
  if(!Number.isSafeInteger(length)||length>16384)return reply(413,'body_too_large');
  let raw;

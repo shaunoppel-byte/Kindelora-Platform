@@ -1,10 +1,10 @@
-// Pure defensive parser for PayFast-style application/x-www-form-urlencoded ITN envelopes.
+// Pure defensive parser for PayFast-style form-encoded ITN envelopes.
 // Parsing is NOT authentication. Never grant entitlement until independent signature,
 // merchant, PayFast server validation, quote and atomic ledger checks have passed.
 const deny=reason=>({ok:false,reason});
-export function parseSandboxItnEnvelope(raw,contentType){
- if(typeof contentType!=='string'||!/^application\/x-www-form-urlencoded(?:\s*;|\s*$)/i.test(contentType))
-  return deny('unsupported_content_type');
+export function parseSandboxItnEnvelope(raw){
+ // Validate the body shape rather than trusting Content-Type: PayFast delivery
+ // endpoints may omit or mislabel it. JSON bodies still fail strict key/value parsing.
  if(typeof raw!=='string'||raw.length===0||new TextEncoder().encode(raw).byteLength>16384)return deny('invalid_body_size');
  const params=new URLSearchParams(raw),values=Object.create(null);
  let count=0;
@@ -19,9 +19,13 @@ export function parseSandboxItnEnvelope(raw,contentType){
  }
  if(!/^[A-Za-z0-9_-]{8,128}$/.test(values.m_payment_id)||
     !/^[A-Za-z0-9_-]{8,128}$/.test(values.pf_payment_id))return deny('invalid_reference');
- if(!/^[0-9]+(?:\.[0-9]{2})?$/.test(values.amount_gross))return deny('invalid_amount');
- const [whole,fraction='00']=values.amount_gross.split('.');
- const minor=Number(whole)*100+Number(fraction);
+ // PayFast may report fractional minor units (e.g. 157.728). Round decimal
+ // strings to the nearest ZAR cent without floating-point arithmetic; the rounded
+ // integer must still match the exact order amount stored in the isolated ledger.
+ if(!/^[0-9]+(?:\.[0-9]{1,3})?$/.test(values.amount_gross))return deny('invalid_amount');
+ const [whole,fraction='']=values.amount_gross.split('.');
+ const padded=fraction.padEnd(3,'0');
+ const minor=Number(whole)*100+Number(padded.slice(0,2))+(Number(padded[2])>=5?1:0);
  if(!Number.isSafeInteger(minor)||minor<=0)return deny('invalid_amount');
  if(!/^[0-9]{4,32}$/.test(values.merchant_id))return deny('invalid_merchant');
  if(!/^[a-fA-F0-9]{32}$/.test(values.signature))return deny('invalid_signature_shape');
