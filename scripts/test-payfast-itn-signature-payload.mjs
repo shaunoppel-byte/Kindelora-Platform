@@ -3,7 +3,7 @@ import {buildPayFastItnSignaturePayload as build} from '../functions/_lib/payfas
 const signature='A'.repeat(32);
 let r=build({raw:'merchant_id=10000100&item_name=Hello+World%21&empty=&amount_gross=170.00&signature='+signature,passphrase:'My Secret+'});
 assert.equal(r.ok,true);
-assert.equal(r.payload,'merchant_id=10000100&item_name=Hello+World%21&amount_gross=170.00&passphrase=My+Secret%2B');
+assert.equal(r.payload,'merchant_id=10000100&item_name=Hello+World%21&empty=&amount_gross=170.00&passphrase=My+Secret%2B');
 assert.equal(r.signature,signature.toLowerCase());assert.equal(r.verified,false);
 r=build({raw:'merchant_id=10000100&signature='+signature,passphrase:'  My Secret+  '});
 assert.equal(r.payload,'merchant_id=10000100&passphrase=My+Secret%2B');
@@ -13,4 +13,5 @@ for(const raw of ['merchant_id=1&merchant_id=2&signature='+signature,'merchant_i
  assert.equal(build({raw,passphrase:''}).ok,false);
 }
 assert.equal(build({raw:'merchant_id=1&signature='+signature,passphrase:null}).ok,false);
+await import('./test-p0-payfast-itn-empty-fields.mjs');
 console.log('PASS: strict PayFast signature payload canonicalization, never claims verification');
