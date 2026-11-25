@@ -12,12 +12,14 @@ assert.equal(result.grantEntitlement,false);
 assert.equal(parse(valid,'').ok,true);
 assert.equal(parse(valid,'application/json').ok,true);
 assert.equal(parse(JSON.stringify({m_payment_id:'order_12345678'}),'application/json').ok,false);
+// Match the precision visible in the founder-provided PayFast ITN payload using exact cent rounding.
+assert.equal(parse(valid.replace('178.90','157.728')).amountZarMinor,15773);
 for(const [raw,ct] of [
  ['',type],['x'.repeat(16385),type],['é'.repeat(8200),type],
  [valid+'&signature='+('b'.repeat(32)),type],
  [valid.replace('178.90','-1.00'),type],
  [valid.replace('178.90','1e3'),type],
- [valid.replace('178.90','178.999'),type],
+ [valid.replace('178.90','178.9999'),type],
  [valid.replace('10000100','not-a-merchant'),type],
  [valid.replace('provider_12345678','bad id'),type],
  [valid.replace('a'.repeat(32),'invalid-signature'),type],
@@ -31,4 +33,4 @@ const pending=parse(valid.replace('COMPLETE','PENDING'),type);
 assert.equal(pending.ok,true);
 assert.equal(pending.authenticated,false);
 assert.equal(pending.grantEntitlement,false);
-console.log('PASS: bounded PayFast ITN parsing is content-type tolerant and never authenticates or grants entitlements');
+console.log('PASS: bounded PayFast ITN parsing is content-type tolerant and rounds supported precision to cents without authenticating or granting entitlements');
