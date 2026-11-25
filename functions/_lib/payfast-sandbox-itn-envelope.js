@@ -1,10 +1,10 @@
-// Pure defensive parser for PayFast-style application/x-www-form-urlencoded ITN envelopes.
+// Pure defensive parser for PayFast-style form-encoded ITN envelopes.
 // Parsing is NOT authentication. Never grant entitlement until independent signature,
 // merchant, PayFast server validation, quote and atomic ledger checks have passed.
 const deny=reason=>({ok:false,reason});
 export function parseSandboxItnEnvelope(raw,contentType){
- if(typeof contentType!=='string'||!/^application\/x-www-form-urlencoded(?:\s*;|\s*$)/i.test(contentType))
-  return deny('unsupported_content_type');
+ // Validate the body shape rather than trusting Content-Type: PayFast delivery
+ // endpoints may omit or mislabel it. JSON bodies still fail strict key/value parsing.
  if(typeof raw!=='string'||raw.length===0||new TextEncoder().encode(raw).byteLength>16384)return deny('invalid_body_size');
  const params=new URLSearchParams(raw),values=Object.create(null);
  let count=0;
