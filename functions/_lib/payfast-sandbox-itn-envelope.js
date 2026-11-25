@@ -18,7 +18,7 @@ export function parseSandboxItnEnvelope(raw){
   if(typeof values[key]!=='string'||!values[key])return deny('missing_required_field');
  }
  if(!/^[A-Za-z0-9_-]{8,128}$/.test(values.m_payment_id)||
-    !/^[A-Za-z0-9_-]{8,128}$/.test(values.pf_payment_id))return deny('invalid_reference');
+    !/^[A-Za-z0-9_-]{1,128}$/.test(values.pf_payment_id))return deny('invalid_reference');
  // PayFast Sandbox can return amount_gross with a third fractional digit although
  // checkout and persisted ZAR orders are denominated in cents. Ignore only this
  // sub-cent digit (do not round it up), preserving the amount the buyer was shown.
