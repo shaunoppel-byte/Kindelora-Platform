@@ -19,13 +19,12 @@ export function parseSandboxItnEnvelope(raw){
  }
  if(!/^[A-Za-z0-9_-]{8,128}$/.test(values.m_payment_id)||
     !/^[A-Za-z0-9_-]{8,128}$/.test(values.pf_payment_id))return deny('invalid_reference');
- // PayFast may report fractional minor units (e.g. 157.728). Round decimal
- // strings to the nearest ZAR cent without floating-point arithmetic; the rounded
- // integer must still match the exact order amount stored in the isolated ledger.
+ // PayFast Sandbox can return amount_gross with a third fractional digit although
+ // checkout and persisted ZAR orders are denominated in cents. Ignore only this
+ // sub-cent digit (do not round it up), preserving the amount the buyer was shown.
  if(!/^[0-9]+(?:\.[0-9]{1,3})?$/.test(values.amount_gross))return deny('invalid_amount');
  const [whole,fraction='']=values.amount_gross.split('.');
- const padded=fraction.padEnd(3,'0');
- const minor=Number(whole)*100+Number(padded.slice(0,2))+(Number(padded[2])>=5?1:0);
+ const minor=Number(whole)*100+Number(fraction.padEnd(2,'0').slice(0,2));
  if(!Number.isSafeInteger(minor)||minor<=0)return deny('invalid_amount');
  if(!/^[0-9]{4,32}$/.test(values.merchant_id))return deny('invalid_merchant');
  if(!/^[a-fA-F0-9]{32}$/.test(values.signature))return deny('invalid_signature_shape');

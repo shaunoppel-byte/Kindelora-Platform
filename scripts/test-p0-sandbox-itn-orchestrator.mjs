@@ -10,6 +10,18 @@ const approved=evaluate(base);
 assert.equal(approved.stage,'pending_atomic_commit');
 assert.equal(approved.accepted,false);
 assert.equal(approved.grantEntitlement,false);
+// Match the verified PayFast Sandbox case: 157.728 maps to the server-stored R157.72
+// order amount, and the decision remains fail-closed for any other order amount.
+const fractionalRaw=raw.replace('178.90','157.728');
+const fractional=evaluate({...base,raw:fractionalRaw,
+ expectedOrder:{...base.expectedOrder,zarMinor:15772}});
+assert.equal(fractional.stage,'pending_atomic_commit');
+assert.equal(fractional.paidMinor,15772);
+assert.equal(fractional.grantEntitlement,false);
+const mismatchedFractional=evaluate({...base,raw:fractionalRaw,
+ expectedOrder:{...base.expectedOrder,zarMinor:15773}});
+assert.notEqual(mismatchedFractional.stage,'pending_atomic_commit');
+assert.equal(mismatchedFractional.grantEntitlement,false);
 for(const key of ['signatureVerified','serverVerified','sourceVerified','quoteVerified','memberVerified']){
  const denied=evaluate({...base,[key]:false});
  assert.equal(denied.stage,'authentication',key);
@@ -29,4 +41,4 @@ for(const changed of [
  assert.equal(result.grantEntitlement,false);
  assert.notEqual(result.stage,'pending_atomic_commit');
 }
-console.log('PASS: composed sandbox ITN gates fail closed and never grant entitlement');
+console.log('PASS: composed sandbox ITN gates reconcile PayFast sub-cent precision to stored cents and remain fail closed');
