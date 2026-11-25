@@ -26,10 +26,12 @@ test('production member routes reject unsafe requests without creating accounts'
  });
  assert.equal(invalidDetails.status,400,'registration must reject invalid details before Turnstile');
  const checkout=await probe('/api/plus/checkout');
- // Global Pages middleware intentionally denies /api/plus/* before checkout.js executes.
- assert.equal(checkout.status,403,'global middleware must deny PLUS checkout');
+ // The production route itself fails closed; no payment URL or payment is created.
+ assert.equal(checkout.status,503,'PLUS checkout must remain unavailable until release approval');
  const checkoutBody=await checkout.text();
- assert.match(checkoutBody,/PLUS access requires verified membership and is not yet available/);
+ assert.match(checkoutBody,/"error":"checkout_unavailable"/);
+ assert.match(checkoutBody,/No payment was taken/);
+ assert.doesNotMatch(checkoutBody,/payment_url|checkout_url|payfast\.co\.za\/eng\/process/i);
  const status=await probe('/api/plus/status');
  assert.equal(status.status,200,'public PLUS status endpoint unavailable');
  const payment=await status.json();
