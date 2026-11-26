@@ -1,0 +1,3 @@
+# Controlled commercial schema deployment
+
+Do not execute automatically. Confirm the production Pages DB binding UUID and database name, distinct from staging; verify a recoverable backup or Time Travel bookmark. Inspect existing payment table DDL and indexes against the four source migrations; stop on incompatible objects. Keep all checkout release flags off. Apply the reviewed SQL package to the verified production D1 only after explicit approval. Recheck authenticated readiness and foreign key integrity. Never drop existing tables or restore over concurrent member registrations as an automatic rollback. Disable checkout on failure and assess recovery separately. This package does not create sandbox tables or enable charging.
