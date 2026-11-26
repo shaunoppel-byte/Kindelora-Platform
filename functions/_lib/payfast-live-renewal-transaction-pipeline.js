@@ -41,6 +41,7 @@ export async function processAuthenticatedLivePayFastRenewal({
    return deny('renewal_atomic_plan_unavailable');
   // Native staging batch proof: PR #936; actual staging constraints: PR #937.
   // Recheck the bound database itself before executing any renewal.
+  try{
   const guard=await db.prepare('PRAGMA table_info(plus_payfast_renewal_atomic_guard)').all();
   const events=await db.prepare('PRAGMA table_info(plus_payfast_renewal_events)').all();
   const ddl=await db.prepare("SELECT sql FROM sqlite_master WHERE type='table' AND name='plus_payfast_renewal_atomic_guard'").first();
@@ -51,6 +52,7 @@ export async function processAuthenticatedLivePayFastRenewal({
    events.results?.filter(r=>r.pk>0).length!==1||
    !events.results?.some(r=>r.name==='provider_transaction_id'&&r.pk===1))
    return deny('renewal_atomic_plan_unavailable');
+  }catch{return deny('renewal_atomic_plan_unavailable')}
   const results=await db.batch(plan.proposedStatements);
   if(!Array.isArray(results)||results.length!==6||
    results.some((r,i)=>r?.success!==true||((i===0||i===3)&&r?.meta?.changes!==1)))
