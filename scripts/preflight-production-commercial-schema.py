@@ -14,7 +14,16 @@ prod=need("PRODUCTION_ID")
 stage=need("STAGING_ID")
 name=need("PRODUCTION_NAME")
 token=need("API_TOKEN")
-if not re.fullmatch(r"[a-fA-F0-9]{32}",account) or any(not re.fullmatch(r"[a-fA-F0-9]{8}(?:-[a-fA-F0-9]{4}){3}-[a-fA-F0-9]{12}",x) for x in (prod,stage)) or prod.lower()==stage.lower() or "stag" in name.lower(): raise SystemExit("Invalid production identity")
+uuid_pattern=r"[a-fA-F0-9]{8}(?:-[a-fA-F0-9]{4}){3}-[a-fA-F0-9]{12}"
+errors=[]
+if not re.fullmatch(r"[a-fA-F0-9]{32}",account): errors.append("ACCOUNT_ID must be 32 hexadecimal characters")
+if not re.fullmatch(uuid_pattern,prod): errors.append("PRODUCTION_ID must be a full database UUID")
+if not re.fullmatch(uuid_pattern,stage): errors.append("STAGING_ID must be a full database UUID")
+if prod.lower()==stage.lower(): errors.append("Production and staging IDs must differ")
+if "stag" in name.lower(): errors.append("PRODUCTION_NAME contains staging marker")
+if errors:
+ for error in errors: print("INVALID CONFIGURATION: "+error)
+ raise SystemExit("Identity validation failed; no Cloudflare request attempted")
 base=f"https://api.cloudflare.com/client/v4/accounts/{account}/d1/database/{prod}"
 def api(path,sql=None):
  req=urllib.request.Request(base+path,data=None if sql is None else json.dumps({"sql":sql}).encode(),headers={"Authorization":"Bearer "+token,"Content-Type":"application/json"})
