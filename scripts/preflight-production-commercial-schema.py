@@ -52,3 +52,9 @@ for k,v in expected.items():
  elif norm(v)!=norm(actual[k]): raise SystemExit("Existing schema differs: "+k)
  else: print("MATCH:",k)
 print("PASS: read-only schema comparison; backup and Pages binding still require independent verification")
+
+# Read-only integrity verification, without exposing customer records.
+missing_objects=set(expected)-set(actual)
+if missing_objects: raise SystemExit("Commercial schema incomplete")
+if query("PRAGMA foreign_key_check"): raise SystemExit("Foreign key integrity violations detected")
+print("PASS: all commercial objects present and foreign key integrity verified")
