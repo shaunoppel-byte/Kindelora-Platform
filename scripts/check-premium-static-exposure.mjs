@@ -2,6 +2,7 @@
 // P0 regression guard: checks known premium static leak paths.
 // This does NOT replace live HTTP, entitlement or payment E2E testing.
 import fs from 'node:fs';
+import vm from 'node:vm';
 const read=p=>fs.readFileSync(new URL('../'+p,import.meta.url),'utf8');
 const page=read('motivational-monday.html');
 const sw=read('sw.js');
@@ -54,13 +55,25 @@ assert(sw.includes('req.headers.has("Authorization")'),'Authenticated requests m
 assert(sw.includes('const classifyPath=raw=>'),'Service worker does not classify encoded paths');
 assert(sw.includes('classification==="invalid"'),'Service worker may replay ambiguous encoded paths');
 assert(sw.includes('classification==="protected"'),'Service worker may replay protected PLUS routes');
-assert(sw.includes('kindelora-launch-v28'),'Service worker cache version must be rotated for checkout diagnostic bypass');
-assert(sw.includes('url.pathname==="/api/plus/sandbox-checkout"'),'Service worker must not mask the sandbox checkout diagnostic GET route');
+assert(Number(sw.match(/kindelora-launch-v(\d+)/)?.[1])>=29,'Service worker cache version must be rotated');
+
 
 assert(middleware.includes('onRequest')&&middleware.includes('403'),'No fail-closed premium middleware');
 assert(middleware.includes('(?:plus|premium|members)'),'Premium namespaces not denied by default');
 assert(sw.includes('(?:plus|premium|members)'),'Offline premium namespaces not denied by default');
-assert(sw.includes('url.pathname==="/api/plus/status"'),'Service worker blocks public PLUS readiness endpoint');
+const handlers={};
+vm.runInNewContext(sw,{self:{location:{origin:'https://kindelora.pages.dev'},addEventListener:(name,fn)=>{handlers[name]=fn}},URL,Response,Promise});
+for(const path of ['/api/plus/status','/api/plus/sandbox-checkout','/api/plus/schema-readiness','/api/plus/subscription','/api/plus/entitlement','/api/plus/checkout']){
+ let intercepted=false;
+ handlers.fetch({request:new Request('https://kindelora.pages.dev'+path+'?probe=1'),respondWith:()=>{intercepted=true}});
+ assert(!intercepted,'Server API intercepted by service worker: '+path);
+}
+for(const path of ['/api/plus/weekly','/plus/archive','/assets/plus/private.mp3','/api/%2fplus/weekly','/api/%00plus/weekly']){
+ let response;
+ handlers.fetch({request:new Request('https://kindelora.pages.dev'+path),respondWith:p=>{response=p}});
+ assert(!!response,'Protected route not intercepted: '+path);
+ if(response){const result=await response;assert([400,403].includes(result.status),'Protected route not denied: '+path);assert(result.headers.get('cache-control')==='no-store','Protected response cacheable: '+path);}
+}
 assert(!page.includes('play the professionally narrated recording.'),'Public preview falsely promises live audio');
 assert(page.includes('Checking secure PLUS access')&&page.includes('/monday-plus-reader.js')&&!page.includes('src="/assets/audio/'),'Public Monday reader must remain server-gated without public audio source');
 
