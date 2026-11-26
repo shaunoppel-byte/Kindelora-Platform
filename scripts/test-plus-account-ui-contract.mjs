@@ -26,4 +26,4 @@ assert.match(js,/e\.data\.plus===true/,'PLUS status must depend on server entitl
 const endpoint=read('functions/api/member/entitlement.js');
 assert.match(endpoint,/plus:verified\.entitled/,'UI and backend PLUS response contract must agree');
 assert.match(middleware,/checkoutAvailable:\s*false/,'payment release guard must remain closed');
-console.log('PASS: account UI preserves registration verification and routes to guarded checkout with charging disabled');
+console.log('PASS: account UI preserves registration verification and routes to guarded checkout with server-gated charging');
