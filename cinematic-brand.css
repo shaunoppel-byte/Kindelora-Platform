@@ -39,3 +39,10 @@
 .kc-membership-halo .choice[aria-pressed="true"]{outline:3px solid #fff8ee;outline-offset:3px}
 @media(max-width:640px){.kc-pathways{grid-template-columns:1fr}.kc-membership-halo:before{opacity:.4}}
 @media(prefers-reduced-motion:reduce){.kc-membership-halo:before{animation:none!important}}
+
+/* Commercial journey: visible selection, accessible touch targets and gentle glow. */
+.kc-membership-halo .choice[aria-pressed="true"]{background:#f9e5bf;color:#291529;box-shadow:0 0 18px #f1d29a66}
+.kc-membership-halo :is(.choice,.btn){min-height:48px;touch-action:manipulation}
+.kc-membership-halo :is(.choice,.btn):focus-visible{outline:3px solid #fff8ee;outline-offset:4px}
+@media(prefers-reduced-motion:no-preference){.kc-membership-halo:before{animation:kc-halo-breathe 8s ease-in-out infinite alternate}@keyframes kc-halo-breathe{from{opacity:.45}to{opacity:.85}}}
+@media(max-width:480px){.kc-membership-halo .controls{display:grid;grid-template-columns:minmax(0,1fr);gap:12px}.kc-membership-halo .choice,.kc-membership-halo .btn{width:100%;white-space:normal;text-align:center}}
