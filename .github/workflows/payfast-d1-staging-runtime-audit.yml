@@ -1,0 +1,48 @@
+name: PayFast D1 staging runtime audit
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/payfast-d1-staging-runtime-audit.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: payfast-d1-staging-preflight
+  cancel-in-progress: false
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment: payfast-d1-staging
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.KINDELORA_D1_STAGING_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.KINDELORA_D1_STAGING_ACCOUNT_ID }}
+      STAGING_DATABASE_ID: ${{ vars.KINDELORA_D1_STAGING_DATABASE_ID }}
+      PRODUCTION_DATABASE_ID: ${{ vars.KINDELORA_D1_PRODUCTION_DATABASE_ID }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Verify isolated staging identity and runtime schema
+        shell: bash
+        run: |
+          node --input-type=module <<'JS'
+          const {CLOUDFLARE_API_TOKEN:token,CLOUDFLARE_ACCOUNT_ID:account,STAGING_DATABASE_ID:stage,PRODUCTION_DATABASE_ID:prod}=process.env;
+          const uuid=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+          if(!token||!/^[0-9a-f]{32}$/i.test(account||'')||!uuid.test(stage||'')||!uuid.test(prod||'')||stage.toLowerCase()===prod.toLowerCase())throw Error('Isolation preflight failed');
+          const url='https://api.cloudflare.com/client/v4/accounts/'+account+'/d1/database/'+stage;
+          const headers={Authorization:'Bearer '+token,'Content-Type':'application/json'};
+          async function call(suffix,body){
+            const r=await fetch(url+suffix,{headers,method:body?'POST':'GET',...(body?{body:JSON.stringify(body)}:{}),signal:AbortSignal.timeout(20000)});
+            if(!r.ok)throw Error('Staging API HTTP '+r.status);
+            const d=await r.json();if(d.success!==true)throw Error('Staging API rejected request');return d.result;
+          }
+          const meta=await call('');
+          if(meta.uuid?.toLowerCase()!==stage.toLowerCase()||meta.name!=='kindelora-payfast-d1-staging')throw Error('Staging identity mismatch');
+          const result=await call('/query',{sql:"SELECT name FROM sqlite_master WHERE type='table' AND (name LIKE 'plus_%' OR name LIKE 'payfast_sandbox_%') ORDER BY name"});
+          if(!Array.isArray(result)||result[0]?.success!==true||!Array.isArray(result[0].results))throw Error('Schema audit failed');
+          const names=new Set(result[0].results.map(r=>r.name));
+          for(const name of ['payfast_sandbox_orders','payfast_sandbox_transactions','plus_customers','plus_orders','plus_subscriptions','plus_payment_events','plus_payment_reconciliations','plus_payfast_recurring_links'])console.log(name+': '+(names.has(name)?'present':'missing'));
+          console.log('Read-only staging SQL executed; no writes, no migrations, no production access. Renewal/replay/rollback/concurrency not yet tested.');
+          JS
