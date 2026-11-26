@@ -1,0 +1,35 @@
+name: Production commercial D1 migration
+on:
+  workflow_dispatch:
+    inputs:
+      confirmation:
+        required: true
+        type: string
+      verified_binding_uuid:
+        required: true
+        type: string
+      recovery_bookmark:
+        required: true
+        type: string
+permissions:
+  contents: read
+concurrency:
+  group: production-commercial-d1-migration
+  cancel-in-progress: false
+jobs:
+  migrate:
+    runs-on: ubuntu-latest
+    environment: payfast-d1-production
+    env:
+      ACCOUNT_ID: ${{ secrets.KINDELORA_D1_PRODUCTION_ACCOUNT_ID }}
+      API_TOKEN: ${{ secrets.KINDELORA_D1_PRODUCTION_READ_TOKEN }}
+      PRODUCTION_ID: ${{ vars.KINDELORA_D1_PRODUCTION_DATABASE_ID }}
+      STAGING_ID: ${{ vars.KINDELORA_D1_STAGING_DATABASE_ID }}
+      PRODUCTION_NAME: ${{ vars.KINDELORA_D1_PRODUCTION_DATABASE_NAME }}
+      CONFIRM: ${{ inputs.confirmation }}
+      BINDING_ID: ${{ inputs.verified_binding_uuid }}
+      RECOVERY_BOOKMARK: ${{ inputs.recovery_bookmark }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/test-production-commercial-schema.py
+      - run: python3 scripts/apply-production-commercial-schema.py
