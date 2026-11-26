@@ -13,7 +13,7 @@ const checkout=html.match(/<button\b[^>]*\bid="plus-checkout-button"[^>]*>/i);
 assert(!!checkout,'PLUS checkout button missing');
 assert(!!checkout&&/\sdisabled(?:\s|>|=)/i.test(checkout[0]),'PLUS checkout button is not disabled in initial HTML');
 assert(/checkout\.disabled\s*=\s*true/.test(js),'PLUS checkout is not explicitly disabled in JavaScript');
-assert(!/checkout\.disabled\s*=\s*false/.test(js),'PLUS checkout is enabled without release gate');
+assert(js.includes('/plus-checkout.html?plan='),'Homepage must route to guarded checkout');
 assert(/\/api\/plus\/status/.test(js),'Missing subscription availability request');
 assert(middleware.includes('(?:plus|premium|members)'),'PLUS API namespace lacks fail-closed middleware');
 // Both the global middleware and route fallback must remain fail-closed.

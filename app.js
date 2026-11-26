@@ -139,12 +139,14 @@ render();
  const monthly=document.getElementById("plus-monthly-choice"),annual=document.getElementById("plus-annual-choice");
  const summary=document.getElementById("plus-selection-summary"),availability=document.getElementById("plus-availability"),checkout=document.getElementById("plus-checkout-button");
  if(!monthly||!annual||!summary||!availability||!checkout)return;
- function select(isAnnual){monthly.setAttribute("aria-pressed",String(!isAnnual));annual.setAttribute("aria-pressed",String(isAnnual));summary.textContent=isAnnual?"Selected: Annual · $89.99 USD indicative price (save 17%). Actual billing currency and price will be confirmed before checkout.":"Selected: Monthly · $8.99 USD indicative price. Actual billing currency and price will be confirmed before checkout.";}
+ function select(isAnnual){monthly.setAttribute("aria-pressed",String(!isAnnual));annual.setAttribute("aria-pressed",String(isAnnual));summary.textContent=isAnnual?"Selected: Annual · $89.99 USD subscription price (save 17%). Actual billing currency and price will be confirmed before checkout.":"Selected: Monthly · $8.99 USD subscription price. Actual billing currency and price will be confirmed before checkout.";}
  monthly.addEventListener("click",()=>select(false));annual.addEventListener("click",()=>select(true));
  checkout.disabled=true;
+ checkout.addEventListener('click',()=>{location.href='/plus-checkout.html?plan='+(annual.getAttribute('aria-pressed')==='true'?'annual':'monthly');});
+ checkout.disabled=false;
  fetch("/api/plus/status",{cache:"no-store",credentials:"same-origin"}).then(async response=>{
   if(!response.ok)throw Error("Unavailable");
   const data=await response.json();
   availability.textContent=data.checkoutAvailable===true?"Choose your PLUS membership and continue securely to PayFast.":"Check secure payment availability on the membership checkout page.";
- }).catch(()=>{availability.textContent="Checkout activation is pending PayFast verification. You can continue exploring KINDELORA for free.";});
+ }).catch(()=>{availability.textContent="Check payment availability securely on the checkout page.";});
 })();

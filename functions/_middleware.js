@@ -60,7 +60,7 @@ export async function onRequest(context) {
     return context.next();
   }
   if (!protectedPaths.some(re => re.test(path))) return context.next();
-  return new Response("KINDELORA PLUS access requires verified membership and is not yet available.", {
+  return new Response("KINDELORA PLUS access requires verified membership.", {
     status: 403,
     headers: {"Content-Type":"text/plain; charset=utf-8","Cache-Control":"no-store, private","X-Robots-Tag":"noindex, nofollow"}
   });
