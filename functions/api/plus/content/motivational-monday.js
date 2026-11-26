@@ -13,6 +13,7 @@ export async function onRequestGet({request,env}={}){
   const asset=await env.ASSETS.fetch(new Request(url,{method:'GET'}));
   if(!asset.ok||!/^application\/json(?:;|$)/i.test(asset.headers.get('content-type')||''))return reply({error:'unavailable'},503);
   const payload=await asset.json();
-  return reply(payload,200,{'cache-control':'no-store, private','vary':'Cookie'});
+  if(payload?.release_decision!=='GO'||!Array.isArray(payload?.content?.paragraphs)||!payload.content.paragraphs.length||!payload.content.paragraphs.every(p=>typeof p==='string'))return reply({error:'edition_unavailable'},404);
+  return reply({content:{paragraphs:payload.content.paragraphs}},200,{'cache-control':'no-store, private','vary':'Cookie'});
  }catch{return reply({error:'unavailable'},503)}
 }
