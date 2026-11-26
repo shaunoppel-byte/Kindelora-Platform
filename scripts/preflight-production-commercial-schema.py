@@ -40,7 +40,12 @@ db=sqlite3.connect(":memory:")
 db.executescript(Path("ops/payfast-production-commercial-schema.sql").read_text())
 expected=dict(db.execute("SELECT name,sql FROM sqlite_master WHERE type IN ('table','index') AND sql IS NOT NULL"))
 actual={r["name"]:r["sql"] for r in query("SELECT name,sql FROM sqlite_master WHERE type IN ('table','index') AND sql IS NOT NULL")}
-def norm(s): return re.sub(r"\s+","",s.replace("IF NOT EXISTS","")).lower()
+def norm(s):
+ # The executor strips standalone SQL comments; SQLite may retain them in stored DDL.
+ s=re.sub(r"(?m)^\s*--[^\n]*$", "", s)
+ return re.sub(r"\s+","",s.replace("IF NOT EXISTS","")).lower()
+assert norm("CREATE TABLE t (\n -- documentation\n id TEXT)") == norm("CREATE TABLE t (id TEXT)")
+assert norm("CREATE TABLE t (id TEXT NOT NULL)") != norm("CREATE TABLE t (id TEXT)")
 if not {"members","member_sessions"} <= actual.keys(): raise SystemExit("Existing member schema absent")
 for k,v in expected.items():
  if k not in actual: print("MISSING:",k)
