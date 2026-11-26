@@ -1,0 +1,18 @@
+name: Production commercial D1 read-only preflight
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  preflight:
+    runs-on: ubuntu-latest
+    environment: payfast-d1-production
+    env:
+      ACCOUNT_ID: ${{ secrets.KINDELORA_D1_PRODUCTION_ACCOUNT_ID }}
+      API_TOKEN: ${{ secrets.KINDELORA_D1_PRODUCTION_READ_TOKEN }}
+      PRODUCTION_ID: ${{ vars.KINDELORA_D1_PRODUCTION_DATABASE_ID }}
+      STAGING_ID: ${{ vars.KINDELORA_D1_STAGING_DATABASE_ID }}
+      PRODUCTION_NAME: ${{ vars.KINDELORA_D1_PRODUCTION_DATABASE_NAME }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/preflight-production-commercial-schema.py
