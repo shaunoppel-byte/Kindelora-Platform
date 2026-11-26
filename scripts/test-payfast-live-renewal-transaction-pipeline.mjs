@@ -36,3 +36,26 @@ assert.equal(result.reason,'renewal_atomic_plan_unavailable');
 assert.equal(result.grantEntitlement,false);
 assert.equal(batches,0,'D1 batch must not run until the composer explicitly reports ready:true');
 console.log('PASS: live renewal pipeline fails closed on a not-ready atomic plan; no D1 batch or entitlement grant');
+
+ // Positive authenticated pipeline contract, using a synthetic D1 adapter.
+ let positiveBatches=0;
+ const originalPrepare=db.prepare.bind(db);
+ db.prepare=function(sql){
+ if(sql==='PRAGMA table_info(plus_payfast_renewal_atomic_guard)')return {async all(){return {results:[{name:'singleton',pk:1},{name:'expected_changes',notnull:1}]}}};
+ if(sql==='PRAGMA table_info(plus_payfast_renewal_events)')return {async all(){return {results:[{name:'provider_transaction_id',pk:1}]}}};
+ if(sql.includes('FROM sqlite_master'))return {async first(){return {sql:'CREATE TABLE plus_payfast_renewal_atomic_guard(singleton INTEGER PRIMARY KEY CHECK(singleton=1),expected_changes INTEGER NOT NULL CHECK(expected_changes=1))'}}};
+ return originalPrepare(sql);
+ };
+ db.batch=async statements=>{positiveBatches++;assert.equal(statements.length,6);return statements.map(()=>({success:true,meta:{changes:1}}))};
+ const args={db,request,raw,merchantId:'10000100',passphrase,allowedCidrs:'192.0.2.0/24',fetchImpl:async()=>({status:200,ok:true,async text(){return 'VALID'}}),nowMs:1795348800000};
+ const accepted=await process(args);
+ assert.equal(accepted.committed,true);
+ assert.equal(accepted.reason,'authenticated_renewal_recorded');
+ assert.equal(accepted.grantEntitlement,false);
+ assert.equal(positiveBatches,1);
+ const rejected=await process({...args,raw:raw.replace('165.00','166.00')});
+ assert.equal(rejected.committed,false);
+ assert.equal(positiveBatches,1);
+ db.batch=async()=>{throw Error('synthetic transaction failure')};
+ assert.equal((await process(args)).committed,false);
+ console.log('PASS: authenticated renewal reaches six-statement batch only after verified schema; tampering and batch failure rejected');
