@@ -48,7 +48,8 @@ export async function onRequest(context) {
   // This does NOT authorize a payment: checkout.js remains fail-closed until
   // signed requests, verified ITNs, durable orders and entitlements are ready.
   // Do not allow the public status endpoint to imply that checkout is enabled.
-  if ((path === '/api/plus/subscription' && context.request.method === 'GET') ||
+  if ((path === '/api/plus/content/motivational-monday' && context.request.method === 'GET') ||
+      (path === '/api/plus/subscription' && context.request.method === 'GET') ||
       (path === '/api/plus/entitlement' && context.request.method === 'GET') ||
       (path === '/api/plus/schema-readiness' && context.request.method === 'GET') ||
       (path === '/api/plus/checkout' && ['GET', 'POST'].includes(context.request.method)) ||
