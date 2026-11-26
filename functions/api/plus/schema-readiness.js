@@ -27,6 +27,6 @@ export async function onRequestGet({request,env}={}){
  const merchantChecks={merchantId:/^[0-9]{8,16}$/.test(env.PAYFAST_LIVE_MERCHANT_ID||''),merchantKey:typeof env.PAYFAST_LIVE_MERCHANT_KEY==='string'&&env.PAYFAST_LIVE_MERCHANT_KEY.length>=8,passphrase:typeof env.PAYFAST_LIVE_PASSPHRASE==='string'&&!!env.PAYFAST_LIVE_PASSPHRASE,allowedCidrs:typeof env.PAYFAST_LIVE_ALLOWED_CIDRS==='string'&&!!env.PAYFAST_LIVE_ALLOWED_CIDRS.trim()};
  const productionPrerequisitesReady=releaseFlagsReady&&merchantConfigured&&live.ready&&recurring.ready&&atomicSchemaReady;
  return reply({ready:status.ready,reason:status.ready?'schema_present':'schema_incomplete',
-  liveSchemaReady:live.ready,liveSchemaReason:live.reason,checkoutReady:false,
+  liveSchemaReady:live.ready,liveSchemaReason:live.reason,checkoutReady:productionPrerequisitesReady,
   productionPrerequisitesReady,releaseFlagsReady,merchantConfigured,atomicSchemaReady,recurringSchemaReady:recurring.ready,...(new URL(request.url).searchParams.get('detail')==='1'?{merchantChecks,releaseChecks:Object.fromEntries(flags.map(key=>[key,env[key]==='true']))}:{})},status.ready&&live.ready?200:503);
 }
