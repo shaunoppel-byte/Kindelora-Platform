@@ -1,0 +1,69 @@
+name: PayFast D1 isolated atomic fixtures
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/payfast-d1-atomic-fixtures.yml'
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: payfast-d1-staging-preflight
+  cancel-in-progress: false
+jobs:
+  fixtures:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    environment: payfast-d1-staging
+    env:
+      CLOUDFLARE_API_TOKEN: ${{ secrets.KINDELORA_D1_STAGING_API_TOKEN }}
+      CLOUDFLARE_ACCOUNT_ID: ${{ secrets.KINDELORA_D1_STAGING_ACCOUNT_ID }}
+      STAGING_DATABASE_ID: ${{ vars.KINDELORA_D1_STAGING_DATABASE_ID }}
+      PRODUCTION_DATABASE_ID: ${{ vars.KINDELORA_D1_PRODUCTION_DATABASE_ID }}
+    steps:
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Isolated synthetic replay and concurrency checks
+        shell: bash
+        run: |
+          node --input-type=module <<'JS'
+          import {randomBytes} from 'node:crypto';
+          const {CLOUDFLARE_API_TOKEN:token,CLOUDFLARE_ACCOUNT_ID:account,STAGING_DATABASE_ID:stage,PRODUCTION_DATABASE_ID:prod}=process.env;
+          const uuid=/^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+          if(!token||!/^[0-9a-f]{32}$/i.test(account||'')||!uuid.test(stage||'')||!uuid.test(prod||'')||stage.toLowerCase()===prod.toLowerCase())throw Error('Isolation failed');
+          const url='https://api.cloudflare.com/client/v4/accounts/'+account+'/d1/database/'+stage;
+          const headers={Authorization:'Bearer '+token,'Content-Type':'application/json'};
+          async function call(suffix,body){
+            const r=await fetch(url+suffix,{headers,method:body?'POST':'GET',...(body?{body:JSON.stringify(body)}:{}),signal:AbortSignal.timeout(20000)});
+            if(!r.ok)throw Error('Staging API HTTP '+r.status);
+            const d=await r.json();if(d.success!==true)throw Error('Staging API rejected request');return d.result;
+          }
+          const meta=await call('');
+          if(meta.uuid?.toLowerCase()!==stage.toLowerCase()||meta.name!=='kindelora-payfast-d1-staging')throw Error('Staging identity mismatch');
+          const t='p0qa_'+randomBytes(12).toString('hex');
+          async function sql(statement,params=[]){
+            const r=await call('/query',{sql:statement,params});
+            if(r[0]?.success!==true)throw Error('Fixture SQL failed');
+            return r[0];
+          }
+          let created=false;
+          try{
+            await sql('CREATE TABLE '+t+' (id TEXT PRIMARY KEY, status TEXT NOT NULL, extensions INTEGER NOT NULL CHECK(extensions BETWEEN 0 AND 1))');
+            created=true;
+            await sql('INSERT INTO '+t+" VALUES ('synthetic','pending',0)");
+            const update=()=>sql('UPDATE '+t+" SET status='paid',extensions=extensions+1 WHERE id='synthetic' AND status='pending'");
+            const outcomes=await Promise.all([update(),update()]);
+            if(outcomes.reduce((n,r)=>n+r.meta.changes,0)!==1)throw Error('Concurrent update invariant failed');
+            if((await update()).meta.changes!==0)throw Error('Replay invariant failed');
+            let rejected=false;
+            try{await sql('UPDATE '+t+" SET status='invalid',extensions=2 WHERE id='synthetic'")}catch{rejected=true}
+            if(!rejected)throw Error('Constraint rejection missing');
+            const row=(await sql('SELECT status,extensions FROM '+t)).results[0];
+            if(row.status!=='paid'||row.extensions!==1)throw Error('Final invariant failed');
+            console.log('PASS: synthetic conditional update concurrency, replay and single-statement constraint rollback');
+          }finally{
+            if(created){await sql('DROP TABLE '+t);console.log('Synthetic fixture table removed')}
+          }
+          console.log('Not proof of application DB.batch, renewal lifecycle or PLUS activation.');
+          JS
