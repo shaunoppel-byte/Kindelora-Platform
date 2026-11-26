@@ -1,12 +1,14 @@
 // KINDELORA account UI: real auth APIs, no mock success, no browser-side entitlement grants.
 (()=>{'use strict';
 const by=id=>document.getElementById(id),status=by('status'),account=by('account-state'),entitlement=by('entitlement-state'),logout=by('logout');
+const checkoutPlan=new URLSearchParams(location.search).get('checkoutPlan');
+const destination=()=>['monthly','annual'].includes(checkoutPlan)?'/plus-checkout.html?plan='+checkoutPlan:'/member-welcome.html';
 const say=t=>{status.textContent=t};
 const loginResult=by('login-result');
 const loginFeedback=t=>{if(loginResult)loginResult.textContent=t;say(t);};
 const request=async(path,body)=>{const options={credentials:'same-origin',cache:'no-store',headers:{Accept:'application/json'}};if(body){options.method='POST';options.headers['Content-Type']='application/json';options.body=JSON.stringify(body)}const r=await fetch(path,options);let data={};try{data=await r.json()}catch{}return {code:r.status,data}};
-async function refresh(){try{const r=await request('/api/member/me');if(r.code===200&&r.data.authenticated){if(!verificationToken&&!paymentReturn){window.location.replace('/member-welcome.html');return;}account.textContent='Signed in as '+r.data.member.email;logout.hidden=false;const e=await request('/api/member/entitlement');entitlement.textContent=e.code===200&&e.data.plus===true?'Verified PLUS membership active.':'PLUS membership is not active or cannot be verified.';}else{logout.hidden=true;account.textContent=r.code===503?'Account service is not configured yet.':'You are not signed in.';entitlement.textContent='PLUS access has not been verified.';}}catch{account.textContent='Account service is temporarily unavailable.';entitlement.textContent='PLUS access has not been verified.';logout.hidden=true;}}
-by('login').addEventListener('submit',async e=>{e.preventDefault();const b=e.currentTarget.querySelector('button');b.disabled=true;loginFeedback('Checking sign-in…');try{const r=await request('/api/member/login',{email:by('login-email').value.trim(),password:by('login-password').value});loginFeedback(r.code===200?'Signed in successfully.':r.code===503?'Secure sign-in is temporarily unavailable (HTTP 503).':r.code===429?'Too many attempts. Please try again later.':'Sign-in unsuccessful (HTTP '+r.code+'). Please check your details.');if(r.code===200){by('login-password').value='';window.location.assign('/member-welcome.html');return}}catch{loginFeedback('Sign-in service could not be reached.')}finally{b.disabled=false}});
+async function refresh(){try{const r=await request('/api/member/me');if(r.code===200&&r.data.authenticated){if(!verificationToken&&!paymentReturn){window.location.replace(destination());return;}account.textContent='Signed in as '+r.data.member.email;logout.hidden=false;const e=await request('/api/member/entitlement');entitlement.textContent=e.code===200&&e.data.plus===true?'Verified PLUS membership active.':'PLUS membership is not active or cannot be verified.';}else{logout.hidden=true;account.textContent=r.code===503?'Account service is temporarily unavailable.':'You are not signed in.';entitlement.textContent='PLUS access has not been verified.';}}catch{account.textContent='Account service is temporarily unavailable.';entitlement.textContent='PLUS access has not been verified.';logout.hidden=true;}}
+by('login').addEventListener('submit',async e=>{e.preventDefault();const b=e.currentTarget.querySelector('button');b.disabled=true;loginFeedback('Checking sign-in…');try{const r=await request('/api/member/login',{email:by('login-email').value.trim(),password:by('login-password').value});loginFeedback(r.code===200?'Signed in successfully.':r.code===503?'Secure sign-in is temporarily unavailable. Please try again later.':r.code===429?'Too many attempts. Please try again later.':'Sign-in unsuccessful. Please check your details.');if(r.code===200){by('login-password').value='';window.location.assign(destination());return}}catch{loginFeedback('Sign-in service could not be reached.')}finally{b.disabled=false}});
 logout.addEventListener('click',async()=>{try{const r=await request('/api/member/logout',{});say(r.code===200?'Signed out.':'Sign-out could not be confirmed.')}catch{say('Sign-out could not be confirmed.')}await refresh()});
 // Registration remains disabled until server readiness is explicitly confirmed.
 // The public site key is safe to expose; never expose the Turnstile secret.
@@ -23,7 +25,7 @@ async function initRegistration(){
   const config=await request('/api/member/registration-config');
   const siteKey=config.data?.turnstileSiteKey;
   if(config.code!==200||config.data?.available!==true||typeof siteKey!=='string'||!siteKey){
-   registrationMessage('Registration is not enabled by the membership service yet.');
+   registrationMessage('Registration is temporarily unavailable. Please try again later.');
    return;
   }
   registrationMessage('Registration is enabled. Loading security verification…');
@@ -76,7 +78,7 @@ if(verificationToken!==null){
  const result=document.createElement('p');result.setAttribute('role','status');result.setAttribute('aria-live','polite');panel.appendChild(result);
  const main=document.querySelector('main');main.insertBefore(panel,main.firstChild);
  if(!/^[a-f0-9]{64}$/.test(verificationToken)){confirm.disabled=true;result.textContent='This verification link is invalid. Please request a new one when registration is available.';}
- else confirm.addEventListener('click',async()=>{confirm.disabled=true;result.textContent='Verifying your email…';try{const r=await request('/api/member/verify-email',{token:verificationToken});if(r.code===200&&r.data.verified===true){result.textContent='Email verified. You can now sign in securely.';confirm.remove();}else{result.textContent=r.code===503?'Email verification is not available yet.':'Verification could not be completed. The link may be expired or already used.';}}catch{result.textContent='Unable to contact the verification service. Please try again later.';}finally{if(confirm.isConnected)confirm.disabled=false;}});
+ else confirm.addEventListener('click',async()=>{confirm.disabled=true;result.textContent='Verifying your email…';try{const r=await request('/api/member/verify-email',{token:verificationToken});if(r.code===200&&r.data.verified===true){result.textContent='Email verified. You can now sign in securely.';confirm.remove();}else{result.textContent=r.code===503?'Email verification is temporarily unavailable.':'Verification could not be completed. The link may be expired or already used.';}}catch{result.textContent='Unable to contact the verification service. Please try again later.';}finally{if(confirm.isConnected)confirm.disabled=false;}});
 }
 const paymentReturn=['live-return','live-cancel'].includes(params.get('payment'));
 if(paymentReturn){
