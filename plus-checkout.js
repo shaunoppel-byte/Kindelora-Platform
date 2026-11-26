@@ -3,20 +3,21 @@
  const plans={monthly:{name:'Monthly',price:'$8.99 USD',term:'Every month'},annual:{name:'Annual',price:'$89.99 USD',term:'Every year'}};
  const buttons={monthly:document.getElementById('monthly'),annual:document.getElementById('annual')};
  const submit=document.getElementById('checkout-submit'),status=document.getElementById('checkout-status');
- let checkoutEnabled=false;
+ let checkoutEnabled=false,signInRequired=false;
  let selected='monthly',busy=false;
- function choose(id){if(busy||!Object.hasOwn(plans,id))return;selected=id;for(const [key,button] of Object.entries(buttons))button.setAttribute('aria-pressed',String(key===id));const p=plans[id];for(const [field,value] of Object.entries({'summary-plan':p.name,'summary-price':p.price,'summary-term':p.term,'summary-total':p.price}))document.getElementById(field).textContent=value;}
+ function choose(id){if(busy||!Object.hasOwn(plans,id))return;selected=id;for(const link of document.querySelectorAll('a[href^="/plus-account.html"]'))link.href='/plus-account.html?checkoutPlan='+id;for(const [key,button] of Object.entries(buttons))button.setAttribute('aria-pressed',String(key===id));const p=plans[id];for(const [field,value] of Object.entries({'summary-plan':p.name,'summary-price':p.price,'summary-term':p.term,'summary-total':p.price}))document.getElementById(field).textContent=value;}
  for(const [id,button] of Object.entries(buttons))button.addEventListener('click',()=>choose(id));
  function message(value){status.textContent=value;}
  submit.disabled=true; message('Checking secure checkout…');
- fetch('/api/member/commercial-readiness',{credentials:'same-origin',cache:'no-store'}).then(async r=>{if(r.status===401){message('Sign in to your verified account to continue.');return;} if(!r.ok)throw Error('readiness'); const d=await r.json();checkoutEnabled=d.productionPrerequisitesReady===true;submit.disabled=!checkoutEnabled;submit.textContent=checkoutEnabled?'Continue securely to PayFast':'Checkout temporarily unavailable';message(checkoutEnabled?'Review and authorise your payment securely at PayFast.':'Secure checkout is temporarily unavailable. No payment has been taken.');}).catch(()=>{submit.textContent='Checkout temporarily unavailable';message('Unable to check payment availability. Refresh to try again.');});
+ fetch('/api/member/commercial-readiness',{credentials:'same-origin',cache:'no-store'}).then(async r=>{if(r.status===401){signInRequired=true;submit.textContent='Sign in to continue';submit.disabled=false;message('Sign in to your verified account to continue.');return;} if(!r.ok)throw Error('readiness'); const d=await r.json();checkoutEnabled=d.productionPrerequisitesReady===true;submit.disabled=!checkoutEnabled;submit.textContent=checkoutEnabled?'Continue securely to PayFast':'Checkout temporarily unavailable';message(checkoutEnabled?'Review and authorise your payment securely at PayFast.':'Secure checkout is temporarily unavailable. No payment has been taken.');}).catch(()=>{submit.textContent='Checkout temporarily unavailable';message('Unable to check payment availability. Refresh to try again.');});
  submit.addEventListener('click',async()=>{
   if(busy)return;
+  if(signInRequired){location.assign('/plus-account.html?checkoutPlan='+selected);return;}
   if(!checkoutEnabled){message('Secure checkout is currently unavailable. No payment has been taken.');return;}
   busy=true;submit.disabled=true;message('Preparing your secure checkout…');
   try{
    const response=await fetch('/api/plus/checkout',{method:'POST',credentials:'same-origin',headers:{'content-type':'application/json'},body:JSON.stringify({plan:selected}),cache:'no-store'});
-   if(response.status===401){message('Please sign in to your account before continuing.');return;}
+   if(response.status===401){location.assign('/plus-account.html?checkoutPlan='+selected);return;}
    if(!response.ok){message(response.status===503?'Secure payments are temporarily unavailable. No payment has been taken. Please try again later.':'Unable to prepare checkout. No payment has been taken. Please try again.');return;}
    const result=await response.json();
    const redirect=result?.redirect;
