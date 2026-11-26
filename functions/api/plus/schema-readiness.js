@@ -23,8 +23,10 @@ export async function onRequestGet({request,env}={}){
   atomicSchemaReady=normalized.includes('check(expected_changes=1)')&&normalized.includes('check(singleton=1)')&&guard.results.some(r=>r.name==='singleton'&&r.pk===1)&&guard.results.some(r=>r.name==='expected_changes'&&r.notnull===1)&&events.results.filter(r=>r.pk>0).length===1&&events.results.some(r=>r.name==='provider_transaction_id'&&r.pk===1);
  }catch{}
  const recurring=await verifyLivePlusD1Schema({db:env.DB,requireRecurring:true});
+ // Report only fixed configuration categories, never secret values or SQL errors.
+ const merchantChecks={merchantId:/^[0-9]{8,16}$/.test(env.PAYFAST_LIVE_MERCHANT_ID||''),merchantKey:typeof env.PAYFAST_LIVE_MERCHANT_KEY==='string'&&env.PAYFAST_LIVE_MERCHANT_KEY.length>=8,passphrase:typeof env.PAYFAST_LIVE_PASSPHRASE==='string'&&!!env.PAYFAST_LIVE_PASSPHRASE,allowedCidrs:typeof env.PAYFAST_LIVE_ALLOWED_CIDRS==='string'&&!!env.PAYFAST_LIVE_ALLOWED_CIDRS.trim()};
  const productionPrerequisitesReady=releaseFlagsReady&&merchantConfigured&&live.ready&&recurring.ready&&atomicSchemaReady;
  return reply({ready:status.ready,reason:status.ready?'schema_present':'schema_incomplete',
   liveSchemaReady:live.ready,liveSchemaReason:live.reason,checkoutReady:false,
-  productionPrerequisitesReady,releaseFlagsReady,merchantConfigured,atomicSchemaReady,recurringSchemaReady:recurring.ready},status.ready&&live.ready?200:503);
+  productionPrerequisitesReady,releaseFlagsReady,merchantConfigured,atomicSchemaReady,recurringSchemaReady:recurring.ready,...(new URL(request.url).searchParams.get('detail')==='1'?{merchantChecks,releaseChecks:Object.fromEntries(flags.map(key=>[key,env[key]==='true']))}:{})},status.ready&&live.ready?200:503);
 }
