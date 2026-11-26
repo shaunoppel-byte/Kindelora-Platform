@@ -8,15 +8,15 @@ for(const id of ['login','register','login-email','login-password','register-ema
 for(const endpoint of ['/api/member/login','/api/member/me','/api/member/entitlement','/api/member/logout'])assert.ok(js.includes(endpoint),'missing real endpoint '+endpoint);
 assert.match(html,/\$8\.99 USD/);assert.match(html,/\$89\.99 USD/);
 assert.doesNotMatch(html,/Invitation code|invitation-only|Create invited account/i);
-assert.match(html,/Public registration coming soon/);
+assert.match(html,/Checking availability…/);
 assert.match(html,/id="registration-turnstile"/);
 assert.match(html,/id="registration-submit"/);
 assert.match(js,/\/api\/member\/registration-config/);
 assert.match(js,/\/api\/member\/registration-request/);
 assert.match(html,/email verification/i);
-assert.match(html,/<button id="registration-submit" type="submit" disabled title="Email verification is being configured">Public registration coming soon<\/button>/);
+assert.match(html,/<button id="registration-submit" type="submit" disabled title="Checking secure registration availability">Checking availability…<\/button>/);
 assert.doesNotMatch(js,/\/api\/member\/register/);
-assert.match(html,/Payment processing is currently disabled/,'UI must disclose that checkout cannot charge');
+assert.match(html,/Secure checkout checks payment availability before you continue/,'UI must disclose guarded checkout availability');
 assert.match(html,/Payment availability is checked securely before any handoff to PayFast/,'guarded checkout must explain payment availability');
 assert.equal((html.match(/href="\/plus-checkout\.html"/g)||[]).length,3,'all three PLUS entry links must lead to guarded customer checkout');
 assert.doesNotMatch(html,/href="\/checkout-preview\.html"/,'member account must not send customers to old preview');
