@@ -10,7 +10,12 @@ assert.equal(result.length,2);
 assert.equal(statements.length,2);
 assert.match(statements[0].sql,/INSERT INTO payfast_sandbox_transactions/);
 assert.match(statements[1].sql,/status='pending'/);
-assert.deepEqual(statements[0].args,['provider_12345678','order_12345678',17890]);
+assert.deepEqual(statements[0].args,['provider_12345678','order_12345678',17890,'order_12345678',17890,'member_123','monthly']);
+assert.deepEqual(statements[1].args,['order_12345678',17890,'member_123','monthly']);
+assert.match(statements[0].sql,/WHERE EXISTS \(SELECT 1 FROM payfast_sandbox_orders/);
+for(const {sql} of statements) {
+ for(const predicate of ["order_reference=?", "status='pending'", "zar_minor=?", "member_id=?", "plan=?"]) assert.ok(sql.includes(predicate),predicate);
+}
 for(const bad of [
  {decision:{...decision,grantEntitlement:true}},
  {decision:{...decision,stage:'rejected'}},
