@@ -25,5 +25,6 @@ assert.doesNotMatch(js,/localStorage|sessionStorage|payment_url|checkout_url|win
 assert.match(js,/e\.data\.plus===true/,'PLUS status must depend on server entitlement');
 const endpoint=read('functions/api/member/entitlement.js');
 assert.match(endpoint,/plus:verified\.entitled/,'UI and backend PLUS response contract must agree');
-assert.match(middleware,/checkoutAvailable:\s*false/,'payment release guard must remain closed');
+assert.match(middleware,/checkoutAvailable:\s*configured/,'payment release must depend on configuration');
+assert.match(middleware,/\.every\(k=>env\[k\]==='true'\)/,'release flags must all be enabled');
 console.log('PASS: account UI preserves registration verification and routes to guarded checkout with server-gated charging');
