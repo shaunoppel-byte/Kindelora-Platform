@@ -4,6 +4,11 @@ def need(k):
  v=os.environ.get(k,"").strip()
  if not v: raise SystemExit("Missing "+k)
  return v
+required_settings={"ACCOUNT_ID":"secret KINDELORA_D1_PRODUCTION_ACCOUNT_ID","API_TOKEN":"secret KINDELORA_D1_PRODUCTION_READ_TOKEN","PRODUCTION_ID":"variable KINDELORA_D1_PRODUCTION_DATABASE_ID","STAGING_ID":"variable KINDELORA_D1_STAGING_DATABASE_ID","PRODUCTION_NAME":"variable KINDELORA_D1_PRODUCTION_DATABASE_NAME"}
+missing=[label for key,label in required_settings.items() if not os.environ.get(key,"").strip()]
+if missing:
+ for label in missing: print("MISSING CONFIGURATION: "+label)
+ raise SystemExit("Configure all listed settings in payfast-d1-production; no Cloudflare request attempted")
 account=need("ACCOUNT_ID")
 prod=need("PRODUCTION_ID")
 stage=need("STAGING_ID")
