@@ -23,11 +23,13 @@ export async function onRequest(context) {
   // Public, non-sensitive readiness endpoint. Never exposes member data or secrets.
   // Merchant activation was confirmed by the founder on 2026-11-19. Checkout remains disabled until server-side payment and entitlement verification exist.
   if (path === '/api/plus/status') {
+    const env=context.env||{};
+    const configured=['KINDELORA_PLUS_CHECKOUT_RELEASE_APPROVED','PAYFAST_LIVE_CHECKOUT_ENABLED','PAYFAST_LIVE_ITN_ENABLED','PAYFAST_LIVE_RECURRING_VERIFIED','PAYFAST_LIVE_INITIAL_RECURRING_LINK_ENABLED','PAYFAST_LIVE_RENEWAL_ITN_ENABLED'].every(k=>env[k]==='true');
     return new Response(JSON.stringify({
-      checkoutAvailable: false,
+      checkoutAvailable: configured,
       membershipVerificationAvailable: false,
       paymentProvider: 'PayFast',
-      status: 'pending_secure_payment_integration'
+      status: configured?'commercial_release_configured':'pending_secure_payment_integration'
     }), {
       status: 200,
       headers: {
