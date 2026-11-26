@@ -11,6 +11,7 @@ assert.match(sql,/payment_reference TEXT UNIQUE/);
 assert.match(sql,/CHECK \(brand = 'KIN'\)/);
 assert.match(sql,/CHECK \(currency = 'ZAR'\)/);
 assert.match(sql,/FOREIGN KEY|REFERENCES plus_customers\(id\)/);
-assert.match(middleware,/checkoutAvailable:\s*false/);
+assert.match(middleware,/checkoutAvailable:\s*configured/);
+assert.match(middleware,/\.every\(k=>env\[k\]==='true'\)/);
 assert.match(middleware,/membershipVerificationAvailable:\s*false/);
 console.log('PASS: dormant D1 schema constraints and fail-closed checkout retained');
