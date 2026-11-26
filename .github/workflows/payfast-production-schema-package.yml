@@ -1,0 +1,21 @@
+name: Commercial schema package SQLite verification
+on:
+  pull_request:
+    paths:
+      - 'ops/payfast-production-commercial-schema.sql'
+      - 'scripts/test-production-commercial-schema.py'
+      - '.github/workflows/payfast-production-schema-package.yml'
+  push:
+    branches: [main]
+    paths:
+      - 'ops/payfast-production-commercial-schema.sql'
+      - 'scripts/test-production-commercial-schema.py'
+      - '.github/workflows/payfast-production-schema-package.yml'
+permissions:
+  contents: read
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/test-production-commercial-schema.py
