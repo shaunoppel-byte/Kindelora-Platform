@@ -43,6 +43,8 @@ jobs:
           const result=await call('/query',{sql:"SELECT name FROM sqlite_master WHERE type='table' AND (name LIKE 'plus_%' OR name LIKE 'payfast_sandbox_%') ORDER BY name"});
           if(!Array.isArray(result)||result[0]?.success!==true||!Array.isArray(result[0].results))throw Error('Schema audit failed');
           const names=new Set(result[0].results.map(r=>r.name));
-          for(const name of ['payfast_sandbox_orders','payfast_sandbox_transactions','plus_customers','plus_orders','plus_subscriptions','plus_payment_events','plus_payment_reconciliations','plus_payfast_recurring_links'])console.log(name+': '+(names.has(name)?'present':'missing'));
+          const required=['payfast_sandbox_orders','payfast_sandbox_transactions','plus_customers','plus_orders','plus_subscriptions','plus_payment_events','plus_payment_reconciliations','plus_payfast_recurring_links'];
+          for(const name of required)console.log(name+': '+(names.has(name)?'present':'missing'));
+          if(required.some(name=>!names.has(name)))throw Error('Required staging tables missing; transactional tests blocked');
           console.log('Read-only staging SQL executed; no writes, no migrations, no production access. Renewal/replay/rollback/concurrency not yet tested.');
           JS
