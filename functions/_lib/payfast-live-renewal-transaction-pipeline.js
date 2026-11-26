@@ -36,8 +36,20 @@ export async function processAuthenticatedLivePayFastRenewal({
    return {committed:true,duplicate:true,reason:'authenticated_renewal_already_committed',grantEntitlement:false};
   if(!verified.ready)return deny('renewal_preflight_failed');
   const plan=prepareAtomicPayFastRenewal({db,verifiedRenewal:verified,paidAt:new Date(nowMs).toISOString()});
-  if(!plan||plan.ready!==true||plan.execute!==false||plan.grantEntitlement!==false||
+  if(!plan||plan.ready!==false||plan.reason!=='requires_staging_d1_atomicity_and_provider_identity_tests'||plan.execute!==false||plan.grantEntitlement!==false||
    plan.proposedStatements?.length!==6||plan.statements?.length!==0)
+   return deny('renewal_atomic_plan_unavailable');
+  // Native staging batch proof: PR #936; actual staging constraints: PR #937.
+  // Recheck the bound database itself before executing any renewal.
+  const guard=await db.prepare('PRAGMA table_info(plus_payfast_renewal_atomic_guard)').all();
+  const events=await db.prepare('PRAGMA table_info(plus_payfast_renewal_events)').all();
+  const ddl=await db.prepare("SELECT sql FROM sqlite_master WHERE type='table' AND name='plus_payfast_renewal_atomic_guard'").first();
+  const normalized=String(ddl?.sql||'').toLowerCase().replace(/[\s"'\x60\[\]]/g,'');
+  if(!normalized.includes('check(expected_changes=1)')||!normalized.includes('check(singleton=1)')||
+   !guard.results?.some(r=>r.name==='singleton'&&r.pk===1)||
+   !guard.results?.some(r=>r.name==='expected_changes'&&r.notnull===1)||
+   events.results?.filter(r=>r.pk>0).length!==1||
+   !events.results?.some(r=>r.name==='provider_transaction_id'&&r.pk===1))
    return deny('renewal_atomic_plan_unavailable');
   const results=await db.batch(plan.proposedStatements);
   if(!Array.isArray(results)||results.length!==6||
