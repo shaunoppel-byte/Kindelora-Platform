@@ -1,0 +1,32 @@
+name: PayFast native D1 renewal runtime
+on:
+  workflow_dispatch:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/payfast-native-d1-renewal.yml'
+      - 'scripts/test-payfast-native-d1-renewal.mjs'
+permissions:
+  contents: read
+concurrency:
+  group: payfast-d1-staging-preflight
+  cancel-in-progress: false
+jobs:
+  native-batch:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    environment: payfast-d1-staging
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Install Wrangler
+        run: npm install --no-save --package-lock=false --ignore-scripts wrangler@4
+      - name: Native staging transaction tests
+        env:
+          CLOUDFLARE_API_TOKEN: ${{ secrets.KINDELORA_D1_STAGING_API_TOKEN }}
+          CLOUDFLARE_ACCOUNT_ID: ${{ secrets.KINDELORA_D1_STAGING_ACCOUNT_ID }}
+          STAGING_DATABASE_ID: ${{ vars.KINDELORA_D1_STAGING_DATABASE_ID }}
+          PRODUCTION_DATABASE_ID: ${{ vars.KINDELORA_D1_PRODUCTION_DATABASE_ID }}
+        run: node --experimental-default-type=module scripts/test-payfast-native-d1-renewal.mjs
