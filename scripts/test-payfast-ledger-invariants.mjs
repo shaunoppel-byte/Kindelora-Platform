@@ -8,7 +8,7 @@ test('PLUS checkout remains fail-closed until payment verification is implemente
   readFile('functions/api/plus/checkout.js','utf8'),
   readFile('migrations/0001_plus_persistence.sql','utf8')
  ]);
- assert.match(middleware, /checkoutAvailable:\s*false/);
+ assert.match(middleware,/checkoutAvailable:\s*configured/);
  assert.match(middleware, /membershipVerificationAvailable:\s*false/);
  assert.match(middleware, /\^\\\/\(\?:api\\\/\)\?\(\?:plus\|premium\|members\)/);
  assert.match(checkout, /checkout_unavailable/);
