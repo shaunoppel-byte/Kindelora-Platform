@@ -3,7 +3,7 @@
 const deny=reason=>({verified:false,reason,grantEntitlement:false});
 export async function verifyPersistedLivePaymentFacts({db,merchantReference,merchantId,expectedMerchantId,paidZarMinor,providerTransactionId,paymentStatus,nowMs=Date.now()}={}){
  if(!db||typeof db.prepare!=='function'||!/^[A-Za-z0-9_-]{8,128}$/.test(merchantReference||'')||
-  !/^[A-Za-z0-9_-]{8,128}$/.test(providerTransactionId||'')||
+  !/^[A-Za-z0-9_-]{7,128}$/.test(providerTransactionId||'')||
   typeof merchantId!=='string'||merchantId!==expectedMerchantId||!/^[0-9]{8,16}$/.test(merchantId)||
   !Number.isSafeInteger(paidZarMinor)||paidZarMinor<500||paymentStatus!=='COMPLETE'||
   !Number.isSafeInteger(nowMs)||nowMs<0)return deny('invalid_payment_facts');
