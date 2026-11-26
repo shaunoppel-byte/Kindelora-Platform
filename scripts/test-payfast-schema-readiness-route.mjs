@@ -30,7 +30,7 @@ delete tables.plus_subscriptions;
 r=await onRequestGet({request:req,env});assert.equal(r.status,503);
 const body=await r.text();assert.ok(!body.includes('plus_subscriptions'));assert.ok(!body.includes('member_12345678'));
 r=await onRequestGet({request:req,env:{...env,MEMBER_AUTH_ENABLED:'false'}});assert.equal(r.status,503);
-console.log('PASS: authenticated D1 schema readiness hides table names, denies anonymous, never enables checkout');
+console.log('PASS: authenticated D1 schema readiness hides table names, denies anonymous and gates checkout');
 
 tables.plus_subscriptions=['id','customer_id','brand','status','current_period_end'];
 tables.plus_payfast_recurring_links=['initial_order_id','subscription_id','customer_id','plan_id','expected_zar_minor','provider_subscription_token'];
@@ -38,7 +38,7 @@ tables.plus_payfast_renewal_events=['provider_transaction_id','initial_order_id'
 tables.plus_payfast_renewal_atomic_guard=['singleton','expected_changes'];
 const configured={...env,PAYFAST_LIVE_MERCHANT_ID:'12345678',PAYFAST_LIVE_MERCHANT_KEY:'test-key',PAYFAST_LIVE_PASSPHRASE:'test-passphrase',PAYFAST_LIVE_ALLOWED_CIDRS:'192.0.2.0/24'};
 for(const key of ['KINDELORA_PLUS_CHECKOUT_RELEASE_APPROVED','PAYFAST_LIVE_CHECKOUT_ENABLED','PAYFAST_LIVE_ITN_ENABLED','PAYFAST_LIVE_RECURRING_VERIFIED','PAYFAST_LIVE_INITIAL_RECURRING_LINK_ENABLED','PAYFAST_LIVE_RENEWAL_ITN_ENABLED'])configured[key]='true';
-r=await onRequestGet({request:req,env:configured});const positive=await r.json();assert.equal(positive.productionPrerequisitesReady,true);assert.equal(positive.checkoutReady,false);assert.ok(!JSON.stringify(positive).includes('test-passphrase'));
-r=await onRequestGet({request:req,env:{...configured,PAYFAST_LIVE_ITN_ENABLED:'false'}});assert.equal((await r.json()).productionPrerequisitesReady,false);
+r=await onRequestGet({request:req,env:configured});const positive=await r.json();assert.equal(positive.productionPrerequisitesReady,true);assert.equal(positive.checkoutReady,true);assert.ok(!JSON.stringify(positive).includes('test-passphrase'));
+r=await onRequestGet({request:req,env:{...configured,PAYFAST_LIVE_ITN_ENABLED:'false'}});{const denied=await r.json();assert.equal(denied.productionPrerequisitesReady,false);assert.equal(denied.checkoutReady,false);}
 delete tables.plus_payfast_recurring_links;
-r=await onRequestGet({request:req,env:configured});assert.equal((await r.json()).productionPrerequisitesReady,false);
+r=await onRequestGet({request:req,env:configured});{const denied=await r.json();assert.equal(denied.productionPrerequisitesReady,false);assert.equal(denied.checkoutReady,false);}
