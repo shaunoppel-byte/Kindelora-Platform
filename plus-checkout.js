@@ -3,12 +3,13 @@
  const plans={monthly:{name:'Monthly',price:'$8.99 USD',term:'Every month'},annual:{name:'Annual',price:'$89.99 USD',term:'Every year'}};
  const buttons={monthly:document.getElementById('monthly'),annual:document.getElementById('annual')};
  const submit=document.getElementById('checkout-submit'),status=document.getElementById('checkout-status');
- const checkoutEnabled=document.documentElement?.dataset?.plusCheckoutEnabled==='true';
+ let checkoutEnabled=false;
  let selected='monthly',busy=false;
  function choose(id){if(busy||!Object.hasOwn(plans,id))return;selected=id;for(const [key,button] of Object.entries(buttons))button.setAttribute('aria-pressed',String(key===id));const p=plans[id];for(const [field,value] of Object.entries({'summary-plan':p.name,'summary-price':p.price,'summary-term':p.term,'summary-total':p.price}))document.getElementById(field).textContent=value;}
  for(const [id,button] of Object.entries(buttons))button.addEventListener('click',()=>choose(id));
  function message(value){status.textContent=value;}
- if(!checkoutEnabled){submit.disabled=true;message('KINDELORA Plus checkout is not available yet. No payment has been taken.');}
+ submit.disabled=true; message('Checking secure checkout…');
+ fetch('/api/member/commercial-readiness',{credentials:'same-origin',cache:'no-store'}).then(async r=>{if(r.status===401){message('Sign in to your verified account to continue.');return;} if(!r.ok)throw Error('readiness'); const d=await r.json();checkoutEnabled=d.productionPrerequisitesReady===true;submit.disabled=!checkoutEnabled;submit.textContent=checkoutEnabled?'Continue securely to PayFast':'Checkout temporarily unavailable';message(checkoutEnabled?'Review and authorise your payment securely at PayFast.':'Secure checkout is temporarily unavailable. No payment has been taken.');}).catch(()=>{submit.textContent='Checkout temporarily unavailable';message('Unable to check payment availability. Refresh to try again.');});
  submit.addEventListener('click',async()=>{
   if(busy)return;
   if(!checkoutEnabled){message('KINDELORA Plus checkout is not available yet. No payment has been taken.');return;}
