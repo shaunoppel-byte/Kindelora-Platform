@@ -9,10 +9,10 @@ export function sandboxLedgerAtomicStatements({db,decision,order}={}){
   order.plan!==decision.plan||typeof order.memberId!=='string'||!order.memberId||
   typeof decision.providerTransactionId!=='string')return null;
  return [
-  db.prepare("INSERT INTO payfast_sandbox_transactions(provider_transaction_id,order_reference,paid_zar_minor,status) VALUES(?,?,?,'COMPLETE')")
-   .bind(decision.providerTransactionId,order.reference,order.zarMinor),
-  db.prepare("UPDATE payfast_sandbox_orders SET status='paid',paid_at=CURRENT_TIMESTAMP WHERE order_reference=? AND status='pending' AND zar_minor=?")
-   .bind(order.reference,order.zarMinor)
+  db.prepare("INSERT INTO payfast_sandbox_transactions(provider_transaction_id,order_reference,paid_zar_minor,status) SELECT ?,?,?,'COMPLETE' WHERE EXISTS (SELECT 1 FROM payfast_sandbox_orders WHERE order_reference=? AND status='pending' AND zar_minor=? AND member_id=? AND plan=?)")
+   .bind(decision.providerTransactionId,order.reference,order.zarMinor,order.reference,order.zarMinor,order.memberId,order.plan),
+  db.prepare("UPDATE payfast_sandbox_orders SET status='paid',paid_at=CURRENT_TIMESTAMP WHERE order_reference=? AND status='pending' AND zar_minor=? AND member_id=? AND plan=?")
+   .bind(order.reference,order.zarMinor,order.memberId,order.plan)
  ];
 }
 // IMPORTANT: this helper only constructs statements; it DOES NOT call DB.batch,
