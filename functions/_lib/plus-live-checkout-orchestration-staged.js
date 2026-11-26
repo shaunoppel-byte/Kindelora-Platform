@@ -9,7 +9,8 @@ import {verifyLivePlusD1Schema} from './payfast-live-d1-schema-preflight.js';
 const deny=(status,reason)=>reply({ok:false,reason,checkoutReady:false},status);
 export async function onRequestPost({request,env}={}){
  if(!request||!ready(env)||env.PAYFAST_LIVE_CHECKOUT_ENABLED!=='true'||
-  env.PAYFAST_LIVE_ITN_ENABLED!=='true'||env.PAYFAST_LIVE_RECURRING_VERIFIED!=='true')return deny(503,'live_checkout_disabled');
+  env.PAYFAST_LIVE_ITN_ENABLED!=='true'||env.PAYFAST_LIVE_RECURRING_VERIFIED!=='true'||
+  env.PAYFAST_LIVE_INITIAL_RECURRING_LINK_ENABLED!=='true'||env.PAYFAST_LIVE_RENEWAL_ITN_ENABLED!=='true')return deny(503,'live_checkout_disabled');
  if(!originOK(request))return deny(403,'invalid_origin');
  if(!(request.headers.get('content-type')||'').startsWith('application/json'))return deny(415,'json_required');
  if(Number(request.headers.get('content-length')||0)>1024)return deny(413,'body_too_large');
