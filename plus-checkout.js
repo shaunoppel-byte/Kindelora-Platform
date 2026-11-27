@@ -18,6 +18,7 @@
   try{
    const response=await fetch('/api/plus/checkout',{method:'POST',credentials:'same-origin',headers:{'content-type':'application/json'},body:JSON.stringify({plan:selected}),cache:'no-store'});
    if(response.status===401){location.assign('/plus-account.html?checkoutPlan='+selected);return;}
+   if(response.status===409){const detail=await response.json().catch(()=>null);if(detail?.reason==='membership_already_active'){message('You already have an active KINDELORA PLUS membership. Visit My KINDELORA to enjoy your benefits. No payment has been taken.');return;}}
    if(!response.ok){message(response.status===503?'Secure payments are temporarily unavailable. No payment has been taken. Please try again later.':'Unable to prepare checkout. No payment has been taken. Please try again.');return;}
    const result=await response.json();
    const redirect=result?.redirect;
