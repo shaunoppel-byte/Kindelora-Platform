@@ -14,3 +14,12 @@ if(feedbackButton)feedbackButton.addEventListener('click',async()=>{
  try{if(!navigator.clipboard?.writeText)throw new Error('Clipboard unavailable');await navigator.clipboard.writeText(template);result.textContent='Feedback template copied. Paste it into ChatGPT.';}
  catch{result.textContent='Clipboard not available. Please share your feedback directly in ChatGPT.';}
 });
+
+window.financeDrilldown=(id,provider)=>{
+ const metric=document.getElementById(id),card=metric.closest('.card'),button=document.createElement('button');
+ button.type='button';button.className=card.className+' drill-card';while(card.firstChild)button.appendChild(card.firstChild);card.replaceWith(button);
+ const hint=document.createElement('span');hint.className='drill-hint';hint.textContent='View underlying detail ›';button.appendChild(hint);
+ button.addEventListener('click',()=>{const d=provider(),dialog=document.getElementById('finance-detail');document.getElementById('finance-detail-title').textContent=button.firstElementChild.textContent;document.getElementById('finance-detail-context').textContent='Fictional demonstration records · '+document.getElementById('business').selectedOptions[0].text+(d.period?' · '+d.period:'');const head=document.getElementById('finance-detail-head'),body=document.getElementById('finance-detail-body');head.replaceChildren();body.replaceChildren();const row=(parent,values,tag)=>{const tr=document.createElement('tr');values.forEach(v=>{const cell=document.createElement(tag);cell.textContent=String(v);tr.append(cell)});parent.append(tr)};row(head,d.headers,'th');d.rows.forEach(x=>row(body,x,'td'));if(!d.rows.length){const tr=document.createElement('tr'),td=document.createElement('td');td.colSpan=d.headers.length;td.textContent='No matching demo records';tr.append(td);body.append(tr)}document.getElementById('finance-detail-total').textContent='Dashboard total: '+metric.textContent+' · '+d.rows.length+' records';dialog.showModal();document.getElementById('finance-detail-x').focus();dialog.addEventListener('close',()=>button.focus(),{once:true});});
+};
+for(const id of ['finance-detail-x','finance-detail-close'])document.getElementById(id).addEventListener('click',()=>document.getElementById('finance-detail').close());
+for(const id of ['receipts','invoice-count','pending-count'])window.financeDrilldown(id,()=>({headers:['Invoice','Business','Customer','Amount','Reconciliation'],rows:selected().filter(x=>id!=='pending-count'||!x.reconciled).map(x=>[x.id,x.business,x.customer,money(x.amount),x.reconciled?'Matched':'Pending'])}));
