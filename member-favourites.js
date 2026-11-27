@@ -8,13 +8,13 @@
   dialog.id="member-favourites-gate";
   dialog.className="member-favourites-gate";
   dialog.setAttribute("aria-labelledby","member-favourites-title");
-  dialog.innerHTML='<div class="member-gate-inner"><button type="button" class="member-gate-close" aria-label="Close">×</button><span class="member-gate-heart" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l7.78-7.78a5.5 5.5 0 0 0 0-7.78Z"/></svg></span><h2 id="member-favourites-title">Keep the words that stay with you.</h2><p>Love this message? Your personal Favourites Library is a KINDELORA Plus membership benefit, so you can return to the moments that matter most.</p><p class="fine">Secure member access will be enabled after account and payment verification. This message has not been saved and no payment will be taken.</p><div class="actions"><a class="btn member-gate-explore" href="#membership">Explore KINDELORA Plus</a><button type="button" class="choice member-gate-later">Maybe later</button></div></div>';
+  dialog.innerHTML='<div class="member-gate-inner"><button type="button" class="member-gate-close" aria-label="Close">×</button><span class="member-gate-heart" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l7.78-7.78a5.5 5.5 0 0 0 0-7.78Z"/></svg></span><h2 id="member-favourites-title">Keep the words that stay with you.</h2><p>Love this message? Your personal Favourites Library is a KINDELORA Plus membership benefit, so you can return to the moments that matter most.</p><p class="fine">Sign in to check your membership. This message has not been saved.</p><div class="actions"><a class="btn member-gate-explore" href="#membership">Explore KINDELORA Plus</a><button type="button" class="choice member-gate-later">Maybe later</button></div></div>';
   document.body.append(dialog);
   // Two separate collections under one consistent Favourites experience.
   // This is a preview only: there is no authenticated persistence yet.
   const collections=document.createElement("div");
   collections.className="member-favourite-collections";
-  collections.innerHTML='<p class="member-collections-heading">Your future Plus Favourites</p><div class="member-collection-tabs" role="tablist" aria-label="Favourite collections"><button type="button" role="tab" id="member-tab-messages" aria-controls="member-panel-messages" aria-selected="true" tabindex="0">Messages</button><button type="button" role="tab" id="member-tab-affirmations" aria-controls="member-panel-affirmations" aria-selected="false" tabindex="-1">Affirmations</button></div><div role="tabpanel" id="member-panel-messages" aria-labelledby="member-tab-messages"><p>Save meaningful messages here once secure KINDELORA Plus access is available.</p></div><div role="tabpanel" id="member-panel-affirmations" aria-labelledby="member-tab-affirmations" hidden><p>Save your favourite affirmations here once secure KINDELORA Plus access is available.</p></div>';
+  collections.innerHTML='<p class="member-collections-heading">Your PLUS Favourites</p><div class="member-collection-tabs" role="tablist" aria-label="Favourite collections"><button type="button" role="tab" id="member-tab-messages" aria-controls="member-panel-messages" aria-selected="true" tabindex="0">Messages</button><button type="button" role="tab" id="member-tab-affirmations" aria-controls="member-panel-affirmations" aria-selected="false" tabindex="-1">Affirmations</button></div><div role="tabpanel" id="member-panel-messages" aria-labelledby="member-tab-messages"><p>Sign in to check your PLUS membership.</p></div><div role="tabpanel" id="member-panel-affirmations" aria-labelledby="member-tab-affirmations" hidden><p>Sign in to check your PLUS membership.</p></div>';
   dialog.querySelector(".member-gate-inner .actions").before(collections);
   const tabs=Array.from(collections.querySelectorAll('[role="tab"]'));
   function selectCollection(kind,focus){
@@ -38,6 +38,35 @@
   });
 
   let opener=null;
+  let checkSequence=0;
+  async function checkMembership(){
+    const seq=++checkSequence;
+    const fine=dialog.querySelector(".fine");
+    const link=dialog.querySelector(".member-gate-explore");
+    fine.textContent="Checking your membership…";
+    link.href="/plus-account.html";
+    link.textContent="Sign in";
+    try{
+      const response=await fetch("/api/member/entitlement",{credentials:"same-origin",cache:"no-store"});
+      if(seq!==checkSequence||!dialog.open)return;
+      if(response.status===401){fine.textContent="Sign in to check your PLUS membership. Nothing has been saved.";return;}
+      if(!response.ok)throw new Error("Membership unavailable");
+      const data=await response.json();
+      if(seq!==checkSequence||!dialog.open)return;
+      if(data.authenticated!==true)throw new Error("Membership unavailable");
+      if(data.plus===true){
+        fine.textContent="Your PLUS membership is verified. Personal Favourites saving is currently unavailable. Nothing has been saved.";
+        link.href="/member-welcome.html";
+        link.textContent="Return to your account";
+      }else{
+        fine.textContent="Favourites require PLUS membership. Nothing has been saved.";
+        link.href="/plus-checkout.html";
+        link.textContent="Explore KINDELORA PLUS";
+      }
+    }catch(e){if(seq===checkSequence&&dialog.open)fine.textContent="We could not verify your membership. Please try again. Nothing has been saved.";}
+  }
+  function openGate(){if(typeof dialog.showModal==="function"){dialog.showModal();void checkMembership();}else window.location.href="/plus-account.html";}
+
   function close(){if(dialog.open)dialog.close();}
   dialog.querySelector(".member-gate-close").addEventListener("click",close);
   dialog.querySelector(".member-gate-later").addEventListener("click",close);
@@ -47,7 +76,7 @@
   const heartPath="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z";
   document.querySelectorAll("[data-heart]").forEach(button=>{
     if(button.classList.contains("heart-save"))button.setAttribute("aria-pressed","false");
-    if(!button.classList.contains("heart-save")){button.addEventListener("click",()=>{opener=button;if(typeof dialog.showModal==="function")dialog.showModal();else window.location.hash="membership";});return;}
+    if(!button.classList.contains("heart-save")){button.addEventListener("click",()=>{opener=button;openGate();});return;}
     button.setAttribute("title","Save to Plus Favourites (membership required)");
     const svg=document.createElementNS("http://www.w3.org/2000/svg","svg");
     svg.setAttribute("viewBox","0 0 24 24");
@@ -59,8 +88,7 @@
     button.addEventListener("click",()=>{
       opener=button;
       // Never claim a visitor is subscribed without verified server-side entitlement.
-      if(typeof dialog.showModal==="function")dialog.showModal();
-      else window.location.hash="membership";
+      openGate();
     });
   });
   // Shared Plus gate for affirmation hearts; do not pretend that a save succeeded.
@@ -72,7 +100,7 @@
     button.addEventListener("click",()=>{
       selectCollection("affirmations",false);
       gateTitle.textContent="Keep the affirmations that stay with you.";
-      gateDescription.textContent="Love this affirmation? Your personal Affirmation Favourites collection is a planned KINDELORA Plus benefit. Secure saving will be available after account and membership verification.";
+      gateDescription.textContent="Love this affirmation? Your personal Affirmation Favourites collection is a KINDELORA Plus benefit.";
     });
   });
   document.querySelectorAll('[data-heart]:not([data-heart-type="affirmation"])').forEach(button=>{
