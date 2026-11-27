@@ -51,12 +51,21 @@
         :document.getElementById("moment")?.textContent)?.trim();
     return value?{kind,value}:null;
   }
-  function renderSaved(key,items){
+  async function serverFavourites(memberId,method="GET",item){
+    const response=await fetch("/api/member/favourites",{method,credentials:"same-origin",cache:"no-store",...(item?{headers:{"content-type":"application/json"},body:JSON.stringify({kind:item.kind,content:item.value,expectedMemberId:memberId})}:{})});
+    const data=await response.json();
+    if(method==="GET"&&response.status===503&&data.code==="feature_disabled")return null;
+    if(!response.ok)throw Error("Favourites unavailable");
+    if(method!=="GET")return true;
+    if(data.memberId!==memberId||!Array.isArray(data.items))throw Error("Account changed");
+    return data.items.map(x=>({kind:x.kind,value:x.content}));
+  }
+  function renderSaved(key,items,serverId=null){
     for(const kind of ["messages","affirmations"]){
       const panel=document.getElementById("member-panel-"+kind);
       panel.replaceChildren();
       const entries=items.filter(x=>x.kind===kind);
-      if(!entries.length){const p=document.createElement("p");p.textContent="No saved items on this device.";panel.append(p);}
+      if(!entries.length){const p=document.createElement("p");p.textContent=serverId?"No saved items yet.":"No saved items on this device.";panel.append(p);}
       for(const item of entries){
         const p=document.createElement("p");p.textContent=item.value;
         const remove=document.createElement("button");remove.type="button";remove.className="choice";remove.textContent="Remove";
@@ -67,6 +76,7 @@
             if(!e.ok||!dialog.open||seq!==checkSequence)return;
             const entitlement=await e.json();
             if(seq!==checkSequence||!dialog.open||entitlement.plus!==true||entitlement.authenticated!==true||key!=="kindelora-plus-favourites-v1:"+entitlement.memberId)return;
+            if(serverId){await serverFavourites(serverId,"DELETE",item);const fresh=await serverFavourites(serverId);if(seq===checkSequence&&dialog.open&&fresh)renderSaved(key,fresh,serverId);return;}
             const current=JSON.parse(localStorage.getItem(key)||"[]").filter(x=>x.kind!==item.kind||x.value!==item.value);
             localStorage.setItem(key,JSON.stringify(current));renderSaved(key,current);
           }catch{dialog.querySelector(".fine").textContent="Unable to remove this item. Please try again.";}
@@ -97,6 +107,16 @@
       if(data.plus===true){
         if(typeof data.memberId!=="string"||!data.memberId)throw new Error("Identity unavailable");
         const key="kindelora-plus-favourites-v1:"+data.memberId;
+        const remote=await serverFavourites(data.memberId);
+        if(seq!==checkSequence||!dialog.open)return;
+        if(remote!==null){
+          renderSaved(key,remote,data.memberId);
+          fine.textContent="Your account Favourites, available across devices.";
+          if(item&&!remote.some(x=>x.kind===item.kind&&x.value===item.value)){
+            save.hidden=false;save.onclick=async()=>{save.disabled=true;try{await serverFavourites(data.memberId,"POST",item);const fresh=await serverFavourites(data.memberId);if(seq===checkSequence&&dialog.open&&fresh){renderSaved(key,fresh,data.memberId);fine.textContent="Saved to your account Favourites.";save.hidden=true;}}catch{if(seq===checkSequence&&dialog.open)fine.textContent="Unable to save. Please try again.";}finally{save.disabled=false;}};
+          }
+          link.href="/member-welcome.html";link.textContent="Return to your account";return;
+        }
         let items=JSON.parse(localStorage.getItem(key)||"[]");
         if(!Array.isArray(items)||items.some(x=>!x||!["messages","affirmations"].includes(x.kind)||typeof x.value!=="string"))throw new Error("Invalid saved data");
         if(item&&!items.some(x=>x.kind===item.kind&&x.value===item.value)){
@@ -165,7 +185,7 @@
     opener=event.currentTarget;
     selectCollection("messages",false);
     gateTitle.textContent="Your PLUS Favourites";
-    gateDescription.textContent="Return to the words that matter to you. Saved items are available on this device.";
+    gateDescription.textContent="Return to the words that matter to you. Return to your saved messages and affirmations.";
     openGate();
   });
   // Existing free favourites were local-only; do not erase a visitor's saved data.
