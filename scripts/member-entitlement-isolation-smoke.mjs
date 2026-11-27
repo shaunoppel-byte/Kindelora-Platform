@@ -52,10 +52,10 @@ const get = async (token, extra) => {
 
 assert.deepEqual(await get(null), { status: 401, body: { authenticated: false, plus: false } });
 assert.deepEqual(await get("f".repeat(64)), { status: 401, body: { authenticated: false, plus: false } });
-assert.deepEqual(await get(tokenA), { status: 200, body: { authenticated: true, plus: true } });
-assert.deepEqual(await get(tokenB, "&member=a"), { status: 200, body: { authenticated: true, plus: false } });
+assert.deepEqual(await get(tokenA), { status: 200, body: { authenticated: true, plus: true, memberId: "a" } });
+assert.deepEqual(await get(tokenB, "&member=a"), { status: 200, body: { authenticated: true, plus: false, memberId: "b" } });
 active = new Set();
-assert.deepEqual(await get(tokenA), { status: 200, body: { authenticated: true, plus: false } });
+assert.deepEqual(await get(tokenA), { status: 200, body: { authenticated: true, plus: false, memberId: "a" } });
 
 const unavailable = await onRequestGet({request:request(tokenA),env:{...env,MEMBER_AUTH_ENABLED:"false"}});
 assert.equal(unavailable.status,503);
@@ -64,7 +64,7 @@ const withoutDatabase = await onRequestGet({request:request(tokenA),env:{...env,
 assert.equal(withoutDatabase.status,503);
 const withoutPepper = await onRequestGet({request:request(tokenA),env:{...env,MEMBER_AUTH_PEPPER:"short"}});
 assert.equal(withoutPepper.status,503);
-assert.deepEqual(await get(tokenB,"&plus=1&subscription=active"),{status:200,body:{authenticated:true,plus:false}});
+assert.deepEqual(await get(tokenB,"&plus=1&subscription=active"),{status:200,body:{authenticated:true,plus:false,memberId:"b"}});
 
 
 const failingDb={prepare(){throw new Error("no such table: plus_subscriptions")}};
