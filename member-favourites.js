@@ -61,10 +61,11 @@
         const remove=document.createElement("button");remove.type="button";remove.className="choice";remove.textContent="Remove";
         remove.addEventListener("click",async()=>{
           try{
-            const [e,m]=await Promise.all(["entitlement","me"].map(x=>fetch("/api/member/"+x,{credentials:"same-origin",cache:"no-store"})));
-            if(!e.ok||!m.ok||!dialog.open)return;
-            const entitlement=await e.json(),identity=await m.json();
-            if(entitlement.plus!==true||identity.authenticated!==true||key!=="kindelora-plus-favourites-v1:"+identity.member?.id)return;
+            const seq=checkSequence;
+            const e=await fetch("/api/member/entitlement",{credentials:"same-origin",cache:"no-store"});
+            if(!e.ok||!dialog.open||seq!==checkSequence)return;
+            const entitlement=await e.json();
+            if(seq!==checkSequence||!dialog.open||entitlement.plus!==true||entitlement.authenticated!==true||key!=="kindelora-plus-favourites-v1:"+entitlement.memberId)return;
             const current=JSON.parse(localStorage.getItem(key)||"[]").filter(x=>x.kind!==item.kind||x.value!==item.value);
             localStorage.setItem(key,JSON.stringify(current));renderSaved(key,current);
           }catch{dialog.querySelector(".fine").textContent="Unable to remove this item. Please try again.";}
@@ -91,14 +92,10 @@
       if(seq!==checkSequence||!dialog.open)return;
       if(data.authenticated!==true)throw new Error("Membership unavailable");
       if(data.plus===true){
-        const identityResponse=await fetch("/api/member/me",{credentials:"same-origin",cache:"no-store"});
-        if(!identityResponse.ok)throw new Error("Identity unavailable");
-        const identity=await identityResponse.json();
-        if(seq!==checkSequence||!dialog.open)return;
-        if(identity.authenticated!==true||typeof identity.member?.id!=="string"||!identity.member.id)throw new Error("Identity unavailable");
-        const key="kindelora-plus-favourites-v1:"+identity.member.id;
+        if(typeof data.memberId!=="string"||!data.memberId)throw new Error("Identity unavailable");
+        const key="kindelora-plus-favourites-v1:"+data.memberId;
         let items=JSON.parse(localStorage.getItem(key)||"[]");
-        if(!Array.isArray(items))throw new Error("Invalid saved data");
+        if(!Array.isArray(items)||items.some(x=>!x||!["messages","affirmations"].includes(x.kind)||typeof x.value!=="string"))throw new Error("Invalid saved data");
         if(item&&!items.some(x=>x.kind===item.kind&&x.value===item.value)){
           if(items.length>=100){fine.textContent="Your device library is full. Remove an item to save another.";}
           else{items.push(item);localStorage.setItem(key,JSON.stringify(items));fine.textContent="Saved to your PLUS Favourites on this device.";}
