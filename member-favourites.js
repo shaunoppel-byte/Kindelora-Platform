@@ -39,10 +39,41 @@
 
   let opener=null;
   let checkSequence=0;
+  function selectedItem(){
+    if(!opener)return null;
+    const kind=opener.dataset.heartType==="affirmation"?"affirmations":"messages";
+    const card=opener.closest("article");
+    const value=(kind==="affirmations"?card?.querySelector(".affirmation-quote")?.textContent:document.getElementById("moment")?.textContent)?.trim();
+    return value?{kind,value}:null;
+  }
+  function renderSaved(key,items){
+    for(const kind of ["messages","affirmations"]){
+      const panel=document.getElementById("member-panel-"+kind);
+      panel.replaceChildren();
+      const entries=items.filter(x=>x.kind===kind);
+      if(!entries.length){const p=document.createElement("p");p.textContent="No saved items on this device.";panel.append(p);}
+      for(const item of entries){
+        const p=document.createElement("p");p.textContent=item.value;
+        const remove=document.createElement("button");remove.type="button";remove.className="choice";remove.textContent="Remove";
+        remove.addEventListener("click",async()=>{
+          try{
+            const [e,m]=await Promise.all(["entitlement","me"].map(x=>fetch("/api/member/"+x,{credentials:"same-origin",cache:"no-store"})));
+            if(!e.ok||!m.ok||!dialog.open)return;
+            const entitlement=await e.json(),identity=await m.json();
+            if(entitlement.plus!==true||identity.authenticated!==true||key!=="kindelora-plus-favourites-v1:"+identity.member?.id)return;
+            const current=JSON.parse(localStorage.getItem(key)||"[]").filter(x=>x.kind!==item.kind||x.value!==item.value);
+            localStorage.setItem(key,JSON.stringify(current));renderSaved(key,current);
+          }catch{dialog.querySelector(".fine").textContent="Unable to remove this item. Please try again.";}
+        });
+        panel.append(p,remove);
+      }
+    }
+  }
   async function checkMembership(){
     const seq=++checkSequence;
     const fine=dialog.querySelector(".fine");
     const link=dialog.querySelector(".member-gate-explore");
+    for(const panel of collections.querySelectorAll("[role=tabpanel]"))panel.replaceChildren();
     fine.textContent="Checking your membership…";
     link.href="/plus-account.html";
     link.textContent="Sign in";
@@ -55,7 +86,20 @@
       if(seq!==checkSequence||!dialog.open)return;
       if(data.authenticated!==true)throw new Error("Membership unavailable");
       if(data.plus===true){
-        fine.textContent="Your PLUS membership is verified. Personal Favourites saving is currently unavailable. Nothing has been saved.";
+        const identityResponse=await fetch("/api/member/me",{credentials:"same-origin",cache:"no-store"});
+        if(!identityResponse.ok)throw new Error("Identity unavailable");
+        const identity=await identityResponse.json();
+        if(seq!==checkSequence||!dialog.open)return;
+        if(identity.authenticated!==true||typeof identity.member?.id!=="string"||!identity.member.id)throw new Error("Identity unavailable");
+        const key="kindelora-plus-favourites-v1:"+identity.member.id;
+        let items=JSON.parse(localStorage.getItem(key)||"[]");
+        if(!Array.isArray(items))throw new Error("Invalid saved data");
+        const item=selectedItem();
+        if(item&&!items.some(x=>x.kind===item.kind&&x.value===item.value)){
+          if(items.length>=100){fine.textContent="Your device library is full. Remove an item to save another.";}
+          else{items.push(item);localStorage.setItem(key,JSON.stringify(items));fine.textContent="Saved to your PLUS Favourites on this device.";}
+        }else fine.textContent=item?"Already saved on this device.":"Your PLUS Favourites on this device. This item could not be saved.";
+        renderSaved(key,items);
         link.href="/member-welcome.html";
         link.textContent="Return to your account";
       }else{
@@ -72,7 +116,7 @@
   dialog.querySelector(".member-gate-later").addEventListener("click",close);
   dialog.querySelector(".member-gate-explore").addEventListener("click",close);
   dialog.addEventListener("click",e=>{if(e.target===dialog)close();});
-  dialog.addEventListener("close",()=>{if(opener&&opener.isConnected)opener.focus();});
+  dialog.addEventListener("close",()=>{++checkSequence;for(const panel of collections.querySelectorAll("[role=tabpanel]"))panel.replaceChildren();if(opener&&opener.isConnected)opener.focus();});
   const heartPath="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z";
   document.querySelectorAll("[data-heart]").forEach(button=>{
     if(button.classList.contains("heart-save"))button.setAttribute("aria-pressed","false");
