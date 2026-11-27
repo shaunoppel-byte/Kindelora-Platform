@@ -49,7 +49,7 @@ export async function onRequestPost({request,env}={}){
  if(!mapping.mapped)return deny(503,'customer_mapping_unavailable');
  const stored=await persistLivePendingOrder({db:env.DB,order:prepared.order,verifiedMemberId:user.id,
   customerId:mapping.customerId,nowMs});
- if(!stored.persisted)return deny(503,'order_persistence_failed');
+ if(!stored.persisted)return stored.reason==='checkout_already_pending_or_active'?deny(409,'checkout_already_pending_or_active'):deny(503,'order_persistence_failed');
  return reply({ok:true,environment:'live',reference,redirect:{action:redirect.action,method:redirect.method,fields:redirect.fields},checkoutReady:true});
 }
 export async function onRequestGet(){return deny(405,'method_not_allowed')}
