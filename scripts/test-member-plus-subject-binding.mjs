@@ -16,7 +16,7 @@ const db={prepare(sql){
 }};
 const ok=await call(db);
 assert.equal(ok.status,200);
-assert.deepEqual(await ok.json(),{authenticated:true,plus:true});
+assert.deepEqual(await ok.json(),{authenticated:true,plus:true,memberId:"verified-member-123"});
 assert.equal(subject,'verified-member-123','entitlement must use authenticated member ID, not email');
 const unavailable=await call({prepare(sql){if(sql.includes('FROM member_sessions'))return db.prepare(sql);throw Error('D1 unavailable')}});
 assert.equal(unavailable.status,503,'database failure must never silently claim an active or inactive subscription');
