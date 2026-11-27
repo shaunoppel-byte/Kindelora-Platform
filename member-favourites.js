@@ -10,6 +10,7 @@
   dialog.setAttribute("aria-labelledby","member-favourites-title");
   dialog.innerHTML='<div class="member-gate-inner"><button type="button" class="member-gate-close" aria-label="Close">×</button><span class="member-gate-heart" aria-hidden="true"><svg viewBox="0 0 24 24" focusable="false" xmlns="http://www.w3.org/2000/svg"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78L12 21.23l7.78-7.78a5.5 5.5 0 0 0 0-7.78Z"/></svg></span><h2 id="member-favourites-title">Keep the words that stay with you.</h2><p>Love this message? Your personal Favourites Library is a KINDELORA Plus membership benefit, so you can return to the moments that matter most.</p><p class="fine">Sign in to check your membership. This message has not been saved.</p><div class="actions"><a class="btn member-gate-explore" href="#membership">Explore KINDELORA Plus</a><button type="button" class="choice member-gate-later">Maybe later</button></div></div>';
   document.body.append(dialog);
+  const saveButton=document.createElement("button");saveButton.type="button";saveButton.className="btn member-save-confirm";saveButton.textContent="Save to my Favourites";saveButton.hidden=true;dialog.querySelector(".actions").prepend(saveButton);
   // Two separate collections under one consistent Favourites experience.
   // This is a preview only: there is no authenticated persistence yet.
   const collections=document.createElement("div");
@@ -77,6 +78,8 @@
   async function checkMembership(){
     const seq=++checkSequence;
     const item=selectedItem();
+    const save=dialog.querySelector(".member-save-confirm");
+    save.hidden=true;save.onclick=null;
     const fine=dialog.querySelector(".fine");
     const link=dialog.querySelector(".member-gate-explore");
     for(const panel of collections.querySelectorAll("[role=tabpanel]"))panel.replaceChildren();
@@ -97,8 +100,11 @@
         let items=JSON.parse(localStorage.getItem(key)||"[]");
         if(!Array.isArray(items)||items.some(x=>!x||!["messages","affirmations"].includes(x.kind)||typeof x.value!=="string"))throw new Error("Invalid saved data");
         if(item&&!items.some(x=>x.kind===item.kind&&x.value===item.value)){
+          fine.textContent="Save this item to your Favourites on this device?";save.hidden=false;
+          save.onclick=async()=>{try{const [e,m]=await Promise.all(["entitlement","me"].map(x=>fetch("/api/member/"+x,{credentials:"same-origin",cache:"no-store"})));if(!e.ok||!m.ok)throw Error("Access unavailable");const entitlement=await e.json(),identity=await m.json();if(seq!==checkSequence||!dialog.open)return;if(entitlement.authenticated!==true||entitlement.plus!==true||identity.authenticated!==true||key!=="kindelora-plus-favourites-v1:"+identity.member?.id)throw Error("Access unavailable");items=JSON.parse(localStorage.getItem(key)||"[]");if(items.some(x=>x.kind===item.kind&&x.value===item.value)){fine.textContent="Already saved on this device.";save.hidden=true;renderSaved(key,items);return;}
           if(items.length>=100){fine.textContent="Your device library is full. Remove an item to save another.";}
           else{items.push(item);localStorage.setItem(key,JSON.stringify(items));fine.textContent="Saved to your PLUS Favourites on this device.";}
+          save.hidden=true;renderSaved(key,items);}catch{fine.textContent="Unable to save. Please verify your membership and try again.";}};
         }else fine.textContent=item?"Already saved on this device.":"Your PLUS Favourites on this device. This item could not be saved.";
         renderSaved(key,items);
         link.href="/member-welcome.html";
