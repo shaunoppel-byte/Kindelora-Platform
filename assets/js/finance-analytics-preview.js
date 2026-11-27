@@ -66,3 +66,5 @@ document.getElementById('business').addEventListener('change',render);
 document.getElementById('analytics-period').addEventListener('change',render);
 document.getElementById('analytics-refresh').addEventListener('click',render);
 render();
+
+for(const kind of ['gross','fees','refunds','net'])window.financeDrilldown('analytics-'+kind,()=>{const p=document.getElementById('analytics-period'),b=document.getElementById('business').value;return {period:p.selectedOptions[0].text,headers:['Business','Date','Gross','Fees','Refunds','Expected net','Reconciliation'],rows:demo.filter(x=>(b==='all'||x.business===b)&&(p.value==='all'||x.date.startsWith(p.value))&&(kind!=='refunds'||x.refund_minor!==0)&&(kind!=='fees'||x.fee_minor!==0)).map(x=>[BUSINESS_LABELS[x.business],x.date,currency(x.gross_minor),currency(x.fee_minor),currency(x.refund_minor),currency(x.gross_minor-x.fee_minor-x.refund_minor),x.matched?'Matched':'Pending'])};});
