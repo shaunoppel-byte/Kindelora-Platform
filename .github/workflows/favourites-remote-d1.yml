@@ -1,0 +1,17 @@
+name: Favourites remote staging D1 fixture
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+jobs:
+  fixture:
+    runs-on: ubuntu-latest
+    environment: payfast-d1-staging
+    env:
+      ACCOUNT_ID: ${{ secrets.KINDELORA_D1_STAGING_ACCOUNT_ID }}
+      API_TOKEN: ${{ secrets.KINDELORA_D1_STAGING_API_TOKEN }}
+      STAGING_ID: ${{ vars.KINDELORA_D1_STAGING_DATABASE_ID }}
+      PRODUCTION_ID: ${{ vars.KINDELORA_D1_PRODUCTION_DATABASE_ID }}
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/test-favourites-remote-d1.py
