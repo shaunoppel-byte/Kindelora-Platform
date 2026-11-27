@@ -46,3 +46,20 @@ document.getElementById('report-export').addEventListener('click',()=>{
 renderReporting();
 
 for(const kind of ['gross','fees','refunds','net'])window.financeDrilldown('report-'+kind,()=>{const p=document.getElementById('report-period'),b=document.getElementById('business').value;return {period:p.selectedOptions[0].text,headers:['Business','Date','Gross','Fees','Refunds','Expected net','Reconciliation'],rows:synthetic.filter(x=>(b==='all'||x.business===b)&&(p.value==='all'||x.date.startsWith(p.value))&&(kind!=='refunds'||x.refund_minor!==0)&&(kind!=='fees'||x.fee_minor!==0)).map(x=>[BUSINESS_LABELS[x.business],x.date,currency(x.gross_minor),currency(x.fee_minor),currency(x.refund_minor),currency(x.gross_minor-x.fee_minor-x.refund_minor),x.matched?'Matched':'Pending'])};});
+
+import {makeFinancePdf} from './finance-pdf-preview.js';
+function reportLines(){
+ const report=renderReporting(),mode=document.getElementById('report-detail').value;
+ const lines=['OPPEL ENTERPRISES GROUP','Financial performance report - DEMONSTRATION ONLY','Scope: '+business.selectedOptions[0].text,'Period: '+period.selectedOptions[0].text,'Generated: '+new Date().toISOString(),'Confidential management format - fictional records',''];
+ const cash=n=>'ZAR '+(n/100).toFixed(2);
+ if(mode!=='detail'){
+ lines.push('EXECUTIVE SUMMARY','Gross: '+cash(report.total.gross_minor),'Fees: '+cash(report.total.fee_minor),'Refunds: '+cash(report.total.refund_minor),'Expected net: '+cash(report.total.net_minor),'Transactions: '+report.total.count+' | Unmatched: '+report.total.unmatched_count,'','BUSINESS CONTRIBUTION');
+ for(const [code,v] of Object.entries(report.byBusiness))if(business.value==='all'||business.value===code)lines.push(BUSINESS_LABELS[code]+' | Gross '+cash(v.gross_minor)+' | Net '+cash(v.net_minor)+' | Count '+v.count);
+ }
+ if(mode!=='summary'){lines.push('','TRANSACTION DETAIL');for(const x of report.rows)lines.push(x.date+' | '+BUSINESS_LABELS[x.business]+' | Gross '+cash(x.gross_minor),'  Fees '+cash(x.fee_minor)+' | Refunds '+cash(x.refund_minor)+' | '+(x.matched?'Matched':'Unmatched'));}
+ lines.push('','Not a tax or accounting statement. No live financial data.');
+ return lines;
+}
+function reportUrl(){return URL.createObjectURL(new Blob([makeFinancePdf(reportLines())],{type:'application/pdf'}));}
+document.getElementById('report-pdf').addEventListener('click',()=>{const url=reportUrl(),a=document.createElement('a');a.href=url;a.download='OE-finance-DEMO-'+business.value+'-'+period.value+'.pdf';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);set('report-pdf-status','Demo PDF generated.');});
+document.getElementById('report-print').addEventListener('click',()=>{const url=reportUrl();const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.click();setTimeout(()=>URL.revokeObjectURL(url),600000);set('report-pdf-status','PDF opened in a new tab. Use the PDF viewer Print command.');});
