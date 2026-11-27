@@ -1,0 +1,11 @@
+name: Favourites SQL integrity
+on:
+  pull_request:
+  push:
+    branches: [main]
+jobs:
+  schema:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python3 scripts/test-member-favourites-sql.py
