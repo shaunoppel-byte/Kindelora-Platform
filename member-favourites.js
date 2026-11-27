@@ -43,7 +43,11 @@
     if(!opener)return null;
     const kind=opener.dataset.heartType==="affirmation"?"affirmations":"messages";
     const card=opener.closest("article");
-    const value=(kind==="affirmations"?card?.querySelector(".affirmation-quote")?.textContent:document.getElementById("moment")?.textContent)?.trim();
+    const value=(kind==="affirmations"
+      ?(card?.querySelector(".affirmation-quote")?.textContent??document.getElementById("affirmation-text")?.textContent)
+      :opener.dataset.heart==="daily"
+        ?[document.getElementById("daily-title")?.textContent,document.getElementById("daily-copy")?.textContent].filter(Boolean).join("\n\n")
+        :document.getElementById("moment")?.textContent)?.trim();
     return value?{kind,value}:null;
   }
   function renderSaved(key,items){
@@ -71,6 +75,7 @@
   }
   async function checkMembership(){
     const seq=++checkSequence;
+    const item=selectedItem();
     const fine=dialog.querySelector(".fine");
     const link=dialog.querySelector(".member-gate-explore");
     for(const panel of collections.querySelectorAll("[role=tabpanel]"))panel.replaceChildren();
@@ -94,7 +99,6 @@
         const key="kindelora-plus-favourites-v1:"+identity.member.id;
         let items=JSON.parse(localStorage.getItem(key)||"[]");
         if(!Array.isArray(items))throw new Error("Invalid saved data");
-        const item=selectedItem();
         if(item&&!items.some(x=>x.kind===item.kind&&x.value===item.value)){
           if(items.length>=100){fine.textContent="Your device library is full. Remove an item to save another.";}
           else{items.push(item);localStorage.setItem(key,JSON.stringify(items));fine.textContent="Saved to your PLUS Favourites on this device.";}
