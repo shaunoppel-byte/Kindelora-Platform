@@ -51,7 +51,16 @@ function render(){
  donut.setAttribute('aria-label',total?'Gross receipts share: '+codes.filter(c=>selected==='all'||c===selected).map(c=>BUSINESS_LABELS[c]+' '+formatPct(r.byBusiness[c].gross_minor/total)).join(', '):'No demo receipts for selected period');
  const trend=document.getElementById('analytics-trend');trend.replaceChildren();
  const months=['2026-10','2026-11'];const vals=months.map(p=>summarise(rows,{period:p}).total.gross_minor);const max=Math.max(...vals,1);
- months.forEach((p,i)=>addBar(trend,p==='2026-10'?'October 2026':'November 2026',vals[i],max,palette[i]));
+ const monthly=months.map(p=>summarise(rows,{period:p}).total);
+ const ceiling=Math.max(1,...monthly.map(x=>x.gross_minor));
+ const chart=document.createElement('div');chart.style.cssText='display:flex;gap:20px;align-items:end;justify-content:space-around;min-height:210px;padding:12px 0';
+ monthly.forEach((m,i)=>{const group=addText(chart,'div','');group.style.cssText='flex:1;min-width:0;text-align:center';const bars=addText(group,'div','');bars.style.cssText='height:160px;display:flex;align-items:end;justify-content:center;gap:8px;border-bottom:1px solid #52658b';for(const [label,v,color] of [['Gross',m.gross_minor,palette[0]],['Expected net',m.net_minor,palette[1]]]){const bar=addText(bars,'div','');bar.style.cssText='width:32%;max-width:64px;border-radius:6px 6px 0 0;background:'+color+';height:'+100*v/ceiling+'%';bar.title=label+': '+currency(v);bar.setAttribute('aria-label',bar.title);}addText(group,'strong',months[i]);addText(group,'div','Gross '+currency(m.gross_minor),'muted');addText(group,'div','Net '+currency(m.net_minor),'muted');});trend.append(chart);
+ addText(trend,'p','Gold: gross receipts · Blue: expected net','muted');
+ const prior=monthly[0].gross_minor,current=monthly[1].gross_minor;
+ addText(trend,'strong',prior?'Gross month-on-month: '+formatPct((current-prior)/prior):'Gross month-on-month: unavailable (zero prior base)');
+ addText(trend,'p','November demo snapshot vs October demo snapshot; not a like-for-like completed month comparison.','muted');
+ const ratio=t.count?(t.count-t.unmatched_count)/t.count:0;
+ const ring=addText(trend,'div','');ring.style.cssText='margin:20px auto 8px;width:116px;height:116px;border-radius:50%;display:grid;place-items:center;background:conic-gradient(#77c6a9 '+ratio*100+'%,#34415a 0)';const center=addText(ring,'strong',t.count?formatPct(ratio):'N/A');center.style.cssText='display:grid;place-items:center;width:88px;height:88px;border-radius:50%;background:#121c30;font-size:22px';addText(trend,'p','Demo reconciliation: '+(t.count-t.unmatched_count)+' of '+t.count+' matched','muted');
  const checks=document.getElementById('analytics-checks');checks.replaceChildren();
  for(const line of [
   'Unmatched transactions: '+t.unmatched_count+' / '+t.count,
