@@ -33,7 +33,7 @@ export async function onRequestPost({request,env}={}){
  const nowMs=Date.now(),reference='kin_'+random(),fxReference='fx_'+random();
  // Reuse the strict trusted HTTPS FX provider adapter; convert only its
  // validated sandbox marker to the live quote contract, never browser-supplied FX.
- const fx=await issueTrustedSandboxFxQuote({plan:data.plan,nowMs,reference:fxReference,fxEndpoint:env.PAYFAST_LIVE_FX_ENDPOINT});
+ const fx=await issueTrustedSandboxFxQuote({plan:data.plan,nowMs,reference:fxReference,fxEndpoint:env.PAYFAST_LIVE_FX_ENDPOINT ?? 'https://api.frankfurter.dev/v1/latest?base=USD&symbols=ZAR'});
  if(!fx.ok)return deny(503,'trusted_fx_unavailable');
  const quote={...fx.quote,environment:'live'};
  const prepared=prepareLiveOrderFacts({plan:data.plan,verifiedMemberId:user.id,reference,quote,nowMs});
