@@ -13,7 +13,7 @@ export async function onRequestGet({request,env}){
    verifiedIdentitySubject:user.id
   });
   if(verified.reason==="unavailable")return reply({error:"Membership verification unavailable"},503);
-  return reply({authenticated:true,plus:verified.entitled});
+  return reply({authenticated:true,plus:verified.entitled,memberId:user.id});
  }catch{
   return reply({error:"Member access unavailable"},503);
  }
