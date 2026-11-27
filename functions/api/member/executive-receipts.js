@@ -1,6 +1,7 @@
 import {reply,ready,member} from './_auth.js';
 import {readVerifiedReceipts} from '../../_lib/finance-verified-receipts.js';
 // Explicit server-side owner identity, never inferred from PLUS membership.
+// Explicit owner identity, not ordinary membership or Plus entitlement.
 export async function onRequestGet({request,env}){
  try{
  if(!ready(env)||typeof env.FINANCE_OWNER_MEMBER_ID!=='string'||!env.FINANCE_OWNER_MEMBER_ID.trim())return reply({ok:false,error:'finance_unavailable'},503);
@@ -9,6 +10,8 @@ export async function onRequestGet({request,env}){
  if(user.id!==env.FINANCE_OWNER_MEMBER_ID)return reply({ok:false,error:'forbidden'},403);
  const q=new URL(request.url).searchParams,from=q.get('from'),to=q.get('to');
  if(!from||!to||![from,to].every(d=>/^\d{4}-\d{2}-\d{2}$/.test(d)&&Number.isFinite(Date.parse(d))&&new Date(d).toISOString().slice(0,10)===d)||from>=to||Date.parse(to)-Date.parse(from)>366*86400000)return reply({ok:false,error:'invalid_range'},400);
+ const url=new URL(request.url),from=url.searchParams.get('from'),to=url.searchParams.get('to');
+ if(!from||!to||!/^\d{4}-\d{2}-\d{2}$/.test(from)||!/^\d{4}-\d{2}-\d{2}$/.test(to)||from>=to||[from,to].some(d=>!Number.isFinite(Date.parse(d))||new Date(d).toISOString().slice(0,10)!==d)||Date.parse(to)-Date.parse(from)>366*86400000)return reply({ok:false,error:'invalid_range'},400);
  const receipts=await readVerifiedReceipts(env.DB,{from,to});
  return reply({ok:true,source:'verified_payfast_receipts',asOf:new Date().toISOString(),receipts});
  }catch{return reply({ok:false,error:'finance_unavailable'},503);}
