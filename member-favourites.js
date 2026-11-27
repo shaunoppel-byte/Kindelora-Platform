@@ -41,7 +41,7 @@
   let opener=null;
   let checkSequence=0;
   function selectedItem(){
-    if(!opener)return null;
+    if(!opener||opener.id==="open-member-favourites")return null;
     const kind=opener.dataset.heartType==="affirmation"?"affirmations":"messages";
     const card=opener.closest("article");
     const value=(kind==="affirmations"
@@ -105,7 +105,7 @@
           if(items.length>=100){fine.textContent="Your device library is full. Remove an item to save another.";}
           else{items.push(item);localStorage.setItem(key,JSON.stringify(items));fine.textContent="Saved to your PLUS Favourites on this device.";}
           save.hidden=true;renderSaved(key,items);}catch{fine.textContent="Unable to save. Please verify your membership and try again.";}};
-        }else fine.textContent=item?"Already saved on this device.":"Your PLUS Favourites on this device. This item could not be saved.";
+        }else fine.textContent=item?"Already saved on this device.":"Your PLUS Favourites on this device.";
         renderSaved(key,items);
         link.href="/member-welcome.html";
         link.textContent="Return to your account";
@@ -160,6 +160,13 @@
       gateTitle.textContent=defaultTitle;
       gateDescription.textContent=defaultDescription;
     });
+  });
+  document.getElementById("open-member-favourites")?.addEventListener("click",event=>{
+    opener=event.currentTarget;
+    selectCollection("messages",false);
+    gateTitle.textContent="Your PLUS Favourites";
+    gateDescription.textContent="Return to the words that matter to you. Saved items are available on this device.";
+    openGate();
   });
   // Existing free favourites were local-only; do not erase a visitor's saved data.
 })();
