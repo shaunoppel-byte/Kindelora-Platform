@@ -44,3 +44,5 @@ document.getElementById('report-export').addEventListener('click',()=>{
  set('report-export-result','Synthetic CSV exported. Not valid for bookkeeping.');
 });
 renderReporting();
+
+for(const kind of ['gross','fees','refunds','net'])window.financeDrilldown('report-'+kind,()=>{const p=document.getElementById('report-period'),b=document.getElementById('business').value;return {period:p.selectedOptions[0].text,headers:['Business','Date','Gross','Fees','Refunds','Expected net','Reconciliation'],rows:synthetic.filter(x=>(b==='all'||x.business===b)&&(p.value==='all'||x.date.startsWith(p.value))&&(kind!=='refunds'||x.refund_minor!==0)&&(kind!=='fees'||x.fee_minor!==0)).map(x=>[BUSINESS_LABELS[x.business],x.date,currency(x.gross_minor),currency(x.fee_minor),currency(x.refund_minor),currency(x.gross_minor-x.fee_minor-x.refund_minor),x.matched?'Matched':'Pending'])};});
