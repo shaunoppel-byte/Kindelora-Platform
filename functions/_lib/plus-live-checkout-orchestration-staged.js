@@ -6,6 +6,7 @@ import {ensurePlusCustomerForVerifiedMember} from './plus-verified-member-custom
 import {persistLivePendingOrder} from './payfast-live-order-persistence.js';
 import {buildPayFastLiveRedirect} from './payfast-live-redirect.js';
 import {verifyLivePlusD1Schema} from './payfast-live-d1-schema-preflight.js';
+import {verifyPlusEntitlement} from './plus-entitlement.js';
 const deny=(status,reason)=>reply({ok:false,reason,checkoutReady:false},status);
 export async function onRequestPost({request,env}={}){
  if(!request||!ready(env)||env.PAYFAST_LIVE_CHECKOUT_ENABLED!=='true'||
@@ -17,6 +18,9 @@ export async function onRequestPost({request,env}={}){
  if(new URL(request.url).origin!=='https://kindelora.pages.dev')return deny(403,'invalid_host');
  let user;try{user=await member(request,env)}catch{return deny(503,'authentication_unavailable')}
  if(!user)return deny(401,'authentication_required');
+ const entitlement=await verifyPlusEntitlement({db:env.DB,verifiedIdentitySubject:user.id});
+ if(entitlement.reason==='unavailable')return deny(503,'membership_verification_unavailable');
+ if(entitlement.entitled)return deny(409,'membership_already_active');
  let data;try{const raw=await request.text();if(new TextEncoder().encode(raw).byteLength>1024)return deny(413,'body_too_large');data=JSON.parse(raw)}catch{return deny(400,'invalid_request')}
  if(!data||typeof data!=='object'||Array.isArray(data)||!['monthly','annual'].includes(data.plan)||
   Object.keys(data).length!==1)return deny(400,'invalid_plan');
