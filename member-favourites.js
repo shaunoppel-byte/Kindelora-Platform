@@ -87,6 +87,7 @@
   }
   async function checkMembership(){
     const seq=++checkSequence;
+    collections.querySelectorAll(".member-import-device").forEach(x=>x.remove());
     const item=selectedItem();
     const save=dialog.querySelector(".member-save-confirm");
     save.hidden=true;save.onclick=null;
@@ -111,6 +112,19 @@
         if(seq!==checkSequence||!dialog.open)return;
         if(remote!==null){
           renderSaved(key,remote,data.memberId);
+          // Preserve local originals; import only on explicit member request.
+          let local=[];
+          try{const parsed=JSON.parse(localStorage.getItem(key)||"[]");if(Array.isArray(parsed))local=parsed.filter(x=>x&&["messages","affirmations"].includes(x.kind)&&typeof x.value==="string"&&x.value.trim()&&x.value.length<=4000);}catch{}
+          const missing=local.filter(x=>!remote.some(y=>y.kind===x.kind&&y.value===x.value));
+          if(missing.length){
+            const importButton=document.createElement("button");importButton.type="button";importButton.className="choice member-import-device";importButton.textContent="Import saved items from this device";
+            collections.prepend(importButton);
+            importButton.onclick=async()=>{importButton.disabled=true;try{
+              for(const entry of missing){if(seq!==checkSequence||!dialog.open)return;await serverFavourites(data.memberId,"POST",entry);}
+              const fresh=await serverFavourites(data.memberId);
+              if(seq===checkSequence&&dialog.open&&fresh){renderSaved(key,fresh,data.memberId);importButton.remove();fine.textContent="Saved items imported to your account.";}
+            }catch{if(seq===checkSequence&&dialog.open)fine.textContent="Import incomplete. Your original device items are preserved. You can retry.";}finally{importButton.disabled=false;}};
+          }
           fine.textContent="Your account Favourites, available across devices.";
           if(item&&!remote.some(x=>x.kind===item.kind&&x.value===item.value)){
             save.hidden=false;save.onclick=async()=>{save.disabled=true;try{await serverFavourites(data.memberId,"POST",item);const fresh=await serverFavourites(data.memberId);if(seq===checkSequence&&dialog.open&&fresh){renderSaved(key,fresh,data.memberId);fine.textContent="Saved to your account Favourites.";save.hidden=true;}}catch{if(seq===checkSequence&&dialog.open)fine.textContent="Unable to save. Please try again.";}finally{save.disabled=false;}};
@@ -143,7 +157,7 @@
   dialog.querySelector(".member-gate-later").addEventListener("click",close);
   dialog.querySelector(".member-gate-explore").addEventListener("click",close);
   dialog.addEventListener("click",e=>{if(e.target===dialog)close();});
-  dialog.addEventListener("close",()=>{++checkSequence;for(const panel of collections.querySelectorAll("[role=tabpanel]"))panel.replaceChildren();if(opener&&opener.isConnected)opener.focus();});
+  dialog.addEventListener("close",()=>{++checkSequence;collections.querySelectorAll(".member-import-device").forEach(x=>x.remove());for(const panel of collections.querySelectorAll("[role=tabpanel]"))panel.replaceChildren();if(opener&&opener.isConnected)opener.focus();});
   const heartPath="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 0 0 0-7.78Z";
   document.querySelectorAll("[data-heart]").forEach(button=>{
     if(button.classList.contains("heart-save"))button.setAttribute("aria-pressed","false");
