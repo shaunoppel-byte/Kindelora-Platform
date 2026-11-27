@@ -1,0 +1,14 @@
+import assert from 'node:assert/strict';
+import {makeFinancePdf} from '../assets/js/finance-pdf-preview.js';
+const pdf=makeFinancePdf(['Group (demo) \\ report',...Array.from({length:90},(_,i)=>'Record '+i)]);
+assert.ok(pdf.startsWith('%PDF-1.4'));
+assert.match(pdf,/\/Count 3\b/);
+assert.ok(pdf.includes('Group \\(demo\\) \\\\ report'));
+assert.ok(pdf.includes('Page 3 of 3'));
+const offset=Number(pdf.match(/startxref\n(\d+)/)[1]);
+assert.equal(pdf.slice(offset,offset+4),'xref');
+const entries=pdf.slice(offset).split('\n').slice(3).filter(x=>/^\d{10} 00000 n /.test(x));
+entries.forEach((entry,i)=>assert.ok(pdf.slice(Number(entry.slice(0,10))).startsWith((i+1)+' 0 obj')));
+for(const m of pdf.matchAll(/<< \/Length (\d+) >>\nstream\n([\s\S]*?)\nendstream/g))assert.equal(m[2].length,Number(m[1]));
+assert.match(makeFinancePdf([]),/\/Count 1\b/);
+console.log('Finance PDF structure checks passed');
