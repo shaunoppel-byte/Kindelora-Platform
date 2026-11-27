@@ -63,3 +63,10 @@ function reportLines(){
 function reportUrl(){return URL.createObjectURL(new Blob([makeFinancePdf(reportLines())],{type:'application/pdf'}));}
 document.getElementById('report-pdf').addEventListener('click',()=>{const url=reportUrl(),a=document.createElement('a');a.href=url;a.download='OE-finance-DEMO-'+business.value+'-'+period.value+'.pdf';document.body.append(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(url),60000);set('report-pdf-status','Demo PDF generated.');});
 document.getElementById('report-print').addEventListener('click',()=>{const url=reportUrl();const a=document.createElement('a');a.href=url;a.target='_blank';a.rel='noopener';a.click();setTimeout(()=>URL.revokeObjectURL(url),600000);set('report-pdf-status','PDF opened in a new tab. Use the PDF viewer Print command.');});
+
+// Preview the exact same generated PDF used by download and print.
+const previewDialog=document.getElementById('report-preview-dialog'),previewFrame=document.getElementById('report-preview-frame'),previewButton=document.getElementById('report-preview');
+let previewUrl=null;
+previewButton.addEventListener('click',()=>{if(previewUrl)URL.revokeObjectURL(previewUrl);previewUrl=reportUrl();previewFrame.src=previewUrl;previewDialog.showModal();});
+document.getElementById('report-preview-close').addEventListener('click',()=>previewDialog.close());
+previewDialog.addEventListener('close',()=>{previewFrame.removeAttribute('src');if(previewUrl)URL.revokeObjectURL(previewUrl);previewUrl=null;previewButton.focus();});
