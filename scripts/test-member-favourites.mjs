@@ -25,7 +25,11 @@ paid=false;assert.equal((await call("POST",{kind:"messages",content:"test"})).st
 assert.equal((await call("POST",{kind:"messages",content:"test"},{origin:"https://other.example"})).status,403);
 assert.equal((await call("POST",{kind:"invalid",content:"test"})).status,400);
 assert.equal(writes,0);
-const item={kind:"messages",content:"test",memberId:"member-b"};
+const item={kind:"messages",content:"test",expectedMemberId:"member-a",memberId:"member-b"};
+assert.equal((await call("POST",{...item,expectedMemberId:"member-b"})).status,409);
+assert.equal((await call("DELETE",{...item,expectedMemberId:"member-b"})).status,409);
+assert.equal((await call("POST",{kind:"messages",content:"test"})).status,409);
+assert.equal(writes,0);
 assert.equal((await call("POST",item)).status,200);
 assert.equal((await call("POST",item)).status,200);
 const list=await call();assert.equal(list.headers.get("cache-control"),"no-store");assert.deepEqual((await list.json()).items,[{kind:"messages",content:"test"}]);
