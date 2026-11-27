@@ -15,13 +15,13 @@ export function summarise(rows,{business='all',period='all'}={}){
   a.count++;a.gross_minor+=r.gross_minor;a.fee_minor+=r.fee_minor;a.refund_minor+=r.refund_minor;a.net_minor+=r.gross_minor-r.fee_minor-r.refund_minor;a.unmatched_count+=Number(!r.matched);
   for(const k of ['gross_minor','fee_minor','refund_minor','net_minor'])if(!Number.isSafeInteger(a[k]))throw new RangeError('Reporting total exceeds safe integer');
  }
- return {total,byBusiness,rows:chosen};
+ return {total,byBusiness,rows:chosen,business};
 }
 export function csvCell(value){const s=String(value??'');const guarded=/^[\s]*[=+@-]/.test(s)?"'"+s:s;return '"'+guarded.replaceAll('"','""')+'"';}
 export function reportCsv(report){
  const header=['Business','Transactions','Gross minor units','Fees minor units','Refunds minor units','Net minor units','Unmatched'];
  const lines=[header.map(csvCell).join(',')];
- for(const [code,v] of Object.entries(report.byBusiness))lines.push([code,v.count,v.gross_minor,v.fee_minor,v.refund_minor,v.net_minor,v.unmatched_count].map(csvCell).join(','));
- const t=report.total;lines.push(['GROUP',t.count,t.gross_minor,t.fee_minor,t.refund_minor,t.net_minor,t.unmatched_count].map(csvCell).join(','));
+ for(const [code,v] of Object.entries(report.byBusiness))if(!report.business||report.business==='all'||report.business===code)lines.push([code,v.count,v.gross_minor,v.fee_minor,v.refund_minor,v.net_minor,v.unmatched_count].map(csvCell).join(','));
+ const t=report.total;if(!report.business||report.business==='all')lines.push(['GROUP',t.count,t.gross_minor,t.fee_minor,t.refund_minor,t.net_minor,t.unmatched_count].map(csvCell).join(','));
  return lines.join('\r\n')+'\r\n';
 }
