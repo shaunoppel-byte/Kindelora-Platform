@@ -18,7 +18,9 @@ assert.match(html,/<button id="registration-submit" type="submit" disabled title
 assert.doesNotMatch(js,/\/api\/member\/register/);
 assert.match(html,/Secure checkout checks payment availability before you continue/,'UI must disclose guarded checkout availability');
 assert.match(html,/Payment availability is checked securely before any handoff to PayFast/,'guarded checkout must explain payment availability');
-assert.equal((html.match(/href="\/plus-checkout\.html"/g)||[]).length,3,'all three PLUS entry links must lead to guarded customer checkout');
+const checkoutLinks=[...html.matchAll(/href="(\/plus-checkout\.html[^"]*)"/g)].map(m=>m[1]);
+assert.deepEqual(checkoutLinks.sort(),['/plus-checkout.html','/plus-checkout.html?plan=annual','/plus-checkout.html?plan=monthly'].sort(),'all three links must lead to guarded checkout with correct plan');
+assert.ok(html.indexOf('id="login"')<html.indexOf('id="membership-plans"'),'account access precedes membership plans');
 assert.doesNotMatch(html,/href="\/checkout-preview\.html"/,'member account must not send customers to old preview');
 assert.doesNotMatch(html,/<form[^>]+action=["']https?:\/\//i,'no external payment submission from account UI');
 assert.doesNotMatch(js,/localStorage|sessionStorage|payment_url|checkout_url|window\.location\s*=/i,'UI must not grant PLUS or fake payment navigation');
