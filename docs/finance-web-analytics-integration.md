@@ -1,0 +1,5 @@
+# Commercial analytics integration
+
+Use Cloudflare Pages Metrics > Web Analytics > Enable, then deploy. Verify account-scoped rumPageloadEventsAdaptiveGroups access using a dedicated read-only analytics credential, siteTag and hostname. Keep secrets server-side. Do not reuse D1 edit credentials. Verify owner authorization before exposing any actual totals; the existing public design preview remains synthetic only. Label visits (not unique people), page views and source timestamp; unknown values null. Group visits are sums, not deduplicated people. Compare equal elapsed periods in UTC; do not infer cohort conversion from aggregate ratios. Collect daily aggregates only after verifying free-tier access and retention; no new paid service. Validate totals against Cloudflare dashboard, isolate site tags, handle missing/partial data and API errors. Add drill-down, PDF and group filters after secure data source acceptance.
+
+Reference: https://developers.cloudflare.com/web-analytics/get-started/ and https://developers.cloudflare.com/analytics/graphql-api/limits/
