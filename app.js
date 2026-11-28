@@ -150,3 +150,36 @@ render();
   availability.textContent=data.checkoutAvailable===true?"Choose your PLUS membership and continue securely to PayFast.":"Check secure payment availability on the membership checkout page.";
  }).catch(()=>{availability.textContent="Check payment availability securely on the checkout page.";});
 })();
+
+
+/* Server-verified account navigation; never infer identity from browser storage. */
+(()=>{'use strict';
+ const guestLinks=[...document.querySelectorAll('.account-nav-join,.account-nav-signin,.mobile-nav-account a')];
+ if(!guestLinks.length)return;
+ const joins=guestLinks.filter(a=>a.getAttribute('href')?.includes('#register'));
+ const signs=guestLinks.filter(a=>a.getAttribute('href')?.includes('#login'));
+ const originals=guestLinks.map(a=>({a,href:a.getAttribute('href'),text:a.textContent,label:a.getAttribute('aria-label')}));
+ const membership=[...document.querySelectorAll('.mobile-nav-plus,.navlinks a[href="#membership"]')];
+ const memberOriginals=membership.map(a=>({a,href:a.getAttribute('href'),text:a.textContent,label:a.getAttribute('aria-label')}));
+ let sequence=0;
+ function restore(items){for(const {a,href,text,label} of items){a.setAttribute('href',href);a.textContent=text;if(label===null)a.removeAttribute('aria-label');else a.setAttribute('aria-label',label);a.style.removeProperty('display');}}
+ function link(a,href,text){a.href=href;a.textContent=text;a.setAttribute('aria-label',text);a.style.removeProperty('display');}
+ async function refresh(){
+  const current=++sequence;
+  for(const a of guestLinks)a.style.display='none';
+  try{
+   const r=await fetch('/api/member/me',{credentials:'same-origin',cache:'no-store',headers:{Accept:'application/json'}});
+   if(current!==sequence)return;
+   if(r.status===401){restore(originals);restore(memberOriginals);return;}
+   if(!r.ok)throw Error('Session unavailable');
+   const session=await r.json();if(current!==sequence)return;
+   if(session.authenticated!==true)throw Error('Session unavailable');
+   joins.forEach(a=>link(a,'/member-welcome.html','My Account'));
+   signs.forEach(a=>link(a,'/member-farewell.html','Sign Out'));
+   restore(memberOriginals);
+   try{const e=await fetch('/api/member/entitlement',{credentials:'same-origin',cache:'no-store'});if(!e.ok)return;const data=await e.json();if(current===sequence&&data.authenticated===true&&data.plus===true)membership.forEach(a=>link(a,'/member-welcome.html','My Membership'));}catch{}
+  }catch{if(current!==sequence)return;joins.forEach(a=>a.style.display='none');signs.forEach(a=>link(a,'/member-welcome.html','Check account status'));}
+ }
+ refresh();window.addEventListener('pageshow',e=>{if(e.persisted)refresh();});
+ document.addEventListener('visibilitychange',()=>{if(document.visibilityState==='visible')refresh();});
+})();
